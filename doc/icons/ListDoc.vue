@@ -6,8 +6,8 @@
     <InputText v-model="filter" class="w-full p-3 mt-3 mb-4" placeholder="Search an icon" />
 
     <div class="card">
-        <div class="grid text-center">
-            <div v-for="icon of filteredIcons" :key="icon.properties.name" class="col-12 md:col-2 mb-5">
+        <div class="flex flex-wrap justify-center gap-5 text-center">
+            <div v-for="icon of filteredIcons" :key="icon.properties.name" class="w-full sm:w-6/2 md:w-4/12 lg:w-2/12">
                 <i :class="'text-2xl mb-3 text-color-secondary pi pi-' + icon.properties.name"></i>
                 <div>pi-{{ icon.properties.name }}</div>
             </div>
