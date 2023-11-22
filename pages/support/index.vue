@@ -22,65 +22,65 @@
         </div>
 
         <div class="card mb-5">
-            <div class="flex flex-wrap align-items-center justify-content-between gap-3">
+            <div class="flex flex-wrap items-center justify-content-between gap-3">
                 <div>
                     <div class="text-2xl text-900 font-semibold mb-3">Enterprise Support</div>
                     <p class="m-0 line-height-3 mb-5 text-secondary text-lg text-800">1 Year Subscription</p>
                 </div>
                 <a
                     href="mailto:contact@primetek.com.tr"
-                    class="flex align-items-center justify-content-center border-1 bg-indigo-500 border-round block p-3 mb-4 hover:bg-indigo-600 transition-all transition-duration-300 text-white font-medium text-lg"
+                    class="flex items-center justify-center border bg-indigo-500 rounded-md block p-3 mb-4 hover:bg-indigo-600 transition-all duration-300 text-white font-medium text-lg"
                 >
                     Get a Quote
                 </a>
             </div>
             <div class="flex flex-wrap -mt-3 gap-3 text-800">
                 <ul class="flex-auto list-none p-0 m-0 text-lg p-3">
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Access to Private JIRA</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Response within 1 business day</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Unlimited Issue Tickets</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Conference Calls</span>
                     </li>
                 </ul>
                 <ul class="flex-auto list-none p-0 m-0 text-lg p-3">
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Maintenance for Any Version</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">PrimeBlocks - Enterprise License</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Figma UI Kit - Enterprise License</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">1 Premium Template - Extended License</span>
                     </li>
                 </ul>
                 <ul class="flex-auto list-none p-0 m-0 text-lg p-3">
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Visual Theme Builder (Soon)</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">Figma to Theme Generator (Soon)</span>
                     </li>
-                    <li class="flex align-items-center mb-3">
+                    <li class="flex items-center mb-3">
                         <i class="pi pi-check-circle mr-3 text-green-500"></i>
                         <span class="line-height-3">PrimeIcons PRO - (Soon)</span>
                     </li>

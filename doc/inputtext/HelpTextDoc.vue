@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>An advisory text can be defined with the semantic <i>small</i> tag.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <div class="flex flex-column gap-2">
             <label for="username">Username</label>
             <InputText id="username" v-model="value" aria-describedby="username-help" />
@@ -27,7 +27,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <div class="flex flex-column gap-2">
             <label for="username">Username</label>
             <InputText id="username" v-model="value" aria-describedby="username-help" />
@@ -48,7 +48,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <div class="flex flex-column gap-2">
             <label for="username">Username</label>
             <InputText id="username" v-model="value" aria-describedby="username-help" />

@@ -1,15 +1,15 @@
 .layout-light {
     --topbar-sticky-bg:rgba(255,255,255,.7);
-    --card-border: 1px solid var(--surface-border);
-    --card-bg: var(--surface-card);
-    --glow-image: url(https://www.primefaces.org/cdn/primevue/images/layout/pattern.png), radial-gradient(50% 50% at center top, var(--primary-100) 0%, #ffffff 100%);
+    --card-border: 1px solid rgb(var(--surface-100));
+    --card-bg: rgb(var(--surface-0));
+    --glow-image: url(https://www.primefaces.org/cdn/primevue/images/layout/pattern.png), radial-gradient(50% 50% at center top,rgb(var(--primary-100)) 0%, #ffffff 100%);
     --glow-blend: hard-light, multiply;
     --topbar-border: rgba(0,0,0,.05);
-    --mobile-menu-bg: var(--surface-overlay);
-    --demo-code-bg: var(--surface-700);
-    --demo-code-button-color: var(--surface-300);
+    --mobile-menu-bg: rgb(var(--surface-50));
+    --demo-code-bg: rgb(var(--surface-700));
+    --demo-code-button-color: rgb(var(--surface-300));
     --demo-code-button-hover-bg: rgba(255,255,255,.1);
-    --demo-code-button-hover-color: var(--surface-100);
-    --doc-highlight-text-bg: var(--primary-100);
-    --doc-highlight-text-color: var(--primary-900);
+    --demo-code-button-hover-color: rgb(var(--surface-100));
+    --doc-highlight-text-bg: rgb(var(--primary-100));
+    --doc-highlight-text-color: rgb(var(--primary-900));
 }

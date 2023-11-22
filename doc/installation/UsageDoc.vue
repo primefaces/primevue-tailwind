@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Each component can be imported individually so that you only bundle what you use. Import path is available in the documentation of the corresponding component.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Button label="Check" icon="pi pi-check" />
     </div>
     <DocSectionCode :code="code" importCode />
@@ -21,7 +21,7 @@ app.component('Button', Button);
 `,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Button label="Check" icon="pi pi-check" />
     </div>
 </template>
@@ -31,7 +31,7 @@ app.component('Button', Button);
 `,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Button label="Check" icon="pi pi-check" />
     </div>
 </template>

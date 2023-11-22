@@ -1,26 +1,26 @@
 :root {
-    --primary-50: 245 249 255;
-    --primary-100: 208 225 253;
-    --primary-200: 171 201 251;
-    --primary-300: 133 178 249;
-    --primary-400: 96 154 248;
-    --primary-500: 59 130 246;
-    --primary-600: 50 111 209;
-    --primary-700: 41 91 172;
-    --primary-800: 32 72 135;
-    --primary-900: 24 52 98;
+    --primary-50: 243 252 249;
+    --primary-100: 198 238 225;
+    --primary-200: 152 225 201;
+    --primary-300: 107 212 177;
+    --primary-400: 61 198 153;
+    --primary-500: 16 185 129;
+    --primary-600: 14 157 110;
+    --primary-700: 11 130 90;
+    --primary-800: 9 102 71;
+    --primary-900: 6 74 52;
 
     --surface-0: 255 255 255;
-    --surface-50: 230 231 232;
-    --surface-100: 205 207 209;
-    --surface-200: 180 182 186;
-    --surface-300: 155 158 163;
-    --surface-400: 130 134 140;
-    --surface-500: 104 110 117;
-    --surface-600: 79 86 94;
-    --surface-700: 54 61 71;
-    --surface-800: 29 37 48;
-    --surface-900: 4 13 25;
+    --surface-50: 249 250 251;
+    --surface-100: 243 244 246;
+    --surface-200: 229 231 235;
+    --surface-300: 209 213 219;
+    --surface-400: 156 163 175;
+    --surface-500: 107 114 128;
+    --surface-600: 75 85 99;
+    --surface-700: 55 65 81;
+    --surface-800: 31 41 55;
+    --surface-900: 17 24 39;
 }
 
 html {
@@ -32,15 +32,15 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: var(--surface-ground);
+    background-color: rgb(var(--surface-0));
     font-weight: normal;
-    color: var(--text-color);
+    color: rgb(var(--surface-900));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .layout-wrapper {
-    background-color: var(--surface-ground);
+    background-color: rgb(var(--surface-0));
 }
 
 a {
@@ -48,8 +48,8 @@ a {
 }
 
 ::selection {
-    background-color: var(--highlight-bg);
-    color: var(--highlight-text-color);
+    background-color: rgb(var(--primary-50));
+    color: rgb(var(--primary-700));
 }
 
 h1,
@@ -62,7 +62,7 @@ h6 {
     font-family: inherit;
     font-weight: 600;
     line-height: 1.2;
-    color: var(--surface-900);
+    color: rgb(var(--surface-900));
 
     &:first-child {
         margin-top: 0;
@@ -113,19 +113,19 @@ input[type="number"] {
     top: 7rem;
 }
 
-.px-link {
-    font-size: 1rem;
-    border-radius: var(--border-radius);
-    text-align: left;
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    user-select: none;
+// .px-link {
+//     font-size: 1rem;
+//     border-radius: 0.375rem;;
+//     text-align: left;
+//     background-color: transparent;
+//     margin: 0;
+//     padding: 0;
+//     border: none;
+//     cursor: pointer;
+//     user-select: none;
 
-    @include focus-visible();
-}
+//     @include focus-visible();
+// }
 
 .px-link:disabled {
     cursor: default;

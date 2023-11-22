@@ -463,7 +463,7 @@ export default {
         files[`${path}components/ThemeSwitcher.vue`] = {
             content: `<template>
     <div class="card flex justify-end p-2 mb-4">
-        <button type="button" class="flex border-1 w-2rem h-2rem p-0 align-center justify-center" @click="onThemeToggler">
+        <button type="button" class="flex border w-8 h-8 p-0 items-center justify-center" @click="onThemeToggler">
             <i :class="\`dark:text-white pi \${iconClass}\`" />
         </button>
     </div>
@@ -494,15 +494,15 @@ const staticStyles = {
 body {
     font-family: var(--font-family);
     font-weight: normal;
-    background: var(--surface-ground);
-    color: var(--text-color);
+    background: rgb(var(--surface-0));
+    color: rgb(var(--surface-900));
     padding: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 .card {
-    background: var(--surface-card);
+    background: rgb(var(--surface-0));
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 1rem;

@@ -136,7 +136,7 @@ pre[class*="language-"] {
     &[data-p-theme^="md"] {
         pre[class*="language-"] {    
             code {
-                background: var(--surface-900);
+                background: rgb(var(--surface-900));
             }
         }
     }

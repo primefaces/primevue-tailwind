@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Icons can be placed inside an input element by wrapping both the input and the icon with an element that has either <i>.p-input-icon-left</i> or <i>.p-input-icon-right</i> class.</p>
     </DocSectionText>
-    <div class="card flex flex-wrap justify-content-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-3">
         <span class="p-input-icon-left">
             <i class="pi pi-search" />
             <InputText v-model="value1" placeholder="Search" />
@@ -36,7 +36,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex flex-wrap justify-content-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-3">
         <span class="p-input-icon-left">
             <i class="pi pi-search" />
             <InputText v-model="value1" placeholder="Search" />
@@ -62,7 +62,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex flex-wrap justify-content-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-3">
         <span class="p-input-icon-left">
             <i class="pi pi-search" />
             <InputText v-model="value1" placeholder="Search" />

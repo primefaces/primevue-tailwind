@@ -21,7 +21,7 @@
     button {
         &:focus-visible {
             outline: 0 none;
-            border-color: var(--surface-500) !important;
+            border-color: rgb(var(--surface-500)) !important;
         }
     }
 
@@ -42,7 +42,7 @@
     }
 
     &.layout-light {
-        background: var(--surface-overlay);
+        background: rgb(var(--surface-50));
     }
 
     &.layout-dark {
