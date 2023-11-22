@@ -1,0 +1,101 @@
+{
+    "data": [
+        {
+            "name": "Getting Started",
+            "to": "/installation",
+            "icon": "pi pi-home"
+        },
+        {
+            "name": "Components",
+            "icon": "pi pi-compass",
+            "children": [
+                {
+                    "name": "Form",
+                    "children": [
+                        {
+                            "name": "InputText",
+                            "to": "/inputtext"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Builder",
+            "to": "/installation",
+            "icon": "pi pi-box"
+        },
+        {
+            "name": "Gallery",
+            "to": "/installation",
+            "icon": "pi pi-images"
+        },
+        {
+            "name": "Icons",
+            "icon": "pi pi-eye",
+            "children": [
+                {
+                    "name": "Prime Icons",
+                    "to": "/icons"
+                },
+                {
+                    "name": "Custom Icons",
+                    "to": "/customicons"
+                }
+            ]
+        },
+        {
+            "name": "Support",
+            "icon": "pi pi-question",
+            "children": [
+                {
+                    "name": "Discord Server",
+                    "href": "https://discord.gg/gzKFYnpmCY"
+                },
+                {
+                    "name": "Forum",
+                    "href": "https://github.com/orgs/primefaces/discussions"
+                },
+                {
+                    "name": "PRO Support",
+                    "to": "/support"
+                }
+            ]
+        },
+        {
+            "name": "PrimeTV",
+            "icon": "pi pi-youtube",
+            "href": "https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw"
+        },
+        {
+            "name": "Discover",
+            "icon": "pi pi-search",
+            "children": [
+                {
+                    "name": "About Us",
+                    "to": "/team"
+                },
+                {
+                    "name": "Source Code",
+                    "href": "https://github.com/primefaces/primevue-tailwind"
+                },
+                {
+                    "name": "Store",
+                    "href": "https://www.primefaces.org/store/"
+                },
+                {
+                    "name": "Twitter",
+                    "href": "https://twitter.com/primevue"
+                },
+                {
+                    "name": "Newsletter",
+                    "href": "https://www.primefaces.org/newsletter"
+                },
+                {
+                    "name": "PrimeGear",
+                    "href": "https://gear.primefaces.org"
+                }
+            ]
+        }
+    ]
+}

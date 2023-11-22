@@ -1,0 +1,13 @@
+node_modules
+coverage
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+.vscode
+.idea
+.eslintcache
