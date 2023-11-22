@@ -105,7 +105,7 @@
                 </li>
                 <li class="relative">
                     <button
-                        v-styleclass="{ selector: '.config', enterClass: 'hidden', enterActiveClass: 'my-fadein', leaveActiveClass: 'my-fadeout', leaveToClass: 'hidden' }"
+                        v-styleclass="{ selector: '.config',hideOnOutsideClick:'true', enterClass: 'hidden', enterActiveClass: 'my-fadein', leaveActiveClass: 'my-fadeout', leaveToClass: 'hidden' }"
                         type="button"
                         class="flex shrink-0 px-link border border-solid w-8 h-8 border border-surface-100 rounded-md bg-surface-0 items-center justify-center transition-all duration-300 hover:border-primary-500"
                     >
@@ -203,6 +203,7 @@
 <script>
 import docsearch from '@docsearch/js';
 import StyleClass from 'primevue/styleclass';
+import { DomHandler } from 'primevue/utils';
 export default {
     emits: ['menubutton-click', 'configbutton-click', 'darkswitch-click'],
     outsideClickListener: null,
@@ -251,7 +252,6 @@ export default {
 
             if (type === 'primary') {
                 increments = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
-
             } else if (type === 'surface') {
                 increments = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
             }
@@ -267,7 +267,13 @@ export default {
             this.$emit('menubutton-click', event);
         },
         toggleDarkMode(event) {
-            this.$emit('darkswitch-click', event);
+            const root = document.getElementsByTagName('html')[0];
+
+            if (DomHandler.hasClass(root, 'dark')) {
+                DomHandler.removeClass(root, 'dark');
+            } else {
+                DomHandler.addClass(root, 'dark');
+            }
         },
         bindScrollListener() {
             if (!this.scrollListener) {
