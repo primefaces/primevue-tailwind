@@ -103,10 +103,86 @@
                         <i :class="['pi text-700', { 'pi-moon': $appState.darkTheme, 'pi-sun': !$appState.darkTheme }]"></i>
                     </button>
                 </li>
-                <li>
-                    <button type="button" class="flex shrink-0 px-link border border-solid w-8 h-8 border border-surface-100 rounded-md bg-surface-0 items-center justify-center transition-all duration-300 hover:border-primary-500" @click="onConfigButtonClick">
+                <li class="relative">
+                    <button
+                        v-styleclass="{ selector: '.config', enterClass: 'hidden', enterActiveClass: 'my-fadein', leaveActiveClass: 'my-fadeout', leaveToClass: 'hidden' }"
+                        type="button"
+                        class="flex shrink-0 px-link border border-solid w-8 h-8 border border-surface-100 rounded-md bg-surface-0 items-center justify-center transition-all duration-300 hover:border-primary-500"
+                    >
                         <i class="pi pi-palette"></i>
                     </button>
+                    <div class="config absolute top-[2rem] right-0 hidden w-[15rem] p-3 bg-white rounded-md shadow border border-slate-200 flex-col justify-start items-start gap-3.5 inline-flex">
+                        <div class="flex-col justify-start items-start gap-2 inline-flex">
+                            <h2 class="text-black !text-xs !font-medium !m-0">Primary Colors</h2>
+                            <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                                <a
+                                    @click="updateColors('primary', ['243 252 249', '198 238 225', '152 225 201', '107 212 177', '61 198 153', '16 185 129', '14 157 110', '11 130 90', '9 102 71', '6 74 52'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(16 185 129)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(16 185 129)"
+                                ></a>
+                                <a
+                                    @click="updateColors('primary', ['245 249 255', '208 225 253', '171 201 251', '133 178 249', '96 154 248', '59 130 246', '50 111 209', '41 91 172', '32 72 135', '24 52 98'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(59 130 246)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(59 130 246)"
+                                ></a>
+                                <a
+                                    @click="updateColors('primary', ['253 242 248', '252 231 243', '251 207 232', '249 168 212', '244 114 182', '236 72 153', '219 39 119', '190 24 93', '157 23 77', '131 24 67'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(236 72 153)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(236 72 153)"
+                                ></a>
+                                <a
+                                    @click="updateColors('primary', ['247 254 231', '236 252 203', '217 249 157', '190 242 100', '163 230 53', '132 204 22', '101 163 13', '77 124 15', '63 98 18', '26 46 5'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(16 185 129)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(132 204 22)"
+                                ></a>
+                                <a
+                                    @click="updateColors('primary', ['240 253 250', '204 251 241', '153 246 228', '94 234 212', '45 212 191', '20 184 166', '13 148 136', '15 118 110', '17 94 89', '19 78 74'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(45 212 191)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(45 212 191)"
+                                ></a>
+                                <a
+                                    @click="updateColors('primary', ['255 247 237', '255 237 213', '254 215 170', '253 186 116', '251 146 60', '249 115 22', '234 88 12', '194 65 12', '154 52 18', '124 45 18'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(251 146 60)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(251 146 60)"
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="flex-col justify-start items-start gap-2 inline-flex">
+                            <h2 class="text-black !text-xs !font-medium !m-0">Surface Colors</h2>
+                            <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                                <a
+                                    @click="updateColors('surface', ['255 255 255', '249 250 251', '243 244 246', '229 231 235', '209 213 219', '156 163 175', '107 114 128', '75 85 99', '55 65 81', '31 41 55', '17 24 39'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(107 114 128)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(107 114 128)"
+                                ></a>
+                                <a
+                                    @click="updateColors('surface', ['255 255 255', '230 231 232', '205 207 209', '180 182 186', '155 158 163', '130 134 140', '104 110 117', '79 86 94', '54 61 71', '29 37 48', '4 13 25'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(130 134 140)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(130 134 140)"
+                                ></a>
+                                <a
+                                    @click="updateColors('surface', ['255 255 255', '230 231 232', '205 207 209', '180 182 186', '155 158 163', '130 134 140', '104 110 117', '79 86 94', '54 61 71', '36 48 62', '29 37 48'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(104 110 117)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(104 110 117)"
+                                ></a>
+                                <a
+                                    @click="updateColors('surface', ['255 255 255', '250 250 249', '245 245 244', '231 229 228', '214 211 209', '168 162 158', '120 113 108', '87 83 78', '68 64 60', '41 37 36', '28 25 23'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(120 113 108)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(120 113 108)"
+                                ></a>
+                                <a
+                                    @click="updateColors('surface', ['255 255 255', '250 250 249', '245 245 244', '231 229 228', '214 211 209', '168 162 158', '120 113 108', '87 83 78', '68 64 60', '46 42 41', '41 37 36'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(120 113 108)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(120 113 108)"
+                                ></a>
+                                <a
+                                    @click="updateColors('surface', ['255 255 255', '230 230 230', '204 204 204', '179 179 179', '153 153 153', '128 128 128', '102 102 102', '77 77 77', '51 51 51', '25 25 25', '0 0 0'])"
+                                    class="w-3.5 h-3.5 rounded-full border border-[rgb(77 77 77)] border-opacity-20 cursor-pointer"
+                                    style="background-color: rgb(77 77 77)"
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li v-if="showMenuButton" class="menu-button">
                     <button
@@ -126,7 +202,7 @@
 
 <script>
 import docsearch from '@docsearch/js';
-
+import StyleClass from 'primevue/styleclass';
 export default {
     emits: ['menubutton-click', 'configbutton-click', 'darkswitch-click'],
     outsideClickListener: null,
@@ -170,6 +246,20 @@ export default {
         }
     },
     methods: {
+        updateColors(type, colors) {
+            let increments;
+
+            if (type === 'primary') {
+                increments = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            } else if (type === 'surface') {
+                increments = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+            }
+
+            colors.forEach((color, index) => {
+                document.documentElement.style.setProperty(`--${type}-${increments[index]}`, color);
+            });
+        },
         onConfigButtonClick(event) {
             this.$emit('configbutton-click', event);
         },
