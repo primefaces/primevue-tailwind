@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-surface-0 dark:bg-surface-900" :class="containerClass" :data-p-theme="$appState.theme">
+    <div class="bg-surface-0 dark:bg-surface-900 layout-wrapper" :class="containerClass" :data-p-theme="$appState.theme">
         <AppNews />
         <AppTopBar @menubutton-click="onMenuButtonClick" @configbutton-click="onConfigButtonClick" @darkswitch-click="onDarkModeToggle" />
         <AppConfigurator />

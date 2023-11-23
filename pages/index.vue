@@ -1,7 +1,7 @@
 <template>
     <div :class="landingClass">
         <AppNews />
-        <AppTopBar :showConfigurator="false" :showMenuButton="false" @darkswitch-click="onDarkModeToggle" />
+        <AppTopBar />
         <MainSection />
     </div>
 </template>
@@ -79,7 +79,7 @@ export default {
     },
     computed: {
         landingClass() {
-            return ['landing', { 'layout-dark': this.$appState?.darkTheme, 'layout-light': !this.$appState?.darkTheme, 'layout-news-active': this.$appState?.newsActive }];
+            return ['landing bg-surface-0 dark:bg-surface-900', { 'layout-dark': this.$appState?.darkTheme, 'layout-light': !this.$appState?.darkTheme, 'layout-news-active': this.$appState?.newsActive }];
         }
     },
     components: {

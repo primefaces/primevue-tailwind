@@ -15,8 +15,9 @@ export default defineNuxtConfig({
     primevue: {
         options: {
             unstyled: true,
-            ripple: true
+            ripple: false,
         },
+        importPT: { as: 'primeone', from:  '/presets/primeone/index.js'},
         cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities'
     },
     app: {
