@@ -818,7 +818,6 @@ const primeone = {
         }),
         label: ({ props }) => ({
             class: [
-                console.log(props.label),
                 'flex-1',
                 'duration-200',
                 'font-bold',
