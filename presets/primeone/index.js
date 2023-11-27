@@ -818,7 +818,6 @@ const primeone = {
         }),
         label: ({ props }) => ({
             class: [
-                'flex-1',
                 'duration-200',
                 'font-bold',
                 {
@@ -932,16 +931,16 @@ const primeone = {
             class: 'w-full inline-flex'
         },
         input: ({ props }) => ({
-            class: [{ 'rounded-tr-none rounded-br-none': props.showButtons && props.buttonLayout == 'stacked' }]
+            class: [{ 'rounded-tr-none rounded-br-none w-44 h-13': props.showButtons && props.buttonLayout == 'stacked' }]
         }),
         buttongroup: ({ props }) => ({
-            class: [{ 'flex flex-col': props.showButtons && props.buttonLayout == 'stacked' }]
+            class: [{ 'flex flex-col h-13': props.showButtons && props.buttonLayout == 'stacked' }]
         }),
         incrementbutton: ({ props }) => ({
             class: [
                 'flex !items-center !justify-center',
                 {
-                    'rounded-br-none rounded-bl-none rounded-bl-none !p-0 flex-1 w-[3rem]': props.showButtons && props.buttonLayout == 'stacked'
+                    '!rounded-tl-none !rounded-br-none !rounded-bl-none rounded-bl-none !p-0 flex-1 w-[3rem] last:hidden': props.showButtons && props.buttonLayout == 'stacked'
                 }
             ]
         }),
@@ -950,9 +949,9 @@ const primeone = {
         },
         decrementbutton: ({ props }) => ({
             class: [
-                'flex !items-center !justify-center',
+                'flex items-center justify-center',
                 {
-                    'rounded-tr-none rounded-tl-none rounded-tl-none !p-0 flex-1 w-[3rem]': props.showButtons && props.buttonLayout == 'stacked'
+                    '!rounded-bl-none !rounded-tr-none !rounded-tl-none !p-0 flex-1 w-[3rem]': props.showButtons && props.buttonLayout == 'stacked'
                 }
             ]
         })
@@ -1108,8 +1107,8 @@ const primeone = {
         root: ({ props }) => ({
             class: [
                 'relative',
-                'bg-surface-100 dark:bg-surface-800 border-0 rounded-6',
-                { 'h-1 w-56': props.orientation == 'horizontal', 'w-1 h-56': props.orientation == 'vertical' },
+                'bg-surface-100 dark:bg-surface-700 border-0 rounded-6',
+                { 'h-1 w-60': props.orientation == 'horizontal', 'w-1 h-56': props.orientation == 'vertical' },
                 { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
             ]
         }),
@@ -1319,7 +1318,7 @@ const primeone = {
             class: ['flex items-center justify-center shrink-0', 'bg-transparent text-surface-500 w-12 rounded-tr-lg rounded-br-lg']
         },
         wrapper: {
-            class: ['max-h-[200px] overflow-auto', 'bg-surface-0 text-surface-700 border-0 rounded-md shadow-lg', 'dark:bg-surface-900 dark:text-white/80']
+            class: ['max-h-[250px] overflow-auto', 'bg-surface-0 text-surface-700 border-0 rounded-md shadow-lg', 'dark:bg-surface-900 dark:text-white/80']
         },
         list: {
             class: 'py-3 list-none m-0'
