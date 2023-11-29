@@ -114,48 +114,6 @@ input[type="number"] {
     top: 7rem;
 }
 
-@keyframes p-fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes p-fadeout {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes p-scalein {
-    0% {
-        opacity: 0;
-        transform: scaleY(0.8);
-        transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
-    }
-    100% {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-}
-
-.p-scalein {
-    animation: p-scalein 150ms linear;
-}
-
-.p-fadein {
-    animation: p-fadein 150ms linear;
-}
-
-.p-fadeout {
-    animation: p-fadeout 150ms linear;
-}
-
 button {
     font-family: var(--font-family);
     font-feature-settings: var(--font-feature-settings);
