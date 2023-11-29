@@ -2622,7 +2622,7 @@
                 </svg>
                 <div class="components absolute top-[12.4rem] left-[14rem] z-20">
                     <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" />
+                        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" />
                     </div>
                     <div class="flex w-[21rem] h-[4.4rem] p-3 items-center">
                         <div class="flex items-center w-5/12">
