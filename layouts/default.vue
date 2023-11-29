@@ -1,8 +1,7 @@
 <template>
     <div class="layout-wrapper" :class="containerClass" :data-p-theme="$appState.theme">
         <AppNews />
-        <AppTopBar @menubutton-click="onMenuButtonClick" @configbutton-click="onConfigButtonClick" @darkswitch-click="onDarkModeToggle" />
-        <AppConfigurator />
+        <AppTopBar @menubutton-click="onMenuButtonClick" @darkswitch-click="onDarkModeToggle" />
         <div :class="['layout-mask', { 'layout-mask-active': sidebarActive }]" @click="onMaskClick"></div>
         <div class="layout-content">
             <app-menu :active="sidebarActive" />
@@ -21,7 +20,6 @@
 <script>
 import EventBus from '@/layouts/AppEventBus';
 import { DomHandler } from 'primevue/utils';
-import AppConfigurator from './AppConfigurator';
 import AppFooter from './AppFooter.vue';
 import AppMenu from './AppMenu.vue';
 import AppNews from './AppNews.vue';
@@ -30,8 +28,7 @@ import AppTopBar from './AppTopBar.vue';
 export default {
     data() {
         return {
-            sidebarActive: false,
-            appConfigActive: false
+            sidebarActive: false
         };
     },
     watch: {
@@ -48,15 +45,6 @@ export default {
             }
         }
     },
-    mounted() {
-        if (this.isOutdatedIE()) {
-            this.$toast.add({
-                severity: 'warn',
-                summary: 'Limited Functionality',
-                detail: 'Although PrimeVue supports IE11, ThemeSwitcher in this application cannot be not fully supported by your browser. Please use a modern browser for the best experience of the showcase.'
-            });
-        }
-    },
     methods: {
         onMenuButtonClick() {
             if (this.sidebarActive) {
@@ -70,21 +58,6 @@ export default {
         onMaskClick() {
             this.sidebarActive = false;
             DomHandler.unblockBodyScroll('blocked-scroll');
-        },
-        isOutdatedIE() {
-            let ua = window.navigator.userAgent;
-
-            if (ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0) {
-                return true;
-            }
-
-            return false;
-        },
-        onConfigButtonClick() {
-            this.appConfigActive = true;
-        },
-        onUpdateConfigActive() {
-            this.appConfigActive = false;
         },
         onDarkModeToggle() {
             let newTheme = null;
@@ -117,7 +90,6 @@ export default {
         AppTopBar,
         AppMenu,
         AppFooter,
-        AppConfigurator,
         AppNews
     }
 };

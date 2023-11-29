@@ -181,7 +181,7 @@
 import docsearch from '@docsearch/js';
 import { DomHandler } from 'primevue/utils';
 export default {
-    emits: ['menubutton-click', 'configbutton-click', 'darkswitch-click'],
+    emits: ['menubutton-click', 'darkswitch-click'],
     outsideClickListener: null,
     props: {
         showMenuButton: {
@@ -244,9 +244,6 @@ export default {
             colors.forEach((color, index) => {
                 document.documentElement.style.setProperty(`--${type}-${increments[index]}`, color);
             });
-        },
-        onConfigButtonClick(event) {
-            this.$emit('configbutton-click', event);
         },
         onMenuButtonClick(event) {
             this.$emit('menubutton-click', event);
