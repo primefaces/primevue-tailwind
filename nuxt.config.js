@@ -4,7 +4,7 @@ const baseUrl = '/';
 export default defineNuxtConfig({
     typescript: false,
     modules: ['nuxt-gtag', 'nuxt-primevue'],
-    
+
     components: [
         '~/components',
         {
@@ -15,9 +15,9 @@ export default defineNuxtConfig({
     primevue: {
         options: {
             unstyled: true,
-            ripple: false,
+            ripple: false
         },
-        importPT: { as: 'primeone', from:  '/presets/primeone/index.js'},
+        importPT: { as: 'primeone', from: '/presets/primeone/index.js' },
         cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities'
     },
     app: {
@@ -41,7 +41,8 @@ export default defineNuxtConfig({
                 { property: 'og:ttl', content: '604800' }
             ],
             link: [
-                { rel: 'icon', href: baseUrl + 'favicon.ico' }
+                { rel: 'icon', href: baseUrl + 'favicon.ico' },
+                { rel: 'stylesheet', as: 'font', href: 'https://rsms.me/inter/inter.css' }
             ],
             script: [
                 {
@@ -54,11 +55,11 @@ export default defineNuxtConfig({
     gtag: {
         id: 'G-48TTQ6G6KV'
     },
-    css: ['~/assets/styles/style.css','/node_modules/primeicons/primeicons.css', '@/assets/styles/flags.css', '@docsearch/css/dist/style.css', '@/assets/styles/layout/layout.scss'],
+    css: ['~/assets/styles/style.css', '/node_modules/primeicons/primeicons.css', '@/assets/styles/flags.css', '@docsearch/css/dist/style.css', '@/assets/styles/layout/layout.scss'],
     postcss: {
         plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
+            tailwindcss: {},
+            autoprefixer: {}
+        }
+    }
 });
