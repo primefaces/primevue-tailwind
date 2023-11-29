@@ -2,7 +2,7 @@
     <div :ref="containerRef" class="layout-topbar">
         <div class="layout-topbar-inner">
             <div class="layout-topbar-logo-container">
-                <PrimeVueNuxtLink to="/" class="layout-topbar-logo" aria-label="PrimeVue logo">
+                <NuxtLink to="/" class="layout-topbar-logo" aria-label="PrimeVue logo">
                     <svg width="165" height="40" viewBox="0 0 165 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             fill-rule="evenodd"
@@ -45,8 +45,8 @@
                         <path d="M12.1 18.2L12.6 17.4L14.3 18.2H20.3L21.6 17.4L22.2 18.2L17.15 26.8L12.1 18.2Z" class="fill-surface-900 dark:fill-surface-0" />
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0297 0L17.1214 13.1536L22.5526 0H12.0297Z" class="fill-primary-500 dark:fill-primary-400" />
                     </svg>
-                </PrimeVueNuxtLink>
-                <PrimeVueNuxtLink to="/" class="layout-topbar-icon" aria-label="PrimeVue logo">
+                </NuxtLink>
+                <NuxtLink to="/" class="layout-topbar-icon" aria-label="PrimeVue logo">
                     <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M25.87 18.05L23.16 17.45L25.27 20.46V29.78L32.49 23.76V13.53L29.18 14.73L25.87 18.04V18.05ZM25.27 35.49L29.18 31.58V27.67L25.27 30.98V35.49ZM20.16 17.14H20.03H20.17H20.16ZM30.1 5.19L34.89 4.81L33.08 12.33L24.1 15.67L30.08 5.2L30.1 5.19ZM5.72 14.74L2.41 13.54V23.77L9.63 29.79V20.47L11.74 17.46L9.03 18.06L5.72 14.75V14.74ZM9.63 30.98L5.72 27.67V31.58L9.63 35.49V30.98ZM4.8 5.2L10.78 15.67L1.81 12.33L0 4.81L4.79 5.19L4.8 5.2ZM24.37 21.05V34.59L22.56 37.29L20.46 39.4H14.44L12.34 37.29L10.53 34.59V21.05L12.42 18.23L17.45 26.8L22.48 18.23L24.37 21.05ZM22.85 0L22.57 0.69L17.45 13.08L12.33 0.69L12.05 0H22.85Z"
@@ -57,7 +57,7 @@
                             class="fill-surface-900 dark:fill-surface-0"
                         />
                     </svg>
-                </PrimeVueNuxtLink>
+                </NuxtLink>
             </div>
 
             <ul class="flex list-none m-0 p-0 gap-2 items-center">
@@ -93,83 +93,25 @@
                             <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
                             <div class="self-stretch justify-start items-start gap-2 inline-flex">
                                 <a
-                                    @click="updateColors('primary', ['243 252 249', '198 238 225', '152 225 201', '107 212 177', '61 198 153', '16 185 129', '14 157 110', '11 130 90', '9 102 71', '6 74 52'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#10b981] border-opacity-20 cursor-pointer"
-                                    style="background-color: #10b981"
-                                ></a>
-                                <a
-                                    @click="updateColors('primary', ['245 249 255', '208 225 253', '171 201 251', '133 178 249', '96 154 248', '59 130 246', '50 111 209', '41 91 172', '32 72 135', '24 52 98'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#3b82f6] border-opacity-20 cursor-pointer"
-                                    style="background-color: #3b82f6"
-                                ></a>
-                                <a
-                                    @click="updateColors('primary', ['253 242 248', '252 231 243', '251 207 232', '249 168 212', '244 114 182', '236 72 153', '219 39 119', '190 24 93', '157 23 77', '131 24 67'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#ec4899] border-opacity-20 cursor-pointer"
-                                    style="background-color: #ec4899"
-                                ></a>
-                                <a
-                                    @click="updateColors('primary', ['247 254 231', '236 252 203', '217 249 157', '190 242 100', '163 230 53', '132 204 22', '101 163 13', '77 124 15', '63 98 18', '26 46 5'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#84cc16] border-opacity-20 cursor-pointer"
-                                    style="background-color: #84cc16"
-                                ></a>
-                                <a
-                                    @click="updateColors('primary', ['240 253 250', '204 251 241', '153 246 228', '94 234 212', '45 212 191', '20 184 166', '13 148 136', '15 118 110', '17 94 89', '19 78 74'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#2dd4bf] border-opacity-20 cursor-pointer"
-                                    style="background-color: #2dd4bf"
-                                ></a>
-                                <a
-                                    @click="updateColors('primary', ['255 247 237', '255 237 213', '254 215 170', '253 186 116', '251 146 60', '249 115 22', '234 88 12', '194 65 12', '154 52 18', '124 45 18'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#fb923c] border-opacity-20 cursor-pointer"
-                                    style="background-color: #fb923c"
+                                    v-for="primaryColor of primaryColors"
+                                    :key="primaryColor.name"
+                                    @click="updateColors('primary', primaryColor.palette)"
+                                    class="w-3.5 h-3.5 rounded-full cursor-pointer"
+                                    :style="{ backgroundColor: `rgb(${primaryColor.palette[5]})` }"
                                 ></a>
                             </div>
                         </div>
                         <div class="flex-col justify-start items-start gap-2 inline-flex">
                             <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Surface Colors</span>
                             <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                                <a
-                                    @click="updateColors('surface', ['255 255 255', '249 250 251', '243 244 246', '229 231 235', '209 213 219', '156 163 175', '107 114 128', '75 85 99', '55 65 81', '31 41 55', '17 24 39'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#6b7280] border-opacity-20 cursor-pointer"
-                                    style="background-color: #6b7280"
-                                ></a>
-                                <a
-                                    @click="updateColors('surface', ['255 255 255', '230 231 232', '205 207 209', '180 182 186', '155 158 163', '130 134 140', '104 110 117', '79 86 94', '54 61 71', '29 37 48', '4 13 25'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#82868c] border-opacity-20 cursor-pointer"
-                                    style="background-color: #82868c"
-                                ></a>
-                                <a
-                                    @click="updateColors('surface', ['255 255 255', '230 231 232', '205 207 209', '180 182 186', '155 158 163', '130 134 140', '104 110 117', '79 86 94', '54 61 71', '36 48 62', '29 37 48'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#686e75] border-opacity-20 cursor-pointer"
-                                    style="background-color: #686e75"
-                                ></a>
-                                <a
-                                    @click="updateColors('surface', ['255 255 255', '250 250 249', '245 245 244', '231 229 228', '214 211 209', '168 162 158', '120 113 108', '87 83 78', '68 64 60', '41 37 36', '28 25 23'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#78716c] border-opacity-20 cursor-pointer"
-                                    style="background-color: #78716c"
-                                ></a>
-                                <a
-                                    @click="updateColors('surface', ['255 255 255', '250 250 249', '245 245 244', '231 229 228', '214 211 209', '168 162 158', '120 113 108', '87 83 78', '68 64 60', '46 42 41', '41 37 36'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#78716c] border-opacity-20 cursor-pointer"
-                                    style="background-color: #78716c"
-                                ></a>
-                                <a
-                                    @click="updateColors('surface', ['255 255 255', '230 230 230', '204 204 204', '179 179 179', '153 153 153', '128 128 128', '102 102 102', '77 77 77', '51 51 51', '25 25 25', '0 0 0'])"
-                                    class="w-3.5 h-3.5 rounded-full border border-[#4d4d4d] border-opacity-20 cursor-pointer"
-                                    style="background-color: #4d4d4d"
-                                ></a>
+                                <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-3.5 h-3.5 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></a>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li v-if="showMenuButton" class="menu-button">
-                    <button
-                        type="button"
-                        class="flex shrink-0 border border-solid w-8 h-8 border border-surface-100 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 items-center justify-center transition-all duration-300 hover:border-primary-500 dark:hover:border-primary-400 menu-button"
-                        @click="onMenuButtonClick"
-                        aria-haspopup
-                        aria-label="Menu"
-                    >
-                        <i class="pi pi-bars text-surface-700 dark:text-surface-50"></i>
+                    <button type="button" class="topbar-item menu-button" @click="onMenuButtonClick" aria-haspopup aria-label="Menu">
+                        <i class="pi pi-bars"></i>
                     </button>
                 </li>
             </ul>
@@ -180,14 +122,66 @@
 <script>
 import docsearch from '@docsearch/js';
 import { DomHandler } from 'primevue/utils';
+
 export default {
     emits: ['menubutton-click', 'darkswitch-click'],
-    outsideClickListener: null,
     props: {
         showMenuButton: {
             type: Boolean,
             default: true
         }
+    },
+    data() {
+        return {
+            primaryColors: [
+                {
+                    name: 'emerald',
+                    palette: ['243 252 249', '198 238 225', '152 225 201', '107 212 177', '61 198 153', '16 185 129', '14 157 110', '11 130 90', '9 102 71', '6 74 52']
+                },
+                {
+                    name: 'blue',
+                    palette: ['245 249 255', '208 225 253', '171 201 251', '133 178 249', '96 154 248', '59 130 246', '50 111 209', '41 91 172', '32 72 135', '24 52 98']
+                },
+                {
+                    name: 'pink',
+                    palette: ['253 242 248', '252 231 243', '251 207 232', '249 168 212', '244 114 182', '236 72 153', '219 39 119', '190 24 93', '157 23 77', '131 24 67']
+                },
+                {
+                    name: 'lime',
+                    palette: ['247 254 231', '236 252 203', '217 249 157', '190 242 100', '163 230 53', '132 204 22', '101 163 13', '77 124 15', '63 98 18', '26 46 5']
+                },
+                {
+                    name: 'teal',
+                    palette: ['240 253 250', '204 251 241', '153 246 228', '94 234 212', '45 212 191', '20 184 166', '13 148 136', '15 118 110', '17 94 89', '19 78 74']
+                },
+                {
+                    name: 'orange',
+                    palette: ['255 247 237', '255 237 213', '254 215 170', '253 186 116', '251 146 60', '249 115 22', '234 88 12', '194 65 12', '154 52 18', '124 45 18']
+                }
+            ],
+            surfaces: [
+                {
+                    name: 'gray',
+                    palette: ['255 255 255', '249 250 251', '243 244 246', '229 231 235', '209 213 219', '156 163 175', '107 114 128', '75 85 99', '55 65 81', '31 41 55', '17 24 39']
+                },
+                {
+                    name: 'slate',
+                    palette: ['255 255 255', '230 231 232', '205 207 209', '180 182 186', '155 158 163', '130 134 140', '104 110 117', '79 86 94', '54 61 71', '29 37 48', '4 13 25']
+                },
+                {
+                    name: 'zinc',
+                    palette: ['255 255 255', '230 231 232', '205 207 209', '180 182 186', '155 158 163', '130 134 140', '104 110 117', '79 86 94', '54 61 71', '36 48 62', '29 37 48']
+                },
+                {
+                    name: 'neutral',
+                    palette: ['255 255 255', '250 250 249', '245 245 244', '231 229 228', '214 211 209', '168 162 158', '120 113 108', '87 83 78', '68 64 60', '46 42 41', '41 37 36']
+                },
+                {
+                    name: 'stone',
+                    palette: ['255 255 255', '230 230 230', '204 204 204', '179 179 179', '153 153 153', '128 128 128', '102 102 102', '77 77 77', '51 51 51', '25 25 25', '0 0 0']
+                }
+            ]
+        };
     },
     scrollListener: null,
     container: null,
@@ -283,26 +277,6 @@ export default {
                 window.removeEventListener('scroll', this.scrollListener);
                 this.scrollListener = null;
             }
-        },
-        bindOutsideClickListener() {
-            if (!this.outsideClickListener) {
-                this.outsideClickListener = (event) => {
-                    if (this.isOutsideTopbarMenuClicked(event)) {
-                        this.unbindOutsideClickListener();
-                    }
-                };
-
-                document.addEventListener('click', this.outsideClickListener);
-            }
-        },
-        unbindOutsideClickListener() {
-            if (this.outsideClickListener) {
-                document.removeEventListener('click', this.outsideClickListener);
-                this.outsideClickListener = null;
-            }
-        },
-        isOutsideTopbarMenuClicked(event) {
-            return !(this.$refs.topbarMenu.isSameNode(event.target) || this.$refs.topbarMenu.contains(event.target));
         },
         containerRef(el) {
             this.container = el;
