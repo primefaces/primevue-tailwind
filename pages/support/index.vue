@@ -27,12 +27,7 @@
                     <div class="text-2xl text-900 font-semibold mb-3">Enterprise Support</div>
                     <p class="m-0 line-height-3 mb-5 text-secondary text-lg text-800">1 Year Subscription</p>
                 </div>
-                <a
-                    href="mailto:contact@primetek.com.tr"
-                    class="flex items-center justify-center border bg-indigo-500 rounded-md block p-3 mb-4 hover:bg-indigo-600 transition-all duration-300 text-white font-medium text-lg"
-                >
-                    Get a Quote
-                </a>
+                <a href="mailto:contact@primetek.com.tr" class="flex items-center justify-center border bg-indigo-500 rounded-md block p-3 mb-4 hover:bg-indigo-600 transition-all duration-200 text-white font-medium text-lg"> Get a Quote </a>
             </div>
             <div class="flex flex-wrap -mt-3 gap-3 text-800">
                 <ul class="flex-auto list-none p-0 m-0 text-lg p-3">

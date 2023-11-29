@@ -22,7 +22,7 @@
                             iconPos="right"
                             :pt="{
                                 root: {
-                                    class: 'relative h-10 bg-primary-400 hover:bg-primary-500 focus:ring focus:ring-offset-2 focus:ring-primary-200 transition-all duration-300 rounded-lg inline-flex grow-0 justify-center items-center gap-2 py-2 px-4'
+                                    class: 'relative h-10 bg-primary-400 hover:bg-primary-500 focus:ring focus:ring-offset-2 focus:ring-primary-200 transition-all duration-200 rounded-lg inline-flex grow-0 justify-center items-center gap-2 py-2 px-4'
                                 },
                                 label: { class: 'text-white dark:text-surface-900 font-medium leading-6' },
                                 icon: { class: 'mx-0 ml-2 order-1 text-white dark:text-surface-900' }
@@ -36,7 +36,7 @@
                             iconPos="right"
                             :pt="{
                                 root: {
-                                    class: 'relative h-10 border border-zinc-100 dark:border-zinc-600 hover:border-primary-400 dark:hover:border-primary-400 focus:ring focus:ring-offset-2 focus:ring-primary-200 transition-all duration-300 rounded-lg inline-flex grow-0 justify-center items-center gap-2 py-2 px-4'
+                                    class: 'relative h-10 border border-zinc-100 dark:border-zinc-600 hover:border-primary-400 dark:hover:border-primary-400 focus:ring focus:ring-offset-2 focus:ring-primary-200 transition-all duration-200 rounded-lg inline-flex grow-0 justify-center items-center gap-2 py-2 px-4'
                                 },
                                 label: { class: 'text-neutral-800 dark:text-surface-0 font-medium leading-6' },
                                 icon: { class: 'mx-0 ml-2 order-1 text-white' }
@@ -2702,16 +2702,16 @@
 </template>
 
 <script>
+import Avatar from 'primevue/avatar';
 import Button from 'primevue/button';
-import Dropdown from 'primevue/dropdown';
+import Calendar from 'primevue/calendar';
 import Checkbox from 'primevue/checkbox';
-import SelectButton from 'primevue/selectbutton';
+import Dropdown from 'primevue/dropdown';
 import InputNumber from 'primevue/inputnumber';
 import InputSwitch from 'primevue/inputswitch';
+import SelectButton from 'primevue/selectbutton';
 import Slider from 'primevue/slider';
-import Calendar from 'primevue/calendar';
 import Tag from 'primevue/tag';
-import Avatar from 'primevue/avatar';
 import { ref } from 'vue';
 export default {
     data() {
