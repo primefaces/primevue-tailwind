@@ -224,6 +224,15 @@ export default {
     },
     methods: {
         updateColors(type, colors) {
+            if (!document.startViewTransition) {
+                applyTheme(type, colors);
+
+                return;
+            }
+
+            document.startViewTransition(() => this.applyTheme(type, colors));
+        },
+        applyTheme(type, colors) {
             let increments;
 
             if (type === 'primary') {
@@ -242,7 +251,16 @@ export default {
         onMenuButtonClick(event) {
             this.$emit('menubutton-click', event);
         },
-        toggleDarkMode(event) {
+        toggleDarkMode() {
+            if (!document.startViewTransition) {
+                switchDarkMode();
+
+                return;
+            }
+
+            document.startViewTransition(() => this.switchDarkMode());
+        },
+        switchDarkMode() {
             const root = document.getElementsByTagName('html')[0];
 
             if (DomHandler.hasClass(root, 'dark')) {
