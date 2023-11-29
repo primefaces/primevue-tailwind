@@ -131,13 +131,3 @@ pre[class*="language-"] {
         background: var(--demo-code-bg);
     }
 }
-
-.layout-light {
-    &[data-p-theme^="md"] {
-        pre[class*="language-"] {    
-            code {
-                background: rgb(var(--surface-900));
-            }
-        }
-    }
-}

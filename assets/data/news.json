@@ -2,8 +2,5 @@
     "id": 45,
     "content": "🎉 Black Friday Sale! Up to 50% Off",
     "linkText": "Buy Now",
-    "linkHref": "https://www.primefaces.org/store",
-    "backgroundStyle": "background-color:rgb(var(--primary-500))",
-    "textStyle": "color:var(--primary-color-text);font-weight:500",
-    "linkStyle": "color:var(--primary-color-text);font-weight:700;text-decoration: underline;"
+    "linkHref": "https://www.primefaces.org/store"
 }

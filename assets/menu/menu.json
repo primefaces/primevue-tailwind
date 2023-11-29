@@ -22,12 +22,12 @@
         },
         {
             "name": "Builder",
-            "to": "/installation",
+            "to": "/builder",
             "icon": "pi pi-box"
         },
         {
             "name": "Gallery",
-            "to": "/installation",
+            "to": "/gallery",
             "icon": "pi pi-images"
         },
         {

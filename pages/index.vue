@@ -7,10 +7,10 @@
 </template>
 
 <script>
+import MainSection from '@/components/landing/MainSection.vue';
 import EventBus from '@/layouts/AppEventBus';
 import AppNews from '@/layouts/AppNews';
 import AppTopBar from '@/layouts/AppTopBar.vue';
-import MainSection from '@/components/landing/MainSection.vue';
 
 export default {
     setup() {

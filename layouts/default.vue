@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-surface-0 dark:bg-surface-900 layout-wrapper" :class="containerClass" :data-p-theme="$appState.theme">
+    <div class="layout-wrapper" :class="containerClass" :data-p-theme="$appState.theme">
         <AppNews />
         <AppTopBar @menubutton-click="onMenuButtonClick" @configbutton-click="onConfigButtonClick" @darkswitch-click="onDarkModeToggle" />
         <AppConfigurator />
@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import { DomHandler }  from 'primevue/utils';
 import EventBus from '@/layouts/AppEventBus';
+import { DomHandler } from 'primevue/utils';
 import AppConfigurator from './AppConfigurator';
 import AppFooter from './AppFooter.vue';
 import AppMenu from './AppMenu.vue';

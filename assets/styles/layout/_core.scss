@@ -37,9 +37,9 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: rgb(var(--surface-0));
+    background-color: var(--body-bg);
     font-weight: normal;
-    color: rgb(var(--surface-900));
+    color: var(--body-text-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -49,8 +49,8 @@ a {
 }
 
 ::selection {
-    background-color: rgb(var(--primary-50));
-    color: rgb(var(--primary-700));
+    background-color: var(--selection-bg);
+    color: var(--selection-text-color);
 }
 
 h1,
@@ -63,7 +63,7 @@ h6 {
     font-family: inherit;
     font-weight: 600;
     line-height: 1.2;
-    color: rgb(var(--surface-900));
+    color: var(--header-text-color);
 
     &:first-child {
         margin-top: 0;
@@ -138,24 +138,6 @@ input[type="number"] {
 
 .my-fadeout {
     animation: my-fadeout 150ms linear;
-}
-
-// .px-link {
-//     font-size: 1rem;
-//     border-radius: 0.375rem;;
-//     text-align: left;
-//     background-color: transparent;
-//     margin: 0;
-//     padding: 0;
-//     border: none;
-//     cursor: pointer;
-//     user-select: none;
-
-//     @include focus-visible();
-// }
-
-.px-link:disabled {
-    cursor: default;
 }
 
 button {

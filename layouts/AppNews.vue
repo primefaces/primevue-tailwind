@@ -1,12 +1,12 @@
 <template>
-    <div v-if="$appState.newsActive" class="layout-news" :style="$appState.announcement.backgroundStyle">
+    <div v-if="$appState.newsActive" class="layout-news">
         <div class="layout-news-container">
             <i></i>
             <div class="layout-news-content">
-                <span class="layout-news-text" :style="$appState.announcement.textStyle">{{ $appState.announcement.content }}</span>
+                <span class="layout-news-text">{{ $appState.announcement.content }}</span>
                 <a class="layout-news-link" :href="$appState.announcement.linkHref">{{ $appState.announcement.linkText }}</a>
             </div>
-            <a class="layout-news-close" :style="$appState.announcement.textStyle" @click="onClose">
+            <a class="layout-news-close" @click="onClose">
                 <span class="pi pi-times"></span>
             </a>
         </div>

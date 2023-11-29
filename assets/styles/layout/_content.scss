@@ -10,7 +10,7 @@
 }
 
 .card {
-    background: rgb(var(--surface-0));
+    background: var(--card-bg);
     border: var(--card-border);
     padding: 2rem;
     border-radius: 10px;

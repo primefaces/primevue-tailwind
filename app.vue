@@ -9,8 +9,6 @@ import EventBus from '@/layouts/AppEventBus';
 
 export default {
     themeChangeListener: null,
-    newsActivate: null,
-    newsService: null,
     watch: {
         $route: {
             handler(to) {
