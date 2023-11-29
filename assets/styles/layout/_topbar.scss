@@ -70,6 +70,8 @@
         padding: 0;
         background-color: var(--topbar-item-bg);
 
+        @include focus-visible();
+
         &:hover {
             border-color: var(--primary-color-default);
         }

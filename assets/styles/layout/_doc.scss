@@ -45,7 +45,7 @@
                 outline: 0 none;
             }
 
-            @include focus-visible();
+            @include focus-visible(inset);
         }
 
         &.doc-tabmenu-active {
@@ -184,6 +184,8 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
                 transition: all .2s;
+
+                @include focus-visible();
             }
 
             &:hover {
