@@ -55,4 +55,27 @@
     .menu-button {
         display: none;
     }
+
+    .topbar-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        border: 1px solid var(--border-color);
+        width: 2rem;
+        height: 2rem;
+        transition: all .3s;
+        border-radius: 6px;
+        margin: 0;
+        padding: 0;
+        background-color: var(--topbar-item-bg);
+
+        &:hover {
+            border-color: var(--primary-color-default);
+        }
+
+        i {
+            color: var(--menuitem-text-color);
+        }
+    }
 }

@@ -65,51 +65,28 @@
                     <div id="docsearch"></div>
                 </li>
                 <li>
-                    <a
-                        href="https://github.com/primefaces/primevue"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex shrink-0 border border-solid w-8 h-8 border border-surface-100 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 items-center justify-center transition-all duration-300 hover:border-primary-500 dark:hover:border-primary-400"
-                    >
-                        <i class="pi pi-github text-surface-700 dark:text-surface-50"></i>
+                    <a href="https://github.com/primefaces/primevue" target="_blank" rel="noopener noreferrer" class="topbar-item">
+                        <i class="pi pi-github"></i>
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://discord.gg/gzKFYnpmCY"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex shrink-0 border border-solid w-8 h-8 border border-surface-100 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 items-center justify-center transition-all duration-300 hover:border-primary-500 dark:hover:border-primary-400"
-                    >
-                        <i class="pi pi-discord text-surface-700 dark:text-surface-50"></i>
+                    <a href="https://discord.gg/gzKFYnpmCY" target="_blank" rel="noopener noreferrer" class="topbar-item">
+                        <i class="pi pi-discord"></i>
                     </a>
                 </li>
                 <li>
-                    <a
-                        href="https://github.com/orgs/primefaces/discussions"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="flex shrink-0 border border-solid w-8 h-8 border border-surface-100 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 items-center justify-center transition-all duration-300 hover:border-primary-500 dark:hover:border-primary-400"
-                    >
-                        <i class="pi pi-comments text-surface-700 dark:text-surface-50"></i>
+                    <a href="https://github.com/orgs/primefaces/discussions" target="_blank" rel="noopener noreferrer" class="topbar-item">
+                        <i class="pi pi-comments"></i>
                     </a>
                 </li>
                 <li>
-                    <button
-                        type="button"
-                        class="flex shrink-0 border border-solid w-8 h-8 border border-surface-100 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 items-center justify-center transition-all duration-300 hover:border-primary-500 dark:hover:border-primary-400"
-                        @click="toggleDarkMode"
-                    >
-                        <i :class="['pi text-surface-700 dark:text-surface-50', { 'pi-moon': $appState.darkTheme, 'pi-sun': !$appState.darkTheme }]"></i>
+                    <button type="button" class="topbar-item" @click="toggleDarkMode">
+                        <i :class="['pi', { 'pi-moon': $appState.darkTheme, 'pi-sun': !$appState.darkTheme }]"></i>
                     </button>
                 </li>
                 <li class="relative">
-                    <button
-                        v-styleclass="{ selector: '.config',hideOnOutsideClick:'true', enterClass: 'hidden', enterActiveClass: 'my-fadein', leaveActiveClass: 'my-fadeout', leaveToClass: 'hidden' }"
-                        type="button"
-                        class="flex shrink-0 border border-solid w-8 h-8 border border-surface-100 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 items-center justify-center transition-all duration-300 hover:border-primary-500 dark:hover:border-primary-400"
-                    >
-                        <i class="pi pi-palette text-surface-700 dark:text-surface-50"></i>
+                    <button v-styleclass="{ selector: '.config', hideOnOutsideClick: 'true', enterClass: 'hidden', enterActiveClass: 'my-fadein', leaveActiveClass: 'my-fadeout', leaveToClass: 'hidden' }" type="button" class="topbar-item">
+                        <i class="pi pi-palette"></i>
                     </button>
                     <div class="config absolute top-[2rem] right-0 hidden w-[15rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-slate-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex">
                         <div class="flex-col justify-start items-start gap-2 inline-flex">
@@ -202,7 +179,6 @@
 
 <script>
 import docsearch from '@docsearch/js';
-import StyleClass from 'primevue/styleclass';
 import { DomHandler } from 'primevue/utils';
 export default {
     emits: ['menubutton-click', 'configbutton-click', 'darkswitch-click'],

@@ -6,6 +6,7 @@
     --selection-text-color:rgb(var(--primary-700));
     --header-text-color:rgb(var(--surface-900));
     --topbar-sticky-bg:rgba(83, 62, 62, 0.7);
+    --topbar-item-bg: rgb(var(--surface-0));
     --card-border: 1px solid var(--border-color);
     --card-bg: rgb(var(--surface-0));
     --glow-image: url(https://www.primefaces.org/cdn/primevue/images/layout/pattern.png), radial-gradient(50% 50% at center top,rgb(var(--primary-100)) 0%, #ffffff 100%);
@@ -46,7 +47,6 @@
     --docsearch-hit-shadow: none;
     --docsearch-spacing: 1rem;
     --docsearch-hit-color: rgb(var(--surface-900));
-    --docsearch-highlight-color: rgb(var(--primary-500));
     --docsearch-hit-active-color: rgb(var(--surface-0));
     --docsearch-button-background: rgb(var(--surface-0));
     --docsearch-button-border: rgb(var(--surface-50));
