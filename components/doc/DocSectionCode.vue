@@ -1,6 +1,6 @@
 <template>
     <div v-if="!embedded" class="doc-section-code">
-        <div class="doc-section-code-buttons scalein animation-duration-300">
+        <div class="doc-section-code-buttons">
             <template v-if="codeMode !== 'basic' && !hideToggleCode">
                 <button :class="['py-0 px-2 rounded-md h-8', { 'code-active': codeLang === 'composition' }]" @click="codeLang = 'composition'">Composition API</button>
                 <button :class="['py-0 px-2 rounded-md h-8', { 'code-active': codeLang === 'options' }]" @click="codeLang = 'options'">Options API</button>
@@ -72,8 +72,6 @@
 </template>
 
 <script>
-import { useCodeSandbox, useStackBlitz } from './codeeditor';
-
 export default {
     inheritAttrs: false,
     props: {
