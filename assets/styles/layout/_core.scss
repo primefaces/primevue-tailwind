@@ -114,7 +114,7 @@ input[type="number"] {
     top: 7rem;
 }
 
-@keyframes my-fadein {
+@keyframes p-fadein {
     0% {
         opacity: 0;
     }
@@ -123,7 +123,7 @@ input[type="number"] {
     }
 }
 
-@keyframes my-fadeout {
+@keyframes p-fadeout {
     0% {
         opacity: 1;
     }
@@ -132,12 +132,28 @@ input[type="number"] {
     }
 }
 
-.my-fadein {
-    animation: my-fadein 150ms linear;
+@keyframes p-scalein {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.8);
+        transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1), opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
 }
 
-.my-fadeout {
-    animation: my-fadeout 150ms linear;
+.p-scalein {
+    animation: p-scalein 150ms linear;
+}
+
+.p-fadein {
+    animation: p-fadein 150ms linear;
+}
+
+.p-fadeout {
+    animation: p-fadeout 150ms linear;
 }
 
 button {

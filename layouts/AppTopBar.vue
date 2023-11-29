@@ -85,10 +85,10 @@
                     </button>
                 </li>
                 <li class="relative">
-                    <button v-styleclass="{ selector: '.config', hideOnOutsideClick: 'true', enterClass: 'hidden', enterActiveClass: 'my-fadein', leaveActiveClass: 'my-fadeout', leaveToClass: 'hidden' }" type="button" class="topbar-item">
+                    <button v-styleclass="{ selector: '@next', enterClass: 'hidden', enterActiveClass: 'p-scalein', leaveToClass: 'hidden', leaveActiveClass: 'p-fadeout', hideOnOutsideClick: true }" type="button" class="topbar-item">
                         <i class="pi pi-palette"></i>
                     </button>
-                    <div class="config absolute top-[2rem] right-0 hidden w-[15rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-slate-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex">
+                    <div class="absolute top-[2rem] right-0 hidden w-[15rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-slate-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
                         <div class="flex-col justify-start items-start gap-2 inline-flex">
                             <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
                             <div class="self-stretch justify-start items-start gap-2 inline-flex">
