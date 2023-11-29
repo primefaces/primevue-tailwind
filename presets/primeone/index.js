@@ -1304,6 +1304,10 @@ const primeone = {
                 { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
             ]
         }),
+        panel:{
+            class: 'w-full'
+        },
+       
         input: ({ props }) => ({
             class: [
                 'cursor-pointer block flex flex-auto overflow-hidden overflow-ellipsis whitespace-nowrap relative',
