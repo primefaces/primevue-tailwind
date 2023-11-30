@@ -5284,7 +5284,7 @@
                                     'shadow-inner bg-surface-50 dark:bg-surface-800': !isDarkMode,
                                     'bg-surface-0 hover:bg-surface-50 dark:bg-surface-900 dark:hover:bg-surface-800 focus:outline-none h-[1.85rem] w-[1.85rem] flex justify-center items-center': isDarkMode
                                 }"
-                                @click="switchDarkMode('light')"
+                                @click="switchColorScheme('light')"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                     <path
@@ -5300,7 +5300,7 @@
                                     'shadow-inner bg-surface-50 dark:bg-surface-800': isDarkMode,
                                     'bg-surface-0 hover:bg-surface-50 dark:bg-surface-900 dark:hover:bg-surface-800 focus:outline-none h-[1.85rem] w-[1.85rem] flex justify-center items-center': !isDarkMode
                                 }"
-                                @click="switchDarkMode('dark')"
+                                @click="switchColorScheme('dark')"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                                     <path
@@ -5367,7 +5367,6 @@ export default {
             presetoptions: [{ value: 'TailwindUI' }, { value: 'Lara' }],
             slider_value: [20, 80],
             date: '11/01/2023',
-            darkMode: false,
             components: {
                 Button,
                 Dropdown,
@@ -5383,37 +5382,25 @@ export default {
             componentSuiteHovered: false
         };
     },
-    mounted() {
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'class') {
-                    this.darkMode = document.documentElement.classList.contains('dark');
-                }
-            });
-        });
-
-        observer.observe(document.documentElement, { attributes: true });
-    },
     methods: {
-        isDark() {
-            const root = document.getElementsByTagName('html')[0];
+        switchColorScheme(colorScheme) {
+            if (!document.startViewTransition) {
+                toggleColorScheme(colorScheme);
 
-            if (DomHandler.hasClass(root, 'dark')) {
-                return true;
-            } else {
-                return false;
+                return;
             }
+
+            document.startViewTransition(() => this.toggleColorScheme(colorScheme));
         },
-        switchDarkMode(mode) {
+        toggleColorScheme(colorScheme) {
             const root = document.documentElement;
 
-            if (mode === 'light') {
-                root.classList.remove('dark');
-                this.darkMode = false;
-            } else {
-                root.classList.add('dark');
-                this.darkMode = true;
-            }
+            if (colorScheme === 'light')
+                DomHandler.removeClass(root, 'dark');
+            else if (colorScheme === 'dark')
+                DomHandler.addClass(root, 'dark');
+
+            this.$appState.darkTheme = !this.$appState.darkTheme;
         },
         handleMouseOver() {
             this.componentSuiteHovered = true;
@@ -5428,7 +5415,7 @@ export default {
     },
     computed: {
         isDarkMode() {
-            return this.darkMode;
+            return this.$appState.darkTheme;
         }
     }
 };
