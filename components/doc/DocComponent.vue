@@ -27,7 +27,7 @@
             </div>
 
             <div v-if="tab === 1" class="doc-tabpanel">
-                <component :is="{ ...themingDocs }" />
+                <component :is="{ ...presetDocs }" />
             </div>
         </div>
     </div>
@@ -35,14 +35,14 @@
 
 <script>
 export default {
-    props: ['title', 'header', 'description', 'componentDocs', 'className', 'themingDocs'],
+    props: ['title', 'header', 'description', 'componentDocs', 'className', 'presetDocs'],
     data() {
         return {
             tab: 0
         };
     },
     mounted() {
-        this.tab = this.$route.hash.includes('api') ? 1 : this.$route.hash.includes('theming') ? 2 : this.$route.hash.includes('pt') ? 3 : 0;
+        this.tab = this.$route.hash.includes('presets') ? 1 : 0;
     }
 };
 </script>

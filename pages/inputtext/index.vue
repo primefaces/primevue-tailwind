@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Input Component" header="InputText" description="InputText is an extension to standard input element with theming." :componentDocs="docs" :themingDocs="themingDoc" />
+    <DocComponent title="Vue Input Component" header="InputText" description="InputText is an extension to standard input element." :componentDocs="docs" :presetDocs="presetDoc" />
 </template>
 
 <script>
@@ -12,7 +12,7 @@ import IconsDoc from '@/doc/inputtext/IconsDoc.vue';
 import ImportDoc from '@/doc/inputtext/ImportDoc.vue';
 import InvalidDoc from '@/doc/inputtext/InvalidDoc.vue';
 import SizesDoc from '@/doc/inputtext/SizesDoc.vue';
-import ThemingDoc from '@/doc/inputtext/theming/index.vue';
+import PresetDoc from '@/doc/inputtext/preset/index.vue';
 
 export default {
     data() {
@@ -64,7 +64,7 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            themingDoc: ThemingDoc
+            presetDoc: PresetDoc
         };
     }
 };
