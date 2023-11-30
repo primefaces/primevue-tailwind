@@ -13,7 +13,6 @@ export default {
 inputtext: {
     root: ({ props, context }) => ({
         class: [
-            ,
             // Font
             'font-sans leading-5',
 
