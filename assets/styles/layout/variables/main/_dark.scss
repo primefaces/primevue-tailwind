@@ -1,5 +1,6 @@
 :root[class="dark"] {
     --primary-color-default:rgb(var(--primary-400));
+    --primary-color-inverse-default:rgb(var(--surface-900));
     --body-bg:rgb(var(--surface-900));
     --body-text-color:rgb(var(--surface-50));
     --selection-bg:rgb(var(--primary-50));
@@ -34,20 +35,19 @@
     --border-color:rgba(255,255,255,.1);
     --border-hover-color:rgb(var(--surface-400));
 
-    --docsearch-searchbox-focus-background: rgb(var(--surface-900));
-    --docsearch-text-color: rgb(var(--surface-0)) !important;
-    --docsearch-muted-color: rgb(var(--surface-0)) !important;
-    --docsearch-searchbox-background: rgb(var(--surface-900));
-    --docsearch-text-color: rgb(var(--surface-0)) !important;
+    --docsearch-searchbox-focus-background: rgb(var(--surface-800));
+    --docsearch-text-color: rgb(var(--surface-50));
+    --docsearch-muted-color: rgb(var(--surface-50));
+    --docsearch-searchbox-background: rgb(var(--surface-800));
+    --docsearch-text-color: rgb(var(--surface-50));
     --docsearch-modal-background: rgb(var(--surface-800));
     --docsearch-key-gradient: rgb(var(--surface-900));
     --docsearch-key-shadow: none;
-    --docsearch-container-background: var(--maskbg);
+    --docsearch-container-background: rgba(0, 0, 0, 0.4);
     --docsearch-hit-background: rgb(var(--surface-800));
     --docsearch-hit-shadow: none;
     --docsearch-spacing: 1rem;
-    --docsearch-hit-color: rgb(var(--surface-0)) !important;
-    --docsearch-hit-active-color: rgb(var(--surface-900)) !important;
-    --docsearch-button-background: rgb(var(--surface-900));
-    --docsearch-border: rgb(var(--surface-700));
+    --docsearch-hit-color: rgb(var(--surface-50));
+    --docsearch-highlight-color: var(--primary-color-default);
+    --docsearch-hit-active-color: var(--primary-color-inverse-default);
 }

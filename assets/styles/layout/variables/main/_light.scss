@@ -1,5 +1,6 @@
 :root {
     --primary-color-default:rgb(var(--primary-500));
+    --primary-color-inverse-default:rgb(var(--surface-0));
     --body-bg:rgb(var(--surface-50));
     --body-text-color:rgb(var(--surface-900));
     --selection-bg:rgb(var(--primary-50));
@@ -39,15 +40,14 @@
     --docsearch-muted-color: rgb(var(--surface-900));
     --docsearch-searchbox-background: rgb(var(--surface-0));
     --docsearch-text-color: rgb(var(--surface-900));
-    --docsearch-modal-background: rgb(var(--surface-50));
+    --docsearch-modal-background: rgb(var(--surface-0));
     --docsearch-key-gradient: rgb(var(--surface-0));
     --docsearch-key-shadow: none;
-    --docsearch-container-background: var(--maskbg);
-    --docsearch-hit-background: rgb(var(--surface-50));
+    --docsearch-container-background: rgba(0, 0, 0, 0.4);
+    --docsearch-hit-background: rgb(var(--surface-0));
     --docsearch-hit-shadow: none;
     --docsearch-spacing: 1rem;
     --docsearch-hit-color: rgb(var(--surface-900));
-    --docsearch-hit-active-color: rgb(var(--surface-0));
-    --docsearch-button-background: rgb(var(--surface-0));
-    --docsearch-button-border: rgb(var(--surface-50));
+    --docsearch-highlight-color: var(--primary-color-default);
+    --docsearch-hit-active-color: var(--primary-color-inverse-default);
 }
