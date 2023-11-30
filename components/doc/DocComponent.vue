@@ -19,11 +19,13 @@
                 <div class="doc-main">
                     <div class="doc-intro">
                         <h1>{{ header }}</h1>
-                        <p>{{ description }}</p>
-                        <div>
-                            <a :href="`https://primevue.org/${apiLink}`">API <i class="pi pi-external-link" /></a>
-                            <a :href="`https://primevue.org/${ptLink}`">PassThrough <i class="pi pi-external-link" /></a>
-                        </div>
+                        <p class="mb-4">
+                            <span>{{ description }}</span>
+                            <a href="https://primevue.org/{{ apiLink }}" class="mx-1 text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 transition duration-300 ease-in-out">API Doc<i class="ml-1 pi pi-external-link text-sm"></i></a>
+                            <span>and</span>
+                            <a href="https://primevue.org/{{ ptLink }}" class="mx-1 text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 transition duration-300 ease-in-out">PassThrough Doc<i class="ml-1 pi pi-external-link text-sm"></i></a>
+                            <span>for more details.</span>
+                        </p>
                     </div>
                     <DocSections :docs="componentDocs" />
                 </div>
