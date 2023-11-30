@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-slate-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
+    <div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-surface-200 dark:border-surface-800 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
         <div class="flex-col justify-start items-start gap-2 inline-flex">
             <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
@@ -16,6 +16,27 @@
             <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Surface Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex">
                 <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-3.5 h-3.5 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></a>
+            </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-2 flex">
+            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Preset</span>
+            <div class="border border-surface-200 dark:border-surface-800 flex rounded-md text-xs font-medium">
+                <button
+                    type="button"
+                    class="transition duration-200 rounded-l-md px-2 py-1"
+                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isLara, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isLara }"
+                    @click="setPreset('lara')"
+                >
+                    Lara
+                </button>
+                <button
+                    type="button"
+                    class="transition duration-200 rounded-r-md px-2 py-1"
+                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isTailwindUI, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI }"
+                    @click="setPreset('tailwindui')"
+                >
+                    TailwindUI
+                </button>
             </div>
         </div>
     </div>
@@ -90,6 +111,17 @@ export default {
             colors.forEach((color, index) => {
                 document.documentElement.style.setProperty(`--${type}-${increments[index]}`, color);
             });
+        },
+        setPreset(preset) {
+            this.$appState.preset = preset;
+        }
+    },
+    computed: {
+        isLara() {
+            return this.$appState.preset === 'lara';
+        },
+        isTailwindUI() {
+            return this.$appState.preset === 'tailwindui';
         }
     }
 };
