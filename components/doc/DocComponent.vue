@@ -20,6 +20,10 @@
                     <div class="doc-intro">
                         <h1>{{ header }}</h1>
                         <p>{{ description }}</p>
+                        <div>
+                            <a :href="`https://primevue.org/${apiLink}`">API <i class="pi pi-external-link" /></a>
+                            <a :href="`https://primevue.org/${ptLink}`">PassThrough <i class="pi pi-external-link" /></a>
+                        </div>
                     </div>
                     <DocSections :docs="componentDocs" />
                 </div>
@@ -27,7 +31,7 @@
             </div>
 
             <div v-if="tab === 1" class="doc-tabpanel">
-                <component :is="{ ...presetDocs }" />
+                <component :is="{ ...presetDoc }" />
             </div>
         </div>
     </div>
@@ -35,7 +39,7 @@
 
 <script>
 export default {
-    props: ['title', 'header', 'description', 'componentDocs', 'className', 'presetDocs'],
+    props: ['title', 'header', 'description', 'componentDocs', 'className', 'presetDoc', 'apiLink', 'ptLink'],
     data() {
         return {
             tab: 0
