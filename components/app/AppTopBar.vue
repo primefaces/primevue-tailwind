@@ -81,7 +81,7 @@
                 </li>
                 <li>
                     <button type="button" class="topbar-item" @click="toggleDarkMode">
-                        <i :class="['pi', { 'pi-moon': $appState.darkTheme, 'pi-sun': !$appState.darkTheme }]"></i>
+                        <i :class="['pi', { 'pi-moon': $appState.darkMode, 'pi-sun': !$appState.darkMode }]"></i>
                     </button>
                 </li>
                 <li class="relative">
@@ -160,13 +160,13 @@ export default {
         switchDarkMode() {
             const root = document.documentElement;
 
-            if (this.$appState.darkTheme) {
+            if (this.$appState.darkMode) {
                 root.classList.remove('dark');
             } else {
                 root.classList.add('dark');
             }
 
-            this.$appState.darkTheme = !this.$appState.darkTheme;
+            this.$appState.darkMode = !this.$appState.darkMode;
         },
         bindScrollListener() {
             if (!this.scrollListener) {

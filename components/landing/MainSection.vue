@@ -5399,7 +5399,7 @@ export default {
             else if (colorScheme === 'dark')
                 root.classList.add('dark');
 
-            this.$appState.darkTheme = !this.$appState.darkTheme;
+            this.$appState.darkMode = !this.$appState.darkMode;
         },
         handleMouseOver() {
             this.componentSuiteHovered = true;
@@ -5414,7 +5414,7 @@ export default {
     },
     computed: {
         isDarkMode() {
-            return this.$appState.darkTheme;
+            return this.$appState.darkMode;
         }
     }
 };

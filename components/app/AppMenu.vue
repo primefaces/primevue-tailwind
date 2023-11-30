@@ -23,11 +23,6 @@ export default {
             menu: menudata.data
         };
     },
-    computed: {
-        darkTheme() {
-            return this.$appState.darkTheme === true;
-        }
-    },
     components: {
         AppMenuItem
     }
