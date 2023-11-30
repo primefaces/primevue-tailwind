@@ -170,8 +170,9 @@ const tailwindui = {
                     'text-surface-900 dark:text-surface-0',
                     'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                     'bg-surface-0 dark:bg-surface-900',
-                    'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
-        
+                    'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
+                    'shadow-sm',
+
                     // Shape
                     'rounded-md',
                     'appearance-none',
@@ -181,10 +182,6 @@ const tailwindui = {
                         'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
                         'opacity-60 select-none pointer-events-none cursor-default': context.disabled
                     },
-        
-                    // Transitions
-                    'transition-colors duration-200',
-                    'ring-opacity-100 ring-gray-300 ring-inset ring-offset-0 ring-1 shadow-sm'
                 ]
             })
         },
