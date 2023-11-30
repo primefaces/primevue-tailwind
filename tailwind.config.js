@@ -15,6 +15,7 @@ module.exports = {
                 'primary-700': 'rgb(var(--primary-700))',
                 'primary-800': 'rgb(var(--primary-800))',
                 'primary-900': 'rgb(var(--primary-900))',
+                'primary-950': 'rgb(var(--primary-950))',
 
                 'surface-0': 'rgb(var(--surface-0))',
                 'surface-50': 'rgb(var(--surface-50))',
@@ -26,7 +27,8 @@ module.exports = {
                 'surface-600': 'rgb(var(--surface-600))',
                 'surface-700': 'rgb(var(--surface-700))',
                 'surface-800': 'rgb(var(--surface-800))',
-                'surface-900': 'rgb(var(--surface-900))'
+                'surface-900': 'rgb(var(--surface-900))',
+                'surface-950': 'rgb(var(--surface-950))'
             }
         }
     },
