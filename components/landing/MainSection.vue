@@ -5341,7 +5341,6 @@ import InputSwitch from 'primevue/inputswitch';
 import SelectButton from 'primevue/selectbutton';
 import Slider from 'primevue/slider';
 import Tag from 'primevue/tag';
-import { DomHandler } from 'primevue/utils';
 
 export default {
     data() {
@@ -5396,9 +5395,9 @@ export default {
             const root = document.documentElement;
 
             if (colorScheme === 'light')
-                DomHandler.removeClass(root, 'dark');
+                root.classList.remove('dark');
             else if (colorScheme === 'dark')
-                DomHandler.addClass(root, 'dark');
+                root.classList.add('dark');
 
             this.$appState.darkTheme = !this.$appState.darkTheme;
         },

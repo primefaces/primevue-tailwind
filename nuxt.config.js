@@ -4,12 +4,10 @@ const baseUrl = '/';
 export default defineNuxtConfig({
     typescript: false,
     modules: ['nuxt-gtag', 'nuxt-primevue'],
-
     components: [
-        '~/components',
         {
-            path: '~/components/layout',
-            prefetch: false
+            path: '~/components',
+            pathPrefix: false
         }
     ],
     primevue: {

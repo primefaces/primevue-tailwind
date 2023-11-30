@@ -8,8 +8,6 @@
 
 <script>
 import MainSection from '@/components/landing/MainSection.vue';
-import AppNews from '@/layouts/AppNews';
-import AppTopBar from '@/layouts/AppTopBar.vue';
 
 export default {
     setup() {
@@ -23,8 +21,6 @@ export default {
         }
     },
     components: {
-        AppNews,
-        AppTopBar,
         MainSection
     }
 };

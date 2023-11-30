@@ -1,5 +1,5 @@
 const $appState = {
-    install: (Vue, options) => {
+    install: (Vue) => {
         Vue.config.globalProperties.$appState = reactive({ theme: 'lara-light-green', darkTheme: false, codeSandbox: false, sourceType: 'options-api', newsActive: false, announcement: null, storageKey: 'primevue-tailwind' });
     }
 };

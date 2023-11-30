@@ -19,10 +19,6 @@
 
 <script>
 import { DomHandler } from 'primevue/utils';
-import AppFooter from './AppFooter.vue';
-import AppMenu from './AppMenu.vue';
-import AppNews from './AppNews.vue';
-import AppTopBar from './AppTopBar.vue';
 
 export default {
     data() {
@@ -69,12 +65,6 @@ export default {
                 }
             ];
         }
-    },
-    components: {
-        AppTopBar,
-        AppMenu,
-        AppFooter,
-        AppNews
     }
 };
 </script>
