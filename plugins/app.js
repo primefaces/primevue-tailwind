@@ -1,6 +1,5 @@
 import CodeHighlight from '@/directives/CodeHighlight';
-import TailwindUI from '@/presets/tailwindui';
-import Lara from '@/presets/tailwindui';
+import Lara from '@/presets/lara';
 import PrimeVue from 'primevue/config';
 
 export default defineNuxtPlugin((nuxtApp) => {
