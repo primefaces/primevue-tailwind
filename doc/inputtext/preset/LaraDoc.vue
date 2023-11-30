@@ -13,17 +13,36 @@ export default {
 inputtext: {
     root: ({ props, context }) => ({
         class: [
+            // Font
+            'font-sans text-base leading-none',
+
+            // Sizing
             'm-0',
-            'font-sans text-surface-600 dark:text-white/80 bg-surface-0 dark:bg-surface-900 border border-surface-50 dark:border-surface-700 transition-colors duration-200 appearance-none rounded-lg',
             {
-                'hover:border-primary-500 focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !context.disabled,
+                'px-4 py-4': props.size == 'large',
+                'px-2 py-2': props.size == 'small',
+                'p-3': props.size == null
+            },
+
+            // Colors
+            'text-surface-600 dark:text-surface-200',
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+            'bg-surface-0 dark:bg-surface-900',
+            'border border-surface-300 dark:border-surface-700',
+
+            // Shape
+            'rounded-lg',
+            'appearance-none',
+
+            // Interactions
+            {
+                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
                 'opacity-60 select-none pointer-events-none cursor-default': context.disabled
             },
-            {
-                'text-lg px-4 py-4': props.size == 'large',
-                'text-xs px-2 py-2': props.size == 'small',
-                'p-3 text-base': props.size == null
-            }
+
+            // Transitions
+            'transition-colors duration-200'
         ]
     })
 }
