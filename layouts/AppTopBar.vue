@@ -124,7 +124,7 @@ import docsearch from '@docsearch/js';
 import { DomHandler } from 'primevue/utils';
 
 export default {
-    emits: ['menubutton-click', 'darkswitch-click'],
+    emits: ['menubutton-click'],
     props: {
         showMenuButton: {
             type: Boolean,
@@ -259,6 +259,8 @@ export default {
             } else {
                 DomHandler.addClass(root, 'dark');
             }
+
+            this.$appState.darkTheme = !this.$appState.darkTheme;
         },
         bindScrollListener() {
             if (!this.scrollListener) {

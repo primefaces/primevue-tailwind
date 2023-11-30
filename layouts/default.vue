@@ -1,7 +1,7 @@
 <template>
     <div class="layout-wrapper" :class="containerClass" :data-p-theme="$appState.theme">
         <AppNews />
-        <AppTopBar @menubutton-click="onMenuButtonClick" @darkswitch-click="onDarkModeToggle" />
+        <AppTopBar @menubutton-click="onMenuButtonClick" />
         <div :class="['layout-mask', { 'layout-mask-active': sidebarActive }]" @click="onMaskClick"></div>
         <div class="layout-content">
             <app-menu :active="sidebarActive" />
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import EventBus from '@/layouts/AppEventBus';
 import { DomHandler } from 'primevue/utils';
 import AppFooter from './AppFooter.vue';
 import AppMenu from './AppMenu.vue';
@@ -58,19 +57,6 @@ export default {
         onMaskClick() {
             this.sidebarActive = false;
             DomHandler.unblockBodyScroll('blocked-scroll');
-        },
-        onDarkModeToggle() {
-            let newTheme = null;
-            let currentTheme = this.$appState.theme;
-
-            if (this.$appState.darkTheme) {
-                newTheme = currentTheme.replace('dark', 'light');
-            } else {
-                if (currentTheme.includes('light') && currentTheme !== 'fluent-light') newTheme = currentTheme.replace('light', 'dark');
-                else newTheme = 'lara-dark-green'; //fallback
-            }
-
-            EventBus.emit('theme-change', { theme: newTheme, dark: !this.$appState.darkTheme });
         }
     },
     computed: {
@@ -79,9 +65,7 @@ export default {
                 {
                     'layout-news-active': this.$appState.newsActive,
                     'p-input-filled': this.$primevue.config.inputStyle === 'filled',
-                    'p-ripple-disabled': this.$primevue.config.ripple === false,
-                    'layout-dark': this.$appState.darkTheme,
-                    'layout-light': !this.$appState.darkTheme
+                    'p-ripple-disabled': this.$primevue.config.ripple === false
                 }
             ];
         }

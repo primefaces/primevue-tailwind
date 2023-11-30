@@ -751,18 +751,12 @@ const tailwindui = {
                     'text-primary-600 bg-transparent border-transparent focus:ring-primary-400/50 dark:focus:ring-primary-300/50': props.link
                 },
                 {
-                    'focus:ring-surface-400/50 dark:focus:ring-surface-300/50':
-                        props.severity === 'secondary',
-                        'focus:ring-green-400/50 dark:focus:ring-green-300/50':
-                        props.severity === 'success',
-                        'focus:ring-blue-400/50 dark:focus:ring-blue-300/50':
-                        props.severity === 'info',
-                        'focus:ring-orange-400/50 dark:focus:ring-orange-300/50':
-                        props.severity === 'warning',
-                        'focus:ring-purple-400/50 dark:focus:ring-purple-300/50':
-                        props.severity === 'help',
-                        'focus:ring-red-400/50 dark:focus:ring-red-300/50':
-                        props.severity === 'danger'
+                    'focus:ring-surface-400/50 dark:focus:ring-surface-300/50': props.severity === 'secondary',
+                    'focus:ring-green-400/50 dark:focus:ring-green-300/50': props.severity === 'success',
+                    'focus:ring-blue-400/50 dark:focus:ring-blue-300/50': props.severity === 'info',
+                    'focus:ring-orange-400/50 dark:focus:ring-orange-300/50': props.severity === 'warning',
+                    'focus:ring-purple-400/50 dark:focus:ring-purple-300/50': props.severity === 'help',
+                    'focus:ring-red-400/50 dark:focus:ring-red-300/50': props.severity === 'danger'
                 },
                 {
                     'text-white dark:text-surface-900 bg-surface-500 dark:bg-surface-400 border border-surface-500 dark:border-surface-400 hover:bg-surface-600 dark:hover:bg-surface-500 hover:border-surface-600 dark:hover:border-surface-500':
@@ -794,22 +788,16 @@ const tailwindui = {
                 {
                     'text-surface-500 hover:bg-surface-300/20': props.plain && props.text,
                     'text-surface-500 border border-gray-500 hover:bg-surface-300/20': props.plain && props.outlined,
-                    'text-white bg-gray-500 border border-gray-500 hover:bg-gray-600 hover:border-gray-600':
-                        props.plain && !props.outlined && !props.text
+                    'text-white bg-gray-500 border border-gray-500 hover:bg-gray-600 hover:border-gray-600': props.plain && !props.outlined && !props.text
                 },
                 {
                     'bg-transparent border': props.outlined && !props.plain,
-                    'text-primary-500 border border-primary-500 hover:bg-pink-300/20':
-                        props.outlined && props.severity === null && !props.plain,
-                    'text-surface-500 border border-gray-500 hover:bg-surface-300/20':
-                        props.outlined && props.severity === 'secondary' && !props.plain,
+                    'text-primary-500 border border-primary-500 hover:bg-pink-300/20': props.outlined && props.severity === null && !props.plain,
+                    'text-surface-500 border border-gray-500 hover:bg-surface-300/20': props.outlined && props.severity === 'secondary' && !props.plain,
                     'text-blue-500 border border-blue-500 hover:bg-blue-300/20 ': props.outlined && props.severity === 'info' && !props.plain,
-                    'text-green-500 border border-green-500 hover:bg-green-300/20':
-                        props.outlined && props.severity === 'success' && !props.plain,
-                    'text-orange-500 border border-orange-500 hover:bg-orange-300/20':
-                        props.outlined && props.severity === 'warning' && !props.plain,
-                    'text-purple-500 border border-purple-500 hover:bg-purple-300/20':
-                        props.outlined && props.severity === 'help' && !props.plain,
+                    'text-green-500 border border-green-500 hover:bg-green-300/20': props.outlined && props.severity === 'success' && !props.plain,
+                    'text-orange-500 border border-orange-500 hover:bg-orange-300/20': props.outlined && props.severity === 'warning' && !props.plain,
+                    'text-purple-500 border border-purple-500 hover:bg-purple-300/20': props.outlined && props.severity === 'help' && !props.plain,
                     'text-red-500 border border-red-500 hover:bg-red-300/20': props.outlined && props.severity === 'danger' && !props.plain
                 },
                 { 'px-4 py-3 text-base': props.size === null, 'text-xs py-2 px-3': props.size === 'small', 'text-xl py-3 px-4': props.size === 'large' },
@@ -3826,11 +3814,7 @@ const tailwindui = {
                 class: 'm-0 p-0 py-3 list-none'
             },
             filterrowitem: ({ context }) => ({
-                class: [
-                    'm-0 py-3 px-5 bg-transparent',
-                    'transition duration-200',
-                    context?.highlighted ? 'text-primary-700 bg-pink-100 dark:text-white/80 dark:bg-pink-300' : 'text-surface-600 bg-transparent dark:text-white/80 dark:bg-transparent'
-                ]
+                class: ['m-0 py-3 px-5 bg-transparent', 'transition duration-200', context?.highlighted ? 'text-primary-700 bg-pink-100 dark:text-white/80 dark:bg-pink-300' : 'text-surface-600 bg-transparent dark:text-white/80 dark:bg-transparent']
             }),
             filteroperator: {
                 class: [
@@ -4044,4 +4028,4 @@ const tailwindui = {
     }
 };
 
-export default primeone;
+export default tailwindui;
