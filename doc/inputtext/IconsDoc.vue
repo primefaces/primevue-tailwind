@@ -3,14 +3,14 @@
         <p>Icons can be placed inside an input element by wrapping both the input and the icon with an element that has either <i>.p-input-icon-left</i> or <i>.p-input-icon-right</i> class.</p>
     </DocSectionText>
     <div class="card flex flex-wrap justify-center gap-3">
-        <span class="p-input-icon-left">
-            <i class="pi pi-search" />
-            <InputText v-model="value1" placeholder="Search" />
+        <span class="relative">
+            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+            <InputText v-model="value1" placeholder="Search" class="pl-10" />
         </span>
 
-        <span class="p-input-icon-right">
-            <i class="pi pi-spin pi-spinner" />
-            <InputText v-model="value2" />
+        <span class="relative">
+            <i class="pi pi-spin pi-spinner absolute top-2/4 -mt-2 right-3 text-surface-400 dark:text-surface-600" />
+            <InputText v-model="value2" class="pr-10"/>
         </span>
     </div>
     <DocSectionCode :code="code" />
@@ -24,27 +24,27 @@ export default {
             value2: null,
             code: {
                 basic: `
-<span class="p-input-icon-left">
-    <i class="pi pi-search" />
-    <InputText v-model="value1" placeholder="Search" />
+<span class="relative">
+    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+    <InputText v-model="value1" placeholder="Search" class="pl-10" />
 </span>
 
-<span class="p-input-icon-right">
-    <i class="pi pi-spin pi-spinner" />
-    <InputText v-model="value2" />
+<span class="relative">
+    <i class="pi pi-spin pi-spinner absolute top-2/4 -mt-2 right-3 text-surface-400 dark:text-surface-600" />
+    <InputText v-model="value2" class="pr-10" />
 </span>
 `,
                 options: `
 <template>
     <div class="card flex flex-wrap justify-center gap-3">
-        <span class="p-input-icon-left">
-            <i class="pi pi-search" />
-            <InputText v-model="value1" placeholder="Search" />
+        <span class="relative">
+            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+            <InputText v-model="value1" placeholder="Search" class="pl-10" />
         </span>
             
-        <span class="p-input-icon-right">
-            <i class="pi pi-spin pi-spinner" />
-            <InputText v-model="value2" />
+        <span class="relative">
+            <i class="pi pi-spin pi-spinner absolute top-2/4 -mt-2 right-3 text-surface-400 dark:text-surface-600" />
+            <InputText v-model="value2" class="pr-10" />
         </span>
     </div>
 </template>
@@ -63,14 +63,14 @@ export default {
                 composition: `
 <template>
     <div class="card flex flex-wrap justify-center gap-3">
-        <span class="p-input-icon-left">
-            <i class="pi pi-search" />
-            <InputText v-model="value1" placeholder="Search" />
-            </span>
+        <span class="relative">
+            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+            <InputText v-model="value1" placeholder="Search" class="pl-10" />
+        </span>
             
-            <span class="p-input-icon-right">
-                <i class="pi pi-spin pi-spinner" />
-            <InputText v-model="value2" />
+        <span class="relative">
+            <i class="pi pi-spin pi-spinner absolute top-2/4 -mt-2 right-3 text-surface-400 dark:text-surface-600" />
+            <InputText v-model="value2" class="pr-10" />
         </span>
     </div>
 </template>

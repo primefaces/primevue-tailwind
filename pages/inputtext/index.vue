@@ -6,7 +6,7 @@
 import AccessibilityDoc from '@/doc/inputtext/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/inputtext/BasicDoc.vue';
 import DisabledDoc from '@/doc/inputtext/DisabledDoc.vue';
-import FloatLabelDoc from '@/doc/inputtext/FloatLabelDoc.vue';
+// import FloatLabelDoc from '@/doc/inputtext/FloatLabelDoc.vue';
 import HelpTextDoc from '@/doc/inputtext/HelpTextDoc.vue';
 import IconsDoc from '@/doc/inputtext/IconsDoc.vue';
 import ImportDoc from '@/doc/inputtext/ImportDoc.vue';
@@ -43,11 +43,11 @@ export default {
                     label: 'HelpText',
                     component: HelpTextDoc
                 },
-                {
-                    id: 'floatlabel',
-                    label: 'FloatLabel',
-                    component: FloatLabelDoc
-                },
+                // {
+                //     id: 'floatlabel',
+                //     label: 'FloatLabel',
+                //     component: FloatLabelDoc
+                // },
                 {
                     id: 'invalid',
                     label: 'Invalid',
