@@ -5341,7 +5341,6 @@ import InputSwitch from 'primevue/inputswitch';
 import SelectButton from 'primevue/selectbutton';
 import Slider from 'primevue/slider';
 import Tag from 'primevue/tag';
-import { ref } from 'vue';
 import { DomHandler } from 'primevue/utils';
 
 export default {
@@ -5357,17 +5356,17 @@ export default {
                 { name: 'Istanbul', code: 'IST' },
                 { name: 'Paris', code: 'PRS' }
             ],
-            options: ref([
+            options: [
                 { icon: 'pi pi-list', value: 'List' },
                 { icon: 'pi pi-th-large', value: 'Grid' }
-            ]),
-            selectbutton_value: ref({ icon: 'pi pi-th-large', value: 'Grid' }),
+            ],
+            selectbutton_value: { icon: 'pi pi-th-large', value: 'Grid' },
             lightdark_value: 'light',
-            value1: ref(20),
-            presetbutton_value: ref({ value: 'PrimeOne' }),
-            presetoptions: ref([{ value: 'TailwindUI' }, { value: 'PrimeOne' }]),
-            slider_value: ref([20, 80]),
-            date: ref('11/01/2023'),
+            value1: 20,
+            presetbutton_value: { value: 'PrimeOne' },
+            presetoptions: [{ value: 'TailwindUI' }, { value: 'Lara' }],
+            slider_value: [20, 80],
+            date: '11/01/2023',
             darkMode: false,
             components: {
                 Button,
