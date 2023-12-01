@@ -8,6 +8,5 @@ coverage
 .env
 dist
 .DS_Store
-.vscode
 .idea
 .eslintcache
