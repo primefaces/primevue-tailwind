@@ -15,7 +15,7 @@ const TRANSITIONS = {
     }
 };
 
-const tailwindui = {
+export default {
     global: {
         css: `
         *[data-pd-ripple="true"]{
@@ -44,7 +44,7 @@ const tailwindui = {
                 stroke-dasharray: 1, 200;
                 stroke-dashoffset: 0;
             }
-            
+
             50% {
                 stroke-dasharray: 89, 200;
                 stroke-dashoffset: -35px;
@@ -397,8 +397,7 @@ const tailwindui = {
                     'text-purple-500 border border-purple-500 hover:bg-purple-300/20': props.outlined && props.severity === 'help' && !props.plain,
                     'text-red-500 border border-red-500 hover:bg-red-300/20': props.outlined && props.severity === 'danger' && !props.plain
                 },
-                { 'py-1.5 px-3 text-sm': props.size === null,  'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small', },
+                { 'py-1.5 px-3 text-sm': props.size === null, 'py-3 px-4 text-md': props.size == 'large', 'py-1 px-2 text-sm': props.size == 'small' },
                 { 'opacity-60 pointer-events-none cursor-default': context.disabled }
             ]
         }),
@@ -719,5 +718,3 @@ const tailwindui = {
         }
     }
 };
-
-export default tailwindui;

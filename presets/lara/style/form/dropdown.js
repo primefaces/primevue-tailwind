@@ -1,4 +1,4 @@
-export const dropdown = {
+export default {
     root: ({ props }) => ({
         class: [
             'cursor-pointer inline-flex relative select-none',

@@ -1,4 +1,4 @@
-export const button = {
+export default {
     root: ({ props, context }) => ({
         class: [
             'items-center cursor-pointer inline-flex overflow-hidden relative select-none text-center align-bottom h-full',

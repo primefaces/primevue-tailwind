@@ -1,4 +1,4 @@
-export const inputtext = {
+export default {
     root: ({ props, context }) => ({
         class: [
             // Font

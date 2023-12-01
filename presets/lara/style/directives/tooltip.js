@@ -1,4 +1,4 @@
-export const tooltip = {
+export default {
     root: ({ context }) => ({
         class: [
             'absolute shadow-md',

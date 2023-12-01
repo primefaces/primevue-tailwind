@@ -1,4 +1,4 @@
-export const global = {
+export default {
     css: `
     *[data-pd-ripple="true"]{
         overflow: hidden;

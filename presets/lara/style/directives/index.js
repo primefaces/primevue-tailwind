@@ -1,3 +1,3 @@
-export { badge } from './badge';
-export { ripple } from './ripple';
-export { tooltip } from './tooltip';
+export { default as badge } from './badge';
+export { default as ripple } from './ripple';
+export { default as tooltip } from './tooltip';

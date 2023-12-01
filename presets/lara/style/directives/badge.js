@@ -1,4 +1,4 @@
-export const badge = {
+export default {
     root: ({ context }) => ({
         class: [
             'absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 origin-top-right m-0',

@@ -1,5 +1,8 @@
 import { button, directives, form, global } from './style';
 
+/**
+ * @todo remove this line
+ */
 const TRANSITIONS = {
     toggleable: {
         enterFromClass: 'max-h-0',
@@ -16,93 +19,13 @@ const TRANSITIONS = {
         leaveToClass: 'opacity-0'
     }
 };
+/***********/
 
-const primeone = {
+export default {
     ...global,
-    directives,
-
-    //Forms
     ...form,
     ...button,
-    inputnumber: {
-        root: ({ props, context }) => ({
-            class: [
-                // Display
-                'w-full',
-                'inline-flex'
-            ]
-        }),
-        input: ({ props }) => ({
-            class: [
-                // Sizing
-                'w-44',
-                'h-13',
-
-                // Shape
-                'rounded-tr-none',
-                'rounded-br-none'
-            ]
-        }),
-        buttongroup: ({ props }) => ({
-            class: [
-                // Display
-                'flex',
-
-                // Sizing
-                'h-13',
-
-                // Alignment
-                'flex-col'
-            ]
-        }),
-        incrementbutton: ({ props }) => ({
-            class: [
-                // Display
-                'flex',
-
-                // Alignment
-                'items-center',
-                'justify-center',
-
-                // Sizing
-                'w-[3rem]',
-                'flex-1',
-
-                // Shape
-                'rounded-tl-none',
-                'rounded-br-none',
-                'rounded-bl-none',
-
-                // Padding
-                'p-0'
-            ]
-        }),
-        decrementbutton: ({ props }) => ({
-            class: [
-                // Display
-                'flex',
-
-                // Alignment
-                'items-center',
-                'justify-center',
-
-                // Sizing
-                'w-[3rem]',
-                'flex-1',
-
-                // Shape
-                'rounded-bl-none',
-                'rounded-tr-none',
-                'rounded-tl-none',
-
-                // Padding
-                'p-0'
-            ]
-        }),
-        label: {
-            class: 'hidden'
-        }
-    },
+    directives,
 
     //un-refactored components (for landing page)
 
@@ -449,5 +372,3 @@ const primeone = {
         }
     }
 };
-
-export default primeone;
