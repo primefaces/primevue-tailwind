@@ -22,10 +22,10 @@ const TRANSITIONS = {
 /***********/
 
 export default {
-    ...global,
+    global,
+    directives,
     ...form,
     ...button,
-    directives,
 
     //un-refactored components (for landing page)
 
