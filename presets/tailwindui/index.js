@@ -155,8 +155,7 @@ const tailwindui = {
                 // Font
                 'font-sans leading-5',
 
-                // Sizing
-                'w-full md:w-56',
+                // Spacing
                 'm-0',
                 {
                     'py-3 px-4 text-md': props.size == 'large',
@@ -245,7 +244,7 @@ const tailwindui = {
         button: ({ context }) => ({
             class: [
                 'inline-flex cursor-pointer select-none items-center align-bottom text-center overflow-hidden relative',
-                'px-4 py-3',
+                'py-1.5 px-3 text-sm',
                 'transition duration-200 border border-r-0',
                 'first:rounded-l-md first:rounded-tr-none first:rounded-br-none last:border-r last:rounded-tl-none last:rounded-bl-none last:rounded-r-md',
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50',
@@ -398,7 +397,8 @@ const tailwindui = {
                     'text-purple-500 border border-purple-500 hover:bg-purple-300/20': props.outlined && props.severity === 'help' && !props.plain,
                     'text-red-500 border border-red-500 hover:bg-red-300/20': props.outlined && props.severity === 'danger' && !props.plain
                 },
-                { 'px-4 py-3 text-base': props.size === null, 'text-xs py-2 px-3': props.size === 'small', 'text-xl py-3 px-4': props.size === 'large' },
+                { 'py-1.5 px-3 text-sm': props.size === null,  'py-3 px-4 text-md': props.size == 'large',
+                'py-1 px-2 text-sm': props.size == 'small', },
                 { 'opacity-60 pointer-events-none cursor-default': context.disabled }
             ]
         }),
@@ -471,7 +471,7 @@ const tailwindui = {
                 'cursor-pointer block flex flex-auto overflow-hidden overflow-ellipsis whitespace-nowrap relative',
                 'bg-transparent border-0 text-surface-800',
                 'dark:text-white/80',
-                'p-3 transition duration-200 bg-transparent rounded appearance-none font-sans text-base',
+                'py-1 px-2 text-sm transition duration-200 bg-transparent rounded appearance-none font-sans',
                 'focus:outline-none focus:shadow-none',
                 { 'pr-7': props.showClear }
             ]
@@ -488,7 +488,7 @@ const tailwindui = {
         item: ({ context }) => ({
             class: [
                 'cursor-pointer font-normal overflow-hidden relative whitespace-nowrap',
-                'm-0 p-3 border-0 transition-shadow duration-200 rounded-none',
+                'm-0 py-1 px-2 text-sm border-0 transition-shadow duration-200 rounded-none',
                 {
                     'text-surface-700 hover:text-surface-700 hover:bg-surface-100 dark:text-white/80 dark:hover:bg-surface-800': !context.focused && !context.selected,
                     'bg-surface-50 text-surface-700 dark:text-white/80 dark:bg-surface-800/90 hover:text-surface-700 hover:bg-surface-100 dark:text-white/80 dark:hover:bg-surface-800': context.focused && !context.selected,
@@ -534,7 +534,7 @@ const tailwindui = {
         }),
         input: {
             class: [
-                'font-sans text-base text-surface-600 dark:text-white/80 bg-surface-0 dark:bg-surface-900 p-3 border border-surface-200 dark:border-surface-700 transition-colors duration-200 appearance-none rounded-lg',
+                'font-sans text-base text-surface-600 dark:text-white/80 bg-surface-0 dark:bg-surface-900 py-1 px-2 text-sm border border-surface-200 dark:border-surface-700 transition-colors duration-200 appearance-none rounded-lg',
                 'hover:border-primary-500' //Hover
             ]
         },
@@ -544,12 +544,12 @@ const tailwindui = {
                 'min-w-[350px]',
                 {
                     'shadow-md border-0 absolute': !props.inline,
-                    'inline-block overflow-x-auto border border-surface-200 dark:border-surface-700 p-2 rounded-lg': props.inline
+                    'inline-block overflow-x-auto border border-surface-200 dark:border-surface-700 p-1.5 rounded-lg': props.inline
                 }
             ]
         }),
         header: {
-            class: ['flex items-center justify-between', 'p-2 text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900 font-semibold m-0 border-b border-surface-200 dark:border-surface-700 rounded-t-lg']
+            class: ['flex items-center justify-between', 'p-1.5 text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900 font-semibold m-0 border-b border-surface-200 dark:border-surface-700 rounded-t-lg']
         },
         previousbutton: {
             class: [

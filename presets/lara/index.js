@@ -155,7 +155,7 @@ const primeone = {
                 // Font
                 'font-sans text-base leading-none',
 
-                // Sizing
+                // Spacing
                 'm-0',
                 {
                     'px-4 py-4': props.size == 'large',
@@ -169,54 +169,102 @@ const primeone = {
                 'bg-surface-0 dark:bg-surface-900',
                 'border border-surface-300 dark:border-surface-700',
 
-                // Shape
-                'rounded-lg',
-                'appearance-none',
-
-                // Interactions
+                // States
                 {
                     'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
                     'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
                     'opacity-60 select-none pointer-events-none cursor-default': context.disabled
                 },
 
-                // Transitions
-                'transition-colors duration-200'
+                // Misc
+                'rounded-lg',
+                'appearance-none',
+                'transition-colors duration-200',
             ]
         })
     },
-
-    //un-refactored components (for landing page)
     inputnumber: {
-        root: {
-            class: 'w-full inline-flex'
-        },
+        root: ({ props, context }) => ({
+            class: [
+                // Display
+                'w-full',
+                'inline-flex',
+            ]
+        }),
         input: ({ props }) => ({
-            class: [{ 'rounded-tr-none rounded-br-none w-44 h-13': props.showButtons && props.buttonLayout == 'stacked' }]
+            class: [
+                // Sizing
+                'w-44',
+                'h-13',
+
+                // Shape
+                'rounded-tr-none',
+                'rounded-br-none'
+            ]
         }),
         buttongroup: ({ props }) => ({
-            class: [{ 'flex flex-col h-13': props.showButtons && props.buttonLayout == 'stacked' }]
+            class: [
+                // Display
+                'flex',
+
+                // Sizing
+                'h-13',
+
+                // Alignment
+                'flex-col'
+            ]
         }),
         incrementbutton: ({ props }) => ({
             class: [
-                'flex !items-center !justify-center',
-                {
-                    '!rounded-tl-none !rounded-br-none !rounded-bl-none rounded-bl-none !p-0 flex-1 w-[3rem] last:hidden': props.showButtons && props.buttonLayout == 'stacked'
-                }
+                // Display
+                'flex',
+
+                // Alignment
+                'items-center',
+                'justify-center',
+
+                // Sizing
+                'w-[3rem]',
+                'flex-1',
+
+                // Shape
+                'rounded-tl-none',
+                'rounded-br-none',
+                'rounded-bl-none',
+
+                // Padding
+                'p-0'
+            ]
+        }),
+        decrementbutton: ({ props }) => ({
+            class: [
+                // Display
+                'flex',
+
+                // Alignment
+                'items-center',
+                'justify-center',
+
+                // Sizing
+                'w-[3rem]',
+                'flex-1',
+
+                // Shape
+                'rounded-bl-none',
+                'rounded-tr-none',
+                'rounded-tl-none',
+
+                // Padding
+                'p-0'
             ]
         }),
         label: {
             class: 'hidden'
-        },
-        decrementbutton: ({ props }) => ({
-            class: [
-                'flex items-center justify-center',
-                {
-                    '!rounded-bl-none !rounded-tr-none !rounded-tl-none !p-0 flex-1 w-[3rem]': props.showButtons && props.buttonLayout == 'stacked'
-                }
-            ]
-        })
+        }
     },
+
+    //un-refactored components (for landing page)
+ 
     inputswitch: {
         root: ({ props }) => ({
             class: [
