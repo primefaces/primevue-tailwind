@@ -15,6 +15,10 @@
                         {
                             "name": "InputText",
                             "to": "/inputtext"
+                        },
+                        {
+                            "name": "InputNumber",
+                            "to": "/inputnumber"
                         }
                     ]
                 }
