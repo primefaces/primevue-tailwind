@@ -1,4 +1,4 @@
-async function fetchRepo(event) {
+export default defineEventHandler(async (event) => {
     const config = useRuntimeConfig(event);
     const { owner, repo } = event.context.params;
 
@@ -11,8 +11,4 @@ async function fetchRepo(event) {
     });
 
     return response.json();
-}
-
-export default defineEventHandler((event) => {
-    return fetchRepo(event);
 });
