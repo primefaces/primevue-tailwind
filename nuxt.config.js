@@ -10,6 +10,9 @@ export default defineNuxtConfig({
             pathPrefix: false
         }
     ],
+    runtimeConfig: {
+        GITHUB_TOKEN: ''
+    },
     primevue: {
         usePrimeVue: false,
         cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities'

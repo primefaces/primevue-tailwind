@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import menudata from '@/assets/menu/menu.json';
-import AppMenuItem from './AppMenuItem.vue';
+import menudata from '@/assets/data/menu.json';
+
 export default {
     props: {
         active: {
@@ -22,9 +22,6 @@ export default {
         return {
             menu: menudata.data
         };
-    },
-    components: {
-        AppMenuItem
     }
 };
 </script>

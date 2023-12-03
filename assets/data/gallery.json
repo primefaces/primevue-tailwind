@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "name": "Pure Accordion",
+            "owner": "cagataycivici",
+            "repository": "pure-accordion",
+            "thumbnail": "https://repository-images.githubusercontent.com/726738540/8eb85c88-15bf-4506-b940-bee746ca9e80"
+        },
+        {
+            "name": "Shadcn Dialog",
+            "owner": "cagataycivici",
+            "repository": "shadcn-dialog",
+            "thumbnail": "https://repository-images.githubusercontent.com/726738804/322cc61e-059a-4f30-9db7-fb0a55a303ea"
+        }
+    ]
+}
