@@ -58,5 +58,13 @@ export default defineNuxtConfig({
             tailwindcss: {},
             autoprefixer: {}
         }
+    },
+    nitro: {
+        serverAssets: [
+            {
+                baseName: 'presets',
+                dir: '../presets'
+            }
+        ]
     }
 });
