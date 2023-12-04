@@ -23,7 +23,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.use(PrimeVue, {
         ripple: true,
         unstyled: true,
-        pt: Lara
+        pt: TailwindUI
     });
     nuxtApp.vueApp.directive('code', CodeHighlight);
     nuxtApp.vueApp.use($appStatePlugin);

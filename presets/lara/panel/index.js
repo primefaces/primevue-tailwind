@@ -36,11 +36,9 @@ export default {
             'bg-transparent',
             'text-surface-600 dark:text-surface-0/80',
 
-            // Hover States
+            // States
             'hover:text-surface-800 dark:hover:text-surface-0/80',
             'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-
-            // Focus States
             'focus:outline-none focus:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 focus-visible:ring-inset dark:focus-visible:ring-primary-300/50',
 
             // Transitions
