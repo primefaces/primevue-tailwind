@@ -139,10 +139,6 @@ export default {
             //States
             'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
 
-            // Transitions
-            'transition-shadow',
-            'duration-200',
-
             // Misc
             'cursor-pointer',
             'overflow-hidden',
