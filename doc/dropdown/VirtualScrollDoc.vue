@@ -5,7 +5,7 @@
             <NuxtLink to="/virtualscroller">VirtualScroller</NuxtLink> for more information about the available options as it is used internally by Dropdown.
         </p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />
     </div>
     <DocSectionCode :code="code" />
@@ -23,7 +23,7 @@ export default {
     :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value"
             :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />
     </div>
@@ -41,7 +41,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value"
             :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />
     </div>

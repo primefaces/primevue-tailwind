@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" disabled prefix="%" />
     </div>
     <DocSectionCode :code="code" />
@@ -18,7 +18,7 @@ export default {
 <InputNumber v-model="value" disabled prefix="%" />`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" disabled prefix="%" />
     </div>
 </template>
@@ -34,7 +34,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" disabled prefix="%" />
     </div>
 </template>

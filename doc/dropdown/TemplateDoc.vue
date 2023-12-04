@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Options and the selected option display support templating with <i>option</i> and <i>value</i> respectively.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a Country" class="w-full md:w-14rem">
             <template #value="slotProps">
                 <div v-if="slotProps.value" class="flex align-items-center">
@@ -62,7 +62,7 @@ export default {
 </Dropdown>`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a Country" class="w-full md:w-14rem">
             <template #value="slotProps">
                 <div v-if="slotProps.value" class="flex align-items-center">
@@ -106,7 +106,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedCountry" :options="countries" optionLabel="name" placeholder="Select a Country" class="w-full md:w-14rem">
             <template #value="slotProps">
                 <div v-if="slotProps.value" class="flex align-items-center">

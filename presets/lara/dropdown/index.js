@@ -11,12 +11,11 @@ export default {
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-200 dark:border-surface-700',
+            'border border-surface-300 dark:border-surface-700',
 
             // Transitions
-            'transition-colors',
+            'transition-all',
             'duration-200',
-            'ease-in-out',
 
             // States
             'hover:border-primary-500 dark:hover:border-primary-300',
@@ -28,18 +27,14 @@ export default {
             { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled }
         ]
     }),
-    panel: {
-        class: ''
-    },
     input: ({ props }) => ({
         class: [
             //Font
             'font-sans',
-            'text-base',
+            'leading-none',
 
             // Display
             'block',
-            'flex',
             'flex-auto',
 
             // Color and Background
@@ -48,11 +43,12 @@ export default {
             'text-surface-800 dark:text-white/80',
 
             // Sizing and Spacing
+            'w-[1%]',
             'p-3',
             { 'pr-7': props.showClear },
 
             //Shape
-            'rounded',
+            'rounded-none',
 
             // Transitions
             'transition',
@@ -83,23 +79,30 @@ export default {
             'w-12',
 
             // Shape
-            'rounded-tr-lg',
-            'rounded-br-lg'
+            'rounded-tr-md',
+            'rounded-br-md'
+        ]
+    },
+    panel: {
+        class: [
+            // Position
+            'absolute top-0 left-0',
+
+            // Shape
+            'border-0 dark:border',
+            'rounded-md',
+            'shadow-md',
+
+            // Color
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-800 dark:text-white/80',
+            'dark:border-surface-700'
         ]
     },
     wrapper: {
         class: [
             // Sizing
-            'max-h-[250px]',
-
-            // Color and Background
-            'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-white/80',
-
-            //Shape
-            'border-0',
-            'rounded-md',
-            'shadow-lg',
+            'max-h-[200px]',
 
             // Misc
             'overflow-auto'
@@ -112,16 +115,28 @@ export default {
         class: [
             // Font
             'font-normal',
+            'leading-none',
 
             // Position
             'relative',
 
             // Shape
             'border-0',
+            'rounded-none',
 
             // Spacing
             'm-0',
-            'p-3',
+            'py-3 px-5',
+
+            // Color
+            { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
+            { 'bg-surface-50 dark:bg-surface-700/80 text-surface-700 dark:text-white/80': context.focused && !context.selected },
+            { 'bg-primary-100 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': context.focused && context.selected },
+            { 'bg-primary-50 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': !context.focused && context.selected },
+
+            //States
+            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
+            { 'hover:text-surface-700 hover:bg-surface-100 dark:text-white/80 dark:hover:bg-surface-600/80': context.focused && !context.selected },
 
             // Transitions
             'transition-shadow',
@@ -144,27 +159,40 @@ export default {
 
             // Color
             'text-surface-800 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-900',
+            'bg-surface-0 dark:bg-surface-600/80',
 
             // Misc
             'cursor-auto'
         ]
     },
+    emptymessage: {
+        class: [
+            // Font
+            'leading-none',
+
+            // Spacing
+            'py-3 px-5',
+
+            // Color
+            'text-surface-800 dark:text-white/80',
+            'bg-transparent'
+        ]
+    },
     header: {
         class: [
             // Spacing
-            'p-3',
-            'mt-0',
+            'py-3 px-5',
+            'm-0',
 
             //Shape
             'border-b',
-            'rounded-tl-lg',
-            'rounded-tr-lg',
+            'rounded-tl-md',
+            'rounded-tr-md',
 
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-100 dark:bg-surface-800',
-            'border-surface-200 dark:border-surface-700'
+            'border-surface-300 dark:border-surface-700'
         ]
     },
     filtercontainer: {
@@ -174,7 +202,7 @@ export default {
         class: [
             // Font
             'font-sans',
-            'text-base',
+            'leading-none',
 
             // Sizing
             'pr-7 py-3 px-3',

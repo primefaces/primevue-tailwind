@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
     </div>
     <DocSectionCode :code="code" />
@@ -18,7 +18,7 @@ export default {
 <InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
     </div>
 </template>
@@ -34,7 +34,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
     </div>
 </template>

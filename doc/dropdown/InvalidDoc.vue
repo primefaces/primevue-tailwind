@@ -2,8 +2,8 @@
     <DocSectionText v-bind="$attrs">
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="p-invalid w-full md:w-14rem" />
+    <div class="card flex justify-center">
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-14rem" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -22,11 +22,11 @@ export default {
             ],
             code: {
                 basic: `
-<Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="p-invalid w-full md:w-14rem" />`,
+<Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border border-red-300 dark:border-red-400 w-full md:w-14rem" />`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="p-invalid w-full md:w-14rem" />
+    <div class="card flex justify-center">
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border border-red-300 dark:border-red-400 w-full md:w-14rem" />
     </div>
 </template>
 
@@ -48,8 +48,8 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="p-invalid w-full md:w-14rem" />
+    <div class="card flex justify-center">
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border border-red-300 dark:border-red-400 w-full md:w-14rem" />
     </div>
 </template>
 

@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Loading state can be used <i>loading</i> property.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>
     </div>
     <DocSectionCode :code="code" />
@@ -17,7 +17,7 @@ export default {
 <Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>
     </div>
 </template>
@@ -26,7 +26,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>
     </div>
 </template>

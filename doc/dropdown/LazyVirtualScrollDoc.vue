@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs" />
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown
             v-model="selectedItem"
             :options="items"
@@ -27,7 +27,7 @@ export default {
     :virtualScrollerOptions="{ lazy: true, onLazyLoad: onLazyLoad, itemSize: 38, showLoader: true, loading: loading, delay: 250 }" placeholder="Select Item" />`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-14rem"
             :virtualScrollerOptions="{ lazy: true, onLazyLoad: onLazyLoad, itemSize: 38, showLoader: true, loading: loading, delay: 250 }" placeholder="Select Item" />
     </div>
@@ -69,7 +69,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-14rem"
             :virtualScrollerOptions="{ lazy: true, onLazyLoad: onLazyLoad, itemSize: 38, showLoader: true, loading: loading, delay: 250 }" placeholder="Select Item" />
     </div>

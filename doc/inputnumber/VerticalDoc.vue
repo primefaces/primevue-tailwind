@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Buttons can also placed vertically by setting <i>buttonLayout</i> as <i>vertical</i>.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber
             v-model="value"
             showButtons
@@ -28,7 +28,7 @@ export default {
     decrementButtonClassName="p-button-secondary" incrementButtonClassName="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" />`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" showButtons buttonLayout="vertical" style="width: 4rem"
             decrementButtonClassName="p-button-secondary" incrementButtonClassName="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" />
     </div>
@@ -45,7 +45,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <InputNumber v-model="value" showButtons buttonLayout="vertical" style="width: 4rem"
             decrementButtonClassName="p-button-secondary" incrementButtonClassName="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" />
     </div>

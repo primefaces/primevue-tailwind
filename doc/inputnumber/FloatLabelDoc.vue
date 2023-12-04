@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>A floating label appears on top of the input field when focused.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <span class="p-float-label">
             <InputNumber id="number-input" v-model="value" />
             <label for="number-input">Number</label>
@@ -24,7 +24,7 @@ export default {
 </span>`,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <span class="p-float-label">
             <InputNumber id="number-input" v-model="value" />
             <label for="number-input">Number</label>
@@ -43,7 +43,7 @@ export default {
 <\/script>`,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <span class="p-float-label">
             <InputNumber id="number-input" v-model="value" />
             <label for="number-input">Number</label>
