@@ -1,6 +1,7 @@
 import badgedirective from './badgedirective';
 import button from './button';
 import dropdown from './dropdown';
+import fieldset from './fieldset';
 import global from './global';
 import inputnumber from './inputnumber';
 import inputtext from './inputtext';
@@ -47,6 +48,7 @@ export default {
 
     //panels
     panel,
+    fieldset,
 
     //un-refactored components (for landing page)
 
