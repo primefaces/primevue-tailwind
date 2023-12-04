@@ -4,14 +4,13 @@ export default {
             'block',
 
             // Spacing
-            'mx-2 my-0.5',
-            'pl-4 pr-5',
+            'px-4 pt-2 py-3',
             'inline-size-min',
 
             // Shape
             'rounded-md',
             // Color
-            'border border-surface-200 dark:border-surface-700',
+            'border border-surface-300 dark:border-surface-700',
             'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
@@ -20,6 +19,7 @@ export default {
         class: [
             // Font
             'font-bold',
+            'leading-none',
 
             //Spacing
             { 'p-0': props.toggleable, 'p-5': !props.toggleable },
@@ -53,9 +53,10 @@ export default {
             { 'rounded-md': props.toggleable },
 
             // Color
-            { 'text-surface-700 hover:text-surface-900': props.toggleable },
+            { 'text-surface-700 dark:text-surface-200 hover:text-surface-900 hover:text-surface-900': props.toggleable },
 
             // States
+            { 'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable },
             { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset focus:ring-primary-400/50 dark:focus:ring-primary-300/50': props.toggleable },
 
             // Misc

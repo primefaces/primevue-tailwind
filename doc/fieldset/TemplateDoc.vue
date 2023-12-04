@@ -5,9 +5,9 @@
     <div class="card">
         <Fieldset>
             <template #legend>
-                <div class="flex align-items-center text-primary">
+                <div class="flex items-center text-primary-500">
                     <span class="pi pi-user mr-2"></span>
-                    <span class="font-bold text-lg">User Details</span>
+                    <span class="font-bold">User Details</span>
                 </div>
             </template>
             <p class="m-0">
@@ -27,9 +27,9 @@ export default {
                 basic: `
 <Fieldset>
     <template #legend>
-        <div class="flex align-items-center text-primary">
+        <div class="flex items-center text-primary-500">
             <span class="pi pi-user mr-2"></span>
-            <span class="font-bold text-lg">User Details</span>
+            <span class="font-bold">User Details</span>
         </div>
     </template>
     <p class="m-0">
@@ -42,9 +42,9 @@ export default {
     <div class="card">
         <Fieldset>
             <template #legend>
-                <div class="flex align-items-center text-primary">
+                <div class="flex items-center text-primary-500">
                     <span class="pi pi-user mr-2"></span>
-                    <span class="font-bold text-lg">User Details</span>
+                    <span class="font-bold">User Details</span>
                 </div>
             </template>
             <p class="m-0">
@@ -62,9 +62,9 @@ export default {
     <div class="card">
         <Fieldset>
             <template #legend>
-                <div class="flex align-items-center text-primary">
+                <div class="flex items-center text-primary-500">
                     <span class="pi pi-user mr-2"></span>
-                    <span class="font-bold text-lg">User Details</span>
+                    <span class="font-bold">User Details</span>
                 </div>
             </template>
             <p class="m-0">
