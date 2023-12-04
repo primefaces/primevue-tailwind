@@ -180,13 +180,12 @@ export default {
     header: {
         class: [
             // Spacing
-            'py-2 px-4',
+            'p-0',
             'm-0',
 
             //Shape
             'rounded-tl-md',
             'rounded-tr-md',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
             // Color
             'text-surface-700 dark:text-white/80',
@@ -204,7 +203,7 @@ export default {
             'sm:text-sm',
 
             // Sizing
-            'py-2 px-4',
+            'py-1.5 px-3',
             'pr-7',
             '-mr-7',
             'w-full',
@@ -212,15 +211,17 @@ export default {
             //Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
+            'placeholder:text-surface-400',
             'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
             // Shape
             'border-0',
-            'rounded-lg',
+            'rounded-tl-md',
+            'rounded-tr-md',
             'appearance-none',
 
             // States
-            'focus:ring-2 focus:outline-none focus:outline-offset-0',
+            'focus:ring-2 focus:ring-inset focus:outline-none focus:outline-offset-0',
             'focus:ring-primary-600 dark:focus:ring-primary-500',
 
             // Misc
