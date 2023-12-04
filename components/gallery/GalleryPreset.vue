@@ -15,13 +15,13 @@
             {{ description }}
         </div>
         <div class="flex items-center gap-2 mt-auto">
-            <a target="_blank" rel="noopener noreferrer" :href="`https://github.com/${preset.username}/${preset.repository}`" class="flex-auto border text-center rounded p-2 border-surface-200 hover:bg-surface-100 font-semibold duration-150">
+            <a target="_blank" rel="noopener noreferrer" :href="`https://github.com/${preset.owner}/${preset.repository}`" class="flex-auto border text-center rounded p-2 border-surface-200 hover:bg-surface-100 font-semibold duration-150">
                 View Source
             </a>
             <a
                 target="_blank"
                 rel="noopener noreferrer"
-                :href="`https://stackblitz.com/github.com/${preset.username}/${preset.repository}`"
+                :href="`https://stackblitz.com/github.com/${preset.owner}/${preset.repository}`"
                 class="flex-auto border text-center rounded p-2 border-primary-500 text-primary-500 font-semibold hover:bg-primary-500 hover:text-white duration-150"
             >
                 Live Preview
