@@ -1,4 +1,11 @@
-import { button, directives, form, global } from './style';
+import badgedirective from './badgedirective';
+import button from './button';
+import dropdown from './dropdown';
+import global from './global';
+import inputnumber from './inputnumber';
+import inputtext from './inputtext';
+import ripple from './ripple';
+import tooltip from './tooltip';
 
 /**
  * @todo remove this line
@@ -23,9 +30,15 @@ const TRANSITIONS = {
 
 export default {
     global,
-    directives,
-    ...form,
-    ...button,
+    directives: {
+        badgedirective,
+        ripple,
+        tooltip
+    },
+    button,
+    dropdown,
+    inputnumber,
+    inputtext,
 
     //un-refactored components (for landing page)
 
