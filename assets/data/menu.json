@@ -25,6 +25,15 @@
                             "to": "/inputnumber"
                         }
                     ]
+                },
+                {
+                    "name": "Panel",
+                    "children": [
+                        {
+                            "name": "Panel",
+                            "to": "/panel"
+                        }
+                    ]
                 }
             ]
         },
