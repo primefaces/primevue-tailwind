@@ -4,6 +4,7 @@ import dropdown from './dropdown';
 import global from './global';
 import inputnumber from './inputnumber';
 import inputtext from './inputtext';
+import panel from './panel';
 import ripple from './ripple';
 import tooltip from './tooltip';
 
@@ -35,10 +36,17 @@ export default {
         ripple,
         tooltip
     },
-    button,
+
+    //forms
     dropdown,
     inputnumber,
     inputtext,
+
+    //buttons
+    button,
+
+    //panels
+    panel,
 
     //un-refactored components (for landing page)
 
