@@ -29,7 +29,7 @@ export default {
         ]
     }),
     panel: {
-        class: 'w-full'
+        class: ''
     },
     input: ({ props }) => ({
         class: [

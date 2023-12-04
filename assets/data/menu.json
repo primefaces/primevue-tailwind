@@ -13,6 +13,10 @@
                     "name": "Form",
                     "children": [
                         {
+                            "name": "Dropdown",
+                            "to": "/dropdown"
+                        },
+                        {
                             "name": "InputText",
                             "to": "/inputtext"
                         },
