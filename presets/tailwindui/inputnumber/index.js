@@ -57,7 +57,7 @@ export default {
             // Sizing
             'w-[3rem]',
             { '!p-0': props.showButtons && props.buttonLayout == 'stacked' },
-            { 'h-[1rem]': props.showButtons && props.buttonLayout == 'stacked' },
+            { 'h-[1.42rem]': props.showButtons && props.buttonLayout == 'stacked' },
             { 'w-full': props.showButtons && props.buttonLayout == 'vertical' },
 
             // Shape
