@@ -7,16 +7,22 @@
 
         <section class="py-6 flex flex-wrap gap-16">
             <div>
-                <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Base</h2>
+                <h2 class="border-b pb-4 border-surface-200 dark:border-surface-800">Base</h2>
                 <SelectButton v-model="preset" :options="presets" optionLabel="name" optionValue="value" :allowEmpty="false" />
             </div>
             <div class="flex-auto">
-                <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Components</h2>
+                <div class="flex items-center justify-between gap-2 mb-4 border-b pb-4 border-surface-200 dark:border-surface-800">
+                    <h2 class="!mb-0">Components</h2>
+                    <div class="flex items-center gap-2">
+                        <Checkbox inputId="toggleAll" :modelValue="isAllSelected()" @update:model-value="toggleAll($event)" binary />
+                        <label for="toggleAll">Select All</label>
+                    </div>
+                </div>
                 <div class="flex flex-wrap justify-between gap-8">
                     <div v-for="(group, i) of groups" :key="i">
                         <div v-for="category of group" :key="category">
                             <div class="flex items-center gap-2 mb-4">
-                                <Checkbox :modelValue="isAllSelected(category)" @update:model-value="toggleCategory($event, category)" binary :disabled="!hasEnabledComponents(category)" />
+                                <Checkbox :modelValue="isCategoryAllSelected(category)" @update:model-value="toggleCategory($event, category)" binary :disabled="!hasEnabledComponents(category)" />
                                 <span class="font-semibold text-lg">{{ builderData[category].name }}</span>
                             </div>
                             <ul class="flex flex-col gap-4 mb-12">
@@ -30,7 +36,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Download</h2>
+                <h2 class="border-b pb-4 border-surface-200 dark:border-surface-800">Download</h2>
                 <div class="flex w-full">
                     <InputText v-model="filename" class="!rounded-r-none" placeholder="Preset name" />
                     <Button icon="pi pi-download" class="!rounded-l-none" @click="generate" />
@@ -78,7 +84,7 @@ export default {
             elm.click();
             elm.remove();
         },
-        isAllSelected(category) {
+        isCategoryAllSelected(category) {
             const components = this.getEnabledComponents(category);
 
             return components.length && components.filter((component) => this.selectedComponents.includes(component)).length === components.length;
@@ -101,6 +107,19 @@ export default {
         },
         getEnabledComponents(category) {
             return this.builderData[category].components.filter((component) => component.disabled !== true).map((component) => component.path);
+        },
+        isAllSelected() {
+            for (let category in this.builderData) {
+                if (!this.hasEnabledComponents(category)) continue;
+                else if (!this.isCategoryAllSelected(category)) return false;
+            }
+
+            return true;
+        },
+        toggleAll(value) {
+            for (let category in this.builderData) {
+                this.toggleCategory(value, category);
+            }
         }
     }
 };
