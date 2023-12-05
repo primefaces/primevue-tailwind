@@ -25,7 +25,8 @@ export default {
             code: {
                 basic: `
 <InputNumber v-model="value" showButtons buttonLayout="vertical" style="width: 4rem"
-    decrementButtonClassName="p-button-secondary" incrementButtonClassName="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" />`,
+    decrementButtonClassName="p-button-secondary" incrementButtonClassName="p-button-secondary" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus" />
+`,
                 options: `
 <template>
     <div class="card flex justify-center">
@@ -42,7 +43,8 @@ export default {
         }
     }
 }
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex justify-center">
@@ -52,10 +54,11 @@ export default {
 </template>
 
 <script setup>
-import { ref } from "vuetest";
+import { ref } from "vue";
 
 const value = ref(50);
-<\/script>`
+<\/script>
+`
             }
         };
     }

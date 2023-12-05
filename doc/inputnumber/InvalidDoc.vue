@@ -15,7 +15,8 @@ export default {
             value: null,
             code: {
                 basic: `
-<InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />`,
+<InputNumber v-model="value" :inputClass="'border !border-red-300 !dark:border-red-400'" mode="decimal" :minFractionDigits="2" />
+`,
                 options: `
 <template>
     <div class="card flex justify-center">
@@ -31,7 +32,8 @@ export default {
         }
     }
 }
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex justify-center">
@@ -43,7 +45,8 @@ export default {
 import { ref } from "vue";
 
 const value = ref();
-<\/script>`
+<\/script>
+`
             }
         };
     }
