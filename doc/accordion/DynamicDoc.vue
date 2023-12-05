@@ -5,7 +5,7 @@
     <div class="card">
         <Accordion :activeIndex="0">
             <AccordionTab v-for="tab in tabs" :key="tab.title" :header="tab.title">
-                <p>{{ tab.content }}</p>
+                <p class="m-0">{{ tab.content }}</p>
             </AccordionTab>
         </Accordion>
     </div>
@@ -25,15 +25,16 @@ export default {
                 basic: `
 <Accordion :activeIndex="0">
     <AccordionTab v-for="tab in tabs" :key="tab.title" :header="tab.title">
-        <p>{{ tab.content }}</p>
+        <p class="m-0">{{ tab.content }}</p>
     </AccordionTab>
-</Accordion>`,
+</Accordion>
+`,
                 options: `
 <template>
     <div class="card">
         <Accordion :activeIndex="0">
             <AccordionTab v-for="tab in tabs" :key="tab.title" :header="tab.title">
-                <p>{{ tab.content }}</p>
+                <p class="m-0">{{ tab.content }}</p>
             </AccordionTab>
         </Accordion>
     </div>
@@ -51,13 +52,14 @@ export default {
         };
     }
 };
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card">
         <Accordion :activeIndex="0">
             <AccordionTab v-for="tab in tabs" :key="tab.title" :header="tab.title">
-                <p>{{ tab.content }}</p>
+                <p class="m-0">{{ tab.content }}</p>
             </AccordionTab>
         </Accordion>
     </div>
@@ -71,7 +73,8 @@ const tabs = ref([
     { title: 'Title 2', content: 'Content 2' },
     { title: 'Title 3', content: 'Content 3' }
 ]);
-<\/script>`
+<\/script>
+`
             }
         };
     }

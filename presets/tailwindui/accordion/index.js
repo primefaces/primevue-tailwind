@@ -41,7 +41,7 @@ export default {
             ]
         }),
         headerIcon: {
-            class: 'inline-block mr-2'
+            class: 'inline-block ml-2'
         },
         headerTitle: {
             class: 'leading-7'
