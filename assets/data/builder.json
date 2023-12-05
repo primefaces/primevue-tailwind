@@ -1,0 +1,475 @@
+{
+    "data": {
+        "form": {
+            "name": "Form",
+            "components": [
+                {
+                    "name": "AutoComplete",
+                    "path": "autocomplete",
+                    "disabled": true
+                },
+                {
+                    "name": "Calendar",
+                    "path": "calendar"
+                },
+                {
+                    "name": "CascadeSelect",
+                    "path": "cascadeselect",
+                    "disabled": true
+                },
+                {
+                    "name": "Checkbox",
+                    "path": "checkbox"
+                },
+                {
+                    "name": "Chips",
+                    "path": "chips",
+                    "disabled": true
+                },
+                {
+                    "name": "ColorPicker",
+                    "path": "colorpicker",
+                    "disabled": true
+                },
+                {
+                    "name": "Dropdown",
+                    "path": "dropdown"
+                },
+                {
+                    "name": "Editor",
+                    "path": "editor",
+                    "disabled": true
+                },
+                {
+                    "name": "InputGroup",
+                    "path": "inputgroup",
+                    "disabled": true
+                },
+                {
+                    "name": "InputMask",
+                    "path": "inputmask",
+                    "disabled": true
+                },
+                {
+                    "name": "InputNumber",
+                    "path": "inputnumber"
+                },
+                {
+                    "name": "InputSwitch",
+                    "path": "inputswitch"
+                },
+                {
+                    "name": "InputText",
+                    "path": "inputtext"
+                },
+                {
+                    "name": "Knob",
+                    "path": "knob",
+                    "disabled": true
+                },
+                {
+                    "name": "Listbox",
+                    "path": "listbox",
+                    "disabled": true
+                },
+                {
+                    "name": "MultiSelect",
+                    "path": "multiselect",
+                    "disabled": true
+                },
+                {
+                    "name": "Password",
+                    "path": "password",
+                    "disabled": true
+                },
+                {
+                    "name": "RadioButton",
+                    "path": "radiobutton",
+                    "disabled": true
+                },
+                {
+                    "name": "Rating",
+                    "path": "rating",
+                    "disabled": true
+                },
+                {
+                    "name": "SelectButton",
+                    "path": "selectbutton"
+                },
+                {
+                    "name": "Slider",
+                    "path": "slider"
+                },
+                {
+                    "name": "Textarea",
+                    "path": "textarea",
+                    "disabled": true
+                },
+                {
+                    "name": "ToggleButton",
+                    "path": "togglebutton",
+                    "disabled": true
+                },
+                {
+                    "name": "TreeSelect",
+                    "path": "treeselect",
+                    "disabled": true
+                },
+                {
+                    "name": "TriStateCheckbox",
+                    "path": "tristatecheckbox",
+                    "disabled": true
+                }
+            ]
+        },
+        "button": {
+            "name": "Button",
+            "components": [
+                {
+                    "name": "Button",
+                    "path": "button"
+                },
+                {
+                    "name": "Speed Dial",
+                    "path": "speeddial",
+                    "disabled": true
+                },
+                {
+                    "name": "SplitButton",
+                    "path": "splitbutton",
+                    "disabled": true
+                }
+            ]
+        },
+        "data": {
+            "name": "Data",
+            "components": [
+                {
+                    "name": "DataTable",
+                    "path": "datatable",
+                    "disabled": true
+                },
+                {
+                    "name": "DataView",
+                    "path": "dataview",
+                    "disabled": true
+                },
+                {
+                    "name": "OrderList",
+                    "path": "orderlist",
+                    "disabled": true
+                },
+                {
+                    "name": "Org Chart",
+                    "path": "organizationchart",
+                    "disabled": true
+                },
+                {
+                    "name": "Paginator",
+                    "path": "paginator",
+                    "disabled": true
+                },
+                {
+                    "name": "PickList",
+                    "path": "picklist",
+                    "disabled": true
+                },
+                {
+                    "name": "Tree",
+                    "path": "tree",
+                    "disabled": true
+                },
+                {
+                    "name": "TreeTable",
+                    "path": "treetable",
+                    "disabled": true
+                },
+                {
+                    "name": "Timeline",
+                    "path": "timeline",
+                    "disabled": true
+                },
+                {
+                    "name": "VirtualScroller",
+                    "path": "virtualscroller",
+                    "disabled": true
+                }
+            ]
+        },
+        "panel": {
+            "name": "Panel",
+            "components": [
+                {
+                    "name": "Accordion",
+                    "path": "accordion"
+                },
+                {
+                    "name": "Card",
+                    "path": "card"
+                },
+                {
+                    "name": "Deferred",
+                    "path": "deferredcontent",
+                    "disabled": true
+                },
+                {
+                    "name": "Divider",
+                    "path": "divider",
+                    "disabled": true
+                },
+                {
+                    "name": "Fieldset",
+                    "path": "fieldset"
+                },
+                {
+                    "name": "Panel",
+                    "path": "panel"
+                },
+                {
+                    "name": "ScrollPanel",
+                    "path": "scrollpanel",
+                    "disabled": true
+                },
+                {
+                    "name": "Splitter",
+                    "path": "splitter",
+                    "disabled": true
+                },
+                {
+                    "name": "TabView",
+                    "path": "tabview",
+                    "disabled": true
+                },
+                {
+                    "name": "Toolbar",
+                    "path": "toolbar",
+                    "disabled": true
+                }
+            ]
+        },
+        "overlay": {
+            "name": "Overlay",
+            "components": [
+                {
+                    "name": "ConfirmDialog",
+                    "path": "confirmdialog",
+                    "disabled": true
+                },
+                {
+                    "name": "ConfirmPopup",
+                    "path": "confirmpopup",
+                    "disabled": true
+                },
+                {
+                    "name": "Dialog",
+                    "path": "dialog",
+                    "disabled": true
+                },
+                {
+                    "name": "DynamicDialog",
+                    "path": "dynamicdialog",
+                    "disabled": true
+                },
+                {
+                    "name": "OverlayPanel",
+                    "path": "overlaypanel",
+                    "disabled": true
+                },
+                {
+                    "name": "Sidebar",
+                    "path": "sidebar",
+                    "disabled": true
+                },
+                {
+                    "name": "Tooltip",
+                    "path": "tooltip"
+                }
+            ]
+        },
+        "file": {
+            "name": "File",
+            "components": [
+                {
+                    "name": "Upload",
+                    "path": "fileupload",
+                    "disabled": true
+                }
+            ]
+        },
+        "menu": {
+            "name": "Menu",
+            "components": [
+                {
+                    "name": "Breadcrumb",
+                    "path": "breadcrumb",
+                    "disabled": true
+                },
+                {
+                    "name": "ContextMenu",
+                    "path": "contextmenu",
+                    "disabled": true
+                },
+                {
+                    "name": "Dock",
+                    "path": "dock",
+                    "disabled": true
+                },
+                {
+                    "name": "Menu",
+                    "path": "menu",
+                    "disabled": true
+                },
+                {
+                    "name": "Menubar",
+                    "path": "menubar",
+                    "disabled": true
+                },
+                {
+                    "name": "MegaMenu",
+                    "path": "megamenu",
+                    "disabled": true
+                },
+                {
+                    "name": "PanelMenu",
+                    "path": "panelmenu",
+                    "disabled": true
+                },
+                {
+                    "name": "Steps",
+                    "path": "steps",
+                    "disabled": true
+                },
+                {
+                    "name": "TabMenu",
+                    "path": "tabmenu",
+                    "disabled": true
+                },
+                {
+                    "name": "TieredMenu",
+                    "path": "tieredmenu",
+                    "disabled": true
+                }
+            ]
+        },
+        "message": {
+            "name": "Message",
+            "components": [
+                {
+                    "name": "Message",
+                    "path": "message",
+                    "disabled": true
+                },
+                {
+                    "name": "InlineMessage",
+                    "path": "inlinemessage",
+                    "disabled": true
+                },
+                {
+                    "name": "Toast",
+                    "path": "toast",
+                    "disabled": true
+                }
+            ]
+        },
+        "media": {
+            "name": "Media",
+            "components": [
+                {
+                    "name": "Carousel",
+                    "path": "carousel",
+                    "disabled": true
+                },
+                {
+                    "name": "Galleria",
+                    "path": "galleria",
+                    "disabled": true
+                },
+                {
+                    "name": "Image",
+                    "path": "image",
+                    "disabled": true
+                }
+            ]
+        },
+        "misc": {
+            "name": "Misc",
+            "components": [
+                {
+                    "name": "Avatar",
+                    "path": "avatar"
+                },
+                {
+                    "name": "Badge",
+                    "path": "badge"
+                },
+                {
+                    "name": "BadgeDirective",
+                    "path": "badgedirective"
+                },
+                {
+                    "name": "BlockUI",
+                    "path": "blockui",
+                    "disabled": true
+                },
+                {
+                    "name": "Chip",
+                    "path": "chip",
+                    "disabled": true
+                },
+                {
+                    "name": "FocusTrap",
+                    "path": "focustrap",
+                    "disabled": true
+                },
+                {
+                    "name": "Inplace",
+                    "path": "inplace",
+                    "disabled": true
+                },
+                {
+                    "name": "ScrollTop",
+                    "path": "scrolltop",
+                    "disabled": true
+                },
+                {
+                    "name": "Skeleton",
+                    "path": "skeleton",
+                    "disabled": true
+                },
+                {
+                    "name": "ProgressBar",
+                    "path": "progressbar",
+                    "disabled": true
+                },
+                {
+                    "name": "ProgressSpinner",
+                    "path": "progressspinner",
+                    "disabled": true
+                },
+                {
+                    "name": "AnimateOnScroll",
+                    "path": "animateonscroll",
+                    "disabled": true
+                },
+                {
+                    "name": "Ripple",
+                    "path": "ripple"
+                },
+                {
+                    "name": "StyleClass",
+                    "path": "styleclass",
+                    "disabled": true
+                },
+                {
+                    "name": "Tag",
+                    "path": "tag"
+                },
+                {
+                    "name": "Terminal",
+                    "path": "terminal",
+                    "disabled": true
+                }
+            ]
+        }
+    }
+}

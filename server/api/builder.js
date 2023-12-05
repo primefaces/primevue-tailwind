@@ -1,13 +1,13 @@
-import JSZip from "jszip";
+import JSZip from 'jszip';
 
 export default defineEventHandler(async (event) => {
-    const { components, preset } = await readBody(event);
+    const { components, preset, filename } = await readBody(event);
     const zip = new JSZip();
 
     for (let component of components) {
         const file = await useStorage(`assets:presets`).getItem(`${preset}:${component}:index.js`);
 
-        zip.file(`${component}/index.js`, file);
+        zip.file(`${filename}/${component}/index.js`, file);
     }
 
     setResponseHeaders(event, {
