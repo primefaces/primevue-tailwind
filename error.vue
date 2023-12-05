@@ -1,8 +1,8 @@
 <template>
     <div>
         <NuxtLayout name="default">
-            <div class="flex card flex-column items-center gap-5 sm:p-8">
-                <div class="flex flex-column sm:flex-row items-center justify-center gap-3 text-primary">
+            <div class="flex card flex-col items-center gap-5 sm:p-8">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-primary">
                     <span class="font-bold" :style="{ fontSize: '144px' }"> 4 </span>
                     <div class="flex items-center justify-center bg-primary border-circle w-8rem h-8rem">
                         <i class="pi pi-prime text-7xl"></i>
