@@ -1,3 +1,4 @@
+import accordion from './accordion';
 import avatar from './avatar';
 import avatargroup from './avatargroup';
 import badge from './badge';
@@ -41,6 +42,7 @@ export default {
     selectbutton,
 
     //panels
+    accordion,
     panel,
     fieldset,
     card,
