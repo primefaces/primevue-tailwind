@@ -18,7 +18,8 @@
                             <div class="font-semibold mb-4">{{ builderData[category].name }}</div>
                             <ul class="flex flex-col gap-5 mb-8">
                                 <li v-for="component of builderData[category].components" :key="component.name" class="flex items-center gap-2">
-                                    <Checkbox v-model="selectedComponents" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
+                                    <Checkbox v-if="component.directive" v-model="selectedDirectives" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
+                                    <Checkbox v-else v-model="selectedComponents" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
                                     <label :for="component.path" :class="{ 'opacity-50': component.disabled }">{{ component.name }}</label>
                                 </li>
                             </ul>
@@ -29,7 +30,7 @@
             <div>
                 <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Download</h2>
                 <div class="flex w-full">
-                    <InputText v-model="filename" class="!rounded-r-none" placeholder="Filename" />
+                    <InputText v-model="filename" class="!rounded-r-none" placeholder="Preset name" />
                     <Button icon="pi pi-download" class="!rounded-l-none" @click="generate" />
                 </div>
             </div>
@@ -45,6 +46,7 @@ export default {
         return {
             builderData: builder.data,
             selectedComponents: [],
+            selectedDirectives: [],
             preset: 'lara',
             presets: [
                 { name: 'Lara', value: 'lara' },
@@ -63,6 +65,7 @@ export default {
                 method: 'POST',
                 body: {
                     components: this.selectedComponents,
+                    directives: this.selectedDirectives,
                     preset: this.preset,
                     filename: this.filename
                 }

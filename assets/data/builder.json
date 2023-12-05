@@ -282,7 +282,8 @@
                 },
                 {
                     "name": "Tooltip",
-                    "path": "tooltip"
+                    "path": "tooltip",
+                    "directive": true
                 }
             ]
         },
@@ -404,7 +405,8 @@
                 },
                 {
                     "name": "BadgeDirective",
-                    "path": "badgedirective"
+                    "path": "badgedirective",
+                    "directive": true
                 },
                 {
                     "name": "BlockUI",
@@ -414,11 +416,6 @@
                 {
                     "name": "Chip",
                     "path": "chip",
-                    "disabled": true
-                },
-                {
-                    "name": "FocusTrap",
-                    "path": "focustrap",
                     "disabled": true
                 },
                 {
@@ -447,18 +444,9 @@
                     "disabled": true
                 },
                 {
-                    "name": "AnimateOnScroll",
-                    "path": "animateonscroll",
-                    "disabled": true
-                },
-                {
                     "name": "Ripple",
-                    "path": "ripple"
-                },
-                {
-                    "name": "StyleClass",
-                    "path": "styleclass",
-                    "disabled": true
+                    "path": "ripple",
+                    "directive": true
                 },
                 {
                     "name": "Tag",
