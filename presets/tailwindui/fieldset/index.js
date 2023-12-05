@@ -8,8 +8,6 @@ export default {
 
             // Shape
             'rounded-md rounded-lg',
-            //TODO: Decide if we want to use shadow or borders for fieldset
-            // 'shadow-md',
 
             // Color
             'bg-surface-0 dark:bg-surface-900',
@@ -24,14 +22,14 @@ export default {
             'leading-none',
 
             //Spacing
-            { 'p-0': props.toggleable, 'px-5 md:px-6 py-5': !props.toggleable },
+            { 'p-0': props.toggleable, 'px-3 py-1.5': !props.toggleable },
 
             // Shape
             'rounded-md',
 
             // Color
             'text-surface-700 dark:text-surface-0/80',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
+
             'bg-surface-0 dark:bg-surface-900',
 
             // Transition
@@ -49,7 +47,7 @@ export default {
             'relative',
 
             //Spacing
-            { 'px-5 md:px-6 py-5': props.toggleable },
+            { 'px-3 py-1.5': props.toggleable },
 
             // Shape
             { 'rounded-md': props.toggleable },
@@ -59,7 +57,7 @@ export default {
 
             // States
             { 'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable },
-            { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset focus:ring-primary-400/50 dark:focus:ring-primary-300/50': props.toggleable },
+            { 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:focus:ring-primary-500': props.toggleable },
 
             // Misc
             {
