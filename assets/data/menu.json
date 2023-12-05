@@ -46,6 +46,15 @@
                             "to": "/fieldset"
                         }
                     ]
+                },
+                {
+                    "name": "Misc",
+                    "children": [
+                        {
+                            "name": "Tag",
+                            "to": "/tag"
+                        }
+                    ]
                 }
             ]
         },
