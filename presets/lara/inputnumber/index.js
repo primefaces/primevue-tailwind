@@ -53,7 +53,6 @@ export default {
         ]
     }),
 
-    //TODO: Label of these buttons should be h-0
     incrementbutton: {
         root: ({ parent }) => ({
             class: [
