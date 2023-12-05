@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p class="!mb-0">Card provides <i>header</i>, <i>title</i>, <i>subtitle</i>, <i>content</i> and <i>footer</i> as the named templates to place content.</p>
+        <p>Card provides <i>header</i>, <i>title</i>, <i>subtitle</i>, <i>content</i> and <i>footer</i> as the named templates to place content.</p>
     </DocSectionText>
     <div class="card flex items-center justify-center">
         <Card style="width: 25em">
@@ -10,7 +10,7 @@
             <template #title> Advanced Card </template>
             <template #subtitle> Card subtitle </template>
             <template #content>
-                <p class="!mb-0">
+                <p class="m-0">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
                     quas!
                 </p>
@@ -37,7 +37,7 @@ export default {
     <template #title> Advanced Card </template>
     <template #subtitle> Card subtitle </template>
     <template #content>
-        <p class="!mb-0">
+        <p class="m-0">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
             quas!
         </p>
@@ -46,7 +46,8 @@ export default {
         <Button icon="pi pi-check" label="Save" />
         <Button icon="pi pi-times" label="Cancel" severity="secondary" style="margin-left: 0.5em" />
     </template>
-</Card>`,
+</Card>
+`,
                 options: `
 <template>
     <div class="card flex items-center justify-center">
@@ -57,7 +58,7 @@ export default {
             <template #title> Advanced Card </template>
             <template #subtitle> Card subtitle </template>
             <template #content>
-                <p class="!mb-0">
+                <p class="m-0">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
                     quas!
                 </p>
@@ -71,7 +72,8 @@ export default {
 </template>
 
 <script>
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex items-center justify-center">
@@ -82,7 +84,7 @@ export default {
             <template #title> Advanced Card </template>
             <template #subtitle> Card subtitle </template>
             <template #content>
-                <p class="!mb-0">
+                <p class="m-0">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
                     quas!
                 </p>
@@ -96,7 +98,8 @@ export default {
 </template>
 
 <script setup>
-<\/script>`
+<\/script>
+`
             }
         };
     }
