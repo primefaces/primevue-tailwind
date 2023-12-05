@@ -1,10 +1,17 @@
 export default {
     accordiontab: {
-        root: {
-            class: 'mb-1'
-        },
         header: ({ props }) => ({
             class: [
+                // Sizing
+                'pt-6 pb-0',
+                'mt-6',
+
+                // Shape
+                'border-x-0 border-b-0',
+
+                // Color
+                'border border-surface-200 dark:border-surface-700',
+
                 // State
                 { 'select-none pointer-events-none cursor-default opacity-60': props?.disabled }
             ]
@@ -12,34 +19,22 @@ export default {
         headerAction: ({ context }) => ({
             class: [
                 //Font
-                'font-bold',
-                'leading-none',
+                'font-semibold',
+                'leading-7',
 
                 // Alignments
-                'flex items-center',
+                'flex items-center justify-between flex-row-reverse',
                 'relative',
 
-                // Sizing
-                'p-5',
-
                 // Shape
-                'rounded-t-md',
-                { 'rounded-br-md rounded-bl-md': !context.active, 'rounded-br-0 rounded-bl-0': context.active },
+                'rounded-md',
 
                 // Color
-                'border border-surface-300 dark:border-surface-700',
-                'bg-surface-50 dark:bg-surface-800',
-                'text-surface-600 dark:text-surface-0/80',
-                { 'text-surface-900': context.active },
-
-                // Transition
-                'transition duration-200 ease-in-out',
-                'transition-shadow duration-200',
+                'bg-transparent',
+                'text-surface-900 dark:text-surface-0',
 
                 // States
-                'hover:bg-surface-100 dark:hover:bg-surface-700/40',
-                'hover:text-surface-900',
-                'focus:outline-none focus:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 ring-inset dark:focus-visible:ring-primary-300/50', // Focus
+                'focus:outline-none focus:outline-offset-0 focus-visible:ring-2 focus-visible:ring-primary-600 ring-inset dark:focus-visible:ring-primary-500', // Focus
 
                 // Misc
                 'cursor-pointer no-underline select-none'
@@ -49,29 +44,26 @@ export default {
             class: 'inline-block mr-2'
         },
         headerTitle: {
-            class: 'leading-none'
+            class: 'leading-7'
         },
         content: {
             class: [
-                // Spacing
-                'p-5',
+                // Font
+                'leading-7',
 
-                //Shape
-                'rounded-tl-none rounded-tr-none rounded-br-lg rounded-bl-lg',
-                'border-t-0',
+                // Spacing
+                'pr-12 pt-2',
 
                 // Color
-                'bg-surface-0 dark:bg-surface-800',
-                'border border-surface-300 dark:border-surface-700',
-                'text-surface-700 dark:text-surface-0/80'
+                'text-surface-600 dark:text-surface-0/70'
             ]
         },
         transition: {
             enterFromClass: 'max-h-0',
-            enterActiveClass: 'overflow-hidden transition-all duration-400 ease-in-out',
+            enterActiveClass: 'overflow-hidden transition-all duration-500 ease-in-out',
             enterToClass: 'max-h-40	',
             leaveFromClass: 'max-h-40',
-            leaveActiveClass: 'overflow-hidden transition-all duration-400 ease-in',
+            leaveActiveClass: 'overflow-hidden transition-all duration-500 ease-in',
             leaveToClass: 'max-h-0'
         }
     }
