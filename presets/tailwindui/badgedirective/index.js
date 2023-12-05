@@ -1,20 +1,43 @@
 export default {
     root: ({ context }) => ({
         class: [
-            'absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 origin-top-right m-0',
-            'text-xs leading-6 flex items-center justify-center',
-            'text-center text-white font-bold',
+            // Font
+            'font-medium',
+            'text-xs leading-6',
+
+            // Alignment
+            'flex items-center justify-center',
+            'text-center',
+
+            // Position
+            'absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 origin-top-right',
+
+            // Size
+            'm-0',
             {
-                'rounded-full p-0': context.nogutter || context.dot,
-                'rounded-[10px] px-2': !context.nogutter && !context.dot,
-                'min-w-[0.5rem] w-2 h-2': context.dot,
-                'min-w-[1.5rem] h-6': !context.dot
+                'p-0': context.nogutter || context.dot,
+                'p-1': !context.nogutter && !context.dot,
+                'min-w-[0.5rem] h-2': context.dot,
+                'min-w-[1rem] h-4': !context.dot
             },
+
+            // Shape
             {
-                'bg-blue-500 ': context.info || (!context.info && !context.success && !context.warning && !context.danger),
-                'bg-green-500 ': context.success,
-                'bg-orange-500 ': context.warning,
-                'bg-red-500 ': context.danger
+                'rounded-full': context.nogutter || context.dot,
+                'rounded-[10px]': !context.nogutter && !context.dot
+            },
+
+            // Color
+            'text-white dark:text-surface-900',
+            'ring-1 ring-white dark:ring-surface-900',
+            {
+                'bg-primary-500 dark:bg-primary-400': !context.info && !context.success && !context.warning && !context.danger && !context.help && !context.secondary,
+                'bg-surface-500 dark:bg-surface-400': context.secondary,
+                'bg-green-500 dark:bg-green-400': context.success,
+                'bg-blue-500 dark:bg-blue-400': context.info,
+                'bg-orange-500 dark:bg-orange-400': context.warning,
+                'bg-purple-500 dark:bg-purple-400': context.help,
+                'bg-red-500 dark:bg-red-400': context.danger
             }
         ]
     })
