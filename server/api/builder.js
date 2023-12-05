@@ -1,17 +1,22 @@
 import JSZip from 'jszip';
 
 export default defineEventHandler(async (event) => {
-    const { components, directives, preset, filename } = await readBody(event);
+    const { components, preset, filename } = await readBody(event);
     const zip = new JSZip();
     let main = '';
-    const items = [...components, ...directives];
+    const availableDirectives = ['tooltip', 'badgedirective', 'ripple'];
+    let directives = [];
 
     //components
-    for (let item of items) {
-        const file = await useStorage(`assets:presets`).getItem(`${preset}:${item}:index.js`);
+    for (let component of components) {
+        const file = await useStorage(`assets:presets`).getItem(`${preset}:${component}:index.js`);
 
-        zip.file(`${filename}/${item}/index.js`, file);
-        main = main.concat(`import ${item} from './${item}';\n`);
+        zip.file(`${filename}/${component}/index.js`, file);
+        main = main.concat(`import ${component} from './${component}';\n`);
+
+        if (availableDirectives.includes(component)) {
+            directives.push(component);
+        }
     }
 
     //global
@@ -36,8 +41,10 @@ export default defineEventHandler(async (event) => {
     }
 
     for (let component of components) {
-        main = main.concat(',\n');
-        main = main.concat(`    ${component}`);
+        if (!availableDirectives.includes(component)) {
+            main = main.concat(',\n');
+            main = main.concat(`    ${component}`);
+        }
     }
 
     main = main.concat('\n}\n');

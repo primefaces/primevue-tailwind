@@ -12,14 +12,16 @@
             </div>
             <div class="flex-auto">
                 <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Components</h2>
-                <div class="flex flex-wrap justify-between gap-4">
+                <div class="flex flex-wrap justify-between gap-8">
                     <div v-for="(group, i) of groups" :key="i">
                         <div v-for="category of group" :key="category">
-                            <div class="font-semibold mb-4">{{ builderData[category].name }}</div>
-                            <ul class="flex flex-col gap-5 mb-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <Checkbox :modelValue="isAllSelected(category)" @update:model-value="toggleCategory($event, category)" binary :disabled="!hasEnabledComponents(category)" />
+                                <span class="font-semibold text-lg">{{ builderData[category].name }}</span>
+                            </div>
+                            <ul class="flex flex-col gap-4 mb-12">
                                 <li v-for="component of builderData[category].components" :key="component.name" class="flex items-center gap-2">
-                                    <Checkbox v-if="component.directive" v-model="selectedDirectives" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
-                                    <Checkbox v-else v-model="selectedComponents" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
+                                    <Checkbox v-model="selectedComponents" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
                                     <label :for="component.path" :class="{ 'opacity-50': component.disabled }">{{ component.name }}</label>
                                 </li>
                             </ul>
@@ -46,7 +48,6 @@ export default {
         return {
             builderData: builder.data,
             selectedComponents: [],
-            selectedDirectives: [],
             preset: 'lara',
             presets: [
                 { name: 'Lara', value: 'lara' },
@@ -65,7 +66,6 @@ export default {
                 method: 'POST',
                 body: {
                     components: this.selectedComponents,
-                    directives: this.selectedDirectives,
                     preset: this.preset,
                     filename: this.filename
                 }
@@ -77,6 +77,30 @@ export default {
             elm.setAttribute('download', (this.filename || 'mypreset') + '.zip');
             elm.click();
             elm.remove();
+        },
+        isAllSelected(category) {
+            const components = this.getEnabledComponents(category);
+
+            return components.length && components.filter((component) => this.selectedComponents.includes(component)).length === components.length;
+        },
+        hasEnabledComponents(category) {
+            return this.getEnabledComponents(category).length > 0;
+        },
+        toggleCategory(value, category) {
+            const components = this.getEnabledComponents(category);
+
+            if (value) {
+                components.map((component) => {
+                    if (!this.selectedComponents.includes(component)) {
+                        this.selectedComponents.push(component);
+                    }
+                });
+            } else {
+                this.selectedComponents = this.selectedComponents.filter((name) => !components.includes(name));
+            }
+        },
+        getEnabledComponents(category) {
+            return this.builderData[category].components.filter((component) => component.disabled !== true).map((component) => component.path);
         }
     }
 };
