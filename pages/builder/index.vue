@@ -5,33 +5,33 @@
             <p>Build your own preset with the components of your choice.</p>
         </div>
 
-        <section class="py-6">
-            <h2>Base</h2>
-            <SelectButton v-model="preset" :options="presets" optionLabel="name" optionValue="value" :allowEmpty="false" />
-        </section>
-
-        <section class="py-6">
-            <h2>Components</h2>
-            <div class="flex flex-wrap">
-                <div v-for="(group, i) of groups" :key="i" class="flex-auto">
-                    <div v-for="category of group" :key="category">
-                        <div class="font-semibold mb-4">{{ builderData[category].name }}</div>
-                        <ul class="flex flex-col gap-5 mb-8">
-                            <li v-for="component of builderData[category].components" :key="component.name" class="flex items-center gap-2">
-                                <Checkbox v-model="selectedComponents" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
-                                <label :for="component.path" :class="{ 'opacity-50': component.disabled }">{{ component.name }}</label>
-                            </li>
-                        </ul>
+        <section class="py-6 flex flex-wrap gap-16">
+            <div>
+                <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Base</h2>
+                <SelectButton v-model="preset" :options="presets" optionLabel="name" optionValue="value" :allowEmpty="false" />
+            </div>
+            <div class="flex-auto">
+                <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Components</h2>
+                <div class="flex flex-wrap justify-between gap-4">
+                    <div v-for="(group, i) of groups" :key="i">
+                        <div v-for="category of group" :key="category">
+                            <div class="font-semibold mb-4">{{ builderData[category].name }}</div>
+                            <ul class="flex flex-col gap-5 mb-8">
+                                <li v-for="component of builderData[category].components" :key="component.name" class="flex items-center gap-2">
+                                    <Checkbox v-model="selectedComponents" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
+                                    <label :for="component.path" :class="{ 'opacity-50': component.disabled }">{{ component.name }}</label>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="py-6">
-            <h2>Download</h2>
-            <div class="flex w-full">
-                <InputText v-model="filename" class="!rounded-r-none" placeholder="Filename" />
-                <Button icon="pi pi-download" class="!rounded-l-none" @click="generate" />
+            <div>
+                <h2 class="text-center border-b pb-4 border-surface-200 dark:border-surface-800">Download</h2>
+                <div class="flex w-full">
+                    <InputText v-model="filename" class="!rounded-r-none" placeholder="Filename" />
+                    <Button icon="pi pi-download" class="!rounded-l-none" @click="generate" />
+                </div>
             </div>
         </section>
     </div>
