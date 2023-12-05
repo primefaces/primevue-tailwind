@@ -57,6 +57,10 @@
                         {
                             "name": "Tag",
                             "to": "/tag"
+                        },
+                        {
+                            "name": "Badge",
+                            "to": "/badge"
                         }
                     ]
                 }

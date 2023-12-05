@@ -18,7 +18,7 @@
 
             <div class="flex-auto">
                 <h5>Gravatar</h5>
-                <Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex align-items-center justify-center mr-2" size="xlarge" />
+                <Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex items-center justify-center mr-2" size="xlarge" />
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@ export default {
 
 <Avatar v-badge.danger="4" class="p-overlay-badge" image="/images/organization/walter.jpg" size="xlarge" />
 
-<Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex align-items-center justify-center mr-2" size="xlarge" />
+<Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex items-center justify-center mr-2" size="xlarge" />
 `,
                 options: `
 <template>
@@ -57,7 +57,7 @@ export default {
 
             <div class="flex-auto">
                 <h5>Gravatar</h5>
-                <Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex align-items-center justify-center mr-2" size="xlarge" />
+                <Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex items-center justify-center mr-2" size="xlarge" />
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@ export default {
 
             <div class="flex-auto">
                 <h5>Gravatar</h5>
-                <Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex align-items-center justify-center mr-2" size="xlarge" />
+                <Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex items-center justify-center mr-2" size="xlarge" />
             </div>
         </div>
     </div>
