@@ -4,19 +4,19 @@
     </DocSectionText>
     <div class="card flex flex-wrap gap-3 p-fluid">
         <div class="flex-auto">
-            <label for="locale-user" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> User Locale </label>
+            <label for="locale-user" class="font-bold block mb-2"> User Locale </label>
             <InputNumber v-model="value1" inputId="locale-user" :minFractionDigits="2" />
         </div>
         <div class="flex-auto">
-            <label for="locale-us" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> United States Locale </label>
+            <label for="locale-us" class="font-bold block mb-2"> United States Locale </label>
             <InputNumber v-model="value2" inputId="locale-us" locale="en-US" :minFractionDigits="2" />
         </div>
         <div class="flex-auto">
-            <label for="locale-german" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> German Locale </label>
+            <label for="locale-german" class="font-bold block mb-2"> German Locale </label>
             <InputNumber v-model="value3" inputId="locale-german" locale="de-DE" :minFractionDigits="2" />
         </div>
         <div class="flex-auto">
-            <label for="locale-indian" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> Indian Locale </label>
+            <label for="locale-indian" class="font-bold block mb-2"> Indian Locale </label>
             <InputNumber v-model="value4" inputId="locale-indian" locale="en-IN" :minFractionDigits="2" />
         </div>
     </div>
@@ -36,7 +36,8 @@ export default {
 <InputNumber v-model="value1" inputId="locale-user" :minFractionDigits="2" />
 <InputNumber v-model="value2" inputId="locale-us" locale="en-US" :minFractionDigits="2" />
 <InputNumber v-model="value3" inputId="locale-german" locale="de-DE" :minFractionDigits="2" />
-<InputNumber v-model="value4" inputId="locale-indian" locale="en-IN" :minFractionDigits="2" />`,
+<InputNumber v-model="value4" inputId="locale-indian" locale="en-IN" :minFractionDigits="2" />
+`,
                 options: `
 <template>
     <div class="card flex flex-wrap gap-3 p-fluid">
@@ -70,7 +71,8 @@ export default {
         };
     }
 };
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex flex-wrap gap-3 p-fluid">
@@ -100,7 +102,8 @@ const value1 = ref(151351);
 const value2 = ref(115744);
 const value3 = ref(635524);
 const value4 = ref(732762);
-<\/script>`
+<\/script>
+`
             }
         };
     }

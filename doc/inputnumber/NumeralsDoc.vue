@@ -4,19 +4,19 @@
     </DocSectionText>
     <div class="card flex flex-wrap gap-3 p-fluid">
         <div class="flex-auto">
-            <label for="integeronly" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> Integer Only </label>
+            <label for="integeronly" class="font-bold block mb-2"> Integer Only </label>
             <InputNumber v-model="value1" inputId="integeronly" />
         </div>
         <div class="flex-auto">
-            <label for="withoutgrouping" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> Without Grouping </label>
+            <label for="withoutgrouping" class="font-bold block mb-2"> Without Grouping </label>
             <InputNumber v-model="value2" inputId="withoutgrouping" :useGrouping="false" />
         </div>
         <div class="flex-auto">
-            <label for="minmaxfraction" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> Min-Max Fraction Digits </label>
+            <label for="minmaxfraction" class="font-bold block mb-2"> Min-Max Fraction Digits </label>
             <InputNumber v-model="value3" inputId="minmaxfraction" :minFractionDigits="2" :maxFractionDigits="5" />
         </div>
         <div class="flex-auto">
-            <label for="minmax" class="font-medium block mb-2 text-surface-700 dark:text-surface-300"> Min-Max Boundaries </label>
+            <label for="minmax" class="font-bold block mb-2"> Min-Max Boundaries </label>
             <InputNumber v-model="value4" inputId="minmax" :min="0" :max="100" />
         </div>
     </div>
@@ -36,7 +36,8 @@ export default {
 <InputNumber v-model="value1" inputId="integeronly" />
 <InputNumber v-model="value2" inputId="withoutgrouping" :useGrouping="false" />
 <InputNumber v-model="value3" inputId="minmaxfraction" :minFractionDigits="2" :maxFractionDigits="5" />
-<InputNumber v-model="value4" inputId="minmax" :min="0" :max="100" />`,
+<InputNumber v-model="value4" inputId="minmax" :min="0" :max="100" />
+`,
                 options: `
 <template>
     <div class="card flex flex-wrap gap-3 p-fluid">
@@ -70,7 +71,8 @@ export default {
         };
     }
 };
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex flex-wrap gap-3 p-fluid">
@@ -100,7 +102,8 @@ const value1 = ref(42723);
 const value2 = ref(58151);
 const value3 = ref(2351.35);
 const value4 = ref(50);
-<\/script>`
+<\/script>
+`
             }
         };
     }

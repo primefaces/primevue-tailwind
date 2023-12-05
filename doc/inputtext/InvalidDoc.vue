@@ -3,7 +3,7 @@
         <p>Invalid state style is added using the <i>.p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <InputText v-model="value" class="border border-red-300 dark:border-red-400" />
+        <InputText v-model="value" class="border border-red-500 dark:border-red-400" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             value: null,
             code: {
                 basic: `
-<InputText v-model="value" class="border border-red-300 dark:border-red-400" />
+<InputText v-model="value" class="p-invalid" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <InputText v-model="value" class="border border-red-300 dark:border-red-400" />
+        <InputText v-model="value" class="p-invalid" />
     </div> 
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <InputText v-model="value" class="border border-red-300 dark:border-red-400" />
+        <InputText v-model="value" class="p-invalid" />
     </div> 
 </template>
 

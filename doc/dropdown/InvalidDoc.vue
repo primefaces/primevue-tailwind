@@ -22,11 +22,12 @@ export default {
             ],
             code: {
                 basic: `
-<Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border border-red-300 dark:border-red-400 w-full md:w-14rem" />`,
+<Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-14rem" />
+`,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border border-red-300 dark:border-red-400 w-full md:w-14rem" />
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-14rem" />
     </div>
 </template>
 
@@ -45,11 +46,12 @@ export default {
         };
     }
 };
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border border-red-300 dark:border-red-400 w-full md:w-14rem" />
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-14rem" />
     </div>
 </template>
 
@@ -64,7 +66,8 @@ const cities = ref([
     { name: 'Istanbul', code: 'IST' },
     { name: 'Paris', code: 'PRS' }
 ]);
-<\/script>`
+<\/script>
+`
             }
         };
     }

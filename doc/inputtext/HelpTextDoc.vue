@@ -4,9 +4,9 @@
     </DocSectionText>
     <div class="card flex justify-center">
         <div class="flex flex-col gap-2">
-            <label for="username" class="text-surface-500 dark:text-surface-500">Username</label>
+            <label for="username">Username</label>
             <InputText id="username" v-model="value" aria-describedby="username-help" />
-            <small id="username-help" class="text-surface-500 dark:text-surface-500">Enter your username to reset your password.</small>
+            <small id="username-help">Enter your username to reset your password.</small>
         </div>
     </div>
     <DocSectionCode :code="code" />
@@ -20,18 +20,18 @@ export default {
             code: {
                 basic: `
 <div class="flex flex-col gap-2">
-    <label for="username" class="text-surface-500 dark:text-surface-500">Username</label>
+    <label for="username">Username</label>
     <InputText id="username" v-model="value" aria-describedby="username-help" />
-    <small id="username-help" class="text-surface-500 dark:text-surface-500">Enter your username to reset your password.</small>
+    <small id="username-help">Enter your username to reset your password.</small>
 </div>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
         <div class="flex flex-col gap-2">
-            <label for="username" class="text-surface-500 dark:text-surface-500">Username</label>
+            <label for="username">Username</label>
             <InputText id="username" v-model="value" aria-describedby="username-help" />
-            <small id="username-help" class="text-surface-500 dark:text-surface-500">Enter your username to reset your password.</small>
+            <small id="username-help">Enter your username to reset your password.</small>
         </div>
     </div>
 </template>
@@ -50,9 +50,9 @@ export default {
 <template>
     <div class="card flex justify-center">
         <div class="flex flex-col gap-2">
-            <label for="username" class="text-surface-500 dark:text-surface-500">Username</label>
+            <label for="username">Username</label>
             <InputText id="username" v-model="value" aria-describedby="username-help" />
-            <small id="username-help" class="text-surface-500 dark:text-surface-500">Enter your username to reset your password.</small>
+            <small id="username-help">Enter your username to reset your password.</small>
         </div>
     </div>
 </template>
