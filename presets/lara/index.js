@@ -23,7 +23,7 @@ import tooltip from './tooltip';
 export default {
     global,
     directives: {
-        badgedirective,
+        badge: badgedirective,
         ripple,
         tooltip
     },

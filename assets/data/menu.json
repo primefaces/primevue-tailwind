@@ -51,6 +51,10 @@
                     "name": "Misc",
                     "children": [
                         {
+                            "name": "Avatar",
+                            "to": "/avatar"
+                        },
+                        {
                             "name": "Tag",
                             "to": "/tag"
                         }
