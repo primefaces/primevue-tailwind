@@ -4,6 +4,7 @@ import badge from './badge';
 import badgedirective from './badgedirective';
 import button from './button';
 import calendar from './calendar';
+import card from './card';
 import checkbox from './checkbox';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
@@ -42,6 +43,7 @@ export default {
     //panels
     panel,
     fieldset,
+    card,
 
     //misc
     badge,

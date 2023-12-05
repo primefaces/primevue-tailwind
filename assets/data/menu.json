@@ -30,6 +30,10 @@
                     "name": "Panel",
                     "children": [
                         {
+                            "name": "Card",
+                            "to": "/card"
+                        },
+                        {
                             "name": "Panel",
                             "to": "/panel"
                         },
