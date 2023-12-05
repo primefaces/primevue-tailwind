@@ -3,9 +3,9 @@
         <p>A floating label appears on top of the input field when focused.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <span class="block relative">
+        <span class="p-float-label">
             <InputText id="username" v-model="value" />
-            <label for="username" class="absolute pointer-events-none top-1/2 -mt-2 transition-all ease leading-none left-3 text-gray-500 duration-200">Username</label>
+            <label for="username">Username</label>
         </span>
     </div>
     <DocSectionCode :code="code" />
