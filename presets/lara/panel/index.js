@@ -66,6 +66,20 @@ export default {
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
+    footer: {
+        class: [
+            // Spacing
+            'py-3 p-5',
+
+            // Shape
+            'border border-t-0 rounded-br-lg rounded-bl-lg',
+
+            //Color
+            'border-surface-300 dark:border-surface-700',
+            'bg-surface-0 dark:bg-surface-900',
+            'text-surface-700 dark:text-surface-0/80'
+        ]
+    },
     transition: {
         enterFromClass: 'max-h-0',
         enterActiveClass: 'overflow-hidden transition-all duration-500 ease-in-out',
