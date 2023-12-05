@@ -71,7 +71,7 @@ export default {
 
                 //Color
                 'text-surface-600 dark:text-surface-400',
-                'bg-transparent',
+                'bg-surface-0 dark:bg-surface-800',
 
                 // Sizing
                 'w-[3rem]',
@@ -115,7 +115,7 @@ export default {
 
                 //Color
                 'text-surface-600 dark:text-surface-400',
-                'bg-transparent',
+                'bg-surface-0 dark:bg-surface-800',
 
                 // Sizing
                 'w-[3rem]',

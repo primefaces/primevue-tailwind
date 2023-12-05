@@ -23,6 +23,10 @@
                         {
                             "name": "InputNumber",
                             "to": "/inputnumber"
+                        },
+                        {
+                            "name": "InputSwitch",
+                            "to": "/inputswitch"
                         }
                     ]
                 },
