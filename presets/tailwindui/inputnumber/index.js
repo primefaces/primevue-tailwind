@@ -41,6 +41,7 @@ export default {
 
                 // States
                 'outline-none focus:ring-primary-600 dark:focus:ring-primary-500',
+                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
 
                 //Position
                 { 'order-2': parent.props.buttonLayout == 'horizontal' || parent.props.buttonLayout == 'vertical' }
