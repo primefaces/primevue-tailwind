@@ -25,6 +25,10 @@
                             "to": "/inputnumber"
                         },
                         {
+                            "name": "Checkbox",
+                            "to": "/checkbox"
+                        },
+                        {
                             "name": "InputSwitch",
                             "to": "/inputswitch"
                         },
