@@ -1,7 +1,7 @@
 import pkg from '@/package.json';
 import { Lara } from './lara';
-import { TailwindUI } from './tailwindui';
 import { services } from './services';
+import { TailwindUI } from './tailwindui';
 
 const PrimeVue = {
     version: '^3.43.0',
@@ -62,10 +62,12 @@ const getVueApp = (props = {}, sourceType) => {
     // main.js
     unstyled += `, unstyled: true, pt: Lara`;
     imports += `import ThemeSwitcher from './components/ThemeSwitcher.vue';
+import Configurator from './components/Configurator.vue';
 import Lara from './presets/lara';
 import TailwindUI from './presets/tailwindui';
 import appState from './plugins/appState.js';`;
     element += `app.component('ThemeSwitcher', ThemeSwitcher);
+app.component('Configurator', Configurator);
 app.use(appState);`;
 
     // package.json
@@ -435,7 +437,7 @@ darkMode: 'class',
 content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
-    "./src/*.{vue,js,ts,jsx,tsx}",
+    "./src/*/.{vue,js,ts,jsx,tsx}",
 ],
 theme: {
     extend: {
@@ -482,87 +484,100 @@ plugins: {
 
     files[`${path}components/ThemeSwitcher.vue`] = {
         content: `<template>
-    <div class="mb-6 w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-surface-200 dark:border-surface-800 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
-            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
-            <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
-                <a
-                    v-for="primaryColor of primaryColors"
-                    :key="primaryColor.name"
-                    @click="updateColors('primary', primaryColor.palette)"
-                    class="w-3.5 h-3.5 rounded-full cursor-pointer"
-                    :style="{ backgroundColor: \`rgb(\${primaryColor.palette[5]})\` }"
-                ></a>
-            </div>
-        </div>
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
-            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Surface Colors</span>
-            <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-3.5 h-3.5 rounded-full cursor-pointer" :style="{ backgroundColor: \`rgb(\${surface.palette[6]})\` }"></a>
-            </div>
-        </div>
-        <div class="flex-col justify-start items-start gap-2 flex">
-            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Preset</span>
-            <div class="border border-surface-200 dark:border-surface-800 flex rounded-md text-xs font-medium">
+    <div class="card flex justify-end p-2 mb-4">
+        <ul class="flex list-none m-0 p-0 gap-2 items-center">
+            <li>
                 <button
                     type="button"
-                    class="transition duration-200 rounded-l-md px-2 py-1"
-                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isLara, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isLara }"
-                    @click="setPreset('lara')"
-                >
-                    Lara
-                </button>
-                <button
-                    type="button"
-                    class="transition duration-200 rounded-r-md px-2 py-1"
-                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isTailwindUI, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI }"
-                    @click="setPreset('tailwindui')"
-                >
-                    TailwindUI
-                </button>
-            </div>
-        </div>
-        <div class="flex-col justify-start items-start gap-2 flex">
-            <span class="text-black dark:text-surface-0 text-xs font-medium m-0"
-                >Theme</span
-            >
-            <div
-                class="border border-surface-200 dark:border-surface-800 flex rounded-md text-xs font-medium"
-            >
-                <button
-                    type="button"
-                    class="transition duration-200 rounded-l-md px-2 py-1"
-                    :class="{
-                        'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950':
-                        !isDark,
-                        'hover:bg-surface-100 dark:hover:bg-surface-800': isDark,
-                    }"
+                    class="inline-flex border-1 w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
                     @click="onThemeToggler"
                 >
-                Light
+                    <i :class="\`dark:text-white pi \${iconClass}\`" />
                 </button>
-                <button
-                    type="button"
-                    class="transition duration-200 rounded-r-md px-2 py-1"
-                    :class="{
-                        'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950':
-                        isDark,
-                        'hover:bg-surface-100 dark:hover:bg-surface-800': !isDark,
-                    }"
-                    @click="onThemeToggler"
-                >
-                Dark
-                </button>
-            </div>
-            </div>
+            </li>
+        <li class="relative">
+            <button
+                v-styleclass="{selector: '@next', enterClass: 'hidden', enterActiveClass: 'scalein', leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true}"
+                type="button"
+                class="inline-flex border-1 w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
+            >
+                <i class="pi pi-palette dark:text-white"></i>
+            </button>
+            <Configurator />
+        </li>
+        </ul>
     </div>
+    </template>
+
+<script>
+export default {
+    data() {
+        return {
+            iconClass: 'pi-moon'
+        }
+    },
+    methods: {
+        onThemeToggler() {
+            const root = document.getElementsByTagName('html')[0];
+
+            root.classList.toggle('dark');
+            this.iconClass = this.iconClass === 'pi-moon' ? 'pi-sun' : 'pi-moon';
+        }
+    },
+};
+<\/script>
+    `
+    };
+
+    files[`${path}components/Configurator.vue`] = {
+        content: `<template>
+<div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-surface-200 dark:border-surface-800 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
+    <div class="flex-col justify-start items-start gap-2 inline-flex">
+        <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
+        <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
+            <a
+                v-for="primaryColor of primaryColors"
+                :key="primaryColor.name"
+                @click="updateColors('primary', primaryColor.palette)"
+                class="w-3.5 h-3.5 rounded-full cursor-pointer"
+                :style="{ backgroundColor: \`rgb(\${primaryColor.palette[5]})\` }"
+            ></a>
+        </div>
+    </div>
+    <div class="flex-col justify-start items-start gap-2 inline-flex">
+        <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Surface Colors</span>
+        <div class="self-stretch justify-start items-start gap-2 inline-flex">
+            <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-3.5 h-3.5 rounded-full cursor-pointer" :style="{ backgroundColor: \`rgb(\${surface.palette[6]})\` }"></a>
+        </div>
+    </div>
+    <div class="flex-col justify-start items-start gap-2 flex">
+        <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Preset</span>
+        <div class="border border-surface-200 dark:border-surface-800 flex rounded-md text-xs font-medium">
+            <button
+                type="button"
+                class="transition duration-200 rounded-l-md px-2 py-1"
+                :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isLara, 'text-text-gray-950 dark:text-white hover:bg-surface-100 dark:hover:bg-surface-800': !isLara }"
+                @click="setPreset('lara')"
+            >
+                Lara
+            </button>
+            <button
+                type="button"
+                class="transition duration-200 rounded-r-md px-2 py-1"
+                :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isTailwindUI, 'text-text-gray-950 dark:text-white hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI }"
+                @click="setPreset('tailwindui')"
+            >
+                TailwindUI
+            </button>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            isDark: false,
             primaryColors: [
                 { name: 'emerald', palette: ['236 253 245', '209 250 229', '167 243 208', '110 231 183', '52 211 153', '16 185 129', '5 150 105', '4 120 87', '6 95 70', '4 78 56', '2 44 34'] },
                 { name: 'green', palette: ['240 253 244', '220 252 231', '187 247 208', '134 239 172', '78 222 128', '34 197 94', '22 163 74', '21 128 61', '22 101 52', '20 83 45', '23 78 22'] },
@@ -631,12 +646,6 @@ export default {
         },
         setPreset(preset) {
             this.$appState.preset = preset;
-        },
-        onThemeToggler() {
-            const root = document.getElementsByTagName('html')[0];
-
-            root.classList.toggle('dark');
-            this.isDark = !this.isDark
         }
     },
     computed: {
@@ -733,11 +742,11 @@ const tailwindConfig = `@tailwind base;
 @tailwind utilities;
 
 :root {
-    font-family: "Inter var", sans-serif;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: 'Inter var', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     font-variation-settings: normal;
-    --font-family: "Inter var", sans-serif;
-    --font-feature-settings: "cv02","cv03","cv04","cv11";
+    --font-family: 'Inter var', sans-serif;
+    --font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     --primary-50: 236 253 245;
     --primary-100: 209 250 229;
     --primary-200: 167 243 208;
@@ -764,28 +773,111 @@ const tailwindConfig = `@tailwind base;
     --surface-950: 8 8 8;
 }
 
+:root {
+    --body-bg: rgb(var(--surface-50));
+    --card-border: 1px solid var(--border-color);
+    --card-bg: rgb(var(--surface-0));
+    --border-color: rgb(var(--surface-200));
+}
+
+:root[class='dark'] {
+    --body-bg: rgb(var(--surface-900));
+    --card-border: 1px solid transparent;
+    --card-bg: rgb(var(--surface-800));
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
 html {
     font-size: 14px;
 }
 
 body {
-    background: #eff3f8;
+    margin: 0px;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--body-bg);
+    font-weight: normal;
+    color: var(--body-text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     padding: 1rem;
 }
 
 .card {
-    background: #ffffff;
+    background: var(--card-bg);
+    border: var(--card-border);
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 1rem;
 }
 
-html.dark body {
-    background: #040d19;
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+  }
 }
 
-html.dark .card {
-    background: #071426;
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scalein {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.8);
+        transition: transform 0.12s cubic-bezier(0, 0, 0.2, 1),
+        opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: auto;
+    }
+}
+@keyframes slideup {
+    0% {
+        max-height: 1000px;
+    }
+    100% {
+        max-height: 0;
+    }
+}
+
+.scalein {
+    animation: scalein 300ms linear;
+}
+
+.fadein {
+    animation: fadein 150ms linear;
+}
+
+.fadeout {
+    animation: fadeout 150ms linear;
+}
+
+.slidedown {
+    animation: slidedown 0.45s ease-in-out;
+}
+
+.slideup {
+    animation: slideup 0.45s cubic-bezier(0, 1, 0, 1);
 }
 `;
 
