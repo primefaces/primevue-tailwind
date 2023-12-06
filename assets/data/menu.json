@@ -39,6 +39,15 @@
                     ]
                 },
                 {
+                    "name": "Buttons",
+                    "children": [
+                        {
+                            "name": "Button",
+                            "to": "/button"
+                        }
+                    ]
+                },
+                {
                     "name": "Panel",
                     "children": [
                         {

@@ -5,7 +5,7 @@ export default {
             'flex items-center',
 
             // Size
-            { 'h-2 w-full': props.orientation == 'horizontal', 'w-2 h-full min-h-[15rem]': props.orientation == 'vertical' },
+            { 'h-2 w-full min-w-[15rem]': props.orientation == 'horizontal', 'w-2 h-full min-h-[15rem]': props.orientation == 'vertical' },
 
             // Shape
             'border-0 rounded-lg',
