@@ -1,8 +1,10 @@
-import pkg from '../../../package.json';
+import pkg from '@/package.json';
+import { Lara } from './lara';
+import { TailwindUI } from './tailwindui';
 import { services } from './services';
 
 const PrimeVue = {
-    version: '^3.40.0',
+    version: '^3.43.0',
     description:
         'PrimeVue is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 400+ ready to use UI blocks to build spectacular applications in no time.'
 };
@@ -30,7 +32,6 @@ const getVueApp = (props = {}, sourceType) => {
     let element = '',
         imports = '',
         unstyled = '',
-        pvTheme = '',
         themeSwitchCode = '',
         routeFiles = {};
 
@@ -58,32 +59,26 @@ const getVueApp = (props = {}, sourceType) => {
 `;
     }
 
-    if (embedded) {
-        // main.js
-        unstyled += `, unstyled: true, pt: Tailwind, ptOptions: { mergeProps: true }`;
-        imports += `import Tailwind from 'primevue/passthrough/tailwind';
-import ThemeSwitcher from './components/ThemeSwitcher.vue';`;
-        element += `app.component('ThemeSwitcher', ThemeSwitcher);`;
+    // main.js
+    unstyled += `, unstyled: true, pt: Lara`;
+    imports += `import ThemeSwitcher from './components/ThemeSwitcher.vue';
+import Lara from './presets/lara';
+import TailwindUI from './presets/tailwindui';
+import appState from './plugins/appState.js';`;
+    element += `app.component('ThemeSwitcher', ThemeSwitcher);
+app.use(appState);`;
 
-        // package.json
-        dependencies['tailwindcss'] = '^3.3.2';
-        dependencies['postcss'] = '^8.4.27';
-        dependencies['autoprefixer'] = '^10.4.14';
+    // package.json
+    dependencies['tailwindcss'] = '^3.3.2';
+    dependencies['postcss'] = '^8.4.27';
+    dependencies['autoprefixer'] = '^10.4.14';
 
-        // App.vue
-        themeSwitchCode = ''.concat(
-            `<template>
+    // App.vue
+    themeSwitchCode = ''.concat(
+        `<template>
     <ThemeSwitcher />`,
-            sources.split('<template>')[1]
-        );
-    } else {
-        // main.js
-        pvTheme += `import "primeflex/primeflex.css";
-import "primevue/resources/themes/lara-light-green/theme.css";`;
-
-        // package.json
-        dependencies['primeflex'] = app_dependencies['primeflex'] || 'latest';
-    }
+        sources.split('<template>')[1]
+    );
 
     const files = {
         'package.json': {
@@ -135,8 +130,7 @@ export default defineConfig({
 </html>`
         },
         [`${path}main.js`]: {
-            content: `${pvTheme}
-import "primevue/resources/primevue.min.css"; /* Deprecated */
+            content: `
 import "primeicons/primeicons.css";
 import "./style.css";
 import "./flags.css";
@@ -353,7 +347,7 @@ app.mount("#app");
 `
         },
         [`${path}style.css`]: {
-            content: embedded ? tailwindConfig : staticStyles.global
+            content: tailwindConfig
         },
         [`${path}flags.css`]: {
             content: staticStyles.flags
@@ -368,7 +362,7 @@ export const router = createRouter({
 });`
         },
         [`${sourceFileName}`]: {
-            content: embedded ? themeSwitchCode : sources
+            content: themeSwitchCode
         },
         'public/logo.svg': {
             content: `
@@ -434,54 +428,273 @@ export const router = createRouter({
         });
     }
 
-    if (embedded) {
-        files['tailwind.config.js'] = {
-            content: `/** @type {import('tailwindcss').Config} */
+    files['tailwind.config.js'] = {
+        content: `/** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: 'class',
-    content: [
-        "./index.html",
-        "./src/**/*.{vue,js,ts,jsx,tsx}",
-        "./node_modules/primevue/**/*.{vue,js,ts,jsx,tsx}"
-    ],
-    theme: {
-        extend: {}
-    },
-    plugins: []
-}`
-        };
+darkMode: 'class',
+content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/*.{vue,js,ts,jsx,tsx}",
+],
+theme: {
+    extend: {
+        colors: {
+            'primary-50': 'rgb(var(--primary-50))',
+            'primary-100': 'rgb(var(--primary-100))',
+            'primary-200': 'rgb(var(--primary-200))',
+            'primary-300': 'rgb(var(--primary-300))',
+            'primary-400': 'rgb(var(--primary-400))',
+            'primary-500': 'rgb(var(--primary-500))',
+            'primary-600': 'rgb(var(--primary-600))',
+            'primary-700': 'rgb(var(--primary-700))',
+            'primary-800': 'rgb(var(--primary-800))',
+            'primary-900': 'rgb(var(--primary-900))',
+            'primary-950': 'rgb(var(--primary-950))',
 
-        files['postcss.config.js'] = {
-            content: `module.exports = {
-    plugins: {
-        tailwindcss: {},
-        autoprefixer: {}
+            'surface-0': 'rgb(var(--surface-0))',
+            'surface-50': 'rgb(var(--surface-50))',
+            'surface-100': 'rgb(var(--surface-100))',
+            'surface-200': 'rgb(var(--surface-200))',
+            'surface-300': 'rgb(var(--surface-300))',
+            'surface-400': 'rgb(var(--surface-400))',
+            'surface-500': 'rgb(var(--surface-500))',
+            'surface-600': 'rgb(var(--surface-600))',
+            'surface-700': 'rgb(var(--surface-700))',
+            'surface-800': 'rgb(var(--surface-800))',
+            'surface-900': 'rgb(var(--surface-900))',
+            'surface-950': 'rgb(var(--surface-950))'
+        }
     }
+},
+plugins: []
 }`
-        };
+    };
 
-        files[`${path}components/ThemeSwitcher.vue`] = {
-            content: `<template>
-    <div class="card flex justify-end p-2 mb-4">
-        <button type="button" class="flex border w-8 h-8 p-0 items-center justify-center" @click="onThemeToggler">
-            <i :class="\`dark:text-white pi \${iconClass}\`" />
-        </button>
+    files['postcss.config.js'] = {
+        content: `module.exports = {
+plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+}
+}`
+    };
+
+    files[`${path}components/ThemeSwitcher.vue`] = {
+        content: `<template>
+    <div class="mb-6 w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-surface-200 dark:border-surface-800 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
+        <div class="flex-col justify-start items-start gap-2 inline-flex">
+            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
+            <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
+                <a
+                    v-for="primaryColor of primaryColors"
+                    :key="primaryColor.name"
+                    @click="updateColors('primary', primaryColor.palette)"
+                    class="w-3.5 h-3.5 rounded-full cursor-pointer"
+                    :style="{ backgroundColor: \`rgb(\${primaryColor.palette[5]})\` }"
+                ></a>
+            </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-2 inline-flex">
+            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Surface Colors</span>
+            <div class="self-stretch justify-start items-start gap-2 inline-flex">
+                <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-3.5 h-3.5 rounded-full cursor-pointer" :style="{ backgroundColor: \`rgb(\${surface.palette[6]})\` }"></a>
+            </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-2 flex">
+            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Preset</span>
+            <div class="border border-surface-200 dark:border-surface-800 flex rounded-md text-xs font-medium">
+                <button
+                    type="button"
+                    class="transition duration-200 rounded-l-md px-2 py-1"
+                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isLara, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isLara }"
+                    @click="setPreset('lara')"
+                >
+                    Lara
+                </button>
+                <button
+                    type="button"
+                    class="transition duration-200 rounded-r-md px-2 py-1"
+                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isTailwindUI, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI }"
+                    @click="setPreset('tailwindui')"
+                >
+                    TailwindUI
+                </button>
+            </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-2 flex">
+            <span class="text-black dark:text-surface-0 text-xs font-medium m-0"
+                >Theme</span
+            >
+            <div
+                class="border border-surface-200 dark:border-surface-800 flex rounded-md text-xs font-medium"
+            >
+                <button
+                    type="button"
+                    class="transition duration-200 rounded-l-md px-2 py-1"
+                    :class="{
+                        'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950':
+                        isLara,
+                        'hover:bg-surface-100 dark:hover:bg-surface-800': !isLara,
+                    }"
+                    @click="onThemeToggler"
+                >
+                Light
+                </button>
+                <button
+                    type="button"
+                    class="transition duration-200 rounded-r-md px-2 py-1"
+                    :class="{
+                        'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950':
+                        isTailwindUI,
+                        'hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI,
+                    }"
+                    @click="onThemeToggler"
+                >
+                Dark
+                </button>
+            </div>
+            </div>
     </div>
 </template>
 
-<script setup>
-import {ref} from 'vue';
-const iconClass = ref('pi-moon');
-
-const onThemeToggler = () => {
-    const root = document.getElementsByTagName('html')[0];
-
-    root.classList.toggle('dark');
-    iconClass.value = iconClass.value === 'pi-moon' ? 'pi-sun': 'pi-moon';
-};
-</script>`
+<script>
+export default {
+    data() {
+        return {
+            iconClass: 'pi-moon',
+            primaryColors: [
+                { name: 'emerald', palette: ['236 253 245', '209 250 229', '167 243 208', '110 231 183', '52 211 153', '16 185 129', '5 150 105', '4 120 87', '6 95 70', '4 78 56', '2 44 34'] },
+                { name: 'green', palette: ['240 253 244', '220 252 231', '187 247 208', '134 239 172', '78 222 128', '34 197 94', '22 163 74', '21 128 61', '22 101 52', '20 83 45', '23 78 22'] },
+                { name: 'lime', palette: ['247 254 231', '236 252 203', '217 249 157', '190 242 100', '163 230 53', '132 204 22', '101 163 13', '77 124 15', '63 98 18', '54 83 20', '26 46 5'] },
+                { name: 'red', palette: ['254 242 242', '254 226 226', '254 202 202', '252 165 165', '248 113 113', '239 68 68', '220 38 38', '185 28 28', '153 27 27', '127 29 29', '69 10 10'] },
+                { name: 'orange', palette: ['255 247 237', '255 237 213', '254 215 170', '253 186 116', '251 146 60', '249 115 22', '234 88 12', '194 65 12', '154 52 18', '124 45 18', '67 20 7'] },
+                { name: 'amber', palette: ['255 251 235', '254 243 199', '253 230 138', '252 211 77', '251 191 36', '245 158 11', '217 119 6', '180 83 9', '146 64 14', '120 53 15', '69 26 3'] },
+                { name: 'yellow', palette: ['254 252 232', '254 249 195', '254 240 138', '253 224 71', '250 204 21', '234 179 8', '202 138 4', '161 98 7', '130 77 14', '113 63 18', '66 32 6'] },
+                { name: 'teal', palette: ['240 253 250', '204 251 241', '153 246 228', '94 234 212', '45 212 191', '20 184 166', '13 148 136', '15 118 110', '21 94 89', '20 78 74', '4 47 46'] },
+                { name: 'cyan', palette: ['236 254 255', '207 250 254', '165 243 252', '103 232 249', '34 211 238', '6 182 212', '8 145 178', '14 116 144', '21 94 117', '22 78 99', '8 51 68'] },
+                { name: 'sky', palette: ['240 249 255', '224 242 254', '186 230 253', '125 211 252', '56 189 248', '14 165 233', '2 132 199', '3 105 161', '21 94 133', '12 74 110', '8 47 73'] },
+                { name: 'blue', palette: ['239 246 255', '219 234 254', '191 219 254', '147 197 253', '96 165 250', '59 130 246', '37 99 235', '29 78 216', '30 64 175', '30 58 138', '23 37 84'] },
+                { name: 'indigo', palette: ['238 242 255', '224 231 255', '199 210 254', '165 180 252', '129 140 248', '99 102 241', '79 70 229', '67 56 202', '55 48 163', '49 46 129', '30 27 75'] },
+                { name: 'violet', palette: ['245 243 255', '237 233 254', '221 214 254', '196 181 253', '167 139 250', '139 92 246', '124 58 237', '109 40 217', '91 33 182', '76 29 149', '50 23 102'] },
+                { name: 'purple', palette: ['250 245 255', '243 232 255', '233 213 255', '216 180 254', '192 132 252', '168 85 247', '147 51 234', '126 34 206', '107 33 168', '88 28 135', '59 20 100'] },
+                { name: 'fuchsia', palette: ['253 244 255', '250 232 255', '245 208 254', '240 171 252', '232 121 249', '217 70 239', '192 38 211', '162 28 175', '126 34 153', '109 40 121', '74 9 78'] },
+                { name: 'pink', palette: ['253 242 248', '252 231 243', '251 207 232', '249 168 212', '244 114 182', '236 72 153', '219 39 119', '190 24 93', '157 23 77', '131 24 67', '80 7 36'] },
+                { name: 'rose', palette: ['255 241 242', '255 228 230', '254 205 211', '253 164 175', '251 113 133', '244 63 94', '225 29 72', '190 18 60', '159 18 57', '136 19 55', '76 5 25'] }
+            ],
+            surfaces: [
+                {
+                    name: 'gray',
+                    palette: ['255 255 255', '249 250 251', '243 244 246', '229 231 235', '209 213 219', '156 163 175', '107 114 128', '75 85 99', '55 65 81', '31 41 55', '17 24 39', '8 8 8']
+                },
+                {
+                    name: 'slate',
+                    palette: ['248 250 252', '241 245 249', '226 232 240', '203 213 225', '148 163 184', '100 116 139', '71 85 105', '45 55 72', '30 41 59', '15 23 42', '3 6 23', '2 6 23']
+                },
+                {
+                    name: 'zinc',
+                    palette: ['250 250 250', '244 244 245', '228 228 231', '212 212 216', '161 161 170', '113 113 122', '82 82 91', '63 63 70', '39 39 42', '24 24 27', '18 18 19', '9 9 11']
+                },
+                {
+                    name: 'neutral',
+                    palette: ['250 250 250', '245 245 245', '229 229 229', '212 212 212', '163 163 163', '115 115 115', '82 82 82', '64 64 64', '38 38 38', '24 24 24', '17 17 17', '10 10 10']
+                },
+                {
+                    name: 'stone',
+                    palette: ['250 250 249', '245 245 244', '231 229 228', '214 211 209', '168 162 158', '120 113 108', '87 83 78', '68 64 60', '46 42 41', '36 33 31', '28 25 23', '12 10 9']
+                }
+            ]
         };
+    },
+    methods: {
+        updateColors(type, colors) {
+            if (!document.startViewTransition) {
+                applyTheme(type, colors);
+
+                return;
+            }
+
+            document.startViewTransition(() => this.applyTheme(type, colors));
+        },
+        applyTheme(type, colors) {
+            let increments;
+
+            if (type === 'primary') {
+                increments = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+            } else if (type === 'surface') {
+                increments = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+            }
+
+            colors.forEach((color, index) => {
+                document.documentElement.style.setProperty(\`--\${type}-\${increments[index]}\`, color);
+            });
+        },
+        setPreset(preset) {
+            this.$appState.preset = preset;
+        },
+        onThemeToggler() {
+            const root = document.getElementsByTagName('html')[0];
+
+            root.classList.toggle('dark');
+            this.iconClass = this.iconClass === 'pi-moon' ? 'pi-sun' : 'pi-moon';
+        }
+    },
+    computed: {
+        isLara() {
+            return this.$appState.preset === 'lara';
+        },
+        isTailwindUI() {
+            return this.$appState.preset === 'tailwindui';
+        }
     }
+};
+<\/script>
+    `
+    };
+
+    files[`${path}plugins/appState.js`] = {
+        content: `import Lara from '@/presets/lara';
+import TailwindUI from '@/presets/tailwindui';
+import { reactive, watch } from 'vue';
+
+export default {
+    install: (app) => {
+    const _appState = reactive({ preset: 'lara' });
+
+    watch(
+        () => _appState.preset,
+        (newValue) => {
+        if (newValue === 'lara')
+            app.config.globalProperties.$primevue.config.pt = Lara;
+        else if (newValue === 'tailwindui')
+            app.config.globalProperties.$primevue.config.pt = TailwindUI;
+        }
+    );
+
+    app.config.globalProperties.$appState = _appState;
+    }
+};
+`
+    };
+
+    const createPresetFiles = (presetName, stringPresetName) => {
+        Object.keys(presetName).forEach((name, index) => {
+            let presetPath;
+
+            if (name === 'index' || name === 'global') {
+                presetPath = `${path}presets/${stringPresetName}/${name}.js`;
+            } else {
+                presetPath = `${path}presets/${stringPresetName}/${name}/index.js`;
+            }
+
+            files[presetPath] = {
+                content: Object.values(presetName)[index]
+            };
+        });
+    };
+
+    createPresetFiles(Lara, 'lara');
+    createPresetFiles(TailwindUI, 'tailwindui');
 
     return { files, dependencies, sourceFileName };
 };
@@ -518,6 +731,38 @@ p {
 const tailwindConfig = `@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    font-family: "Inter var", sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-variation-settings: normal;
+    --font-family: "Inter var", sans-serif;
+    --font-feature-settings: "cv02","cv03","cv04","cv11";
+    --primary-50: 236 253 245;
+    --primary-100: 209 250 229;
+    --primary-200: 167 243 208;
+    --primary-300: 110 231 183;
+    --primary-400: 52 211 153;
+    --primary-500: 16 185 129;
+    --primary-600: 5 150 105;
+    --primary-700: 4 120 87;
+    --primary-800: 6 95 70;
+    --primary-900: 4 78 56;
+    --primary-950: 2 44 34;
+
+    --surface-0: 255 255 255;
+    --surface-50: 249 250 251;
+    --surface-100: 243 244 246;
+    --surface-200: 229 231 235;
+    --surface-300: 209 213 219;
+    --surface-400: 156 163 175;
+    --surface-500: 107 114 128;
+    --surface-600: 75 85 99;
+    --surface-700: 55 65 81;
+    --surface-800: 31 41 55;
+    --surface-900: 17 24 39;
+    --surface-950: 8 8 8;
+}
 
 html {
     font-size: 14px;
