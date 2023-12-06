@@ -1,7 +1,6 @@
 import CodeHighlight from '@/directives/CodeHighlight';
 import Lara from '@/presets/lara';
 import TailwindUI from '@/presets/tailwindui';
-import PrimeVue from 'primevue/config';
 
 const $appStatePlugin = {
     install: (app) => {
@@ -20,11 +19,6 @@ const $appStatePlugin = {
 };
 
 export default defineNuxtPlugin((nuxtApp) => {
-    nuxtApp.vueApp.use(PrimeVue, {
-        ripple: true,
-        unstyled: true,
-        pt: Lara
-    });
     nuxtApp.vueApp.directive('code', CodeHighlight);
     nuxtApp.vueApp.use($appStatePlugin);
 });

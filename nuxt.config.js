@@ -1,3 +1,5 @@
+import path from 'path';
+
 const baseUrl = '/';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -14,7 +16,11 @@ export default defineNuxtConfig({
         GITHUB_TOKEN: ''
     },
     primevue: {
-        usePrimeVue: false,
+        options: {
+            ripple: true,
+            unstyled: true
+        },
+        importPT: { from: path.resolve(__dirname, './presets/lara/') },
         cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities'
     },
     app: {
