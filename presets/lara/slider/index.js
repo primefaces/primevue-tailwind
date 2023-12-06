@@ -7,7 +7,7 @@ export default {
             { 'h-1 w-60': props.orientation == 'horizontal', 'w-1 h-56': props.orientation == 'vertical' },
 
             // Shape
-            'border-0 rounded-6',
+            'border-0',
 
             // Colors
             'bg-surface-100 dark:bg-surface-700',
