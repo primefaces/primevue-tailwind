@@ -27,6 +27,10 @@
                         {
                             "name": "InputSwitch",
                             "to": "/inputswitch"
+                        },
+                        {
+                            "name": "Slider",
+                            "to": "/slider"
                         }
                     ]
                 },
