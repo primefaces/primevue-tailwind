@@ -72,6 +72,8 @@
 </template>
 
 <script>
+import { useCodeSandbox, useStackBlitz } from './codeeditor';
+
 export default {
     inheritAttrs: false,
     props: {
