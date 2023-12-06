@@ -63,7 +63,7 @@ export default {
             filename: ''
         };
     },
-    beforeMount() {
+    created() {
         this.groups = [['form'], ['button', 'panel', 'overlay'], ['data', 'menu'], ['file', 'message', 'media', 'misc']];
     },
     methods: {
