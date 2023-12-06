@@ -18,7 +18,7 @@ export default {
             },
 
             // Shapes
-            { 'shadow-sm': !props.raised && !props.link, 'shadow-lg': props.raised },
+            { 'shadow-sm': !props.raised && !props.link && !props.text, 'shadow-lg': props.raised },
             { 'rounded-md': !props.rounded, 'rounded-full': props.rounded },
 
             // Link Button
