@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>PrimeVue plugin is required to be installed with the <i>use</i> function to set up the default <NuxtLink to="/theming">configuration</NuxtLink>.</p>
+        <p>PrimeVue needs to be configured using a Vue plugin.</p>
     </DocSectionText>
     <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
 </template>
