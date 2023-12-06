@@ -534,8 +534,8 @@ plugins: {
                     class="transition duration-200 rounded-l-md px-2 py-1"
                     :class="{
                         'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950':
-                        isLara,
-                        'hover:bg-surface-100 dark:hover:bg-surface-800': !isLara,
+                        !isDark,
+                        'hover:bg-surface-100 dark:hover:bg-surface-800': isDark,
                     }"
                     @click="onThemeToggler"
                 >
@@ -546,8 +546,8 @@ plugins: {
                     class="transition duration-200 rounded-r-md px-2 py-1"
                     :class="{
                         'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950':
-                        isTailwindUI,
-                        'hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI,
+                        isDark,
+                        'hover:bg-surface-100 dark:hover:bg-surface-800': !isDark,
                     }"
                     @click="onThemeToggler"
                 >
@@ -562,7 +562,7 @@ plugins: {
 export default {
     data() {
         return {
-            iconClass: 'pi-moon',
+            isDark: false,
             primaryColors: [
                 { name: 'emerald', palette: ['236 253 245', '209 250 229', '167 243 208', '110 231 183', '52 211 153', '16 185 129', '5 150 105', '4 120 87', '6 95 70', '4 78 56', '2 44 34'] },
                 { name: 'green', palette: ['240 253 244', '220 252 231', '187 247 208', '134 239 172', '78 222 128', '34 197 94', '22 163 74', '21 128 61', '22 101 52', '20 83 45', '23 78 22'] },
@@ -636,7 +636,7 @@ export default {
             const root = document.getElementsByTagName('html')[0];
 
             root.classList.toggle('dark');
-            this.iconClass = this.iconClass === 'pi-moon' ? 'pi-sun' : 'pi-moon';
+            this.isDark = !this.isDark
         }
     },
     computed: {
