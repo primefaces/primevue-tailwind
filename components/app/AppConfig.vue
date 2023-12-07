@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-surface-200 dark:border-surface-800 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
+    <div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
         <div class="flex-col justify-start items-start gap-2 inline-flex">
             <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
