@@ -1,15 +1,15 @@
 <template>
     <div>
         <NuxtLayout name="default">
-            <div class="flex card flex-col items-center gap-5 sm:p-8">
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-primary">
+            <div class="flex card flex-col items-center gap-8">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-primary-500 dark:text-primary-400">
                     <span class="font-bold" :style="{ fontSize: '144px' }"> 4 </span>
-                    <div class="flex items-center justify-center bg-primary border-circle w-8rem h-8rem">
-                        <i class="pi pi-prime text-7xl"></i>
+                    <div class="flex items-center justify-center bg-primary-500 dark:bg-primary-400 rounded-full w-[8rem] h-[8rem]">
+                        <i class="pi pi-prime text-[4rem] text-white dark:text-gray-900"></i>
                     </div>
                     <span class="font-bold" :style="{ fontSize: '144px' }"> 4 </span>
                 </div>
-                <div class="font-bold text-900 text-center text-6xl border-top-1 border border-surface-100 pt-5">PAGE NOT FOUND</div>
+                <div class="font-bold text-center text-5xl border-t border-surface-100 pt-8">PAGE NOT FOUND</div>
             </div>
         </NuxtLayout>
     </div>
