@@ -33,6 +33,10 @@
                             "to": "/inputswitch"
                         },
                         {
+                            "name": "Calendar",
+                            "to": "/calendar"
+                        },
+                        {
                             "name": "Slider",
                             "to": "/slider"
                         }
