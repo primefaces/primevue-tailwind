@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>When <i>touchUI</i> is enabled, overlay is displayed as optimized for touch devices.</p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Calendar v-model="date" touchUI />
     </div>
     <DocSectionCode :code="code" />
@@ -19,7 +19,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Calendar v-model="date" touchUI />
     </div>
 </template>
@@ -36,7 +36,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Calendar v-model="date" touchUI />
     </div>
 </template>

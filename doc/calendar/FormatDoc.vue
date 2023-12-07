@@ -21,7 +21,7 @@
             <li><i>anything else</i> - literal text</li>
         </ul>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Calendar v-model="date" dateFormat="dd/mm/yy" />
     </div>
     <DocSectionCode :code="code" />
@@ -38,7 +38,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Calendar v-model="date" dateFormat="dd/mm/yy" />
     </div>
 </template>
@@ -55,7 +55,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Calendar v-model="date" dateFormat="dd/mm/yy" />
     </div>
 </template>
