@@ -176,7 +176,7 @@
             transition: all .2s;
 
             &:hover {
-                border-left-color: rgb(var(--border-hover-color));
+                border-left-color: var(--border-hover-color);
             }
         }
     }

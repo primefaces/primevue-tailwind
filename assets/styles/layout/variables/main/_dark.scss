@@ -1,10 +1,10 @@
 :root[class="dark"] {
     --primary-color-default:rgb(var(--primary-400));
-    --primary-color-inverse-default:rgb(var(--surface-900));
+    --primary-color-inverse-default:rgb(var(--gray-900));
     --body-bg:rgb(var(--surface-900));
     --body-text-color:rgb(var(--surface-50));
-    --selection-bg:rgb(var(--primary-50));
-    --selection-text-color:rgb(var(--primary-700));
+    --selection-bg:rgb(var(--primary-400)/.2);
+    --selection-text-color:rgb(var(--primary-200));
     --header-text-color:rgb(var(--surface-0));
     --topbar-sticky-bg:rgba(0,0,0,.3);
     --topbar-item-bg: rgb(var(--surface-800));
@@ -27,12 +27,12 @@
     --doc-highlight-text-bg: rgb(var(--primary-400) / 0.16);
     --doc-highlight-text-color: rgba(255, 255, 255, 0.87);
     --doc-tab-header-color: rgb(var(--surface-200));
-    --focus-ring: 0 0 0 0.2rem rgba(var(--primary-400), 0.2);
+    --focus-ring: 0 0 0 0.2rem rgb(var(--primary-400)/.2);
     --news-bg:rgb(var(--primary-600));
     --news-text-color:#ffffff;
     --news-link-color:#ffffff;
     --news-close-hover-bg:rgba(255,255,255,.2);
-    --border-color:rgba(255,255,255,.1);
+    --border-color:rgb(var(--surface-700));
     --border-hover-color:rgb(var(--surface-400));
 
     --docsearch-searchbox-focus-background: rgb(var(--surface-800));
