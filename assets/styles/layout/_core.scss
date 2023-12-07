@@ -120,3 +120,7 @@ button {
     font-family: var(--font-family);
     font-feature-settings: var(--font-feature-settings);
 }
+
+.layout-ripple-disabled [data-pc-name="ripple"] {
+    display: none !important;
+}

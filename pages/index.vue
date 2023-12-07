@@ -17,7 +17,7 @@ export default {
     },
     computed: {
         landingClass() {
-            return ['landing bg-surface-0 dark:bg-surface-900', { 'layout-news-active': this.$appState?.newsActive }];
+            return ['landing bg-surface-0 dark:bg-surface-900', { 'layout-news-active': this.$appState?.newsActive, 'layout-ripple-disabled': this.$primevue.config.ripple === false }];
         }
     },
     components: {

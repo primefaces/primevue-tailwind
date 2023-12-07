@@ -60,8 +60,7 @@ export default {
             return [
                 {
                     'layout-news-active': this.$appState.newsActive,
-                    'p-input-filled': this.$primevue.config.inputStyle === 'filled',
-                    'p-ripple-disabled': this.$primevue.config.ripple === false
+                    'layout-ripple-disabled': this.$primevue.config.ripple === false
                 }
             ];
         }

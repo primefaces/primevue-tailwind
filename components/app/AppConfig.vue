@@ -1,29 +1,27 @@
 <template>
     <div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
         <div class="flex-col justify-start items-start gap-2 inline-flex">
-            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
+            <span class="text-black dark:text-surface-0 text-sm font-medium">Primary Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
-                <a
-                    v-for="primaryColor of primaryColors"
-                    :key="primaryColor.name"
-                    @click="updateColors('primary', primaryColor.palette)"
-                    class="w-3.5 h-3.5 rounded-full cursor-pointer"
-                    :style="{ backgroundColor: `rgb(${primaryColor.palette[5]})` }"
-                ></a>
+                <a v-for="primaryColor of primaryColors" :key="primaryColor.name" @click="updateColors('primary', primaryColor.palette)" class="w-4 h-4 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${primaryColor.palette[5]})` }"></a>
             </div>
         </div>
         <div class="flex-col justify-start items-start gap-2 inline-flex">
-            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Surface Colors</span>
+            <span class="text-black dark:text-surface-0 text-sm font-medium">Surface Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-3.5 h-3.5 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></a>
+                <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-4 h-4 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></a>
             </div>
         </div>
         <div class="flex-col justify-start items-start gap-2 flex">
-            <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Preset</span>
-            <div class="border border-surface-200 dark:border-surface-800 flex rounded-md text-xs font-medium">
+            <span class="text-black dark:text-surface-0 text-sm font-medium m-0">Ripple</span>
+            <InputSwitch :modelValue="$primevue.config.ripple" @update:model-value="setRipple($event)" />
+        </div>
+        <div class="flex-col justify-start items-start gap-2 flex">
+            <span class="text-black dark:text-surface-0 text-sm font-medium">Preset</span>
+            <div class="border border-surface-200 dark:border-surface-800 flex rounded-md text-sm font-medium">
                 <button
                     type="button"
-                    class="transition duration-200 rounded-l-md px-2 py-1"
+                    class="transition duration-200 rounded-l-md px-3 py-2"
                     :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isLara, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isLara }"
                     @click="setPreset('lara')"
                 >
@@ -31,7 +29,7 @@
                 </button>
                 <button
                     type="button"
-                    class="transition duration-200 rounded-r-md px-2 py-1"
+                    class="transition duration-200 rounded-r-md px-3 py-2"
                     :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isTailwindUI, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI }"
                     @click="setPreset('tailwindui')"
                 >
@@ -114,6 +112,9 @@ export default {
         },
         setPreset(preset) {
             this.$appState.preset = preset;
+        },
+        setRipple(value) {
+            this.$primevue.config.ripple = value;
         }
     },
     computed: {
