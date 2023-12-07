@@ -43,7 +43,7 @@
                     ]
                 },
                 {
-                    "name": "Buttons",
+                    "name": "Button",
                     "children": [
                         {
                             "name": "Button",
