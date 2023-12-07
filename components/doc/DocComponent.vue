@@ -19,13 +19,25 @@
                 <div class="doc-main">
                     <div class="doc-intro">
                         <h1>{{ header }}</h1>
-                        <p class="mb-4">
+                        <p>
                             <span>{{ description }}</span>
-                            <a href="https://primevue.org/{{ apiLink }}" class="mx-1 text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 transition duration-300 ease-in-out">API Doc<i class="ml-1 pi pi-external-link text-sm"></i></a>
-                            <span>and</span>
-                            <a href="https://primevue.org/{{ ptLink }}" class="mx-1 text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-300 transition duration-300 ease-in-out">PassThrough Doc<i class="ml-1 pi pi-external-link text-sm"></i></a>
-                            <span>for more details.</span>
                         </p>
+                        <div class="pt-3 flex gap-2">
+                            <a
+                                :href="`https://primevue.org/${apiLink}`"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex rounded-full px-3 py-1 bg-surface-200 hover:bg-surface-300 transition-all duration-200 gap-2 items-center text-sm dark:bg-surface-800 dark:hover:bg-surface-700"
+                                ><span class="text-surface-900 dark:text-surface-50">API Doc</span><i class="pi pi-external-link text-xs text-surface-900 dark:text-surface-50"></i
+                            ></a>
+                            <a
+                                :href="`https://primevue.org/${ptLink}`"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex rounded-full px-3 py-1 bg-surface-200 hover:bg-surface-300 transition-all duration-200 gap-2 items-center text-sm text-surface-900 dark:bg-surface-800 dark:hover:bg-surface-700"
+                                ><span class="text-surface-900 dark:text-surface-50">PassThrough Doc</span><i class="pi pi-external-link text-xs text-surface-900 dark:text-surface-50"></i
+                            ></a>
+                        </div>
                     </div>
                     <DocSections :docs="componentDocs" />
                 </div>

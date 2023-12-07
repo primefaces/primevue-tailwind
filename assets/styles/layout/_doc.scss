@@ -84,6 +84,7 @@
             color: var(--primary-color-default);
             text-decoration: none;
             font-weight: 500;
+            @include focus-visible();
 
             &:hover {
                 text-decoration: underline;

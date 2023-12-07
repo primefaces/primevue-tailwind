@@ -7,25 +7,25 @@
 
         <section class="py-6 flex flex-wrap gap-16">
             <div>
-                <h2 class="border-b pb-4 border-surface-200 dark:border-surface-800">Base</h2>
+                <h2 class="border-b pb-4 border-surface-200 dark:border-surface-700">Base</h2>
                 <SelectButton v-model="preset" :options="presets" optionLabel="name" optionValue="value" :allowEmpty="false" />
             </div>
             <div class="flex-auto">
-                <div class="flex items-center justify-between gap-2 mb-4 border-b pb-4 border-surface-200 dark:border-surface-800">
+                <div class="flex items-center justify-between gap-2 mb-4 border-b pb-4 border-surface-200 dark:border-surface-700">
                     <h2 class="!mb-0">Components</h2>
                     <div class="flex items-center gap-2">
                         <Checkbox inputId="toggleAll" :modelValue="isAllSelected()" @update:model-value="toggleAll($event)" binary />
                         <label for="toggleAll">Select All</label>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-between gap-8">
-                    <div v-for="(group, i) of groups" :key="i">
-                        <div v-for="category of group" :key="category">
-                            <div class="flex items-center gap-2 mb-4">
+                <div class="flex flex-wrap justify-between gap-4">
+                    <div v-for="(group, i) of groups" :key="i" class="flex-auto">
+                        <div v-for="category of group" :key="category" class="border !p-4 mb-12 card">
+                            <div class="flex items-center gap-2 mb-4 border-b pb-2 border-surface-200 dark:border-surface-700">
                                 <Checkbox :modelValue="isCategoryAllSelected(category)" @update:model-value="toggleCategory($event, category)" binary :disabled="!hasEnabledComponents(category)" />
-                                <span class="font-semibold text-lg">{{ builderData[category].name }}</span>
+                                <div class="font-semibold uppercase tracking-widest text-sm">{{ builderData[category].name }}</div>
                             </div>
-                            <ul class="flex flex-col gap-4 mb-12">
+                            <ul class="flex flex-col gap-4">
                                 <li v-for="component of builderData[category].components" :key="component.name" class="flex items-center gap-2">
                                     <Checkbox v-model="selectedComponents" :inputId="component.path" name="component" :value="component.path" :disabled="component.disabled" />
                                     <label :for="component.path" :class="{ 'opacity-50': component.disabled }">{{ component.name }}</label>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="border-b pb-4 border-surface-200 dark:border-surface-800">Download</h2>
+                <h2 class="border-b pb-4 border-surface-200 dark:border-surface-700">Download</h2>
                 <div class="flex w-full">
                     <InputText v-model="filename" class="!rounded-r-none" placeholder="Preset name" />
                     <Button icon="pi pi-download" class="!rounded-l-none" @click="generate" />
