@@ -42,7 +42,7 @@ export default {
             'focus:outline-none focus:outline-offset-0',
             {
                 'hover:border-primary-500 dark:hover:border-primary-400': !props.disabled,
-                'focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !props.disabled,
+                'ring ring-primary-400/50 dark:ring-primary-300/50': !props.disabled && context.focused,
                 'cursor-default opacity-60': props.disabled
             },
 
