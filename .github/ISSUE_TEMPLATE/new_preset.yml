@@ -1,0 +1,11 @@
+name: New preset
+description: Submit your preset to the Gallery.
+title: 'Preset Name'
+labels: 'Status: Needs Triage'
+body:
+    - type: input
+      id: repo-url
+      attributes:
+          label: Repository URL
+      validations:
+          required: true
