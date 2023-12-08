@@ -2,22 +2,14 @@
     <DocSectionText v-bind="$attrs">
         <p>An additional button is displayed next to the input field when <i>showIcon</i> is present. Also adding <i>iconDisplay</i> as <i>input</i> an icon will be displayed.</p>
     </DocSectionText>
-    <div class="card flex flex-wrap gap-3 p-fluid">
-        <div class="flex-auto">
+    <div class="card flex flex-wrap gap-5 p-fluid justify-center">
+        <div>
             <label for="buttondisplay" class="font-bold block mb-2"> Button Display </label>
             <Calendar v-model="buttondisplay" showIcon inputId="buttondisplay" />
         </div>
-        <div class="flex-auto">
+        <div>
             <label for="icondisplay" class="font-bold block mb-2"> Icon Display </label>
             <Calendar v-model="icondisplay" showIcon iconDisplay="input" inputId="icondisplay" />
-        </div>
-        <div class="flex-auto">
-            <label for="templatedisplay" class="font-bold block mb-2"> Icon Template </label>
-            <Calendar v-model="templatedisplay" showIcon iconDisplay="input" timeOnly inputId="templatedisplay">
-                <template #inputicon="{ clickCallback }">
-                    <i class="pi pi-clock" @click="clickCallback" />
-                </template>
-            </Calendar>
         </div>
     </div>
     <DocSectionCode :code="code" />
@@ -29,35 +21,21 @@ export default {
         return {
             buttondisplay: null,
             icondisplay: null,
-            templatedisplay: null,
             code: {
                 basic: `
 <Calendar v-model="buttondisplay" showIcon />
 <Calendar v-model="icondisplay" showIcon iconDisplay="input" />
-<Calendar v-model="templatedisplay" showIcon iconDisplay="input" timeOnly>
-    <template #inputicon="{ clickCallback }">
-        <i class="pi pi-clock" @click="clickCallback" />
-    </template>
-</Calendar>
 `,
                 options: `
 <template>
-    <div class="card flex flex-wrap gap-3 p-fluid">
-        <div class="flex-auto">
+    <div class="card flex flex-wrap gap-5 p-fluid">
+        <div>
             <label for="buttondisplay" class="font-bold block mb-2"> Button Display </label>
             <Calendar v-model="buttondisplay" showIcon inputId="buttondisplay" />
         </div>
-        <div class="flex-auto">
+        <div>
             <label for="icondisplay" class="font-bold block mb-2"> Icon Display </label>
             <Calendar v-model="icondisplay" showIcon iconDisplay="input" inputId="icondisplay" />
-        </div>
-        <div class="flex-auto">
-            <label for="templatedisplay" class="font-bold block mb-2"> Icon Template </label>
-            <Calendar v-model="templatedisplay" showIcon iconDisplay="input" timeOnly inputId="templatedisplay">
-                <template #inputicon="{ clickCallback }">
-                    <i class="pi pi-clock" @click="clickCallback" />
-                </template>
-            </Calendar>
         </div>
     </div>
 </template>
@@ -68,7 +46,6 @@ export default {
         return {
             buttondisplay: null,
             icondisplay: null,
-            templatedisplay: null,
         };
     }
 };
@@ -76,22 +53,14 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex flex-wrap gap-3 p-fluid">
-        <div class="flex-auto">
+    <div class="card flex flex-wrap gap-5 p-fluid">
+        <div>
             <label for="buttondisplay" class="font-bold block mb-2"> Button Display </label>
             <Calendar v-model="buttondisplay" showIcon inputId="buttondisplay" />
         </div>
-        <div class="flex-auto">
+        <div>
             <label for="icondisplay" class="font-bold block mb-2"> Icon Display </label>
             <Calendar v-model="icondisplay" showIcon iconDisplay="input" inputId="icondisplay" />
-        </div>
-        <div class="flex-auto">
-            <label for="templatedisplay" class="font-bold block mb-2"> Icon Template </label>
-            <Calendar v-model="templatedisplay" showIcon iconDisplay="input" timeOnly inputId="templatedisplay">
-                <template #inputicon="{ clickCallback }">
-                    <i class="pi pi-clock" @click="clickCallback" />
-                </template>
-            </Calendar>
         </div>
     </div>
 </template>
@@ -101,7 +70,6 @@ import { ref } from "vue";
 
 const buttondisplay = ref();
 const icondisplay = ref();
-const templatedisplay = ref();
 <\/script>
 `
             }

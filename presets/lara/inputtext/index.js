@@ -26,7 +26,7 @@ export default {
             },
 
             // Misc
-            'rounded-lg',
+            'rounded-md',
             'appearance-none',
             'transition-colors duration-200'
         ]
