@@ -12,6 +12,11 @@ export default defineNuxtConfig({
             pathPrefix: false
         }
     ],
+    vite: {
+        optimizeDeps: {
+            disabled: true
+        }
+    },
     runtimeConfig: {
         GITHUB_TOKEN: ''
     },
