@@ -14,7 +14,7 @@ export default {
                 'px-3 py-2': props.size === 'large'
             },
             {
-                'h-8 w-8p-0': props.label == null
+                'h-8 w-8 p-0': props.label == null
             },
 
             // Shapes
@@ -184,7 +184,6 @@ export default {
         class: [
             'duration-200',
             'font-semibold',
-            'flex-1',
             {
                 'hover:underline': props.link
             },
