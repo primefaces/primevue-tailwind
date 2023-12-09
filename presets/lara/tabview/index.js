@@ -34,8 +34,7 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'text-primary-500 dark:text-primary-400',
-            'shadow-md',
-            'dark:border-surface-700'
+            'shadow-md'
         ]
     },
     nextButton: {
@@ -55,8 +54,7 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'text-primary-500 dark:text-primary-400',
-            'shadow-md',
-            'dark:border-surface-700'
+            'shadow-md'
         ]
     },
     nav: {

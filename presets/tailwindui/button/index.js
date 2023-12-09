@@ -4,12 +4,12 @@ export default {
             'relative',
 
             // Alignments
-            'items-center inline-flex text-center align-bottom',
+            'items-center justify-center inline-flex text-center align-bottom',
 
             // Sizes & Spacing
             'text-sm',
             {
-                'px-2.5 py-1.5': props.size === null,
+                'px-2.5 py-1.5 min-w-[2rem]': props.size === null,
                 'px-2 py-1': props.size === 'small',
                 'px-3 py-2': props.size === 'large'
             },
