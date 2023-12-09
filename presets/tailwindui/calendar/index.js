@@ -20,10 +20,11 @@ export default {
             'text-surface-900 dark:text-surface-0',
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
+            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
 
             // Spacing
             'm-0 py-1.5 px-3',
+            '-ml-[1px]',
 
             // Shape
             'appearance-none',
@@ -59,7 +60,7 @@ export default {
                 // Colors
                 'text-surface-600 dark:text-surface-100',
                 'bg-surface-100 dark:bg-surface-800',
-                'ring-1 ring-inset ring-surface-200 dark:ring-surface-700',
+                'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
                 // States
                 'hover:bg-surface-200 dark:hover:bg-surface-700',
