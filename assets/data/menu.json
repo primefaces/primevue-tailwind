@@ -17,6 +17,10 @@
                             "to": "/autocomplete"
                         },
                         {
+                            "name": "Chips",
+                            "to": "/chips"
+                        },
+                        {
                             "name": "Dropdown",
                             "to": "/dropdown"
                         },
@@ -115,6 +119,10 @@
                         {
                             "name": "Badge",
                             "to": "/badge"
+                        },
+                        {
+                            "name": "Chip",
+                            "to": "/chip"
                         }
                     ]
                 }

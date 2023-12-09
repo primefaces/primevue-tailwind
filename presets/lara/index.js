@@ -8,6 +8,8 @@ import button from './button';
 import calendar from './calendar';
 import card from './card';
 import checkbox from './checkbox';
+import chip from './chip';
+import chips from './chips';
 import dialog from './dialog';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
@@ -42,6 +44,7 @@ export default {
     checkbox,
     inputswitch,
     slider,
+    chips,
 
     //buttons
     button,
@@ -63,5 +66,6 @@ export default {
     badge,
     avatar,
     avatargroup,
-    tag
+    tag,
+    chip
 };
