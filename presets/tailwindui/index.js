@@ -1,4 +1,5 @@
 import accordion from './accordion';
+import autocomplete from './autocomplete';
 import avatar from './avatar';
 import avatargroup from './avatargroup';
 import badge from './badge';
@@ -33,6 +34,7 @@ export default {
     },
 
     //forms
+    autocomplete,
     dropdown,
     inputnumber,
     inputtext,
