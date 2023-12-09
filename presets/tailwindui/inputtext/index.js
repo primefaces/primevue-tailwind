@@ -25,7 +25,7 @@ export default {
 
             // Interactions
             {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
+                'outline-none focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
                 'opacity-60 select-none pointer-events-none cursor-default': context.disabled
             }
         ]

@@ -41,7 +41,7 @@ export default {
             // States
             'focus:outline-none focus:outline-offset-0',
             {
-                'focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400': !props.disabled,
+                'ring-2 ring-primary-500 dark:ring-primary-400': !props.disabled && context.focused,
                 'cursor-default opacity-60': props.disabled
             },
 

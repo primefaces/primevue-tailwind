@@ -36,8 +36,7 @@ export default {
             'transition-none',
 
             // States
-            { 'hover:bg-surface-100 hover:border-surface-200 hover:text-surface-900 dark:hover:text-surface-0/80 dark:hover:bg-surface-800/80': props.toggleable },
-            { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': props.toggleable }
+            { 'hover:bg-surface-100 hover:border-surface-200 hover:text-surface-900 dark:hover:text-surface-0/80 dark:hover:bg-surface-800/80': props.toggleable }
         ]
     }),
     toggler: ({ props }) => ({
@@ -57,7 +56,7 @@ export default {
 
             // States
             { 'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable },
-            { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset focus:ring-primary-400/50 dark:focus:ring-primary-300/50': props.toggleable },
+            { 'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50': props.toggleable },
 
             // Misc
             {
