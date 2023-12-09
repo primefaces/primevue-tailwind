@@ -184,6 +184,7 @@ export default {
         class: [
             'duration-200',
             'font-semibold',
+            'flex-1',
             {
                 'hover:underline': props.link
             },

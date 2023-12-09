@@ -182,6 +182,7 @@ export default {
         class: [
             'duration-200',
             'font-bold',
+            'flex-1',
             {
                 'hover:underline': props.link
             },

@@ -1,54 +1,199 @@
 export default {
     root: ({ state }) => ({
         class: [
-            'rounded-lg shadow-lg border-0',
-            'max-h-90 transform scale-100',
-            'm-0 w-[50vw]',
-            'dark:border dark:border-surface-700',
+            // Shape
+            'rounded-lg',
+            'shadow-lg',
+            'border-0',
+
+            // Size
+            'max-h-90',
+            'w-[50vw]',
+            'm-0',
+
+            // Color
+            'dark:border',
+            'dark:border-surface-700',
+
+            // Transitions
+            'transform',
+            'scale-100',
+
+            // Maximized State
             {
-                'transition-none transform-none !w-screen !h-screen !max-h-full !top-0 !left-0': state.maximized
+                'transition-none': state.maximized,
+                'transform-none': state.maximized,
+                '!w-screen': state.maximized,
+                '!h-screen': state.maximized,
+                '!max-h-full': state.maximized,
+                '!top-0': state.maximized,
+                '!left-0': state.maximized
             }
         ]
     }),
     header: {
-        class: ['flex items-center justify-between shrink-0', 'bg-surface-0 text-surface-700 border-t-0 rounded-tl-lg rounded-tr-lg p-6', 'dark:bg-surface-900 dark:text-surface-0/80']
+        class: [
+            // Flexbox and Alignment
+            'flex items-center justify-between',
+            'shrink-0',
+
+            // Spacing
+            'p-6',
+
+            // Shape
+            'border-t-0',
+            'rounded-tl-lg',
+            'rounded-tr-lg',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-surface-0/80'
+        ]
     },
-    headerTitle: {
-        class: 'font-bold text-lg'
+    title: {
+        class: ['font-bold text-lg']
     },
-    headerIcons: {
-        class: 'flex items-center'
+    icons: {
+        class: ['flex items-center']
     },
     closeButton: {
         class: [
-            'flex items-center justify-center overflow-hidden relative',
-            'w-8 h-8 text-surface-500 border-0 bg-transparent rounded-full transition duration-200 ease-in-out mr-2 last:mr-0',
-            'hover:text-surface-700 hover:border-transparent hover:bg-surface-100',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50 ring-inset', // focus
-            'dark:hover:text-white/80 dark:hover:border-transparent dark:hover:bg-surface-800/80'
+            'relative',
+
+            // Flexbox and Alignment
+            'flex items-center justify-center',
+
+            // Size and Spacing
+            'mr-2',
+            'last:mr-0',
+            'w-8 h-8',
+
+            // Shape
+            'border-0',
+            'rounded-full',
+
+            // Colors
+            'text-surface-500',
+            'bg-transparent',
+
+            // Transitions
+            'transition duration-200 ease-in-out',
+
+            // States
+            'hover:text-surface-700 dark:hover:text-white/80',
+            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
+            // Misc
+            'overflow-hidden'
+        ]
+    },
+    maximizablebutton: {
+        class: [
+            'relative',
+
+            // Flexbox and Alignment
+            'flex items-center justify-center',
+
+            // Size and Spacing
+            'mr-2',
+            'last:mr-0',
+            'w-8 h-8',
+
+            // Shape
+            'border-0',
+            'rounded-full',
+
+            // Colors
+            'text-surface-500',
+            'bg-transparent',
+
+            // Transitions
+            'transition duration-200 ease-in-out',
+
+            // States
+            'hover:text-surface-700 dark:hover:text-white/80',
+            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
+            // Misc
+            'overflow-hidden'
         ]
     },
     closeButtonIcon: {
-        class: 'w-4 h-4 inline-block'
+        class: [
+            // Display
+            'inline-block',
+
+            // Size
+            'w-4',
+            'h-4'
+        ]
+    },
+    maximizableicon: {
+        class: [
+            // Display
+            'inline-block',
+
+            // Size
+            'w-4',
+            'h-4'
+        ]
     },
     content: ({ state, instance }) => ({
         class: [
-            'overflow-y-auto',
-            'bg-surface-0 text-surface-700 px-6 pb-8 pt-0',
-            'dark:bg-surface-900 dark:text-surface-0/80',
+            // Spacing
+            'px-6',
+            'pb-8',
+            'pt-0',
+
+            // Shape
             {
-                grow: state.maximized
+                grow: state.maximized,
+                'rounded-bl-lg': !instance.$slots.footer,
+                'rounded-br-lg': !instance.$slots.footer
             },
-            {
-                'rounded-bl-lg rounded-br-lg': !instance.$slots.footer
-            }
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-surface-0/80',
+
+            // Misc
+            'overflow-y-auto'
         ]
     }),
     footer: {
-        class: ['shrink-0 ', 'border-t-0 bg-surface-0 text-surface-700 px-6 pb-6 text-right rounded-b-lg', 'dark:bg-surface-900 dark:text-surface-0/80']
+        class: [
+            // Flexbox and Alignment
+            'flex items-center justify-end',
+            'shrink-0',
+            'text-right',
+            'gap-2',
+
+            // Spacing
+            'px-6',
+            'pb-6',
+
+            // Shape
+            'border-t-0',
+            'rounded-b-lg',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-surface-0/80'
+        ]
     },
     mask: ({ props }) => ({
-        class: ['transition duration-200', { 'bg-black/40 backdrop-blur-sm': props.modal }]
+        class: [
+            // Transitions
+            'transition',
+            'duration-200',
+
+            // Background and Effects
+            { 'bg-black/40': props.modal, 'backdrop-blur-sm': props.modal }
+        ]
     }),
     transition: ({ props }) => {
         return props.position === 'top'
