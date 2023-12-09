@@ -90,6 +90,10 @@
                         {
                             "name": "Overlaypanel",
                             "to": "/overlaypanel"
+                        },
+                        {
+                            "name": "Sidebar",
+                            "to": "/sidebar"
                         }
                     ]
                 },

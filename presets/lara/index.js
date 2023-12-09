@@ -18,6 +18,7 @@ import overlaypanel from './overlaypanel';
 import panel from './panel';
 import ripple from './ripple';
 import selectbutton from './selectbutton';
+import sidebar from './sidebar';
 import slider from './slider';
 import tabview from './tabview';
 import tag from './tag';
@@ -54,6 +55,7 @@ export default {
     //overlays
     dialog,
     overlaypanel,
+    sidebar,
 
     //misc
     badge,
