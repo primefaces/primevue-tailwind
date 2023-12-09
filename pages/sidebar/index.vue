@@ -15,6 +15,7 @@ import PresetDoc from '@/doc/panel/preset/index.vue';
 import AccessibilityDoc from '@/doc/sidebar/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/sidebar/BasicDoc.vue';
 import FullScreenDoc from '@/doc/sidebar/FullScreenDoc.vue';
+import HeadlessDoc from '@/doc/sidebar/HeadlessDoc.vue';
 import ImportDoc from '@/doc/sidebar/ImportDoc.vue';
 import PositionDoc from '@/doc/sidebar/PositionDoc.vue';
 import SizeDoc from '@/doc/sidebar/SizeDoc.vue';
@@ -52,6 +53,11 @@ export default {
                     id: 'template',
                     label: 'Template',
                     component: TemplateDoc
+                },
+                {
+                    id: 'headless',
+                    label: 'Headless',
+                    component: HeadlessDoc
                 },
                 {
                     id: 'accessibility',

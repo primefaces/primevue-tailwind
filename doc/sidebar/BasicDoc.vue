@@ -3,8 +3,7 @@
         <p>Sidebar is used as a container and visibility is controlled with a binding to <i>visible</i>.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Sidebar v-model:visible="visible">
-            <h2>Sidebar</h2>
+        <Sidebar v-model:visible="visible" header="Sidebar">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </Sidebar>
         <Button icon="pi pi-arrow-right" @click="visible = true" />
@@ -20,17 +19,16 @@ export default {
             code: {
                 basic: `
 <div class="card flex justify-center">
-    <Sidebar v-model:visible="visible">
-        <h2>Sidebar</h2>
+    <Sidebar v-model:visible="visible" header="Sidebar">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </Sidebar>
     <Button icon="pi pi-arrow-right" @click="visible = true" />
-</div>`,
+</div>
+`,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Sidebar v-model:visible="visible">
-            <h2>Sidebar</h2>
+        <Sidebar v-model:visible="visible" header="Sidebar">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </Sidebar>
         <Button icon="pi pi-arrow-right" @click="visible = true" />
@@ -45,12 +43,12 @@ export default {
         }
     }
 }
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Sidebar v-model:visible="visible">
-            <h2>Sidebar</h2>
+        <Sidebar v-model:visible="visible" header="Sidebar">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </Sidebar>
         <Button icon="pi pi-arrow-right" @click="visible = true" />
@@ -61,7 +59,8 @@ export default {
 import { ref } from "vue";
 
 const visible = ref(false);
-<\/script>`
+<\/script>
+`
             }
         };
     }

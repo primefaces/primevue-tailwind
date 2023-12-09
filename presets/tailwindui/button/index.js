@@ -9,12 +9,12 @@ export default {
             // Sizes & Spacing
             'text-sm',
             {
-                'px-2.5 py-1.5 min-w-[2rem]': props.size === null,
+                'px-2.5 py-1.5 min-w-[2rem]': props.size === null && props.label !== null,
                 'px-2 py-1': props.size === 'small',
                 'px-3 py-2': props.size === 'large'
             },
             {
-                'h-8 w-8': props.label == null && props.icon !== null
+                'h-8 w-8p-0': props.label == null
             },
 
             // Shapes
@@ -188,7 +188,7 @@ export default {
             {
                 'hover:underline': props.link
             },
-            { 'invisible w-0 flex-0': props.label == null }
+            { 'flex-1': props.label !== null, 'invisible w-0': props.label == null }
         ]
     }),
     icon: ({ props }) => ({

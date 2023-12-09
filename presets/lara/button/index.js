@@ -4,16 +4,16 @@ export default {
             'relative',
 
             // Alignments
-            'items-center inline-flex text-center align-bottom',
+            'items-center inline-flex text-center align-bottom justify-center',
 
             // Sizes & Spacing
             {
-                'px-4 py-3 leading-none': props.size === null,
+                'px-4 py-3 leading-none': props.size === null && props.label !== null,
                 'text-xs py-2 px-3': props.size === 'small',
                 'text-xl py-3 px-4': props.size === 'large'
             },
             {
-                'h-12 w-12': props.label == null && props.icon !== null
+                'h-12 w-12 p-0': props.label == null
             },
 
             // Shapes
@@ -182,11 +182,10 @@ export default {
         class: [
             'duration-200',
             'font-bold',
-            'flex-1',
             {
                 'hover:underline': props.link
             },
-            { 'invisible w-0': props.label == null }
+            { 'flex-1': props.label !== null, 'invisible w-0': props.label == null }
         ]
     }),
     icon: ({ props }) => ({
