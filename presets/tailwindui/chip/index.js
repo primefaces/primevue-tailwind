@@ -5,7 +5,7 @@ export default {
             'inline-flex items-center',
 
             // Spacing
-            'px-2 py-1',
+            'px-2 py-0.5',
 
             // Shape
             'rounded-[1.14rem]',
