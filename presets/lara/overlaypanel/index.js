@@ -6,7 +6,7 @@ export default {
             'border-0 dark:border',
 
             // Position
-            'absolute left-0 top-0',
+            'absolute left-0 top-0 mt-2',
             'z-40 transform origin-center',
 
             // Color

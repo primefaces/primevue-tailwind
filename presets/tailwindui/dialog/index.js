@@ -15,6 +15,10 @@ export default {
             'transform',
             'scale-100',
 
+            // Color
+            'dark:border',
+            'dark:border-surface-700',
+
             // Maximized State
             {
                 'transition-none': state.maximized,
