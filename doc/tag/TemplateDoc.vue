@@ -5,7 +5,7 @@
     <div class="card flex justify-center">
         <Tag class="bg-gradient-to-r from-primary-600 to-primary-400">
             <div class="flex items-center gap-2">
-                <img alt="Country" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 18px" />
+                <img alt="Country" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 20px; height: 13.4px" />
                 <span class="text-base">Italy</span>
                 <i class="pi pi-times text-xs"></i>
             </div>
@@ -22,7 +22,7 @@ export default {
                 basic: `
 <Tag class="bg-gradient-to-r from-primary-600 to-primary-400">
     <div class="flex items-center gap-2">
-        <img alt="Country" src="/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 18px" />
+        <img alt="Country" src="/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 20px; height: 13.4px" />
         <span class="text-base">Italia</span>
         <i class="pi pi-times text-xs"></i>
     </div>
@@ -33,7 +33,7 @@ export default {
     <div class="card flex justify-center">
         <Tag class="bg-gradient-to-r from-primary-600 to-primary-400">
             <div class="flex items-center gap-2">
-                <img alt="Country" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 18px" />
+                <img alt="Country" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 20px; height: 13.4px" />
                 <span class="text-base">Italia</span>
                 <i class="pi pi-times text-xs"></i>
             </div>
@@ -49,7 +49,7 @@ export default {
     <div class="card flex justify-center">
         <Tag class="bg-gradient-to-r from-primary-600 to-primary-400">
             <div class="flex items-center gap-2">
-                <img alt="Country" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 18px" />
+                <img alt="Country" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" class="flag flag-it" style="width: 20px; height: 13.4px" />
                 <span class="text-base">Italia</span>
                 <i class="pi pi-times text-xs"></i>
             </div>

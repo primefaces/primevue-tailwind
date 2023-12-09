@@ -15,7 +15,7 @@ export default {
             }
         ]
     }),
-    container: {
+    container: ({ props, state }) => ({
         class: [
             // Font
             'font-sans text-base leading-none',
@@ -26,10 +26,11 @@ export default {
 
             // Spacing
             'm-0 list-none',
-            'px-3 py-2',
+            'px-3 py-1.5',
 
             // Size
             'w-full',
+            'min-h-[2.877rem]',
 
             // Shape
             'appearance-none rounded-md',
@@ -37,29 +38,30 @@ export default {
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-200 dark:border-surface-700',
+            'border border-surface-300 dark:border-surface-700',
 
             // States
             'hover:border-primary-500 dark:hover:border-primary-400',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
-
+            'focus:outline-none focus:outline-offset-0',
+            { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
+            { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.hovered },
             // Transition
             'transition duration-200 ease-in-out',
 
             // Misc
             'cursor-text overflow-hidden'
         ]
-    },
+    }),
     inputtoken: {
-        class: ['py-0.375rem px-0', 'flex-1 inline-flex']
+        class: ['py-1.5 px-0', 'inline-flex flex-auto']
     },
     input: ({ props }) => ({
         class: [
             // Font
-            'font-sans text-base',
+            'font-sans text-base leading-none',
 
             // Shape
-            'appearance-none rounded-lg',
+            'appearance-none rounded-md',
             { 'rounded-tr-none rounded-br-none': props.dropdown },
             { 'outline-none shadow-none rounded-none': props.multiple },
 
@@ -68,13 +70,13 @@ export default {
 
             // Spacing
             'm-0',
-            { 'p-3': !props.multiple, 'p-0 ': props.multiple },
+            { 'p-3': !props.multiple, 'p-0': props.multiple },
 
             // Colors
             {
                 'text-surface-700 dark:text-white/80': !props.multiple,
                 'bg-surface-0 dark:bg-surface-900': !props.multiple,
-                'border border-surface-200 dark:border-surface-700': !props.multiple,
+                'border border-surface-300 dark:border-surface-700': !props.multiple,
                 'text-surface-700 dark:text-white/80': props.multiple,
                 'border-0 bg-transparent': props.multiple
             },
@@ -92,52 +94,96 @@ export default {
             'inline-flex items-center',
 
             // Spacings
-            'py-1 px-2',
-            'mr-2 ',
+            'py-1.5 px-3',
 
             // Shape
-            'rounded-full',
+            'rounded-[1.14rem]',
 
             // Colors
-            'bg-surface-300 dark:bg-surface-700',
-            'text-surface-700 dark:text-white/80',
+            'bg-surface-200 dark:bg-surface-700',
+            'text-surface-700 dark:text-white/70',
 
             // Misc
             'cursor-default'
         ]
     },
+    label: {
+        class: 'leading-5'
+    },
+    removeTokenIcon: {
+        class: [
+            // Shape
+            'rounded-md leading-6',
+
+            // Spacing
+            'ml-2',
+
+            // Size
+            'w-4 h-4',
+
+            // Transition
+            'transition duration-200 ease-in-out',
+
+            // Misc
+            'cursor-pointer'
+        ]
+    },
     dropdownbutton: {
         root: {
-            class: 'rounded-tl-none rounded-bl-none'
+            class: [
+                'relative',
+
+                // Alignments
+                'items-center inline-flex text-center align-bottom',
+
+                // Shape
+                'rounded-r-md',
+
+                // Size
+                'px-4 py-3 leading-none',
+
+                // Colors
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
+
+                // States
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+            ]
         }
+    },
+    loadingicon: {
+        class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[0.5rem] -mt-2']
     },
     panel: {
         class: [
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
+            'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-white/80',
 
             // Shape
             'border-0',
             'rounded-md',
-            'shadow-lg',
+            'shadow-md',
 
             // Size
             'max-h-[200px] overflow-auto'
         ]
     },
     list: {
-        class: 'py-3 list-none m-0'
+        class: 'py-3 px-0 list-none m-0'
     },
     item: ({ context }) => ({
         class: [
             'relative',
 
             // Font
-            'font-normal',
+            'font-normal text-base leading-none',
 
             // Spacing
-            'm-0 p-3',
+            'm-0 px-5 py-3',
 
             // Shape
             'border-0 rounded-none',
@@ -177,7 +223,7 @@ export default {
             'm-0 p-3',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
+            'bg-surface-0 dark:bg-surface-700',
             'text-surface-800 dark:text-white/80',
 
             // Misc
