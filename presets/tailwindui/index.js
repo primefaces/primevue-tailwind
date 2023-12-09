@@ -17,6 +17,7 @@ import panel from './panel';
 import ripple from './ripple';
 import selectbutton from './selectbutton';
 import slider from './slider';
+import tabview from './tabview';
 import tag from './tag';
 import tooltip from './tooltip';
 
@@ -46,6 +47,7 @@ export default {
     panel,
     fieldset,
     card,
+    tabview,
 
     //misc
     badge,

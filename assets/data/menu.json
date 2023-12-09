@@ -73,6 +73,10 @@
                         {
                             "name": "Fieldset",
                             "to": "/fieldset"
+                        },
+                        {
+                            "name": "Tabview",
+                            "to": "/tabview"
                         }
                     ]
                 },
