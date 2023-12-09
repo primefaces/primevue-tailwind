@@ -59,7 +59,6 @@ export default {
 css: \`
     *[data-pd-ripple="true"]{
         overflow: hidden;
-        position: relative;
     }
     span[data-p-ink-active="true"]{
         animation: ripple 0.4s linear;

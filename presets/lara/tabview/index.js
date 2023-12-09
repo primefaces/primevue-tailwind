@@ -1,47 +1,158 @@
 export default {
     navContainer: ({ props }) => ({
-        class: ['relative', { 'overflow-hidden': props.scrollable }]
+        class: [
+            // Position
+            'relative',
+
+            // Misc
+            { 'overflow-hidden': props.scrollable }
+        ]
     }),
     navContent: {
-        class: 'overflow-y-hidden overscroll-contain overscroll-auto scroll-smooth [&::-webkit-scrollbar]:hidden' //
+        class: [
+            // Overflow and Scrolling
+            'overflow-y-hidden overscroll-contain',
+            'overscroll-auto',
+            'scroll-smooth',
+            '[&::-webkit-scrollbar]:hidden'
+        ]
     },
     previousButton: {
-        class: ['h-full flex items-center justify-center absolute top-0 z-20', 'left-0', 'bg-surface-0 text-primary-500 w-12 shadow-md rounded-none', 'dark:bg-surface-900 dark:border-surface-700 dark:text-primary-400 ]']
+        class: [
+            // Flexbox and Alignment
+            'flex items-center justify-center',
+
+            // Position
+            '!absolute',
+            'top-0 left-0',
+            'z-20',
+
+            // Size and Shape
+            'h-full w-12',
+            'rounded-none',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-primary-500 dark:text-primary-400',
+            'shadow-md',
+            'dark:border-surface-700'
+        ]
     },
     nextButton: {
-        class: ['h-full flex items-center justify-center absolute top-0 z-20', 'right-0', 'bg-surface-0 text-primary-500 w-12 shadow-md rounded-none', 'dark:bg-surface-900 dark:border-surface-700 dark:text-primary-400 ]']
+        class: [
+            // Flexbox and Alignment
+            'flex items-center justify-center',
+
+            // Position
+            '!absolute',
+            'top-0 right-0',
+            'z-20',
+
+            // Size and Shape
+            'h-full w-12',
+            'rounded-none',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-primary-500 dark:text-primary-400',
+            'shadow-md',
+            'dark:border-surface-700'
+        ]
     },
     nav: {
-        class: ['flex flex-1 list-none m-0 p-0', 'bg-surface-0 border border-surface-200 border-0 border-b-2', 'dark:bg-surface-900 dark:border-surface-700 dark:text-surface-0/80 ']
+        class: [
+            // Flexbox
+            'flex flex-1',
+
+            // Spacing
+            'list-none',
+            'p-0 m-0',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'border-b-2 border-surface-200 dark:border-surface-700',
+            'text-surface-900 dark:text-surface-0/80'
+        ]
     },
     tabpanel: {
         header: ({ props }) => ({
             class: [
+                // Spacing
                 'mr-0',
+
+                // Misc
                 {
-                    'cursor-default pointer-events-none select-none user-select-none opacity-60': props?.disabled
+                    'opacity-60 cursor-default user-select-none select-none pointer-events-none': props?.disabled
                 }
             ]
         }),
         headerAction: ({ parent, context }) => ({
             class: [
-                'items-center cursor-pointer flex overflow-hidden relative select-none text-decoration-none user-select-none',
-                'border-b-2 p-5 font-bold rounded-t-lg transition-shadow duration-200 m-0',
-                'transition-colors duration-200',
-                'focus:outline-none focus:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 ring-inset dark:focus-visible:ring-primary-300/50',
+                'relative',
+
+                // Font
+                'font-bold',
+
+                // Flexbox and Alignment
+                'flex items-center',
+
+                // Spacing
+                'p-5',
+                '-mb-[2px]',
+
+                // Shape
+                'border-b-2',
+                'rounded-t-md',
+
+                // Colors and Conditions
                 {
-                    'border-surface-200 bg-surface-0 text-surface-700 hover:bg-bg-surface-0 hover:border-surface-100 hover:text-surface-900 dark:bg-surface-900 dark:border-surface-700 dark:text-surface-0/80 dark:hover:bg-surface-800/80':
-                        parent.state.d_activeIndex !== context.index, // Condition-based hover styles.
-                    'bg-surface-0 border-primary-500 text-primary-500 dark:bg-surface-900 dark:border-primary-400 dark:text-primary-400': parent.state.d_activeIndex === context.index // Condition-based active styles.
-                }
-            ],
-            style: 'margin-bottom:-2px' // Negative margin style.
+                    'border-surface-200 dark:border-surface-700': parent.state.d_activeIndex !== context.index,
+                    'bg-surface-0 dark:bg-surface-800': parent.state.d_activeIndex !== context.index,
+                    'text-surface-700 dark:text-surface-0/80': parent.state.d_activeIndex !== context.index,
+
+                    'bg-surface-0 dark:bg-surface-800': parent.state.d_activeIndex === context.index,
+                    'border-primary-500 dark:border-primary-400': parent.state.d_activeIndex === context.index,
+                    'text-primary-500 dark:text-primary-400': parent.state.d_activeIndex === context.index
+                },
+
+                // States
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset',
+                'focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
+                {
+                    'hover:bg-surface-0 dark:hover:bg-surface-800/80': parent.state.d_activeIndex !== context.index,
+                    'hover:border-surface-400 dark:hover:border-primary-400': parent.state.d_activeIndex !== context.index,
+                    'hover:text-surface-900 dark:hover:text-surface-0': parent.state.d_activeIndex !== context.index
+                },
+
+                // Transitions
+                'transition-all duration-200',
+
+                // Misc
+                'cursor-pointer select-none text-decoration-none',
+                'overflow-hidden',
+                'user-select-none'
+            ]
         }),
         headerTitle: {
-            class: ['leading-none whitespace-nowrap'] // Leading and whitespace styles.
+            class: [
+                // Text
+                'leading-none',
+                'whitespace-nowrap'
+            ]
         },
         content: {
-            class: ['bg-surface-0 p-5 border-0 text-surface-700 rounded-bl-2xl rounded-br-2xl', 'dark:bg-surface-900 dark:border-surface-700 dark:text-surface-0/80'] // Background, padding, border, and text styles.
+            class: [
+                // Spacing
+                'p-5',
+
+                // Shape
+                'rounded-b-md',
+
+                // Colors
+                'bg-surface-0 dark:bg-surface-800',
+                'text-surface-700 dark:text-surface-0/80',
+                'border-0'
+            ]
         }
     }
 };
