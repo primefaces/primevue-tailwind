@@ -39,6 +39,10 @@
                         {
                             "name": "Slider",
                             "to": "/slider"
+                        },
+                        {
+                            "name": "Selectbutton",
+                            "to": "/selectbutton"
                         }
                     ]
                 },
