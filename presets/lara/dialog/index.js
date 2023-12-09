@@ -7,7 +7,7 @@ export default {
             'border-0',
 
             // Size
-            'max-h-90',
+            'max-h-[90vh]',
             'w-[50vw]',
             'm-0',
 
@@ -185,11 +185,12 @@ export default {
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
-    mask: ({ props }) => ({
+    mask: ({ props, state }) => ({
         class: [
             // Transitions
             'transition',
             'duration-200',
+            { 'p-5': !state.maximized },
 
             // Background and Effects
             { 'bg-black/40': props.modal, 'backdrop-blur-sm': props.modal }
