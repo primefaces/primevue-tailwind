@@ -25,9 +25,9 @@
             "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
         },
         {
-            "name": "Floating Label",
+            "name": "Material Input",
             "owner": "cagataycivici",
-            "repository": "floating-label-vue",
+            "repository": "material-input-vue",
             "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
         },
         {
