@@ -3,19 +3,37 @@
         {
             "name": "Pure Accordion",
             "owner": "cagataycivici",
-            "repository": "pure-accordion",
+            "repository": "pure-accordion-vue",
             "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
         },
         {
             "name": "Shadcn Dialog",
             "owner": "cagataycivici",
-            "repository": "shadcn-dialog",
+            "repository": "shadcn-dialog-vue",
             "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-shadcn-dialog.jpg"
         },
         {
             "name": "Material InputSwitch",
             "owner": "cagataycivici",
-            "repository": "material-toggle",
+            "repository": "material-toggle-vue",
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+        },
+        {
+            "name": "Material Snackbar",
+            "owner": "cagataycivici",
+            "repository": "material-snackbar-vue",
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+        },
+        {
+            "name": "Floating Label",
+            "owner": "cagataycivici",
+            "repository": "floating-label-vue",
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+        },
+        {
+            "name": "Glassmorphic Login",
+            "owner": "cagataycivici",
+            "repository": "glassmorphic-login-vue",
             "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
         }
     ]
