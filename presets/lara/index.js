@@ -14,6 +14,7 @@ import global from './global';
 import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
+import overlaypanel from './overlaypanel';
 import panel from './panel';
 import ripple from './ripple';
 import selectbutton from './selectbutton';
@@ -52,6 +53,7 @@ export default {
 
     //overlays
     dialog,
+    overlaypanel,
 
     //misc
     badge,

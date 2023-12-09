@@ -86,6 +86,10 @@
                         {
                             "name": "Dialog",
                             "to": "/dialog"
+                        },
+                        {
+                            "name": "Overlaypanel",
+                            "to": "/overlaypanel"
                         }
                     ]
                 },
