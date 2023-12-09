@@ -7,6 +7,7 @@ import button from './button';
 import calendar from './calendar';
 import card from './card';
 import checkbox from './checkbox';
+import dialog from './dialog';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
 import global from './global';
@@ -48,6 +49,9 @@ export default {
     fieldset,
     card,
     tabview,
+
+    //overlays
+    dialog,
 
     //misc
     badge,

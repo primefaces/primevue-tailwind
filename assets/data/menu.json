@@ -81,6 +81,15 @@
                     ]
                 },
                 {
+                    "name": "Overlays",
+                    "children": [
+                        {
+                            "name": "Dialog",
+                            "to": "/dialog"
+                        }
+                    ]
+                },
+                {
                     "name": "Misc",
                     "children": [
                         {
