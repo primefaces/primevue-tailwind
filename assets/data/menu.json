@@ -115,6 +115,15 @@
                     ]
                 },
                 {
+                    "name": "Messages",
+                    "children": [
+                        {
+                            "name": "Message",
+                            "to": "/message"
+                        }
+                    ]
+                },
+                {
                     "name": "Misc",
                     "children": [
                         {
