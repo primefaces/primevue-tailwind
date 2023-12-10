@@ -120,6 +120,10 @@
                         {
                             "name": "Message",
                             "to": "/message"
+                        },
+                        {
+                            "name": "InlineMessage",
+                            "to": "/inlinemessage"
                         }
                     ]
                 },
