@@ -1,35 +1,89 @@
 export default {
-    root: {
-        class: ['w-96', 'opacity-90']
-    },
+    root: ({ props }) => ({
+        class: [
+            //Size and Shape
+            'w-96 rounded-md',
+
+            // Positioning
+            { '-translate-x-2/4': props.position == 'top-center' || props.position == 'bottom-center' }
+        ]
+    }),
     container: ({ props }) => ({
         class: [
             'my-4 rounded-md w-full',
+
+            'shadow-lg',
+            'bg-surface-0 dark:bg-surface-800',
+            'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
+            // Colors
             {
-                'bg-blue-100 border-solid border-0 border-l-4 border-blue-500 text-blue-700': props.message.severity == 'info',
-                'bg-green-100 border-solid border-0 border-l-4 border-green-500 text-green-700': props.message.severity == 'success',
-                'bg-orange-100 border-solid border-0 border-l-4 border-orange-500 text-orange-700': props.message.severity == 'warn',
-                'bg-red-100 border-solid border-0 border-l-4 border-red-500 text-red-700': props.message.severity == 'error'
+                'text-blue-500 dark:text-blue-300': props.message.severity == 'info',
+                'text-green-500 dark:text-green-300': props.message.severity == 'success',
+                'text-orange-500 dark:text-orange-300': props.message.severity == 'warn',
+                'text-red-500 dark:text-red-300': props.message.severity == 'error'
             }
         ]
     }),
     content: {
-        class: 'flex items-center py-5 px-7'
+        class: 'flex items-start p-4'
     },
     icon: {
-        class: ['w-6 h-6', 'text-lg mr-2']
+        class: [
+            // Sizing and Spacing
+            'w-5 h-5',
+            'mr-2 shrink-0'
+        ]
     },
     text: {
-        class: 'text-base font-normal flex flex-col flex-1 grow shrink ml-4'
+        class: [
+            // Font and Text
+            'text-sm leading-none',
+            'ml-2',
+            'flex-1'
+        ]
     },
     summary: {
-        class: 'font-bold block'
+        class: 'font-medium block'
     },
     detail: {
-        class: 'mt-1 block'
+        class: 'mt-1.5 block text-surface-600 dark:text-surface-0/70'
     },
     closebutton: {
-        class: ['w-8 h-8 rounded-full bg-transparent transition duration-200 ease-in-out', 'ml-auto overflow-hidden relative', 'flex items-center justify-center', 'hover:bg-surface-0/30']
+        class: [
+            // Flexbox
+            'flex items-center justify-center',
+
+            // Size
+            'w-6 h-6',
+
+            // Spacing and Misc
+            'ml-auto relative',
+
+            // Shape
+            'rounded-full',
+
+            // Colors
+            'bg-transparent',
+            'text-surface-700 dark:text-surface-0/80',
+
+            // Transitions
+            'transition duration-200 ease-in-out',
+
+            // States
+            'hover:bg-surface-100 dark:hover:bg-surface-700',
+            'outline-none focus:ring-1 focus:ring-inset',
+            'focus:ring-primary-500 dark:focus:ring-primary-400',
+
+            // Misc
+            'overflow-hidden'
+        ]
+    },
+    closeicon: {
+        class: [
+            // Sizing and Spacing
+            'w-3 h-3',
+            'shrink-0'
+        ]
     },
     transition: {
         enterFromClass: 'opacity-0 translate-x-0 translate-y-2/4 translate-z-0',

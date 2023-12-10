@@ -49,13 +49,14 @@ export default {
             'w-6 h-6',
 
             // Spacing and Misc
-            'ml-auto  relative',
+            'ml-auto relative',
 
             // Shape
             'rounded-full',
 
             // Colors
             'bg-transparent',
+            'text-surface-700 dark:text-surface-0/80',
 
             // Transitions
             'transition duration-200 ease-in-out',
@@ -63,13 +64,7 @@ export default {
             // States
             'hover:bg-surface-100 dark:hover:bg-surface-700',
             'outline-none focus:ring-1 focus:ring-inset',
-
-            {
-                'focus:ring-blue-500 dark:focus:ring-blue-400': props.severity == 'info',
-                'focus:ring-green-500 dark:focus:ring-green-400': props.severity == 'success',
-                'focus:ring-orange-500 dark:focus:ring-orange-400': props.severity == 'warn',
-                'focus:ring-red-500 dark:focus:ring-red-400': props.severity == 'error'
-            },
+            'focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Misc
             'overflow-hidden'
@@ -78,7 +73,7 @@ export default {
     closeicon: {
         class: [
             // Sizing and Spacing
-            'w-3.5 h-3.5',
+            'w-3 h-3',
             'shrink-0'
         ]
     },
