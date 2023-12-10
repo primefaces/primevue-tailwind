@@ -124,6 +124,10 @@
                         {
                             "name": "InlineMessage",
                             "to": "/inlinemessage"
+                        },
+                        {
+                            "name": "Toast",
+                            "to": "/toast"
                         }
                     ]
                 },

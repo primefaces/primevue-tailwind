@@ -28,6 +28,7 @@ import sidebar from './sidebar';
 import slider from './slider';
 import tabview from './tabview';
 import tag from './tag';
+import toast from './toast';
 import tooltip from './tooltip';
 
 export default {
@@ -71,6 +72,7 @@ export default {
     //messages
     message,
     inlinemessage,
+    toast,
 
     //misc
     badge,
