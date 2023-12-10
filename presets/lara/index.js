@@ -17,6 +17,7 @@ import global from './global';
 import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
+import menu from './menu';
 import overlaypanel from './overlaypanel';
 import panel from './panel';
 import ripple from './ripple';
@@ -56,6 +57,9 @@ export default {
     fieldset,
     card,
     tabview,
+
+    //menu
+    menu,
 
     //overlays
     dialog,

@@ -89,6 +89,15 @@
                     ]
                 },
                 {
+                    "name": "Menu",
+                    "children": [
+                        {
+                            "name": "Menu",
+                            "to": "/menu"
+                        }
+                    ]
+                },
+                {
                     "name": "Overlays",
                     "children": [
                         {
