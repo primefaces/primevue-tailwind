@@ -14,7 +14,7 @@ export default {
             'rounded-md',
 
             // Color
-            'bg-surface-50 dark:bg-surface-900',
+            'bg-surface-50 dark:bg-surface-700',
             'border border-surface-200 dark:border-surface-700'
         ]
     },
@@ -33,21 +33,19 @@ export default {
             'sm:top-auto sm:left-auto',
 
             // Size
-            'sm:w-auto',
-            'w-full',
+            'w-full sm:w-auto',
 
             // Spacing
             'm-0',
-            'sm:p-0',
+            'py-1 sm:py-0 sm:p-0',
             'list-none',
-            'py-1',
 
             // Shape
             'shadow-md sm:shadow-none',
             'border-0',
 
             // Color
-            'bg-surface-0 dark:bg-surface-900 sm:bg-transparent',
+            'bg-surface-0 dark:bg-surface-700 sm:bg-transparent',
 
             // Misc
             'outline-none'
@@ -62,23 +60,21 @@ export default {
             { 'rounded-md': props.root },
 
             //  Colors
-            'text-surface-700',
-            'dark:text-white/80',
             {
-                'bg-surface-300 dark:bg-surface-800/90': context.focused && !context.active,
-                'bg-primary-100 dark:bg-primary-400': context.focused && context.active,
-                'bg-primary-50 dark:bg-primary-300': !context.focused && context.active
+                'text-surface-500 dark:text-white/70': !context.focused && !context.active,
+                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': context.focused && context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': !context.focused && context.active
             },
 
             // Hover States
             {
-                'hover:text-surface-700 dark:hover:text-white/80': !context.active,
-                'hover:bg-surface-100 dark:hover:bg-surface-800/80': !context.active,
-                'hover:bg-primary-200 dark:hover:bg-primary-500': context.active
+                'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
+                'hover:bg-primary-500/50 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
             },
 
             // Transitions
-            'transition-shadow',
+            'transition-all',
             'duration-200'
         ]
     }),
@@ -96,8 +92,8 @@ export default {
 
             // Size
             {
-                'max-[960px]:pl-9': context.level === 1,
-                'max-[960px]:pl-14': context.level === 2
+                'pl-9 sm:pl-5': context.level === 1,
+                'pl-14 sm:pl-5': context.level === 2
             },
             'leading-none',
 
@@ -111,8 +107,13 @@ export default {
     icon: {
         class: 'mr-2'
     },
-    submenuicon: ({ props }) => ({
-        class: ['max-[960px]:ml-auto', { 'ml-2': props.root, 'ml-auto': !props.root }]
+    submenuicon: ({ props, context }) => ({
+        class: [
+            {
+                'ml-auto sm:ml-2': props.root,
+                'ml-auto': !props.root
+            }
+        ]
     }),
     submenu: ({ props }) => ({
         class: [
@@ -134,11 +135,11 @@ export default {
             { 'sm:absolute sm:left-full sm:top-0': props.level > 1 },
 
             // Color
-            'bg-surface-0 dark:bg-surface-900'
+            'bg-surface-0 dark:bg-surface-700'
         ]
     }),
     separator: {
-        class: 'border-t border-surface-200 dark:border-surface-700 my-1'
+        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
     },
     button: {
         class: [
@@ -153,11 +154,11 @@ export default {
             // Shape
             'rounded-full',
             // Color
-            'text-surface-600 dark:text-white/80',
+            'text-surface-500 dark:text-white/80',
 
             // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+            'hover:text-surface-600 dark:hover:text-white/60',
+            'hover:bg-surface-100 dark:hover:bg-surface-600/80',
             'focus:outline-none focus:outline-offset-0',
             'focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
@@ -168,5 +169,8 @@ export default {
             'cursor-pointer',
             'no-underline'
         ]
+    },
+    end: {
+        class: 'ml-auto self-center'
     }
 };
