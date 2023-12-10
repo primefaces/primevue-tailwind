@@ -19,6 +19,7 @@ import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
 import menu from './menu';
+import menubar from './menubar';
 import message from './message';
 import overlaypanel from './overlaypanel';
 import panel from './panel';
@@ -65,6 +66,7 @@ export default {
 
     //menu
     menu,
+    menubar,
     steps,
 
     //overlays

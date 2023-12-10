@@ -96,6 +96,10 @@
                             "to": "/menu"
                         },
                         {
+                            "name": "Menubar",
+                            "to": "/menubar"
+                        },
+                        {
                             "name": "Steps",
                             "to": "/steps"
                         }
