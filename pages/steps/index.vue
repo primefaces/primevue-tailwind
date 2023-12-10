@@ -9,7 +9,6 @@ import BasicDoc from '@/doc/steps/BasicDoc.vue';
 import ControlledDoc from '@/doc/steps/ControlledDoc.vue';
 import ImportDoc from '@/doc/steps/ImportDoc.vue';
 import LinearDoc from '@/doc/steps/LinearDoc.vue';
-import TemplateDoc from '@/doc/steps/TemplateDoc.vue';
 export default {
     data() {
         return {
@@ -34,11 +33,12 @@ export default {
                     label: 'Linear',
                     component: LinearDoc
                 },
-                {
-                    id: 'template',
-                    label: 'Template',
-                    component: TemplateDoc
-                },
+                //TODO: Fix template for both presets
+                // {
+                //     id: 'template',
+                //     label: 'Template',
+                //     component: TemplateDoc
+                // },
                 {
                     id: 'accessibility',
                     label: 'Accessibility',
