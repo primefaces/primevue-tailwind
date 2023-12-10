@@ -3,8 +3,8 @@
         <p>Multiple messages can be displayed using the standard v-for directive.</p>
     </DocSectionText>
     <div class="card">
-        <Button label="Show" @click="addMessages()" />
-        <Button label="Clear" severity="secondary" class="ml-2" @click="clearMessages()" />
+        <Button label="Show" @click="addMessages()" class="mb-2" />
+        <Button label="Clear" severity="secondary" class="ml-2 mb-2" @click="clearMessages()" />
         <transition-group name="p-message" tag="div">
             <Message v-for="msg of messages" :key="msg.id" :severity="msg.severity">{{ msg.content }}</Message>
         </transition-group>
@@ -20,8 +20,8 @@ export default {
             count: 0,
             code: {
                 basic: `
-<Button label="Show" @click="addMessages()" />
-<Button label="Clear" severity="secondary" class="ml-2" @click="clearMessages()" />
+<Button label="Show" @click="addMessages()" class="mb-2" />
+<Button label="Clear" severity="secondary" class="ml-2 mb-2" @click="clearMessages()" />
 <transition-group name="p-message" tag="div">
     <Message v-for="msg of messages" :key="msg.id" :severity="msg.severity">{{ msg.content }}</Message>
 </transition-group>
@@ -29,8 +29,8 @@ export default {
                 options: `
 <template>
     <div class="card">
-        <Button label="Show" @click="addMessages()" />
-        <Button label="Clear" severity="secondary" class="ml-2" @click="clearMessages()" />
+        <Button label="Show" @click="addMessages()" class="mb-2" />
+        <Button label="Clear" severity="secondary" class="ml-2 mb-2" @click="clearMessages()" />
         <transition-group name="p-message" tag="div">
             <Message v-for="msg of messages" :key="msg.id" :severity="msg.severity">{{ msg.content }}</Message>
         </transition-group>
@@ -64,8 +64,8 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <Button label="Show" @click="addMessages()" />
-        <Button label="Clear" severity="secondary" class="ml-2" @click="clearMessages()" />
+        <Button label="Show" @click="addMessages()" class="mb-2" />
+        <Button label="Clear" severity="secondary" class="ml-2 mb-2" @click="clearMessages()" />
         <transition-group name="p-message" tag="div">
             <Message v-for="msg of messages" :key="msg.id" :severity="msg.severity">{{ msg.content }}</Message>
         </transition-group>
