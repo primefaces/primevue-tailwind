@@ -1,27 +1,104 @@
 export default {
     root: {
-        class: 'py-1 bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80 border border-surface-200 dark:border-surface-700 rounded-md w-48'
+        class: [
+            // Sizing and Shape
+            'min-w-[12rem]',
+            'rounded-md',
+            // Spacing
+            'p-1.5',
+            // Colors
+            'bg-surface-0 dark:bg-surface-700',
+            'text-surface-700 dark:text-white/80',
+            'ring-1 ring-surface-200 dark:ring-surface-700'
+        ]
     },
     menu: {
-        class: ['m-0 p-0 list-none', 'outline-none']
+        class: [
+            // Spacings and Shape
+            'list-none',
+            'm-0',
+            'p-0',
+            'outline-none'
+        ]
+    },
+    menuitem: {
+        class: [
+            // Space
+            'first:mt-0 mt-1'
+        ]
     },
     content: ({ context }) => ({
         class: [
-            'text-surface-700 dark:text-white/80 transition-shadow duration-200 rounded-none',
-            'hover:text-surface-700 dark:hover:text-white/80 hover:bg-surface-100 dark:hover:bg-surface-800/80', // Hover
+            //Shape
+            'rounded-md',
+
+            // Colors
+            'text-surface-700 dark:text-surface-0',
             {
-                'bg-surface-300 text-surface-700 dark:text-white/80 dark:bg-surface-800/90': context.focused
-            }
+                'bg-surface-200 text-surface-700 dark:bg-surface-600 dark:text-surface-0': context.focused
+            },
+
+            // Transitions
+            'transition-shadow',
+            'duration-200',
+
+            // States
+            'hover:text-primary-500 dark:hover:text-primary-400 ',
+            'hover:bg-surface-100 dark:hover:bg-surface-400/10'
         ]
     }),
     action: {
-        class: ['text-surface-700 dark:text-white/80 py-3 px-5 select-none', 'cursor-pointer flex items-center no-underline overflow-hidden relative']
+        class: [
+            'relative',
+
+            // Font
+            'font-semibold',
+
+            // Flexbox
+            'flex',
+            'items-center',
+
+            // Spacing
+            'py-2',
+            'px-3',
+
+            // Misc
+            'no-underline',
+            'overflow-hidden',
+            'cursor-pointer',
+            'select-none'
+        ]
     },
     icon: {
-        class: 'text-surface-600 dark:text-white/70 mr-2'
+        class: [
+            // Spacing
+            'mr-2',
+            'leading-6',
+            'text-sm'
+        ]
+    },
+    label: {
+        class: ['leading-6', 'text-sm']
     },
     submenuheader: {
-        class: ['m-0 p-3 text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900 font-bold rounded-tl-none rounded-tr-none']
+        class: [
+            // Font
+            'font-semibold',
+            'text-xs leading-6',
+
+            // Spacing
+            'm-0 ',
+            'py-1',
+            'px-3',
+
+            // Shape
+            'rounded-tl-none',
+            'rounded-tr-none',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-700',
+            'text-surface-600 dark:text-surface-0/60'
+        ]
     },
     transition: {
         enterFromClass: 'opacity-0 scale-75',
