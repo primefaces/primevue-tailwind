@@ -1,13 +1,19 @@
 export default {
     root: ({ props }) => ({
-        class: ['w-96 rounded-md', { '-translate-x-2/4': props.position == 'top-center' || props.position == 'bottom-center' }]
+        class: [
+            //Size and Shape
+            'w-96 rounded-md',
+
+            // Positioning
+            { '-translate-x-2/4': props.position == 'top-center' || props.position == 'bottom-center' }
+        ]
     }),
     container: ({ props }) => ({
         class: [
             'my-4 rounded-md w-full',
             'border-solid border-0 border-l-[6px]',
             'backdrop-blur-[10px] shadow-md',
-            console.log(props),
+
             // Colors
             {
                 'bg-blue-100/70 dark:bg-blue-500/20': props.message.severity == 'info',
