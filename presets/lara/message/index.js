@@ -1,26 +1,69 @@
 export default {
     root: ({ props }) => ({
         class: [
-            'my-4 rounded-md',
+            // Spacing and Shape
+            'my-4 mx-0',
+            'rounded-md',
+            'border-solid border-0 border-l-[6px]',
+
+            // Colors
             {
-                'bg-blue-100 border-solid border-0 border-l-4 border-blue-500 text-blue-700': props.severity == 'info',
-                'bg-green-100 border-solid border-0 border-l-4 border-green-500 text-green-700': props.severity == 'success',
-                'bg-orange-100 border-solid border-0 border-l-4 border-orange-500 text-orange-700': props.severity == 'warn',
-                'bg-red-100 border-solid border-0 border-l-4 border-red-500 text-red-700': props.severity == 'error'
+                'bg-blue-100/70 dark:bg-blue-500/20 border-blue-500 dark:border-blue-400 text-blue-700 dark:text-blue-300': props.severity == 'info',
+                'bg-green-100/70 dark:bg-green-500/20 border-green-500 dark:border-green-400 text-green-700 dark:text-green-300': props.severity == 'success',
+                'bg-orange-100/70 dark:bg-orange-500/20 border-orange-500 dark:border-orange-400 text-orange-700 dark:text-orange-300': props.severity == 'warn',
+                'bg-red-100/70 dark:bg-red-500/20 border-red-500 dark:border-red-400 text-red-700 dark:text-red-300': props.severity == 'error'
             }
         ]
     }),
     wrapper: {
-        class: 'flex items-center py-5 px-7'
+        class: [
+            // Flexbox
+            'flex items-center',
+
+            // Spacing
+            'py-5 px-7'
+        ]
     },
     icon: {
-        class: ['w-6 h-6', 'text-lg mr-2']
+        class: [
+            // Sizing and Spacing
+            'w-6 h-6',
+            'text-lg leading-none mr-2 shrink-0'
+        ]
     },
     text: {
-        class: 'text-base font-normal'
+        class: [
+            // Font and Text
+            'text-base leading-none',
+            'font-medium'
+        ]
     },
     button: {
-        class: ['w-8 h-8 rounded-full bg-transparent transition duration-200 ease-in-out', 'ml-auto overflow-hidden relative', 'flex items-center justify-center', 'hover:bg-surface-0/30']
+        class: [
+            // Flexbox
+            'flex items-center justify-center',
+
+            // Size
+            'w-8 h-8',
+
+            // Spacing and Misc
+            'ml-auto  relative',
+
+            // Shape
+            'rounded-full',
+
+            // Colors
+            'bg-transparent',
+
+            // Transitions
+            'transition duration-200 ease-in-out',
+
+            // States
+            'hover:bg-surface-0/50 dark:hover:bg-surface-0/10',
+
+            // Misc
+            'overflow-hidden'
+        ]
     },
     transition: {
         enterFromClass: 'opacity-0',
