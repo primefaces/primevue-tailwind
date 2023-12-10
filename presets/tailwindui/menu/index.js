@@ -32,10 +32,11 @@ export default {
             //Shape
             'rounded-md',
 
+            ,
             // Colors
-            'text-surface-700 dark:text-surface-0',
             {
-                'bg-surface-200 text-surface-700 dark:bg-surface-600 dark:text-surface-0': context.focused
+                'text-surface-700 dark:text-surface-0': !context.focused,
+                'bg-surface-200 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.focused
             },
 
             // Transitions

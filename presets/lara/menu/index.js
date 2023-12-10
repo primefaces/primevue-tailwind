@@ -28,7 +28,7 @@ export default {
             // Colors
             'text-surface-700 dark:text-white/80',
             {
-                'bg-surface-200 text-surface-700 dark:bg-surface-600 dark:text-white': context.focused
+                'bg-surface-200 text-surface-700 dark:bg-surface-300/10 dark:text-white': context.focused
             },
             // Transitions
             'transition-shadow',
@@ -42,13 +42,17 @@ export default {
         class: [
             'relative',
             // Flexbox
+
             'flex',
             'items-center',
+
             // Spacing
             'py-3',
             'px-5',
+
             // Color
             'text-surface-700 dark:text-white/80',
+
             // Misc
             'no-underline',
             'overflow-hidden',
@@ -60,6 +64,7 @@ export default {
         class: [
             // Spacing
             'mr-2',
+
             // Color
             'text-surface-600 dark:text-white/70'
         ]
