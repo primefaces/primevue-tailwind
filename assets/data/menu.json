@@ -157,6 +157,10 @@
                         {
                             "name": "Chip",
                             "to": "/chip"
+                        },
+                        {
+                            "name": "Ripple",
+                            "to": "/ripple"
                         }
                     ]
                 }
