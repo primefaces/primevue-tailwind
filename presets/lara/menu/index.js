@@ -35,7 +35,7 @@ export default {
             'duration-200',
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-bg-surface-100 dark:bg-surface-700 dark:hover:bg-surface-400/10'
+            'hover:bg-surface-100 dark:bg-surface-700 dark:hover:bg-surface-400/10'
         ]
     }),
     action: {
