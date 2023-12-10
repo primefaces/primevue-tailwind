@@ -94,6 +94,10 @@
                         {
                             "name": "Menu",
                             "to": "/menu"
+                        },
+                        {
+                            "name": "Steps",
+                            "to": "/steps"
                         }
                     ]
                 },

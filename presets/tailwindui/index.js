@@ -27,6 +27,7 @@ import ripple from './ripple';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
 import slider from './slider';
+import steps from './steps';
 import tabview from './tabview';
 import tag from './tag';
 import toast from './toast';
@@ -64,6 +65,7 @@ export default {
 
     //menu
     menu,
+    steps,
 
     //overlays
     dialog,
