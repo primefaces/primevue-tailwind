@@ -139,6 +139,10 @@
                             "to": "/avatar"
                         },
                         {
+                            "name": "Progressbar",
+                            "to": "/progressbar"
+                        },
+                        {
                             "name": "Tag",
                             "to": "/tag"
                         },

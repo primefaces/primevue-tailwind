@@ -22,6 +22,7 @@ import menu from './menu';
 import message from './message';
 import overlaypanel from './overlaypanel';
 import panel from './panel';
+import progressbar from './progressbar';
 import ripple from './ripple';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
@@ -79,5 +80,6 @@ export default {
     avatar,
     avatargroup,
     tag,
-    chip
+    chip,
+    progressbar
 };
