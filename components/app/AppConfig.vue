@@ -3,13 +3,20 @@
         <div class="flex-col justify-start items-start gap-2 inline-flex">
             <span class="text-black dark:text-surface-0 text-sm font-medium">Primary Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
-                <a v-for="primaryColor of primaryColors" :key="primaryColor.name" @click="updateColors('primary', primaryColor.palette)" class="w-4 h-4 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${primaryColor.palette[5]})` }"></a>
+                <button
+                    v-for="primaryColor of primaryColors"
+                    :key="primaryColor.name"
+                    type="button"
+                    @click="updateColors('primary', primaryColor.palette)"
+                    class="w-4 h-4 rounded-full cursor-pointer"
+                    :style="{ backgroundColor: `rgb(${primaryColor.palette[5]})` }"
+                ></button>
             </div>
         </div>
         <div class="flex-col justify-start items-start gap-2 inline-flex">
             <span class="text-black dark:text-surface-0 text-sm font-medium">Surface Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                <a v-for="surface of surfaces" :key="surface.name" @click="updateColors('surface', surface.palette)" class="w-4 h-4 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></a>
+                <button v-for="surface of surfaces" :key="surface.name" type="button" @click="updateColors('surface', surface.palette)" class="w-4 h-4 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></button>
             </div>
         </div>
         <div class="flex-col justify-start items-start gap-2 flex">
