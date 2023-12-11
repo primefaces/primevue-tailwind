@@ -8,7 +8,7 @@
             <div class="doc-intro">
                 <h1>Installation</h1>
                 <p>
-                    Tailwind CSS based presets are powered by the unstyled PrimeVue core. A preset is a skin for one or more components defined using Tailwind utility classes that are injected to the PrimeVue components via
+                    Tailwind CSS based presets are powered by the unstyled PrimeVue core. A preset is a skin defined using Tailwind that is injected into the PrimeVue components through
                     <a href="https://primevue.org/passthrough/" target="_blank" rel="noopener noreferrer">pass through</a> props feature.
                 </p>
             </div>
@@ -20,6 +20,7 @@
 
 <script>
 import DownloadDoc from '@/doc/installation/DownloadDoc.vue';
+import ExamplesDoc from '@/doc/installation/ExamplesDoc.vue';
 import PluginDoc from '@/doc/installation/PluginDoc.vue';
 import PresetDoc from '@/doc/installation/PresetDoc.vue';
 import TailwindDoc from '@/doc/installation/TailwindDoc.vue';
@@ -53,6 +54,11 @@ export default {
                     id: 'usage',
                     label: 'Usage',
                     component: UsageDoc
+                },
+                {
+                    id: 'examples',
+                    label: 'Examples',
+                    component: ExamplesDoc
                 }
             ]
         };
