@@ -19,7 +19,6 @@ export default {
         class: [
             // Flexbox
             'flex justify-center items-center',
-            console.log('props', props.value),
 
             // Size
             'w-4 h-4',
