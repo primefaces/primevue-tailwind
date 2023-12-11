@@ -28,6 +28,7 @@ import ripple from './ripple';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
 import slider from './slider';
+import splitbutton from './splitbutton';
 import steps from './steps';
 import tabview from './tabview';
 import tag from './tag';
@@ -50,12 +51,13 @@ export default {
     calendar,
     checkbox,
     inputswitch,
+    selectbutton,
     slider,
     chips,
 
     //buttons
     button,
-    selectbutton,
+    splitbutton,
 
     //panels
     accordion,

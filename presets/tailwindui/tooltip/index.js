@@ -1,7 +1,7 @@
 export default {
     root: ({ context, props }) => ({
         class: [
-            // Position and Shadows
+            // Position
             'absolute',
             // Spacing
             {

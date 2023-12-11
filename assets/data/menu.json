@@ -60,6 +60,10 @@
                         {
                             "name": "Button",
                             "to": "/button"
+                        },
+                        {
+                            "name": "SplitButton",
+                            "to": "/splitbutton"
                         }
                     ]
                 },
