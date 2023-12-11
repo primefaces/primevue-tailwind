@@ -5394,10 +5394,8 @@ export default {
         toggleColorScheme(colorScheme) {
             const root = document.documentElement;
 
-            if (colorScheme === 'light')
-                root.classList.remove('dark');
-            else if (colorScheme === 'dark')
-                root.classList.add('dark');
+            if (colorScheme === 'light') root.classList.remove('dark');
+            else if (colorScheme === 'dark') root.classList.add('dark');
 
             this.$appState.darkMode = !this.$appState.darkMode;
         },

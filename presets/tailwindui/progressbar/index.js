@@ -16,7 +16,6 @@ export default {
     }),
     value: ({ props }) => ({
         class: [
-            console.log(props),
             // Flexbox & Overflow & Position
             { 'absolute flex items-center justify-center': props.mode !== 'indeterminate' },
 

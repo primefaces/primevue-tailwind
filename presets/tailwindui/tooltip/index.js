@@ -1,25 +1,37 @@
 export default {
-    root: ({ context }) => ({
+    root: ({ context, props }) => ({
         class: [
-            'absolute shadow-md',
+            // Position
+            'absolute',
+            // Spacing
             {
-                'py-0 px-1': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
-                'py-1 px-0': context?.top || context?.bottom
+                'px-1.5': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                'py-1.5': context?.top || context?.bottom
             }
         ]
     }),
-    arrow: ({ context }) => ({
-        class: [
-            'absolute w-0 h-0 border-transparent border-solid',
-            {
-                '-m-t-1 border-y-[0.25rem] border-r-[0.25rem] border-l-0 border-r-surface-600': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
-                '-m-t-1 border-y-[0.25rem] border-l-[0.25rem] border-r-0 border-l-surface-600': context?.left,
-                '-m-l-1 border-x-[0.25rem] border-t-[0.25rem] border-b-0 border-t-surface-600': context?.top,
-                '-m-l-1 border-x-[0.25rem] border-b-[0.25rem] border-t-0 border-b-surface-600': context?.bottom
-            }
-        ]
-    }),
+    arrow: {
+        class: 'hidden'
+    },
     text: {
-        class: 'p-3 bg-surface-600 text-white rounded-md whitespace-pre-line break-words'
+        class: [
+            // Size
+            'text-xs leading-none',
+
+            // Spacing
+            'p-2',
+
+            // Shape
+            'rounded-md',
+
+            // Color
+            'text-surface-900 dark:text-surface-0/80',
+            'bg-surface-0 dark:bg-surface-900',
+            'ring-1 ring-inset ring-surface-200 dark:ring-surface-800 ring-offset-0',
+
+            // Misc
+            'whitespace-pre-line',
+            'break-words'
+        ]
     }
 };

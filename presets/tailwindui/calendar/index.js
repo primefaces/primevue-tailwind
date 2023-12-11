@@ -196,7 +196,6 @@ export default {
     },
     nextbutton: ({ props }) => ({
         class: [
-            console.log(props),
             'relative',
 
             // Flexbox and Alignment

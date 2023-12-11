@@ -37,6 +37,10 @@
                             "to": "/checkbox"
                         },
                         {
+                            "name": "Radiobutton",
+                            "to": "/radiobutton"
+                        },
+                        {
                             "name": "InputSwitch",
                             "to": "/inputswitch"
                         },
@@ -60,6 +64,10 @@
                         {
                             "name": "Button",
                             "to": "/button"
+                        },
+                        {
+                            "name": "SplitButton",
+                            "to": "/splitbutton"
                         }
                     ]
                 },
@@ -119,6 +127,10 @@
                         {
                             "name": "Sidebar",
                             "to": "/sidebar"
+                        },
+                        {
+                            "name": "Tooltip",
+                            "to": "/tooltip"
                         }
                     ]
                 },
