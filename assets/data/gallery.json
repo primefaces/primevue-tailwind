@@ -4,37 +4,37 @@
             "name": "Pure Accordion",
             "owner": "cagataycivici",
             "repository": "pure-accordion-vue",
-            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.png"
         },
         {
             "name": "Shadcn Dialog",
             "owner": "cagataycivici",
             "repository": "shadcn-dialog-vue",
-            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-shadcn-dialog.jpg"
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-shadcn-dialog.png"
         },
         {
             "name": "Material InputSwitch",
             "owner": "cagataycivici",
             "repository": "material-toggle-vue",
-            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-material-toggle.png"
         },
         {
             "name": "Material Snackbar",
             "owner": "cagataycivici",
             "repository": "material-snackbar-vue",
-            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.png"
         },
         {
             "name": "Material Input",
             "owner": "cagataycivici",
             "repository": "material-input-vue",
-            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-material-input.png"
         },
         {
             "name": "Glassmorphic Login",
             "owner": "cagataycivici",
             "repository": "glassmorphic-login-vue",
-            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-pure-accordion.jpg"
+            "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-glassmorphic-login.png"
         }
     ]
 }
