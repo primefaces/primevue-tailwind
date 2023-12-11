@@ -3,7 +3,7 @@
         <p>Custom content inside a button is defined as children.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <SplitButton :model="items" icon="pi pi-plus" class="bg-primary border-round" @click="save">
+        <SplitButton :model="items" icon="pi pi-plus" class="bg-primary-500 dark:primary-400 rounded-md py-0.5" @click="save">
             <img alt="logo" src="https://primefaces.org/cdn/primevue/images/logo.svg" style="width: 3rem" class="px-3" />
             <span class="mr-2 flex items-center font-bold">PrimeVue</span>
         </SplitButton>
@@ -41,7 +41,7 @@ export default {
             ],
             code: {
                 basic: `
-<SplitButton :model="items" icon="pi pi-plus" class="bg-primary border-round" @click="save">
+<SplitButton :model="items" icon="pi pi-plus" class="bg-primary-500 dark:primary-400 rounded-md" @click="save">
     <img alt="logo" src="https://primefaces.org/cdn/primevue/images/logo.svg" style="width: 3rem" class="px-3" />
     <span class="mr-2 flex items-center font-bold">PrimeVue</span>
 </SplitButton>
@@ -50,7 +50,7 @@ export default {
 <template>
     <div class="card flex justify-center">
         <Toast />
-        <SplitButton :model="items" icon="pi pi-plus" class="bg-primary border-round" @click="save">
+        <SplitButton :model="items" icon="pi pi-plus" class="bg-primary-500 dark:primary-400 rounded-md" @click="save">
             <img alt="logo" src="https://primefaces.org/cdn/primevue/images/logo.svg" style="width: 3rem" class="px-3" />
             <span class="mr-2 flex items-center font-bold">PrimeVue</span>
         </SplitButton>
@@ -99,7 +99,7 @@ export default {
 <template>
     <div class="card flex justify-center">
         <Toast />
-        <SplitButton :model="items" icon="pi pi-plus" class="bg-primary border-round" @click="save">
+        <SplitButton :model="items" icon="pi pi-plus" class="bg-primary-500 dark:primary-400 rounded-md" @click="save">
             <img alt="logo" src="https://primefaces.org/cdn/primevue/images/logo.svg" style="width: 3rem" class="px-3" />
             <span class="mr-2 flex items-center font-bold">PrimeVue</span>
         </SplitButton>

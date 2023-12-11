@@ -14,8 +14,10 @@ export default {
         root: ({ parent }) => ({
             class: [
                 'relative',
+
                 // Alignments
                 'items-center inline-flex text-center align-bottom justify-center',
+
                 // Sizes & Spacing
                 {
                     'px-4 py-3 leading-none': parent.props.size === null && parent.props.label !== null,
@@ -25,6 +27,7 @@ export default {
                 {
                     'h-12 w-12 p-0': parent.props.label == null
                 },
+
                 // Shape
                 'rounded-r-none',
                 'border-r-0',
@@ -177,7 +180,13 @@ export default {
                 { 'hover:bg-red-600 dark:hover:bg-red-300 hover:border-red-600 dark:hover:border-red-300': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain },
                 { 'focus:ring-red-400/50 dark:focus:ring-red-300/50': parent.props.severity === 'danger' },
                 // Text & Outlined Button
-                { 'hover:bg-red-300/20': (parent.props.text || parent.props.outlined) && parent.props.severity === 'danger' && !parent.props.plain }
+                { 'hover:bg-red-300/20': (parent.props.text || parent.props.outlined) && parent.props.severity === 'danger' && !parent.props.plain },
+
+                // Transitions
+                'transition duration-200 ease-in-out',
+
+                // Misc
+                'cursor-pointer overflow-hidden select-none'
             ]
         }),
         icon: {
@@ -193,6 +202,7 @@ export default {
                 'relative',
                 // Alignments
                 'items-center inline-flex text-center align-bottom justify-center',
+
                 // Sizes & Spacing
                 {
                     'px-4 py-3 leading-none': parent.props.size === null && parent.props.label !== null,
@@ -202,6 +212,7 @@ export default {
                 {
                     'h-12 w-12 p-0': parent.props.label == null
                 },
+
                 // Shape
                 'rounded-l-none',
                 { 'rounded-l-full': parent.props.rounded },
@@ -353,7 +364,13 @@ export default {
                 { 'hover:bg-red-600 dark:hover:bg-red-300 hover:border-red-600 dark:hover:border-red-300': parent.props.severity === 'danger' && !parent.props.text && !parent.props.outlined && !parent.props.plain },
                 { 'focus:ring-red-400/50 dark:focus:ring-red-300/50': parent.props.severity === 'danger' },
                 // Text & Outlined Button
-                { 'hover:bg-red-300/20': (parent.props.text || parent.props.outlined) && parent.props.severity === 'danger' && !parent.props.plain }
+                { 'hover:bg-red-300/20': (parent.props.text || parent.props.outlined) && parent.props.severity === 'danger' && !parent.props.plain },
+
+                // Transitions
+                'transition duration-200 ease-in-out',
+
+                // Misc
+                'cursor-pointer overflow-hidden select-none'
             ]
         }),
         label: {
