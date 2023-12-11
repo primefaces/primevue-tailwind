@@ -37,6 +37,10 @@
                             "to": "/checkbox"
                         },
                         {
+                            "name": "Radiobutton",
+                            "to": "/radiobutton"
+                        },
+                        {
                             "name": "InputSwitch",
                             "to": "/inputswitch"
                         },

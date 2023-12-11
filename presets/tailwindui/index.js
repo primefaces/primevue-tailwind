@@ -24,6 +24,7 @@ import message from './message';
 import overlaypanel from './overlaypanel';
 import panel from './panel';
 import progressbar from './progressbar';
+import radiobutton from './radiobutton';
 import ripple from './ripple';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
@@ -50,6 +51,7 @@ export default {
     inputtext,
     calendar,
     checkbox,
+    radiobutton,
     inputswitch,
     selectbutton,
     slider,
