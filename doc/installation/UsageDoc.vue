@@ -1,6 +1,10 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Each component can be imported individually so that you only bundle what you use. Import path is available in the documentation of the corresponding component.</p>
+        <p>
+            Each component can be imported individually so that you only bundle what you use. Import path is available in the documentation of the corresponding component. For Nuxt users, this step is not required in a Nuxt settings as the primevue
+            module <a href="https://primevue.org/nuxt/#components" target="_blank" rel="noopener noreferrer">auto configures</a> the components.
+        </p>
+        <p>This button may look like a regular PrimeVue button however it is styled with Tailwind CSS utilities entirely.</p>
     </DocSectionText>
     <div class="card flex justify-center">
         <Button label="Check" icon="pi pi-check" />
