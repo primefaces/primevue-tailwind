@@ -119,6 +119,10 @@
                         {
                             "name": "Sidebar",
                             "to": "/sidebar"
+                        },
+                        {
+                            "name": "Tooltip",
+                            "to": "/tooltip"
                         }
                     ]
                 },
