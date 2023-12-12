@@ -17,6 +17,14 @@
                             "to": "/autocomplete"
                         },
                         {
+                            "name": "Calendar",
+                            "to": "/calendar"
+                        },
+                        {
+                            "name": "Checkbox",
+                            "to": "/checkbox"
+                        },
+                        {
                             "name": "Chips",
                             "to": "/chips"
                         },
@@ -25,36 +33,28 @@
                             "to": "/dropdown"
                         },
                         {
-                            "name": "InputText",
-                            "to": "/inputtext"
-                        },
-                        {
                             "name": "InputNumber",
                             "to": "/inputnumber"
-                        },
-                        {
-                            "name": "Checkbox",
-                            "to": "/checkbox"
-                        },
-                        {
-                            "name": "Radiobutton",
-                            "to": "/radiobutton"
                         },
                         {
                             "name": "InputSwitch",
                             "to": "/inputswitch"
                         },
                         {
-                            "name": "Calendar",
-                            "to": "/calendar"
+                            "name": "InputText",
+                            "to": "/inputtext"
                         },
                         {
-                            "name": "Slider",
-                            "to": "/slider"
+                            "name": "Radiobutton",
+                            "to": "/radiobutton"
                         },
                         {
                             "name": "Selectbutton",
                             "to": "/selectbutton"
+                        },
+                        {
+                            "name": "Slider",
+                            "to": "/slider"
                         }
                     ]
                 },
@@ -83,12 +83,12 @@
                             "to": "/card"
                         },
                         {
-                            "name": "Panel",
-                            "to": "/panel"
-                        },
-                        {
                             "name": "Fieldset",
                             "to": "/fieldset"
+                        },
+                        {
+                            "name": "Panel",
+                            "to": "/panel"
                         },
                         {
                             "name": "Tabview",
@@ -138,12 +138,12 @@
                     "name": "Messages",
                     "children": [
                         {
-                            "name": "Message",
-                            "to": "/message"
-                        },
-                        {
                             "name": "InlineMessage",
                             "to": "/inlinemessage"
+                        },
+                        {
+                            "name": "Message",
+                            "to": "/message"
                         },
                         {
                             "name": "Toast",
@@ -159,14 +159,6 @@
                             "to": "/avatar"
                         },
                         {
-                            "name": "Progressbar",
-                            "to": "/progressbar"
-                        },
-                        {
-                            "name": "Tag",
-                            "to": "/tag"
-                        },
-                        {
                             "name": "Badge",
                             "to": "/badge"
                         },
@@ -175,8 +167,16 @@
                             "to": "/chip"
                         },
                         {
+                            "name": "Progressbar",
+                            "to": "/progressbar"
+                        },
+                        {
                             "name": "Ripple",
                             "to": "/ripple"
+                        },
+                        {
+                            "name": "Tag",
+                            "to": "/tag"
                         }
                     ]
                 }
@@ -238,6 +238,14 @@
                     "to": "/team"
                 },
                 {
+                    "name": "Newsletter",
+                    "href": "https://www.primefaces.org/newsletter"
+                },
+                {
+                    "name": "PrimeGear",
+                    "href": "https://gear.primefaces.org"
+                },
+                {
                     "name": "Source Code",
                     "href": "https://github.com/primefaces/primevue-tailwind"
                 },
@@ -248,14 +256,6 @@
                 {
                     "name": "Twitter",
                     "href": "https://twitter.com/primevue"
-                },
-                {
-                    "name": "Newsletter",
-                    "href": "https://www.primefaces.org/newsletter"
-                },
-                {
-                    "name": "PrimeGear",
-                    "href": "https://gear.primefaces.org"
                 }
             ]
         }
