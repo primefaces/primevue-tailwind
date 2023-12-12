@@ -13,7 +13,7 @@
                     "name": "Form",
                     "children": [
                         {
-                            "name": "Autocomplete",
+                            "name": "AutoComplete",
                             "to": "/autocomplete"
                         },
                         {
@@ -45,11 +45,11 @@
                             "to": "/inputtext"
                         },
                         {
-                            "name": "Radiobutton",
+                            "name": "RadioButton",
                             "to": "/radiobutton"
                         },
                         {
-                            "name": "Selectbutton",
+                            "name": "SelectButton",
                             "to": "/selectbutton"
                         },
                         {
@@ -91,7 +91,7 @@
                             "to": "/panel"
                         },
                         {
-                            "name": "Tabview",
+                            "name": "TabView",
                             "to": "/tabview"
                         }
                     ]
@@ -113,7 +113,7 @@
                         }
                         ,
                         {
-                            "name": "Tieredmenu",
+                            "name": "TieredMenu",
                             "to": "/tieredmenu"
                         }
                     ]
@@ -126,7 +126,7 @@
                             "to": "/dialog"
                         },
                         {
-                            "name": "Overlaypanel",
+                            "name": "OverlayPanel",
                             "to": "/overlaypanel"
                         },
                         {
@@ -172,7 +172,7 @@
                             "to": "/chip"
                         },
                         {
-                            "name": "Progressbar",
+                            "name": "ProgressBar",
                             "to": "/progressbar"
                         },
                         {
