@@ -1,6 +1,6 @@
 import CodeHighlight from '@/directives/CodeHighlight';
 import Lara from '@/presets/lara';
-import TailwindUI from '@/presets/tailwindui';
+import Wind from '@/presets/wind';
 
 const $appStatePlugin = {
     install: (app) => {
@@ -10,7 +10,7 @@ const $appStatePlugin = {
             () => _appState.preset,
             (newValue) => {
                 if (newValue === 'lara') app.config.globalProperties.$primevue.config.pt = Lara;
-                else if (newValue === 'tailwindui') app.config.globalProperties.$primevue.config.pt = TailwindUI;
+                else if (newValue === 'wind') app.config.globalProperties.$primevue.config.pt = Wind;
             }
         );
 

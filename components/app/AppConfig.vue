@@ -37,10 +37,10 @@
                 <button
                     type="button"
                     class="transition duration-200 rounded-r-md px-3 py-2"
-                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isTailwindUI, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI }"
-                    @click="setPreset('tailwindui')"
+                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isWindUI, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isWindUI }"
+                    @click="setPreset('wind')"
                 >
-                    TailwindUI
+                    Wind
                 </button>
             </div>
         </div>
@@ -128,8 +128,8 @@ export default {
         isLara() {
             return this.$appState.preset === 'lara';
         },
-        isTailwindUI() {
-            return this.$appState.preset === 'tailwindui';
+        isWindUI() {
+            return this.$appState.preset === 'wind';
         }
     }
 };

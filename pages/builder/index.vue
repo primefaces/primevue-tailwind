@@ -57,7 +57,7 @@ export default {
             preset: 'lara',
             presets: [
                 { name: 'Lara', value: 'lara' },
-                { name: 'TailwindUI', value: 'tailwindui' }
+                { name: 'Wind', value: 'wind' }
             ],
             groups: [],
             filename: ''

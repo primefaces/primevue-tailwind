@@ -10,7 +10,7 @@
 
 <script>
 import LaraDoc from './LaraDoc.vue';
-import TailwindUIDoc from './TailwindUIDoc.vue';
+import WindDoc from './WindDoc.vue';
 
 export default {
     data() {
@@ -22,9 +22,9 @@ export default {
                     component: LaraDoc
                 },
                 {
-                    id: 'presets.tailwindui',
-                    label: 'TailwindUI',
-                    component: TailwindUIDoc
+                    id: 'presets.wind',
+                    label: 'Wind',
+                    component: WindDoc
                 }
             ]
         };

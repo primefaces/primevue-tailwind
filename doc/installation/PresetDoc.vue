@@ -1,7 +1,7 @@
 <template>
     <DocSectionText v-bind="$attrs">
         <p>
-            A Tailwind CSS preset is a javascript object to style PrimeVue components, the release bundle contains two built-in presets; <i>lara</i> and <i>tailwindui</i>. Releases of presets are not published to NPM as copy-paste approach is a more
+            A Tailwind CSS preset is a javascript object to style PrimeVue components, the release bundle contains two built-in presets; <i>lara</i> and <i>wind</i>. Releases of presets are not published to NPM as copy-paste approach is a more
             suitable strategy for easier customization instead of an imported module from node_modules.
         </p>
         <p>
