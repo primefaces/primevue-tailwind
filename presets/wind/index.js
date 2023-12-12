@@ -33,6 +33,7 @@ import splitbutton from './splitbutton';
 import steps from './steps';
 import tabview from './tabview';
 import tag from './tag';
+import tieredmenu from './tieredmenu';
 import toast from './toast';
 import tooltip from './tooltip';
 
@@ -72,6 +73,7 @@ export default {
     menu,
     menubar,
     steps,
+    tieredmenu,
 
     //overlays
     dialog,

@@ -111,6 +111,11 @@
                             "name": "Steps",
                             "to": "/steps"
                         }
+                        ,
+                        {
+                            "name": "Tieredmenu",
+                            "to": "/tieredmenu"
+                        }
                     ]
                 },
                 {
