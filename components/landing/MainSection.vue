@@ -1,27 +1,25 @@
 <template>
     <div class="w-full relative flex flex-col justify-center items-center">
-        <div class="w-full min-[1419px]:h-screen  relative top-0 mx-auto max-w-[1728px] z-20 pb-[6rem]">
+        <div class="w-full min-[1419px]:h-screen relative top-0 mx-auto max-w-[1728px] z-20 pb-[6rem]">
             <div class="w-full min-[1419px]:h-screen flex">
                 <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 min-h-[1060px] relative pr-4 sm:pr-8 lg:pr-0 pl-4 sm:pl-8 xl:pl-20 min-[1419px]:pl-28 pr-15 flex-col justify-start items-center inline-flex">
                     <div class="self-stretch flex-col justify-start pt-28 sm:pt-36 pb-16 min-[1419px]:pt-[16rem] min-[1419px]:pb-44 items-start gap-6 inline-flex">
-                        <div class="px-3 py-1 bg-white dark:bg-surface-800 rounded-[7rem] border border-black border-opacity-10 justify-end items-start inline-flex">
-                            <div class="text-neutral-800 dark:text-surface-50 font-medium leading-6">PrimeVue Based on Tailwind</div>
+                        <div class="px-3 py-1 bg-primary-500/20 rounded-[7rem] border border-black border-opacity-10 justify-end items-start inline-flex">
+                            <span class="text-primary-900 dark:text-primary-100 font-medium leading-6">Powered by PrimeVue Unstyled Core</span>
                         </div>
                         <div class="flex-col justify-start items-start gap-4 flex">
                             <div>
                                 <span class="text-neutral-800 dark:text-surface-50 text-[3rem] sm:text-[3.5rem] xl:text-[4rem] font-medium sm:leading-[4.5rem]">Tailwind CSS Based <br />UI Component Library <br />for </span
                                 ><span class="text-primary-400 text-[3rem] sm:text-[3.5rem] xl:text-[4rem] font-medium sm:leading-[4.5rem]">Vue.js</span>
                             </div>
-                            <div class="text-zinc-600 dark:text-surface-50 font-normal leading-6 max-w-[35rem] text-lg">
-                                Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.
-                            </div>
+                            <div class="text-zinc-600 dark:text-surface-50 font-normal leading-6 max-w-[35rem] text-lg">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</div>
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
                             <router-link to="/installation">
                                 <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" />
                             </router-link>
                             <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
-                                <Button label="Give a Star" icon="pi pi-star-fill text-yellow-400" iconPos="right" text severity='secondary'  />
+                                <Button label="Give a Star" icon="pi pi-star-fill text-yellow-400" iconPos="right" text severity="secondary" />
                             </a>
                         </div>
                     </div>
@@ -32,28 +30,28 @@
                                     <div class="flex items-center">
                                         <div class="custom-selectbutton inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] bg-surface-0 dark:bg-surface-900">
                                             <button
-                                            type="button"
-                                            class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
-                                            :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
-                                                'dark:bg-surface-900':!isLara
-                                            }"
-                                            @click="setPreset('lara')"
-                                        >
-                                            Lara
-                                        </button>
-                                        <button
-                                            type="button"
-                                            class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
-                                            :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
-                                                'dark:bg-surface-900': !isWind
-                                            }"
-                                            @click="setPreset('wind')"
-                                        >
-                                            Wind
-                                        </button>
-                                    </div>
+                                                type="button"
+                                                class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
+                                                :class="{
+                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
+                                                    'dark:bg-surface-900': !isLara
+                                                }"
+                                                @click="setPreset('lara')"
+                                            >
+                                                Lara
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
+                                                :class="{
+                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
+                                                    'dark:bg-surface-900': !isWind
+                                                }"
+                                                @click="setPreset('wind')"
+                                            >
+                                                Wind
+                                            </button>
+                                        </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="21" viewBox="0 0 41 21" fill="none" class="mt-5 ml-[-3px]">
                                             <circle cx="3.5" cy="3.5" r="3.5" class="fill-surface-100 dark:fill-surface-700" />
                                             <circle cx="3.5" cy="3.5" r="2.5" class="fill-surface-200 dark:fill-surface-600" />
@@ -75,7 +73,7 @@
                             </div>
                             <div class="w-[20.5rem] palette-card flex p-[0.571rem] flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch">
                                 <div class="palette rounded-[0.571rem] bg-surface-50 dark:bg-surface-800 h-[9rem] w-full overflow-hidden">
-                                      <!-- TODO : Update palette assets on CDN and remove from assets/ -->
+                                    <!-- TODO : Update palette assets on CDN and remove from assets/ -->
                                     <img src="assets/palette.png" alt="PrimeVue Logo" class="block dark:hidden w-full h-full" />
                                     <img src="assets/palette-dark.png" alt="PrimeVue Logo" class="hidden dark:block w-full h-full" />
                                 </div>
@@ -226,9 +224,7 @@
                                             </linearGradient>
                                         </defs>
                                     </svg> -->
-                                    <div class="hidden dark:block h-[9rem] w-full absolute top-0 stars" style="background-size:cover; background-repeat:repeat">
-                                      
-                                    </div>
+                                    <div class="hidden dark:block h-[9rem] w-full absolute top-0 stars" style="background-size: cover; background-repeat: repeat"></div>
                                     <div class="z-20 inline-flex p-2 items-start gap-3 rounded-full border border-[#00000003] bg-surface-0 dark:bg-surface-900">
                                         <button
                                             type="button"
@@ -284,7 +280,7 @@
                     </div>
                 </div>
                 <div class="hidden lg:inline-flex w-[35%] min-[1100px]:w-[39%] xl:w-5/12 min-[1419px]:w-1/2 overflow-hidden justify-around items-start p-5">
-                    <div  class="component-suite ">
+                    <div class="component-suite">
                         <svg class="w-[49rem] relative top-[-5rem] z-0" viewBox="0 0 781 1050" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="223.5" y1="0.523437" x2="223.5" y2="1049.48" stroke="url(#paint0_linear_612_64534)" />
                             <line x1="0.640625" y1="278.5" x2="780.363" y2="278.5" stroke="url(#paint1_linear_612_64534)" />
@@ -2859,8 +2855,7 @@
                         </svg>
                         <div class="absolute top-[12.4rem] left-[14rem] z-40">
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <Chips v-model="chipsValue" class="!w-full" :pt="{ container: 'flex-nowrap' }" :ptOptions="{ mergeProps: true }"/>
-                               
+                                <Chips v-model="chipsValue" class="!w-full" :pt="{ container: 'flex-nowrap' }" :ptOptions="{ mergeProps: true }" />
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center">
                                 <div class="flex items-center w-[6.5rem]">
@@ -2882,8 +2877,8 @@
                                 <div class="flex items-center max-w-[14.5rem]">
                                     <InputNumber v-model="value1" inputId="stacked-buttons" showButtons mode="currency" currency="USD" inputClass="w-full" />
                                 </div>
-                                <div class="flex items-center justify-center w-[3.4rem] ml-[1.5rem] ">
-                                    <InputSwitch v-model="switched" class="mx-auto"/>
+                                <div class="flex items-center justify-center w-[3.4rem] ml-[1.5rem]">
+                                    <InputSwitch v-model="switched" class="mx-auto" />
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.95rem] p-3 justify-center items-center">
@@ -2920,14 +2915,14 @@
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <Calendar v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full" :pt="{ panel: 'z-40' }" :ptOptions="{ mergeProps: true }"/>
+                                <Calendar v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full" :pt="{ panel: 'z-40' }" :ptOptions="{ mergeProps: true }" />
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center justify-center gap-5">
                                 <Tag value="Lightful"></Tag>
 
                                 <Avatar icon="pi pi-user" class="bg-white dark:bg-surface-900 text-primary-500 dark:text-primary-400" shape="circle" />
 
-                                <Avatar  image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle"  />
+                                <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" />
 
                                 <Avatar label="P" class="bg-white dark:bg-surface-900 text-primary-500 dark:text-primary-400" shape="circle" />
 
@@ -3016,7 +3011,7 @@ export default {
             else if (colorScheme === 'dark') root.classList.add('dark');
 
             this.$appState.darkMode = !this.$appState.darkMode;
-        },
+        }
     },
     computed: {
         isDarkMode() {
@@ -3036,14 +3031,14 @@ export default {
     transition: all 0.4s ease-in-out;
     transform: skew(-26.918deg, 10deg);
 
-    &:hover{
+    &:hover {
         transform: skew(0deg, 0deg);
         z-index: 100;
     }
 }
 
 .stars {
-    background-image: url("assets/Noise-Texture.png");
+    background-image: url('assets/Noise-Texture.png');
 }
 
 @media screen and (max-width: 1420px) {
