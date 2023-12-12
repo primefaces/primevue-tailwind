@@ -31,14 +31,14 @@
                                 <div class="rounded-[0.571rem] bg-surface-50 dark:bg-surface-800 h-[9rem] w-full px-3 py-2">
                                     <div class="flex items-center">
                                         <div class="custom-selectbutton inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] bg-surface-0 dark:bg-surface-900">
-                                        <button
+                                            <button
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': presetbutton_value.value === 'PrimeOne',
-                                                'dark:bg-surface-900': presetbutton_value.value != 'PrimeOne'
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
+                                                'dark:bg-surface-900':!isLara
                                             }"
-                                            @click="presetbutton_value.value = 'PrimeOne'"
+                                            @click="setPreset('lara')"
                                         >
                                             PrimeOne
                                         </button>
@@ -46,12 +46,12 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Wind',
-                                                'dark:bg-surface-900': presetbutton_value.value != 'Wind'
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
+                                                'dark:bg-surface-900': !isWind
                                             }"
-                                            @click="presetbutton_value.value = 'Wind'"
+                                            @click="setPreset('wind')"
                                         >
-                                        Wind
+                                            Wind
                                         </button>
                                     </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="21" viewBox="0 0 41 21" fill="none" class="mt-5 ml-[-3px]">
@@ -2893,10 +2893,9 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': presetbutton_value.value === 'PrimeOne',
-                                                'dark:bg-surface-900': presetbutton_value.value != 'PrimeOne'
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
                                             }"
-                                            @click="presetbutton_value.value = 'PrimeOne'"
+                                            @click="setPreset('lara')"
                                         >
                                             PrimeOne
                                         </button>
@@ -2904,10 +2903,9 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Wind',
-                                                'dark:bg-surface-900': presetbutton_value.value != 'Wind'
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
                                             }"
-                                            @click="presetbutton_value.value = 'Wind'"
+                                            @click="setPreset('wind')"
                                         >
                                             Wind
                                         </button>
@@ -2978,10 +2976,9 @@ export default {
             selectbutton_value: { icon: 'pi pi-th-large', value: 'Grid' },
             lightdark_value: 'light',
             value1: 20,
-            presetbutton_value: { value: 'PrimeOne' },
             presetoptions: [{ value: 'TailwindUI' }, { value: 'Lara' }],
             slider_value: [20, 80],
-            date: '11/01/2023',
+            date: '12/12/2024',
             components: {
                 Button,
                 Dropdown,
@@ -2998,6 +2995,9 @@ export default {
         };
     },
     methods: {
+        setPreset(preset) {
+            this.$appState.preset = preset;
+        },
         switchColorScheme(colorScheme) {
             if (!document.startViewTransition) {
                 toggleColorScheme(colorScheme);
@@ -3019,6 +3019,12 @@ export default {
     computed: {
         isDarkMode() {
             return this.$appState.darkMode;
+        },
+        isLara() {
+            return this.$appState.preset === 'lara';
+        },
+        isWind() {
+            return this.$appState.preset === 'wind';
         }
     }
 };
