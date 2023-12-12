@@ -96,7 +96,7 @@ export default {
             { 'overflow-x-auto': props.inline }
         ]
     }),
-    'datepicker-mask': {
+    datepickerMask: {
         class: ['fixed top-0 left-0 w-full h-full', 'flex items-center justify-center', 'bg-black bg-opacity-90']
     },
     header: ({ props }) => ({
