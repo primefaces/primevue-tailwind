@@ -1,6 +1,6 @@
 :root {
     color-scheme: light;
-    --primary-color-default:rgb(var(--primary-500));
+    --primary-color-default:rgb(var(--primary-600));
     --primary-color-inverse-default:rgb(var(--surface-0));
     --body-bg:rgb(var(--surface-50));
     --body-text-color:rgb(var(--surface-900));
@@ -25,7 +25,7 @@
     --demo-code-button-color: rgb(var(--surface-300));
     --demo-code-button-hover-bg: rgba(255,255,255,.1);
     --demo-code-button-hover-color: rgb(var(--surface-100));
-    --doc-highlight-text-bg: rgb(var(--primary-100));
+    --doc-highlight-text-bg: rgb(var(--primary-500)/.2);
     --doc-highlight-text-color: rgb(var(--primary-900));
     --doc-tab-header-color: rgb(var(--surface-700));
     --focus-ring: 0 0 0 0.2rem rgb(var(--primary-200));

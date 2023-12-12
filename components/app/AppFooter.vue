@@ -1,8 +1,8 @@
 <template>
     <div class="layout-footer">
         <div>
-            <span>PrimeVue by </span>
-            <a href="https://www.primetek.com.tr" target="_blank" rel="noopener noreferrer">PrimeTek</a>
+            <span>Tailwind Presets {{ version }} by </span>
+            <a href="https://www.primetek.com.tr" target="_blank" rel="noopener noreferrer">PrimeVue</a>
         </div>
     </div>
 </template>
