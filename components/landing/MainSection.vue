@@ -21,7 +21,7 @@
                                 <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" />
                             </router-link>
                             <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
-                                <Button label="Give a Star" icon="pi pi-star-fill" iconPos="right" outlined severity="secondary" />
+                                <Button label="Give a Star" icon="pi pi-star-fill text-yellow-400" iconPos="right" text severity='secondary'  />
                             </a>
                         </div>
                     </div>
@@ -2737,8 +2737,10 @@
                                 </div>
                             </div>
                             <div class="w-[20.5rem] flex p-2 flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch prime-card">
-                                <div class="rounded-lg bg-surface-50 dark:bg-surface-800 h-[9rem] w-full flex items-center justify-center">
-                                    <img src="https://primefaces.org/cdn/primevue/images/tailwind/landing/emeraldlogo.png" alt="PrimeVue Logo" class="emerald-logo" />
+                                <div class="rounded-lg bg-surface-50 dark:bg-surface-800 h-[9rem] w-full flex items-center justify-center overflow-hidden">
+                                    <!-- TODO : Update emeraldlogo on CDN and remove from assets -->
+                                    <img src="assets/emeraldlogo.png" alt="PrimeVue Logo" class="emerald-logo" />
+                                    <!-- <img src="https://primefaces.org/cdn/primevue/images/tailwind/landing/emeraldlogo.png" alt="PrimeVue Logo" class="emerald-logo" /> -->
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">
                                     <span class="text-surface-900 dark:text-white text-lg font-medium">Built-on PrimeVue</span>
@@ -5509,11 +5511,11 @@ export default {
 }
 .prime-card {
     .emerald-logo {
-        transition: all 0.4s ease-in;
+        transition: all 0.35s ease-in;
     }
     &:hover {
         .emerald-logo {
-            transform: skew(-8deg, 10deg) scale(1.2);
+            transform: skew(-8deg, 10deg) scale(1.1);
             transition: all 0.4s ease-in-out;
         }
     }
