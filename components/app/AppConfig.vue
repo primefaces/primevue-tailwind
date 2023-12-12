@@ -114,9 +114,9 @@ export default {
             let increments;
 
             if (type === 'primary') {
-                increments = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+                increments = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
             } else if (type === 'surface') {
-                increments = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+                increments = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
             }
 
             colors.forEach((color, index) => {
