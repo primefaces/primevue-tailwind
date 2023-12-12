@@ -1,6 +1,7 @@
 import pkg from '@/package.json';
 import Lara from '@/presets/lara';
 import Wind from '@/presets/wind';
+import { ObjectUtils } from 'primevue/utils';
 import { services } from './services';
 
 const PrimeVue = {
@@ -704,28 +705,28 @@ export default {
 `
     };
 
-    const convertToString = (obj) => {
-        let ret = '{';
+    const stringify = (value, indent = 2, currentIndent = 0) => {
+        const currentIndentStr = ' '.repeat(currentIndent);
+        const nextIndentStr = ' '.repeat(currentIndent + indent);
 
-        for (let k in obj) {
-            let v = obj[k];
-
-            if (typeof v === 'function') {
-                v = v.toString();
-            } else if (v instanceof Array) {
-                v = JSON.stringify(v);
-            } else if (typeof v === 'object') {
-                v = convertToString(v);
-            } else {
-                v = `\`${v}\``;
-            }
-
-            ret += `\n  ${k}: ${v},`;
+        if (ObjectUtils.isArray(value)) {
+            return '[' + value.map((v) => stringify(v, indent, currentIndent + indent)).join(', ') + ']';
+        } else if (ObjectUtils.isDate(value)) {
+            return value.toISOString();
+        } else if (ObjectUtils.isFunction(value)) {
+            return value.toString();
+        } else if (ObjectUtils.isObject(value)) {
+            return (
+                '{\n' +
+                Object.entries(value)
+                    .map(([k, v]) => `${nextIndentStr}${k}: ${stringify(v, indent, currentIndent + indent)}`)
+                    .join(',\n') +
+                `\n${currentIndentStr}` +
+                '}'
+            );
+        } else {
+            return JSON.stringify(value);
         }
-
-        ret += '\n}';
-
-        return ret;
     };
 
     const createPresetFiles = (presetName, stringPresetName) => {
@@ -739,7 +740,9 @@ export default {
                 imports.push(`import ${name} from './${name}'`);
                 keys.push(name);
                 files[`${presetPath}/${name}.js`] = {
-                    content: `export default ${convertToString(value)}`
+                    content: `export default {
+    css: \`${value?.css}\`
+                    }`
                 };
             } else if (name === 'directives') {
                 Object.entries(value).forEach(([dname, dvalue]) => {
@@ -748,27 +751,26 @@ export default {
                     imports.push(`import ${_name} from './${_name}'`);
                     directivesKeys.push(dname === 'badge' ? `badge: badgedirective` : dname);
                     files[`${presetPath}/${_name}/index.js`] = {
-                        content: `export default ${convertToString(dvalue)}`
+                        content: `export default ${stringify(dvalue)}`
                     };
                 });
             } else {
                 imports.push(`import ${name} from './${name}'`);
                 keys.push(name);
                 files[`${presetPath}/${name}/index.js`] = {
-                    content: `export default ${convertToString(value)}`
+                    content: `export default ${stringify(value)}`
                 };
             }
         });
 
         files[`${path}presets/${stringPresetName}/index.js`] = {
-            content: `
-${imports.join(';\n')}
+            content: `${imports.join(';\n')}
 
 export default {
-    directives: {
-        ${directivesKeys.join(',\n')}
-    },
-    ${keys.join(',\n')}
+  directives: {
+    ${directivesKeys.join(',\n\t\t')}
+  },
+  ${keys.join(',\n\t')}
 }
             `
         };
