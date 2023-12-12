@@ -32,12 +32,12 @@ export default {
                     icon: 'pi pi-palette',
                     items: [
                         {
-                            label: 'Styled',
-                            route: '/theming'
+                            label: 'Builder',
+                            route: '/builder'
                         },
                         {
-                            label: 'Unstyled',
-                            route: '/unstyled'
+                            label: 'Gallery',
+                            route: '/gallery'
                         }
                     ]
                 },
@@ -112,12 +112,12 @@ export default {
                     icon: 'pi pi-palette',
                     items: [
                         {
-                            label: 'Styled',
-                            route: '/theming'
+                            label: 'Builder',
+                            route: '/builder'
                         },
                         {
-                            label: 'Unstyled',
-                            route: '/unstyled'
+                            label: 'Gallery',
+                            route: '/gallery'
                         }
                     ]
                 },
@@ -181,12 +181,12 @@ const items = ref([
         icon: 'pi pi-palette',
         items: [
             {
-                label: 'Styled',
-                route: '/theming'
+                label: 'Builder',
+                route: '/builder'
             },
             {
-                label: 'Unstyled',
-                route: '/unstyled'
+                label: 'Gallery',
+                route: '/gallery'
             }
         ]
     },
