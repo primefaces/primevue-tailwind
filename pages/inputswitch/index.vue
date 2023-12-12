@@ -9,7 +9,7 @@ import DisabledDoc from '@/doc/inputswitch/DisabledDoc.vue';
 import ImportDoc from '@/doc/inputswitch/ImportDoc.vue';
 import InvalidDoc from '@/doc/inputswitch/InvalidDoc.vue';
 import PreselectionDoc from '@/doc/inputswitch/PreselectionDoc.vue';
-import PresetDoc from '@/doc/panel/inputswitch/index.vue';
+import PresetDoc from '@/doc/inputswitch/preset/index.vue';
 export default {
     data() {
         return {

@@ -5,8 +5,7 @@
             "components": [
                 {
                     "name": "AutoComplete",
-                    "path": "autocomplete",
-                    "disabled": true
+                    "path": "autocomplete"
                 },
                 {
                     "name": "Calendar",
@@ -23,8 +22,7 @@
                 },
                 {
                     "name": "Chips",
-                    "path": "chips",
-                    "disabled": true
+                    "path": "chips"
                 },
                 {
                     "name": "ColorPicker",
@@ -84,8 +82,7 @@
                 },
                 {
                     "name": "RadioButton",
-                    "path": "radiobutton",
-                    "disabled": true
+                    "path": "radiobutton"
                 },
                 {
                     "name": "Rating",
@@ -136,8 +133,7 @@
                 },
                 {
                     "name": "SplitButton",
-                    "path": "splitbutton",
-                    "disabled": true
+                    "path": "splitbutton"
                 }
             ]
         },
@@ -237,8 +233,7 @@
                 },
                 {
                     "name": "TabView",
-                    "path": "tabview",
-                    "disabled": true
+                    "path": "tabview"
                 },
                 {
                     "name": "Toolbar",
@@ -262,8 +257,7 @@
                 },
                 {
                     "name": "Dialog",
-                    "path": "dialog",
-                    "disabled": true
+                    "path": "dialog"
                 },
                 {
                     "name": "DynamicDialog",
@@ -272,13 +266,11 @@
                 },
                 {
                     "name": "OverlayPanel",
-                    "path": "overlaypanel",
-                    "disabled": true
+                    "path": "overlaypanel"
                 },
                 {
                     "name": "Sidebar",
-                    "path": "sidebar",
-                    "disabled": true
+                    "path": "sidebar"
                 },
                 {
                     "name": "Tooltip",
@@ -317,13 +309,11 @@
                 },
                 {
                     "name": "Menu",
-                    "path": "menu",
-                    "disabled": true
+                    "path": "menu"
                 },
                 {
                     "name": "Menubar",
-                    "path": "menubar",
-                    "disabled": true
+                    "path": "menubar"
                 },
                 {
                     "name": "MegaMenu",
@@ -337,8 +327,7 @@
                 },
                 {
                     "name": "Steps",
-                    "path": "steps",
-                    "disabled": true
+                    "path": "steps"
                 },
                 {
                     "name": "TabMenu",
@@ -347,8 +336,7 @@
                 },
                 {
                     "name": "TieredMenu",
-                    "path": "tieredmenu",
-                    "disabled": true
+                    "path": "tieredmenu"
                 }
             ]
         },
@@ -357,18 +345,15 @@
             "components": [
                 {
                     "name": "Message",
-                    "path": "message",
-                    "disabled": true
+                    "path": "message"
                 },
                 {
                     "name": "InlineMessage",
-                    "path": "inlinemessage",
-                    "disabled": true
+                    "path": "inlinemessage"
                 },
                 {
                     "name": "Toast",
-                    "path": "toast",
-                    "disabled": true
+                    "path": "toast"
                 }
             ]
         },
@@ -415,8 +400,7 @@
                 },
                 {
                     "name": "Chip",
-                    "path": "chip",
-                    "disabled": true
+                    "path": "chip"
                 },
                 {
                     "name": "Inplace",
@@ -435,8 +419,7 @@
                 },
                 {
                     "name": "ProgressBar",
-                    "path": "progressbar",
-                    "disabled": true
+                    "path": "progressbar"
                 },
                 {
                     "name": "ProgressSpinner",
