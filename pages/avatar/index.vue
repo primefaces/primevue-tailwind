@@ -9,7 +9,7 @@ import IconDoc from '@/doc/avatar/IconDoc.vue';
 import ImageDoc from '@/doc/avatar/ImageDoc.vue';
 import ImportDoc from '@/doc/avatar/ImportDoc.vue';
 import LabelDoc from '@/doc/avatar/LabelDoc.vue';
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
+import PresetDoc from '@/doc/autocomplete/preset/index.vue';
 
 export default {
     data() {

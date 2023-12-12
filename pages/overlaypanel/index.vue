@@ -14,7 +14,7 @@
 import AccessibilityDoc from '@/doc/overlaypanel/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/overlaypanel/BasicDoc.vue';
 import ImportDoc from '@/doc/overlaypanel/ImportDoc.vue';
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/overlaypanel/preset/index.vue';
 export default {
     data() {
         return {

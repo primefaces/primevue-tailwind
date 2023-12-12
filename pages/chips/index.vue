@@ -10,7 +10,7 @@ import ImportDoc from '@/doc/chips/ImportDoc.vue';
 import InvalidDoc from '@/doc/chips/InvalidDoc.vue';
 import SeparatorDoc from '@/doc/chips/SeparatorDoc.vue';
 import TemplateDoc from '@/doc/chips/TemplateDoc.vue';
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
+import PresetDoc from '@/doc/chips/preset/index.vue';
 
 export default {
     data() {

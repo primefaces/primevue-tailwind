@@ -10,41 +10,89 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+fieldset: {
+    root: {
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            'block',
 
-            // Sizing
-            'm-0',
-            {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
-
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            // Spacing
+            'px-4 pt-2 py-3',
+            'inline-size-min',
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
-
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
-
-            // Transitions
-            'transition-colors duration-200'
+            'rounded-md',
+            // Color
+            'border border-surface-200 dark:border-surface-700',
+            'bg-surface-0 dark:bg-surface-900',
+            'text-surface-700 dark:text-surface-0/80'
         ]
-    })
+    },
+    legend: ({ props }) => ({
+        class: [
+            // Font
+            'font-bold',
+            'leading-none',
+
+            //Spacing
+            { 'p-0': props.toggleable, 'p-5': !props.toggleable },
+
+            // Shape
+            'rounded-md',
+
+            // Color
+            'text-surface-700 dark:text-surface-0/80',
+            'border border-surface-200 dark:border-surface-700',
+            'bg-surface-50 dark:bg-surface-900',
+
+            // Transition
+            'transition-none',
+
+            // States
+            { 'hover:bg-surface-100 hover:border-surface-200 hover:text-surface-900 dark:hover:text-surface-0/80 dark:hover:bg-surface-800/80': props.toggleable }
+        ]
+    }),
+    toggler: ({ props }) => ({
+        class: [
+            // Alignments
+            'flex items-center justify-center',
+            'relative',
+
+            //Spacing
+            { 'p-5': props.toggleable },
+
+            // Shape
+            { 'rounded-md': props.toggleable },
+
+            // Color
+            { 'text-surface-700 dark:text-surface-200 hover:text-surface-900 hover:text-surface-900': props.toggleable },
+
+            // States
+            { 'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable },
+            { 'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50': props.toggleable },
+
+            // Misc
+            {
+                'transition-none cursor-pointer overflow-hidden select-none': props.toggleable
+            }
+        ]
+    }),
+    togglerIcon: {
+        class: 'mr-2 inline-block'
+    },
+    legendTitle: {
+        class: 'flex items-center justify-center leading-none'
+    },
+    content: {
+        class: 'p-5'
+    },
+    transition: {
+        enterFromClass: 'max-h-0',
+        enterActiveClass: 'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
+        enterToClass: 'max-h-[1000px]',
+        leaveFromClass: 'max-h-[1000px]',
+        leaveActiveClass: 'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
+        leaveToClass: 'max-h-0'
+    }
 }
 `
             }

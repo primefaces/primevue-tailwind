@@ -10,39 +10,140 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+slider: {
+    root: ({ props }) => ({
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            'relative',
 
-            // Sizing
-            'm-0',
+            // Size
+            { 'h-1 w-60': props.orientation == 'horizontal', 'w-1 h-56': props.orientation == 'vertical' },
+
+            // Shape
+            'border-0',
+
+            // Colors
+            'bg-surface-100 dark:bg-surface-700',
+
+            // States
+            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
+        ]
+    }),
+    range: ({ props }) => ({
+        class: [
+            // Position
+            'block absolute',
             {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
+                'top-0 left-0': props.orientation == 'horizontal',
+                'bottom-0 left-0': props.orientation == 'vertical'
+            },
+
+            //Size
+            {
+                'h-full': props.orientation == 'horizontal',
+                'w-full': props.orientation == 'vertical'
             },
 
             // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'bg-primary-500 dark:bg-primary-400'
+        ]
+    }),
+    handle: ({ props }) => ({
+        class: [
+            'block',
 
-            // Shape
-            'rounded-lg',
-            'appearance-none',
-
-            // Interactions
+            // Size
+            'h-[1.143rem]',
+            'w-[1.143rem]',
             {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'vertical'
             },
 
+            // Shape
+            'rounded-full',
+            'border-2',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-600',
+            'border-primary-500 dark:border-primary-400',
+
+            // States
+            'hover:bg-primary-500 hover:border-primary-500',
+            'focus:outline-none focus:outline-offset-0',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
             // Transitions
-            'transition-colors duration-200'
+            'transition duration-200',
+
+            // Misc
+            'cursor-grab',
+            'touch-action-none'
+        ]
+    }),
+    starthandler: ({ props }) => ({
+        class: [
+            'block',
+
+            // Size
+            'h-[1.143rem]',
+            'w-[1.143rem]',
+            {
+                'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical'
+            },
+
+            // Shape
+            'rounded-full',
+            'border-2',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-600',
+            'border-primary-500 dark:border-primary-400',
+
+            // States
+            'hover:bg-primary-500 hover:border-primary-500',
+            'focus:outline-none focus:outline-offset-0',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
+            // Transitions
+            'transition duration-200',
+
+            // Misc
+            'cursor-grab',
+            'touch-action-none'
+        ]
+    }),
+    endhandler: ({ props }) => ({
+        class: [
+            'block',
+
+            // Size
+            'h-[1.143rem]',
+            'w-[1.143rem]',
+            {
+                'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical'
+            },
+
+            // Shape
+            'rounded-full',
+            'border-2',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-600',
+            'border-primary-500 dark:border-primary-400',
+
+            // States
+            'hover:bg-primary-500 hover:border-primary-500',
+            'focus:outline-none focus:outline-offset-0',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
+            // Transitions
+            'transition duration-200',
+
+            // Misc
+            'cursor-grab',
+            'touch-action-none'
         ]
     })
 }

@@ -16,7 +16,7 @@ import BasicDoc from '@/doc/inlinemessage/BasicDoc.vue';
 import FormDoc from '@/doc/inlinemessage/FormDoc.vue';
 import ImportDoc from '@/doc/inlinemessage/ImportDoc.vue';
 import SeverityDoc from '@/doc/inlinemessage/SeverityDoc.vue';
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/inlinemessage/preset/index.vue';
 export default {
     data() {
         return {

@@ -10,41 +10,101 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+toast: {
+    root: ({ props }) => ({
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            //Size and Shape
+            'w-96 rounded-md',
 
-            // Sizing
-            'm-0',
-            {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
+            // Positioning
+            { '-translate-x-2/4': props.position == 'top-center' || props.position == 'bottom-center' }
+        ]
+    }),
+    container: ({ props }) => ({
+        class: [
+            'my-4 rounded-md w-full',
+            'border-solid border-0 border-l-[6px]',
+            'backdrop-blur-[10px] shadow-md',
 
             // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            {
+                'bg-blue-100/70 dark:bg-blue-500/20': props.message.severity == 'info',
+                'bg-green-100/70 dark:bg-green-500/20': props.message.severity == 'success',
+                'bg-orange-100/70 dark:bg-orange-500/20': props.message.severity == 'warn',
+                'bg-red-100/70 dark:bg-red-500/20': props.message.severity == 'error'
+            },
+            {
+                'border-blue-500 dark:border-blue-400': props.message.severity == 'info',
+                'border-green-500 dark:border-green-400': props.message.severity == 'success',
+                'border-orange-500 dark:border-orange-400': props.message.severity == 'warn',
+                'border-red-500 dark:border-red-400': props.message.severity == 'error'
+            },
+            {
+                'text-blue-700 dark:text-blue-300': props.message.severity == 'info',
+                'text-green-700 dark:text-green-300': props.message.severity == 'success',
+                'text-orange-700 dark:text-orange-300': props.message.severity == 'warn',
+                'text-red-700 dark:text-red-300': props.message.severity == 'error'
+            }
+        ]
+    }),
+    content: {
+        class: 'flex items-start p-4'
+    },
+    icon: {
+        class: [
+            // Sizing and Spacing
+            'w-6 h-6',
+            'text-lg leading-none mr-2 shrink-0'
+        ]
+    },
+    text: {
+        class: [
+            // Font and Text
+            'text-base leading-none',
+            'ml-2',
+            'flex-1'
+        ]
+    },
+    summary: {
+        class: 'font-bold block'
+    },
+    detail: {
+        class: 'mt-2 block'
+    },
+    closebutton: {
+        class: [
+            // Flexbox
+            'flex items-center justify-center',
+
+            // Size
+            'w-8 h-8',
+
+            // Spacing and Misc
+            'ml-auto  relative',
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
+            'rounded-full',
 
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
+            // Colors
+            'bg-transparent',
 
             // Transitions
-            'transition-colors duration-200'
+            'transition duration-200 ease-in-out',
+
+            // States
+            'hover:bg-surface-0/50 dark:hover:bg-surface-0/10',
+
+            // Misc
+            'overflow-hidden'
         ]
-    })
+    },
+    transition: {
+        enterFromClass: 'opacity-0 translate-y-2/4',
+        enterActiveClass: 'transition-[transform,opacity] duration-300',
+        leaveFromClass: 'max-h-[1000px]',
+        leaveActiveClass: '!transition-[max-height_.45s_cubic-bezier(0,1,0,1),opacity_.3s,margin-bottom_.3s] overflow-hidden',
+        leaveToClass: 'max-h-0 opacity-0 mb-0'
+    }
 }
 `
             }

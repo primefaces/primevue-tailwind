@@ -13,7 +13,7 @@ import PositionDoc from '@/doc/dialog/PositionDoc.vue';
 import ResponsiveDoc from '@/doc/dialog/ResponsiveDoc.vue';
 import TemplateDoc from '@/doc/dialog/TemplateDoc.vue';
 import WithoutModalDoc from '@/doc/dialog/WithoutModalDoc.vue';
-import PresetDoc from '@/doc/inputnumber/preset/index.vue';
+import PresetDoc from '@/doc/dialog/preset/index.vue';
 
 export default {
     data() {

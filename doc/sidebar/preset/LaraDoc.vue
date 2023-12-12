@@ -10,41 +10,154 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+sidebar: {
+    root: ({ props }) => ({
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            // Flexbox
+            'flex flex-col',
 
-            // Sizing
-            'm-0',
+            // Position
+            'relative',
+            { '!transition-none !transform-none !w-screen !h-screen !max-h-full !top-0 !left-0': props.position == 'full' },
+
+            // Size
             {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
+                'h-full w-80': props.position == 'left' || props.position == 'right',
+                'h-auto w-full': props.position == 'top' || props.position == 'bottom'
             },
-
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
+            'border-0 dark:border',
+            'shadow-lg',
 
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-white/80',
+            'dark:border-surface-700',
 
             // Transitions
-            'transition-colors duration-200'
+            'transition-transform',
+            'duration-300',
+
+            // Misc
+            'pointer-events-auto'
         ]
-    })
+    }),
+    header: {
+        class: [
+            // Flexbox and Alignment
+            'flex items-center justify-between',
+            'shrink-0',
+
+            // Spacing
+            'p-5',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-surface-0/80'
+        ]
+    },
+    title: {
+        class: ['font-bold text-lg']
+    },
+    icons: {
+        class: ['flex items-center']
+    },
+    closeButton: {
+        class: [
+            'relative',
+
+            // Flexbox and Alignment
+            'flex items-center justify-center',
+
+            // Size and Spacing
+            'mr-2',
+            'last:mr-0',
+            'w-8 h-8',
+
+            // Shape
+            'border-0',
+            'rounded-full',
+
+            // Colors
+            'text-surface-500',
+            'bg-transparent',
+
+            // Transitions
+            'transition duration-200 ease-in-out',
+
+            // States
+            'hover:text-surface-700 dark:hover:text-white/80',
+            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
+            // Misc
+            'overflow-hidden'
+        ]
+    },
+    closeButtonIcon: {
+        class: [
+            // Display
+            'inline-block',
+
+            // Size
+            'w-4',
+            'h-4'
+        ]
+    },
+    content: {
+        class: [
+            // Spacing and Size
+            'p-5',
+            'pt-0',
+            'h-full',
+            'w-full',
+
+            // Growth and Overflow
+            'grow',
+            'overflow-y-auto'
+        ]
+    },
+    mask: ({ props }) => ({
+        class: [
+            // Transitions
+            'transition',
+            'duration-200',
+            { 'p-5': !props.position == 'full' },
+
+            // Background and Effects
+            { 'bg-black/40': props.modal, 'backdrop-blur-sm': props.modal }
+        ]
+    }),
+    transition: ({ props }) => {
+        return props.position === 'top'
+            ? {
+                  enterFromClass: 'translate-x-0 -translate-y-full translate-z-0',
+                  leaveToClass: 'translate-x-0 -translate-y-full translate-z-0'
+              }
+            : props.position === 'bottom'
+            ? {
+                  enterFromClass: 'translate-x-0 translate-y-full translate-z-0',
+                  leaveToClass: 'translate-x-0 translate-y-full translate-z-0'
+              }
+            : props.position === 'left'
+            ? {
+                  enterFromClass: '-translate-x-full translate-y-0 translate-z-0',
+                  leaveToClass: '-translate-x-full translate-y-0 translate-z-0'
+              }
+            : props.position === 'right'
+            ? {
+                  enterFromClass: 'translate-x-full translate-y-0 translate-z-0',
+                  leaveToClass: 'translate-x-full translate-y-0 translate-z-0'
+              }
+            : {
+                  enterFromClass: 'opacity-0',
+                  enterActiveClass: 'transition-opacity duration-400 ease-in',
+                  leaveActiveClass: 'transition-opacity duration-400 ease-in',
+                  leaveToClass: 'opacity-0'
+              };
+    }
 }
 `
             }

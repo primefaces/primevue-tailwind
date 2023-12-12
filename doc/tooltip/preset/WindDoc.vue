@@ -10,39 +10,42 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+tooltip: {
+    root: ({ context, props }) => ({
         class: [
-            // Font
-            'font-sans leading-5',
-
-            // Sizing
-            'w-full md:w-56',
-            'm-0',
+            // Position
+            'absolute',
+            // Spacing
             {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
-            },
+                'px-1.5': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                'py-1.5': context?.top || context?.bottom
+            }
+        ]
+    }),
+    arrow: {
+        class: 'hidden'
+    },
+    text: {
+        class: [
+            // Size
+            'text-xs leading-none',
 
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
-            'shadow-sm',
+            // Spacing
+            'p-2',
 
             // Shape
             'rounded-md',
-            'appearance-none',
 
-            // Interactions
-            {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            }
+            // Color
+            'text-surface-900 dark:text-surface-0/80',
+            'bg-surface-0 dark:bg-surface-900',
+            'ring-1 ring-inset ring-surface-200 dark:ring-surface-800 ring-offset-0',
+
+            // Misc
+            'whitespace-pre-line',
+            'break-words'
         ]
-    })
+    }
 }
 `
             }

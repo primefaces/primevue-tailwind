@@ -10,39 +10,50 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+chip: {
+    root: {
         class: [
-            // Font
-            'font-sans leading-5',
+            // Flexbox
+            'inline-flex items-center',
 
-            // Sizing
-            'w-full md:w-56',
-            'm-0',
-            {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
-            },
-
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
-            'shadow-sm',
+            // Spacing
+            'px-2 py-0.5',
 
             // Shape
-            'rounded-md',
-            'appearance-none',
+            'rounded-[1.14rem]',
 
-            // Interactions
-            {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            }
+            // Colors
+            'text-surface-700 dark:text-surface-0/70',
+            'bg-surface-200 dark:bg-surface-700'
         ]
-    })
+    },
+    label: {
+        class: 'text-xs leading-6 mx-0'
+    },
+    icon: {
+        class: 'leading-6 mr-2'
+    },
+    image: {
+        class: ['w-6 h-6 mr-2', 'rounded-full']
+    },
+    removeIcon: {
+        class: [
+            // Shape
+            'rounded-md leading-6',
+
+            // Spacing
+            'ml-2',
+
+            // Size
+            'w-4 h-4',
+
+            // Transition
+            'transition duration-200 ease-in-out',
+
+            // Misc
+            'cursor-pointer'
+        ]
+    }
 }
 `
             }

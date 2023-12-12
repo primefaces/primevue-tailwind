@@ -10,39 +10,49 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+inputswitch: {
+    root: ({ props }) => ({
         class: [
-            // Font
-            'font-sans text-base leading-none',
-
-            // Sizing
-            'm-0',
+            'inline-block relative',
+            'w-12 h-7',
             {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
+                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
             },
-
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50  dark:focus:ring-primary-300/50'
+        ]
+    }),
+    slider: ({ props }) => ({
+        class: [
+            // Position
+            'absolute top-0 left-0 right-0 bottom-0',
+            { 'before:transform before:translate-x-5': props.modelValue },
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
+            'rounded-2xl',
 
-            // Interactions
+            // Before:
+            'before:absolute before:top-1/2 before:left-1',
+            'before:-mt-2.5',
+            'before:h-5 before:w-5',
+            'before:rounded-full',
+            'before:transition-duration-200',
+            'before:bg-surface-0 before:dark:bg-surface-900',
+
+            // Colors
+            'border border-transparent',
             {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                'bg-surface-200 dark:bg-surface-700': !props.modelValue,
+                'bg-primary-500 dark:bg-primary-400': props.modelValue
             },
 
-            // Transitions
-            'transition-colors duration-200'
+            // States
+            { 'hover:bg-surface-300 hover:dark:bg-surface-600 ': !props.modelValue },
+
+            // Transition
+            'transition-colors duration-200',
+
+            // Misc
+            'cursor-pointer'
         ]
     })
 }

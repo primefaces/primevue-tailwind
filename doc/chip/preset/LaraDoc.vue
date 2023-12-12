@@ -10,41 +10,50 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+chip: {
+    root: {
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            // Flexbox
+            'inline-flex items-center',
 
-            // Sizing
-            'm-0',
-            {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
-
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            // Spacing
+            'px-3',
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
+            'rounded-[1.14rem]',
 
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
-
-            // Transitions
-            'transition-colors duration-200'
+            // Colors
+            'text-surface-700 dark:text-white/70',
+            'bg-surface-200 dark:bg-surface-700'
         ]
-    })
+    },
+    label: {
+        class: 'leading-6 my-1.5 mx-0'
+    },
+    icon: {
+        class: 'leading-6 mr-2'
+    },
+    image: {
+        class: ['w-9 h-9 -ml-3 mr-2', 'rounded-full']
+    },
+    removeIcon: {
+        class: [
+            // Shape
+            'rounded-md leading-6',
+
+            // Spacing
+            'ml-2',
+
+            // Size
+            'w-4 h-4',
+
+            // Transition
+            'transition duration-200 ease-in-out',
+
+            // Misc
+            'cursor-pointer'
+        ]
+    }
 }
 `
             }

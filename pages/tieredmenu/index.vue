@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/tieredmenu/preset/index.vue';
 import AccessibilityDoc from '@/doc/tieredmenu/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tieredmenu/BasicDoc.vue';
 import CommandDoc from '@/doc/tieredmenu/CommandDoc.vue';

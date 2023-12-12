@@ -10,37 +10,138 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+slider: {
+    root: ({ props }) => ({
         class: [
-            // Font
-            'font-sans leading-5',
+            'relative',
+            'flex items-center',
 
-            // Sizing
-            'w-full md:w-56',
-            'm-0',
-            {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
-            },
-
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
-            'shadow-sm',
+            // Size
+            { 'h-2 w-full min-w-[15rem]': props.orientation == 'horizontal', 'w-2 h-full min-h-[15rem]': props.orientation == 'vertical' },
 
             // Shape
-            'rounded-md',
-            'appearance-none',
+            'border-0 rounded-lg',
 
-            // Interactions
+            // Colors
+            'bg-surface-100 dark:bg-surface-700',
+
+            // States
+            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
+        ]
+    }),
+    range: ({ props }) => ({
+        class: [
+            // Position
+            'block absolute',
             {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            }
+                'top-0 left-0': props.orientation == 'horizontal',
+                'bottom-0 left-0': props.orientation == 'vertical'
+            },
+
+            //Size
+            {
+                'h-full': props.orientation == 'horizontal',
+                'w-full': props.orientation == 'vertical'
+            },
+
+            //Shape
+            'rounded-lg',
+
+            // Colors
+            'bg-primary-500 dark:bg-primary-400'
+        ]
+    }),
+    handle: ({ props }) => ({
+        class: [
+            'block',
+
+            // Size
+            'h-4',
+            'w-4',
+            {
+                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+            },
+
+            // Shape
+            'rounded-full',
+            'ring-2',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-900',
+            'ring-primary-500 dark:ring-primary-400',
+
+            // States
+            'focus:outline-none focus:outline-offset-0',
+
+            // Transitions
+            'transition duration-200',
+
+            // Misc
+            'cursor-grab',
+            'touch-action-none'
+        ]
+    }),
+    starthandler: ({ props }) => ({
+        class: [
+            'block',
+
+            // Size
+            'h-4',
+            'w-4',
+            {
+                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+            },
+
+            // Shape
+            'rounded-full',
+            'ring-2',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-900',
+            'ring-primary-500 dark:ring-primary-400',
+
+            // States
+            'focus:outline-none focus:outline-offset-0',
+
+            // Transitions
+            'transition duration-200',
+
+            // Misc
+            'cursor-grab',
+            'touch-action-none'
+        ]
+    }),
+    endhandler: ({ props }) => ({
+        class: [
+            'block',
+
+            // Size
+            'h-4',
+            'w-4',
+            {
+                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+            },
+
+            // Shape
+            'rounded-full',
+            'ring-2',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-900',
+            'ring-primary-500 dark:ring-primary-400',
+
+            // States
+            'focus:outline-none focus:outline-offset-0',
+
+            // Transitions
+            'transition duration-200',
+
+            // Misc
+            'cursor-grab',
+            'touch-action-none'
         ]
     })
 }

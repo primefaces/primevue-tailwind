@@ -10,39 +10,34 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+inlinemessage: {
+    root: ({ props }) => ({
         class: [
-            // Font
-            'font-sans leading-5',
-
-            // Sizing
-            'w-full md:w-56',
-            'm-0',
+            'inline-flex items-center justify-center align-top gap-2',
+            'py-2 px-3 m-0 rounded-md',
+            'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
             {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
-            },
-
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
-            'shadow-sm',
-
-            // Shape
-            'rounded-md',
-            'appearance-none',
-
-            // Interactions
-            {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                'text-blue-500 dark:text-blue-300': props.severity == 'info',
+                'text-green-500 dark:text-green-300': props.severity == 'success',
+                'text-orange-500 dark:text-orange-300': props.severity == 'warn',
+                'text-red-500 dark:text-red-300': props.severity == 'error'
             }
         ]
-    })
+    }),
+    icon: {
+        class: [
+            // Sizing and Spacing
+            'w-4 h-4',
+            'shrink-0'
+        ]
+    },
+    text: {
+        class: [
+            // Font and Text
+            'text-sm leading-none',
+            'font-medium'
+        ]
+    }
 }
 `
             }

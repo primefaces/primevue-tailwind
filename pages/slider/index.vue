@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/slider/preset/index.vue';
 import AccessibilityDoc from '@/doc/slider/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/slider/BasicDoc.vue';
 import ImportDoc from '@/doc/slider/ImportDoc.vue';

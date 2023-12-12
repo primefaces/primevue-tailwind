@@ -10,41 +10,47 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+avatar: {
+    root: ({ props, parent }) => ({
         class: [
             // Font
-            'font-sans text-base leading-none',
-
-            // Sizing
-            'm-0',
             {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
+                'text-xl': props.size == 'large',
+                'text-2xl': props.size == 'xlarge'
             },
+
+            // Alignments
+            'inline-flex items-center justify-center',
+            'relative',
+
+            // Sizes
+            {
+                'h-8 w-8': props.size == null || props.size == 'normal',
+                'w-12 h-12': props.size == 'large',
+                'w-16 h-16': props.size == 'xlarge'
+            },
+            { '-ml-4': parent.instance.$style?.name == 'avatargroup' },
+
+            // Shapes
+            {
+                'rounded-lg': props.shape == 'square',
+                'rounded-full': props.shape == 'circle'
+            },
+            { 'border-2': parent.instance.$style?.name == 'avatargroup' },
 
             // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
-
-            // Shape
-            'rounded-lg',
-            'appearance-none',
-
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
-
-            // Transitions
-            'transition-colors duration-200'
+            'bg-surface-300 dark:bg-surface-700',
+            { 'border-white dark:border-surface-800': parent.instance.$style?.name == 'avatargroup' }
         ]
-    })
+    }),
+    image: {
+        class: 'h-full w-full'
+    }
+},
+avatargroup:{
+    root: {
+        class: 'flex items-center'
+    }
 }
 `
             }

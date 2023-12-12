@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
+import PresetDoc from '@/doc/ripple/preset/index.vue';
 import AccessibilityDoc from '@/doc/ripple/AccessibilityDoc.vue';
 import ConfigurationDoc from '@/doc/ripple/ConfigurationDoc.vue';
 import CustomDoc from '@/doc/ripple/CustomDoc.vue';

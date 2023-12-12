@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
+import PresetDoc from '@/doc/selectbutton/preset/index.vue';
 import AccessibilityDoc from '@/doc/selectbutton/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/selectbutton/BasicDoc.vue';
 import DisabledDoc from '@/doc/selectbutton/DisabledDoc.vue';

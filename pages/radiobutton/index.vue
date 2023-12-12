@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
+import PresetDoc from '@/doc/radiobutton/preset/index.vue';
 import AccessibilityDoc from '@/doc/radiobutton/AccessibilityDoc.vue';
 import DisabledDoc from '@/doc/radiobutton/DisabledDoc.vue';
 import DynamicDoc from '@/doc/radiobutton/DynamicDoc.vue';

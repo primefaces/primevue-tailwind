@@ -10,39 +10,42 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+card: {
+    root: {
         class: [
-            // Font
-            'font-sans leading-5',
+            //Shape
+            'rounded-lg',
+            'shadow-md',
 
-            // Sizing
-            'w-full md:w-56',
-            'm-0',
-            {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
-            },
-
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+            //Color
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
-            'shadow-sm',
-
-            // Shape
-            'rounded-md',
-            'appearance-none',
-
-            // Interactions
-            {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            }
+            'text-surface-700 dark:text-surface-0/80'
         ]
-    })
+    },
+    header: {
+        class: ['border-b border-surface-200 dark:border-surface-700']
+    },
+    body: {
+        class: 'py-5'
+    },
+    title: {
+        class: 'text-lg font-medium mb-2 px-5 md:px-6'
+    },
+    subtitle: {
+        class: [
+            //Spacing
+            'mb-1 px-5 md:px-6',
+
+            //Color
+            'text-surface-600 dark:text-surface-0/60'
+        ]
+    },
+    content: {
+        class: 'py-6 px-5 md:px-6'
+    },
+    footer: {
+        class: ['px-5 md:px-6 pt-5 pb-0', 'border-t border-surface-200 dark:border-surface-700']
+    }
 }
 `
             }

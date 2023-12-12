@@ -10,41 +10,60 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+progressbar: {
+    root: {
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            // Position and Overflow
+            'overflow-hidden',
+            'relative',
 
-            // Sizing
-            'm-0',
-            {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
+            // Shape and Size
+            'border-0',
+            'h-6',
+            'rounded-md',
 
             // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'bg-surface-100 dark:bg-surface-700'
+        ]
+    },
+    value: ({ props }) => ({
+        class: [
+            // Flexbox & Overflow & Position
+            { 'absolute flex items-center justify-center overflow-hidden': props.mode !== 'indeterminate' },
+
+            // Colors
+            'bg-primary-500 dark:bg-primary-400',
+
+            // Spacing & Sizing
+            'm-0',
+            { 'h-full w-0': props.mode !== 'indeterminate' },
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
-
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
+            'border-0',
 
             // Transitions
-            'transition-colors duration-200'
+            {
+                'transition-width duration-1000 ease-in-out': props.mode !== 'indeterminate',
+                'progressbar-value-animate': props.mode == 'indeterminate'
+            },
+
+            // Before & After (indeterminate)
+            {
+                'before:absolute before:top-0 before:left-0 before:bottom-0 before:bg-inherit ': props.mode == 'indeterminate',
+                'after:absolute after:top-0 after:left-0 after:bottom-0 after:bg-inherit after:delay-1000': props.mode == 'indeterminate'
+            }
         ]
-    })
+    }),
+    label: {
+        class: [
+            // Flexbox
+            'inline-flex',
+
+            // Font and Text
+            'text-white dark:text-surface-900',
+            'leading-6'
+        ]
+    }
 }
 `
             }

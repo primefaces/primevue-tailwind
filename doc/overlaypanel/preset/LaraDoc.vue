@@ -10,41 +10,39 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+overlaypanel: {
+    root: {
         class: [
-            // Font
-            'font-sans text-base leading-none',
-
-            // Sizing
-            'm-0',
-            {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
-
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
-
             // Shape
-            'rounded-lg',
-            'appearance-none',
+            'rounded-md shadow-lg',
+            'border-0 dark:border',
 
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
+            // Position
+            'absolute left-0 top-0 mt-2',
+            'z-40 transform origin-center',
 
-            // Transitions
-            'transition-colors duration-200'
+            // Color
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-surface-0/80',
+            'dark:border-surface-700',
+
+            // Before: Triangle
+            'before:absolute before:-top-2 before:ml-4',
+            'before:w-0 before:h-0',
+            'before:border-transparent before:border-solid',
+            'before:border-x-[0.5rem] before:border-b-[0.5rem]',
+            'before:border-t-0 before:border-b-surface-0 dark:before:border-b-surface-800'
         ]
-    })
+    },
+    content: {
+        class: 'p-5 items-center flex'
+    },
+    transition: {
+        enterFromClass: 'opacity-0 scale-y-[0.8]',
+        enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
+        leaveActiveClass: 'transition-opacity duration-100 ease-linear',
+        leaveToClass: 'opacity-0'
+    }
 }
 `
             }

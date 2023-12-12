@@ -14,15 +14,14 @@ inputtext: {
     root: ({ props, context }) => ({
         class: [
             // Font
-            'font-sans leading-5',
+            'font-sans leading-6',
 
-            // Sizing
-            'w-full md:w-56',
+            // Spacing
             'm-0',
             {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
+                'py-3 px-4 text-lg sm:text-md': props.size == 'large',
+                'py-1 px-2 sm:text-sm': props.size == 'small',
+                'py-1.5 px-3 sm:text-sm': props.size == null
             },
 
             // Colors
@@ -38,7 +37,7 @@ inputtext: {
 
             // Interactions
             {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
+                'outline-none focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
                 'opacity-60 select-none pointer-events-none cursor-default': context.disabled
             }
         ]

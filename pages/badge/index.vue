@@ -10,7 +10,7 @@ import ImportDoc from '@/doc/badge/ImportDoc.vue';
 import PositionDoc from '@/doc/badge/PositionDoc.vue';
 import SeverityDoc from '@/doc/badge/SeverityDoc.vue';
 import SizeDoc from '@/doc/badge/SizeDoc.vue';
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/badge/preset/index.vue';
 export default {
     data() {
         return {

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/splitbutton/preset/index.vue';
 import AccessibilityDoc from '@/doc/splitbutton/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/splitbutton/BasicDoc.vue';
 import DisabledDoc from '@/doc/splitbutton/DisabledDoc.vue';

@@ -10,41 +10,51 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+tooltip: {
+    root: ({ context, props }) => ({
         class: [
-            // Font
-            'font-sans text-base leading-none',
-
-            // Sizing
-            'm-0',
+            // Position and Shadows
+            'absolute',
+            'shadow-md',
+            'p-fadein',
+            // Spacing
             {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
+                'py-0 px-1': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                'py-1 px-0': context?.top || context?.bottom
+            }
+        ]
+    }),
+    arrow: ({ context, props }) => ({
+        class: [
+            // Position
 
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'absolute',
+
+            // Size
+            'w-0',
+            'h-0',
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
-
-            // Interactions
+            'border-transparent',
+            'border-solid',
             {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                'border-y-[0.25rem] border-r-[0.25rem] border-l-0 border-r-surface-600': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                'border-y-[0.25rem] border-l-[0.25rem] border-r-0 border-l-surface-600': context?.left,
+                'border-x-[0.25rem] border-t-[0.25rem] border-b-0 border-t-surface-600': context?.top,
+                'border-x-[0.25rem] border-b-[0.25rem] border-t-0 border-b-surface-600': context?.bottom
             },
 
-            // Transitions
-            'transition-colors duration-200'
+            // Spacing
+            {
+                '-m-t-1 ': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                '-m-t-1': context?.left,
+                '-m-l-1': context?.top || context?.bottom
+            }
         ]
-    })
+    }),
+    text: {
+        class: ['p-3', 'bg-surface-600 dark:bg-surface-700', 'text-white', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words']
+    }
 }
 `
             }

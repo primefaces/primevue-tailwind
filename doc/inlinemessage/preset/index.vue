@@ -1,7 +1,7 @@
 <template>
     <div class="doc-main">
         <div class="doc-intro">
-            <h1>InputText Presets</h1>
+            <h1>InlineMessage Presets</h1>
         </div>
         <DocSections :docs="docs" />
     </div>

@@ -10,39 +10,50 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+selectbutton: {
+    root: ({ props }) => ({
+        class: ['shadow-sm', { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }]
+    }),
+    button: ({ context }) => ({
         class: [
+            'relative',
             // Font
-            'font-sans leading-5',
+            'text-sm',
+            'leading-none',
 
-            // Sizing
-            'w-full md:w-56',
-            'm-0',
-            {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
-            },
+            // Flex Alignment
+            'inline-flex items-center align-bottom text-center',
 
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
-            'shadow-sm',
+            // Spacing
+            'px-2.5 py-1.5',
 
             // Shape
-            'rounded-md',
-            'appearance-none',
+            'ring-1 ring-surface-200 dark:ring-surface-700',
+            'first:rounded-l-md first:rounded-tr-none first:rounded-br-none',
+            'last:rounded-tl-none last:rounded-bl-none last:rounded-r-md ',
 
-            // Interactions
+            // Color
             {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            }
+                'bg-surface-0 dark:bg-surface-900': !context.active,
+                'text-surface-700 dark:text-white/80': !context.active,
+                'bg-surface-100 dark:bg-surface-700 border-primary-500 dark:border-primary-400': context.active
+            },
+
+            // States
+            'focus:outline-none focus:outline-offset-0 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'hover:bg-surface-200 dark:hover:bg-surface-600/80',
+            { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
+
+            // Transition
+            'transition duration-200',
+
+            // Misc
+            'cursor-pointer select-none overflow-hidden'
         ]
-    })
+    }),
+    label: {
+        class: 'font-semibold'
+    }
 }
 `
             }

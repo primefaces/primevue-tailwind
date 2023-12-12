@@ -10,39 +10,78 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+radiobutton: {
+    root: {
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            'relative',
 
-            // Sizing
-            'm-0',
-            {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
+            // Flexbox & Alignment
+            'inline-flex',
+            'align-bottom',
 
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            // Size
+            'w-[1.571rem] h-[1.571rem]',
+
+            // Misc
+            'cursor-pointer',
+            'select-none'
+        ]
+    },
+    input: ({ props, state }) => ({
+        class: [
+            // Flexbox
+            'flex justify-center items-center',
+
+            // Size
+            'w-[1.571rem] h-[1.571rem]',
 
             // Shape
-            'rounded-lg',
-            'appearance-none',
+            'border-2',
+            'rounded-full',
 
-            // Interactions
+            // Transition
+            'transition duration-200 ease-in-out',
+
+            // Colors
             {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
+                'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue && props.value !== undefined,
+                'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined,
+                'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined,
+                'bg-primary-500 dark:bg-primary-400': props.value == props.modelValue && props.value !== undefined
             },
 
-            // Transitions
-            'transition-colors duration-200'
+            // States
+            {
+                'hover:border-primary-600 dark:hover:border-primary-300': !props.disabled,
+                'outline-none outline-offset-0': !props.disabled && state.focused,
+                'ring ring-primary-400/50 dark:ring-primary-300/50': !props.disabled && state.focused,
+                'opacity-60 cursor-default': props.disabled
+            }
+        ]
+    }),
+    icon: ({ props }) => ({
+        class: [
+            'block',
+
+            // Shape
+            'rounded-full',
+
+            // Size
+            'w-3',
+            'h-3',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-900',
+
+            // Conditions
+            {
+                'backface-hidden scale-10 invisible': props.value !== props.modelValue,
+                'transform visible scale-[1.1]': props.value == props.modelValue
+            },
+
+            // Transition
+            'transition duration-200'
         ]
     })
 }

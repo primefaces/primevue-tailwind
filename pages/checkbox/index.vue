@@ -10,7 +10,7 @@ import DynamicDoc from '@/doc/checkbox/DynamicDoc.vue';
 import GroupDoc from '@/doc/checkbox/GroupDoc.vue';
 import ImportDoc from '@/doc/checkbox/ImportDoc.vue';
 import InvalidDoc from '@/doc/checkbox/InvalidDoc.vue';
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
+import PresetDoc from '@/doc/checkbox/preset/index.vue';
 
 export default {
     data() {

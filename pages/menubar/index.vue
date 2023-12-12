@@ -9,7 +9,7 @@ import CommandDoc from '@/doc/menubar/CommandDoc.vue';
 import ImportDoc from '@/doc/menubar/ImportDoc.vue';
 import RouterDoc from '@/doc/menubar/RouterDoc.vue';
 import TemplateDoc from '@/doc/menubar/TemplateDoc.vue';
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/menubar/preset/index.vue';
 export default {
     data() {
         return {

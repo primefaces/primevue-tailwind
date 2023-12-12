@@ -10,39 +10,41 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+tag: {
+    root: ({ props }) => ({
         class: [
-            // Font
-            'font-sans leading-5',
+            //Font
+            'text-xs font-bold',
 
-            // Sizing
-            'w-full md:w-56',
-            'm-0',
+            //Alignments
+            'inline-flex items-center justify-center',
+
+            //Spacing
+            'px-2 py-1',
+
+            //Shape
             {
-                'py-3 px-4 text-md': props.size == 'large',
-                'py-1 px-2 text-sm': props.size == 'small',
-                'py-1.5 px-3 text-sm': props.size == null
+                'rounded-md': !props.rounded,
+                'rounded-full': props.rounded
             },
 
-            // Colors
-            'text-surface-900 dark:text-surface-0',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
-            'shadow-sm',
-
-            // Shape
-            'rounded-md',
-            'appearance-none',
-
-            // Interactions
+            //Colors
+            'text-white dark:text-surface-900',
             {
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+                'bg-primary-500 dark:bg-primary-400': props.severity == null || props.severity == 'primary',
+                'bg-green-500 dark:bg-green-400': props.severity == 'success',
+                'bg-blue-500 dark:bg-blue-400': props.severity == 'info',
+                'bg-orange-500 dark:bg-orange-400': props.severity == 'warning',
+                'bg-red-500 dark:bg-red-400': props.severity == 'danger'
             }
         ]
-    })
+    }),
+    value: {
+        class: 'leading-normal'
+    },
+    icon: {
+        class: 'mr-1 text-sm'
+    }
 }
 `
             }

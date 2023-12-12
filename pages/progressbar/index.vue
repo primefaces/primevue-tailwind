@@ -10,7 +10,7 @@ import ImportDoc from '@/doc/progressbar/ImportDoc.vue';
 import IndeterminateDoc from '@/doc/progressbar/IndeterminateDoc.vue';
 import TemplateDoc from '@/doc/progressbar/TemplateDoc.vue';
 
-import PresetDoc from '@/doc/dropdown/preset/index.vue';
+import PresetDoc from '@/doc/progressbar/preset/index.vue';
 
 export default {
     data() {

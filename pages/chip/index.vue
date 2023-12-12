@@ -9,7 +9,7 @@ import IconDoc from '@/doc/chip/IconDoc.vue';
 import ImageDoc from '@/doc/chip/ImageDoc.vue';
 import ImportDoc from '@/doc/chip/ImportDoc.vue';
 import TemplateDoc from '@/doc/chip/TemplateDoc.vue';
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
+import PresetDoc from '@/doc/chip/preset/index.vue';
 
 export default {
     data() {

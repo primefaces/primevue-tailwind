@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/panel/preset/index.vue';
+import PresetDoc from '@/doc/sidebar/preset/index.vue';
 import AccessibilityDoc from '@/doc/sidebar/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/sidebar/BasicDoc.vue';
 import FullScreenDoc from '@/doc/sidebar/FullScreenDoc.vue';

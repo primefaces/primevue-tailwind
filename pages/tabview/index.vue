@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PresetDoc from '@/doc/inputnumber/preset/index.vue';
+import PresetDoc from '@/doc/tabview/preset/index.vue';
 import AccessibilityDoc from '@/doc/tabview/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tabview/BasicDoc.vue';
 import ControlledDoc from '@/doc/tabview/ControlledDoc.vue';

@@ -10,41 +10,42 @@ export default {
             value: null,
             code: {
                 basic: `
-inputtext: {
-    root: ({ props, context }) => ({
+card: {
+    root: {
         class: [
-            // Font
-            'font-sans text-base leading-none',
+            //Shape
+            'rounded-md',
+            'shadow-md',
 
-            // Sizing
-            'm-0',
-            {
-                'px-4 py-4': props.size == 'large',
-                'px-2 py-2': props.size == 'small',
-                'p-3': props.size == null
-            },
-
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+            //Color
             'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
-
-            // Shape
-            'rounded-lg',
-            'appearance-none',
-
-            // Interactions
-            {
-                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
-                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
-            },
-
-            // Transitions
-            'transition-colors duration-200'
+            'text-surface-700 dark:text-surface-0'
         ]
-    })
+    },
+    body: {
+        class: 'p-5'
+    },
+    title: {
+        class: 'text-2xl font-bold mb-2'
+    },
+    subtitle: {
+        class: [
+            //Font
+            'font-normal',
+
+            //Spacing
+            'mb-2',
+
+            //Color
+            'text-surface-600 dark:text-surface-0/60'
+        ]
+    },
+    content: {
+        class: 'py-5' // Vertical padding.
+    },
+    footer: {
+        class: 'pt-5' // Top padding.
+    }
 }
 `
             }
