@@ -11,8 +11,9 @@
         </p>
         <DocSectionCode :code="code2" hideToggleCode hideCodeSandbox hideStackBlitz />
         <p>
-            In a Nuxt project utilizing the modules of <NuxtLink to="/nuxt">PrimeVue</NuxtLink> and <a href="https://tailwindcss.nuxtjs.org/" target="_blank" rel="noopener noreferrer">Tailwind</a>, the layer order can be configured with the
-            <a href="https://primevue.org/nuxt/#layerorder">cssLayerOrder</a> option. The <a href="https://tailwindcss.nuxtjs.org/getting-started/options#csspath">cssPath</a> property can be used to define a custom css file to configure Tailwind e.g.
+            In a Nuxt project utilizing the modules of <a href="https://primevue.org/nuxt" target="_blank" rel="noopener noreferrer">Nuxt</a> and <a href="https://tailwindcss.nuxtjs.org/" target="_blank" rel="noopener noreferrer">Tailwind</a>, the
+            layer order can be configured with the <a href="https://primevue.org/nuxt/#layerorder">cssLayerOrder</a> option. The <a href="https://tailwindcss.nuxtjs.org/getting-started/options#csspath">cssPath</a> property can be used to define a
+            custom css file to configure Tailwind e.g.
             <i>layered.tailwind.css.</i>
         </p>
         <DocSectionCode :code="code3" importCode hideToggleCode hideCodeSandbox hideStackBlitz />

@@ -5,7 +5,7 @@
             suitable strategy for easier customization instead of an imported module from node_modules.
         </p>
         <p>
-            Begin by downloading a release from <a href="https://github.com/primefaces/primevue-tailwind/releases" target="_blank" rel="noopener noreferrer">github</a>, alternatively you may use <NuxtLink to="Ubuilder">Preset Builder</NuxtLink> to
+            Begin by downloading a release from <a href="https://github.com/primefaces/primevue-tailwind/releases" target="_blank" rel="noopener noreferrer">github</a>, alternatively you may use <NuxtLink to="/builder">Preset Builder</NuxtLink> to
             dynamically build your release file with the components you need as the pre-build release package contains all the available components. Once the zip is downloaded, extract the contents to a folder of your choice e.g. <i>presets</i> and
             then configure the <i>pt</i> property of PrimeVue to the main preset file. Make sure the location is scanned by Tailwind, otherwise add the location to the <i>tailwind.config.js</i> files using the <i>content</i> option.
         </p>
