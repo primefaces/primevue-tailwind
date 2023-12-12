@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Avatar Component" header="Avatar" description="Avatar represents people using icons, labels and images." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Avatar Component" header="Avatar" description="Avatar represents people using icons, labels and images." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/avatar/#api" ptLink="/avatar/#pt" />
 </template>
 
 <script>
@@ -9,7 +9,7 @@ import IconDoc from '@/doc/avatar/IconDoc.vue';
 import ImageDoc from '@/doc/avatar/ImageDoc.vue';
 import ImportDoc from '@/doc/avatar/ImportDoc.vue';
 import LabelDoc from '@/doc/avatar/LabelDoc.vue';
-import PresetDoc from '@/doc/autocomplete/preset/index.vue';
+import PresetDoc from '@/doc/avatar/preset/index.vue';
 
 export default {
     data() {

@@ -1,7 +1,7 @@
 <template>
     <div class="doc-main">
         <div class="doc-intro">
-            <h1>Overlaypanel Presets</h1>
+            <h1>OverlayPanel Presets</h1>
         </div>
         <DocSections :docs="docs" />
     </div>

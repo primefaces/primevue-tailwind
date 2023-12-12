@@ -1,9 +1,8 @@
 <template>
-    <DocComponent title="Vue Tooltip Component" header="Tooltip" description="Tooltip directive provides advisory information for a component." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Tooltip Component" header="Tooltip" description="Tooltip directive provides advisory information for a component." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/tooltip/#api" ptLink="/tooltip/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/tooltip/preset/index.vue';
 import AccessibilityDoc from '@/doc/tooltip/AccessibilityDoc.vue';
 import AutoHideDoc from '@/doc/tooltip/AutoHideDoc.vue';
 import CustomDoc from '@/doc/tooltip/CustomDoc.vue';
@@ -11,6 +10,7 @@ import DelayDoc from '@/doc/tooltip/DelayDoc.vue';
 import EventDoc from '@/doc/tooltip/EventDoc.vue';
 import ImportDoc from '@/doc/tooltip/ImportDoc.vue';
 import PositionDoc from '@/doc/tooltip/PositionDoc.vue';
+import PresetDoc from '@/doc/tooltip/preset/index.vue';
 
 export default {
     data() {

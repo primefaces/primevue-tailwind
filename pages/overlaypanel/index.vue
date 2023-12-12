@@ -5,8 +5,8 @@
         description="OverlayPanel, also known as Popover, is a container component that can overlay other components on page."
         :componentDocs="docs"
         :presetDoc="presetDoc"
-        apiLink="/inputtext/#api"
-        ptLink="/inputtext/#pt"
+        apiLink="/overlaypanel/#api"
+        ptLink="/overlaypanel/#pt"
     />
 </template>
 

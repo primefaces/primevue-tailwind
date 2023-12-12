@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Chip Component" header="Chip" description="Chip represents entities using icons, labels and images." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Chip Component" header="Chip" description="Chip represents entities using icons, labels and images." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/chip/#api" ptLink="/chip/#pt" />
 </template>
 
 <script>

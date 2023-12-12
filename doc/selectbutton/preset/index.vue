@@ -1,7 +1,7 @@
 <template>
     <div class="doc-main">
         <div class="doc-intro">
-            <h1>Selectbutton Presets</h1>
+            <h1>SelectButton Presets</h1>
         </div>
         <DocSections :docs="docs" />
     </div>

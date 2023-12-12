@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Panel Component" header="Panel" description="Panel is a grouping component providing with content toggle feature." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Panel Component" header="Panel" description="Panel is a grouping component providing with content toggle feature." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/panel/#api" ptLink="/panel/#pt" />
 </template>
 
 <script>

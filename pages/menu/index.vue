@@ -1,9 +1,8 @@
 <template>
-    <DocComponent title="Vue Menu Component" header="Menu" description="Menu displays a list of items in vertical orientation." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputnumber/#api" ptLink="/inputnumber/#pt" />
+    <DocComponent title="Vue Menu Component" header="Menu" description="Menu displays a list of items in vertical orientation." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/menu/#api" ptLink="/menu/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/menu/preset/index.vue';
 import AccessibilityDoc from '@/doc/menu/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/menu/BasicDoc.vue';
 import CommandDoc from '@/doc/menu/CommandDoc.vue';
@@ -12,6 +11,7 @@ import ImportDoc from '@/doc/menu/ImportDoc.vue';
 import PopupDoc from '@/doc/menu/PopupDoc.vue';
 import RouterDoc from '@/doc/menu/RouterDoc.vue';
 import TemplateDoc from '@/doc/menu/TemplateDoc.vue';
+import PresetDoc from '@/doc/menu/preset/index.vue';
 
 export default {
     data() {

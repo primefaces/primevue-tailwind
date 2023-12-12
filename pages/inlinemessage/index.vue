@@ -5,8 +5,8 @@
         description="Inline Message component displays information related to another element such as invalid input."
         :componentDocs="docs"
         :presetDoc="presetDoc"
-        apiLink="/inputtext/#api"
-        ptLink="/inputtext/#pt"
+        apiLink="/inlinemessage/#api"
+        ptLink="/inlinemessage/#pt"
     />
 </template>
 

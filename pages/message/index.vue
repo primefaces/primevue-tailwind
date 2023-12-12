@@ -1,9 +1,8 @@
 <template>
-    <DocComponent title="Vue Message Component" header="Message" description="Message component is used to display inline messages." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Message Component" header="Message" description="Message component is used to display inline messages." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/message/#api" ptLink="/message/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/message/preset/index.vue';
 import AccessibilityDoc from '@/doc/message/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/message/BasicDoc.vue';
 import ClosabledDoc from '@/doc/message/ClosableDoc.vue';
@@ -12,6 +11,7 @@ import DynamicDoc from '@/doc/message/DynamicDoc.vue';
 import ImportDoc from '@/doc/message/ImportDoc.vue';
 import SeverityDoc from '@/doc/message/SeverityDoc.vue';
 import StickyDoc from '@/doc/message/StickyDoc.vue';
+import PresetDoc from '@/doc/message/preset/index.vue';
 
 export default {
     data() {

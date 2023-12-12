@@ -5,13 +5,12 @@
         description="Sidebar, also known as Drawer, is a container component displayed as an overlay."
         :componentDocs="docs"
         :presetDoc="presetDoc"
-        apiLink="/inputtext/#api"
-        ptLink="/inputtext/#pt"
+        apiLink="/sidebar/#api"
+        ptLink="/sidebar/#pt"
     />
 </template>
 
 <script>
-import PresetDoc from '@/doc/sidebar/preset/index.vue';
 import AccessibilityDoc from '@/doc/sidebar/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/sidebar/BasicDoc.vue';
 import FullScreenDoc from '@/doc/sidebar/FullScreenDoc.vue';
@@ -20,6 +19,7 @@ import ImportDoc from '@/doc/sidebar/ImportDoc.vue';
 import PositionDoc from '@/doc/sidebar/PositionDoc.vue';
 import SizeDoc from '@/doc/sidebar/SizeDoc.vue';
 import TemplateDoc from '@/doc/sidebar/TemplateDoc.vue';
+import PresetDoc from '@/doc/sidebar/preset/index.vue';
 export default {
     data() {
         return {

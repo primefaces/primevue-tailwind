@@ -1,9 +1,8 @@
 <template>
-    <DocComponent title="Vue Tag Component" header="Tag" description="Tag component is used to categorize content." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Tag Component" header="Tag" description="Tag component is used to categorize content." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/tag/#api" ptLink="/tag/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/tag/preset/index.vue';
 import AccessibilityDoc from '@/doc/tag/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tag/BasicDoc.vue';
 import IconDoc from '@/doc/tag/IconDoc.vue';
@@ -11,6 +10,7 @@ import ImportDoc from '@/doc/tag/ImportDoc.vue';
 import PillDoc from '@/doc/tag/PillDoc.vue';
 import SeverityDoc from '@/doc/tag/SeverityDoc.vue';
 import TemplateDoc from '@/doc/tag/TemplateDoc.vue';
+import PresetDoc from '@/doc/tag/preset/index.vue';
 export default {
     data() {
         return {
