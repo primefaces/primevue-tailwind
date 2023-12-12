@@ -1,6 +1,6 @@
 import pkg from '@/package.json';
-import { Lara } from './lara';
-import { Wind } from './wind';
+import Lara from '@/presets/lara';
+import Wind from '@/presets/wind';
 import { services } from './services';
 
 const PrimeVue = {
@@ -531,7 +531,7 @@ export default {
 
     files[`${path}components/Configurator.vue`] = {
         content: `<template>
-<div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-surface-200 dark:border-surface-800 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
+<div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-900 rounded-md shadow border border-surface-200 dark:border-surface-800 flex-col justify-start items-start gap-3.5 inline-flex origin-top z-10">
     <div class="flex-col justify-start items-start gap-2 inline-flex">
         <span class="text-black dark:text-surface-0 text-xs font-medium m-0">Primary Colors</span>
         <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
@@ -686,20 +686,74 @@ export default {
 `
     };
 
-    const createPresetFiles = (presetName, stringPresetName) => {
-        Object.keys(presetName).forEach((name, index) => {
-            let presetPath;
+    const convertToString = (obj) => {
+        let ret = '{';
 
-            if (name === 'index' || name === 'global') {
-                presetPath = `${path}presets/${stringPresetName}/${name}.js`;
+        for (let k in obj) {
+            let v = obj[k];
+
+            if (typeof v === 'function') {
+                v = v.toString();
+            } else if (v instanceof Array) {
+                v = JSON.stringify(v);
+            } else if (typeof v === 'object') {
+                v = convertToString(v);
             } else {
-                presetPath = `${path}presets/${stringPresetName}/${name}/index.js`;
+                v = `\`${v}\``;
             }
 
-            files[presetPath] = {
-                content: Object.values(presetName)[index]
-            };
+            ret += `\n  ${k}: ${v},`;
+        }
+
+        ret += '\n}';
+
+        return ret;
+    };
+
+    const createPresetFiles = (presetName, stringPresetName) => {
+        const presetPath = `${path}presets/${stringPresetName}`;
+        const imports = [];
+        const keys = [];
+        const directivesKeys = [];
+
+        Object.entries(presetName).forEach(([name, value]) => {
+            if (name === 'global') {
+                imports.push(`import ${name} from './${name}'`);
+                keys.push(name);
+                files[`${presetPath}/${name}.js`] = {
+                    content: `export default ${convertToString(value)}`
+                };
+            } else if (name === 'directives') {
+                Object.entries(value).forEach(([dname, dvalue]) => {
+                    const _name = dname === 'badge' ? 'badgedirective' : dname;
+
+                    imports.push(`import ${_name} from './${_name}'`);
+                    directivesKeys.push(dname === 'badge' ? `badge: badgedirective` : dname);
+                    files[`${presetPath}/${_name}/index.js`] = {
+                        content: `export default ${convertToString(dvalue)}`
+                    };
+                });
+            } else {
+                imports.push(`import ${name} from './${name}'`);
+                keys.push(name);
+                files[`${presetPath}/${name}/index.js`] = {
+                    content: `export default ${convertToString(value)}`
+                };
+            }
         });
+
+        files[`${path}presets/${stringPresetName}/index.js`] = {
+            content: `
+${imports.join(';\n')}
+
+export default {
+    directives: {
+        ${directivesKeys.join(',\n')}
+    },
+    ${keys.join(',\n')}
+}
+            `
+        };
     };
 
     createPresetFiles(Lara, 'lara');

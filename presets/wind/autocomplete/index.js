@@ -9,6 +9,9 @@ export default {
             // Size
             { 'w-full': props.multiple },
 
+            // Color
+            'text-surface-900 dark:text-surface-0',
+
             //States
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled

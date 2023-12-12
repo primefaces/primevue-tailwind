@@ -35,7 +35,7 @@ export default {
 
             // After
             'after:border-t-2',
-            'after:border-surface-200 after:dark:border-surface-700',
+            { 'after:border-surface-200 after:dark:border-surface-700': state.d_activeStep <= context.index },
             { 'after:border-primary-500 after:dark:border-primary-400': state.d_activeStep > context.index },
             'after:w-full',
             'after:absolute',
