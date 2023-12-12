@@ -9,6 +9,9 @@ export default {
             // Size
             { 'w-full': props.multiple },
 
+            // Color
+            'text-surface-900 dark:text-surface-0',
+
             //States
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled
@@ -228,6 +231,19 @@ export default {
 
             // Misc
             'cursor-auto'
+        ]
+    },
+    emptymessage: {
+        class: [
+            // Font
+            'leading-none',
+
+            // Spacing
+            'py-3 px-5',
+
+            // Color
+            'text-surface-800 dark:text-white/80',
+            'bg-transparent'
         ]
     },
     transition: {

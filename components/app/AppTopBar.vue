@@ -150,7 +150,7 @@ export default {
         },
         toggleDarkMode() {
             if (!document.startViewTransition) {
-                switchDarkMode();
+                this.switchDarkMode();
 
                 return;
             }
