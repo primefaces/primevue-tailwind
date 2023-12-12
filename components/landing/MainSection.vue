@@ -12,8 +12,8 @@
                                 <span class="text-neutral-800 dark:text-surface-50 text-[3rem] sm:text-[3.5rem] xl:text-[4rem] font-medium sm:leading-[4.5rem]">Tailwind CSS Based <br />UI Component Library <br />for </span
                                 ><span class="text-primary-400 text-[3rem] sm:text-[3.5rem] xl:text-[4rem] font-medium sm:leading-[4.5rem]">Vue.js</span>
                             </div>
-                            <div class="text-zinc-600 dark:text-surface-50 font-normal leading-6 max-w-[35rem]">
-                                Tailwind CSS is a popular utility first CSS library that fits perfectly to the unstyled mode to skin the entire UI suite with a design system of your choice.
+                            <div class="text-zinc-600 dark:text-surface-50 font-normal leading-6 max-w-[35rem] text-lg">
+                                Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.
                             </div>
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
@@ -40,7 +40,7 @@
                                             }"
                                             @click="setPreset('lara')"
                                         >
-                                            PrimeOne
+                                            Lara
                                         </button>
                                         <button
                                             type="button"
@@ -2898,7 +2898,7 @@
                                             }"
                                             @click="setPreset('lara')"
                                         >
-                                            PrimeOne
+                                            Lara
                                         </button>
                                         <button
                                             type="button"
