@@ -1,14 +1,14 @@
 <template>
-    <DocComponent title="Vue Ripple Component" header="Ripple" description="Ripple directive adds ripple effect to the host element." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Ripple Component" header="Ripple" description="Ripple directive adds ripple effect to the host element." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/ripple/#api" ptLink="/ripple/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/ripple/preset/index.vue';
 import AccessibilityDoc from '@/doc/ripple/AccessibilityDoc.vue';
 import ConfigurationDoc from '@/doc/ripple/ConfigurationDoc.vue';
 import CustomDoc from '@/doc/ripple/CustomDoc.vue';
 import DefaultDoc from '@/doc/ripple/DefaultDoc.vue';
 import ImportDoc from '@/doc/ripple/ImportDoc.vue';
+import PresetDoc from '@/doc/ripple/preset/index.vue';
 
 export default {
     data() {

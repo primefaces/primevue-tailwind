@@ -1,9 +1,8 @@
 <template>
-    <DocComponent title="Vue TieredMenu Component" header="TieredMenu" description="TieredMenu displays submenus in nested overlays." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue TieredMenu Component" header="TieredMenu" description="TieredMenu displays submenus in nested overlays." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/tieredmenu/#api" ptLink="/tieredmenu/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/tieredmenu/preset/index.vue';
 import AccessibilityDoc from '@/doc/tieredmenu/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tieredmenu/BasicDoc.vue';
 import CommandDoc from '@/doc/tieredmenu/CommandDoc.vue';
@@ -11,6 +10,7 @@ import ImportDoc from '@/doc/tieredmenu/ImportDoc.vue';
 import PopupDoc from '@/doc/tieredmenu/PopupDoc.vue';
 import RouterDoc from '@/doc/tieredmenu/RouterDoc.vue';
 import TemplateDoc from '@/doc/tieredmenu/TemplateDoc.vue';
+import PresetDoc from '@/doc/tieredmenu/preset/index.vue';
 
 export default {
     data() {

@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Card Component" header="Card" description="Card is a flexible container component." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Card Component" header="Card" description="Card is a flexible container component." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/card/#api" ptLink="/card/#pt" />
 </template>
 
 <script>

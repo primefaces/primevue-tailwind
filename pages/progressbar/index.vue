@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue ProgressBar Component" header="ProgressBar" description="ProgressBar is a process status indicator." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/dropdown/#api" ptLink="/dropdown/#pt" />
+    <DocComponent title="Vue ProgressBar Component" header="ProgressBar" description="ProgressBar is a process status indicator." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/progressbar/#api" ptLink="/progressbar/#pt" />
 </template>
 
 <script>

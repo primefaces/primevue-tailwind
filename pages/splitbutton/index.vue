@@ -5,13 +5,12 @@
         description="SplitButton groups a set of commands in an overlay with a default command."
         :componentDocs="docs"
         :presetDoc="presetDoc"
-        apiLink="/inputtext/#api"
-        ptLink="/inputtext/#pt"
+        apiLink="/splitbutton/#api"
+        ptLink="/splitbutton/#pt"
     />
 </template>
 
 <script>
-import PresetDoc from '@/doc/splitbutton/preset/index.vue';
 import AccessibilityDoc from '@/doc/splitbutton/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/splitbutton/BasicDoc.vue';
 import DisabledDoc from '@/doc/splitbutton/DisabledDoc.vue';
@@ -24,6 +23,7 @@ import SeverityDoc from '@/doc/splitbutton/SeverityDoc.vue';
 import SizesDoc from '@/doc/splitbutton/SizesDoc.vue';
 import TemplateDoc from '@/doc/splitbutton/TemplateDoc.vue';
 import TextDoc from '@/doc/splitbutton/TextDoc.vue';
+import PresetDoc from '@/doc/splitbutton/preset/index.vue';
 export default {
     data() {
         return {

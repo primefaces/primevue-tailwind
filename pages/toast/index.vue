@@ -1,9 +1,8 @@
 <template>
-    <DocComponent title="Vue Toast Component" header="Toast" description="Toast is used to display messages in an overlay." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Toast Component" header="Toast" description="Toast is used to display messages in an overlay." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/toast/#api" ptLink="/toast/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/toast/preset/index.vue';
 import AccessibilityDoc from '@/doc/toast/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/toast/BasicDoc.vue';
 import HeadlessDoc from '@/doc/toast/HeadlessDoc.vue';
@@ -14,6 +13,7 @@ import SeverityDoc from '@/doc/toast/SeverityDoc.vue';
 import StickyDoc from '@/doc/toast/StickyDoc.vue';
 import TemplateDoc from '@/doc/toast/TemplateDoc.vue';
 import ToastServiceDoc from '@/doc/toast/ToastServiceDoc.vue';
+import PresetDoc from '@/doc/toast/preset/index.vue';
 export default {
     data() {
         return {

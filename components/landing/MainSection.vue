@@ -3,7 +3,7 @@
         <div class="w-full min-[1419px]:h-screen  relative top-0 mx-auto max-w-[1728px] z-20 pb-[6rem]">
             <div class="w-full min-[1419px]:h-screen flex">
                 <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 min-h-[1060px] relative pr-4 sm:pr-8 lg:pr-0 pl-4 sm:pl-8 xl:pl-20 min-[1419px]:pl-28 pr-15 flex-col justify-start items-center inline-flex">
-                    <div class="self-stretch flex-col justify-start pt-28 sm:pt-36 pb-16 min-[1419px]:pt-48 min-[1419px]:pb-44 items-start gap-6 inline-flex">
+                    <div class="self-stretch flex-col justify-start pt-28 sm:pt-36 pb-16 min-[1419px]:pt-[16rem] min-[1419px]:pb-44 items-start gap-6 inline-flex">
                         <div class="px-3 py-1 bg-white dark:bg-surface-800 rounded-[7rem] border border-black border-opacity-10 justify-end items-start inline-flex">
                             <div class="text-neutral-800 dark:text-surface-50 font-medium leading-6">PrimeVue Based on Tailwind</div>
                         </div>

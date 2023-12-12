@@ -5,8 +5,8 @@
         description="Calendar, also known as DatePicker, is a form component to work with dates."
         :componentDocs="docs"
         :presetDoc="presetDoc"
-        apiLink="/inputtext/#api"
-        ptLink="/inputtext/#pt"
+        apiLink="/calendar/#api"
+        ptLink="/calendar/#pt"
     />
 </template>
 

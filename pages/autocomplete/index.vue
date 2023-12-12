@@ -5,8 +5,8 @@
         description="AutoComplete is an input component that provides real-time suggestions when being typed."
         :componentDocs="docs"
         :presetDoc="presetDoc"
-        apiLink="/inputtext/#api"
-        ptLink="/inputtext/#pt"
+        apiLink="/autocomplete/#api"
+        ptLink="/autocomplete/#pt"
     />
 </template>
 

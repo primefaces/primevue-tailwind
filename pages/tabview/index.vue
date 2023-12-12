@@ -1,9 +1,8 @@
 <template>
-    <DocComponent title="Vue Tabs Component" header="TabView" description="TabView is a container component to group content with tabs." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputnumber/#api" ptLink="/inputnumber/#pt" />
+    <DocComponent title="Vue Tabs Component" header="TabView" description="TabView is a container component to group content with tabs." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/tabview/#api" ptLink="/tabview/#pt" />
 </template>
 
 <script>
-import PresetDoc from '@/doc/tabview/preset/index.vue';
 import AccessibilityDoc from '@/doc/tabview/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tabview/BasicDoc.vue';
 import ControlledDoc from '@/doc/tabview/ControlledDoc.vue';
@@ -12,6 +11,7 @@ import DynamicDoc from '@/doc/tabview/DynamicDoc.vue';
 import ImportDoc from '@/doc/tabview/ImportDoc.vue';
 import ScrollableDoc from '@/doc/tabview/ScrollableDoc.vue';
 import TemplateDoc from '@/doc/tabview/TemplateDoc.vue';
+import PresetDoc from '@/doc/tabview/preset/index.vue';
 
 export default {
     data() {

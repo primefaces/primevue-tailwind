@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Checkbox Component" header="Checkbox" description="Checkbox is an extension to standard checkbox element with theming." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Checkbox Component" header="Checkbox" description="Checkbox is an extension to standard checkbox element with theming." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/checkbox/#api" ptLink="/checkbox/#pt" />
 </template>
 
 <script>

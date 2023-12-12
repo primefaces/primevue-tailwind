@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue InputSwitch Component" header="InputSwitch" description="InputSwitch is used to select a boolean value." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue InputSwitch Component" header="InputSwitch" description="InputSwitch is used to select a boolean value." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputswitch/#api" ptLink="/inputswitch/#pt" />
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Button Component" header="Button" description="Button is an extension to standard input element with icons and theming." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/inputtext/#api" ptLink="/inputtext/#pt" />
+    <DocComponent title="Vue Button Component" header="Button" description="Button is an extension to standard input element with icons and theming." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/button/#api" ptLink="/button/#pt" />
 </template>
 
 <script>
