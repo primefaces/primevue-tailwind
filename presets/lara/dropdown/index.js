@@ -131,13 +131,13 @@ export default {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
-            { 'bg-surface-50 dark:bg-surface-700/80 text-surface-700 dark:text-white/80': context.focused && !context.selected },
+            { 'bg-surface-50 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
             { 'bg-primary-100 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': context.focused && context.selected },
             { 'bg-primary-50 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': !context.focused && context.selected },
 
             //States
-            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
-            { 'hover:text-surface-700 hover:bg-surface-100 dark:text-white/80 dark:hover:bg-surface-600/80': context.focused && !context.selected },
+            { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
+            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-600/80': context.focused && !context.selected },
 
             // Transitions
             'transition-shadow',

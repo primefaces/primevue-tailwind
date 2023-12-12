@@ -10,7 +10,7 @@ export default {
 
             // Spacing
             'px-6',
-            'h-16',
+            'min-h-[4rem]',
 
             // Shape
             'rounded-md',
@@ -24,7 +24,7 @@ export default {
     menu: ({ props }) => ({
         class: [
             // Flexbox
-            'sm:flex sm:gap-4',
+            'sm:flex sm:row-gap-2 sm:col-gap-4',
             'items-center',
             'flex-wrap',
             'flex-col sm:flex-row',
@@ -39,8 +39,8 @@ export default {
             'w-full sm:w-auto',
 
             // Spacing
-            'm-0',
-            'py-2 px-1.5 sm:py-0 sm:p-0 sm:px-0',
+            'm-0 ',
+            'py-2 px-1.5 sm:py-0 sm:p-0 sm:py-1.5',
             'list-none',
 
             // Shape

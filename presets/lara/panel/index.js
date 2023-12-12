@@ -7,7 +7,7 @@ export default {
             // Colors
             'text-surface-700 dark:text-surface-0/80',
             'bg-surface-50 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'border border-surface-200 dark:border-surface-700',
 
             //Shape
             'rounded-tl-lg rounded-tr-lg',
@@ -61,7 +61,7 @@ export default {
             'border border-t-0 last:rounded-br-lg last:rounded-bl-lg',
 
             //Color
-            'border-surface-300 dark:border-surface-700',
+            'border-surface-200 dark:border-surface-700',
             'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
@@ -75,7 +75,7 @@ export default {
             'border border-t-0 rounded-br-lg rounded-bl-lg',
 
             //Color
-            'border-surface-300 dark:border-surface-700',
+            'border-surface-200 dark:border-surface-700',
             'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]

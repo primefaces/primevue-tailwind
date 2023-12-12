@@ -17,18 +17,18 @@ export default {
                 'w-12 h-12': props.size == 'large',
                 'w-16 h-16': props.size == 'xlarge'
             },
-            { '-ml-4': parent.instance.$style !== undefined },
+            { '-ml-4': parent.instance.$style?.name == 'avatargroup' },
 
             // Shapes
             {
                 'rounded-lg': props.shape == 'square',
                 'rounded-full': props.shape == 'circle'
             },
-            { 'border-2': parent.instance.$style !== undefined },
+            { 'border-2': parent.instance.$style?.name == 'avatargroup' },
 
             // Colors
             'bg-surface-300 dark:bg-surface-700',
-            { 'border-white dark:border-surface-800': parent.instance.$style !== undefined }
+            { 'border-white dark:border-surface-800': parent.instance.$style?.name == 'avatargroup' }
         ]
     }),
     image: {
