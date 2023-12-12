@@ -1,9 +1,9 @@
 <template>
     <div class="w-full relative flex flex-col justify-center items-center">
-        <div class="w-full min-[1419px]:h-screen relative top-0 mx-auto max-w-[1728px] z-20 pb-[6rem]">
+        <div class="w-full min-[1419px]:h-screen  relative top-0 mx-auto max-w-[1728px] z-20 pb-[6rem]">
             <div class="w-full min-[1419px]:h-screen flex">
-                <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 relative pr-4 sm:pr-8 lg:pr-0 pl-4 sm:pl-8 xl:pl-20 min-[1419px]:pl-28 pr-15 flex-col justify-start items-center inline-flex">
-                    <div class="self-stretch flex-col justify-start pt-28 sm:pt-36 pb-16 min-[1419px]:pt-44 min-[1419px]:pb-44 items-start gap-6 inline-flex">
+                <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 min-h-[1060px] relative pr-4 sm:pr-8 lg:pr-0 pl-4 sm:pl-8 xl:pl-20 min-[1419px]:pl-28 pr-15 flex-col justify-start items-center inline-flex">
+                    <div class="self-stretch flex-col justify-start pt-28 sm:pt-36 pb-16 min-[1419px]:pt-48 min-[1419px]:pb-44 items-start gap-6 inline-flex">
                         <div class="px-3 py-1 bg-white dark:bg-surface-800 rounded-[7rem] border border-black border-opacity-10 justify-end items-start inline-flex">
                             <div class="text-neutral-800 dark:text-surface-50 font-medium leading-6">PrimeVue Based on Tailwind</div>
                         </div>
@@ -46,12 +46,12 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Tailwind',
-                                                'dark:bg-surface-900': presetbutton_value.value != 'Tailwind'
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Wind',
+                                                'dark:bg-surface-900': presetbutton_value.value != 'Wind'
                                             }"
-                                            @click="presetbutton_value.value = 'Tailwind'"
+                                            @click="presetbutton_value.value = 'Wind'"
                                         >
-                                            Tailwind
+                                        Wind
                                         </button>
                                     </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="21" viewBox="0 0 41 21" fill="none" class="mt-5 ml-[-3px]">
@@ -226,8 +226,8 @@
                                             </linearGradient>
                                         </defs>
                                     </svg> -->
-                                    <div class="hidden dark:block h-[9rem] w-full absolute top-0">
-                                        <img src="assets/noise-dark.png" alt="PrimeVue Dark"  />
+                                    <div class="hidden dark:block h-[9rem] w-full absolute top-0 stars" style="background-size:cover; background-repeat:repeat">
+                                      
                                     </div>
                                     <div class="z-20 inline-flex p-2 items-start gap-3 rounded-full border border-[#00000003] bg-surface-0 dark:bg-surface-900">
                                         <button
@@ -284,7 +284,7 @@
                     </div>
                 </div>
                 <div class="hidden lg:inline-flex w-[35%] min-[1100px]:w-[39%] xl:w-5/12 min-[1419px]:w-1/2 overflow-hidden justify-around items-start p-5">
-                    <div  class="component-suite z-40">
+                    <div  class="component-suite ">
                         <svg class="w-[49rem] relative top-[-5rem] z-0" viewBox="0 0 781 1050" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="223.5" y1="0.523437" x2="223.5" y2="1049.48" stroke="url(#paint0_linear_612_64534)" />
                             <line x1="0.640625" y1="278.5" x2="780.363" y2="278.5" stroke="url(#paint1_linear_612_64534)" />
@@ -2904,12 +2904,12 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Tailwind',
-                                                'dark:bg-surface-900': presetbutton_value.value != 'Tailwind'
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Wind',
+                                                'dark:bg-surface-900': presetbutton_value.value != 'Wind'
                                             }"
-                                            @click="presetbutton_value.value = 'Tailwind'"
+                                            @click="presetbutton_value.value = 'Wind'"
                                         >
-                                            Tailwind
+                                            Wind
                                         </button>
                                     </div>
                                 </div>
@@ -3030,7 +3030,12 @@ export default {
 
     &:hover{
         transform: skew(0deg, 0deg);
+        z-index: 100;
     }
+}
+
+.stars {
+    background-image: url("assets/Noise-Texture.png");
 }
 
 @media screen and (max-width: 1420px) {
