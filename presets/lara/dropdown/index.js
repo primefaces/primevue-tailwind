@@ -93,6 +93,7 @@ export default {
             'border-0 dark:border',
             'rounded-md',
             'shadow-md',
+            'w-full',
 
             // Color
             'bg-surface-0 dark:bg-surface-800',

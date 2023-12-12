@@ -5327,12 +5327,12 @@
                                 <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" />
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center">
-                                <div class="flex items-center w-5/12">
+                                <div class="flex items-center w-[6.5rem]">
                                     <Checkbox id="unstyled" v-model="checked" :binary="true" />
                                     <label for="unstyled" class="ml-2 text-surface-900 dark:text-white">Unstyled</label>
                                 </div>
-                                <div class="flex items-center justify-center w-7/12">
-                                    <SelectButton v-model="selectbutton_value" :options="options" optionLabel="value" dataKey="value" aria-labelledby="custom">
+                                <div class="flex items-center justify-center w-[11.5rem] ml-6">
+                                    <SelectButton v-model="selectbutton_value" :options="options" optionLabel="value" dataKey="value" aria-labelledby="custom" class="mx-auto">
                                         <template #option="slotProps">
                                             <div class="flex items-center">
                                                 <i :class="slotProps.option.icon"></i>
@@ -5343,11 +5343,11 @@
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.2rem] p-3 items-center">
-                                <div class="flex items-center">
-                                    <InputNumber v-model="value1" inputId="stacked-buttons" showButtons mode="currency" currency="USD" />
+                                <div class="flex items-center max-w-[14.5rem]">
+                                    <InputNumber v-model="value1" inputId="stacked-buttons" showButtons mode="currency" currency="USD" inputClass="w-full" />
                                 </div>
-                                <div class="flex items-center justify-center px-2 ml-[1.6rem]">
-                                    <InputSwitch v-model="switched" />
+                                <div class="flex items-center justify-center w-[3.4rem] ml-[1.5rem] ">
+                                    <InputSwitch v-model="switched" class="mx-auto"/>
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.95rem] p-3 justify-center items-center">
@@ -5380,18 +5380,18 @@
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
                                 <div class="flex items-center">
-                                    <Slider v-model="slider_value" range />
+                                    <Slider v-model="slider_value" range class="w-[18.5rem]" />
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <Calendar v-model="date" showIcon appendTo="self" />
+                                <Calendar v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full"/>
                             </div>
-                            <div class="flex w-[21rem] h-[4.4rem] p-3 items-center justify-between">
+                            <div class="flex w-[21rem] h-[4.4rem] p-3 items-center justify-center gap-5">
                                 <Tag value="Lightful"></Tag>
 
                                 <Avatar icon="pi pi-user" class="bg-white dark:bg-surface-900 text-primary-500 dark:text-primary-400" shape="circle" />
 
-                                <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" />
+                                <Avatar  image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle"  />
 
                                 <Avatar label="P" class="bg-white dark:bg-surface-900 text-primary-500 dark:text-primary-400" shape="circle" />
 
