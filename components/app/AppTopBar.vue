@@ -61,7 +61,7 @@
             </div>
 
             <ul class="flex list-none m-0 p-0 gap-2 items-center">
-                <li>
+                <li v-if="false">
                     <div id="docsearch"></div>
                 </li>
                 <li>
@@ -101,8 +101,6 @@
 </template>
 
 <script>
-import docsearch from '@docsearch/js';
-
 export default {
     emits: ['menubutton-click'],
     props: {
@@ -116,7 +114,7 @@ export default {
     mounted() {
         this.bindScrollListener();
 
-        docsearch({
+        /*docsearch({
             container: '#docsearch',
             appId: '01CMUF4W4R',
             indexName: 'primevue',
@@ -137,7 +135,7 @@ export default {
                     return item;
                 });
             }
-        });
+        });*/
     },
     beforeUnmount() {
         if (this.scrollListener) {
