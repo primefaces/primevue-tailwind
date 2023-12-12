@@ -27,7 +27,7 @@ export default {
                 { 'rounded-br-md rounded-bl-md': !context.active, 'rounded-br-0 rounded-bl-0': context.active },
 
                 // Color
-                'border border-surface-300 dark:border-surface-700',
+                'border border-surface-200 dark:border-surface-700',
                 'bg-surface-50 dark:bg-surface-800',
                 'text-surface-600 dark:text-surface-0/80',
                 { 'text-surface-900': context.active },
@@ -62,7 +62,7 @@ export default {
 
                 // Color
                 'bg-surface-0 dark:bg-surface-800',
-                'border border-surface-300 dark:border-surface-700',
+                'border border-surface-200 dark:border-surface-700',
                 'text-surface-700 dark:text-surface-0/80'
             ]
         },
