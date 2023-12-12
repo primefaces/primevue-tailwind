@@ -30,30 +30,30 @@
                             <div class="w-[20.5rem] flex p-2 flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch">
                                 <div class="rounded-lg bg-surface-50 dark:bg-surface-800 h-[9rem] w-full px-3 py-2">
                                     <div class="flex items-center">
-                                        <div class="custom-selectbutton inline-flex p-2 items-start gap-2 rounded-md border border-[#00000003] bg-surface-0 dark:bg-surface-900 z-20">
-                                            <button
-                                                type="button"
-                                                class="px-2 tracking-tight py-1 text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none"
-                                                :class="{
-                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': presetbutton_value.value === 'PrimeOne',
-                                                    'dark:bg-surface-900': presetbutton_value.value != 'PrimeOne'
-                                                }"
-                                                @click="presetbutton_value.value = 'PrimeOne'"
-                                            >
-                                                PrimeOne
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="px-2 tracking-tight py-1 text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none"
-                                                :class="{
-                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Tailwind',
-                                                    'dark:bg-surface-900': presetbutton_value.value != 'Tailwind'
-                                                }"
-                                                @click="presetbutton_value.value = 'Tailwind'"
-                                            >
-                                                Tailwind
-                                            </button>
-                                        </div>
+                                        <div class="custom-selectbutton inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] bg-surface-0 dark:bg-surface-900">
+                                        <button
+                                            type="button"
+                                            class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
+                                            :class="{
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': presetbutton_value.value === 'PrimeOne',
+                                                'dark:bg-surface-900': presetbutton_value.value != 'PrimeOne'
+                                            }"
+                                            @click="presetbutton_value.value = 'PrimeOne'"
+                                        >
+                                            PrimeOne
+                                        </button>
+                                        <button
+                                            type="button"
+                                            class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
+                                            :class="{
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Tailwind',
+                                                'dark:bg-surface-900': presetbutton_value.value != 'Tailwind'
+                                            }"
+                                            @click="presetbutton_value.value = 'Tailwind'"
+                                        >
+                                            Tailwind
+                                        </button>
+                                    </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="21" viewBox="0 0 41 21" fill="none" class="mt-5 ml-[-3px]">
                                             <circle cx="3.5" cy="3.5" r="3.5" class="fill-surface-100 dark:fill-surface-700" />
                                             <circle cx="3.5" cy="3.5" r="2.5" class="fill-surface-200 dark:fill-surface-600" />
@@ -5352,10 +5352,10 @@
                             </div>
                             <div class="flex w-[21rem] h-[4.95rem] p-3 justify-center items-center">
                                 <div class="flex items-center">
-                                    <div class="custom-selectbutton inline-flex p-2 items-start gap-2 rounded-md border border-[#00000003] bg-surface-0 dark:bg-surface-900">
+                                    <div class="custom-selectbutton inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] bg-surface-0 dark:bg-surface-900">
                                         <button
                                             type="button"
-                                            class="px-2 tracking-tight py-1 text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none"
+                                            class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
                                                 'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': presetbutton_value.value === 'PrimeOne',
                                                 'dark:bg-surface-900': presetbutton_value.value != 'PrimeOne'
@@ -5366,7 +5366,7 @@
                                         </button>
                                         <button
                                             type="button"
-                                            class="px-2 tracking-tight py-1 text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none"
+                                            class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
                                                 'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': presetbutton_value.value === 'Tailwind',
                                                 'dark:bg-surface-900': presetbutton_value.value != 'Tailwind'
