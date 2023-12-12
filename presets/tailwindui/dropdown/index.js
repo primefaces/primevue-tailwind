@@ -93,8 +93,8 @@ export default {
             // Shape
             'border-0',
             'rounded-md',
-            'shadow-md'
-            
+            'shadow-md',
+
             // Color
             'bg-surface-0 dark:bg-surface-800',
             'text-surface-800 dark:text-white/80',
