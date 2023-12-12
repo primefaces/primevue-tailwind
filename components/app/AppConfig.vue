@@ -1,6 +1,33 @@
 <template>
-    <div class="absolute top-[2.5rem] right-0 hidden w-[12rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
+    <div class="absolute top-[2.5rem] right-0 hidden w-[14rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top">
+        <div class="flex-col justify-start items-start gap-2 inline-flex w-full">
+            <span class="text-black dark:text-surface-0 text-sm font-medium">Preset</span>
+            <div class="custom-selectbutton inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] bg-surface-100 dark:bg-surface-900 w-full">
+                <button
+                    type="button"
+                    class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
+                    :class="{
+                        'shadow shadow-inner bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
+                        'bg-surface-100 dark:bg-surface-900': !isLara
+                    }"
+                    @click="setPreset('lara')"
+                >
+                    PrimeOne
+                </button>
+                <button
+                    type="button"
+                    class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
+                    :class="{
+                        'shadow shadow-inner bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWindUI,
+                        'bg-surface-100 dark:bg-surface-900': !isWindUI
+                    }"
+                    @click="setPreset('wind')"
+                >
+                    Wind
+                </button>
+            </div>
+        </div>
+        <div class="flex-col justify-start items-start gap-2 inline-flex pr-4">
             <span class="text-black dark:text-surface-0 text-sm font-medium">Primary Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
                 <button
@@ -13,36 +40,15 @@
                 ></button>
             </div>
         </div>
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
+        <div class="flex-col justify-start items-start gap-2 inline-flex pr-2">
             <span class="text-black dark:text-surface-0 text-sm font-medium">Surface Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex">
                 <button v-for="surface of surfaces" :key="surface.name" type="button" @click="updateColors('surface', surface.palette)" class="w-4 h-4 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></button>
             </div>
         </div>
-        <div class="flex-col justify-start items-start gap-2 flex">
-            <span class="text-black dark:text-surface-0 text-sm font-medium m-0">Ripple</span>
+        <div class="flex justify-between items-center gap-2 flex w-full pt-4 pb-2 border-t border-surface-200 dark:border-surface-700">
+            <span class="text-black dark:text-surface-0 text-sm font-medium m-0">Ripple Effect</span>
             <InputSwitch :modelValue="$primevue.config.ripple" @update:model-value="setRipple($event)" />
-        </div>
-        <div class="flex-col justify-start items-start gap-2 flex">
-            <span class="text-black dark:text-surface-0 text-sm font-medium">Preset</span>
-            <div class="border border-surface-200 dark:border-surface-800 flex rounded-md text-sm font-medium">
-                <button
-                    type="button"
-                    class="transition duration-200 rounded-l-md px-3 py-2"
-                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isLara, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isLara }"
-                    @click="setPreset('lara')"
-                >
-                    Lara
-                </button>
-                <button
-                    type="button"
-                    class="transition duration-200 rounded-r-md px-3 py-2"
-                    :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isWindUI, 'hover:bg-surface-100 dark:hover:bg-surface-800': !isWindUI }"
-                    @click="setPreset('wind')"
-                >
-                    Wind
-                </button>
-            </div>
         </div>
     </div>
 </template>
