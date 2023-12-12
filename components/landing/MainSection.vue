@@ -65,7 +65,7 @@
                                         </svg>
                                     </div>
                                     <div class="flex items-center px-[1.2rem] py-2 dropdown-bg mt-2 bg-white dark:bg-surface-900 rounded-md min-h-[4.3rem]">
-                                        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" />
+                                        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" :pt="{ panel: 'w-full' }" :ptOptions="{ mergeProps: true }" />
                                     </div>
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">
@@ -284,7 +284,7 @@
                     </div>
                 </div>
                 <div class="hidden lg:inline-flex w-[35%] min-[1100px]:w-[39%] xl:w-5/12 min-[1419px]:w-1/2 overflow-hidden justify-around items-start p-5">
-                    <div  class="component-suite">
+                    <div  class="component-suite z-40">
                         <svg class="w-[49rem] relative top-[-5rem] z-0" viewBox="0 0 781 1050" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line x1="223.5" y1="0.523437" x2="223.5" y2="1049.48" stroke="url(#paint0_linear_612_64534)" />
                             <line x1="0.640625" y1="278.5" x2="780.363" y2="278.5" stroke="url(#paint1_linear_612_64534)" />
@@ -2859,7 +2859,8 @@
                         </svg>
                         <div class="absolute top-[12.4rem] left-[14rem] z-40">
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" />
+                                <Chips v-model="chipsValue" class="!w-full" :pt="{ container: 'flex-nowrap' }" :ptOptions="{ mergeProps: true }"/>
+                               
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center">
                                 <div class="flex items-center w-[6.5rem]">
@@ -2919,7 +2920,7 @@
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <Calendar v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full"/>
+                                <Calendar v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full" :pt="{ panel: 'z-40' }" :ptOptions="{ mergeProps: true }"/>
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center justify-center gap-5">
                                 <Tag value="Lightful"></Tag>
@@ -2962,6 +2963,7 @@ export default {
             selectedCity: null,
             checked: true,
             switched: true,
+            chipsValue: ['Vue.js'],
             cities: [
                 { name: 'New York', code: 'NY' },
                 { name: 'Rome', code: 'RM' },
