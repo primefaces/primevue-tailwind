@@ -1,7 +1,6 @@
 export default {
     root: ({ props, parent }) => ({
         class: [
-            console.log(parent.instance.$style?.name),
             // Font
             {
                 'text-xl': props.size == 'large',
