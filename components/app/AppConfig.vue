@@ -103,7 +103,7 @@ export default {
     methods: {
         updateColors(type, colors) {
             if (!document.startViewTransition) {
-                applyTheme(type, colors);
+                this.applyTheme(type, colors);
 
                 return;
             }
