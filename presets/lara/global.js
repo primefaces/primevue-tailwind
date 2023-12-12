@@ -73,5 +73,18 @@ export default {
             right: -90%;
         }
     }
+
+    .p-fadein {
+        animation: p-fadein 250ms linear;
+    }
+
+    @keyframes p-fadein {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 `
 };

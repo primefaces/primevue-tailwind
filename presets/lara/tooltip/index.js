@@ -4,6 +4,7 @@ export default {
             // Position and Shadows
             'absolute',
             'shadow-md',
+            'p-fadein',
             // Spacing
             {
                 'py-0 px-1': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
