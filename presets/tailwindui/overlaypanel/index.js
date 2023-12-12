@@ -27,9 +27,9 @@ export default {
         class: 'p-6 items-center flex'
     },
     transition: {
-        enterFromClass: 'opacity-0 scale-75',
-        enterActiveClass: 'transition-transform transition-opacity duration-150 ease-in',
-        leaveActiveClass: 'transition-opacity duration-150 ease-linear',
+        enterFromClass: 'opacity-0 scale-y-[0.8]',
+        enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
+        leaveActiveClass: 'transition-opacity duration-100 ease-linear',
         leaveToClass: 'opacity-0'
     }
 };

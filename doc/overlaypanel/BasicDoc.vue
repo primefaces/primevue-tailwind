@@ -3,6 +3,7 @@
         <p>OverlayPanel is accessed via its ref and visibility is controlled using <i>toggle</i>, <i>show</i> and <i>hide</i> functions with an event of the target.</p>
     </DocSectionText>
     <div class="card flex justify-center">
+        <link rel="preload" as="image" href="https://primefaces.org/cdn/primevue/images/product/bamboo-watch.jpg" />
         <Button type="button" icon="pi pi-image" label="Image" @click="toggle" />
 
         <OverlayPanel ref="op">
