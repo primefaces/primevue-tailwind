@@ -1,7 +1,7 @@
 import pkg from '@/package.json';
 import { Lara } from './lara';
+import { Wind } from './wind';
 import { services } from './services';
-import { TailwindUI } from './tailwindui';
 
 const PrimeVue = {
     version: '^3.43.0',
@@ -64,7 +64,7 @@ const getVueApp = (props = {}, sourceType) => {
     imports += `import ThemeSwitcher from './components/ThemeSwitcher.vue';
 import Configurator from './components/Configurator.vue';
 import Lara from './presets/lara';
-import TailwindUI from './presets/tailwindui';
+import Wind from './presets/wind';
 import appState from './plugins/appState.js';`;
     element += `app.component('ThemeSwitcher', ThemeSwitcher);
 app.component('Configurator', Configurator);
@@ -564,10 +564,10 @@ export default {
             <button
                 type="button"
                 class="transition duration-200 rounded-r-md px-2 py-1"
-                :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isTailwindUI, 'text-text-gray-950 dark:text-white hover:bg-surface-100 dark:hover:bg-surface-800': !isTailwindUI }"
-                @click="setPreset('tailwindui')"
+                :class="{ 'bg-primary-500 text-white dark:bg-primary-400 dark:text-gray-950': isWind, 'text-text-gray-950 dark:text-white hover:bg-surface-100 dark:hover:bg-surface-800': !isWind }"
+                @click="setPreset('wind')"
             >
-                TailwindUI
+                Wind
             </button>
         </div>
     </div>
@@ -652,8 +652,8 @@ export default {
         isLara() {
             return this.$appState.preset === 'lara';
         },
-        isTailwindUI() {
-            return this.$appState.preset === 'tailwindui';
+        isWind() {
+            return this.$appState.preset === 'wind';
         }
     }
 };
@@ -663,7 +663,7 @@ export default {
 
     files[`${path}plugins/appState.js`] = {
         content: `import Lara from '@/presets/lara';
-import TailwindUI from '@/presets/tailwindui';
+import Wind from '@/presets/wind';
 import { reactive, watch } from 'vue';
 
 export default {
@@ -675,8 +675,8 @@ export default {
         (newValue) => {
         if (newValue === 'lara')
             app.config.globalProperties.$primevue.config.pt = Lara;
-        else if (newValue === 'tailwindui')
-            app.config.globalProperties.$primevue.config.pt = TailwindUI;
+        else if (newValue === 'wind')
+            app.config.globalProperties.$primevue.config.pt = Wind;
         }
     );
 
@@ -703,7 +703,7 @@ export default {
     };
 
     createPresetFiles(Lara, 'lara');
-    createPresetFiles(TailwindUI, 'tailwindui');
+    createPresetFiles(Wind, 'wind');
 
     return { files, dependencies, sourceFileName };
 };

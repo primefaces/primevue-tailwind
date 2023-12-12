@@ -1,4 +1,4 @@
-const TailwindUI = {
+const Wind = {
     index: `import accordion from './accordion';
 import avatar from './avatar';
 import avatargroup from './avatargroup';
@@ -1454,4 +1454,4 @@ css: \`
     `
 };
 
-export { TailwindUI };
+export { Wind };
