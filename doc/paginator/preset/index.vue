@@ -1,7 +1,7 @@
 <template>
     <div class="doc-main">
         <div class="doc-intro">
-            <h1>DataTable Presets</h1>
+            <h1>Paginator Presets</h1>
         </div>
         <DocSections :docs="docs" />
     </div>

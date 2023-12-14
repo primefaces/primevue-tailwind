@@ -72,6 +72,19 @@
                     ]
                 },
                 {
+                    "name": "Data",
+                    "children": [
+                        {
+                            "name": "DataTable",
+                            "to": "/datatable"
+                        },
+                        {
+                            "name": "Paginator",
+                            "to": "/paginator"
+                        }
+                    ]
+                },
+                {
                     "name": "Panel",
                     "children": [
                         {
@@ -110,8 +123,7 @@
                         {
                             "name": "Steps",
                             "to": "/steps"
-                        }
-                        ,
+                        },
                         {
                             "name": "TieredMenu",
                             "to": "/tieredmenu"
