@@ -7,6 +7,8 @@ export default defineEventHandler(async (event) => {
     const availableDirectives = ['tooltip', 'badgedirective', 'ripple'];
     let directives = [];
 
+    main = main.concat(`import global from './global.js';\n`);
+
     //components
     for (let component of components) {
         const file = await useStorage(`assets:presets`).getItem(`${preset}:${component}:index.js`);

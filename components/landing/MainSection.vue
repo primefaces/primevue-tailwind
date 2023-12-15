@@ -8,11 +8,11 @@
                             <span class="text-primary-900 dark:text-primary-100 font-medium leading-6">Powered by PrimeVue Unstyled Core</span>
                         </div>
                         <div class="flex-col justify-start items-start gap-4 flex">
-                            <div>
-                                <span class="text-neutral-800 dark:text-surface-50 text-[3rem] sm:text-[3.5rem] xl:text-[4rem] font-medium sm:leading-[4.5rem]">Tailwind CSS Based <br />UI Component Library <br />for </span
-                                ><span class="text-primary-400 text-[3rem] sm:text-[3.5rem] xl:text-[4rem] font-medium sm:leading-[4.5rem]">Vue.js</span>
+                            <div class="text-5xl font-bold">
+                                <span class="text-neutral-800 dark:text-surface-50 leading-tight">Tailwind CSS Based <br />UI Component Library <br />for </span>
+                                <span class="text-primary-400 font-bold leading-tight">Vue.js</span>
                             </div>
-                            <div class="text-zinc-600 dark:text-surface-50 font-normal leading-6 max-w-[35rem] text-lg">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</div>
+                            <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</div>
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
                             <router-link to="/installation">
@@ -3020,7 +3020,7 @@ export default {
         isLara() {
             return this.$appState.preset === 'lara';
         },
-        isWindUI() {
+        isWind() {
             return this.$appState.preset === 'wind';
         }
     }
