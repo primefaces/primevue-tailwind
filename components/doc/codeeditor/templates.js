@@ -551,8 +551,8 @@ export default {
                 type="button"
                 class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                 :class="{
-                    'shadow shadow-inner bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWindUI,
-                    'bg-surface-100 dark:bg-surface-900': !isWindUI
+                    'shadow shadow-inner bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
+                    'bg-surface-100 dark:bg-surface-900': !isWind
                 }"
                 @click="setPreset('wind')"
             >
@@ -671,7 +671,7 @@ export default {
             isLara() {
                 return this.$appState.preset === 'lara';
             },
-            isWindUI() {
+            isWind() {
                 return this.$appState.preset === 'wind';
             }
         }

@@ -3020,7 +3020,7 @@ export default {
         isLara() {
             return this.$appState.preset === 'lara';
         },
-        isWindUI() {
+        isWind() {
             return this.$appState.preset === 'wind';
         }
     }
