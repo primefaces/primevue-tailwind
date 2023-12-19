@@ -209,7 +209,7 @@ export default {
                 'duration-200',
 
                 // States
-                { 'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500': !state.focused },
+                { 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 dark:focus-visible:ring-primary-500': !state.focused },
 
                 // Misc
                 'cursor-pointer',
@@ -246,7 +246,7 @@ export default {
                 'duration-200',
 
                 // States
-                'focus:outline-none focus:shadow-none',
+                'focus-visible:outline-none focus-visible:shadow-none',
 
                 // Misc
                 'relative',
@@ -380,7 +380,7 @@ export default {
                     // States
                     'hover:border-primary-500 dark:hover:border-primary-400',
                     'focus-visible:outline-none focus-visible:shadow-none',
-                    'focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:focus:ring-primary-500',
+                    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-600 dark:focus-visible:ring-primary-500',
                     // Misc
                     'cursor-pointer',
                     'overflow-hidden overflow-ellipsis',
@@ -412,7 +412,7 @@ export default {
                 'duration-200',
 
                 // States
-                { 'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500': !state.focused },
+                { 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 dark:focus-visible:ring-primary-500': !state.focused },
 
                 // Misc
                 'cursor-pointer',
@@ -449,7 +449,7 @@ export default {
                 'duration-200',
 
                 // States
-                'focus:outline-none focus:shadow-none',
+                'focus-visible:outline-none focus-visible:shadow-none',
 
                 // Misc
                 'relative',
