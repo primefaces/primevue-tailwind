@@ -18,7 +18,8 @@ export default {
         return {
             code: {
                 basic: `
-<InputText />
+<Panel header="Global" class="mb-4">Content</Panel>
+<Panel header="Overriden" :pt="{ title: 'text-xl font-bold font-mono text-primary-500' }">Content</Panel>
 `
             }
         };
