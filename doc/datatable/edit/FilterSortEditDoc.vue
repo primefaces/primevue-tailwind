@@ -10,12 +10,7 @@
             @cell-edit-complete="onCellEditComplete"
             filterDisplay="row"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%" sortable filter>
@@ -50,12 +45,7 @@ export default {
                 basic: `
 <DataTable  v-model:filters="filters" :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete"  filterDisplay="row"
     :pt="{
-        table: { style: 'min-width: 50rem' },
-        column: {
-            bodycell: ({ state }) => ({
-                class: [{ 'pt-0 pb-0': state['d_editing'] }]
-            })
-        }
+        table: { style: 'min-width: 50rem' }
     }"
 >
     <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%" sortable filter>
@@ -73,12 +63,7 @@ export default {
     <div class="card p-fluid">
         <DataTable v-model:filters="filters" :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete" filterDisplay="row"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%" sortable filter>
@@ -165,12 +150,7 @@ export default {
     <div class="card p-fluid">
         <DataTable v-model:filters="filters" :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete" filterDisplay="row"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%" sortable filter>

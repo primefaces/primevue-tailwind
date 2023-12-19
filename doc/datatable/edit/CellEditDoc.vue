@@ -8,12 +8,7 @@
             editMode="cell"
             @cell-edit-complete="onCellEditComplete"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
@@ -51,12 +46,7 @@ export default {
                 basic: `
 <DataTable :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete"
     :pt="{
-        table: { style: 'min-width: 50rem' },
-        column: {
-            bodycell: ({ state }) => ({
-                class: [{ 'pt-0 pb-0': state['d_editing'] }]
-            })
-        }
+        table: { style: 'min-width: 50rem' }
     }"
 >
     <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
@@ -79,12 +69,7 @@ export default {
     <div class="card p-fluid">
         <DataTable :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
@@ -165,12 +150,7 @@ export default {
     <div class="card p-fluid">
         <DataTable :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">

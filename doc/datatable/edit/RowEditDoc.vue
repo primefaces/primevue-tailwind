@@ -13,12 +13,7 @@
             dataKey="id"
             @row-edit-save="onRowEditSave"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        style: state['d_editing'] && 'padding-top: 0.6rem; padding-bottom: 0.6rem'
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column field="code" header="Code" style="width: 20%">
@@ -74,12 +69,7 @@ export default {
                 basic: `
 <DataTable v-model:editingRows="editingRows" :value="products" editMode="row" dataKey="id" @row-edit-save="onRowEditSave"
     :pt="{
-        table: { style: 'min-width: 50rem' },
-        column: {
-            bodycell: ({ state }) => ({
-                style:  state['d_editing']&&'padding-top: 0.6rem; padding-bottom: 0.6rem' 
-            })
-        }
+        table: { style: 'min-width: 50rem' }
     }"
 >
     <Column field="code" header="Code" style="width: 20%">
@@ -120,12 +110,7 @@ export default {
     <div class="card p-fluid">
         <DataTable v-model:editingRows="editingRows" :value="products" editMode="row" dataKey="id" @row-edit-save="onRowEditSave"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        style:  state['d_editing']&&'padding-top: 0.6rem; padding-bottom: 0.6rem' 
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column field="code" header="Code" style="width: 20%">
@@ -214,12 +199,7 @@ export default {
     <div class="card p-fluid">
         <DataTable v-model:editingRows="editingRows" :value="products" editMode="row" dataKey="id" @row-edit-save="onRowEditSave"
             :pt="{
-                table: { style: 'min-width: 50rem' },
-                column: {
-                    bodycell: ({ state }) => ({
-                        style:  state['d_editing']&&'padding-top: 0.6rem; padding-bottom: 0.6rem' 
-                    })
-                }
+                table: { style: 'min-width: 50rem' }
             }"
         >
             <Column field="code" header="Code" style="width: 20%">
