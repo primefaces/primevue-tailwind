@@ -210,6 +210,16 @@
             "icon": "pi pi-images"
         },
         {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "Overriding Presets",
+                    "to": "/guides/overriding-presets"
+                }
+            ]
+        },
+        {
             "name": "Icons",
             "icon": "pi pi-eye",
             "children": [
