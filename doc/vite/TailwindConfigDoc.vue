@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>The built-in presets utilize an extended color palette based on CSS variables, open your <i>tailwind.config.js</i> file add the extension.</p>
+        <p>The built-in presets utilize an extended color palette based on CSS variables that needs to be defined as a Tailwind theme config extension</p>
         <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
     </DocSectionText>
 </template>

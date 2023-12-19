@@ -1,8 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
         <p>
-            The built-in presets utilize an extended color palette based on CSS variables, open your <i>tailwind.config.js</i> file add the extension. If you are using the tailwind module, this can be done in a separate config file or using the nuxt
-            config directly. Visit the <a href="https://tailwindcss.nuxtjs.org/tailwind/config#overwriting-the-configuration" target="_blank" rel="noopener noreferrer">overwriting the default configuration</a> documentation for details.
+            The built-in presets utilize an extended color palette based on CSS variables that needs to be defined at <i>tailwind.config.js</i>. In addition, the presets folder is required to be scanned by Tailwind with the <i>content</i> property.
+            If you are using the tailwind module, this can be done in a separate config file or using the nuxt config directly. Visit the
+            <a href="https://tailwindcss.nuxtjs.org/tailwind/config#overwriting-the-configuration" target="_blank" rel="noopener noreferrer">overwriting the default configuration</a> documentation for details.
         </p>
         <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
     </DocSectionText>
@@ -16,6 +17,9 @@ export default {
                 basic: `
 export default {
     ...
+    content: [
+        "presets/**/*.{js,vue,ts}"
+    ],
     theme: {
         extend: {
             colors: {

@@ -54,13 +54,6 @@ panel: {
             },
             code4: {
                 basic: `
-// ptOptions as { mergeSections: false, mergeProps: false }
-// this basically ignores the global config
-panel: {
-    header: 'text-xl text-primary-500',
-    content: 'p-8'
-}
-
 // ptOptions as { mergeSections: true, mergeProps: true }
 panel: {
     header: 'bg-gray-50 text-gray-900 p-4 border text-xl text-primary-500',
@@ -68,10 +61,19 @@ panel: {
     footer: 'p-4 border'
 }
 
+// ptOptions as { mergeSections: false, mergeProps: false }
+// this basically ignores the global config
+panel: {
+    header: 'text-xl text-primary-500',
+    content: 'p-8'
+    //no footer
+}
+
 // ptOptions as { mergeSections: false, mergeProps: true }
 panel: {
     header: 'bg-gray-50 text-gray-900 p-4 border text-xl text-primary-500',
-    content: 'border p-4 text-gray-900 p-8',
+    content: 'border p-4 text-gray-900 p-8'
+    //no footer
 }
 `
             }
