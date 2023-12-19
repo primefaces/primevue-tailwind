@@ -29,7 +29,6 @@ dropdown: {
             'transition-all',
             'duration-200',
 
-            //TODO: Focus needs context/props. normally gets p-focus
             // States
             'hover:border-primary-500 dark:hover:border-primary-300',
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',

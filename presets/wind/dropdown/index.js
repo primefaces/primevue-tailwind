@@ -14,7 +14,6 @@ export default {
             'bg-surface-0 dark:bg-surface-900',
             'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
-            //TODO: Focus needs context/props. normally gets p-focus
             // States
             'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
 
