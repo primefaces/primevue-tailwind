@@ -27,6 +27,7 @@ import paginator from './paginator';
 import panel from './panel';
 import progressbar from './progressbar';
 import radiobutton from './radiobutton';
+import rating from './rating';
 import ripple from './ripple';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
@@ -59,6 +60,7 @@ export default {
     selectbutton,
     slider,
     chips,
+    rating,
 
     //buttons
     button,
