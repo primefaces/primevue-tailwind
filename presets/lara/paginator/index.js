@@ -8,12 +8,11 @@ export default {
             'px-4 py-2',
 
             // Shape
-            'border-0 dark:border rounded-md',
+            'border-0',
 
             // Color
             'bg-surface-0 dark:bg-surface-800',
-            'text-surface-500 dark:text-white/60',
-            'dark:border-surface-700'
+            'text-surface-500 dark:text-white/60'
         ]
     },
     firstpagebutton: ({ context }) => ({
