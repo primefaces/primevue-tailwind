@@ -1,7 +1,18 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    darkMode: 'class',
-    content: ['./components/**/*.{js,vue,ts}', './doc/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './app.vue', './error.vue'],
+<template>
+    <DocSectionText v-bind="$attrs">
+        <p>The built-in presets utilize an extended color palette based on CSS variables, open your <i>tailwind.config.js</i> file add the extension.</p>
+        <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    </DocSectionText>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            code: {
+                basic: `
+export default {
+    ...
     theme: {
         extend: {
             colors: {
@@ -16,7 +27,6 @@ module.exports = {
                 'primary-800': 'rgb(var(--primary-800))',
                 'primary-900': 'rgb(var(--primary-900))',
                 'primary-950': 'rgb(var(--primary-950))',
-
                 'surface-0': 'rgb(var(--surface-0))',
                 'surface-50': 'rgb(var(--surface-50))',
                 'surface-100': 'rgb(var(--surface-100))',
@@ -31,6 +41,12 @@ module.exports = {
                 'surface-950': 'rgb(var(--surface-950))'
             }
         }
-    },
-    plugins: []
+    }
+    ...
+}
+`
+            }
+        };
+    }
 };
+</script>
