@@ -15,9 +15,9 @@
                             <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</div>
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
-                            <router-link to="/installation">
+                            <NuxtLink to="/overview">
                                 <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" />
-                            </router-link>
+                            </NuxtLink>
                             <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
                                 <Button label="Give a Star" icon="pi pi-star-fill text-yellow-400" iconPos="right" text severity="secondary" />
                             </a>
