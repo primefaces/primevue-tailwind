@@ -10,9 +10,9 @@
         <DataTable v-model:filters="filters" :value="customers" paginator :rows="10" dataKey="id" filterDisplay="row" :loading="loading" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
             <template #header>
                 <div class="flex justify-end">
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" class="pl-10" />
                     </span>
                 </div>
             </template>
@@ -116,9 +116,9 @@ export default {
         :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
     <template #header>
         <div class="flex justify-end">
-            <span class="p-input-icon-left">
-                <i class="pi pi-search" />
-                <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+            <span class="relative">
+                <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
             </span>
         </div>
     </template>
@@ -190,9 +190,9 @@ export default {
                 :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
             <template #header>
                 <div class="flex justify-end">
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
                     </span>
                 </div>
             </template>
@@ -344,9 +344,9 @@ export default {
                 :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
             <template #header>
                 <div class="flex justify-end">
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
                     </span>
                 </div>
             </template>

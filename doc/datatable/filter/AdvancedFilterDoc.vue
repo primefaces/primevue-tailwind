@@ -7,9 +7,9 @@
             <template #header>
                 <div class="flex justify-between">
                     <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" class="pl-10" />
                     </span>
                 </div>
             </template>
@@ -145,9 +145,9 @@ export default {
     <template #header>
         <div class="flex justify-between">
             <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-            <span class="p-input-icon-left">
-                <i class="pi pi-search" />
-                <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+            <span class="relative">
+                <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
             </span>
         </div>
     </template>
@@ -258,9 +258,9 @@ export default {
             <template #header>
                 <div class="flex justify-between">
                     <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
                     </span>
                 </div>
             </template>
@@ -463,9 +463,9 @@ export default {
             <template #header>
                 <div class="flex justify-between">
                     <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
                     </span>
                 </div>
             </template>
