@@ -1,10 +1,10 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>PrimeVue is available for download on <a href="https://www.npmjs.com/package/primevue">npm registry</a>.</p>
+        <p>PrimeVue is available for download on <a href="https://www.npmjs.com/package/primevue" target="_blank" rel="noopener noreferrer">npm registry</a>.</p>
     </DocSectionText>
     <DocSectionCode :code="code" hideToggleCode hideCodeSandbox hideStackBlitz />
 </template>
-lug
+
 <script>
 export default {
     data() {

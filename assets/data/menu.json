@@ -2,8 +2,21 @@
     "data": [
         {
             "name": "Getting Started",
-            "to": "/installation",
-            "icon": "pi pi-home"
+            "icon": "pi pi-home",
+            "children": [
+                {
+                    "name": "Overview",
+                    "to": "/overview"
+                },
+                {
+                    "name": "Vite",
+                    "to": "/vite"
+                },
+                {
+                    "name": "Nuxt",
+                    "to": "/nuxt"
+                }
+            ]
         },
         {
             "name": "Components",
@@ -212,6 +225,16 @@
             "name": "Gallery",
             "to": "/gallery",
             "icon": "pi pi-images"
+        },
+        {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "Overriding Presets",
+                    "to": "/guides/overriding-presets"
+                }
+            ]
         },
         {
             "name": "Icons",

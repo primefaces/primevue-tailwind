@@ -1,7 +1,25 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    darkMode: 'class',
-    content: ['./components/**/*.{js,vue,ts}', './doc/**/*.{js,vue,ts}', './layouts/**/*.vue', './pages/**/*.vue', './plugins/**/*.{js,ts}', './nuxt.config.{js,ts}', './app.vue', './error.vue'],
+<template>
+    <DocSectionText v-bind="$attrs">
+        <p>
+            The built-in presets utilize an extended color palette based on CSS variables that needs to be defined at <i>tailwind.config.js</i>. In addition, the presets folder is required to be scanned by Tailwind with the <i>content</i> property.
+            If you are using the tailwind module, this can be done in a separate config file or using the nuxt config directly. Visit the
+            <a href="https://tailwindcss.nuxtjs.org/tailwind/config#overwriting-the-configuration" target="_blank" rel="noopener noreferrer">overwriting the default configuration</a> documentation for details.
+        </p>
+        <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    </DocSectionText>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            code: {
+                basic: `
+export default {
+    ...
+    content: [
+        "presets/**/*.{js,vue,ts}"
+    ],
     theme: {
         extend: {
             colors: {
@@ -16,7 +34,6 @@ module.exports = {
                 'primary-800': 'rgb(var(--primary-800))',
                 'primary-900': 'rgb(var(--primary-900))',
                 'primary-950': 'rgb(var(--primary-950))',
-
                 'surface-0': 'rgb(var(--surface-0))',
                 'surface-50': 'rgb(var(--surface-50))',
                 'surface-100': 'rgb(var(--surface-100))',
@@ -31,6 +48,12 @@ module.exports = {
                 'surface-950': 'rgb(var(--surface-950))'
             }
         }
-    },
-    plugins: []
+    }
+    ...
+}
+`
+            }
+        };
+    }
 };
+</script>

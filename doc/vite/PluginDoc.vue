@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>PrimeVue needs to be configured using a Vue plugin. If you are using Nuxt, use <a href="https://primevue.org/nuxt/" target="_blank" rel="noopener noreferrer">primevue-nuxt-module</a> instead for the configuration.</p>
+        <p>PrimeVue needs to be configured as a Vue plugin with <i>unstyled</i> mode enabled.</p>
     </DocSectionText>
     <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
 </template>
