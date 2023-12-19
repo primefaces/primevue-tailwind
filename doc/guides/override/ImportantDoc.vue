@@ -19,14 +19,13 @@ export default {
         return {
             code: {
                 basic: `
-# Using npm
-npm install primevue
+<InputText :pt="{ root: 'bg-blue-500' }" 
+           :ptOptions="{ mergeProps: true }" 
+           placeholder="Not bg-blue-500" />
 
-# Using yarn
-yarn add primevue
-
-# Using pnpm
-pnpm add primevue
+<InputText :pt="{ root: '!bg-blue-500 placeholder:!text-blue-100 !text-white' }" 
+           :ptOptions="{ mergeProps: true }" 
+           placeholder="!bg-blue-500" />
 `
             }
         };
