@@ -6,9 +6,7 @@
 import AccessibilityDoc from '@/doc/datatable/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/datatable/BasicDoc.vue';
 import ColumnGroupDoc from '@/doc/datatable/ColumnGroupDoc.vue';
-import ColumnToggleDoc from '@/doc/datatable/ColumnToggleDoc.vue';
 import ConditionalStyleDoc from '@/doc/datatable/ConditionalStyleDoc.vue';
-import ContextMenuDoc from '@/doc/datatable/ContextMenuDoc.vue';
 import DynamicColumnsDoc from '@/doc/datatable/DynamicColumnsDoc.vue';
 import ExportDoc from '@/doc/datatable/ExportDoc.vue';
 import GridLinesDoc from '@/doc/datatable/GridLinesDoc.vue';
@@ -39,7 +37,6 @@ import RadioButtonRowSelectionDoc from '@/doc/datatable/rowselection/RadioButton
 import RowSelectEventsDoc from '@/doc/datatable/rowselection/RowSelectEventsDoc.vue';
 import SingleRowSelectionDoc from '@/doc/datatable/rowselection/SingleRowSelectionDoc.vue';
 import CustomersDoc from '@/doc/datatable/samples/CustomersDoc.vue';
-import ProductsDoc from '@/doc/datatable/samples/ProductsDoc.vue';
 import FlexibleScrollDoc from '@/doc/datatable/scroll/FlexibleScrollDoc.vue';
 import FrozenColumnsDoc from '@/doc/datatable/scroll/FrozenColumnsDoc.vue';
 import FrozenRowsDoc from '@/doc/datatable/scroll/FrozenRowsDoc.vue';
@@ -310,21 +307,21 @@ export default {
                     label: 'Reorder',
                     component: ReorderDoc
                 },
-                {
-                    id: 'column_toggle',
-                    label: 'Column Toggle',
-                    component: ColumnToggleDoc
-                },
+                // {
+                //     id: 'column_toggle',
+                //     label: 'Column Toggle',
+                //     component: ColumnToggleDoc
+                // },
                 {
                     id: 'export',
                     label: 'Export',
                     component: ExportDoc
                 },
-                {
-                    id: 'contextmenu',
-                    label: 'Context Menu',
-                    component: ContextMenuDoc
-                },
+                // {
+                //     id: 'contextmenu',
+                //     label: 'Context Menu',
+                //     component: ContextMenuDoc
+                // },
                 {
                     id: 'stateful',
                     label: 'Stateful',
@@ -338,12 +335,12 @@ export default {
                             id: 'customers',
                             label: 'Customers',
                             component: CustomersDoc
-                        },
-                        {
-                            id: 'dtproducts',
-                            label: 'Products',
-                            component: ProductsDoc
                         }
+                        // {
+                        //     id: 'dtproducts',
+                        //     label: 'Products',
+                        //     component: ProductsDoc
+                        // }
                     ]
                 },
                 {

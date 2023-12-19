@@ -12,7 +12,7 @@
                 <div class="flex justify-end">
                     <span class="relative">
                         <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" class="pl-10" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" class="pl-10 font-normal" />
                     </span>
                 </div>
             </template>
@@ -118,7 +118,7 @@ export default {
         <div class="flex justify-end">
             <span class="relative">
                 <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
+                <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
             </span>
         </div>
     </template>
@@ -192,7 +192,7 @@ export default {
                 <div class="flex justify-end">
                     <span class="relative">
                         <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
                     </span>
                 </div>
             </template>
@@ -346,7 +346,7 @@ export default {
                 <div class="flex justify-end">
                     <span class="relative">
                         <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10"/>
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
                     </span>
                 </div>
             </template>

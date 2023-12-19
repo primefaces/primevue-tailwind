@@ -82,7 +82,7 @@ export default {
         },
         stockClass(data) {
             return [
-                'border-circle w-2rem h-2rem inline-flex font-bold justify-center items-center text-sm',
+                'rounded-full w-8 h-8 inline-flex font-bold justify-center items-center text-sm',
                 {
                     'bg-red-100 text-red-900': data.quantity === 0,
                     'bg-blue-100 text-blue-900': data.quantity > 0 && data.quantity < 10,
@@ -132,7 +132,7 @@ const rowStyle = (data) => {
 };
 const stockClass = (data) => {
     return [
-        'border-circle w-2rem h-2rem inline-flex font-bold justify-center items-center text-sm',
+        'rounded-full w-8 h-8 inline-flex font-bold justify-center items-center text-sm',
         {
             'bg-red-100 text-red-900': data.quantity === 0,
             'bg-blue-100 text-blue-900': data.quantity > 0 && data.quantity < 10,
@@ -174,7 +174,7 @@ const stockClass = (data) => {
         },
         stockClass(data) {
             return [
-                'border-circle w-2rem h-2rem inline-flex font-bold justify-center items-center text-sm',
+                'rounded-full w-8 h-8 inline-flex font-bold justify-center items-center text-sm',
                 {
                     'bg-red-100 text-red-900': data.quantity === 0,
                     'bg-blue-100 text-blue-900': data.quantity > 0 && data.quantity < 10,

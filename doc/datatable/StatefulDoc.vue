@@ -24,7 +24,7 @@
             <template #header>
                 <span class="relative">
                     <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10" />
+                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal" />
                 </span>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">
@@ -110,7 +110,7 @@ export default {
     <template #header>
         <span class="relative">
             <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-            <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10"/>
+            <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
         </span>
     </template>
     <Column field="name" header="Name" sortable style="width: 25%">
@@ -171,7 +171,7 @@ export default {
             <template #header>
                 <span class="relative">
                     <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10"/>
+                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
                 </span>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">
@@ -297,7 +297,7 @@ export default {
             <template #header>
                 <span class="relative">
                     <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10"/>
+                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
                 </span>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">

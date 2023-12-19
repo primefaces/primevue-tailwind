@@ -54,7 +54,7 @@ export default {
     icon: {
         class: [
             // Font
-            'text-normal',
+            'text-base leading-none',
 
             // Size
             'w-4',
