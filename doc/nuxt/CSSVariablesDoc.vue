@@ -1,6 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Final step is defining the default values for the colors in RGB format, this can be done in a global CSS file in your Vite application e.g. <i>src/assets/base.css</i>.</p>
+        <p>
+            Final step is defining the default values for the colors in RGB format, this can be done in a global CSS file in your Nuxt application. See the
+            <a href="https://nuxt.com/docs/getting-started/styling" target="_blank" rel="noopener noreferrer">styling</a> section at Nuxt documentation for more information.
+        </p>
         <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
     </DocSectionText>
 </template>
