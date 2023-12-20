@@ -355,8 +355,7 @@ export default {
 
                 // Color
                 'text-surface-700 dark:text-white/80',
-                'border-surface-200 dark:border-surface-800',
-                'bg-surface-0 dark:bg-surface-700'
+                'border-surface-200 dark:border-surface-700'
             ]
         },
         filteroperatordropdown: {
@@ -381,7 +380,7 @@ export default {
                     'duration-200',
 
                     // States
-                    'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
+                    'focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
 
                     // Misc
                     'cursor-default',
@@ -669,7 +668,7 @@ export default {
 
                 // States
                 'hover:text-surface-700 hover:bg-surface-300/20',
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400',
 
                 // Transition
                 'transition duration-200',
@@ -744,7 +743,7 @@ export default {
                 'border-transparent',
 
                 // States
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400',
                 'hover:text-surface-700 hover:bg-surface-300/20',
 
                 // Transition
@@ -774,7 +773,7 @@ export default {
                 'border-transparent',
 
                 // States
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400',
                 'hover:text-surface-700 hover:bg-surface-300/20',
 
                 // Transition
@@ -804,7 +803,7 @@ export default {
                 'border-transparent',
 
                 // States
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400',
                 'hover:text-surface-700 hover:bg-surface-300/20',
 
                 // Transition
