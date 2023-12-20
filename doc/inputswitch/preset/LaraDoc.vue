@@ -35,7 +35,7 @@ inputswitch: {
             'before:-mt-2.5',
             'before:h-5 before:w-5',
             'before:rounded-full',
-            'before:transition-duration-200',
+            'before:duration-200',
             'before:bg-surface-0 before:dark:bg-surface-900',
 
             // Colors

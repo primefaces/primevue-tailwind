@@ -40,7 +40,7 @@ inputswitch: {
             'before:-mt-2',
             'before:h-4 before:w-4',
             'before:rounded-full',
-            'before:transition-duration-200 before:transition before:ease-in-out',
+            'before:duration-200 before:transition before:ease-in-out',
             'before:bg-surface-0 before:dark:bg-surface-900',
             'before:shadow',
             { 'before:transform before:translate-x-4': props.modelValue },

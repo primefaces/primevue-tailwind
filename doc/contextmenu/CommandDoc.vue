@@ -7,7 +7,11 @@
             <li
                 v-for="user in users"
                 :key="user.id"
-                :class="['p-2 hover:surface-hover rounded border border-transparent transition-all transition-duration-200 flex items-center justify-between', { 'border-primary': selectedUser?.id === user.id }]"
+                :class="[
+                    'p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between',
+                    { 'border-transparent': selectedUser?.id !== user.id },
+                    { 'border-primary-500 dark:border-primary-400': selectedUser?.id === user.id }
+                ]"
                 @contextmenu="onRightClick($event, user)"
             >
                 <div class="flex items-center gap-2">
@@ -73,7 +77,7 @@ export default {
     <li
         v-for="user in users"
         :key="user.id"
-        :class="['p-2 hover:surface-hover rounded border border-transparent transition-all transition-duration-200 flex items-center justify-between', { 'border-primary': selectedUser?.id === user.id }]"
+        :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between', { 'border-transparent': selectedUser?.id !== user.id }, { 'border-primary-500 dark:border-primary-400': selectedUser?.id === user.id }]"
         @contextmenu="onRightClick($event, user)"
     >
         <div class="flex items-center gap-2">
@@ -93,7 +97,7 @@ export default {
             <li
                 v-for="user in users"
                 :key="user.id"
-                :class="['p-2 hover:surface-hover rounded border border-transparent transition-all transition-duration-200 flex items-center justify-between', { 'border-primary': selectedUser?.id === user.id }]"
+                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between', { 'border-transparent': selectedUser?.id !== user.id }, { 'border-primary-500 dark:border-primary-400': selectedUser?.id === user.id }]"
                 @contextmenu="onRightClick($event, user)"
             >
                 <div class="flex items-center gap-2">
@@ -176,7 +180,7 @@ export default {
             <li
                 v-for="user in users"
                 :key="user.id"
-                :class="['p-2 hover:surface-hover rounded border border-transparent transition-all transition-duration-200 flex items-center justify-between', { 'border-primary': selectedUser?.id === user.id }]"
+                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between', { 'border-transparent': selectedUser?.id !== user.id }, { 'border-primary-500 dark:border-primary-400': selectedUser?.id === user.id }]"
                 @contextmenu="onRightClick($event, user)"
             >
                 <div class="flex items-center gap-2">
