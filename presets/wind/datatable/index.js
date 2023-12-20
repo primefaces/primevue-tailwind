@@ -63,7 +63,7 @@ export default {
     thead: ({ context }) => ({
         class: [
             {
-                'top-0 z-20 sticky': context.scrollable
+                'top-0 z-40 sticky': context.scrollable
             }
         ]
     }),
@@ -71,14 +71,14 @@ export default {
         class: [
             'border-t border-surface-300 dark:border-surface-600',
             {
-                'sticky z-20': instance.frozenRow && context.scrollable
+                'sticky z-20 font-semibold': instance.frozenRow && context.scrollable
             }
         ]
     }),
     tfoot: ({ context }) => ({
         class: [
             {
-                'bottom-0 z-20': context.scrollable
+                'bottom-0 z-0': context.scrollable
             }
         ]
     }),
@@ -143,16 +143,17 @@ export default {
         }),
         bodycell: ({ props, context, state, parent }) => ({
             class: [
-                'text-sm',
-
                 //Position
-                { 'sticky bg-inherit': props.frozen || props.frozen === '' },
+                { 'sticky box-border': parent.instance.frozenRow },
+                { 'sticky box-border': props.frozen || props.frozen === '' },
+                'text-sm',
 
                 // Alignment
                 'text-left',
                 // Shape
                 { 'border-0 border-r last:border-r-0 border-solid': context?.showGridlines },
                 { 'border-0 border-solid': !context?.showGridlines },
+                { 'bg-surface-0 dark:bg-surface-800': parent.instance.frozenRow || props.frozen || props.frozen === '' },
 
                 // Spacing
                 { 'py-2.5 px-2': context?.size === 'small' && !state['d_editing'] },
