@@ -17,7 +17,7 @@
         </p>
         <p>
             Tailwind is a perfect fit for the unstyled mode of PrimeVue, as it is also unopinionated unlike Bootstrap. There is no <i>btn</i> class in Tailwind, instead it provides the building blocks e.g. utilities to build your own button. PrimeVue
-            takes this approach to the next level by styling the components with Tailwind utilities, so instead of using a class like <i>.p-button</i> to style a Button, styling is done with Tailwind utilities are served as <i>presets</i>.
+            takes this approach to the next level by styling the components with Tailwind utilities, so instead of using a class like <i>.p-button</i> to style a Button, styling is done with Tailwind utilities that are served as <i>presets</i>.
         </p>
     </DocSectionText>
 </template>
