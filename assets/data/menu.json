@@ -233,6 +233,10 @@
                 {
                     "name": "Overriding Presets",
                     "to": "/guides/overriding-presets"
+                },
+                {
+                    "name": "Building a UI Library",
+                    "to": "/guides/building-ui-library"
                 }
             ]
         },
