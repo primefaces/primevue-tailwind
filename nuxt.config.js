@@ -25,26 +25,25 @@ export default defineNuxtConfig({
             ripple: true,
             unstyled: true
         },
-        importPT: { from: path.resolve(__dirname, './presets/lara/') },
-        cssLayerOrder: 'tailwind-base, primevue, tailwind-utilities'
+        importPT: { from: path.resolve(__dirname, './presets/lara/') }
     },
     app: {
         baseURL: baseUrl,
         head: {
-            title: 'PrimeVue - Vue UI Component Library',
+            title: 'Tailwind CSS based Vue UI Component Library',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name: 'description', content: 'The ultimate collection of design-agnostic, flexible and accessible Vue UI Components.' },
+                { name: 'description', content: 'Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.' },
                 { name: 'robots', content: 'index,follow' },
                 { name: 'twitter:card', content: 'summary_large_image' },
                 { name: 'twitter:site', content: '@primevue' },
-                { name: 'twitter:title', content: 'PrimeVue | Vue UI Component Library' },
-                { name: 'twitter:description', content: 'The ultimate collection of design-agnostic, flexible and accessible Vue UI Components.' },
+                { name: 'twitter:title', content: 'Tailwind CSS based Vue UI Component Library' },
+                { name: 'twitter:description', content: 'Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.' },
                 { property: 'og:type', content: 'website' },
-                { property: 'og:title', content: 'PrimeVue | Vue UI Component Library' },
-                { property: 'og:url', content: 'https://primevue.org/' },
-                { property: 'og:description', content: 'The ultimate collection of design-agnostic, flexible and accessible Vue UI Components.' },
+                { property: 'og:title', content: 'Tailwind CSS based Vue UI Component Library' },
+                { property: 'og:url', content: 'https://tailwind.primevue.org/' },
+                { property: 'og:description', content: 'Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.' },
                 { property: 'og:image', content: 'https://www.primefaces.org/static/social/primevue-preview.jpg' },
                 { property: 'og:ttl', content: '604800' }
             ],

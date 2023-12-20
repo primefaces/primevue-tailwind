@@ -1,8 +1,8 @@
 <template>
     <div>
         <Head>
-            <Title>Vue Icon Library - PrimeVue</Title>
-            <Meta name="description" content="PrimeVue components can be used with any icon library using the templating features." />
+            <Title>Tailwind CSS | Vue Icon Library</Title>
+            <Meta name="description" content="Tailwind CSS based PrimeVue components can be used with any icon library using the templating features." />
         </Head>
 
         <div class="doc">

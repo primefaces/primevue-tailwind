@@ -1,7 +1,7 @@
 <template>
     <Head>
         <Title>Getting Started - PrimeVue and Tailwind</Title>
-        <Meta name="description" content="PrimeVue is a rich set of open source components for Vue that can be customized with Tailwind CSS." />
+        <Meta name="description" content="The flexibility of Tailwind CSS meets the convenience of PrimeVue components." />
     </Head>
     <div class="doc">
         <div class="doc-main">
