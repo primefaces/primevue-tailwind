@@ -58,6 +58,10 @@
                             "to": "/inputtext"
                         },
                         {
+                            "name": "MultiSelect",
+                            "to": "/multiselect"
+                        },
+                        {
                             "name": "RadioButton",
                             "to": "/radiobutton"
                         },
@@ -129,6 +133,10 @@
                 {
                     "name": "Menu",
                     "children": [
+                        {
+                            "name": "ContextMenu",
+                            "to": "/contextmenu"
+                        },
                         {
                             "name": "Menu",
                             "to": "/menu"

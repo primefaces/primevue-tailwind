@@ -164,7 +164,7 @@ export default {
             // Text & Outlined Button
             { 'hover:bg-purple-300/20': (props.text || props.outlined) && props.severity === 'help' && !props.plain },
 
-            // Warning
+            // Danger
             { 'hover:bg-red-600 dark:hover:bg-red-300 hover:ring-red-600 dark:hover:ring-red-300': props.severity === 'danger' && !props.text && !props.outlined && !props.plain },
             { 'focus:ring-red-500 dark:focus:ring-red-400': props.severity === 'danger' },
             // Text & Outlined Button

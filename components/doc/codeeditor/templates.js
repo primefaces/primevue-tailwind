@@ -490,7 +490,7 @@ plugins: {
             <li>
                 <button
                     type="button"
-                    class="inline-flex border-1 w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
+                    class="inline-flex border w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
                     @click="onThemeToggler"
                 >
                     <i :class="\`dark:text-white pi \${iconClass}\`" />
@@ -500,7 +500,7 @@ plugins: {
             <button
                 v-styleclass="{selector: '@next', enterClass: 'hidden', enterActiveClass: 'scalein', leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true}"
                 type="button"
-                class="inline-flex border-1 w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
+                class="inline-flex border w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
             >
                 <i class="pi pi-palette dark:text-white"></i>
             </button>

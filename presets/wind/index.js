@@ -10,6 +10,7 @@ import card from './card';
 import checkbox from './checkbox';
 import chip from './chip';
 import chips from './chips';
+import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dialog from './dialog';
 import dropdown from './dropdown';
@@ -22,6 +23,7 @@ import inputtext from './inputtext';
 import menu from './menu';
 import menubar from './menubar';
 import message from './message';
+import multiselect from './multiselect';
 import overlaypanel from './overlaypanel';
 import paginator from './paginator';
 import panel from './panel';
@@ -61,6 +63,7 @@ export default {
     slider,
     chips,
     rating,
+    multiselect,
 
     //buttons
     button,
@@ -78,6 +81,7 @@ export default {
     tabview,
 
     //menu
+    contextmenu,
     menu,
     menubar,
     steps,
