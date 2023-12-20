@@ -87,7 +87,7 @@ export default {
             'font-bold',
 
             // Shape
-            'border-t-0 border-b border-x-0',
+            'border-t-0 border-t border-x-0',
 
             // Spacing
             'p-4',
@@ -113,7 +113,7 @@ export default {
 
                 // Shape
                 { 'border-r last:border-r-0': context?.showGridlines },
-                'border-0 border-solid',
+                'border-0',
 
                 // Spacing
                 context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
@@ -131,7 +131,7 @@ export default {
                 // Misc
                 { 'cursor-pointer': props.sortable },
                 {
-                    'overflow-hidden space-nowrap border-y bg-clip-padding': context.resizable
+                    'overflow-hidden space-nowrap bg-clip-padding': context.resizable
                 }
             ]
         }),
