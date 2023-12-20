@@ -1,33 +1,110 @@
 export default {
     root: {
-        class: 'py-1 bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80 border-none shadow-md rounded-lg w-52'
+        class: [
+            // Sizing and Shape
+            'min-w-[12rem]',
+            'rounded-md',
+            'shadow-md',
+
+            // Spacing
+            'p-1.5',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-700',
+            'text-surface-700 dark:text-white/80',
+            'dark:border dark:border-surface-700'
+        ]
     },
     menu: {
-        class: ['m-0 p-0 list-none', 'outline-none']
+        class: [
+            // Spacings and Shape
+            'list-none',
+            'm-0',
+            'p-0',
+            'outline-none'
+        ]
     },
     menuitem: {
         class: 'relative'
     },
     content: ({ context }) => ({
         class: [
-            'transition-shadow duration-200 rounded-none',
-            'hover:text-surface-700 dark:hover:text-white/80 hover:bg-surface-100 dark:hover:bg-surface-800/80', // Hover
+            //Shape
+            'rounded-md',
+
+            // Colors
             {
-                'text-surface-700': !context.focused && !context.active,
-                'bg-surface-300 text-surface-700 dark:text-white/80 dark:bg-surface-800/90': context.focused && !context.active,
-                'bg-primary-500 text-primary-700 dark:bg-primary-400 dark:text-white/80': context.focused && context.active,
-                'bg-primary-50 text-primary-700 dark:bg-primary-300 dark:text-white/80': !context.focused && context.active
-            }
+                'text-surface-700 dark:text-surface-0': !context.focused,
+                'bg-surface-100 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.focused
+            },
+
+            // Transitions
+            'transition-shadow',
+            'duration-200',
+
+            // States
+            'hover:text-primary-600 dark:hover:text-primary-400 ',
+            'hover:bg-surface-100 dark:hover:bg-surface-400/10'
         ]
     }),
     action: {
-        class: ['cursor-pointer flex items-center no-underline overflow-hidden relative', 'text-surface-700 dark:text-white/80 py-3 px-5 select-none']
+        class: [
+            'relative',
+
+            // Font
+            'font-semibold',
+
+            // Flexbox
+            'flex',
+            'items-center',
+
+            // Spacing
+            'py-2',
+            'px-3',
+
+            // Misc
+            'no-underline',
+            'overflow-hidden',
+            'cursor-pointer',
+            'select-none'
+        ]
     },
     icon: {
-        class: 'text-surface-600 dark:text-white/70 mr-2'
+        class: [
+            // Spacing
+            'mr-2',
+            'leading-6',
+            'text-sm'
+        ]
     },
     label: {
-        class: 'text-surface-600 dark:text-white/70'
+        class: ['leading-6', 'text-sm']
+    },
+    submenu: ({ props }) => ({
+        class: [
+            // Size
+            'w-full sm:w-48',
+
+            // Spacing
+            'p-1.5',
+            'm-0',
+            'list-none',
+
+            // Shape
+            'shadow-md',
+            'rounded-md',
+
+            // Position
+            'static sm:absolute',
+            'z-10',
+            { 'sm:absolute sm:left-full sm:top-0': props.level > 1 },
+
+            // Color
+            'bg-surface-0 dark:bg-surface-700'
+        ]
+    }),
+    separator: {
+        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
     },
     transition: {
         enterFromClass: 'opacity-0',

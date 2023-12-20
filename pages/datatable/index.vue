@@ -7,6 +7,7 @@ import AccessibilityDoc from '@/doc/datatable/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/datatable/BasicDoc.vue';
 import ColumnGroupDoc from '@/doc/datatable/ColumnGroupDoc.vue';
 import ConditionalStyleDoc from '@/doc/datatable/ConditionalStyleDoc.vue';
+import ContextMenuDoc from '@/doc/datatable/ContextMenuDoc.vue';
 import DynamicColumnsDoc from '@/doc/datatable/DynamicColumnsDoc.vue';
 import ExportDoc from '@/doc/datatable/ExportDoc.vue';
 import GridLinesDoc from '@/doc/datatable/GridLinesDoc.vue';
@@ -48,7 +49,6 @@ import RemovableSortDoc from '@/doc/datatable/sort/RemovableSortDoc.vue';
 import SingleColumnDoc from '@/doc/datatable/sort/SingleColumnDoc.vue';
 import LazyVirtualScrollDoc from '@/doc/datatable/virtualscroll/LazyVirtualScrollDoc.vue';
 import PreloadVirtualScrollDoc from '@/doc/datatable/virtualscroll/PreloadVirtualScrollDoc.vue';
-
 export default {
     data() {
         return {
@@ -317,11 +317,11 @@ export default {
                     label: 'Export',
                     component: ExportDoc
                 },
-                // {
-                //     id: 'contextmenu',
-                //     label: 'Context Menu',
-                //     component: ContextMenuDoc
-                // },
+                {
+                    id: 'contextmenu',
+                    label: 'Context Menu',
+                    component: ContextMenuDoc
+                },
                 {
                     id: 'stateful',
                     label: 'Stateful',
