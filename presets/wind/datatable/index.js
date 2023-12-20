@@ -99,7 +99,7 @@ export default {
         ]
     },
     column: {
-        headercell: ({ context, props, parent }) => ({
+        headercell: ({ context, props }) => ({
             class: [
                 'font-semibold',
                 'text-sm',
@@ -118,8 +118,8 @@ export default {
                 // Spacing
                 context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
                 // Color
-                context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-0 text-surface-700',
-                context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
+                context.sorted ? 'text-primary-500' : 'bg-surface-0 text-surface-700',
+                context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80 dark:bg-surface-800',
                 'border-surface-200 dark:border-surface-700 ',
 
                 // States
@@ -138,6 +138,9 @@ export default {
         headercontent: {
             class: 'flex items-center'
         },
+        sort: ({ context }) => ({
+            class: [context.sorted ? 'text-primary-500' : 'bg-surface-0 text-surface-700', context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80 dark:bg-surface-800']
+        }),
         bodycell: ({ props, context, state, parent }) => ({
             class: [
                 'text-sm',
@@ -188,9 +191,9 @@ export default {
                 'transition duration-200'
             ]
         }),
-        sorticon: ({ context }) => ({
-            class: ['ml-2', context.sorted ? 'text-primary-700 dark:text-white/80' : 'text-surface-700 dark:text-white/70']
-        }),
+        sorticon: {
+            class: 'ml-2'
+        },
         sortbadge: {
             class: [
                 // Flex & Alignment
@@ -958,7 +961,7 @@ export default {
             { 'bg-surface-0 dark:bg-surface-800': props.frozenRow },
             { 'odd:bg-surface-0 odd:text-surface-600 dark:odd:bg-surface-800 even:bg-surface-50 even:text-surface-600 dark:even:bg-surface-900/50': context.stripedRows },
             { 'border-0': context.stripedRows && !context.showGridlines },
-            { 'border-b border-solid border-surface-200 dark:border-surface-700': !context.stripedRows },
+            { 'last:border-b-0 border-b border-solid border-surface-200 dark:border-surface-700': !context.stripedRows },
 
             // State
             { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': context.selectable },
