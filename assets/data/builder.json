@@ -102,8 +102,7 @@
                 },
                 {
                     "name": "ToggleButton",
-                    "path": "togglebutton",
-                    "disabled": true
+                    "path": "togglebutton"
                 },
                 {
                     "name": "TreeSelect",

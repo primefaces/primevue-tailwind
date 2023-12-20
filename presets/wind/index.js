@@ -40,6 +40,7 @@ import tabview from './tabview';
 import tag from './tag';
 import tieredmenu from './tieredmenu';
 import toast from './toast';
+import togglebutton from './togglebutton';
 import tooltip from './tooltip';
 
 export default {
@@ -64,6 +65,7 @@ export default {
     chips,
     rating,
     multiselect,
+    togglebutton,
 
     //buttons
     button,
