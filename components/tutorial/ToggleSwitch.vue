@@ -22,7 +22,7 @@ const preset = {
             }
         ]
     }),
-    slider: ({ instance, props, state }) => ({
+    slider: ({ props, state, attrs }) => ({
         class: [
             // Position
             'absolute top-0 left-0 right-0 bottom-0 before:transform',
@@ -44,23 +44,23 @@ const preset = {
             {
                 "before:bg-surface-500 before:dark:bg-surface-500 before:content-['➖']": !props.modelValue,
                 "before:content-['✔️']": props.modelValue,
-                'before:bg-violet-500 before:ring-violet-300': !instance.$attrs.type & props.modelValue,
-                'before:bg-amber-500 before:ring-amber-300': instance.$attrs.type === 'accent' && props.modelValue
+                'before:bg-violet-500 before:ring-violet-300': !attrs.type & props.modelValue,
+                'before:bg-amber-500 before:ring-amber-300': attrs.type === 'accent' && props.modelValue
             },
 
             // Colors
             'border border-transparent',
             {
                 'bg-surface-200 dark:bg-surface-400 before:ring-surface-200 dark:before:ring-surface-400': !props.modelValue,
-                'bg-violet-300': !instance.$attrs.type & props.modelValue,
-                'bg-amber-300': instance.$attrs.type === 'accent' && props.modelValue
+                'bg-violet-300': !attrs.type & props.modelValue,
+                'bg-amber-300': attrs.type === 'accent' && props.modelValue
             },
 
             // States
             {
                 'hover:before:bg-surface-400 hover:dark:before:bg-surface-600': !props.modelValue,
-                'hover:before:bg-violet-600': !instance.$attrs.type & props.modelValue,
-                'hover:before:bg-amber-600': instance.$attrs.type === 'accent' && props.modelValue
+                'hover:before:bg-violet-600': !attrs.type & props.modelValue,
+                'hover:before:bg-amber-600': attrs.type === 'accent' && props.modelValue
             },
 
             // Transition
