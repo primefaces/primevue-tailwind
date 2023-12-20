@@ -152,7 +152,7 @@ export default {
                 // Spacing
                 { 'p-2': context?.size === 'small' && !state['d_editing'] },
                 { 'p-5': context?.size === 'large' && !state['d_editing'] },
-                { 'p-4': !context?.size && !state['d_editing'] },
+                { 'p-4': context?.size !== 'large' && context?.size !== 'small' && !state['d_editing'] },
                 { 'py-[0.6rem] px-2': state['d_editing'] },
 
                 // Color
