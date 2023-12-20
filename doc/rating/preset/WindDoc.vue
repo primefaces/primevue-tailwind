@@ -11,58 +11,89 @@ export default {
             code: {
                 basic: `
 radiobutton: {
-    root: {
+    root: ({ props }) => ({
         class: [
             'relative',
 
-            // Flexbox & Alignment
-            'inline-flex',
-            'align-bottom',
-
-            // Size
-            'w-4 h-4',
+            // Flex & Alignment
+            'flex items-center',
+            'gap-1',
 
             // Misc
-            'cursor-default',
-            'select-none'
-        ]
-    },
-    input: ({ props, state }) => ({
-        class: [
-            // Flexbox
-            'flex justify-center items-center',
-
-            // Size
-            'w-4 h-4',
-            'text-sm',
-            'font-medium',
-
-            // Shape
-            'border-2',
-            'rounded-full',
-
-            // Transition
-            'transition duration-200 ease-in-out',
-
-            // Colors
             {
-                'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
-                'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue && props.value !== undefined,
-                'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined,
-                'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined
-            },
-
-            // States
-            {
-                'outline-none outline-offset-0': !props.disabled && state.focused,
-                'ring-2 ring-offset-2 ring-offset-surface-0 dark:ring-offset-surface-800 ring-primary-500 dark:ring-primary-400': !props.disabled && state.focused,
-                'opacity-60 cursor-default': props.disabled
+                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
             }
         ]
     }),
-    icon: {
-        class: 'hidden'
-    }
+    cancelitem: ({ context }) => ({
+        class: [
+            // Flex & Alignment
+            'inline-flex items-center',
+
+            //State
+            {
+                'focus:outline-none focus:shadow-none': context.focused,
+                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400': context.focused && !props.readonly
+            },
+
+            // Misc
+            'cursor-pointer'
+        ]
+    }),
+    cancelicon: {
+        class: [
+            // Size
+            'w-5 h-5',
+
+            // Color
+            'text-red-500 dark:text-red-400'
+        ]
+    },
+    item: ({ props, context }) => ({
+        class: [
+            // Flex & Alignment
+            'inline-flex items-center',
+
+            // State
+            {
+                'focus:outline-none focus:shadow-none': context.focused,
+                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400': context.focused && !props.readonly
+            },
+
+            // Misc
+            {
+                'cursor-pointer': !props.readonly,
+                'cursor-default': props.readonly
+            }
+        ]
+    }),
+    officon: ({ props }) => ({
+        class: [
+            // Size
+            'w-5 h-5',
+
+            // Color
+            'text-surface-700 dark:text-surface-0/70',
+
+            // State
+            { 'hover:text-primary-500 dark:hover:text-primary-400': !props.readonly },
+
+            // Transition
+            'transition duration-200 ease-in'
+        ]
+    }),
+    onicon: ({ props }) => ({
+        class: [
+            // Size
+            'w-5 h-5',
+
+            // Color
+            'text-primary-500 dark:text-primary-400',
+
+            // Transition
+            'transition duration-200 ease-in'
+        ]
+    })
 }
 `
             }

@@ -1,7 +1,7 @@
 <template>
     <div class="doc-main">
         <div class="doc-intro">
-            <h1>Chip Presets</h1>
+            <h1>ContextMenu Presets</h1>
         </div>
         <DocSections :docs="docs" />
     </div>

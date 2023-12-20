@@ -266,7 +266,6 @@
                             </div>
                             <div class="w-[20.5rem] flex p-[0.571rem] flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch prime-card">
                                 <div class="rounded-[0.571rem] bg-surface-50 dark:bg-surface-800 h-[9rem] w-full flex items-center justify-center overflow-hidden">
-                                    <!-- TODO : Update emeraldlogo on CDN and remove from assets -->
                                     <img src="assets/emeraldlogo.png" alt="PrimeVue Logo" class="emerald-logo" />
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">

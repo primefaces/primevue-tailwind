@@ -21,7 +21,7 @@ button: {
             // Sizes & Spacing
             {
                 'px-4 py-3 leading-none': props.size === null && props.label !== null,
-                'text-xs py-2 px-3': props.size === 'small',
+                'text-sm py-2 px-3': props.size === 'small',
                 'text-xl py-3 px-4': props.size === 'large'
             },
             {
@@ -74,12 +74,12 @@ button: {
 
             // Success Button
             {
-                'text-white dark:text-surface-900': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
+                'text-white dark:text-green-900': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
                 'bg-green-500 dark:bg-green-400': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
                 'border border-green-500 dark:border-green-400': props.severity === 'success' && !props.text && !props.outlined && !props.plain
             },
             // Success Text Button
-            { 'text-surface-500 dark:text-surface-400': props.text && props.severity === 'secondary' && !props.plain },
+            { 'text-green-500 dark:text-green-400': props.text && props.severity === 'success' && !props.plain },
             // Success Outlined Button
             { 'text-green-500 border border-green-500 hover:bg-green-300/20': props.outlined && props.severity === 'success' && !props.plain },
 
