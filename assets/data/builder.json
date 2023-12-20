@@ -72,8 +72,7 @@
                 },
                 {
                     "name": "MultiSelect",
-                    "path": "multiselect",
-                    "disabled": true
+                    "path": "multiselect"
                 },
                 {
                     "name": "Password",
@@ -86,8 +85,7 @@
                 },
                 {
                     "name": "Rating",
-                    "path": "rating",
-                    "disabled": true
+                    "path": "rating"
                 },
                 {
                     "name": "SelectButton",
@@ -142,8 +140,7 @@
             "components": [
                 {
                     "name": "DataTable",
-                    "path": "datatable",
-                    "disabled": true
+                    "path": "datatable"
                 },
                 {
                     "name": "DataView",
@@ -162,8 +159,7 @@
                 },
                 {
                     "name": "Paginator",
-                    "path": "paginator",
-                    "disabled": true
+                    "path": "paginator"
                 },
                 {
                     "name": "PickList",
@@ -299,8 +295,7 @@
                 },
                 {
                     "name": "ContextMenu",
-                    "path": "contextmenu",
-                    "disabled": true
+                    "path": "contextmenu"
                 },
                 {
                     "name": "Dock",
