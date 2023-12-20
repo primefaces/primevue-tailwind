@@ -358,7 +358,7 @@ export default {
 
             // Spacing
             'm-0',
-            'p-3',
+            'p-3 px-5',
 
             // Color
             'text-surface-800 dark:text-white/80',
@@ -369,7 +369,7 @@ export default {
         ]
     },
     filtercontainer: {
-        class: 'relative'
+        class: 'relative w-full mx-2'
     },
     filterinput: {
         class: [
