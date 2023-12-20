@@ -3,7 +3,17 @@
         <p>DataTable with selection, pagination, filtering, sorting and templating.</p>
     </DocSectionText>
     <div class="card">
-        <DataTable v-model:filters="filters" v-model:selection="selectedCustomers" :value="customers" paginator :rows="10" dataKey="id" filterDisplay="menu" :globalFilterFields="['name', 'country.name', 'representative.name', 'balance', 'status']">
+        <DataTable
+            v-model:filters="filters"
+            v-model:selection="selectedCustomers"
+            stripedRows
+            :value="customers"
+            paginator
+            :rows="10"
+            dataKey="id"
+            filterDisplay="menu"
+            :globalFilterFields="['name', 'country.name', 'representative.name', 'balance', 'status']"
+        >
             <template #header>
                 <div class="flex justify-between">
                     <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />

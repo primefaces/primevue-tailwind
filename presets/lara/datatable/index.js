@@ -791,7 +791,7 @@ export default {
 
                 // States
                 { 'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled },
-                { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': !context.disabled },
+                { 'outline-none outline-offset-0 ring ring-primary-400/50 ring-inset dark:ring-primary-300/50': context.focused },
 
                 // Transition
                 'transition duration-200 ease-in-out',
