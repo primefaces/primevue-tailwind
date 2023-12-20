@@ -1,7 +1,7 @@
 <template>
     <DocSectionText v-bind="$attrs">
         <p>Default date format is <i>mm/dd/yy</i> which can be customized using the <i>dateFormat</i> property. Following options can be a part of the format.</p>
-        <ul class="mb-4 line-height-4">
+        <ul class="mb-4 leading-8 list-disc px-6">
             <li><i>d</i> - day of month (no leading zero)</li>
             <li><i>dd</i> - day of month (two digit)</li>
             <li><i>o</i> - day of the year (no leading zeros)</li>

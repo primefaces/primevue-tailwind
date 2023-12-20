@@ -4,7 +4,7 @@
             Paginator elements can be customized using the <i>template</i> property using the predefined keys, default value is "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown". Here are the available elements that
             can be placed inside a paginator in any order.
         </p>
-        <ul class="mb-4 line-height-4">
+        <ul class="mb-4 leading-8 list-disc px-6">
             <li>FirstPageLink</li>
             <li>PrevPageLink</li>
             <li>PageLinks</li>
@@ -19,7 +19,7 @@
     <div class="card">
         <Paginator v-model:first="first" :rows="1" :totalRecords="12" template="FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink" />
 
-        <div class="p-3 text-center">
+        <div class="p-3 text-center flex justify-center">
             <img :src="`https://primefaces.org/cdn/primevue/images/nature/nature${first + 1}.jpg`" :alt="first" class="shadow-2 rounded w-full sm:w-[30rem]" />
         </div>
     </div>
@@ -35,7 +35,7 @@ export default {
                 basic: `
 <Paginator v-model:first="first" :rows="1" :totalRecords="1" template="FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink" />
 
-<div class="p-3 text-center">
+<div class="p-3 text-center flex justify-center">
     <img :src="\`https://primefaces.org/cdn/primevue/images/nature/nature\${first + 1}.jpg\`" :alt="first" class="shadow-2 rounded w-full sm:w-[30rem]" />
 </div>
 `,
@@ -44,7 +44,7 @@ export default {
     <div class="card">
         <Paginator v-model:first="first" :rows="1" :totalRecords="12" template="FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink" />
 
-        <div class="p-3 text-center">
+        <div class="p-3 text-center flex justify-center">
             <img :src="\`https://primefaces.org/cdn/primevue/images/nature/nature\${first + 1}.jpg\`" :alt="first" class="shadow-2 rounded w-full sm:w-[30rem]" />
         </div>
     </div>
@@ -65,7 +65,7 @@ export default {
     <div class="card">
         <Paginator v-model:first="first" :rows="1" :totalRecords="12" template="FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink" />
 
-        <div class="p-3 text-center">
+        <div class="p-3 text-center flex justify-center">
             <img :src="\`https://primefaces.org/cdn/primevue/images/nature/nature\${first + 1}.jpg\`" :alt="first" class="shadow-2 rounded w-full sm:w-[30rem]" />
         </div>
     </div>

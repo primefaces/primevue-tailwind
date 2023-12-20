@@ -6,6 +6,7 @@
 import AccessibilityDoc from '@/doc/datatable/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/datatable/BasicDoc.vue';
 import ColumnGroupDoc from '@/doc/datatable/ColumnGroupDoc.vue';
+import ColumnToggleDoc from '@/doc/datatable/ColumnToggleDoc.vue';
 import ConditionalStyleDoc from '@/doc/datatable/ConditionalStyleDoc.vue';
 import ContextMenuDoc from '@/doc/datatable/ContextMenuDoc.vue';
 import DynamicColumnsDoc from '@/doc/datatable/DynamicColumnsDoc.vue';
@@ -49,6 +50,7 @@ import RemovableSortDoc from '@/doc/datatable/sort/RemovableSortDoc.vue';
 import SingleColumnDoc from '@/doc/datatable/sort/SingleColumnDoc.vue';
 import LazyVirtualScrollDoc from '@/doc/datatable/virtualscroll/LazyVirtualScrollDoc.vue';
 import PreloadVirtualScrollDoc from '@/doc/datatable/virtualscroll/PreloadVirtualScrollDoc.vue';
+
 export default {
     data() {
         return {
@@ -307,11 +309,11 @@ export default {
                     label: 'Reorder',
                     component: ReorderDoc
                 },
-                // {
-                //     id: 'column_toggle',
-                //     label: 'Column Toggle',
-                //     component: ColumnToggleDoc
-                // },
+                {
+                    id: 'column_toggle',
+                    label: 'Column Toggle',
+                    component: ColumnToggleDoc
+                },
                 {
                     id: 'export',
                     label: 'Export',

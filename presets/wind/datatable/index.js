@@ -43,7 +43,7 @@ export default {
     }),
     header: ({ props }) => ({
         class: [
-            'font-bold',
+            'font-semibold',
 
             // Shape
             props.showGridlines ? 'border-b' : 'border-b border-x-0',
@@ -84,7 +84,7 @@ export default {
     }),
     footer: {
         class: [
-            'font-bold',
+            'font-semibold',
 
             // Shape
             'border-t-0 border-t border-x-0',
