@@ -18,7 +18,6 @@ import DisabledDoc from '@/doc/multiselect/DisabledDoc.vue';
 import FilterDoc from '@/doc/multiselect/FilterDoc.vue';
 import GroupDoc from '@/doc/multiselect/GroupDoc.vue';
 import ImportDoc from '@/doc/multiselect/ImportDoc.vue';
-import InvalidDoc from '@/doc/multiselect/InvalidDoc.vue';
 import LoadingStateDoc from '@/doc/multiselect/LoadingStateDoc.vue';
 import TemplateDoc from '@/doc/multiselect/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/multiselect/VirtualScrollDoc.vue';
@@ -72,11 +71,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
-                {
-                    id: 'invalid',
-                    label: 'Invalid',
-                    component: InvalidDoc
-                },
+                // {
+                //     id: 'invalid',
+                //     label: 'Invalid',
+                //     component: InvalidDoc
+                // },
                 {
                     id: 'disabled',
                     label: 'Disabled',

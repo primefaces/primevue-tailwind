@@ -8,7 +8,6 @@ import ButtonsDoc from '@/doc/inputnumber/ButtonsDoc.vue';
 import CurrencyDoc from '@/doc/inputnumber/CurrencyDoc.vue';
 import DisabledDoc from '@/doc/inputnumber/DisabledDoc.vue';
 import ImportDoc from '@/doc/inputnumber/ImportDoc.vue';
-import InvalidDoc from '@/doc/inputnumber/InvalidDoc.vue';
 import LocaleDoc from '@/doc/inputnumber/LocaleDoc.vue';
 import NumeralsDoc from '@/doc/inputnumber/NumeralsDoc.vue';
 import PrefixSuffixDoc from '@/doc/inputnumber/PrefixSuffixDoc.vue';
@@ -59,11 +58,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
-                {
-                    id: 'invalid',
-                    label: 'Invalid',
-                    component: InvalidDoc
-                },
+                // {
+                //     id: 'invalid',
+                //     label: 'Invalid',
+                //     component: InvalidDoc
+                // },
                 {
                     id: 'disabled',
                     label: 'Disabled',

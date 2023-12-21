@@ -20,7 +20,6 @@ import FormatDoc from '@/doc/calendar/FormatDoc.vue';
 import IconDoc from '@/doc/calendar/IconDoc.vue';
 import ImportDoc from '@/doc/calendar/ImportDoc.vue';
 import InlineDoc from '@/doc/calendar/InlineDoc.vue';
-import InvalidDoc from '@/doc/calendar/InvalidDoc.vue';
 import LocaleDoc from '@/doc/calendar/LocaleDoc.vue';
 import MinMaxDoc from '@/doc/calendar/MinMaxDoc.vue';
 import MonthPickerDoc from '@/doc/calendar/MonthPickerDoc.vue';
@@ -121,11 +120,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
-                {
-                    id: 'invalid',
-                    label: 'Invalid',
-                    component: InvalidDoc
-                },
+                // {
+                //     id: 'invalid',
+                //     label: 'Invalid',
+                //     component: InvalidDoc
+                // },
                 {
                     id: 'disabled',
                     label: 'Disabled',

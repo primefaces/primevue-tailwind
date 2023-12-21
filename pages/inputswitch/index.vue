@@ -7,7 +7,6 @@ import AccessibilityDoc from '@/doc/inputswitch/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/inputswitch/BasicDoc.vue';
 import DisabledDoc from '@/doc/inputswitch/DisabledDoc.vue';
 import ImportDoc from '@/doc/inputswitch/ImportDoc.vue';
-import InvalidDoc from '@/doc/inputswitch/InvalidDoc.vue';
 import PreselectionDoc from '@/doc/inputswitch/PreselectionDoc.vue';
 import PresetDoc from '@/doc/inputswitch/preset/index.vue';
 export default {
@@ -29,11 +28,11 @@ export default {
                     label: 'Preselection',
                     component: PreselectionDoc
                 },
-                {
-                    id: 'invalid',
-                    label: 'Invalid',
-                    component: InvalidDoc
-                },
+                // {
+                //     id: 'invalid',
+                //     label: 'Invalid',
+                //     component: InvalidDoc
+                // },
                 {
                     id: 'disabled',
                     label: 'Disabled',
