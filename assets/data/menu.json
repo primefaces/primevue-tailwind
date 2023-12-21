@@ -59,7 +59,8 @@
                         },
                         {
                             "name": "MultiSelect",
-                            "to": "/multiselect"
+                            "to": "/multiselect",
+                            "badge": "NEW"
                         },
                         {
                             "name": "RadioButton",
@@ -79,7 +80,8 @@
                         },
                         {
                             "name": "ToggleButton",
-                            "to": "/togglebutton"
+                            "to": "/togglebutton",
+                            "badge": "NEW"
                         }
                     ]
                 },
@@ -101,11 +103,13 @@
                     "children": [
                         {
                             "name": "DataTable",
-                            "to": "/datatable"
+                            "to": "/datatable",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Paginator",
-                            "to": "/paginator"
+                            "to": "/paginator",
+                            "badge": "NEW"
                         }
                     ]
                 },
@@ -139,7 +143,8 @@
                     "children": [
                         {
                             "name": "ContextMenu",
-                            "to": "/contextmenu"
+                            "to": "/contextmenu",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Menu",
