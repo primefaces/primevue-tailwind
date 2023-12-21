@@ -2,8 +2,8 @@
     <DocSectionText id="accessibility" label="Accessibility" v-bind="$attrs">
         <h3>Screen Reader</h3>
         <p>
-            Rating component internally uses radio buttons that are only visible to screen readers. The value to read for item is retrieved from the <NuxtLink to="/configuration/#locale">locale</NuxtLink> API via <i>star</i> and <i>stars</i> of the
-            <i>aria</i> property.
+            Rating component internally uses radio buttons that are only visible to screen readers. The value to read for item is retrieved from the
+            <a href="https://primevue.org/configuration/#locale" target="_blank" rel="noopener noreferrer">locale</a> API via <i>star</i> and <i>stars</i> of the <i>aria</i> property.
         </p>
 
         <h3>Keyboard Support</h3>
