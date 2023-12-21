@@ -25,6 +25,9 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring-primary-500 dark:focus:ring-primary-400': context.focused
             },
 
+            // Transitions
+            'transition-all duration-200',
+
             // Misc
             { 'cursor-pointer': !props.disabled, 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
         ]
