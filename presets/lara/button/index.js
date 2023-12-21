@@ -199,6 +199,18 @@ export default {
             }
         ]
     }),
+    loadingicon: ({ props }) => ({
+        class: [
+            'h-3 w-3',
+            'mx-0',
+            {
+                'mr-2': props.iconPos == 'left' && props.label != null,
+                'ml-2 order-1': props.iconPos == 'right' && props.label != null,
+                'mb-2': props.iconPos == 'top' && props.label != null,
+                'mt-2': props.iconPos == 'bottom' && props.label != null
+            }
+        ]
+    }),
     badge: ({ props }) => ({
         class: [{ 'ml-2 w-4 h-4 leading-none flex items-center justify-center': props.badge }]
     })
