@@ -16,7 +16,6 @@ import BasicDoc from '@/doc/paginator/BasicDoc.vue';
 import CurrentPageReportDoc from '@/doc/paginator/CurrentPageReportDoc.vue';
 import CustomContentDoc from '@/doc/paginator/CustomContentDoc.vue';
 import ImportDoc from '@/doc/paginator/ImportDoc.vue';
-import ResponsiveDoc from '@/doc/paginator/ResponsiveDoc.vue';
 import TemplateDoc from '@/doc/paginator/TemplateDoc.vue';
 import PresetDoc from '@/doc/paginator/preset/index.vue';
 export default {
@@ -43,11 +42,11 @@ export default {
                     label: 'Current Page Report',
                     component: CurrentPageReportDoc
                 },
-                {
-                    id: 'responsive',
-                    label: 'Responsive',
-                    component: ResponsiveDoc
-                },
+                // {
+                //     id: 'responsive',
+                //     label: 'Responsive',
+                //     component: ResponsiveDoc
+                // },
                 {
                     id: 'customcontent',
                     label: 'Custom Content',
