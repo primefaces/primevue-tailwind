@@ -73,7 +73,7 @@ export default {
     },
     methods: {
         rowClass(data) {
-            return [{ 'bg-primary': data.category === 'Fitness' }];
+            return [{ 'bg-primary-500 dark:bg-primary-400': data.category === 'Fitness' }];
         },
         rowStyle(data) {
             if (data.quantity === 0) {
@@ -84,9 +84,9 @@ export default {
             return [
                 'rounded-full w-8 h-8 inline-flex font-bold justify-center items-center text-sm',
                 {
-                    'bg-red-100 text-red-900': data.quantity === 0,
-                    'bg-blue-100 text-blue-900': data.quantity > 0 && data.quantity < 10,
-                    'bg-teal-100 text-teal-900': data.quantity > 10
+                    'bg-red-100 dark:bg-red-400/30 text-red-900 dark:text-white': data.quantity === 0,
+                    'bg-blue-100 dark:bg-blue-400/30 text-blue-900 dark:text-white': data.quantity > 0 && data.quantity < 10,
+                    'bg-teal-100 dark:bg-teal-400/30 text-teal-900 dark:text-white': data.quantity > 10
                 }
             ];
         }
@@ -123,7 +123,7 @@ onMounted(() => {
 const products = ref();
 
 const rowClass = (data) => {
-    return [{ 'bg-primary': data.category === 'Fitness' }];
+    return [{ 'bg-primary-500 dark:bg-primary-400': data.category === 'Fitness' }];
 };
 const rowStyle = (data) => {
     if (data.quantity === 0) {
@@ -134,9 +134,9 @@ const stockClass = (data) => {
     return [
         'rounded-full w-8 h-8 inline-flex font-bold justify-center items-center text-sm',
         {
-            'bg-red-100 text-red-900': data.quantity === 0,
-            'bg-blue-100 text-blue-900': data.quantity > 0 && data.quantity < 10,
-            'bg-teal-100 text-teal-900': data.quantity > 10
+            'bg-red-100 dark:bg-red-400/30 text-red-900 dark:text-white': data.quantity === 0,
+            'bg-blue-100 dark:bg-blue-400/30 text-blue-900 dark:text-white': data.quantity > 0 && data.quantity < 10,
+            'bg-teal-100 dark:bg-teal-400/30 text-teal-900 dark:text-white': data.quantity > 10
         }
     ];
 };
@@ -165,7 +165,7 @@ const stockClass = (data) => {
     },
     methods: {
         rowClass(data) {
-            return [{ 'bg-primary': data.category === 'Fitness' }];
+            return [{ 'bg-primary-500 dark:bg-primary-400': data.category === 'Fitness' }];
         },
         rowStyle(data) {
             if (data.quantity === 0) {
@@ -176,9 +176,9 @@ const stockClass = (data) => {
             return [
                 'rounded-full w-8 h-8 inline-flex font-bold justify-center items-center text-sm',
                 {
-                    'bg-red-100 text-red-900': data.quantity === 0,
-                    'bg-blue-100 text-blue-900': data.quantity > 0 && data.quantity < 10,
-                    'bg-teal-100 text-teal-900': data.quantity > 10
+                    'bg-red-100 dark:bg-red-400/30 text-red-900 dark:text-white': data.quantity === 0,
+                    'bg-blue-100 dark:bg-blue-400/30 text-blue-900 dark:text-white': data.quantity > 0 && data.quantity < 10,
+                    'bg-teal-100 dark:bg-teal-400/30 text-teal-900 dark:text-white': data.quantity > 10
                 }
             ];
         }
