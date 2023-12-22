@@ -34,8 +34,9 @@
                     v-for="primaryColor of primaryColors"
                     :key="primaryColor.name"
                     type="button"
-                    @click="updateColors('primary', primaryColor.palette)"
+                    @click="updateColors('primary', primaryColor.name)"
                     class="w-4 h-4 rounded-full cursor-pointer"
+                    :class="{ 'ring-2 ring-offset-2 ring-offset-surface-0 dark:ring-offset-surface-800 ring-primary-500': selectedPrimaryColor === primaryColor.name }"
                     :style="{ backgroundColor: `rgb(${primaryColor.palette[5]})` }"
                 ></button>
             </div>
@@ -43,7 +44,15 @@
         <div class="flex-col justify-start items-start gap-2 inline-flex pr-2">
             <span class="text-black dark:text-surface-0 text-sm font-medium">Surface Colors</span>
             <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                <button v-for="surface of surfaces" :key="surface.name" type="button" @click="updateColors('surface', surface.palette)" class="w-4 h-4 rounded-full cursor-pointer" :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"></button>
+                <button
+                    v-for="surface of surfaces"
+                    :key="surface.name"
+                    type="button"
+                    @click="updateColors('surface', surface.name)"
+                    class="w-4 h-4 rounded-full cursor-pointer"
+                    :class="{ 'ring-2 ring-offset-2 ring-offset-surface-0 dark:ring-offset-surface-800 ring-surface-500': selectedSurfaceColor === surface.name }"
+                    :style="{ backgroundColor: `rgb(${surface.palette[6]})` }"
+                ></button>
             </div>
         </div>
         <div class="flex justify-between items-center gap-2 flex w-full pt-4 pb-2 border-t border-surface-200 dark:border-surface-700">
@@ -57,6 +66,8 @@
 export default {
     data() {
         return {
+            selectedPrimaryColor: 'emerald',
+            selectedSurfaceColor: 'gray',
             primaryColors: [
                 { name: 'emerald', palette: ['236 253 245', '209 250 229', '167 243 208', '110 231 183', '52 211 153', '16 185 129', '5 150 105', '4 120 87', '6 95 70', '4 78 56', '2 44 34'] },
                 { name: 'green', palette: ['240 253 244', '220 252 231', '187 247 208', '134 239 172', '78 222 128', '34 197 94', '22 163 74', '21 128 61', '22 101 52', '20 83 45', '23 78 22'] },
@@ -101,14 +112,24 @@ export default {
         };
     },
     methods: {
-        updateColors(type, colors) {
+        updateColors(type, colorName) {
+            let selectedColor;
+
+            if (type === 'primary') {
+                selectedColor = this.primaryColors.find((color) => color.name === colorName);
+                this.selectedPrimaryColor = colorName;
+            } else if (type === 'surface') {
+                selectedColor = this.surfaces.find((color) => color.name === colorName);
+                this.selectedSurfaceColor = colorName;
+            }
+
             if (!document.startViewTransition) {
-                this.applyTheme(type, colors);
+                this.applyTheme(type, selectedColor.palette);
 
                 return;
             }
 
-            document.startViewTransition(() => this.applyTheme(type, colors));
+            document.startViewTransition(() => this.applyTheme(type, selectedColor.palette));
         },
         applyTheme(type, colors) {
             let increments;
