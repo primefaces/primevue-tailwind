@@ -75,11 +75,10 @@ export default {
             { 'py-1.5 px-3': !props.multiple, 'p-0': props.multiple },
 
             // Colors
+            'text-surface-700 dark:text-white/80',
             {
-                'text-surface-700 dark:text-white/80': !props.multiple,
                 'bg-surface-0 dark:bg-surface-900': !props.multiple,
                 'border border-surface-300 dark:border-surface-700': !props.multiple,
-                'text-surface-700 dark:text-white/80': props.multiple,
                 'border-0 bg-transparent': props.multiple
             },
 
