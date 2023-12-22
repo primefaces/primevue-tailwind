@@ -1,8 +1,9 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, instance }) => ({
         class: [
             // Font
             'font-bold',
+
             {
                 'text-xs leading-[1.5rem]': props.size == null,
                 'text-lg leading-[2.25rem]': props.size == 'large',
@@ -21,7 +22,10 @@ export default {
             },
 
             // Shape
-            'rounded-[0.71rem]',
+            {
+                'rounded-full': props.value.length == 1,
+                'rounded-[0.71rem]': props.value.length !== 1
+            },
 
             // Color
             'text-white dark:text-surface-900',

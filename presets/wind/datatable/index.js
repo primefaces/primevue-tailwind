@@ -124,6 +124,7 @@ export default {
 
                 // States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-400/30': props.sortable && !context?.sorted },
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
                 // Transition
                 'transition duration-200',
@@ -253,7 +254,6 @@ export default {
                     'shadow-sm',
 
                     // Color and Background
-                    'text-surface-800 dark:text-white/80',
                     'bg-surface-0 dark:bg-surface-900',
                     'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
@@ -269,7 +269,7 @@ export default {
                     'select-none'
                 ]
             },
-            input: {
+            input: ({ props }) => ({
                 class: [
                     //Font
                     'font-sans',
@@ -283,7 +283,8 @@ export default {
                     // Color and Background
                     'bg-transparent',
                     'border-0',
-                    'text-surface-800 dark:text-white/80',
+                    { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+                    'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
                     'py-1.5 px-3',
 
@@ -304,7 +305,7 @@ export default {
                     'whitespace-nowrap',
                     'appearance-none'
                 ]
-            }
+            })
         },
         filterrowitems: {
             class: 'py-1 list-none m-0'
@@ -373,6 +374,7 @@ export default {
 
                     // Color and Background
                     'text-surface-800 dark:text-white/80',
+                    'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                     'bg-surface-0 dark:bg-surface-900',
                     'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
@@ -403,6 +405,7 @@ export default {
                     'bg-transparent',
                     'border-0',
                     'text-surface-800 dark:text-white/80',
+                    'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
                     'py-1.5 px-3',
 
@@ -1025,10 +1028,10 @@ export default {
         class: 'bg-surface-0 dark:bg-surface-800 text-surface-600 dark:text-white/80'
     },
     rowgroupheader: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600', 'dark:bg-surface-800', 'transition duration-200']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800', 'transition duration-200']
     },
     rowgroupfooter: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600', 'dark:bg-surface-800', 'transition duration-200']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800', 'transition duration-200']
     },
     rowgrouptoggler: {
         class: [
@@ -1050,6 +1053,8 @@ export default {
             // Color
             'text-surface-500 dark:text-white/70',
             'bg-transparent',
+            'focus:outline-none focus:outline-offset-0',
+            'focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transition
             'transition duration-200',

@@ -40,6 +40,7 @@ export default {
 
             // Color
             'text-surface-700 dark:text-white/80',
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
             'border border-surface-300 dark:border-surface-700',
 

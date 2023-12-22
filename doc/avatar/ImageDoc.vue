@@ -13,7 +13,7 @@
 
             <div class="flex-auto">
                 <h5>Badge</h5>
-                <Avatar v-badge.danger="4" class="p-overlay-badge" image="https://primefaces.org/cdn/primevue/images/organization/walter.jpg" size="xlarge" />
+                <Avatar v-badge.danger="4" class="relative" image="https://primefaces.org/cdn/primevue/images/organization/walter.jpg" size="xlarge" />
             </div>
 
             <div class="flex-auto">
@@ -35,7 +35,7 @@ export default {
 <Avatar image="/images/avatar/asiyajavayant.png" class="mr-2" size="large" shape="circle" />
 <Avatar image="/images/avatar/onyamalimba.png" shape="circle" />
 
-<Avatar v-badge.danger="4" class="p-overlay-badge" image="/images/organization/walter.jpg" size="xlarge" />
+<Avatar v-badge.danger="4" class="relative" image="/images/organization/walter.jpg" size="xlarge" />
 
 <Avatar image="https://www.gravatar.com/avatar/05dfd4b41340d09cae045235eb0893c3?d=mp" class="flex items-center justify-center mr-2" size="xlarge" />
 `,
@@ -52,7 +52,7 @@ export default {
 
             <div class="flex-auto">
                 <h5>Badge</h5>
-                <Avatar v-badge.danger="4" class="p-overlay-badge" image="https://primefaces.org/cdn/primevue/images/organization/walter.jpg" size="xlarge" />
+                <Avatar v-badge.danger="4" class="relative" image="https://primefaces.org/cdn/primevue/images/organization/walter.jpg" size="xlarge" />
             </div>
 
             <div class="flex-auto">
@@ -80,7 +80,7 @@ export default {
 
             <div class="flex-auto">
                 <h5>Badge</h5>
-                <Avatar v-badge.danger="4" class="p-overlay-badge" image="https://primefaces.org/cdn/primevue/images/organization/walter.jpg" size="xlarge" />
+                <Avatar v-badge.danger="4" class="relative" image="https://primefaces.org/cdn/primevue/images/organization/walter.jpg" size="xlarge" />
             </div>
 
             <div class="flex-auto">

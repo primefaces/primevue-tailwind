@@ -1,5 +1,5 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, context }) => ({
         class: [
             // Font
             'font-medium',
@@ -21,7 +21,10 @@ export default {
             },
 
             // Shape
-            'rounded-[0.71rem]',
+            {
+                'rounded-full': props.value.length == 1,
+                'rounded-[0.71rem]': props.value.length !== 1
+            },
 
             // Color
             'text-white dark:text-surface-900',

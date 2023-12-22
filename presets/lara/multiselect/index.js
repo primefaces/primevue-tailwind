@@ -28,10 +28,11 @@ export default {
         ]
     }),
     labelContainer: {
-        class: 'overflow-hidden flex flex-auto cursor-pointer'
+        class: 'overflow-hidden flex flex-auto cursor-pointer '
     },
     label: ({ props }) => ({
         class: [
+            'leading-none',
             'block ',
 
             // Spacing
@@ -42,7 +43,8 @@ export default {
             },
 
             // Color
-            'text-surface-800 dark:text-white/80',
+            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Transitions
             'transition duration-200',
@@ -386,6 +388,7 @@ export default {
             'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
             'border-surface-200 dark:border-surface-700',
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Shape
             'border',

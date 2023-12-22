@@ -67,14 +67,14 @@
                     </Dropdown>
                 </template>
             </Column>
-            <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
+            <!-- <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
                 <template #body="{ data }">
                     <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
                 </template>
                 <template #filter="{ filterModel, filterCallback }">
                     <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
                 </template>
-            </Column>
+            </Column> -->
         </DataTable>
     </div>
     <DocSectionCode :code="code" :service="['CustomerService']" />
@@ -173,14 +173,6 @@ export default {
             </Dropdown>
         </template>
     </Column>
-    <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
-        <template #body="{ data }">
-            <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
-        </template>
-        <template #filter="{ filterModel, filterCallback }">
-            <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
-        </template>
-    </Column>
 </DataTable>
 `,
                 options: `
@@ -245,14 +237,6 @@ export default {
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
                     </Dropdown>
-                </template>
-            </Column>
-            <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
-                <template #body="{ data }">
-                    <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
-                </template>
-                <template #filter="{ filterModel, filterCallback }">
-                    <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
                 </template>
             </Column>
         </DataTable>
@@ -399,14 +383,6 @@ export default {
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
                     </Dropdown>
-                </template>
-            </Column>
-            <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
-                <template #body="{ data }">
-                    <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
-                </template>
-                <template #filter="{ filterModel, filterCallback }">
-                    <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
                 </template>
             </Column>
         </DataTable>
