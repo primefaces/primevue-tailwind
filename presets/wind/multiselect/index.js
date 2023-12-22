@@ -1,5 +1,5 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -12,10 +12,9 @@ export default {
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
             // States
-            'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
+            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
 
             // Misc
             'cursor-default',
@@ -152,7 +151,7 @@ export default {
             'select-none'
         ]
     },
-    headerCheckbox: ({ context }) => ({
+    headerCheckbox: ({ context, state }) => ({
         class: [
             // Alignment
             'flex',
@@ -174,7 +173,7 @@ export default {
                 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context?.selected
             },
 
-            'focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400'
+            { 'outline-offset-0 ring-1 ring-primary-500 dark:ring-primary-400': state.focused }
         ]
     }),
     headercheckboxicon: {
@@ -324,7 +323,7 @@ export default {
             'text-surface-600',
             {
                 'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context?.selected,
-                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context?.selected
+                'border-primary-400 bg-primary-500 dark:border-primary-300 dark:bg-primary-400': context?.selected
             },
 
             'focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400'

@@ -20,8 +20,7 @@ export default {
 
             //State
             {
-                'focus:outline-none focus:shadow-none': context.focused,
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400': context.focused && !props.readonly
+                'outline-none ring-2 ring-primary-500 dark:ring-primary-400': context.focused
             },
 
             // Misc
@@ -44,8 +43,7 @@ export default {
 
             // State
             {
-                'focus:outline-none focus:shadow-none': context.focused,
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400': context.focused && !props.readonly
+                'outline-none ring-2 ring-primary-500 dark:ring-primary-400': context.focused
             },
 
             // Misc

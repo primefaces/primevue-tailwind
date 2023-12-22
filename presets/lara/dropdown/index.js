@@ -1,5 +1,5 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -19,7 +19,7 @@ export default {
 
             // States
             'hover:border-primary-500 dark:hover:border-primary-300',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
             // Misc
             'cursor-pointer',

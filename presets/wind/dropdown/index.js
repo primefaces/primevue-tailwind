@@ -1,5 +1,5 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -12,10 +12,9 @@ export default {
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
             // States
-            'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
+            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
 
             // Misc
             'cursor-default',
