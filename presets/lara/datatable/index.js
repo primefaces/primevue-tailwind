@@ -651,6 +651,37 @@ export default {
                 }
             ]
         }),
+        rowtoggler: {
+            class: [
+                'relative',
+
+                // Flex & Alignment
+                'inline-flex items-center justify-center',
+                'text-left',
+
+                // Spacing
+                'm-0 p-0',
+
+                // Size
+                'w-8 h-8',
+
+                // Shape
+                'border-0 rounded-full',
+
+                // Color
+                'text-surface-500 dark:text-white/70',
+                'bg-transparent',
+                'focus-visible:outline-none focus-visible:outline-offset-0',
+                'focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
+
+                // Transition
+                'transition duration-200',
+
+                // Misc
+                'overflow-hidden',
+                'cursor-pointer select-none'
+            ]
+        },
         columnresizer: {
             class: [
                 'block',
@@ -1000,8 +1031,8 @@ export default {
             // Color
             'text-surface-500 dark:text-white/70',
             'bg-transparent',
-            'focus:outline-none focus:outline-offset-0',
-            'focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus-visible:outline-none focus-visible:outline-offset-0',
+            'focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transition
             'transition duration-200',

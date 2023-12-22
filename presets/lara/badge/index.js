@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, instance }) => ({
+    root: ({ props }) => ({
         class: [
             // Font
             'font-bold',
