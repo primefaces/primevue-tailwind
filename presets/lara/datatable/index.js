@@ -118,8 +118,8 @@ export default {
                 context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
                 // Color
-                context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-50 text-surface-700',
-                context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
+                props.sortable && context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-50 text-surface-700',
+                props.sortable && context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
                 'border-surface-200 dark:border-surface-700 ',
 
                 // States
