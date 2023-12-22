@@ -19,10 +19,7 @@ datatable: {
             { 'flex flex-col': props.scrollable && props.scrollHeight === 'flex' },
 
             // Size
-            { 'h-full': props.scrollable && props.scrollHeight === 'flex' },
-
-            // Shape
-            'border-spacing-0 border-separate'
+            { 'h-full': props.scrollable && props.scrollHeight === 'flex' }
         ]
     }),
     loadingoverlay: {
@@ -73,7 +70,7 @@ datatable: {
         ]
     }),
     table: {
-        class: 'w-full border-spacing-0'
+        class: 'w-full border-spacing-0 border-separate'
     },
     thead: ({ context }) => ({
         class: [
@@ -118,32 +115,34 @@ datatable: {
                 'font-bold',
 
                 // Position
-                { 'sticky z-20': props.frozen || props.frozen === '' },
+                { 'sticky z-20 border-b': props.frozen || props.frozen === '' },
+
                 { relative: context.resizable },
 
                 // Alignment
                 'text-left',
 
                 // Shape
-                { 'border-x border-y': context?.showGridlines },
+                { 'first:border-l border-y border-r': context?.showGridlines },
                 'border-0 border-b border-solid',
 
                 // Spacing
                 context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
                 // Color
-                context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-50 text-surface-700',
-                context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-50 text-surface-700',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
                 'border-surface-200 dark:border-surface-700 ',
 
                 // States
-                { 'hover:bg-surface-100 dark:hover:bg-surface-400/30': props.sortable && !context?.sorted },
+                { 'hover:bg-surface-100 dark:hover:bg-surface-400/30': (props.sortable === '' || props.sortable) && !context?.sorted },
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
                 // Transition
-                'transition duration-200',
+                { 'transition duration-200': props.sortable === '' || props.sortable },
 
                 // Misc
-                { 'cursor-pointer': props.sortable },
+                { 'cursor-pointer': props.sortable === '' || props.sortable },
                 {
                     'overflow-hidden space-nowrap border-y bg-clip-padding': context.resizable // Resizable
                 }
@@ -152,18 +151,21 @@ datatable: {
         headercontent: {
             class: 'flex items-center'
         },
+        sort: ({ context }) => ({
+            class: [context.sorted ? 'text-primary-500' : 'text-surface-700', context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80']
+        }),
         bodycell: ({ props, context, state, parent }) => ({
             class: [
                 //Position
-                { 'sticky box-border': parent.instance.frozenRow },
-                { 'sticky box-border': props.frozen || props.frozen === '' },
+                { 'sticky box-border border-b': parent.instance.frozenRow },
+                { 'sticky box-border border-b': props.frozen || props.frozen === '' },
 
                 // Alignment
                 'text-left',
 
                 // Shape
                 'border-0 border-b border-solid',
-                { 'border-x border-y': context?.showGridlines },
+                { 'first:border-l border-r border-b': context?.showGridlines },
                 { 'bg-surface-0 dark:bg-surface-800': parent.instance.frozenRow || props.frozen || props.frozen === '' },
 
                 // Spacing
@@ -194,10 +196,7 @@ datatable: {
                 // Color
                 'border-surface-200 dark:border-surface-700',
                 'text-surface-700 dark:text-white/80',
-                'bg-surface-50 dark:bg-surface-800',
-
-                // Transition
-                'transition duration-200'
+                'bg-surface-50 dark:bg-surface-800'
             ]
         }),
         sorticon: ({ context }) => ({
@@ -245,7 +244,7 @@ datatable: {
             ]
         },
         filtermatchmodedropdown: {
-            root: {
+            root: ({ state }) => ({
                 class: [
                     // Display and Position
                     'flex',
@@ -261,6 +260,8 @@ datatable: {
                     // Color and Background
                     'bg-surface-0 dark:bg-surface-900',
                     'border border-surface-300 dark:border-surface-700',
+                    'text-surface-800 dark:text-white/80',
+                    'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
                     // Transitions
                     'transition-all',
@@ -268,13 +269,13 @@ datatable: {
 
                     // States
                     'hover:border-primary-500 dark:hover:border-primary-300',
-                    'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                    { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
                     // Misc
                     'cursor-pointer',
                     'select-none'
                 ]
-            }
+            })
         },
         filterrowitems: {
             class: 'm-0 p-0 py-3 list-none'
@@ -305,6 +306,7 @@ datatable: {
                 //States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context?.highlighted },
                 { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-600/80': !context?.highlighted },
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
                 // Transitions
                 'transition-shadow',
@@ -332,7 +334,7 @@ datatable: {
             ]
         },
         filteroperatordropdown: {
-            root: {
+            root: ({ state }) => ({
                 class: [
                     // Display and Position
                     'inline-flex',
@@ -352,14 +354,14 @@ datatable: {
 
                     // States
                     'hover:border-primary-500 dark:hover:border-primary-300',
-                    'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                    { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
                     // Misc
                     'cursor-pointer',
                     'select-none'
                 ]
-            },
-            input: {
+            }),
+            input: ({ props }) => ({
                 class: [
                     //Font
                     'font-sans',
@@ -372,7 +374,8 @@ datatable: {
                     // Color and Background
                     'bg-transparent',
                     'border-0',
-                    'text-surface-800 dark:text-white/80',
+                    { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+                    'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
                     // Sizing and Spacing
                     'w-[1%]',
@@ -395,7 +398,7 @@ datatable: {
                     'whitespace-nowrap',
                     'appearance-none'
                 ]
-            },
+            }),
             trigger: {
                 class: [
                     // Flexbox
@@ -661,6 +664,37 @@ datatable: {
                 }
             ]
         }),
+        rowtoggler: {
+            class: [
+                'relative',
+
+                // Flex & Alignment
+                'inline-flex items-center justify-center',
+                'text-left',
+
+                // Spacing
+                'm-0 p-0',
+
+                // Size
+                'w-8 h-8',
+
+                // Shape
+                'border-0 rounded-full',
+
+                // Color
+                'text-surface-500 dark:text-white/70',
+                'bg-transparent',
+                'focus-visible:outline-none focus-visible:outline-offset-0',
+                'focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
+
+                // Transition
+                'transition duration-200',
+
+                // Misc
+                'overflow-hidden',
+                'cursor-pointer select-none'
+            ]
+        },
         columnresizer: {
             class: [
                 'block',
@@ -972,23 +1006,23 @@ datatable: {
 
             // State
             { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': context.selectable },
-            { 'hover:bg-surface-300/20 hover:text-surface-600': context.selectable && !context.selected },
+            { 'hover:bg-surface-300/20 hover:text-surface-600': props.selectionMode && !context.selected },
 
             // Transition
-            'transition duration-200',
+            { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover },
 
             // Misc
-            { 'cursor-pointer': context.selectable }
+            { 'cursor-pointer': props.selectionMode }
         ]
     }),
     rowexpansion: {
         class: 'bg-surface-0 dark:bg-surface-800 text-surface-600 dark:text-white/80'
     },
     rowgroupheader: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600', 'dark:bg-surface-800', 'transition duration-200']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800']
     },
     rowgroupfooter: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600', 'dark:bg-surface-800', 'transition duration-200']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800']
     },
     rowgrouptoggler: {
         class: [
@@ -1010,6 +1044,8 @@ datatable: {
             // Color
             'text-surface-500 dark:text-white/70',
             'bg-transparent',
+            'focus-visible:outline-none focus-visible:outline-offset-0',
+            'focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transition
             'transition duration-200',

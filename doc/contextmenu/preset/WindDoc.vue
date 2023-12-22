@@ -44,19 +44,23 @@ contextmenu: {
             //Shape
             'rounded-md',
 
-            // Colors
+            //  Colors
             {
-                'text-surface-700 dark:text-surface-0': !context.focused,
-                'bg-surface-100 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.focused
+                'text-surface-500 dark:text-white/70': !context.focused && !context.active,
+                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-black/70': context.focused && !context.active,
+                'text-surface-900 dark:text-surface-0/80 bg-surface-50 dark:bg-black/70': context.focused && context.active,
+                'text-surface-900 dark:text-surface-0/80 bg-surface-50 dark:bg-black/70': !context.focused && context.active
+            },
+
+            // Hover States
+            {
+                'hover:bg-surface-50 dark:hover:bg-surface-800': !context.active,
+                'hover:bg-surface-100 dark:hover:bg-black/40 text-surface-900 dark:text-surface-0/80': context.active
             },
 
             // Transitions
             'transition-shadow',
-            'duration-200',
-
-            // States
-            'hover:text-primary-600 dark:hover:text-primary-400 ',
-            'hover:bg-surface-100 dark:hover:bg-surface-400/10'
+            'duration-200'
         ]
     }),
     action: {
@@ -115,6 +119,9 @@ contextmenu: {
             'bg-surface-0 dark:bg-surface-700'
         ]
     }),
+    submenuicon: {
+        class: ['ml-auto']
+    },
     separator: {
         class: 'border-t border-surface-200 dark:border-surface-600 my-1'
     },

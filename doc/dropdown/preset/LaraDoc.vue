@@ -11,7 +11,7 @@ export default {
             code: {
                 basic: `
 dropdown: {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -31,7 +31,7 @@ dropdown: {
 
             // States
             'hover:border-primary-500 dark:hover:border-primary-300',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
             // Misc
             'cursor-pointer',
@@ -52,7 +52,8 @@ dropdown: {
             // Color and Background
             'bg-transparent',
             'border-0',
-            'text-surface-800 dark:text-white/80',
+            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Sizing and Spacing
             'w-[1%]',
@@ -142,13 +143,14 @@ dropdown: {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
-            { 'bg-surface-50 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
+            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
             { 'bg-primary-100 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': context.focused && context.selected },
             { 'bg-primary-50 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': !context.focused && context.selected },
 
             //States
             { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
             { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-600/80': context.focused && !context.selected },
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transitions
             'transition-shadow',

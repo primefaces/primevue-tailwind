@@ -10,8 +10,8 @@ export default {
             value: null,
             code: {
                 basic: `
-multiselect: {
-    root: ({ props }) => ({
+multiselect:  {
+    root: ({ props, state }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -24,10 +24,9 @@ multiselect: {
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
             // States
-            'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
+            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
 
             // Misc
             'cursor-default',
@@ -45,7 +44,8 @@ multiselect: {
             props.display === 'chip' && props?.modelValue?.length > 0 ? 'py-1 px-3' : 'py-1.5 px-3',
 
             // Color
-            'text-surface-800 dark:text-white/80',
+            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Transitions
             'transition duration-200',
@@ -164,7 +164,7 @@ multiselect: {
             'select-none'
         ]
     },
-    headerCheckbox: ({ context }) => ({
+    headerCheckbox: ({ context, state }) => ({
         class: [
             // Alignment
             'flex',
@@ -186,7 +186,7 @@ multiselect: {
                 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context?.selected
             },
 
-            'focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400'
+            { 'outline-offset-0 ring-1 ring-primary-500 dark:ring-primary-400': state.focused }
         ]
     }),
     headercheckboxicon: {
@@ -284,6 +284,7 @@ multiselect: {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
+            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
             { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
             { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
@@ -335,7 +336,7 @@ multiselect: {
             'text-surface-600',
             {
                 'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context?.selected,
-                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context?.selected
+                'border-primary-400 bg-primary-500 dark:border-primary-300 dark:bg-primary-400': context?.selected
             },
 
             'focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400'

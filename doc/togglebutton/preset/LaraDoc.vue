@@ -32,10 +32,13 @@ togglebutton: {
 
             // States
             {
-                'hover:bg-surface-50 dark:hover:bg-surface-800/80 hover:border-surface-50 dark:hover:bg-surface-800/70 hover:text-surface-700 dark:hover:text-white/80': !props.modelValue,
+                'hover:bg-surface-50 dark:hover:bg-surface-800/80 hover:border-surface-200 dark:hover:bg-surface-700 hover:text-surface-700 dark:hover:text-white/80': !props.modelValue,
                 'hover:bg-primary-600 hover:border-primary-600 dark:hover:bg-primary-300 dark:hover:border-primary-300': props.modelValue,
-                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': context.focused
+                'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': context.focused && !props.disabled
             },
+
+            // Transitions
+            'transition-all duration-200',
 
             // Misc
             { 'cursor-pointer': !props.disabled, 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }

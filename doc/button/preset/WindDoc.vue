@@ -204,7 +204,6 @@ button: {
     }),
     icon: ({ props }) => ({
         class: [
-            'before:text-xs before:leading-none',
             'mx-0',
             {
                 'mr-2': props.iconPos == 'left' && props.label != null,

@@ -87,11 +87,10 @@ autocomplete: {
             { 'py-1.5 px-3': !props.multiple, 'p-0': props.multiple },
 
             // Colors
+            'text-surface-700 dark:text-white/80',
             {
-                'text-surface-700 dark:text-white/80': !props.multiple,
                 'bg-surface-0 dark:bg-surface-900': !props.multiple,
                 'border border-surface-300 dark:border-surface-700': !props.multiple,
-                'text-surface-700 dark:text-white/80': props.multiple,
                 'border-0 bg-transparent': props.multiple
             },
 
@@ -211,6 +210,7 @@ autocomplete: {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
+            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
             { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
             { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
