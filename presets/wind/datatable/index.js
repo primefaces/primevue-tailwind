@@ -7,7 +7,10 @@ export default {
             { 'flex flex-col': props.scrollable && props.scrollHeight === 'flex' },
 
             // Size
-            { 'h-full': props.scrollable && props.scrollHeight === 'flex' }
+            { 'h-full': props.scrollable && props.scrollHeight === 'flex' },
+
+            // Shape
+            'border-spacing-0 border-separate'
         ]
     }),
     loadingoverlay: {
@@ -58,7 +61,7 @@ export default {
         ]
     }),
     table: {
-        class: 'w-full border-spacing-0'
+        class: 'w-full border-spacing-0 border-separate'
     },
     thead: ({ context }) => ({
         class: [
@@ -105,7 +108,7 @@ export default {
                 'text-sm',
 
                 // Position
-                { 'sticky z-20': props.frozen || props.frozen === '' },
+                { 'sticky z-20 border-b': props.frozen || props.frozen === '' },
                 { relative: context.resizable },
 
                 // Alignment
@@ -113,7 +116,7 @@ export default {
 
                 // Shape
                 { 'border-r last:border-r-0': context?.showGridlines },
-                'border-0',
+                'border-0 border-b border-solid',
 
                 // Spacing
                 context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
@@ -145,15 +148,15 @@ export default {
         bodycell: ({ props, context, state, parent }) => ({
             class: [
                 //Position
-                { 'sticky box-border': parent.instance.frozenRow },
-                { 'sticky box-border': props.frozen || props.frozen === '' },
+                { 'sticky box-border border-b': parent.instance.frozenRow },
+                { 'sticky box-border border-b': props.frozen || props.frozen === '' },
                 'text-sm',
 
                 // Alignment
                 'text-left',
-                // Shape
-                { 'border-0 border-r last:border-r-0 border-solid': context?.showGridlines },
-                { 'border-0 border-solid': !context?.showGridlines },
+
+                'border-0 border-b border-solid',
+                { 'last:border-r-0 border-r border-b': context?.showGridlines },
                 { 'bg-surface-0 dark:bg-surface-800': parent.instance.frozenRow || props.frozen || props.frozen === '' },
 
                 // Spacing
@@ -1010,8 +1013,6 @@ export default {
             { 'bg-surface-0 text-surface-600 dark:bg-surface-800': !context.selected },
             { 'bg-surface-0 dark:bg-surface-800': props.frozenRow },
             { 'odd:bg-surface-0 odd:text-surface-600 dark:odd:bg-surface-800 even:bg-surface-50 even:text-surface-600 dark:even:bg-surface-900/60': context.stripedRows && !context.selected },
-            { 'border-0': context.stripedRows && !context.showGridlines },
-            { 'last:border-b-0 border-b border-solid border-surface-200 dark:border-surface-700': !context.stripedRows },
 
             // State
             { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': context.selectable },

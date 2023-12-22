@@ -7,10 +7,7 @@ export default {
             { 'flex flex-col': props.scrollable && props.scrollHeight === 'flex' },
 
             // Size
-            { 'h-full': props.scrollable && props.scrollHeight === 'flex' },
-
-            // Shape
-            'border-spacing-0 border-separate'
+            { 'h-full': props.scrollable && props.scrollHeight === 'flex' }
         ]
     }),
     loadingoverlay: {
@@ -61,7 +58,7 @@ export default {
         ]
     }),
     table: {
-        class: 'w-full border-spacing-0'
+        class: 'w-full border-spacing-0 border-separate'
     },
     thead: ({ context }) => ({
         class: [
@@ -106,14 +103,15 @@ export default {
                 'font-bold',
 
                 // Position
-                { 'sticky z-20': props.frozen || props.frozen === '' },
+                { 'sticky z-20 border-b': props.frozen || props.frozen === '' },
+
                 { relative: context.resizable },
 
                 // Alignment
                 'text-left',
 
                 // Shape
-                { 'border-x border-y': context?.showGridlines },
+                { 'first:border-l border-y border-r': context?.showGridlines },
                 'border-0 border-b border-solid',
 
                 // Spacing
@@ -122,7 +120,7 @@ export default {
                 // Color
                 context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-50 text-surface-700',
                 context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
-                'border-surface-200 dark:border-surface-700',
+                'border-surface-200 dark:border-surface-700 ',
 
                 // States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-400/30': props.sortable && !context?.sorted },
@@ -143,15 +141,15 @@ export default {
         bodycell: ({ props, context, state, parent }) => ({
             class: [
                 //Position
-                { 'sticky box-border': parent.instance.frozenRow },
-                { 'sticky box-border': props.frozen || props.frozen === '' },
+                { 'sticky box-border border-b': parent.instance.frozenRow },
+                { 'sticky box-border border-b': props.frozen || props.frozen === '' },
 
                 // Alignment
                 'text-left',
 
                 // Shape
                 'border-0 border-b border-solid',
-                { 'border-x border-y': context?.showGridlines },
+                { 'first:border-l border-r border-b': context?.showGridlines },
                 { 'bg-surface-0 dark:bg-surface-800': parent.instance.frozenRow || props.frozen || props.frozen === '' },
 
                 // Spacing
