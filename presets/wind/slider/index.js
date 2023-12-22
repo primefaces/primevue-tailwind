@@ -59,9 +59,6 @@ export default {
             'bg-surface-0 dark:bg-surface-900',
             'ring-primary-500 dark:ring-primary-400',
 
-            // States
-            'focus:outline-none focus:outline-offset-0',
-
             // Transitions
             'transition duration-200',
 
@@ -90,9 +87,6 @@ export default {
             'bg-surface-0 dark:bg-surface-900',
             'ring-primary-500 dark:ring-primary-400',
 
-            // States
-            'focus:outline-none focus:outline-offset-0',
-
             // Transitions
             'transition duration-200',
 
@@ -120,9 +114,6 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-900',
             'ring-primary-500 dark:ring-primary-400',
-
-            // States
-            'focus:outline-none focus:outline-offset-0',
 
             // Transitions
             'transition duration-200',
