@@ -242,7 +242,7 @@ export default {
             ]
         },
         filtermatchmodedropdown: {
-            root: {
+            root: ({ state }) => ({
                 class: [
                     // Display and Position
                     'flex',
@@ -258,20 +258,20 @@ export default {
 
                     // Color and Background
                     'bg-surface-0 dark:bg-surface-900',
-                    'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
+                    { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused },
 
                     // Transitions
                     'transition-all',
                     'duration-200',
 
                     // States
-                    'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
+                    { 'outline-none outline-offset-0 ring-2 ring-primary-500 dark:ring-primary-400': state.focused },
 
                     // Misc
                     'cursor-default',
                     'select-none'
                 ]
-            },
+            }),
             input: ({ props }) => ({
                 class: [
                     //Font
@@ -338,6 +338,7 @@ export default {
 
                 //States
                 'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
                 // Transitions
                 'transition-shadow',
@@ -364,7 +365,7 @@ export default {
             ]
         },
         filteroperatordropdown: {
-            root: {
+            root: ({ state }) => ({
                 class: [
                     // Display and Position
                     'flex',
@@ -379,20 +380,20 @@ export default {
                     'text-surface-800 dark:text-white/80',
                     'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                     'bg-surface-0 dark:bg-surface-900',
-                    'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
+                    { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused },
 
                     // Transitions
                     'transition-all',
                     'duration-200',
 
                     // States
-                    'focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+                    { 'outline-none outline-offset-0 ring-2 ring-primary-500 dark:ring-primary-400': state.focused },
 
                     // Misc
                     'cursor-default',
                     'select-none'
                 ]
-            },
+            }),
             input: {
                 class: [
                     //Font

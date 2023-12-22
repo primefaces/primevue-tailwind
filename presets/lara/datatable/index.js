@@ -231,7 +231,7 @@ export default {
             ]
         },
         filtermatchmodedropdown: {
-            root: {
+            root: ({ state }) => ({
                 class: [
                     // Display and Position
                     'flex',
@@ -256,13 +256,13 @@ export default {
 
                     // States
                     'hover:border-primary-500 dark:hover:border-primary-300',
-                    'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                    { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
                     // Misc
                     'cursor-pointer',
                     'select-none'
                 ]
-            }
+            })
         },
         filterrowitems: {
             class: 'm-0 p-0 py-3 list-none'
@@ -293,6 +293,7 @@ export default {
                 //States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context?.highlighted },
                 { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-600/80': !context?.highlighted },
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
                 // Transitions
                 'transition-shadow',
@@ -320,7 +321,7 @@ export default {
             ]
         },
         filteroperatordropdown: {
-            root: {
+            root: ({ state }) => ({
                 class: [
                     // Display and Position
                     'inline-flex',
@@ -340,13 +341,13 @@ export default {
 
                     // States
                     'hover:border-primary-500 dark:hover:border-primary-300',
-                    'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                    { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
                     // Misc
                     'cursor-pointer',
                     'select-none'
                 ]
-            },
+            }),
             input: ({ props }) => ({
                 class: [
                     //Font
