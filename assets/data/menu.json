@@ -227,6 +227,11 @@
                             "to": "/ripple"
                         },
                         {
+                            "name": "Skeleton",
+                            "to": "/skeleton",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Tag",
                             "to": "/tag"
                         }
