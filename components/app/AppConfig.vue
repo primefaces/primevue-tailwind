@@ -7,7 +7,7 @@
                     type="button"
                     class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                     :class="{
-                        'shadow shadow-inner bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
+                        'shadow bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
                         'bg-surface-100 dark:bg-surface-900': !isLara
                     }"
                     @click="setPreset('lara')"
@@ -18,7 +18,7 @@
                     type="button"
                     class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                     :class="{
-                        'shadow shadow-inner bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
+                        'shadow bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
                         'bg-surface-100 dark:bg-surface-900': !isWind
                     }"
                     @click="setPreset('wind')"
@@ -55,7 +55,7 @@
                 ></button>
             </div>
         </div>
-        <div class="flex justify-between items-center gap-2 flex w-full pt-4 pb-2 border-t border-surface-200 dark:border-surface-700">
+        <div class="flex justify-between items-center gap-2 w-full pt-4 pb-2 border-t border-surface-200 dark:border-surface-700">
             <span class="text-black dark:text-surface-0 text-sm font-medium m-0">Ripple Effect</span>
             <InputSwitch :modelValue="$primevue.config.ripple" @update:model-value="setRipple($event)" />
         </div>
@@ -67,7 +67,7 @@ export default {
     data() {
         return {
             selectedPrimaryColor: 'emerald',
-            selectedSurfaceColor: 'gray',
+            selectedSurfaceColor: 'slate',
             primaryColors: [
                 { name: 'emerald', palette: ['236 253 245', '209 250 229', '167 243 208', '110 231 183', '52 211 153', '16 185 129', '5 150 105', '4 120 87', '6 95 70', '4 78 56', '2 44 34'] },
                 { name: 'green', palette: ['240 253 244', '220 252 231', '187 247 208', '134 239 172', '78 222 128', '34 197 94', '22 163 74', '21 128 61', '22 101 52', '20 83 45', '23 78 22'] },
@@ -89,12 +89,12 @@ export default {
             ],
             surfaces: [
                 {
-                    name: 'gray',
-                    palette: ['255 255 255', '249 250 251', '243 244 246', '229 231 235', '209 213 219', '156 163 175', '107 114 128', '75 85 99', '55 65 81', '31 41 55', '17 24 39', '8 8 8']
-                },
-                {
                     name: 'slate',
                     palette: ['255 255 255', '248 250 252', '241 245 249', '226 232 240', '203 213 225', '148 163 184', '100 116 139', '71 85 105', '45 55 72', '30 41 59', '15 23 42', '3 6 23']
+                },
+                {
+                    name: 'gray',
+                    palette: ['255 255 255', '249 250 251', '243 244 246', '229 231 235', '209 213 219', '156 163 175', '107 114 128', '75 85 99', '55 65 81', '31 41 55', '17 24 39', '8 8 8']
                 },
                 {
                     name: 'zinc',
