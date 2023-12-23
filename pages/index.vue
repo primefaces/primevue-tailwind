@@ -1,7 +1,7 @@
 <template>
     <div :class="landingClass">
         <AppNews />
-        <AppTopBar />
+        <AppTopBar :showMenuButton="false" />
         <MainSection />
     </div>
 </template>
