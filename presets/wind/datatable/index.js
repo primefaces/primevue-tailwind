@@ -129,7 +129,7 @@ export default {
                 'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
                 // Transition
-                'transition duration-200',
+                { 'transition duration-200': props.sortable === '' || props.sortable },
 
                 // Misc
                 { 'cursor-pointer': props.sortable === '' || props.sortable },
@@ -189,10 +189,7 @@ export default {
                 // Color
                 'border-surface-200 dark:border-surface-700',
                 'text-surface-700 dark:text-white/80',
-                'bg-surface-0 dark:bg-surface-800',
-
-                // Transition
-                'transition duration-200'
+                'bg-surface-0 dark:bg-surface-800'
             ]
         }),
         sorticon: {
@@ -1046,24 +1043,24 @@ export default {
             { 'odd:bg-surface-0 odd:text-surface-600 dark:odd:bg-surface-800 even:bg-surface-50 even:text-surface-600 dark:even:bg-surface-900/60': context.stripedRows && !context.selected },
 
             // State
-            { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': context.selectable },
-            { 'hover:bg-surface-300/20 hover:text-surface-600': context.selectable && !context.selected },
+            { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': props.selectionMode },
+            { 'hover:bg-surface-300/20 hover:text-surface-600': props.selectionMode && !context.selected },
 
             // Transition
-            'transition duration-200',
+            { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover },
 
             // Misc
-            { 'cursor-pointer': context.selectable }
+            { 'cursor-pointer': props.selectionMode }
         ]
     }),
     rowexpansion: {
         class: 'bg-surface-0 dark:bg-surface-800 text-surface-600 dark:text-white/80'
     },
     rowgroupheader: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800', 'transition duration-200']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800']
     },
     rowgroupfooter: {
-        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800', 'transition duration-200']
+        class: ['sticky z-20', 'bg-surface-0 text-surface-600 dark:text-white/70', 'dark:bg-surface-800']
     },
     rowgrouptoggler: {
         class: [

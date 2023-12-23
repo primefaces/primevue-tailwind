@@ -11,7 +11,7 @@ export default {
             code: {
                 basic: `
 multiselect: {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -31,7 +31,7 @@ multiselect: {
 
             // States
             'hover:border-primary-500 dark:hover:border-primary-300',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
             // Misc
             'cursor-pointer',
@@ -40,10 +40,11 @@ multiselect: {
         ]
     }),
     labelContainer: {
-        class: 'overflow-hidden flex flex-auto cursor-pointer'
+        class: 'overflow-hidden flex flex-auto cursor-pointer '
     },
     label: ({ props }) => ({
         class: [
+            'leading-none',
             'block ',
 
             // Spacing
@@ -54,7 +55,8 @@ multiselect: {
             },
 
             // Color
-            'text-surface-800 dark:text-white/80',
+            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Transitions
             'transition duration-200',
@@ -169,7 +171,7 @@ multiselect: {
             'select-none'
         ]
     },
-    headerCheckbox: ({ context }) => ({
+    headerCheckbox: ({ context, state }) => ({
         class: [
             // Alignment
             'flex',
@@ -191,8 +193,8 @@ multiselect: {
                 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context?.selected
             },
 
-            'hover:border-primary-500 focus:outline-none',
-            'focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+            'hover:border-primary-500',
+            { 'outline-none outline-offset-0 ring-2 ring-primary-400/50 dark:ring-primary-300/50': state.focused }
         ]
     }),
     headercheckboxicon: {
@@ -282,7 +284,7 @@ multiselect: {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
-            { 'bg-surface-50 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
+            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
             { 'bg-primary-100 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': context.focused && context.selected },
             { 'bg-primary-50 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': !context.focused && context.selected },
 
@@ -398,6 +400,7 @@ multiselect: {
             'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
             'border-surface-200 dark:border-surface-700',
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Shape
             'border',

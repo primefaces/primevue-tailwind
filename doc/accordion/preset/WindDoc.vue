@@ -11,6 +11,7 @@ export default {
             code: {
                 basic: `
 accordion: {
+    accordiontab: {
         header: ({ props }) => ({
             class: [
                 // Sizing

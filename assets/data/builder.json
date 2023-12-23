@@ -408,8 +408,7 @@
                 },
                 {
                     "name": "Skeleton",
-                    "path": "skeleton",
-                    "disabled": true
+                    "path": "skeleton"
                 },
                 {
                     "name": "ProgressBar",
