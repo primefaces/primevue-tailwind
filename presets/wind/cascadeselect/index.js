@@ -1,38 +1,192 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
-            'inline-flex cursor-pointer select-none relative',
-            'bg-surface-0 dark:bg-surface-900 border border-surface-50 dark:border-surface-700 transition duration-200 ease-in-out rounded-lg',
-            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
+            // Display and Position
+            'inline-flex',
+            'relative',
+
+            // Shape
+            'w-full md:w-56',
+            'rounded-md',
+            'shadow-sm',
+
+            // Color and Background
+            'bg-surface-0 dark:bg-surface-900',
+
+            // States
+            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+
+            // Misc
+            'cursor-default',
+            'select-none',
+            { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled }
         ]
     }),
-    label: {
-        class: ['block whitespace-nowrap overflow-hidden flex flex-1 w-1 text-overflow-ellipsis cursor-pointer', 'bg-transparent border-0 p-3 text-surface-700 dark:text-white/80', 'appearance-none rounded-md']
-    },
+    label: ({ props }) => ({
+        class: [
+            //Font
+            'font-sans',
+            'leading-6',
+            'sm:text-sm',
+
+            // Flex & Alignment
+            ' flex flex-auto',
+
+            // Sizing and Spacing
+            'w-[1%]',
+            'py-1.5 px-3',
+
+            //Shape
+            'rounded-none',
+
+            // Color and Background
+            'bg-transparent',
+            'border-0',
+            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+
+            // Transitions
+            'transition',
+            'duration-200',
+
+            // States
+            'focus:outline-none focus:shadow-none',
+
+            // Misc
+            'relative',
+            'cursor-pointer',
+            'overflow-hidden overflow-ellipsis',
+            'whitespace-nowrap',
+            'appearance-none'
+        ]
+    }),
     dropdownbutton: {
-        class: ['flex items-center justify-center shrink-0', 'bg-transparent text-surface-600 dark:text-white/80 w-[3rem] rounded-tr-6 rounded-br-6']
+        class: [
+            //Font
+            'sm:text-sm',
+
+            // Flexbox
+            'flex items-center justify-center',
+            'shrink-0',
+
+            // Color and Background
+            'bg-transparent',
+            'text-surface-500',
+
+            // Size
+            'w-12',
+
+            // Shape
+            'rounded-tr-md',
+            'rounded-br-md'
+        ]
     },
     panel: {
-        class: 'absolute py-3 bg-surface-0 dark:bg-surface-900 border-0 shadow-md'
+        class: [
+            // Position
+            'absolute top-0 left-0',
+            'mt-2',
+
+            // Shape
+            'border-0',
+            'rounded-md',
+            'shadow-md',
+
+            // Color
+            'bg-surface-0 dark:bg-surface-700',
+            'text-surface-800 dark:text-white/80',
+            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700'
+        ]
+    },
+    wrapper: {
+        class: [
+            // Sizing
+            'max-h-[200px]',
+
+            // Misc
+            'overflow-auto'
+        ]
     },
     list: {
-        class: 'm-0 sm:p-0 list-none'
+        class: 'py-1 list-none mx-1.5'
     },
     item: {
         class: [
-            'cursor-pointer font-normal whitespace-nowrap',
-            'm-0 border-0 bg-transparent transition-shadow rounded-none',
-            'text-surface-700 dark:text-white/80 hover:text-surface-700 dark:hover:text-white/80 hover:bg-surface-100 dark:hover:bg-surface-800/80'
+            // Font
+            'sm:text-sm',
+            'leading-none',
+
+            // Shape
+            'border-0',
+            'rounded-md',
+
+            // Spacing
+            'm-0',
+
+            // Visuals
+            'bg-transparent text-surface-700 dark:text-white/80',
+
+            // Hover State
+            'hover:text-surface-700 dark:hover:text-white/80 hover:bg-surface-100 dark:hover:bg-surface-800/80',
+
+            // Transitions
+            'transition-shadow',
+            'duration-200',
+
+            // Misc
+            'cursor-pointer',
+            'overflow-hidden',
+            'whitespace-nowrap'
         ]
     },
     content: {
-        class: ['flex items-center overflow-hidden relative', 'py-3 px-5']
+        class: [
+            'relative',
+
+            // Flexbox
+            'flex',
+            'items-center',
+
+            // Spacing
+            'py-2 px-4',
+
+            // Misc
+            'no-underline',
+            'overflow-hidden',
+            'cursor-pointer',
+            'select-none'
+        ]
     },
     groupicon: {
-        class: 'ml-auto'
+        class: [
+            // Alignment
+            'ml-auto'
+        ]
     },
     sublist: {
-        class: ['block absolute left-full top-0', 'min-w-full z-10', 'py-3 bg-surface-0 dark:bg-surface-900 border-0 shadow-md']
+        class: [
+            // Size
+            'w-full sm:w-48',
+
+            // Spacing
+            'p-1.5',
+            'm-0',
+            'list-none',
+
+            // Shape
+            'shadow-none sm:shadow-md',
+            'border-0',
+
+            // Position
+            'static sm:absolute',
+            'z-10',
+
+            // Color
+            'bg-surface-0 dark:bg-surface-700'
+        ]
+    },
+    separator: {
+        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
