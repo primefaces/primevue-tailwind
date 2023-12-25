@@ -20,6 +20,7 @@ import fieldset from './fieldset';
 import global from './global';
 import inlinemessage from './inlinemessage';
 import inputgroup from './inputgroup';
+import inputmask from './inputmask';
 import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
@@ -75,6 +76,7 @@ export default {
     listbox,
     colorpicker,
     inputgroup,
+    inputmask,
 
     //buttons
     button,

@@ -62,6 +62,10 @@
                             "to": "/inputnumber"
                         },
                         {
+                            "name": "InputMask",
+                            "to": "/inputmask"
+                        },
+                        {
                             "name": "InputSwitch",
                             "to": "/inputswitch"
                         },
