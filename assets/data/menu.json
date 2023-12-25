@@ -54,6 +54,10 @@
                             "to": "/dropdown"
                         },
                         {
+                            "name": "InputGroup",
+                            "to": "/inputgroup"
+                        },
+                        {
                             "name": "InputNumber",
                             "to": "/inputnumber"
                         },

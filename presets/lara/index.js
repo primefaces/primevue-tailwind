@@ -19,6 +19,7 @@ import dropdown from './dropdown';
 import fieldset from './fieldset';
 import global from './global';
 import inlinemessage from './inlinemessage';
+import inputgroup from './inputgroup';
 import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
@@ -73,6 +74,7 @@ export default {
     cascadeselect,
     listbox,
     colorpicker,
+    inputgroup,
 
     //buttons
     button,
