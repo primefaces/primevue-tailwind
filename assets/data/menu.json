@@ -34,6 +34,10 @@
                             "to": "/calendar"
                         },
                         {
+                            "name": "CascadeSelect",
+                            "to": "/cascadeselect"
+                        },
+                        {
                             "name": "Checkbox",
                             "to": "/checkbox"
                         },

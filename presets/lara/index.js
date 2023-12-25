@@ -7,6 +7,7 @@ import badgedirective from './badgedirective';
 import button from './button';
 import calendar from './calendar';
 import card from './card';
+import cascadeselect from './cascadeselect';
 import checkbox from './checkbox';
 import chip from './chip';
 import chips from './chips';
@@ -67,6 +68,7 @@ export default {
     rating,
     multiselect,
     togglebutton,
+    cascadeselect,
 
     //buttons
     button,
