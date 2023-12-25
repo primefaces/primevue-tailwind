@@ -3,7 +3,7 @@
         <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-14rem" />
+        <Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-[14rem]" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -22,12 +22,12 @@ export default {
             ],
             code: {
                 basic: `
-<Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-14rem" />
+<Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-[14rem]" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-14rem" />
+        <Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-[14rem]" />
     </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-14rem" />
+        <Listbox v-model="selectedCity" disabled :options="cities" optionLabel="name" class="w-full md:w-[14rem]" />
     </div>
 </template>
 
