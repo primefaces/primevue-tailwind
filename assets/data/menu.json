@@ -46,6 +46,10 @@
                             "to": "/chips"
                         },
                         {
+                            "name": "ColorPicker",
+                            "to": "/colorpicker"
+                        },
+                        {
                             "name": "Dropdown",
                             "to": "/dropdown"
                         },

@@ -11,6 +11,7 @@ import cascadeselect from './cascadeselect';
 import checkbox from './checkbox';
 import chip from './chip';
 import chips from './chips';
+import colorpicker from './colorpicker';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dialog from './dialog';
@@ -71,6 +72,7 @@ export default {
     togglebutton,
     cascadeselect,
     listbox,
+    colorpicker,
 
     //buttons
     button,
