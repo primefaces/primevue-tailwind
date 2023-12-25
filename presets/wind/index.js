@@ -21,6 +21,7 @@ import inlinemessage from './inlinemessage';
 import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
+import listbox from './listbox';
 import menu from './menu';
 import menubar from './menubar';
 import message from './message';
@@ -69,6 +70,7 @@ export default {
     multiselect,
     togglebutton,
     cascadeselect,
+    listbox,
 
     //buttons
     button,
