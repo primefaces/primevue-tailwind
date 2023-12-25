@@ -6,7 +6,7 @@
         </p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />
+        <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-[14rem]" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -20,13 +20,13 @@ export default {
             code: {
                 basic: `
 <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value"
-    :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />
+    :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-[14rem]" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
         <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value"
-            :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />
+            :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-[14rem]" />
     </div>
 </template>
 
@@ -45,7 +45,7 @@ export default {
 <template>
     <div class="card flex justify-center">
         <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value"
-            :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-14rem" />
+            :virtualScrollerOptions="{ itemSize: 38 }" placeholder="Select Item" class="w-full md:w-[14rem]" />
     </div>
 </template>
 
