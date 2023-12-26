@@ -112,6 +112,11 @@
                             "name": "TreeSelect",
                             "to": "/treeselect",
                             "badge": "NEW"
+                        },
+                        {
+                            "name": "TriStateCheckbox",
+                            "to": "/tristatecheckbox",
+                            "badge": "NEW"
                         }
                     ]
                 },

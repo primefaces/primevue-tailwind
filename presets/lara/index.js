@@ -51,6 +51,7 @@ import togglebutton from './togglebutton';
 import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
+import tristatecheckbox from './tristatecheckbox';
 
 export default {
     global,
@@ -82,6 +83,7 @@ export default {
     inputmask,
     knob,
     treeselect,
+    tristatecheckbox,
 
     //buttons
     button,
