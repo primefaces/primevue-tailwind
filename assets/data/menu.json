@@ -104,6 +104,11 @@
                             "to": "/slider"
                         },
                         {
+                            "name": "Textarea",
+                            "to": "/textarea",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "ToggleButton",
                             "to": "/togglebutton",
                             "badge": "NEW"
