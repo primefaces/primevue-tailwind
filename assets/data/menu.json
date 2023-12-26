@@ -107,6 +107,11 @@
                             "name": "ToggleButton",
                             "to": "/togglebutton",
                             "badge": "NEW"
+                        },
+                        {
+                            "name": "TreeSelect",
+                            "to": "/treeselect",
+                            "badge": "NEW"
                         }
                     ]
                 },

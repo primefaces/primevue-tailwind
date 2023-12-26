@@ -50,6 +50,7 @@ import toast from './toast';
 import togglebutton from './togglebutton';
 import tooltip from './tooltip';
 import tree from './tree';
+import treeselect from './treeselect';
 
 export default {
     global,
@@ -80,6 +81,7 @@ export default {
     inputgroup,
     inputmask,
     knob,
+    treeselect,
 
     //buttons
     button,
