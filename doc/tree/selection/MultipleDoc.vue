@@ -11,7 +11,7 @@
             <InputSwitch v-model="checked" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
-        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" class="w-full md:w-30rem" :metaKeySelection="checked"></Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" class="w-full md:w-[30rem]" :metaKeySelection="checked"></Tree>
     </div>
     <DocSectionCode :code="code" v-bind="$attrs" :service="['NodeService']" />
 </template>
@@ -27,7 +27,7 @@ export default {
             selectedKey: null,
             code: {
                 basic: `
-<Tree v-model:selectionKeys="selectedKey" :value="nodes" class="w-full md:w-30rem"
+<Tree v-model:selectionKeys="selectedKey" :value="nodes" class="w-full md:w-[30rem]"
     selectionMode="multiple" :metaKeySelection="checked"></Tree>
 `,
                 options: `
@@ -37,7 +37,7 @@ export default {
             <InputSwitch v-model="checked" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
-        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" class="w-full md:w-30rem" :metaKeySelection="checked"></Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" class="w-full md:w-[30rem]" :metaKeySelection="checked"></Tree>
     </div>
 </template>
 
@@ -65,7 +65,7 @@ export default {
             <InputSwitch v-model="checked" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
-        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" class="w-full md:w-30rem" :metaKeySelection="checked"></Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" class="w-full md:w-[30rem]" :metaKeySelection="checked"></Tree>
     </div>
 </template>
 

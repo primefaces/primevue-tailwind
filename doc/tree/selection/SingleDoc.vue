@@ -3,7 +3,7 @@
         <p>Single node selection is configured by setting <i>selectionMode</i> as <i>single</i> along with <i>selectionKeys</i> property to manage the selection value binding.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-30rem"></Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-[30rem]"></Tree>
     </div>
     <DocSectionCode :code="code" v-bind="$attrs" :service="['NodeService']" />
 </template>
@@ -17,13 +17,13 @@ export default {
             selectedKey: null,
             code: {
                 basic: `
-<Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-30rem"></Tree>
+<Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-[30rem]"></Tree>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
         <Toast />
-        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-30rem"></Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-[30rem]"></Tree>
     </div>
 </template>
 
@@ -54,7 +54,7 @@ export default {
 <template>
     <div class="card flex justify-center">
         <Toast />
-        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-30rem"></Tree>
+        <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" class="w-full md:w-[30rem]"></Tree>
     </div>
 </template>
 

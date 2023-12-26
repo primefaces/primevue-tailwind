@@ -12,7 +12,7 @@
             @nodeUnselect="onNodeUnselect"
             @nodeExpand="onNodeExpand"
             @nodeCollapse="onNodeCollapse"
-            class="w-full md:w-30rem"
+            class="w-full md:w-[30rem]"
         ></Tree>
     </div>
     <DocSectionCode :code="code" v-bind="$attrs" :service="['NodeService']" />
@@ -27,15 +27,15 @@ export default {
             selectedKey: null,
             code: {
                 basic: `
-<Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false" class="w-full md:w-30rem"
-    @nodeSelect="onNodeSelect" @nodeUnselect="onNodeUnselect" @nodeExpand="onNodeExpand" @nodeCollapse="onNodeCollapse" class="w-full md:w-30rem"></Tree>
+<Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false" class="w-full md:w-[30rem]"
+    @nodeSelect="onNodeSelect" @nodeUnselect="onNodeUnselect" @nodeExpand="onNodeExpand" @nodeCollapse="onNodeCollapse" class="w-full md:w-[30rem]"></Tree>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
         <Toast />
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-            @nodeSelect="onNodeSelect" @nodeUnselect="onNodeUnselect" @nodeExpand="onNodeExpand" @nodeCollapse="onNodeCollapse" class="w-full md:w-30rem"></Tree>
+            @nodeSelect="onNodeSelect" @nodeUnselect="onNodeUnselect" @nodeExpand="onNodeExpand" @nodeCollapse="onNodeCollapse" class="w-full md:w-[30rem]"></Tree>
     </div>
 </template>
 
@@ -73,7 +73,7 @@ export default {
     <div class="card flex justify-center">
         <Toast />
         <Tree v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="false"
-            @nodeSelect="onNodeSelect" @nodeUnselect="onNodeUnselect" @nodeExpand="onNodeExpand" @nodeCollapse="onNodeCollapse" class="w-full md:w-30rem"></Tree>
+            @nodeSelect="onNodeSelect" @nodeUnselect="onNodeUnselect" @nodeExpand="onNodeExpand" @nodeCollapse="onNodeCollapse" class="w-full md:w-[30rem]"></Tree>
     </div>
 </template>
 

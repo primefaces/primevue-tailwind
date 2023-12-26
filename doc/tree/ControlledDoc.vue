@@ -10,7 +10,7 @@
             <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
             <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
         </div>
-        <Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-30rem"></Tree>
+        <Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-[30rem]"></Tree>
     </div>
     <DocSectionCode :code="code" v-bind="$attrs" :service="['NodeService']" />
 </template>
@@ -29,7 +29,7 @@ export default {
     <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
     <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
 </div>
-<Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-30rem"></Tree>
+<Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-[30rem]"></Tree>
 `,
                 options: `
 <template>
@@ -38,7 +38,7 @@ export default {
             <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
             <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
         </div>
-        <Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-30rem"></Tree>
+        <Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-[30rem]"></Tree>
     </div>
 </template>
 
@@ -86,7 +86,7 @@ export default {
             <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
             <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
         </div>
-        <Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-30rem"></Tree>
+        <Tree v-model:expandedKeys="expandedKeys" :value="nodes" class="w-full md:w-[30rem]"></Tree>
     </div>
 </template>
 

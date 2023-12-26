@@ -3,7 +3,7 @@
         <p>Each node can have a distinct template by matching the <i>type</i> property to the slot name.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Tree :value="nodes" class="w-full md:w-30rem">
+        <Tree :value="nodes" class="w-full md:w-[30rem]">
             <template #default="slotProps">
                 <b>{{ slotProps.node.label }}</b>
             </template>
@@ -43,7 +43,7 @@ export default {
             ],
             code: {
                 basic: `
-<Tree :value="nodes" class="w-full md:w-30rem">
+<Tree :value="nodes" class="w-full md:w-[30rem]">
     <template #default="slotProps">
         <b>{{ slotProps.node.label }}</b>
     </template>
@@ -55,7 +55,7 @@ export default {
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Tree :value="nodes" class="w-full md:w-30rem">
+        <Tree :value="nodes" class="w-full md:w-[30rem]">
             <template #default="slotProps">
                 <b>{{ slotProps.node.label }}</b>
             </template>
@@ -100,7 +100,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Tree :value="nodes" class="w-full md:w-30rem">
+        <Tree :value="nodes" class="w-full md:w-[30rem]">
             <template #default="slotProps">
                 <b>{{ slotProps.node.label }}</b>
             </template>
