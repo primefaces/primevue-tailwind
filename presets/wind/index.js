@@ -15,6 +15,7 @@ import colorpicker from './colorpicker';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dialog from './dialog';
+import divider from './divider';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
 import global from './global';
@@ -104,6 +105,7 @@ export default {
     fieldset,
     card,
     tabview,
+    divider,
 
     //menu
     contextmenu,

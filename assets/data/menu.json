@@ -176,6 +176,11 @@
                             "to": "/card"
                         },
                         {
+                            "name": "Divider",
+                            "to": "/divider",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Fieldset",
                             "to": "/fieldset"
                         },
