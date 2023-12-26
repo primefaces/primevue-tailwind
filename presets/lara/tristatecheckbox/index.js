@@ -4,8 +4,23 @@ export default {
     },
     checkbox: ({ props, context }) => ({
         class: [
-            'flex items-center justify-center',
-            'border-2 w-6 h-6 rounded-lg transition-colors duration-200',
+            'relative',
+
+            // Alignment
+            'flex',
+            'items-center',
+            'justify-center',
+
+            // Size
+            'w-6',
+            'h-6',
+
+            // Shape
+            'rounded-lg',
+            'border-2',
+
+            // Colors
+            'text-surface-600',
             {
                 'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': props.modelValue == null,
                 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': props.modelValue !== null
