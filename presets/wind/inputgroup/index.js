@@ -1,3 +1,5 @@
 export default {
-    root: {}
+    root: {
+        class: ['flex items-stretch', 'w-full']
+    }
 };

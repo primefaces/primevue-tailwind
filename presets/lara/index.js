@@ -21,6 +21,7 @@ import fieldset from './fieldset';
 import global from './global';
 import inlinemessage from './inlinemessage';
 import inputgroup from './inputgroup';
+import inputgroupaddon from './inputgroupaddon';
 import inputmask from './inputmask';
 import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
@@ -83,6 +84,7 @@ export default {
     listbox,
     colorpicker,
     inputgroup,
+    inputgroupaddon,
     inputmask,
     knob,
     treeselect,
