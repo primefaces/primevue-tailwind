@@ -33,6 +33,7 @@ import multiselect from './multiselect';
 import overlaypanel from './overlaypanel';
 import paginator from './paginator';
 import panel from './panel';
+import password from './password';
 import progressbar from './progressbar';
 import radiobutton from './radiobutton';
 import rating from './rating';
@@ -86,6 +87,7 @@ export default {
     treeselect,
     tristatecheckbox,
     textarea,
+    password,
 
     //buttons
     button,

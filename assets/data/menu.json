@@ -87,6 +87,10 @@
                             "badge": "NEW"
                         },
                         {
+                            "name": "Password",
+                            "to": "/password"
+                        },
+                        {
                             "name": "RadioButton",
                             "to": "/radiobutton"
                         },
