@@ -35,7 +35,8 @@
                         },
                         {
                             "name": "CascadeSelect",
-                            "to": "/cascadeselect"
+                            "to": "/cascadeselect",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Checkbox",
@@ -47,7 +48,8 @@
                         },
                         {
                             "name": "ColorPicker",
-                            "to": "/colorpicker"
+                            "to": "/colorpicker",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Dropdown",
@@ -55,7 +57,8 @@
                         },
                         {
                             "name": "InputGroup",
-                            "to": "/inputgroup"
+                            "to": "/inputgroup",
+                            "badge": "NEW"
                         },
                         {
                             "name": "InputNumber",
@@ -63,7 +66,8 @@
                         },
                         {
                             "name": "InputMask",
-                            "to": "/inputmask"
+                            "to": "/inputmask",
+                            "badge": "NEW"
                         },
                         {
                             "name": "InputSwitch",
@@ -75,7 +79,8 @@
                         },
                         {
                             "name": "Knob",
-                            "to": "/knob"
+                            "to": "/knob",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Listbox",
@@ -83,12 +88,12 @@
                         },
                         {
                             "name": "MultiSelect",
-                            "to": "/multiselect",
-                            "badge": "NEW"
+                            "to": "/multiselect"
                         },
                         {
                             "name": "Password",
-                            "to": "/password"
+                            "to": "/password",
+                            "badge": "NEW"
                         },
                         {
                             "name": "RadioButton",
@@ -96,8 +101,7 @@
                         },
                         {
                             "name": "Rating",
-                            "to": "/rating",
-                            "badge": "NEW"
+                            "to": "/rating"
                         },
                         {
                             "name": "SelectButton",
@@ -114,8 +118,7 @@
                         },
                         {
                             "name": "ToggleButton",
-                            "to": "/togglebutton",
-                            "badge": "NEW"
+                            "to": "/togglebutton"
                         },
                         {
                             "name": "TreeSelect",
@@ -147,8 +150,7 @@
                     "children": [
                         {
                             "name": "DataTable",
-                            "to": "/datatable",
-                            "badge": "NEW"
+                            "to": "/datatable"
                         },
                         {
                             "name": "Tree",
@@ -157,8 +159,7 @@
                         },
                         {
                             "name": "Paginator",
-                            "to": "/paginator",
-                            "badge": "NEW"
+                            "to": "/paginator"
                         }
                     ]
                 },
@@ -192,8 +193,7 @@
                     "children": [
                         {
                             "name": "ContextMenu",
-                            "to": "/contextmenu",
-                            "badge": "NEW"
+                            "to": "/contextmenu"
                         },
                         {
                             "name": "Menu",
@@ -276,8 +276,7 @@
                         },
                         {
                             "name": "Skeleton",
-                            "to": "/skeleton",
-                            "badge": "NEW"
+                            "to": "/skeleton"
                         },
                         {
                             "name": "Tag",
