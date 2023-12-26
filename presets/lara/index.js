@@ -24,6 +24,7 @@ import inputmask from './inputmask';
 import inputnumber from './inputnumber';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
+import knob from './knob';
 import listbox from './listbox';
 import menu from './menu';
 import menubar from './menubar';
@@ -77,6 +78,7 @@ export default {
     colorpicker,
     inputgroup,
     inputmask,
+    knob,
 
     //buttons
     button,

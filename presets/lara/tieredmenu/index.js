@@ -38,11 +38,12 @@ export default {
             {
                 'bg-surface-200 text-surface-700 dark:bg-surface-300/10 dark:text-white': context.focused
             },
+            console.log(context),
 
             // Transitions
             'transition-shadow',
             'duration-200',
-            
+
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
             'hover:bg-surface-100 dark:bg-surface-700 dark:hover:bg-surface-400/10'
@@ -88,7 +89,7 @@ export default {
             'ml-auto'
         ]
     },
-    submenu:{
+    submenu: {
         class: [
             // Size
             'w-full sm:w-48',
@@ -112,5 +113,5 @@ export default {
     },
     separator: {
         class: 'border-t border-surface-200 dark:border-surface-600 my-1'
-    },
+    }
 };

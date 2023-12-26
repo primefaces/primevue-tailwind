@@ -110,8 +110,9 @@ export default {
     list: {
         class: 'py-3 list-none m-0'
     },
-    item: {
+    item: ({ context }) => ({
         class: [
+            console.log(context),
             // Font
             'font-normal',
             'leading-none',
@@ -138,7 +139,7 @@ export default {
             'overflow-hidden',
             'whitespace-nowrap'
         ]
-    },
+    }),
     content: {
         class: [
             'relative',

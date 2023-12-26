@@ -74,6 +74,10 @@
                             "to": "/inputtext"
                         },
                         {
+                            "name": "Knob",
+                            "to": "/knob"
+                        },
+                        {
                             "name": "Listbox",
                             "to": "/listbox"
                         },
