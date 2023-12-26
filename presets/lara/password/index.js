@@ -8,27 +8,58 @@ export default {
         ]
     }),
     panel: {
-        class: 'p-5 bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80 shadow-md rounded-md'
+        class: [
+            // Spacing
+            'p-5',
+
+            // Shape
+            'border-0 dark:border',
+            'shadow-md rounded-md',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-900',
+            'text-surface-700 dark:text-white/80',
+            'dark:border-surface-700'
+        ]
     },
     meter: {
-        class: 'mb-2 bg-surface-300 dark:bg-surface-700 h-3'
-    },
-    meterlabel: ({ instance, props }) => ({
         class: [
-            'transition-width duration-1000 ease-in-out h-full',
+            // Position and Overflow
+            'overflow-hidden',
+            'relative',
+
+            // Shape and Size
+            'border-0',
+            'h-3',
+
+            // Spacing
+            'mb-2',
+
+            // Colors
+            'bg-surface-100 dark:bg-surface-700'
+        ]
+    },
+    meterlabel: ({ instance }) => ({
+        class: [
+            // Size
+            'h-full',
+
+            // Colors
             {
-                'bg-red-500': instance?.meter?.strength == 'weak',
-                'bg-orange-500': instance?.meter?.strength == 'medium',
-                'bg-green-500': instance?.meter?.strength == 'strong'
+                'bg-red-500 dark:bg-red-400/50': instance?.meter?.strength == 'weak',
+                'bg-orange-500 dark:bg-orange-400/50': instance?.meter?.strength == 'medium',
+                'bg-green-500 dark:bg-green-400/50': instance?.meter?.strength == 'strong'
             },
-            { 'pr-[2.5rem] ': props.toggleMask }
+
+            // Transitions
+            'transition-all duration-1000 ease-in-out'
         ]
     }),
     showicon: {
-        class: ['absolute top-1/2 -mt-2', 'right-3 text-surface-600 dark:text-white/70']
+        class: ['absolute top-1/2 right-3 -mt-2', 'text-surface-600 dark:text-white/70']
     },
     hideicon: {
-        class: ['absolute top-1/2 -mt-2', 'right-3 text-surface-600 dark:text-white/70']
+        class: ['absolute top-1/2 right-3 -mt-2', 'text-surface-600 dark:text-white/70']
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
