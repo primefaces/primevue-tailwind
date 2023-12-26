@@ -43,7 +43,7 @@ export default {
             'duration-200',
 
             // States
-            'hover:text-primary-600 dark:hover:text-primary-400 ',
+            'hover:text-primary-600 dark:hover:text-primary-400',
             'hover:bg-surface-100 dark:hover:bg-surface-400/10'
         ]
     }),

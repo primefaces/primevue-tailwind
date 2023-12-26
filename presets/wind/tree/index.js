@@ -1,75 +1,224 @@
 export default {
     root: {
-        class: ['max-w-[30rem] md:w-full', 'border border-solid border-surface-50 dark:border-surface-700 bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80 p-5 rounded-md']
+        class: [
+            'relative',
+
+            // Space
+            'p-1.5',
+
+            // Shape
+            'rounded-md',
+
+            // Color
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-white/80',
+            'ring-1 ring-surface-200 dark:ring-surface-700'
+        ]
     },
     wrapper: {
-        class: 'overflow-auto'
+        class: ['overflow-auto']
     },
     container: {
-        class: 'm-0 p-0 list-none overflow-auto'
+        class: [
+            // Spacing
+            'm-0 p-0',
+
+            // Misc
+            'list-none overflow-auto'
+        ]
     },
     node: {
-        class: 'p-1 outline-none'
+        class: ['p-[2px]', 'rounded-md', 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400']
     },
     content: ({ context, props }) => ({
         class: [
+            // Flex and Alignment
             'flex items-center',
-            'rounded-lg transition-shadow duration-200 p-2',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
-            { 'bg-primary-50 text-primary-600': context.selected },
+
+            // Shape
+            'rounded-md',
+
+            // Spacing
+            'p-2',
+
+            // Colors
+            'text-surface-700 dark:text-surface-0',
+            { 'bg-surface-100 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.selected },
+
+            // States
+            { 'hover:bg-surface-200 dark:hover:bg-surface-400/10': props.selectionMode == 'single' || props.selectionMode == 'multiple' },
+
+            // Transition
+            'transition-shadow duration-200',
+
             { 'cursor-pointer select-none': props.selectionMode == 'single' || props.selectionMode == 'multiple' }
         ]
     }),
     toggler: ({ context }) => ({
         class: [
-            'cursor-pointer select-none inline-flex items-center justify-center overflow-hidden relative shrink-0',
-            'mr-2 w-8 h-8 border-0 bg-transparent rounded-full transition duration-200',
-            'hover:border-transparent focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
-            {
-                'text-surface-500 dark:text-white/80 hover:bg-surface-100 dark:hover:bg-surface-800/80  hover:text-surface-800 dark:hover:text-white/80': !context.selected,
-                'text-primary-600 hover:bg-surface-0/30': context.selected
-            },
+            // Flex and Alignment
+            'inline-flex items-center justify-center',
+
+            // Shape
+            'border-0 rounded-full',
+
+            // Size and Spacing
+            'mr-2',
+            'w-6 h-6',
+
+            // Spacing
+            'mr-2',
+
+            // Colors
+            'text-surface-500',
+            'bg-transparent',
             {
                 invisible: context.leaf
-            }
+            },
+
+            // States
+            'hover:text-surface-700 dark:hover:text-white/80',
+            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset',
+            'focus:ring-primary-500 dark:focus:ring-primary-400',
+
+            // Transition
+            'transition duration-200',
+
+            // Misc
+            'cursor-pointer select-none'
         ]
     }),
+    togglericon: {
+        class: [
+            // Size
+            'w-4 h-4',
+
+            // Color
+            'text-surface-500 dark:text-white/70'
+        ]
+    },
     checkboxcontainer: {
         class: 'mr-2'
     },
     checkbox: ({ context, props }) => ({
         class: [
-            'cursor-pointer inline-flex relative select-none align-bottom',
-            'w-6 h-6',
-            'flex items-center justify-center',
-            'border-2 w-6 h-6 rounded-lg transition-colors duration-200 text-white text-base dark:text-surface-900',
+            'relative',
+            // Alignment
+            'flex',
+            'items-center',
+            'justify-center',
+
+            // Size
+            'w-4',
+            'h-4',
+
+            // Shape
+            'rounded',
+            'border',
+
+            // Colors
+            'text-surface-600',
             {
-                'border-surface-50 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
-                'border-primary-500 text-white bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
+                'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
+                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
             },
+
+            // States
+            'focus:outline-none focus:outline-offset-0',
             {
-                'hover:border-primary-500 dark:hover:border-primary-400 focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': !props.disabled,
+                'ring-2 ring-primary-500 dark:ring-primary-400': !props.disabled && context.focused,
                 'cursor-default opacity-60': props.disabled
-            }
+            },
+
+            // Transitions
+            'transition-colors',
+            'duration-200'
         ]
     }),
+    checkboxicon: {
+        class: [
+            // Font
+            'text-normal',
+
+            // Size
+            'w-3',
+            'h-3',
+
+            // Colors
+            'text-white dark:text-surface-900',
+
+            // Transitions
+            'transition-all',
+            'duration-200'
+        ]
+    },
     nodeicon: {
-        class: 'mr-2 text-surface-600 dark:text-white/70'
+        class: [
+            // Space
+            'mr-2',
+
+            // Color
+            'text-surface-600 dark:text-white/70'
+        ]
     },
     subgroup: {
-        class: ['m-0 list-none', 'p-0 pl-4']
+        class: ['m-0 list-none p-0 pl-2 mt-1']
     },
     filtercontainer: {
-        class: ['mb-2', 'relative block w-full']
+        class: [
+            'relative block',
+
+            // Space
+            'mb-2',
+
+            // Size
+            'w-full'
+        ]
     },
     input: {
         class: [
-            'm-0 p-3 text-base w-full pr-7',
-            'font-sans text-surface-600 dark:text-white/70 bg-surface-0 dark:bg-surface-900 border border-surface-50 dark:border-surface-700 transition-colors duration-200 appearance-none rounded-lg',
-            'hover:border-primary-500 focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+            'relative',
+
+            // Font
+            'font-sans leading-6',
+            'sm:text-sm',
+
+            // Spacing
+            'm-0',
+            'py-1.5 px-3 pr-10',
+
+            // Size
+            'w-full',
+
+            // Shape
+            'rounded-md',
+
+            // Colors
+            'text-surface-900 dark:text-surface-0',
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+            'bg-surface-0 dark:bg-surface-900',
+            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
+
+            // States
+            'hover:border-primary-500 dark:hover:border-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400',
+
+            // Transition & Misc
+            'appearance-none',
+            'transition-colors duration-200'
         ]
     },
+    loadingicon: {
+        class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[50%] -mt-2 -mr-2']
+    },
     searchicon: {
-        class: 'absolute top-1/2 -mt-2 right-3 text-surface-600 dark:hover:text-white/70'
+        class: [
+            // Position
+            'absolute top-1/2 -mt-2 right-3',
+
+            // Color
+            'text-surface-600 dark:hover:text-white/70'
+        ]
     }
 };

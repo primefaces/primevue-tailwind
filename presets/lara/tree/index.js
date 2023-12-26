@@ -26,7 +26,7 @@ export default {
         ]
     },
     node: {
-        class: ['p-1 outline-none']
+        class: ['p-1', 'rounded-md', 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset focus:ring-primary-400/50 dark:focus:ring-primary-300/50']
     },
     content: ({ context, props }) => ({
         class: [
@@ -34,7 +34,7 @@ export default {
             'flex items-center',
 
             // Shape
-            'rounded-lg',
+            'rounded-md',
 
             // Spacing
             'p-2',
@@ -45,7 +45,6 @@ export default {
 
             // States
             { 'hover:bg-surface-50 dark:hover:bg-surface-700/40': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Transition
             'transition-shadow duration-200',
@@ -156,7 +155,7 @@ export default {
         ]
     },
     subgroup: {
-        class: ['m-0 list-none p-0 pl-4']
+        class: ['m-0 list-none p-0 pl-2 mt-1']
     },
     filtercontainer: {
         class: [
@@ -199,6 +198,9 @@ export default {
             'appearance-none',
             'transition-colors duration-200'
         ]
+    },
+    loadingicon: {
+        class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[50%] -mt-2 -mr-2']
     },
     searchicon: {
         class: [
