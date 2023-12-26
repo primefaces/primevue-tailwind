@@ -132,6 +132,11 @@
                             "badge": "NEW"
                         },
                         {
+                            "name": "Tree",
+                            "to": "/tree",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Paginator",
                             "to": "/paginator",
                             "badge": "NEW"

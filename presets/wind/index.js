@@ -49,6 +49,7 @@ import tieredmenu from './tieredmenu';
 import toast from './toast';
 import togglebutton from './togglebutton';
 import tooltip from './tooltip';
+import tree from './tree';
 
 export default {
     global,
@@ -87,6 +88,7 @@ export default {
     //data
     paginator,
     datatable,
+    tree,
 
     //panels
     accordion,
