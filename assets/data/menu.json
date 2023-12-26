@@ -84,7 +84,8 @@
                         },
                         {
                             "name": "Listbox",
-                            "to": "/listbox"
+                            "to": "/listbox",
+                            "badge": "NEW"
                         },
                         {
                             "name": "MultiSelect",
