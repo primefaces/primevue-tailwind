@@ -7,7 +7,7 @@
         <p>In single selection mode, value binding should be the <i>key</i> value of a node.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-20rem w-full" />
+        <TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-[20rem] w-full" />
     </div>
     <DocSectionCode :code="code" :service="['NodeService']" v-bind="$attrs" />
 </template>
@@ -22,12 +22,12 @@ export default {
             selectedValue: null,
             code: {
                 basic: `
-<TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-20rem w-full" />
+<TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-[20rem] w-full" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-20rem w-full" />
+        <TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-[20rem] w-full" />
     </div>
 </template>
 
@@ -50,7 +50,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-20rem w-full" />
+        <TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-[20rem] w-full" />
     </div> 
 </template>
 
