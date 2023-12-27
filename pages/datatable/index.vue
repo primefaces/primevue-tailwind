@@ -18,7 +18,6 @@ import ReorderDoc from '@/doc/datatable/ReorderDoc.vue';
 import RowExpansionDoc from '@/doc/datatable/RowExpansionDoc.vue';
 import SizeDoc from '@/doc/datatable/SizeDoc.vue';
 import StatefulDoc from '@/doc/datatable/StatefulDoc.vue';
-import StripedRowsDoc from '@/doc/datatable/StripedRowsDoc.vue';
 import TemplateDoc from '@/doc/datatable/TemplateDoc.vue';
 import ExpandModeDoc from '@/doc/datatable/colresize/ExpandModeDoc.vue';
 import FitModeDoc from '@/doc/datatable/colresize/FitModeDoc.vue';
@@ -85,11 +84,11 @@ export default {
                     label: 'Grid Lines',
                     component: GridLinesDoc
                 },
-                {
-                    id: 'striped',
-                    label: 'Striped Rows',
-                    component: StripedRowsDoc
-                },
+                // {
+                //     id: 'striped',
+                //     label: 'Striped Rows',
+                //     component: StripedRowsDoc
+                // },
                 {
                     id: 'paginator',
                     label: 'Paginator',
