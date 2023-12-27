@@ -13,7 +13,7 @@
             </template>
 
             <template v-else-if="!doc.children && doc.component">
-                <component :is="{ ...doc.component }" :id="doc.id" :label="doc.label" :data="doc.data" :description="doc.description" />
+                <component :is="{ ...doc.component }" :id="doc.id" :label="doc.label" :data="doc.data" :description="doc.description" :options="doc.options" />
             </template>
         </section>
     </template>

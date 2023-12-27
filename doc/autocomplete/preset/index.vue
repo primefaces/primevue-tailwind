@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import LaraDoc from './LaraDoc.vue';
-import WindDoc from './WindDoc.vue';
+import BaseLaraDoc from '@/components/doc/preset/BaseLaraDoc.vue';
+import BaseWindDoc from '@/components/doc/preset/BaseWindDoc.vue';
 
 export default {
     data() {
@@ -19,12 +19,18 @@ export default {
                 {
                     id: 'presets.lara',
                     label: 'Lara',
-                    component: LaraDoc
+                    component: BaseLaraDoc,
+                    options: {
+                        presetKey: 'autocomplete'
+                    }
                 },
                 {
                     id: 'presets.wind',
                     label: 'Wind',
-                    component: WindDoc
+                    component: BaseWindDoc,
+                    options: {
+                        presetKey: 'autocomplete'
+                    }
                 }
             ]
         };
