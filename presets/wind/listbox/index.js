@@ -125,7 +125,7 @@ export default {
         ]
     },
     filtericon: {
-        class: ['absolute', 'top-1/2', '-mt-2']
+        class: ['absolute', 'top-1/2 right-3', '-mt-2']
     },
     emptymessage: {
         class: [

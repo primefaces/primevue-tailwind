@@ -13,108 +13,129 @@ export default {
 chips: {
     root: ({ props }) => ({
         class: [
-            'flex',
-            {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
-            }
+            // Display
+            'inline-block',
+
+            // Misc
+            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
         ]
     }),
-    container: ({ state }) => ({
+    input: {
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
-
-            // Flex
-            'flex items-center flex-wrap gap-1',
+            'font-sans text-base ',
 
             // Spacing
-            'm-0 py-1 px-3',
+            'm-0',
 
-            // Size
-            'w-full',
+            // Size & Shape
+            'rounded',
+            'w-4',
+            'h-4',
 
-            // Shape
-            'list-none',
-            'rounded-md',
-
-            // Color
-            'text-surface-900 dark:text-surface-0',
+            // Colors
             'bg-surface-0 dark:bg-surface-900',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'shadow-sm',
+            'border border-surface-300 dark:border-surface-700',
 
             // States
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused, 'ring-2 ring-primary-500 dark:ring-primary-400': state.focused },
+            'hover:border-primary-500 dark:hover:border-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transition
             'transition-colors duration-200',
 
             // Misc
-            'cursor-text overflow-hidden',
-            'appearance-none'
-        ]
-    }),
-
-    inputtoken: {
-        class: ['py-0.5 px-0', 'inline-flex flex-auto']
-    },
-    input: {
-        class: [
-            // Font
-            'font-sans sm:text-sm leading-none',
-
-            // Size
-            'w-full',
-
-            // Spacing
-            'p-0 m-0',
-
-            // Shape
-            'appearance-none rounded-none',
-            'border-0 outline-none',
-
-            // Color
-            'text-surface-700 dark:text-white/80',
-            'bg-transparent',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500'
+            'cursor-default',
+            'select-none'
         ]
     },
-    token: {
+    panel: ({ props }) => ({
         class: [
-            // Flexbox
-            'inline-flex items-center',
-
-            // Spacing
-            'py-0.5 px-3',
+            // Position & Size
+            {
+                'relative h-48 w-52': props.inline,
+                'absolute h-48 w-52': !props.inline
+            },
 
             // Shape
-            'rounded-[1.14rem]',
+            'shadow-md',
+            'border-0',
+            'rounded-md',
 
             // Colors
-            'text-surface-700 dark:text-white/70',
-            'bg-surface-200 dark:bg-surface-700'
+            'bg-surface-800',
+            'ring-1 ring-inset ring-surface-900 dark:ring-surface-600'
         ]
-    },
-    label: {
-        class: 'leading-5'
-    },
-    removeTokenIcon: {
+    }),
+    selector: {
         class: [
-            // Shape
-            'rounded-md leading-6',
-
-            // Spacing
-            'ml-2',
+            // Position
+            'absolute top-2 left-2',
 
             // Size
-            'w-4 h-4',
+            'h-44 w-40'
+        ]
+    },
+    color: {
+        class: [
+            // Size
+            'h-44 w-40'
+        ],
+        style: 'background: linear-gradient(to top, #000 0%, rgb(0 0 0 / 0) 100%), linear-gradient(to right, #fff 0%, rgb(255 255 255 / 0) 100%)'
+    },
+    colorhandle: {
+        class: [
+            'absolute',
 
-            // Transition
-            'transition duration-200 ease-in-out',
+            // Shape
+            'rounded-full border border-solid',
+
+            // Size
+            'h-3 w-3',
+
+            // Colors
+            'border-white',
 
             // Misc
-            'cursor-pointer'
+            'cursor-pointer  opacity-85'
         ]
+    },
+    hue: {
+        class: [
+            // Position
+            'absolute top-2 left-44',
+
+            // Size
+            'h-44 w-6',
+
+            // Opacity
+            'opacity-85'
+        ],
+        style: 'background: linear-gradient(0deg, red 0, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, red)'
+    },
+    huehandle: {
+        class: [
+            // Position
+            'absolute left-0 -ml-1',
+
+            // Size
+            'h-2 w-8',
+
+            // Shape
+            'border-solid border-2 rounded',
+
+            // Colors
+            'border-white',
+
+            // Misc
+            'opacity-85'
+        ]
+    },
+    transition: {
+        enterFromClass: 'opacity-0 scale-y-[0.8]',
+        enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
+        leaveActiveClass: 'transition-opacity duration-100 ease-linear',
+        leaveToClass: 'opacity-0'
     }
 }
 `
