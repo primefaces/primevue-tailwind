@@ -4,7 +4,7 @@
     </DocSectionText>
     <div class="card flex justify-center">
         <span class="p-float-label">
-            <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-20rem" />
+            <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
             <label for="ms-cities">MultiSelect</label>
         </span>
     </div>
@@ -26,7 +26,7 @@ export default {
             code: {
                 basic: `
 <span class="p-float-label">
-    <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-20rem" />
+    <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
     <label for="ms-cities">MultiSelect</label>
 </span>
 `,
@@ -34,7 +34,7 @@ export default {
 <template>
     <div class="card flex justify-center">
         <span class="p-float-label">
-            <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-20rem" />
+            <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
             <label for="ms-cities">MultiSelect</label>
         </span>
     </div>
@@ -61,7 +61,7 @@ export default {
 <template>
     <div class="card flex justify-center">
         <span class="p-float-label">
-            <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-20rem" />
+            <MultiSelect id="ms-cities" v-model="selectedCities" :options="cities" optionLabel="name" :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
             <label for="ms-cities">MultiSelect</label>
         </span>
     </div>

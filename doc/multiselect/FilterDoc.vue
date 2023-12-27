@@ -6,7 +6,7 @@
         </p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <MultiSelect v-model="selectedCities" :options="cities" filter optionLabel="name" placeholder="Select Cities" :maxSelectedLabels="3" class="w-full md:w-20rem" />
+        <MultiSelect v-model="selectedCities" :options="cities" filter optionLabel="name" placeholder="Select Cities" :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -26,13 +26,13 @@ export default {
             code: {
                 basic: `
 <MultiSelect v-model="selectedCities" :options="cities" filter optionLabel="name" placeholder="Select Cities"
-    :maxSelectedLabels="3" class="w-full md:w-20rem" />
+    :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
         <MultiSelect v-model="selectedCities" :options="cities" filter optionLabel="name" placeholder="Select Cities"  
-            :maxSelectedLabels="3" class="w-full md:w-20rem" />
+            :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
     </div>
 </template>
 
@@ -57,7 +57,7 @@ export default {
 <template>
     <div class="card flex justify-center">
         <MultiSelect v-model="selectedCities" :options="cities" filter optionLabel="name" placeholder="Select Cities"
-            :maxSelectedLabels="3" class="w-full md:w-20rem" />
+            :maxSelectedLabels="3" class="w-full md:w-[20rem]" />
     </div>
 </template>
 

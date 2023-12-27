@@ -3,7 +3,7 @@
         <p>Loading state can be used <i>loading</i> property.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <MultiSelect placeholder="Loading..." loading class="w-full md:w-20rem"></MultiSelect>
+        <MultiSelect placeholder="Loading..." loading class="w-full md:w-[20rem]"></MultiSelect>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -14,12 +14,12 @@ export default {
         return {
             code: {
                 basic: `
-<MultiSelect placeholder="Loading..." loading class="w-full md:w-20rem"></MultiSelect>
+<MultiSelect placeholder="Loading..." loading class="w-full md:w-[20rem]"></MultiSelect>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <MultiSelect placeholder="Loading..." loading class="w-full md:w-20rem"></MultiSelect>
+        <MultiSelect placeholder="Loading..." loading class="w-full md:w-[20rem]"></MultiSelect>
     </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <MultiSelect placeholder="Loading..." loading class="w-full md:w-20rem"></MultiSelect>
+        <MultiSelect placeholder="Loading..." loading class="w-full md:w-[20rem]"></MultiSelect>
     </div>
 </template>
 
