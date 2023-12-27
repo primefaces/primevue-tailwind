@@ -10,40 +10,80 @@ export default {
             value: null,
             code: {
                 basic: `
-tag: {
-    root: ({ props }) => ({
+tristatecheckbox: {
+    root: {
+        class: ['cursor-pointer inline-flex relative select-none align-bottom', 'w-6 h-6']
+    },
+    checkbox: ({ props, context }) => ({
         class: [
-            //Font
-            'text-xs font-bold',
+            'relative',
 
-            //Alignments
-            'inline-flex items-center justify-center',
+            // Alignment
+            'flex',
+            'items-center',
+            'justify-center',
 
-            //Spacing
-            'px-2 py-1',
+            // Size
+            'w-6',
+            'h-6',
 
-            //Shape
+            // Shape
+            'rounded-lg',
+            'border-2',
+
+            // Colors
+            'text-surface-600',
             {
-                'rounded-md': !props.rounded,
-                'rounded-full': props.rounded
+                'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': props.modelValue == null,
+                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': props.modelValue !== null
             },
 
-            //Colors
-            'text-white dark:text-surface-900',
+            // States
+            'focus:outline-none focus:outline-offset-0',
             {
-                'bg-primary-500 dark:bg-primary-400': props.severity == null || props.severity == 'primary',
-                'bg-green-500 dark:bg-green-400': props.severity == 'success',
-                'bg-blue-500 dark:bg-blue-400': props.severity == 'info',
-                'bg-orange-500 dark:bg-orange-400': props.severity == 'warning',
-                'bg-red-500 dark:bg-red-400': props.severity == 'danger'
-            }
+                'hover:border-primary-500 dark:hover:border-primary-400': !props.disabled,
+                'ring ring-primary-400/50 dark:ring-primary-300/50': !props.disabled && context.focused,
+                'cursor-default opacity-60': props.disabled
+            },
+
+            // Transitions
+            'transition-colors',
+            'duration-200'
         ]
     }),
-    value: {
-        class: 'leading-normal'
+    checkicon: {
+        class: [
+            // Font
+            'text-base leading-none',
+
+            // Size
+            'w-4',
+            'h-4',
+
+            // Colors
+            'text-white dark:text-surface-900',
+
+            // Transitions
+            'transition-all',
+            'duration-200'
+        ]
     },
-    icon: {
-        class: 'mr-1 text-sm'
+    uncheckicon: {
+        class: [
+            // Font
+            'text-base leading-none',
+
+            // Size
+            'w-4',
+            'h-4',
+
+            // Colors
+            'text-white dark:text-surface-900',
+
+            // Transitions
+            'transition-all',
+            'duration-200'
+        ]
     }
 }
 `

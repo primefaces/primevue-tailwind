@@ -169,7 +169,7 @@ dropdown: {
 
             // Spacing
             'm-0',
-            'p-3',
+            'py-3 px-5',
 
             // Color
             'text-surface-800 dark:text-white/80',
@@ -247,7 +247,7 @@ dropdown: {
         ]
     },
     filtericon: {
-        class: ['absolute', 'top-1/2', '-mt-2']
+        class: ['absolute', 'top-1/2 right-3', '-mt-2']
     },
     clearicon: {
         class: [

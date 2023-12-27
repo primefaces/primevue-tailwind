@@ -10,94 +10,148 @@ export default {
             value: null,
             code: {
                 basic: `
-panel: {
+listbox: {
     root: {
-        class: 'shadow-md rounded-lg'
-    },
-    header: ({ props }) => ({
         class: [
-            // Alignments
-            'flex items-center justify-between',
+            // Sizing and Shape
+            'min-w-[12rem]',
+            'rounded-md',
+            // Spacing
 
             // Colors
-            'text-surface-700 dark:text-surface-0/80',
-            'bg-surface-0 dark:bg-surface-900',
-            'border-b border-surface-200 dark:border-surface-800',
-
-            //Shape
-            'rounded-tl-lg rounded-tr-lg',
-
-            // Conditional Spacing
-            { 'px-5 md:px-6 py-5': !props.toggleable, 'py-3 px-5 md:px-6': props.toggleable }
-        ]
-    }),
-    title: {
-        class: 'leading-none font-medium'
-    },
-    toggler: {
-        class: [
-            // Alignments
-            'inline-flex items-center justify-center',
-
-            // Sized
-            'w-8 h-8',
-
-            //Shape
-            'border-0 rounded-full',
-
-            //Color
-            'bg-transparent',
-            'text-surface-600 dark:text-surface-100/80',
-
-            // States
-            'hover:text-surface-900 dark:hover:text-surface-0/80',
-            'hover:bg-surface-50 dark:hover:bg-surface-800/50',
-            'focus:outline-none focus:outline-offset-0 focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-inset dark:focus-visible:ring-primary-500',
-
-            // Transitions
-            'transition duration-200 ease-in-out',
-
-            // Misc
-            'overflow-hidden relative no-underline'
+            'bg-surface-0 dark:bg-surface-700',
+            'text-surface-700 dark:text-white/80',
+            'ring-1 ring-surface-200 dark:ring-surface-700'
         ]
     },
-    togglerIcon: {
-        class: 'inline-block'
-    },
-    content: {
+    wrapper: {
         class: [
-            // Spacing
-            'py-6 px-5 md:px-6',
+            // Overflow
+            'overflow-auto'
+        ]
+    },
+    list: {
+        class: 'py-1 list-none m-0'
+    },
+    item: ({ context }) => ({
+        class: [
+            // Font
+            'sm:text-sm',
+            'leading-none',
+            { 'font-normal': !context.selected, 'font-bold': context.selected },
+
+            // Position
+            'relative',
 
             // Shape
-            'last:rounded-br-lg last:rounded-bl-lg',
+            'border-0',
+            'rounded-none',
 
-            //Color
-            'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-surface-0/80'
-        ]
-    },
-    footer: {
-        class: [
             // Spacing
-            'py-6 px-5 md:px-6',
-
-            //Shape
-            'rounded-bl-lg rounded-br-lg',
+            'm-0',
+            'py-2 px-4',
 
             // Color
-            'bg-surface-0 dark:bg-surface-900',
-            'text-surface-600 dark:text-surface-0/70',
-            'border-t border-surface-200 dark:border-surface-800'
+            { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
+            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
+            { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
+            { 'bg-surface-100 dark:bg-surface-300/10 text-primary-500 dark:text-primary-400': !context.focused && context.selected },
+
+            //States
+            'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+
+            // Misc
+            'cursor-pointer',
+            'overflow-hidden',
+            'whitespace-nowrap'
+        ]
+    }),
+    itemgroup: {
+        class: [
+            //Font
+            'font-bold',
+            'sm:text-sm',
+
+            // Spacing
+            'm-0',
+            'py-2 px-4',
+
+            // Color
+            'text-surface-800 dark:text-white/80',
+            'bg-surface-0 dark:bg-surface-600/80',
+
+            // Misc
+            'cursor-auto'
         ]
     },
-    transition: {
-        enterFromClass: 'max-h-0',
-        enterActiveClass: 'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
-        enterToClass: 'max-h-[1000px]',
-        leaveFromClass: 'max-h-[1000px]',
-        leaveActiveClass: 'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
-        leaveToClass: 'max-h-0'
+    header: {
+        class: [
+            // Spacing
+            'p-0',
+            'm-0',
+
+            //Shape
+            'rounded-tl-md',
+            'rounded-tr-md',
+            'border-b border-surface-200 dark:border-surface-700',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
+            'bg-surface-100 dark:bg-surface-800'
+        ]
+    },
+    filtercontainer: {
+        class: 'relative'
+    },
+    filterinput: {
+        class: [
+            // Font
+            'font-sans',
+            'leading-none',
+            'sm:text-sm',
+
+            // Sizing
+            'py-1.5 px-3',
+            'pr-7',
+            '-mr-7',
+            'w-full',
+
+            //Color
+            'text-surface-700 dark:text-white/80',
+            'bg-surface-0 dark:bg-surface-900',
+            'placeholder:text-surface-400',
+
+            // Shape
+            'border-0',
+            'rounded-tl-md',
+            'rounded-tr-md',
+            'appearance-none',
+
+            // States
+            'focus:ring-2 focus:ring-inset focus:outline-none focus:outline-offset-0',
+            'focus:ring-primary-600 dark:focus:ring-primary-500',
+
+            // Misc
+            'appearance-none'
+        ]
+    },
+    filtericon: {
+        class: ['absolute', 'top-1/2', '-mt-2']
+    },
+    emptymessage: {
+        class: [
+            // Font
+            'leading-none',
+            'sm:text-sm',
+
+            // Spacing
+            'py-2 px-4',
+
+            // Color
+            'text-surface-800 dark:text-white/80',
+            'bg-transparent'
+        ]
     }
 }
 `

@@ -10,110 +10,70 @@ export default {
             value: null,
             code: {
                 basic: `
-chips: {
+divider: {
     root: ({ props }) => ({
         class: [
-            'flex',
+            // Flex and Position
+            'flex relative',
+            { 'justify-center': props.layout == 'vertical' },
+            { 'items-center': props.layout == 'vertical' },
             {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
+                'justify-start': props?.align == 'left' && props.layout == 'horizontal',
+                'justify-center': props?.align == 'center' && props.layout == 'horizontal',
+                'justify-end': props?.align == 'right' && props.layout == 'horizontal',
+                'items-center': props?.align == 'top' && props.layout == 'vertical',
+                'items-start': props?.align == 'center' && props.layout == 'vertical',
+                'items-end': props?.align == 'bottom' && props.layout == 'vertical'
+            },
+
+            // Spacing
+            {
+                'my-5 mx-0 py-0 px-5': props.layout == 'horizontal',
+                'mx-4 md:mx-5 py-5': props.layout == 'vertical'
+            },
+
+            // Size
+            {
+                'w-full': props.layout == 'horizontal',
+                'min-h-full': props.layout == 'vertical'
+            },
+
+            // Before: Line
+            'before:block',
+
+            // Position
+            {
+                'before:absolute before:left-0 before:top-1/2': props.layout == 'horizontal',
+                'before:absolute before:left-1/2 before:top-0 before:transform before:-translate-x-1/2': props.layout == 'vertical'
+            },
+
+            // Size
+            {
+                'before:w-full': props.layout == 'horizontal',
+                'before:min-h-full': props.layout == 'vertical'
+            },
+
+            // Shape
+            {
+                'before:border-solid': props.type == 'solid',
+                'before:border-dotted': props.type == 'dotted',
+                'before:border-dashed': props.type == 'dashed'
+            },
+
+            // Color
+            {
+                'before:border-t before:border-surface-200 before:dark:border-surface-600': props.layout == 'horizontal',
+                'before:border-l before:border-surface-200 before:dark:border-surface-600': props.layout == 'vertical'
             }
         ]
     }),
-    container: ({ state }) => ({
+    content: {
         class: [
-            // Font
-            'font-sans sm:text-sm leading-none',
-
-            // Flex
-            'flex items-center flex-wrap gap-1',
-
-            // Spacing
-            'm-0 py-1 px-3',
-
-            // Size
-            'w-full',
-
-            // Shape
-            'list-none',
-            'rounded-md',
+            // Space and Position
+            'p-2 z-10',
 
             // Color
-            'text-surface-900 dark:text-surface-0',
-            'bg-surface-0 dark:bg-surface-900',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'shadow-sm',
-
-            // States
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused, 'ring-2 ring-primary-500 dark:ring-primary-400': state.focused },
-
-            // Transition
-            'transition-colors duration-200',
-
-            // Misc
-            'cursor-text overflow-hidden',
-            'appearance-none'
-        ]
-    }),
-
-    inputtoken: {
-        class: ['py-0.5 px-0', 'inline-flex flex-auto']
-    },
-    input: {
-        class: [
-            // Font
-            'font-sans sm:text-sm leading-none',
-
-            // Size
-            'w-full',
-
-            // Spacing
-            'p-0 m-0',
-
-            // Shape
-            'appearance-none rounded-none',
-            'border-0 outline-none',
-
-            // Color
-            'text-surface-700 dark:text-white/80',
-            'bg-transparent',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500'
-        ]
-    },
-    token: {
-        class: [
-            // Flexbox
-            'inline-flex items-center',
-
-            // Spacing
-            'py-0.5 px-3',
-
-            // Shape
-            'rounded-[1.14rem]',
-
-            // Colors
-            'text-surface-700 dark:text-white/70',
-            'bg-surface-200 dark:bg-surface-700'
-        ]
-    },
-    label: {
-        class: 'leading-5'
-    },
-    removeTokenIcon: {
-        class: [
-            // Shape
-            'rounded-md leading-6',
-
-            // Spacing
-            'ml-2',
-
-            // Size
-            'w-4 h-4',
-
-            // Transition
-            'transition duration-200 ease-in-out',
-
-            // Misc
-            'cursor-pointer'
+            'bg-surface-0 dark:bg-surface-800'
         ]
     }
 }

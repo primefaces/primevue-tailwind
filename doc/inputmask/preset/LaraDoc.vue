@@ -10,127 +10,34 @@ export default {
             value: null,
             code: {
                 basic: `
-contextmenu: {
-    root: {
+inputmask: {
+    root: ({ context }) => ({
         class: [
-            // Sizing and Shape
-            'min-w-[12rem]',
-            'rounded-md',
-            'shadow-md',
+            // Font
+            'font-sans leading-none',
 
             // Spacing
-            'py-2',
+            'm-0 p-3',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
-            'text-surface-700 dark:text-white/80',
-            'dark:border dark:border-surface-700'
-        ]
-    },
-    menu: {
-        class: [
-            // Spacings and Shape
-            'list-none',
-            'm-0',
-            'p-0',
-            'outline-none'
-        ]
-    },
-    menuitem: {
-        class: 'relative'
-    },
-    content: ({ context }) => ({
-        class: [
-            //Shape
-            'rounded-none',
-            // Colors
-            'text-surface-700 dark:text-white/80',
-            {
-                'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': context.focused && context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': !context.focused && context.active
-            },
-
-            // Transitions
-            'transition-shadow',
-            'duration-200',
+            'text-surface-600 dark:text-surface-200',
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+            'bg-surface-0 dark:bg-surface-900',
+            'border border-surface-300 dark:border-surface-600',
 
             // States
             {
-                'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
-                'hover:bg-primary-400/30 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
-            }
-        ]
-    }),
-    action: {
-        class: [
-            'relative',
-            // Flexbox
-
-            'flex',
-            'items-center',
-
-            // Spacing
-            'py-3',
-            'px-5',
-
-            // Color
-            'text-surface-700 dark:text-white/80',
+                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled,
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
+                'opacity-60 select-none pointer-events-none cursor-default': context.disabled
+            },
 
             // Misc
-            'no-underline',
-            'overflow-hidden',
-            'cursor-pointer',
-            'select-none'
-        ]
-    },
-    icon: {
-        class: [
-            // Spacing
-            'mr-2',
-
-            // Color
-            'text-surface-600 dark:text-white/70'
-        ]
-    },
-    label: {
-        class: ['leading-none']
-    },
-    submenu: ({ props }) => ({
-        class: [
-            // Size
-            'w-full sm:w-48',
-
-            // Spacing
-            'py-1',
-            'm-0',
-            'list-none',
-
-            // Shape
-            'shadow-md',
             'rounded-md',
-            'dark:border dark:border-surface-700',
-
-            // Position
-            'static sm:absolute',
-            'z-10',
-            { 'sm:absolute sm:left-full sm:top-0': props.level > 1 },
-
-            // Color
-            'bg-surface-0 dark:bg-surface-700'
+            'appearance-none',
+            'transition-colors duration-200'
         ]
-    }),
-    submenuicon: {
-        class: ['ml-auto']
-    },
-    separator: {
-        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
-    },
-    transition: {
-        enterFromClass: 'opacity-0',
-        enterActiveClass: 'transition-opacity duration-250'
-    }
+    })
 }
 `
             }

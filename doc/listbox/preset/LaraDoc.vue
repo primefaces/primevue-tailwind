@@ -10,95 +10,152 @@ export default {
             value: null,
             code: {
                 basic: `
-panel: {
-    header: ({ props }) => ({
+listbox: {
+    root: {
         class: [
-            // Flex
-            'flex items-center justify-between',
+            // Sizing and Shape
+            'min-w-[12rem]',
+            'rounded-md',
 
             // Colors
-            'text-surface-700 dark:text-surface-0/80',
-            'bg-surface-50 dark:bg-surface-900',
-            'border border-surface-200 dark:border-surface-700',
-
-            //Shape
-            'rounded-tl-lg rounded-tr-lg',
-
-            // Conditional Spacing
-            { 'p-5': !props.toggleable, 'py-3 px-5': props.toggleable }
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-700 dark:text-white/80',
+            'border border-surface-200 dark:border-surface-600'
         ]
-    }),
-    title: {
-        class: 'leading-none font-bold'
     },
-    toggler: {
+    wrapper: {
         class: [
-            // Alignments
-            'inline-flex items-center justify-center',
+            // Overflow
+            'overflow-auto'
+        ]
+    },
+    list: {
+        class: 'py-3 list-none m-0'
+    },
+    item: ({ context }) => ({
+        class: [
+            // Font
+            'font-normal',
+            'leading-none',
+
+            // Position
             'relative',
 
-            // Sized
-            'w-8 h-8',
-            'm-0 p-0',
+            // Shape
+            'border-0',
+            'rounded-none',
 
-            //Shape
-            'border-0 rounded-full',
+            // Spacing
+            'm-0',
+            'py-3 px-5',
 
-            //Color
-            'bg-transparent',
-            'text-surface-600 dark:text-surface-0/80',
+            // Color
+            { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
+            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
+            { 'bg-primary-100 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': context.focused && context.selected },
+            { 'bg-primary-50 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': !context.focused && context.selected },
 
-            // States
-            'hover:text-surface-800 dark:hover:text-surface-0/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 focus-visible:ring-inset dark:focus-visible:ring-primary-300/50',
+            //States
+            { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
+            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-600/80': context.focused && !context.selected },
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transitions
-            'transition-all duration-200 ease-in-out',
+            'transition-shadow',
+            'duration-200',
 
             // Misc
-            'overflow-hidden no-underline',
-            'cursor-pointer'
+            'cursor-pointer',
+            'overflow-hidden',
+            'whitespace-nowrap'
+        ]
+    }),
+    itemgroup: {
+        class: [
+            //Font
+            'font-bold',
+
+            // Spacing
+            'm-0',
+            'py-3 px-5',
+
+            // Color
+            'text-surface-800 dark:text-white/80',
+            'bg-surface-0 dark:bg-surface-600/80',
+
+            // Misc
+            'cursor-auto'
         ]
     },
-    togglerIcon: {
-        class: 'inline-block'
-    },
-    content: {
+    header: {
         class: [
             // Spacing
-            'p-5',
+            'py-3 px-5',
+            'm-0',
 
-            // Shape
-            'border border-t-0 last:rounded-br-lg last:rounded-bl-lg',
+            //Shape
+            'border-b',
+            'rounded-tl-md',
+            'rounded-tr-md',
 
-            //Color
-            'border-surface-200 dark:border-surface-700',
-            'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-surface-0/80'
+            // Color
+            'text-surface-700 dark:text-white/80',
+            'bg-surface-100 dark:bg-surface-800',
+            'border-surface-300 dark:border-surface-600'
         ]
     },
-    footer: {
+    filtercontainer: {
+        class: 'relative'
+    },
+    filterinput: {
         class: [
-            // Spacing
-            'py-3 p-5',
+            // Font
+            'font-sans',
+            'leading-none',
 
-            // Shape
-            'border border-t-0 rounded-br-lg rounded-bl-lg',
+            // Sizing
+            'pr-7 py-3 px-3',
+            '-mr-7',
+            'w-full',
 
             //Color
-            'border-surface-200 dark:border-surface-700',
+            'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-surface-0/80'
+            'border-surface-200 dark:border-surface-700',
+
+            // Shape
+            'border',
+            'rounded-lg',
+            'appearance-none',
+
+            // Transitions
+            'transition',
+            'duration-200',
+
+            // States
+            'hover:border-primary-500 dark:hover:border-primary-300',
+            'focus:ring focus:outline-none focus:outline-offset-0',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
+            // Misc
+            'appearance-none'
         ]
     },
-    transition: {
-        enterFromClass: 'max-h-0',
-        enterActiveClass: 'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
-        enterToClass: 'max-h-[1000px]',
-        leaveFromClass: 'max-h-[1000px]',
-        leaveActiveClass: 'overflow-hidden transition-[max-height] duration-[450ms] ease-[cubic-bezier(0,1,0,1)]',
-        leaveToClass: 'max-h-0'
+    filtericon: {
+        class: ['absolute', 'top-1/2', '-mt-2']
+    },
+    emptymessage: {
+        class: [
+            // Font
+            'leading-none',
+
+            // Spacing
+            'py-3 px-5',
+
+            // Color
+            'text-surface-800 dark:text-white/80',
+            'bg-transparent'
+        ]
     }
 }
 `
