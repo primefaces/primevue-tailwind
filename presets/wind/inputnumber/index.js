@@ -21,6 +21,9 @@ export default {
     input: {
         root: ({ parent }) => ({
             class: [
+                 // Display
+                'flex flex-auto',
+
                 //Text
                 'sm:text-sm',
                 { 'text-center': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
