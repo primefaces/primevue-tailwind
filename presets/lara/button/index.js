@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, context }) => ({
+    root: ({ props, context, parent }) => ({
         class: [
             'relative',
 
@@ -19,6 +19,7 @@ export default {
             // Shapes
             { 'shadow-lg': props.raised },
             { 'rounded-md': !props.rounded, 'rounded-full': props.rounded },
+            { 'rounded-none first:rounded-l-md last:rounded-r-md': parent.instance.$name == 'InputGroup' },
 
             // Link Button
             { 'text-primary-600 bg-transparent border-transparent': props.link },

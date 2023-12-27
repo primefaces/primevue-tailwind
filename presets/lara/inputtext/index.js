@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, context }) => ({
+    root: ({ props, context, parent }) => ({
         class: [
             // Font
             'font-sans leading-none',
@@ -11,6 +11,12 @@ export default {
                 'px-2 py-2': props.size == 'small',
                 'p-3': props.size == null
             },
+
+            // Shape
+            { 'rounded-md': parent.instance.$name !== 'InputGroup' },
+            { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
+            { 'border-0 border-y border-l last:border-r': parent.instance.$name == 'InputGroup' },
+            { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             // Colors
             'text-surface-600 dark:text-surface-200',
@@ -26,7 +32,6 @@ export default {
             },
 
             // Misc
-            'rounded-md',
             'appearance-none',
             'transition-colors duration-200'
         ]
