@@ -34,11 +34,6 @@
                             "to": "/calendar"
                         },
                         {
-                            "name": "CascadeSelect",
-                            "to": "/cascadeselect",
-                            "badge": "NEW"
-                        },
-                        {
                             "name": "Checkbox",
                             "to": "/checkbox"
                         },
