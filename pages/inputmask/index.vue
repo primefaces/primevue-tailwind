@@ -18,7 +18,6 @@ import ImportDoc from '@/doc/inputmask/ImportDoc.vue';
 import MaskDoc from '@/doc/inputmask/MaskDoc.vue';
 import OptionalDoc from '@/doc/inputmask/OptionalDoc.vue';
 import SlotCharDoc from '@/doc/inputmask/SlotCharDoc.vue';
-import PresetDoc from '@/doc/inputmask/preset/index.vue';
 
 export default {
     data() {
@@ -70,7 +69,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'inputmask'
+            }
         };
     }
 };

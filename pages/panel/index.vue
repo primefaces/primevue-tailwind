@@ -8,7 +8,6 @@ import BasicDoc from '@/doc/panel/BasicDoc.vue';
 import ImportDoc from '@/doc/panel/ImportDoc.vue';
 import TemplateDoc from '@/doc/panel/TemplateDoc.vue';
 import ToggleableDoc from '@/doc/panel/ToggleableDoc.vue';
-import PresetDoc from '@/doc/panel/preset/index.vue';
 export default {
     data() {
         return {
@@ -39,7 +38,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'panel'
+            }
         };
     }
 };

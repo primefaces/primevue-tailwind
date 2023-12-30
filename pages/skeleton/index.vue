@@ -9,7 +9,6 @@ import DataTableDoc from '@/doc/skeleton/DataTableDoc.vue';
 import ImportDoc from '@/doc/skeleton/ImportDoc.vue';
 import ListDoc from '@/doc/skeleton/ListDoc.vue';
 import ShapesDoc from '@/doc/skeleton/ShapesDoc.vue';
-import PresetDoc from '@/doc/skeleton/preset/index.vue';
 
 export default {
     data() {
@@ -46,7 +45,9 @@ export default {
                     component: Accessibility
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'skeleton'
+            }
         };
     }
 };

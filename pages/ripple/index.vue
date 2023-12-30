@@ -8,7 +8,6 @@ import ConfigurationDoc from '@/doc/ripple/ConfigurationDoc.vue';
 import CustomDoc from '@/doc/ripple/CustomDoc.vue';
 import DefaultDoc from '@/doc/ripple/DefaultDoc.vue';
 import ImportDoc from '@/doc/ripple/ImportDoc.vue';
-import PresetDoc from '@/doc/ripple/preset/index.vue';
 
 export default {
     data() {
@@ -40,7 +39,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'ripple'
+            }
         };
     }
 };

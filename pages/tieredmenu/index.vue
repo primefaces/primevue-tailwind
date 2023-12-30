@@ -10,7 +10,6 @@ import ImportDoc from '@/doc/tieredmenu/ImportDoc.vue';
 import PopupDoc from '@/doc/tieredmenu/PopupDoc.vue';
 import RouterDoc from '@/doc/tieredmenu/RouterDoc.vue';
 import TemplateDoc from '@/doc/tieredmenu/TemplateDoc.vue';
-import PresetDoc from '@/doc/tieredmenu/preset/index.vue';
 
 export default {
     data() {
@@ -52,7 +51,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'tieredmenu'
+            }
         };
     }
 };

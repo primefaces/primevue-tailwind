@@ -11,7 +11,6 @@ import HelpTextDoc from '@/doc/inputtext/HelpTextDoc.vue';
 import IconsDoc from '@/doc/inputtext/IconsDoc.vue';
 import ImportDoc from '@/doc/inputtext/ImportDoc.vue';
 import SizesDoc from '@/doc/inputtext/SizesDoc.vue';
-import PresetDoc from '@/doc/inputtext/preset/index.vue';
 
 export default {
     data() {
@@ -63,7 +62,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'inputtext'
+            }
         };
     }
 };

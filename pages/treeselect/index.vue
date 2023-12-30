@@ -9,7 +9,6 @@ import CheckboxDoc from '@/doc/treeselect/CheckboxDoc.vue';
 import DisabledDoc from '@/doc/treeselect/DisabledDoc.vue';
 import ImportDoc from '@/doc/treeselect/ImportDoc.vue';
 import MultipleDoc from '@/doc/treeselect/MultipleDoc.vue';
-import PresetDoc from '@/doc/treeselect/preset/index.vue';
 export default {
     data() {
         return {
@@ -55,7 +54,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'treeselect'
+            }
         };
     }
 };

@@ -1,7 +1,7 @@
 <template>
     <div class="doc-main">
         <div class="doc-intro">
-            <h1>InputMask Presets</h1>
+            <h1>{{ introText }}</h1>
         </div>
         <DocSections :docs="docs" />
     </div>
@@ -9,22 +9,38 @@
 </template>
 
 <script>
-import LaraDoc from './LaraDoc.vue';
-import WindDoc from './WindDoc.vue';
+import DocPresetSection from './DocPresetSection.vue';
 
 export default {
+    props: {
+        presetKey: {
+            type: String,
+            default: undefined
+        },
+        introText: {
+            type: String,
+            default: undefined
+        }
+    },
     data() {
+        const common = {
+            component: DocPresetSection,
+            data: {
+                presetKey: this.presetKey
+            }
+        };
+
         return {
             docs: [
                 {
                     id: 'presets.lara',
                     label: 'Lara',
-                    component: LaraDoc
+                    ...common
                 },
                 {
                     id: 'presets.wind',
                     label: 'Wind',
-                    component: WindDoc
+                    ...common
                 }
             ]
         };

@@ -7,7 +7,6 @@ import AccessibilityDoc from '@/doc/card/AccessibilityDoc.vue';
 import AdvancedDoc from '@/doc/card/AdvancedDoc.vue';
 import BasicDoc from '@/doc/card/BasicDoc.vue';
 import ImportDoc from '@/doc/card/ImportDoc.vue';
-import PresetDoc from '@/doc/card/preset/index.vue';
 
 export default {
     data() {
@@ -34,7 +33,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'card'
+            }
         };
     }
 };

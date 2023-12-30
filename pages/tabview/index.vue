@@ -11,7 +11,6 @@ import DynamicDoc from '@/doc/tabview/DynamicDoc.vue';
 import ImportDoc from '@/doc/tabview/ImportDoc.vue';
 import ScrollableDoc from '@/doc/tabview/ScrollableDoc.vue';
 import TemplateDoc from '@/doc/tabview/TemplateDoc.vue';
-import PresetDoc from '@/doc/tabview/preset/index.vue';
 
 export default {
     data() {
@@ -58,7 +57,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'tabview'
+            }
         };
     }
 };

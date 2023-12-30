@@ -4,23 +4,22 @@
 </template>
 
 <script>
+import Lara from '@/presets/lara';
 import Wind from '@/presets/wind';
 import { ObjectUtils } from 'primevue/utils';
 
 export default {
     data() {
+        const key = this.$attrs?.data?.presetKey ?? '';
+        const preset = this.$attrs?.label === 'Wind' ? Wind : Lara;
+
         return {
             code: {
-                basic: null
+                basic: `
+${key}: ${ObjectUtils.stringify(preset[key], 4)}
+`
             }
         };
-    },
-    mounted() {
-        const presetKey = this.$attrs.options.presetKey;
-
-        this.code.basic = `
-${presetKey}: ${ObjectUtils.stringify(Wind[presetKey])}
-`;
     }
 };
 </script>

@@ -8,7 +8,6 @@ import BasicDoc from '@/doc/fieldset/BasicDoc.vue';
 import ImportDoc from '@/doc/fieldset/ImportDoc.vue';
 import TemplateDoc from '@/doc/fieldset/TemplateDoc.vue';
 import ToggleableDoc from '@/doc/fieldset/ToggleableDoc.vue';
-import PresetDoc from '@/doc/fieldset/preset/index.vue';
 
 export default {
     data() {
@@ -40,7 +39,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'fieldset'
+            }
         };
     }
 };

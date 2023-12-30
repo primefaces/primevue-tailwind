@@ -19,7 +19,6 @@ import ImportDoc from '@/doc/sidebar/ImportDoc.vue';
 import PositionDoc from '@/doc/sidebar/PositionDoc.vue';
 import SizeDoc from '@/doc/sidebar/SizeDoc.vue';
 import TemplateDoc from '@/doc/sidebar/TemplateDoc.vue';
-import PresetDoc from '@/doc/sidebar/preset/index.vue';
 export default {
     data() {
         return {
@@ -65,7 +64,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'sidebar'
+            }
         };
     }
 };

@@ -16,7 +16,6 @@ import AutoResizeDoc from '@/doc/textarea/AutoResizeDoc.vue';
 import BasicDoc from '@/doc/textarea/BasicDoc.vue';
 import DisabledDoc from '@/doc/textarea/DisabledDoc.vue';
 import ImportDoc from '@/doc/textarea/ImportDoc.vue';
-import PresetDoc from '@/doc/textarea/preset/index.vue';
 
 export default {
     data() {
@@ -58,7 +57,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'textarea'
+            }
         };
     }
 };

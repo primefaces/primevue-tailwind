@@ -28,7 +28,6 @@ import AdvancedFilterDoc from '@/doc/datatable/filter/AdvancedFilterDoc.vue';
 import BasicFilterDoc from '@/doc/datatable/filter/BasicFilterDoc.vue';
 import PaginatorBasicDoc from '@/doc/datatable/paginator/PaginatorBasicDoc.vue';
 import PaginatorTemplateDoc from '@/doc/datatable/paginator/PaginatorTemplateDoc.vue';
-import PresetDoc from '@/doc/datatable/preset/index.vue';
 import ExpandableRowGroupDoc from '@/doc/datatable/rowgroup/ExpandableRowGroupDoc.vue';
 import RowSpanRowGroupDoc from '@/doc/datatable/rowgroup/RowSpanRowGroupDoc.vue';
 import SubHeaderRowGroupDoc from '@/doc/datatable/rowgroup/SubHeaderRowGroupDoc.vue';
@@ -350,7 +349,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'datatable'
+            }
         };
     }
 };

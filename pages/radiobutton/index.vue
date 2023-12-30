@@ -16,7 +16,6 @@ import DisabledDoc from '@/doc/radiobutton/DisabledDoc.vue';
 import DynamicDoc from '@/doc/radiobutton/DynamicDoc.vue';
 import GroupDoc from '@/doc/radiobutton/GroupDoc.vue';
 import ImportDoc from '@/doc/radiobutton/ImportDoc.vue';
-import PresetDoc from '@/doc/radiobutton/preset/index.vue';
 
 export default {
     data() {
@@ -54,7 +53,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'radiobutton'
+            }
         };
     }
 };

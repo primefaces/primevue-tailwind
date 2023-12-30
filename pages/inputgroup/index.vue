@@ -17,7 +17,6 @@ import ButtonDoc from '@/doc/inputgroup/ButtonDoc.vue';
 import CheckboxDoc from '@/doc/inputgroup/CheckboxDoc.vue';
 import ImportDoc from '@/doc/inputgroup/ImportDoc.vue';
 import MultipleDoc from '@/doc/inputgroup/MultipleDoc.vue';
-import PresetDoc from '@/doc/inputgroup/preset/index.vue';
 
 export default {
     data() {
@@ -54,7 +53,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'inputgroup'
+            }
         };
     }
 };

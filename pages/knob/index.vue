@@ -15,7 +15,6 @@ import SizeDoc from '@/doc/knob/SizeDoc.vue';
 import StepDoc from '@/doc/knob/StepDoc.vue';
 import StrokeDoc from '@/doc/knob/StrokeDoc.vue';
 import TemplateDoc from '@/doc/knob/TemplateDoc.vue';
-import PresetDoc from '@/doc/knob/preset/index.vue';
 
 export default {
     data() {
@@ -82,7 +81,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'knob'
+            }
         };
     }
 };

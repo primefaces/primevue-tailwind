@@ -17,7 +17,6 @@ import DisabledDoc from '@/doc/selectbutton/DisabledDoc.vue';
 import ImportDoc from '@/doc/selectbutton/ImportDoc.vue';
 import MultipleDoc from '@/doc/selectbutton/MultipleDoc.vue';
 import TemplateDoc from '@/doc/selectbutton/TemplateDoc.vue';
-import PresetDoc from '@/doc/selectbutton/preset/index.vue';
 
 export default {
     data() {
@@ -60,7 +59,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'selectbutton'
+            }
         };
     }
 };

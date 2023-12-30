@@ -11,7 +11,6 @@ import DynamicDoc from '@/doc/message/DynamicDoc.vue';
 import ImportDoc from '@/doc/message/ImportDoc.vue';
 import SeverityDoc from '@/doc/message/SeverityDoc.vue';
 import StickyDoc from '@/doc/message/StickyDoc.vue';
-import PresetDoc from '@/doc/message/preset/index.vue';
 
 export default {
     data() {
@@ -58,7 +57,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'message'
+            }
         };
     }
 };

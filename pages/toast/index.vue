@@ -13,7 +13,6 @@ import SeverityDoc from '@/doc/toast/SeverityDoc.vue';
 import StickyDoc from '@/doc/toast/StickyDoc.vue';
 import TemplateDoc from '@/doc/toast/TemplateDoc.vue';
 import ToastServiceDoc from '@/doc/toast/ToastServiceDoc.vue';
-import PresetDoc from '@/doc/toast/preset/index.vue';
 export default {
     data() {
         return {
@@ -69,7 +68,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'toast'
+            }
         };
     }
 };

@@ -10,8 +10,6 @@ import FormatDoc from '@/doc/colorpicker/FormatDoc.vue';
 import ImportDoc from '@/doc/colorpicker/ImportDoc.vue';
 import InlineDoc from '@/doc/colorpicker/InlineDoc.vue';
 
-import PresetDoc from '@/doc/colorpicker/preset/index.vue';
-
 export default {
     data() {
         return {
@@ -47,7 +45,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'colorpicker'
+            }
         };
     }
 };

@@ -17,7 +17,6 @@ import CurrentPageReportDoc from '@/doc/paginator/CurrentPageReportDoc.vue';
 import CustomContentDoc from '@/doc/paginator/CustomContentDoc.vue';
 import ImportDoc from '@/doc/paginator/ImportDoc.vue';
 import TemplateDoc from '@/doc/paginator/TemplateDoc.vue';
-import PresetDoc from '@/doc/paginator/preset/index.vue';
 export default {
     data() {
         return {
@@ -58,7 +57,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'paginator'
+            }
         };
     }
 };

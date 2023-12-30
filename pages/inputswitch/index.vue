@@ -8,7 +8,6 @@ import BasicDoc from '@/doc/inputswitch/BasicDoc.vue';
 import DisabledDoc from '@/doc/inputswitch/DisabledDoc.vue';
 import ImportDoc from '@/doc/inputswitch/ImportDoc.vue';
 import PreselectionDoc from '@/doc/inputswitch/PreselectionDoc.vue';
-import PresetDoc from '@/doc/inputswitch/preset/index.vue';
 export default {
     data() {
         return {
@@ -44,7 +43,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'inputswitch'
+            }
         };
     }
 };

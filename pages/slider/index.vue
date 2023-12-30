@@ -10,7 +10,6 @@ import InputDoc from '@/doc/slider/InputDoc.vue';
 import RangeDoc from '@/doc/slider/RangeDoc.vue';
 import StepDoc from '@/doc/slider/StepDoc.vue';
 import VerticalDoc from '@/doc/slider/VerticalDoc.vue';
-import PresetDoc from '@/doc/slider/preset/index.vue';
 export default {
     data() {
         return {
@@ -51,7 +50,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'slider'
+            }
         };
     }
 };

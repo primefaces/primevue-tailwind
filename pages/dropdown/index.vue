@@ -24,7 +24,6 @@ import LazyVirtualScrollDoc from '@/doc/dropdown/LazyVirtualScrollDoc.vue';
 import LoadingStateDoc from '@/doc/dropdown/LoadingStateDoc.vue';
 import TemplateDoc from '@/doc/dropdown/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/dropdown/VirtualScrollDoc.vue';
-import PresetDoc from '@/doc/dropdown/preset/index.vue';
 
 export default {
     data() {
@@ -102,7 +101,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'dropdown'
+            }
         };
     }
 };

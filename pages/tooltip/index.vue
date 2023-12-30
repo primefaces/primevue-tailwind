@@ -10,7 +10,6 @@ import DelayDoc from '@/doc/tooltip/DelayDoc.vue';
 import EventDoc from '@/doc/tooltip/EventDoc.vue';
 import ImportDoc from '@/doc/tooltip/ImportDoc.vue';
 import PositionDoc from '@/doc/tooltip/PositionDoc.vue';
-import PresetDoc from '@/doc/tooltip/preset/index.vue';
 
 export default {
     data() {
@@ -52,7 +51,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'tooltip'
+            }
         };
     }
 };
