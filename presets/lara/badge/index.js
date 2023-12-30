@@ -3,6 +3,7 @@ export default {
         class: [
             // Font
             'font-bold',
+
             {
                 'text-xs leading-[1.5rem]': props.size == null,
                 'text-lg leading-[2.25rem]': props.size == 'large',
@@ -13,7 +14,7 @@ export default {
             'text-center inline-block',
 
             // Size
-            'p-0',
+            'p-0 px-1',
             {
                 'min-w-[1.5rem] h-[1.5rem]': props.size == null,
                 'min-w-[2.25rem] h-[2.25rem]': props.size == 'large',
@@ -21,7 +22,10 @@ export default {
             },
 
             // Shape
-            'rounded-full',
+            {
+                'rounded-full': props.value.length == 1,
+                'rounded-[0.71rem]': props.value.length !== 1
+            },
 
             // Color
             'text-white dark:text-surface-900',

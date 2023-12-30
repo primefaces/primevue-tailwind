@@ -11,7 +11,7 @@ export default {
             code: {
                 basic: `
 button: {
-    root: ({ props, context }) => ({
+    root: ({ props, context, parent }) => ({
         class: [
             'relative',
 
@@ -32,6 +32,7 @@ button: {
             // Shapes
             { 'shadow-sm': !props.raised && !props.link && !props.text, 'shadow-lg': props.raised },
             { 'rounded-md': !props.rounded, 'rounded-full': props.rounded },
+            { 'rounded-none first:rounded-l-md last:rounded-r-md self-center': parent.instance.$name == 'InputGroup' },
 
             // Link Button
             { 'text-primary-600 bg-transparent ring-transparent': props.link },
@@ -75,12 +76,12 @@ button: {
 
             // Success Button
             {
-                'text-white dark:text-surface-900': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
+                'text-white dark:text-green-900': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
                 'bg-green-500 dark:bg-green-400': props.severity === 'success' && !props.text && !props.outlined && !props.plain,
                 'ring-1 ring-green-500 dark:ring-green-400': props.severity === 'success' && !props.text && !props.outlined && !props.plain
             },
             // Success Text Button
-            { 'text-surface-500 dark:text-surface-400': props.text && props.severity === 'secondary' && !props.plain },
+            { 'text-green-500 dark:text-green-400': props.text && props.severity === 'success' && !props.plain },
             // Success Outlined Button
             { 'text-green-500 ring-1 ring-green-500 hover:bg-green-300/20': props.outlined && props.severity === 'success' && !props.plain },
 
@@ -176,7 +177,7 @@ button: {
             // Text & Outlined Button
             { 'hover:bg-purple-300/20': (props.text || props.outlined) && props.severity === 'help' && !props.plain },
 
-            // Warning
+            // Danger
             { 'hover:bg-red-600 dark:hover:bg-red-300 hover:ring-red-600 dark:hover:ring-red-300': props.severity === 'danger' && !props.text && !props.outlined && !props.plain },
             { 'focus:ring-red-500 dark:focus:ring-red-400': props.severity === 'danger' },
             // Text & Outlined Button
@@ -204,7 +205,6 @@ button: {
     }),
     icon: ({ props }) => ({
         class: [
-            'before:text-xs before:leading-none',
             'mx-0',
             {
                 'mr-2': props.iconPos == 'left' && props.label != null,

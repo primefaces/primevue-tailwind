@@ -1,12 +1,13 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             'inline-block relative',
             'w-12 h-7',
+            'rounded-2xl',
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled
             },
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50  dark:focus:ring-primary-300/50'
+            { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused }
         ]
     }),
     slider: ({ props }) => ({
@@ -23,7 +24,7 @@ export default {
             'before:-mt-2.5',
             'before:h-5 before:w-5',
             'before:rounded-full',
-            'before:transition-duration-200',
+            'before:duration-200',
             'before:bg-surface-0 before:dark:bg-surface-900',
 
             // Colors

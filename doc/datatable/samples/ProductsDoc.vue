@@ -30,9 +30,9 @@
             <template #header>
                 <div class="flex flex-wrap gap-2 items-center justify-between">
                     <h4 class="m-0">Manage Products</h4>
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Search..." />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Search..." class="pl-10 font-normal" />
                     </span>
                 </div>
             </template>
@@ -42,7 +42,7 @@
             <Column field="name" header="Name" sortable style="min-width: 16rem"></Column>
             <Column header="Image">
                 <template #body="slotProps">
-                    <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`" :alt="slotProps.data.image" class="shadow-2 border-round" style="width: 64px" />
+                    <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`" :alt="slotProps.data.image" class="shadow-md rounded" style="width: 64px" />
                 </template>
             </Column>
             <Column field="price" header="Price" sortable style="min-width: 8rem">
@@ -204,9 +204,9 @@ export default {
     <template #header>
         <div class="flex flex-wrap gap-2 items-center justify-between">
             <h4 class="m-0">Manage Products</h4>
-            <span class="p-input-icon-left">
-                <i class="pi pi-search" />
-                <InputText v-model="filters['global'].value" placeholder="Search..." />
+            <span class="relative">
+                <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                <InputText v-model="filters['global'].value" placeholder="Search..."  class="pl-10 font-normal"/>
             </span>
         </div>
     </template>
@@ -215,7 +215,7 @@ export default {
     <Column field="name" header="Name" sortable style="min-width:16rem"></Column>
     <Column header="Image">
         <template #body="slotProps">
-            <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="shadow-2 border-round" style="width: 64px" />
+            <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="shadow-md rounded" style="width: 64px" />
         </template>
     </Column>
     <Column field="price" header="Price" sortable style="min-width:8rem">
@@ -265,9 +265,9 @@ export default {
                 <template #header>
                     <div class="flex flex-wrap gap-2 items-center justify-between">
                         <h4 class="m-0">Manage Products</h4>
-						<span class="p-input-icon-left">
-                            <i class="pi pi-search" />
-                            <InputText v-model="filters['global'].value" placeholder="Search..." />
+						<span class="relative">
+                            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                            <InputText v-model="filters['global'].value" placeholder="Search..."  class="pl-10 font-normal"/>
                         </span>
 					</div>
                 </template>
@@ -277,7 +277,7 @@ export default {
                 <Column field="name" header="Name" sortable style="min-width:16rem"></Column>
                 <Column header="Image">
                     <template #body="slotProps">
-                        <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="shadow-2 border-round" style="width: 64px" />
+                        <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="shadow-md rounded" style="width: 64px" />
                     </template>
                 </Column>
                 <Column field="price" header="Price" sortable style="min-width:8rem">
@@ -554,9 +554,9 @@ export default {
                 <template #header>
                     <div class="flex flex-wrap gap-2 items-center justify-between">
                         <h4 class="m-0">Manage Products</h4>
-						<span class="p-input-icon-left">
-                            <i class="pi pi-search" />
-                            <InputText v-model="filters['global'].value" placeholder="Search..." />
+						<span class="relative">
+                            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                            <InputText v-model="filters['global'].value" placeholder="Search..."  class="pl-10 font-normal"/>
                         </span>
 					</div>
                 </template>
@@ -566,7 +566,7 @@ export default {
                 <Column field="name" header="Name" sortable style="min-width:16rem"></Column>
                 <Column header="Image">
                     <template #body="slotProps">
-                        <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="shadow-2 border-round" style="width: 64px" />
+                        <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="shadow-md rounded" style="width: 64px" />
                     </template>
                 </Column>
                 <Column field="price" header="Price" sortable style="min-width:8rem">

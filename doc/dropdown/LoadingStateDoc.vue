@@ -3,7 +3,7 @@
         <p>Loading state can be used <i>loading</i> property.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>
+        <Dropdown placeholder="Loading..." loading class="w-full md:w-[14rem]"></Dropdown>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -14,12 +14,12 @@ export default {
         return {
             code: {
                 basic: `
-<Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>
+<Dropdown placeholder="Loading..." loading class="w-full md:w-[14rem]"></Dropdown>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>
+        <Dropdown placeholder="Loading..." loading class="w-full md:w-[14rem]"></Dropdown>
     </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown placeholder="Loading..." loading class="w-full md:w-14rem"></Dropdown>
+        <Dropdown placeholder="Loading..." loading class="w-full md:w-[14rem]"></Dropdown>
     </div>
 </template>
 

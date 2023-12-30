@@ -1,10 +1,15 @@
 export default {
-    root: ({ props, context }) => ({
+    root: ({ props, parent }) => ({
         class: [
             // Display
             'inline-flex',
 
             { 'flex-col': props.showButtons && props.buttonLayout == 'vertical' },
+
+            // Shape
+            { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' && !props.showButtons },
+            { 'border-0 border-y border-l last:border-r border-surface-300 dark:border-surface-600': parent.instance.$name == 'InputGroup' && !props.showButtons },
+            { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             //Sizing
             { '!w-16': props.showButtons && props.buttonLayout == 'vertical' }
@@ -13,6 +18,9 @@ export default {
     input: {
         root: ({ parent, context }) => ({
             class: [
+                 // Display
+                'flex flex-auto',
+
                 // Font
                 'font-sans leading-none',
 
@@ -29,7 +37,10 @@ export default {
                 { 'rounded-tl-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
-                // Colors
+                { '!rounded-none': parent.instance.$parentInstance?.$name == 'InputGroup' && !parent.props.showButtons },
+                { 'border-0': parent.instance.$parentInstance?.$name == 'InputGroup' && !parent.props.showButtons },
+
+                // Colorsh
                 'text-surface-600 dark:text-surface-200',
                 'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                 'bg-surface-0 dark:bg-surface-900',

@@ -10,9 +10,9 @@
         <DataTable v-model:filters="filters" :value="customers" paginator :rows="10" dataKey="id" filterDisplay="row" :loading="loading" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
             <template #header>
                 <div class="flex justify-end">
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" class="pl-10 font-normal" />
                     </span>
                 </div>
             </template>
@@ -67,14 +67,14 @@
                     </Dropdown>
                 </template>
             </Column>
-            <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
+            <!-- <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
                 <template #body="{ data }">
                     <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
                 </template>
                 <template #filter="{ filterModel, filterCallback }">
                     <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
                 </template>
-            </Column>
+            </Column> -->
         </DataTable>
     </div>
     <DocSectionCode :code="code" :service="['CustomerService']" />
@@ -116,9 +116,9 @@ export default {
         :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
     <template #header>
         <div class="flex justify-end">
-            <span class="p-input-icon-left">
-                <i class="pi pi-search" />
-                <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+            <span class="relative">
+                <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
             </span>
         </div>
     </template>
@@ -173,14 +173,6 @@ export default {
             </Dropdown>
         </template>
     </Column>
-    <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
-        <template #body="{ data }">
-            <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
-        </template>
-        <template #filter="{ filterModel, filterCallback }">
-            <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
-        </template>
-    </Column>
 </DataTable>
 `,
                 options: `
@@ -190,9 +182,9 @@ export default {
                 :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
             <template #header>
                 <div class="flex justify-end">
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
                     </span>
                 </div>
             </template>
@@ -245,14 +237,6 @@ export default {
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
                     </Dropdown>
-                </template>
-            </Column>
-            <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
-                <template #body="{ data }">
-                    <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
-                </template>
-                <template #filter="{ filterModel, filterCallback }">
-                    <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
                 </template>
             </Column>
         </DataTable>
@@ -344,9 +328,9 @@ export default {
                 :globalFilterFields="['name', 'country.name', 'representative.name', 'status']">
             <template #header>
                 <div class="flex justify-end">
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    <span class="relative">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
                     </span>
                 </div>
             </template>
@@ -399,14 +383,6 @@ export default {
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
                     </Dropdown>
-                </template>
-            </Column>
-            <Column field="verified" header="Verified" dataType="boolean" style="min-width: 6rem">
-                <template #body="{ data }">
-                    <i class="pi" :class="{ 'pi-check-circle text-green-500': data.verified, 'pi-times-circle text-red-400': !data.verified }"></i>
-                </template>
-                <template #filter="{ filterModel, filterCallback }">
-                    <TriStateCheckbox v-model="filterModel.value" @change="filterCallback()" />
                 </template>
             </Column>
         </DataTable>

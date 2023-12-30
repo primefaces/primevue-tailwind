@@ -33,7 +33,6 @@ export default {
                     label: 'Linear',
                     component: LinearDoc
                 },
-                //TODO: Fix template for both presets
                 // {
                 //     id: 'template',
                 //     label: 'Template',

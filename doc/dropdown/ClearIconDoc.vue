@@ -3,7 +3,7 @@
         <p>When <i>showClear</i> is enabled, a clear icon is added to reset the Dropdown.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-14rem" />
+        <Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -22,12 +22,12 @@ export default {
             ],
             code: {
                 basic: `
-<Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-14rem" />
+<Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-14rem" />
+        <Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" />
     </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-14rem" />
+        <Dropdown v-model="selectedCity" :options="cities" showClear optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" />
     </div>
 </template>
 

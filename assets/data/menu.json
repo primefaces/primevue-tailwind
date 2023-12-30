@@ -2,8 +2,21 @@
     "data": [
         {
             "name": "Getting Started",
-            "to": "/installation",
-            "icon": "pi pi-home"
+            "icon": "pi pi-home",
+            "children": [
+                {
+                    "name": "Overview",
+                    "to": "/overview"
+                },
+                {
+                    "name": "Vite",
+                    "to": "/vite"
+                },
+                {
+                    "name": "Nuxt",
+                    "to": "/nuxt"
+                }
+            ]
         },
         {
             "name": "Components",
@@ -29,12 +42,27 @@
                             "to": "/chips"
                         },
                         {
+                            "name": "ColorPicker",
+                            "to": "/colorpicker",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Dropdown",
                             "to": "/dropdown"
                         },
                         {
+                            "name": "InputGroup",
+                            "to": "/inputgroup",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "InputNumber",
                             "to": "/inputnumber"
+                        },
+                        {
+                            "name": "InputMask",
+                            "to": "/inputmask",
+                            "badge": "NEW"
                         },
                         {
                             "name": "InputSwitch",
@@ -45,8 +73,31 @@
                             "to": "/inputtext"
                         },
                         {
+                            "name": "Knob",
+                            "to": "/knob",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "Listbox",
+                            "to": "/listbox",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "MultiSelect",
+                            "to": "/multiselect"
+                        },
+                        {
+                            "name": "Password",
+                            "to": "/password",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "RadioButton",
                             "to": "/radiobutton"
+                        },
+                        {
+                            "name": "Rating",
+                            "to": "/rating"
                         },
                         {
                             "name": "SelectButton",
@@ -55,6 +106,25 @@
                         {
                             "name": "Slider",
                             "to": "/slider"
+                        },
+                        {
+                            "name": "Textarea",
+                            "to": "/textarea",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "ToggleButton",
+                            "to": "/togglebutton"
+                        },
+                        {
+                            "name": "TreeSelect",
+                            "to": "/treeselect",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "TriStateCheckbox",
+                            "to": "/tristatecheckbox",
+                            "badge": "NEW"
                         }
                     ]
                 },
@@ -79,6 +149,11 @@
                             "to": "/datatable"
                         },
                         {
+                            "name": "Tree",
+                            "to": "/tree",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Paginator",
                             "to": "/paginator"
                         }
@@ -94,6 +169,11 @@
                         {
                             "name": "Card",
                             "to": "/card"
+                        },
+                        {
+                            "name": "Divider",
+                            "to": "/divider",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Fieldset",
@@ -112,6 +192,10 @@
                 {
                     "name": "Menu",
                     "children": [
+                        {
+                            "name": "ContextMenu",
+                            "to": "/contextmenu"
+                        },
                         {
                             "name": "Menu",
                             "to": "/menu"
@@ -192,6 +276,10 @@
                             "to": "/ripple"
                         },
                         {
+                            "name": "Skeleton",
+                            "to": "/skeleton"
+                        },
+                        {
                             "name": "Tag",
                             "to": "/tag"
                         }
@@ -208,6 +296,20 @@
             "name": "Gallery",
             "to": "/gallery",
             "icon": "pi pi-images"
+        },
+        {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "Overriding Presets",
+                    "to": "/guides/overriding-presets"
+                },
+                {
+                    "name": "Building a UI Library",
+                    "to": "/guides/building-ui-library"
+                }
+            ]
         },
         {
             "name": "Icons",

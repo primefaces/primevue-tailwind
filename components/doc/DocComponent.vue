@@ -1,8 +1,8 @@
 <template>
     <div :class="['doc-component', className]">
         <Head>
-            <Title>{{ title }}</Title>
-            <Meta name="description" :content="description" />
+            <Title>Tailwind CSS | {{ title }}</Title>
+            <Meta name="description" :content="'Tailwind CSS | ' + description" />
         </Head>
 
         <ul class="doc-tabmenu">

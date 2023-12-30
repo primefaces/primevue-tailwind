@@ -3,7 +3,7 @@
         <p>Dropdown provides built-in filtering that is enabled by adding the <i>filter</i> property.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-14rem">
+        <Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-[14rem]">
             <template #value="slotProps">
                 <div v-if="slotProps.value" class="flex items-center">
                     <img :alt="slotProps.value.label" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="`mr-2 flag flag-${slotProps.value.code.toLowerCase()}`" style="width: 20px; height: 13.4px" />
@@ -43,7 +43,7 @@ export default {
             ],
             code: {
                 basic: `
-<Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-14rem">
+<Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-[14rem]">
     <template #value="slotProps">
         <div v-if="slotProps.value" class="flex items-center">
             <img :alt="slotProps.value.label" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="\`mr-2 flag flag-\${slotProps.value.code.toLowerCase()}\`" style="width: 20px; height: 13.4px" />
@@ -64,7 +64,7 @@ export default {
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-14rem">
+        <Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-[14rem]">
             <template #value="slotProps">
                 <div v-if="slotProps.value" class="flex items-center">
                     <img :alt="slotProps.value.label" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="\`mr-2 flag flag-\${slotProps.value.code.toLowerCase()}\`" style="width: 20px; height: 13.4px" />
@@ -109,7 +109,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-14rem">
+        <Dropdown v-model="selectedCountry" :options="countries" filter optionLabel="name" placeholder="Select a Country" class="w-full md:w-[14rem]">
             <template #value="slotProps">
                 <div v-if="slotProps.value" class="flex items-center">
                     <img :alt="slotProps.value.label" src="https://primefaces.org/cdn/primevue/images/flag/flag_placeholder.png" :class="\`mr-2 flag flag-\${slotProps.value.code.toLowerCase()}\`" style="width: 20px; height: 13.4px" />

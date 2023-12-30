@@ -1,0 +1,62 @@
+<template>
+    <DocSectionText v-bind="$attrs"></DocSectionText>
+    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            value: null,
+            code: {
+                basic: `
+knob: {
+    root: ({ props }) => ({
+        class: [
+            // Misc
+            { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
+        ]
+    }),
+    range: {
+        class: [
+            // Stroke
+            'stroke-current',
+
+            // Color
+            'stroke-surface-200 dark:stroke-surface-700',
+
+            // Fill
+            'fill-none',
+
+            // Transition
+            'transition duration-100 ease-in'
+        ]
+    },
+    value: {
+        class: [
+            // Animation
+            'animate-dash-frame',
+
+            // Color
+            'stroke-primary-500 dark:stroke-primary-400',
+
+            // Fill
+            'fill-none'
+        ]
+    },
+    label: {
+        class: [
+            // Text Style
+            'text-center text-xl',
+
+            // Color
+            'fill-surface-600 dark:fill-surface-200'
+        ]
+    }
+}
+`
+            }
+        };
+    }
+};
+</script>

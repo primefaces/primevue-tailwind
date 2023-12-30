@@ -18,7 +18,6 @@ import ReorderDoc from '@/doc/datatable/ReorderDoc.vue';
 import RowExpansionDoc from '@/doc/datatable/RowExpansionDoc.vue';
 import SizeDoc from '@/doc/datatable/SizeDoc.vue';
 import StatefulDoc from '@/doc/datatable/StatefulDoc.vue';
-import StripedRowsDoc from '@/doc/datatable/StripedRowsDoc.vue';
 import TemplateDoc from '@/doc/datatable/TemplateDoc.vue';
 import ExpandModeDoc from '@/doc/datatable/colresize/ExpandModeDoc.vue';
 import FitModeDoc from '@/doc/datatable/colresize/FitModeDoc.vue';
@@ -39,7 +38,6 @@ import RadioButtonRowSelectionDoc from '@/doc/datatable/rowselection/RadioButton
 import RowSelectEventsDoc from '@/doc/datatable/rowselection/RowSelectEventsDoc.vue';
 import SingleRowSelectionDoc from '@/doc/datatable/rowselection/SingleRowSelectionDoc.vue';
 import CustomersDoc from '@/doc/datatable/samples/CustomersDoc.vue';
-import ProductsDoc from '@/doc/datatable/samples/ProductsDoc.vue';
 import FlexibleScrollDoc from '@/doc/datatable/scroll/FlexibleScrollDoc.vue';
 import FrozenColumnsDoc from '@/doc/datatable/scroll/FrozenColumnsDoc.vue';
 import FrozenRowsDoc from '@/doc/datatable/scroll/FrozenRowsDoc.vue';
@@ -86,11 +84,11 @@ export default {
                     label: 'Grid Lines',
                     component: GridLinesDoc
                 },
-                {
-                    id: 'striped',
-                    label: 'Striped Rows',
-                    component: StripedRowsDoc
-                },
+                // {
+                //     id: 'striped',
+                //     label: 'Striped Rows',
+                //     component: StripedRowsDoc
+                // },
                 {
                     id: 'paginator',
                     label: 'Paginator',
@@ -338,12 +336,12 @@ export default {
                             id: 'customers',
                             label: 'Customers',
                             component: CustomersDoc
-                        },
-                        {
-                            id: 'dtproducts',
-                            label: 'Products',
-                            component: ProductsDoc
                         }
+                        // {
+                        //     id: 'dtproducts',
+                        //     label: 'Products',
+                        //     component: ProductsDoc
+                        // }
                     ]
                 },
                 {

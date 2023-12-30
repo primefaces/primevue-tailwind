@@ -26,8 +26,7 @@
                 },
                 {
                     "name": "ColorPicker",
-                    "path": "colorpicker",
-                    "disabled": true
+                    "path": "colorpicker"
                 },
                 {
                     "name": "Dropdown",
@@ -40,13 +39,15 @@
                 },
                 {
                     "name": "InputGroup",
-                    "path": "inputgroup",
-                    "disabled": true
+                    "path": "inputgroup"
+                },
+                {
+                    "name": "InputGroupAddon",
+                    "path": "inputgroupaddon"
                 },
                 {
                     "name": "InputMask",
-                    "path": "inputmask",
-                    "disabled": true
+                    "path": "inputmask"
                 },
                 {
                     "name": "InputNumber",
@@ -62,23 +63,19 @@
                 },
                 {
                     "name": "Knob",
-                    "path": "knob",
-                    "disabled": true
+                    "path": "knob"
                 },
                 {
                     "name": "Listbox",
-                    "path": "listbox",
-                    "disabled": true
+                    "path": "listbox"
                 },
                 {
                     "name": "MultiSelect",
-                    "path": "multiselect",
-                    "disabled": true
+                    "path": "multiselect"
                 },
                 {
                     "name": "Password",
-                    "path": "password",
-                    "disabled": true
+                    "path": "password"
                 },
                 {
                     "name": "RadioButton",
@@ -86,8 +83,7 @@
                 },
                 {
                     "name": "Rating",
-                    "path": "rating",
-                    "disabled": true
+                    "path": "rating"
                 },
                 {
                     "name": "SelectButton",
@@ -99,23 +95,19 @@
                 },
                 {
                     "name": "Textarea",
-                    "path": "textarea",
-                    "disabled": true
+                    "path": "textarea"
                 },
                 {
                     "name": "ToggleButton",
-                    "path": "togglebutton",
-                    "disabled": true
+                    "path": "togglebutton"
                 },
                 {
                     "name": "TreeSelect",
-                    "path": "treeselect",
-                    "disabled": true
+                    "path": "treeselect"
                 },
                 {
                     "name": "TriStateCheckbox",
-                    "path": "tristatecheckbox",
-                    "disabled": true
+                    "path": "tristatecheckbox"
                 }
             ]
         },
@@ -142,8 +134,7 @@
             "components": [
                 {
                     "name": "DataTable",
-                    "path": "datatable",
-                    "disabled": true
+                    "path": "datatable"
                 },
                 {
                     "name": "DataView",
@@ -162,8 +153,7 @@
                 },
                 {
                     "name": "Paginator",
-                    "path": "paginator",
-                    "disabled": true
+                    "path": "paginator"
                 },
                 {
                     "name": "PickList",
@@ -172,8 +162,7 @@
                 },
                 {
                     "name": "Tree",
-                    "path": "tree",
-                    "disabled": true
+                    "path": "tree"
                 },
                 {
                     "name": "TreeTable",
@@ -210,8 +199,7 @@
                 },
                 {
                     "name": "Divider",
-                    "path": "divider",
-                    "disabled": true
+                    "path": "divider"
                 },
                 {
                     "name": "Fieldset",
@@ -299,8 +287,7 @@
                 },
                 {
                     "name": "ContextMenu",
-                    "path": "contextmenu",
-                    "disabled": true
+                    "path": "contextmenu"
                 },
                 {
                     "name": "Dock",
@@ -414,8 +401,7 @@
                 },
                 {
                     "name": "Skeleton",
-                    "path": "skeleton",
-                    "disabled": true
+                    "path": "skeleton"
                 },
                 {
                     "name": "ProgressBar",

@@ -178,7 +178,7 @@
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <hr class="mb-3 mx-3 border-top-1 border-none surface-border" />
+                        <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
                         <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>
@@ -368,7 +368,7 @@ export default {
                 </ul>
             </div>
             <div class="mt-auto">
-                <hr class="mb-3 mx-3 border-top-1 border-none surface-border" />
+                <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
                 <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                     <Avatar image="/images/avatar/amyelsner.png" shape="circle" />
                     <span class="font-bold">Amy Elsner</span>
@@ -557,7 +557,7 @@ export default {
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <hr class="mb-3 mx-3 border-top-1 border-none surface-border" />
+                        <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
                         <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>
@@ -758,7 +758,7 @@ export default {
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <hr class="mb-3 mx-3 border-top-1 border-none surface-border" />
+                        <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
                         <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>

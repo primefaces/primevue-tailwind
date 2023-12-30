@@ -52,6 +52,7 @@ autocomplete: {
 
             // Color
             'text-surface-700 dark:text-white/80',
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
             'border border-surface-300 dark:border-surface-700',
 
@@ -88,11 +89,10 @@ autocomplete: {
             { 'p-3': !props.multiple, 'p-0': props.multiple },
 
             // Colors
+            'text-surface-700 dark:text-white/80',
             {
-                'text-surface-700 dark:text-white/80': !props.multiple,
                 'bg-surface-0 dark:bg-surface-900': !props.multiple,
                 'border border-surface-300 dark:border-surface-700': !props.multiple,
-                'text-surface-700 dark:text-white/80': props.multiple,
                 'border-0 bg-transparent': props.multiple
             },
 
@@ -206,7 +206,7 @@ autocomplete: {
             // Colors
             {
                 'text-surface-700 dark:text-white/80': !context.focused && !context.selected,
-                'bg-surface-50 dark:bg-surface-600/60': context.focused && !context.selected,
+                'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
 
                 'text-primary-700 dark:text-white/80': context.focused && context.selected,

@@ -184,6 +184,8 @@ import Galleria from 'primevue/galleria';
 import Image from 'primevue/image';
 import InlineMessage from 'primevue/inlinemessage';
 import Inplace from 'primevue/inplace';
+import InputGroup from 'primevue/inputgroup';
+import InputGroupAddon from 'primevue/inputgroupaddon';
 import InputSwitch from 'primevue/inputswitch';
 import InputText from 'primevue/inputtext';
 import InputMask from 'primevue/inputmask';
@@ -293,6 +295,8 @@ app.component('Galleria', Galleria);
 app.component('Image', Image);
 app.component('InlineMessage', InlineMessage);
 app.component('Inplace', Inplace);
+app.component('InputGroup', InputGroup);
+app.component('InputGroupAddon', InputGroupAddon);
 app.component('InputMask', InputMask);
 app.component('InputNumber', InputNumber);
 app.component('InputSwitch', InputSwitch);
@@ -490,7 +494,7 @@ plugins: {
             <li>
                 <button
                     type="button"
-                    class="inline-flex border-1 w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
+                    class="inline-flex border w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
                     @click="onThemeToggler"
                 >
                     <i :class="\`dark:text-white pi \${iconClass}\`" />
@@ -500,7 +504,7 @@ plugins: {
             <button
                 v-styleclass="{selector: '@next', enterClass: 'hidden', enterActiveClass: 'scalein', leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true}"
                 type="button"
-                class="inline-flex border-1 w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
+                class="inline-flex border w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
             >
                 <i class="pi pi-palette dark:text-white"></i>
             </button>

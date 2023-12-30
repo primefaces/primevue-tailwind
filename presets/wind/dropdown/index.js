@@ -1,5 +1,5 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -12,11 +12,9 @@ export default {
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700',
 
-            //TODO: Focus needs context/props. normally gets p-focus
             // States
-            'focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-primary-500',
+            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
 
             // Misc
             'cursor-default',
@@ -38,7 +36,8 @@ export default {
             // Color and Background
             'bg-transparent',
             'border-0',
-            'text-surface-800 dark:text-white/80',
+            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Sizing and Spacing
             'w-[1%]',
@@ -133,11 +132,13 @@ export default {
 
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
+            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
             { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
             { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
 
             //States
             'hover:bg-primary-500 dark:hover:bg-primary-400 hover:text-white dark:hover:text-surface-700',
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
             // Misc
             'cursor-pointer',
@@ -229,7 +230,7 @@ export default {
         ]
     },
     filtericon: {
-        class: ['absolute', 'top-1/2', '-mt-2']
+        class: ['absolute', 'top-1/2 right-3', '-mt-2']
     },
     clearicon: {
         class: [

@@ -22,9 +22,9 @@
             tableStyle="min-width: 50rem"
         >
             <template #header>
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" />
+                <span class="relative">
+                    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal" />
                 </span>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">
@@ -108,9 +108,9 @@ export default {
     stateStorage="session" stateKey="dt-state-demo-session" paginator :rows="5" filterDisplay="menu"
     selectionMode="single" dataKey="id" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']" tableStyle="min-width: 50rem">
     <template #header>
-        <span class="p-input-icon-left">
-            <i class="pi pi-search" />
-            <InputText v-model="filters['global'].value" placeholder="Global Search" />
+        <span class="relative">
+            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+            <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
         </span>
     </template>
     <Column field="name" header="Name" sortable style="width: 25%">
@@ -169,9 +169,9 @@ export default {
                 stateStorage="session" stateKey="dt-state-demo-session" paginator :rows="5" filterDisplay="menu"
                 selectionMode="single" dataKey="id" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']" tableStyle="min-width: 50rem">
             <template #header>
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" />
+                <span class="relative">
+                    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
                 </span>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">
@@ -295,9 +295,9 @@ export default {
                 stateStorage="session" stateKey="dt-state-demo-session" paginator :rows="5" filterDisplay="menu"
                 selectionMode="single" dataKey="id" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']" tableStyle="min-width: 50rem">
             <template #header>
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" />
+                <span class="relative">
+                    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
                 </span>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">

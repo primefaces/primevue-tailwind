@@ -11,17 +11,20 @@ export default {
             code: {
                 basic: `
 inputswitch: {
-    root: ({ props }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Alignments
             'inline-flex relative',
             'flex-shrink-0',
 
+            // Shape
+            'rounded-2xl',
+
             // Size
             'h-5 w-9',
 
             // States
-            'focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900',
+            { 'outline-none outline-offset-0 ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 dark:ring-primary-400': state.focused },
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled
             }
@@ -40,7 +43,7 @@ inputswitch: {
             'before:-mt-2',
             'before:h-4 before:w-4',
             'before:rounded-full',
-            'before:transition-duration-200 before:transition before:ease-in-out',
+            'before:duration-200 before:transition before:ease-in-out',
             'before:bg-surface-0 before:dark:bg-surface-900',
             'before:shadow',
             { 'before:transform before:translate-x-4': props.modelValue },

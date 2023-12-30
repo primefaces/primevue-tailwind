@@ -15,9 +15,9 @@
                             <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</div>
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
-                            <router-link to="/installation">
+                            <NuxtLink to="/overview">
                                 <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" />
-                            </router-link>
+                            </NuxtLink>
                             <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
                                 <Button label="Give a Star" icon="pi pi-star-fill text-yellow-400" iconPos="right" text severity="secondary" />
                             </a>
@@ -73,7 +73,6 @@
                             </div>
                             <div class="w-[20.5rem] palette-card flex p-[0.571rem] flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch">
                                 <div class="palette rounded-[0.571rem] bg-surface-50 dark:bg-surface-800 h-[9rem] w-full overflow-hidden">
-                                    <!-- TODO : Update palette assets on CDN and remove from assets/ -->
                                     <img src="assets/palette.png" alt="PrimeVue Logo" class="block dark:hidden w-full h-full" />
                                     <img src="assets/palette-dark.png" alt="PrimeVue Logo" class="hidden dark:block w-full h-full" />
                                 </div>
@@ -267,9 +266,7 @@
                             </div>
                             <div class="w-[20.5rem] flex p-[0.571rem] flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch prime-card">
                                 <div class="rounded-[0.571rem] bg-surface-50 dark:bg-surface-800 h-[9rem] w-full flex items-center justify-center overflow-hidden">
-                                    <!-- TODO : Update emeraldlogo on CDN and remove from assets -->
                                     <img src="assets/emeraldlogo.png" alt="PrimeVue Logo" class="emerald-logo" />
-                                    <!-- <img src="https://primefaces.org/cdn/primevue/images/tailwind/landing/emeraldlogo.png" alt="PrimeVue Logo" class="emerald-logo" /> -->
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">
                                     <span class="text-surface-900 dark:text-white text-lg font-medium">Built-on PrimeVue</span>

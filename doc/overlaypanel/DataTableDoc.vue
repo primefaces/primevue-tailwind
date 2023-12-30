@@ -6,9 +6,9 @@
     <div class="card flex flex-col items-center gap-3">
         <Button type="button" icon="pi pi-search" :label="selectedProduct ? selectedProduct.name : 'Select a Product'" @click="toggle" aria-haspopup="true" aria-controls="overlay_panel" />
 
-        <div v-if="selectedProduct" class="p-5 surface-card shadow-2 border-round">
+        <div v-if="selectedProduct" class="p-5 surface-card shadow-md rounded">
             <div class="relative">
-                <img :src="`https://primefaces.org/cdn/primevue/images/product/${selectedProduct.image}`" :alt="selectedProduct.name" class="w-full sm:w-20rem" />
+                <img :src="`https://primefaces.org/cdn/primevue/images/product/${selectedProduct.image}`" :alt="selectedProduct.name" class="w-full sm:w-[20rem]" />
             </div>
             <div class="flex items-center justify-between mt-3 mb-2">
                 <span class="text-900 font-semibold text-xl">{{ selectedProduct.name }}</span>
@@ -46,9 +46,9 @@ export default {
 <Toast />
 <Button type="button" icon="pi pi-search" :label="selectedProduct ? selectedProduct.name : 'Select a Product'" @click="toggle" aria-haspopup="true" aria-controls="overlay_panel" />
 
-<div v-if="selectedProduct" class="p-5 surface-card shadow-2 border-round">
+<div v-if="selectedProduct" class="p-5 surface-card shadow-md rounded">
     <div class="relative">
-        <img :src="\`/images/product/\${selectedProduct.image}\`" :alt="selectedProduct.name" class="w-4rem shadow-1" class="w-full sm:w-20rem" />
+        <img :src="\`/images/product/\${selectedProduct.image}\`" :alt="selectedProduct.name" class="w-4rem shadow-1" class="w-full sm:w-[20rem]" />
     </div>
     <div class="flex items-center justify-between mt-3 mb-2">
         <span class="text-900 font-semibold text-xl">{{ selectedProduct.name }}</span>
@@ -79,9 +79,9 @@ export default {
         <Toast />
         <Button type="button" icon="pi pi-search" :label="selectedProduct ? selectedProduct.name : 'Select a Product'" @click="toggle" aria-haspopup="true" aria-controls="overlay_panel" />
 
-        <div v-if="selectedProduct" class="p-5 surface-card shadow-2 border-round">
+        <div v-if="selectedProduct" class="p-5 surface-card shadow-md rounded">
             <div class="relative">
-                <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${selectedProduct.image}\`" :alt="selectedProduct.name" class="w-full sm:w-20rem" />
+                <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${selectedProduct.image}\`" :alt="selectedProduct.name" class="w-full sm:w-[20rem]" />
             </div>
             <div class="flex items-center justify-between mt-3 mb-2">
                 <span class="text-900 font-semibold text-xl">{{ selectedProduct.name }}</span>
@@ -141,9 +141,9 @@ export default {
         <Toast />
         <Button type="button" icon="pi pi-search" :label="selectedProduct ? selectedProduct.name : 'Select a Product'" @click="toggle" aria-haspopup="true" aria-controls="overlay_panel" />
 
-        <div v-if="selectedProduct" class="p-5 surface-card shadow-2 border-round">
+        <div v-if="selectedProduct" class="p-5 surface-card shadow-md rounded">
             <div class="relative">
-                <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${selectedProduct.image}\`" :alt="selectedProduct.name" class="w-full sm:w-20rem" />
+                <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${selectedProduct.image}\`" :alt="selectedProduct.name" class="w-full sm:w-[20rem]" />
             </div>
             <div class="flex items-center justify-between mt-3 mb-2">
                 <span class="text-900 font-semibold text-xl">{{ selectedProduct.name }}</span>
