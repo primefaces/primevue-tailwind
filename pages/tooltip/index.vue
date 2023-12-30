@@ -52,7 +52,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: 'tooltip'
+                key: 'directives.tooltip'
             }
         };
     }

@@ -10,14 +10,14 @@ import { ObjectUtils } from 'primevue/utils';
 
 export default {
     data() {
-        const key = this.$attrs?.data?.presetKey ?? '';
         const preset = this.$attrs?.label === 'Wind' ? Wind : Lara;
+        const presetKey = this.$attrs?.data?.presetKey ?? '';
+        const keys = ObjectUtils.isArray(presetKey) ? presetKey : [presetKey];
+        const basicCode = keys.map((key) => `\n${key.indexOf('.') > -1 ? `'${key}'` : key}: ${ObjectUtils.stringify(ObjectUtils.resolveFieldData(preset, key), 4)}`).join(',');
 
         return {
             code: {
-                basic: `
-${key}: ${ObjectUtils.stringify(preset[key], 4)}
-`
+                basic: `${basicCode}\n`
             }
         };
     }

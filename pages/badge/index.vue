@@ -51,7 +51,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: 'badge'
+                key: ['badge', 'directives.badge']
             }
         };
     }

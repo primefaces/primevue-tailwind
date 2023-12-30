@@ -14,7 +14,7 @@ import DocPresetSection from './DocPresetSection.vue';
 export default {
     props: {
         presetKey: {
-            type: String,
+            type: [String, Array],
             default: undefined
         },
         introText: {
