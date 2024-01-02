@@ -43,8 +43,7 @@
                         },
                         {
                             "name": "ColorPicker",
-                            "to": "/colorpicker",
-                            "badge": "NEW"
+                            "to": "/colorpicker"
                         },
                         {
                             "name": "Dropdown",
@@ -52,8 +51,7 @@
                         },
                         {
                             "name": "InputGroup",
-                            "to": "/inputgroup",
-                            "badge": "NEW"
+                            "to": "/inputgroup"
                         },
                         {
                             "name": "InputNumber",
@@ -61,8 +59,7 @@
                         },
                         {
                             "name": "InputMask",
-                            "to": "/inputmask",
-                            "badge": "NEW"
+                            "to": "/inputmask"
                         },
                         {
                             "name": "InputSwitch",
@@ -74,13 +71,11 @@
                         },
                         {
                             "name": "Knob",
-                            "to": "/knob",
-                            "badge": "NEW"
+                            "to": "/knob"
                         },
                         {
                             "name": "Listbox",
-                            "to": "/listbox",
-                            "badge": "NEW"
+                            "to": "/listbox"
                         },
                         {
                             "name": "MultiSelect",
@@ -88,8 +83,7 @@
                         },
                         {
                             "name": "Password",
-                            "to": "/password",
-                            "badge": "NEW"
+                            "to": "/password"
                         },
                         {
                             "name": "RadioButton",
@@ -109,8 +103,7 @@
                         },
                         {
                             "name": "Textarea",
-                            "to": "/textarea",
-                            "badge": "NEW"
+                            "to": "/textarea"
                         },
                         {
                             "name": "ToggleButton",
@@ -118,13 +111,11 @@
                         },
                         {
                             "name": "TreeSelect",
-                            "to": "/treeselect",
-                            "badge": "NEW"
+                            "to": "/treeselect"
                         },
                         {
                             "name": "TriStateCheckbox",
-                            "to": "/tristatecheckbox",
-                            "badge": "NEW"
+                            "to": "/tristatecheckbox"
                         }
                     ]
                 },
@@ -150,8 +141,7 @@
                         },
                         {
                             "name": "Tree",
-                            "to": "/tree",
-                            "badge": "NEW"
+                            "to": "/tree"
                         },
                         {
                             "name": "Paginator",
@@ -172,8 +162,7 @@
                         },
                         {
                             "name": "Divider",
-                            "to": "/divider",
-                            "badge": "NEW"
+                            "to": "/divider"
                         },
                         {
                             "name": "Fieldset",
@@ -192,6 +181,11 @@
                 {
                     "name": "Menu",
                     "children": [
+                        {
+                            "name": "Breacrumb",
+                            "to": "/breadcrumb",
+                            "badge": "NEW"
+                        },
                         {
                             "name": "ContextMenu",
                             "to": "/contextmenu"
