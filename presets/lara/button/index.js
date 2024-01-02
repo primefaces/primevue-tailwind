@@ -13,7 +13,7 @@ export default {
                 'text-xl py-3 px-4': props.size === 'large'
             },
             {
-                'h-12 w-12 p-0': props.label == null
+                'h-10 w-10 p-0': props.label == null
             },
 
             // Shapes
