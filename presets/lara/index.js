@@ -36,6 +36,7 @@ import multiselect from './multiselect';
 import overlaypanel from './overlaypanel';
 import paginator from './paginator';
 import panel from './panel';
+import panelmenu from './panelmenu';
 import password from './password';
 import progressbar from './progressbar';
 import radiobutton from './radiobutton';
@@ -117,6 +118,7 @@ export default {
     steps,
     tieredmenu,
     breadcrumb,
+    panelmenu,
 
     //overlays
     dialog,

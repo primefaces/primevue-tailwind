@@ -199,6 +199,11 @@
                             "to": "/menubar"
                         },
                         {
+                            "name": "PanelMenu",
+                            "to": "/panelmenu",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Steps",
                             "to": "/steps"
                         },
