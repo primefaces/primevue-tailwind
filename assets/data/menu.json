@@ -300,6 +300,11 @@
                             "to": "/ripple"
                         },
                         {
+                            "name": "ScrollTop",
+                            "to": "/scrolltop",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Skeleton",
                             "to": "/skeleton"
                         },
