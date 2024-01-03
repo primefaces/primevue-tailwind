@@ -145,6 +145,11 @@
                             "badge": "NEW"
                         },
                         {
+                            "name": "Org Chart",
+                            "to": "/organizationchart",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Tree",
                             "to": "/tree"
                         },

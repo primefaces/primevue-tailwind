@@ -36,6 +36,7 @@ import menu from './menu';
 import menubar from './menubar';
 import message from './message';
 import multiselect from './multiselect';
+import organizationchart from './organizationchart';
 import overlaypanel from './overlaypanel';
 import paginator from './paginator';
 import panel from './panel';
@@ -110,6 +111,7 @@ export default {
     tree,
     dataview,
     dataviewlayoutoptions,
+    organizationchart,
 
     //panels
     accordion,
