@@ -1,6 +1,20 @@
 export default {
     root: {
-        class: ['flex items-center justify-between flex-wrap', 'bg-surface-100 dark:bg-surface-800 border border-surface-50 dark:border-surface-700 p-5 rounded-md gap-2']
+        class: [
+            // Flex & Alignment
+            'flex items-center justify-between flex-wrap',
+            'gap-2',
+
+            // Spacing
+            'p-5',
+
+            // Shape
+            'rounded-md',
+
+            // Color
+            'bg-surface-50 dark:bg-surface-800',
+            'border border-surface-200 dark:border-surface-700'
+        ]
     },
     start: {
         class: 'flex items-center'

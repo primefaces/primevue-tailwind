@@ -11,9 +11,9 @@
             </template>
 
             <template #center>
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search" />
-                    <InputText placeholder="Search" />
+                <span class="relative">
+                    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+                    <InputText placeholder="Search" class="pl-10" />
                 </span>
             </template>
 
@@ -67,10 +67,10 @@ export default {
             </template>
 
             <template #center>
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search" />
-                    <InputText placeholder="Search" />
-                </span>
+                <span class="relative">
+    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+    <InputText placeholder="Search" class="pl-10" />
+</span>
             </template>
 
             <template #end> <SplitButton label="Save" icon="pi pi-check" :model="items"></SplitButton></template>
@@ -108,10 +108,10 @@ export default {
             </template>
 
             <template #center>
-                <span class="p-input-icon-left">
-                    <i class="pi pi-search" />
-                    <InputText placeholder="Search" />
-                </span>
+                <span class="relative">
+    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
+    <InputText placeholder="Search" class="pl-10" />
+</span>
             </template>
 
             <template #end> <SplitButton label="Save" icon="pi pi-check" :model="items"></SplitButton></template>
