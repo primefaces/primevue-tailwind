@@ -3,7 +3,7 @@
         <p>A customized toolbar with navigation bar like functionality.</p>
     </DocSectionText>
     <div class="card">
-        <Toolbar class="bg-gray-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500 to-primary-700">
+        <Toolbar class="bg-surface-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500 to-primary-700">
             <template #start>
                 <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -42,7 +42,7 @@ export default {
         return {
             code: {
                 basic: `
-<Toolbar class="bg-gray-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500/70 to-primary-600/80" >
+<Toolbar class="bg-surface-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500/70 to-primary-600/80" >
     <template #start>
         <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="..." fill="#ffffff" />
@@ -69,7 +69,7 @@ export default {
                 options: `
 <template>
     <div class="card">
-        <Toolbar class="bg-gray-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500/70 to-primary-600/80" >
+        <Toolbar class="bg-surface-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500/70 to-primary-600/80" >
             <template #start>
                 <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -107,7 +107,7 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <Toolbar class="bg-gray-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500/70 to-primary-600/80" >
+        <Toolbar class="bg-surface-900 shadow-md rounded-[3rem] bg-gradient-to-r from-primary-500/70 to-primary-600/80" >
             <template #start>
                 <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

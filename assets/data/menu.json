@@ -232,6 +232,11 @@
                             "badge": "NEW"
                         },
                         {
+                            "name": "ConfirmPopup",
+                            "to": "/confirmpopup",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Dialog",
                             "to": "/dialog"
                         },

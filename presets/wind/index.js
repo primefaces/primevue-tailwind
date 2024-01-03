@@ -13,6 +13,7 @@ import checkbox from './checkbox';
 import chip from './chip';
 import chips from './chips';
 import colorpicker from './colorpicker';
+import confirmpopup from './confirmpopup';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dataview from './dataview';
@@ -61,7 +62,6 @@ import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
 import tristatecheckbox from './tristatecheckbox';
-
 export default {
     global,
     directives: {
@@ -130,6 +130,7 @@ export default {
     dialog,
     overlaypanel,
     sidebar,
+    confirmpopup,
 
     //messages
     message,
