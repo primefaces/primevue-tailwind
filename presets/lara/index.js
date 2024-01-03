@@ -45,6 +45,7 @@ import progressbar from './progressbar';
 import radiobutton from './radiobutton';
 import rating from './rating';
 import ripple from './ripple';
+import scrollpanel from './scrollpanel';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
 import skeleton from './skeleton';
@@ -62,6 +63,7 @@ import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
 import tristatecheckbox from './tristatecheckbox';
+
 export default {
     global,
     directives: {
@@ -116,6 +118,7 @@ export default {
     tabview,
     divider,
     toolbar,
+    scrollpanel,
 
     //menu
     contextmenu,

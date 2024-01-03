@@ -178,6 +178,11 @@
                             "to": "/panel"
                         },
                         {
+                            "name": "ScrollPanel",
+                            "to": "/scrollpanel",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "TabView",
                             "to": "/tabview"
                         },
