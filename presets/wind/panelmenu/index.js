@@ -1,49 +1,112 @@
 export default {
-    root: {
-        class: 'w-full md:w-[25rem]'
-    },
     panel: {
         class: 'mb-1'
     },
     header: {
-        class: [
-            'outline-none',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50' // Focus
-        ]
+        class: ['rounded-md', 'outline-none', 'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50']
     },
-    headercontent: {
+    headercontent: ({ context }) => ({
         class: [
-            'border border-solid border-surface-50 dark:border-surface-700 text-surface-700 dark:text-white/80 bg-surface-50 dark:bg-surface-900 rounded-md transition-shadow duration-200',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80  hover:text-surface-700 dark:hover:text-white/80'
+            // Shape
+            'rounded-t-md',
+            { 'rounded-br-md rounded-bl-md': !context.active, 'rounded-br-0 rounded-bl-0': context.active },
+
+            // Color
+            'border border-surface-200 dark:border-surface-700',
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-600 dark:text-surface-0/80',
+            { 'text-surface-900 ark:text-surface-0': context.active },
+
+            // Transition
+            'transition duration-200 ease-in-out',
+            'transition-shadow duration-200'
         ]
-    },
+    }),
     headeraction: {
-        class: ['flex items-center select-none cursor-pointer relative no-underline', 'text-surface-700 dark:text-white/80 p-5 font-bold']
+        class: [
+            'relative',
+
+            // Font
+            'font-semibold',
+            'text-sm',
+            'leading-none',
+
+            // Flex & Alignments
+            'flex items-center',
+
+            // Spacing
+            'px-3 py-2',
+
+            // Misc
+            'select-none cursor-pointer no-underline'
+        ]
+    },
+    headerlabel: {
+        class: 'leading-none'
+    },
+    headerIcon: {
+        class: 'mr-2 text-sm'
     },
     submenuicon: {
-        class: 'mr-2'
-    },
-    headericon: {
-        class: 'mr-2'
+        class: 'ml-auto order-last text-sm'
     },
     menucontent: {
-        class: 'py-1 border border-t-0 border-surface-50 dark:border-surface-700 bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80 rounded-t-none rounded-br-md rounded-bl-md'
+        class: [
+            // Spacing
+            'py-1',
+
+            // Shape
+            'border border-t-0',
+            'rounded-t-none rounded-br-md rounded-bl-md',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
+            'bg-surface-0 dark:bg-surface-800',
+            'border-surface-200 dark:border-surface-700'
+        ]
     },
     menu: {
         class: ['outline-none', 'm-0 p-0 list-none']
     },
-    content: ({ context }) => ({
+    content: {
         class: [
-            'text-surface-700 dark:text-white/80 transition-shadow duration-200 border-none rounded-none',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80  hover:text-surface-700 dark:hover:text-white/80', // Hover
+            // Shape
+            'border-none rounded-none',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
+
+            // Transition
+            'transition-shadow duration-200'
+        ]
+    },
+    action: ({ context }) => ({
+        class: [
+            'relative',
+
+            // Font
+            'text-sm leading-none',
+
+            // Flex & Alignments
+            'flex items-center',
+
+            // Spacing
+            'py-2 px-3',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
+
+            // States
+            'hover:bg-surface-100 dark:hover:bg-surface-700/80 hover:text-surface-700 dark:hover:text-white/80',
             {
-                'bg-surface-300 text-surface-700 dark:text-white/80 dark:bg-surface-800/90': context.focused
-            }
+                'bg-surface-200 text-surface-700 dark:text-white/80 dark:bg-surface-600/90': context.focused
+            },
+
+            // Misc
+            'cursor-pointer no-underline',
+            'select-none overflow-hidden'
         ]
     }),
-    action: {
-        class: ['text-surface-700 dark:text-white/80 py-3 px-5 select-none', 'flex items-center cursor-pointer no-underline relative overflow-hidden']
-    },
     icon: {
         class: 'mr-2'
     },
