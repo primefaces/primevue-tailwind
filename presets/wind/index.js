@@ -56,6 +56,7 @@ import textarea from './textarea';
 import tieredmenu from './tieredmenu';
 import toast from './toast';
 import togglebutton from './togglebutton';
+import toolbar from './toolbar';
 import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
@@ -114,6 +115,7 @@ export default {
     card,
     tabview,
     divider,
+    toolbar,
 
     //menu
     contextmenu,

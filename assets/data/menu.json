@@ -180,6 +180,11 @@
                         {
                             "name": "TabView",
                             "to": "/tabview"
+                        },
+                        {
+                            "name": "Toolbar",
+                            "to": "/toolbar",
+                            "badge": "NEW"
                         }
                     ]
                 },
