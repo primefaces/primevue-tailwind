@@ -17,7 +17,7 @@
                             <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
                             <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                                 <div class="flex flex-col items-center sm:items-start gap-3">
-                                    <Skeleton class="w-8rem rounded h-[2rem]" />
+                                    <Skeleton class="w-[8rem] rounded h-[2rem]" />
                                     <Skeleton class="w-[6rem] rounded h-[1rem]" />
                                     <div class="flex items-center gap-3">
                                         <Skeleton class="w-[6rem] rounded h-[1rem]" />
@@ -44,7 +44,7 @@
                             </div>
                             <div class="flex flex-col items-center gap-3 py-5">
                                 <Skeleton class="w-9/12 shadow-md rounded h-10rem" />
-                                <Skeleton class="w-8rem rounded h-[2rem]" />
+                                <Skeleton class="w-[8rem] rounded h-[2rem]" />
                                 <Skeleton class="w-[6rem] rounded h-[1rem]" />
                             </div>
                             <div class="flex items-center justify-between">
@@ -84,7 +84,7 @@ export default {
                     <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
                     <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                         <div class="flex flex-col items-center sm:items-start gap-3">
-                            <Skeleton class="w-8rem rounded h-[2rem]" />
+                            <Skeleton class="w-[8rem] rounded h-[2rem]" />
                             <Skeleton class="w-[6rem] rounded h-[1rem]" />
                             <div class="flex items-center gap-3">
                                 <Skeleton class="w-[6rem] rounded h-[1rem]" />
@@ -111,7 +111,7 @@ export default {
                     </div>
                     <div class="flex flex-col items-center gap-3 py-5">
                         <Skeleton class="w-9/12 shadow-md rounded h-10rem" />
-                        <Skeleton class="w-8rem rounded h-[2rem]" />
+                        <Skeleton class="w-[8rem] rounded h-[2rem]" />
                         <Skeleton class="w-[6rem] rounded h-[1rem]" />
                     </div>
                     <div class="flex items-center justify-between">
@@ -141,7 +141,7 @@ export default {
                             <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
                             <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                                 <div class="flex flex-col items-center sm:items-start gap-3">
-                                    <Skeleton class="w-8rem rounded h-[2rem]" />
+                                    <Skeleton class="w-[8rem] rounded h-[2rem]" />
                                     <Skeleton class="w-[6rem] rounded h-[1rem]" />
                                     <div class="flex items-center gap-3">
                                         <Skeleton class="w-[6rem] rounded h-[1rem]" />
@@ -168,7 +168,7 @@ export default {
                             </div>
                             <div class="flex flex-col items-center gap-3 py-5">
                                 <Skeleton class="w-9/12 shadow-md rounded h-10rem" />
-                                <Skeleton class="w-8rem rounded h-[2rem]" />
+                                <Skeleton class="w-[8rem] rounded h-[2rem]" />
                                 <Skeleton class="w-[6rem] rounded h-[1rem]" />
                             </div>
                             <div class="flex items-center justify-between">
@@ -233,7 +233,7 @@ export default {
                             <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
                             <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                                 <div class="flex flex-col items-center sm:items-start gap-3">
-                                    <Skeleton class="w-8rem rounded h-[2rem]" />
+                                    <Skeleton class="w-[8rem] rounded h-[2rem]" />
                                     <Skeleton class="w-[6rem] rounded h-[1rem]" />
                                     <div class="flex items-center gap-3">
                                         <Skeleton class="w-[6rem] rounded h-[1rem]" />
@@ -260,7 +260,7 @@ export default {
                             </div>
                             <div class="flex flex-col items-center gap-3 py-5">
                                 <Skeleton class="w-9/12 shadow-md rounded h-10rem" />
-                                <Skeleton class="w-8rem rounded h-[2rem]" />
+                                <Skeleton class="w-[8rem] rounded h-[2rem]" />
                                 <Skeleton class="w-[6rem] rounded h-[1rem]" />
                             </div>
                             <div class="flex items-center justify-between">

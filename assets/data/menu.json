@@ -227,6 +227,11 @@
                     "name": "Overlays",
                     "children": [
                         {
+                            "name": "ConfirmDialog",
+                            "to": "/confirmdialog",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Dialog",
                             "to": "/dialog"
                         },
