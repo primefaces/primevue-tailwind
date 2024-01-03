@@ -9,9 +9,9 @@
                     style="width: 100%; height: 200px"
                     :pt="{
                         wrapper: {
-                            style: { 'border-right': '10px solid var(--surface-ground)' }
+                            style: 'border-right: 10px solid rgb(var(--primary-400)/10%)'
                         },
-                        bary: 'hover:bg-primary-400 bg-primary-300 opacity-100'
+                        bary: 'relative z-20 w-[9px] top-0 rounded-full bg-primary-300 hover:bg-primary-400'
                     }"
                 >
                     <p>
@@ -33,9 +33,9 @@
                     style="width: 100%; height: 200px"
                     :pt="{
                         wrapper: {
-                            style: 'border-right: 10px solid var(--surface-50); border-bottom: 10px solid var(--surface-50);'
+                            style: 'border-right: 10px solid rgb(var(--primary-400)/10%); border-bottom: 10px solid rgb(var(--primary-400)/10%);'
                         },
-                        bary: 'surface-300 opacity-100 border-noround'
+                        bary: 'relative z-20 w-[9px] top-0 rounded-none bg-surface-300 hover:bg-surface-400'
                     }"
                 >
                     <p>
@@ -67,9 +67,9 @@ export default {
     style="width: 100%; height: 200px"
     :pt="{
         wrapper: {
-            style: { 'border-right': '10px solid var(--surface-ground)' }
+            style: { 'border-right': 'rgb(var(--primary-400)/10%)' }
         },
-        bary: 'hover:bg-primary-400 bg-primary-300 opacity-100'
+        bary: 'relative z-20 w-[9px] top-0 rounded-full bg-primary-300 hover:bg-primary-400'
     }"
 >
     <p>
@@ -81,9 +81,9 @@ export default {
     style="width: 100%; height: 200px"
     :pt="{
         wrapper: {
-            style: 'border-right: 10px solid var(--surface-50); border-bottom: 10px solid var(--surface-50);'
+            style: 'border-right: 10px solid rgb(var(--primary-400)/10%); border-bottom: 10px solid rgb(var(--primary-400)/10%);'
         },
-        bary: 'surface-300 opacity-100 border-noround'
+        bary: 'relative z-20 w-[9px] top-0 rounded-none bg-surface-300 hover:bg-surface-400'
     }"
 >
     <p>
@@ -100,9 +100,9 @@ export default {
                     style="width: 100%; height: 200px"
                     :pt="{
                         wrapper: {
-                            style: { 'border-right': '10px solid var(--surface-ground)' }
+                            style: { 'border-right': 'rgb(var(--primary-400)/10%)' }
                         },
-                        bary: 'hover:bg-primary-400 bg-primary-300 opacity-100'
+                        bary: 'relative z-20 w-[9px] top-0 rounded-full bg-primary-300 hover:bg-primary-400'
                     }"
                 >
                     <p>
@@ -124,9 +124,9 @@ export default {
                     style="width: 100%; height: 200px"
                     :pt="{
                         wrapper: {
-                            style: 'border-right: 10px solid var(--surface-50); border-bottom: 10px solid var(--surface-50);'
+                            style: 'border-right: 10px solid rgb(var(--primary-400)/10%); border-bottom: 10px solid rgb(var(--primary-400)/10%);'
                         },
-                        bary: 'surface-300 opacity-100 border-noround'
+                        bary: 'relative z-20 w-[9px] top-0 rounded-none bg-surface-300 hover:bg-surface-400'
                     }"
                 >
                     <p>
@@ -156,9 +156,9 @@ export default {
                     style="width: 100%; height: 200px"
                     :pt="{
                         wrapper: {
-                            style: { 'border-right': '10px solid var(--surface-ground)' }
+                            style: { 'border-right': 'rgb(var(--primary-400)/10%)' }
                         },
-                        bary: 'hover:bg-primary-400 bg-primary-300 opacity-100'
+                        bary: 'relative z-20 w-[9px] top-0 rounded-full bg-primary-300 hover:bg-primary-400'
                     }"
                 >
                     <p>
@@ -180,9 +180,9 @@ export default {
                     style="width: 100%; height: 200px"
                     :pt="{
                         wrapper: {
-                            style: 'border-right: 10px solid var(--surface-50); border-bottom: 10px solid var(--surface-50);'
+                            style: 'border-right: 10px solid rgb(var(--primary-400)/10%); border-bottom: 10px solid rgb(var(--primary-400)/10%);'
                         },
-                        bary: 'surface-300 opacity-100 border-noround'
+                        bary: 'relative z-20 w-[9px] top-0 rounded-none bg-surface-300 hover:bg-surface-400'
                     }"
                 >
                     <p>
