@@ -23,7 +23,7 @@
                             <span>{{ product.category }}</span>
                         </div>
                     </div>
-                    <span class="font-bold text-900 ml-5">${{ product.price }}</span>
+                    <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">${{ product.price }}</span>
                 </div>
             </li>
         </ul>
@@ -99,7 +99,7 @@ export default {
                     <span>{{ product.category }}</span>
                 </div>
             </div>
-            <span class="font-bold text-900 ml-5">\${{ product.price }}</span>
+            <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">\${{ product.price }}</span>
         </div>
     </li>
 </ul>
@@ -134,7 +134,7 @@ export default {
                             <span>{{ product.category }}</span>
                         </div>
                     </div>
-                    <span class="font-bold text-900 ml-5">\${{ product.price }}</span>
+                    <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">\${{ product.price }}</span>
                 </div>
             </li>
         </ul>
@@ -224,7 +224,7 @@ export default {
                             <span>{{ product.category }}</span>
                         </div>
                     </div>
-                    <span class="font-bold text-900 ml-5">\${{ product.price }}</span>
+                    <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">\${{ product.price }}</span>
                 </div>
             </li>
         </ul>

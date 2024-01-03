@@ -15,6 +15,8 @@ import chips from './chips';
 import colorpicker from './colorpicker';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
+import dataview from './dataview';
+import dataviewlayoutoptions from './dataviewlayoutoptions';
 import dialog from './dialog';
 import divider from './divider';
 import dropdown from './dropdown';
@@ -102,6 +104,8 @@ export default {
     paginator,
     datatable,
     tree,
+    dataview,
+    dataviewlayoutoptions,
 
     //panels
     accordion,

@@ -140,6 +140,11 @@
                             "to": "/datatable"
                         },
                         {
+                            "name": "Dataview",
+                            "to": "/dataview",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Tree",
                             "to": "/tree"
                         },
