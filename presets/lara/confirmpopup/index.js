@@ -50,6 +50,56 @@ export default {
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
+    rejectbutton: {
+        root: {
+            class: [
+                'relative',
+
+                // Alignments
+                'items-center inline-flex text-center align-bottom justify-center',
+
+                // Sizes & Spacing
+                'px-4 py-3 leading-none',
+
+                // Shape
+                'rounded-md',
+
+                // Color
+                'text-primary-500 dark:text-primary-400',
+
+                // States
+                'hover:bg-primary-300/20',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+            ]
+        }
+    },
+    acceptbutton: {
+        root: {
+            class: [
+                'relative',
+
+                // Alignments
+                'items-center inline-flex text-center align-bottom justify-center',
+
+                // Sizes & Spacing
+                'px-4 py-3 leading-none',
+
+                // Shape
+                'rounded-md',
+
+                // Color
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
+
+                // States
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+            ]
+        }
+    },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
         enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',

@@ -51,7 +51,7 @@ export default {
                 target: event.currentTarget,
                 message: 'Do you want to delete this record?',
                 icon: 'pi pi-info-circle',
-                acceptClass: 'p-button-danger p-button-sm',
+                acceptClass: '!bg-red-500 dark:!bg-red-40 !border-red-500 dark:!border-red-400 !ring-red-500 dark:!ring-red-400 hover:!bg-red-600 dark:hover:!bg-red-300 hover:!border-red-600 dark:hover:!border-red-300 focus:!ring-red-400/50 dark:!focus:ring-red-300/50',
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
                 },
@@ -100,7 +100,7 @@ const confirm2 = (event) => {
         target: event.currentTarget,
         message: 'Do you want to delete this record?',
         icon: 'pi pi-info-circle',
-        acceptClass: 'p-button-danger p-button-sm',
+        acceptClass: '!bg-red-500 dark:!bg-red-40 !border-red-500 dark:!border-red-400 !ring-red-500 dark:!ring-red-400 hover:!bg-red-600 dark:hover:!bg-red-300 hover:!border-red-600 dark:hover:!border-red-300 focus:!ring-red-400/50 dark:!focus:ring-red-300/50',
         accept: () => {
             toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
         },
@@ -133,7 +133,8 @@ const confirm2 = (event) => {
                 target: event.currentTarget,
                 message: 'Do you want to delete this record?',
                 icon: 'pi pi-info-circle',
-                acceptClass: 'p-button-danger p-button-sm',
+                acceptClass:
+                    '!bg-red-500 dark:!bg-red-40 !border-red-500 dark:!border-red-400 !ring-red-500 dark:!ring-red-400 hover:!bg-red-600 dark:hover:!bg-red-300 hover:!border-red-600 dark:hover:!border-red-300 focus:!ring-red-400/50 dark:!focus:ring-red-300/50',
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
                 },

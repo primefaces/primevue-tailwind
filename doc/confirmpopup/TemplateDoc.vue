@@ -57,10 +57,10 @@ export default {
                 group: 'templating',
                 message: 'Please confirm to proceed moving forward.',
                 icon: 'pi pi-exclamation-circle',
-                acceptIcon: 'pi pi-check',
-                rejectIcon: 'pi pi-times',
-                rejectClass: 'p-button-sm',
-                acceptClass: 'p-button-outlined p-button-sm',
+                acceptIcon: 'pi pi-check mr-2',
+                rejectIcon: 'pi pi-times mr-2',
+                rejectClass: '!text-sm !py-2 !px-3',
+                acceptClass: '!bg-transparent !text-primary-500 hover:!bg-primary-300/20 !text-sm !py-2 !px-3',
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -102,10 +102,10 @@ const showTemplate = (event) => {
         group: 'templating',
         message: 'Please confirm to proceed moving forward.',
         icon: 'pi pi-exclamation-circle',
-        acceptIcon: 'pi pi-check',
-        rejectIcon: 'pi pi-times',
-        rejectClass: 'p-button-sm',
-        acceptClass: 'p-button-outlined p-button-sm',
+        acceptIcon: 'pi pi-check mr-2',
+        rejectIcon: 'pi pi-times mr-2',
+        rejectClass: '!text-sm !py-2 !px-3',
+        acceptClass: '!bg-transparent !text-primary-500 hover:!bg-primary-300/20 !text-sm !py-2 !px-3',
         accept: () => {
             toast.add({severity:'info', summary:'Confirmed', detail:'You have accepted', life: 3000});
         },
@@ -126,10 +126,10 @@ const showTemplate = (event) => {
                 group: 'templating',
                 message: 'Please confirm to proceed moving forward.',
                 icon: 'pi pi-exclamation-circle',
-                acceptIcon: 'pi pi-check',
-                rejectIcon: 'pi pi-times',
-                rejectClass: 'p-button-sm',
-                acceptClass: 'p-button-outlined p-button-sm',
+                acceptIcon: 'pi pi-check mr-2',
+                rejectIcon: 'pi pi-times mr-2',
+                rejectClass: '!text-sm !py-2 !px-3',
+                acceptClass: '!bg-transparent !text-primary-500 hover:!bg-primary-300/20 !text-sm !py-2 !px-3',
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
