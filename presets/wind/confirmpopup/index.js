@@ -38,10 +38,7 @@ export default {
         ]
     },
     icon: {
-        class: 'text-xl'
-    },
-    message: {
-        class: 'ml-2'
+        class: 'text-xl mr-2'
     },
     footer: {
         class: [

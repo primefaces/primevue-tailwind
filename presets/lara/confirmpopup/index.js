@@ -24,10 +24,7 @@ export default {
         class: 'p-5 items-center flex'
     },
     icon: {
-        class: 'text-2xl'
-    },
-    message: {
-        class: 'ml-4'
+        class: 'text-2xl mr-4'
     },
     footer: {
         class: [

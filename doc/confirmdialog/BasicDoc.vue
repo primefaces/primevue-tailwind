@@ -37,7 +37,6 @@ export default {
             this.$confirm.require({
                 message: 'Are you sure you want to proceed?',
                 header: 'Confirmation',
-                icon: 'pi pi-exclamation-triangle',
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -50,7 +49,6 @@ export default {
             this.$confirm.require({
                 message: 'Do you want to delete this record?',
                 header: 'Delete Confirmation',
-                icon: 'pi pi-info-circle',
                 rejectClass: 'p-button-text p-button-text',
                 acceptClass: 'p-button-danger p-button-text',
                 accept: () => {
@@ -86,7 +84,6 @@ const confirm1 = () => {
     confirm.require({
         message: 'Are you sure you want to proceed?',
         header: 'Confirmation',
-        icon: 'pi pi-exclamation-triangle',
         accept: () => {
             toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
         },
@@ -100,7 +97,6 @@ const confirm2 = () => {
     confirm.require({
         message: 'Do you want to delete this record?',
         header: 'Delete Confirmation',
-        icon: 'pi pi-info-circle',
         rejectClass: 'p-button-text p-button-text',
         acceptClass: 'p-button-danger p-button-text',
         accept: () => {
@@ -121,7 +117,6 @@ const confirm2 = () => {
             this.$confirm.require({
                 message: 'Are you sure you want to proceed?',
                 header: 'Confirmation',
-                icon: 'pi pi-exclamation-triangle',
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -134,7 +129,6 @@ const confirm2 = () => {
             this.$confirm.require({
                 message: 'Do you want to delete this record?',
                 header: 'Delete Confirmation',
-                icon: 'pi pi-info-circle',
                 rejectClass: 'p-button-text p-button-text',
                 acceptClass: 'p-button-danger p-button-text',
                 accept: () => {
