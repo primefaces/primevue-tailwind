@@ -38,7 +38,6 @@ export default {
             {
                 'bg-surface-200 text-surface-700 dark:bg-surface-300/10 dark:text-white': context.focused
             },
-            console.log(context),
 
             // Transitions
             'transition-shadow',

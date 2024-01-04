@@ -112,7 +112,6 @@ export default {
     },
     item: ({ context }) => ({
         class: [
-            console.log(context),
             // Font
             'font-normal',
             'leading-none',
