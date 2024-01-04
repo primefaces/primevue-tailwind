@@ -12,6 +12,9 @@ export default defineNuxtConfig({
             pathPrefix: false
         }
     ],
+    experimental: {
+        watcher: 'chokidar'
+    },
     vite: {
         optimizeDeps: {
             disabled: true
