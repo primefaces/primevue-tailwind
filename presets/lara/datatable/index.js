@@ -31,7 +31,7 @@ export default {
         ]
     },
     loadingicon: {
-        class: 'w-8 h-8'
+        class: 'w-8 h-8 animate-spin'
     },
     wrapper: ({ props }) => ({
         class: [

@@ -154,7 +154,7 @@ export default {
         }
     },
     loadingicon: {
-        class: ['text-sm leading-none text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[0.5rem] -mt-2']
+        class: ['text-sm leading-none text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[0.5rem] -mt-2 animate-spin']
     },
     panel: {
         class: [

@@ -210,7 +210,8 @@ export default {
                 'ml-2 order-1': props.iconPos == 'right' && props.label != null,
                 'mb-2': props.iconPos == 'top' && props.label != null,
                 'mt-2': props.iconPos == 'bottom' && props.label != null
-            }
+            },
+            'animate-spin'
         ]
     }),
     badge: ({ props }) => ({
