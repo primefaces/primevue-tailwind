@@ -138,8 +138,7 @@
                 },
                 {
                     "name": "DataView",
-                    "path": "dataview",
-                    "disabled": true
+                    "path": "dataview"
                 },
                 {
                     "name": "OrderList",
@@ -148,8 +147,7 @@
                 },
                 {
                     "name": "Org Chart",
-                    "path": "organizationchart",
-                    "disabled": true
+                    "path": "organizationchart"
                 },
                 {
                     "name": "Paginator",
@@ -211,8 +209,7 @@
                 },
                 {
                     "name": "ScrollPanel",
-                    "path": "scrollpanel",
-                    "disabled": true
+                    "path": "scrollpanel"
                 },
                 {
                     "name": "Splitter",
@@ -225,8 +222,7 @@
                 },
                 {
                     "name": "Toolbar",
-                    "path": "toolbar",
-                    "disabled": true
+                    "path": "toolbar"
                 }
             ]
         },
@@ -234,14 +230,8 @@
             "name": "Overlay",
             "components": [
                 {
-                    "name": "ConfirmDialog",
-                    "path": "confirmdialog",
-                    "disabled": true
-                },
-                {
                     "name": "ConfirmPopup",
-                    "path": "confirmpopup",
-                    "disabled": true
+                    "path": "confirmpopup"
                 },
                 {
                     "name": "Dialog",
@@ -262,8 +252,7 @@
                 },
                 {
                     "name": "Tooltip",
-                    "path": "tooltip",
-                    "directive": true
+                    "path": "tooltip"
                 }
             ]
         },
@@ -282,8 +271,7 @@
             "components": [
                 {
                     "name": "Breadcrumb",
-                    "path": "breadcrumb",
-                    "disabled": true
+                    "path": "breadcrumb"
                 },
                 {
                     "name": "ContextMenu",
@@ -309,8 +297,7 @@
                 },
                 {
                     "name": "PanelMenu",
-                    "path": "panelmenu",
-                    "disabled": true
+                    "path": "panelmenu"
                 },
                 {
                     "name": "Steps",
@@ -396,8 +383,7 @@
                 },
                 {
                     "name": "ScrollTop",
-                    "path": "scrolltop",
-                    "disabled": true
+                    "path": "scrolltop"
                 },
                 {
                     "name": "Skeleton",
