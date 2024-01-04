@@ -2,11 +2,11 @@
     <DocSectionText v-bind="$attrs">
         <p>If you are using SCSS, the CSS file of the icon library needs to be imported in <i>styles.scss</i> of your application.</p>
     </DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="scssCode" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
     <DocSectionText v-bind="$attrs">
         <p>If you are using plain css you need to import it in your <i>index.html</i> file.</p>
     </DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="cssCode" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
 </template>
 
 <script>
