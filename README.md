@@ -5,9 +5,9 @@
 
 [![PrimeVue Hero](https://www.primefaces.org/static/social/primevue-preview.jpg)](https://primevue.org/)
 
-# PrimeVue
+# Tailwind CSS Presets for PrimeVue Unstyled UI Components
 
-PrimeVue is a rich set of open source UI Components for Vue. See [PrimeVue homepage](https://primevue.org/) for live showcase and documentation.
+Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components. See [PrimeVue homepage](https://tailwind.primevue.org/) for live showcase and documentation.
 
 ## Download
 
