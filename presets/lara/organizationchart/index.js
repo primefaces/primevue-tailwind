@@ -107,6 +107,9 @@ export default {
             'absolute bottom-[-0.75rem] left-2/4 -ml-3',
             'z-20',
 
+            // Flexbox
+            'flex items-center justify-center',
+
             // Size
             'w-6 h-6',
 
