@@ -7,13 +7,14 @@ export default {
             'items-center inline-flex text-center align-bottom justify-center',
 
             // Sizes & Spacing
+            'leading-[normal]',
             {
-                'px-4 py-3 leading-none': props.size === null && props.label !== null,
+                'px-4 py-3': props.size === null && props.label !== null,
                 'text-sm py-2 px-3': props.size === 'small',
                 'text-xl py-3 px-4': props.size === 'large'
             },
             {
-                'h-12 w-12 p-0': props.label == null
+                'w-12 p-0 py-3': props.label == null
             },
 
             // Shapes
