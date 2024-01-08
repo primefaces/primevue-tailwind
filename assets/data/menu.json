@@ -259,6 +259,11 @@
                             "to": "/dialog"
                         },
                         {
+                            "name": "DynamicDialog",
+                            "to": "/dynamicdialog",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "OverlayPanel",
                             "to": "/overlaypanel"
                         },
