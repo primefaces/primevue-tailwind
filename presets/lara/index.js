@@ -43,6 +43,7 @@ import paginator from './paginator';
 import panel from './panel';
 import panelmenu from './panelmenu';
 import password from './password';
+import picklist from './picklist';
 import progressbar from './progressbar';
 import radiobutton from './radiobutton';
 import rating from './rating';
@@ -66,7 +67,6 @@ import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
 import tristatecheckbox from './tristatecheckbox';
-
 export default {
     global,
     directives: {
@@ -114,6 +114,7 @@ export default {
     dataviewlayoutoptions,
     organizationchart,
     orderlist,
+    picklist,
 
     //panels
     accordion,

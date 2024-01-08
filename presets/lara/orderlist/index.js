@@ -8,7 +8,7 @@ export default {
     controls: {
         class: [
             // Flexbox & Alignment
-            'flex flex-col justify-center',
+            'flex flex-col justify-center gap-2',
 
             // Spacing
             'p-5'
@@ -30,7 +30,7 @@ export default {
 
                 // Spacing & Size
                 'w-12',
-                'm-0 mb-2',
+                'm-0',
                 'px-0 py-3',
 
                 // Transitions
@@ -72,7 +72,7 @@ export default {
 
                 // Spacing & Size
                 'w-12',
-                'm-0 mb-2',
+                'm-0',
                 'px-0 py-3',
 
                 // Transitions
@@ -114,7 +114,7 @@ export default {
 
                 // Spacing & Size
                 'w-12',
-                'm-0 mb-2',
+                'm-0',
                 'px-0 py-3',
 
                 // Transitions
@@ -156,7 +156,7 @@ export default {
 
                 // Spacing & Size
                 'w-12',
-                'm-0 mb-2',
+                'm-0',
                 'px-0 py-3',
 
                 // Transitions

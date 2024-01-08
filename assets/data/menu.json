@@ -153,12 +153,18 @@
                             "to": "/organizationchart"
                         },
                         {
-                            "name": "Tree",
-                            "to": "/tree"
-                        },
-                        {
                             "name": "Paginator",
                             "to": "/paginator"
+                        },
+                        {
+                            "name": "PickList",
+                            "to": "/picklist",
+                            "badge": "NEW"
+                        },
+
+                        {
+                            "name": "Tree",
+                            "to": "/tree"
                         }
                     ]
                 },
