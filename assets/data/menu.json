@@ -222,6 +222,11 @@
                             "to": "/contextmenu"
                         },
                         {
+                            "name": "Dock",
+                            "to": "/dock",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Menu",
                             "to": "/menu"
                         },

@@ -20,6 +20,7 @@ import dataview from './dataview';
 import dataviewlayoutoptions from './dataviewlayoutoptions';
 import dialog from './dialog';
 import divider from './divider';
+import dock from './dock';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
 import global from './global';
@@ -137,6 +138,7 @@ export default {
     breadcrumb,
     panelmenu,
     megamenu,
+    dock,
 
     //overlays
     dialog,
