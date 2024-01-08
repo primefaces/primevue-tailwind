@@ -247,6 +247,9 @@ export default {
             { 'bg-primary-500/30 dark:bg-primary-400/30': context.active && context.focused },
             { 'bg-surface-100 dark:bg-surface-700/70': !context.active && context.focused },
 
+            // State
+            'hover:bg-surface-100 dark:hover:bg-surface-700',
+
             // Misc
             'cursor-pointer overflow-hidden'
         ]
