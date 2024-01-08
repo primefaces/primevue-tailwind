@@ -32,6 +32,7 @@ import inputswitch from './inputswitch';
 import inputtext from './inputtext';
 import knob from './knob';
 import listbox from './listbox';
+import megamenu from './megamenu';
 import menu from './menu';
 import menubar from './menubar';
 import message from './message';
@@ -67,6 +68,7 @@ import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
 import tristatecheckbox from './tristatecheckbox';
+
 export default {
     global,
     directives: {
@@ -134,6 +136,7 @@ export default {
     tieredmenu,
     breadcrumb,
     panelmenu,
+    megamenu,
 
     //overlays
     dialog,

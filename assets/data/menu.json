@@ -230,6 +230,11 @@
                             "to": "/menubar"
                         },
                         {
+                            "name": "MegaMenu",
+                            "to": "/megamenu",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "PanelMenu",
                             "to": "/panelmenu"
                         },

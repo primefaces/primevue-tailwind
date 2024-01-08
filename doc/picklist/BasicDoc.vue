@@ -9,7 +9,7 @@
             <template #item="slotProps">
                 <div class="flex flex-wrap p-2 items-center gap-4">
                     <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-                    <div class="flex-1 flex flex-column gap-2">
+                    <div class="flex-1 flex flex-col gap-2">
                         <span class="font-bold">{{ slotProps.item.name }}</span>
                         <div class="flex items-center gap-2">
                             <i class="pi pi-tag text-sm"></i>
@@ -39,7 +39,7 @@ export default {
     <template #item="slotProps">
         <div class="flex flex-wrap p-2 items-center gap-4">
             <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-            <div class="flex-1 flex flex-column gap-2">
+            <div class="flex-1 flex flex-col gap-2">
                 <span class="font-bold">{{ slotProps.item.name }}</span>
                 <div class="flex items-center gap-2">
                     <i class="pi pi-tag text-sm"></i>
@@ -60,7 +60,7 @@ export default {
             <template #item="slotProps">
                 <div class="flex flex-wrap p-2 items-center gap-4">
                     <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-                    <div class="flex-1 flex flex-column gap-2">
+                    <div class="flex-1 flex flex-col gap-2">
                         <span class="font-bold">{{ slotProps.item.name }}</span>
                         <div class="flex items-center gap-2">
                             <i class="pi pi-tag text-sm"></i>
@@ -97,7 +97,7 @@ export default {
             <template #item="slotProps">
                 <div class="flex flex-wrap p-2 items-center gap-4">
                     <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-                    <div class="flex-1 flex flex-column gap-2">
+                    <div class="flex-1 flex flex-col gap-2">
                         <span class="font-bold">{{ slotProps.item.name }}</span>
                         <div class="flex items-center gap-2">
                             <i class="pi pi-tag text-sm"></i>
