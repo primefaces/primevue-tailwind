@@ -36,6 +36,7 @@ import menu from './menu';
 import menubar from './menubar';
 import message from './message';
 import multiselect from './multiselect';
+import orderlist from './orderlist';
 import organizationchart from './organizationchart';
 import overlaypanel from './overlaypanel';
 import paginator from './paginator';
@@ -112,6 +113,7 @@ export default {
     dataview,
     dataviewlayoutoptions,
     organizationchart,
+    orderlist,
 
     //panels
     accordion,

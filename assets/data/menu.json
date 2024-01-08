@@ -141,13 +141,16 @@
                         },
                         {
                             "name": "Dataview",
-                            "to": "/dataview",
+                            "to": "/dataview"
+                        },
+                        {
+                            "name": "OrderList",
+                            "to": "/orderlist",
                             "badge": "NEW"
                         },
                         {
                             "name": "Org Chart",
-                            "to": "/organizationchart",
-                            "badge": "NEW"
+                            "to": "/organizationchart"
                         },
                         {
                             "name": "Tree",
@@ -184,8 +187,7 @@
                         },
                         {
                             "name": "ScrollPanel",
-                            "to": "/scrollpanel",
-                            "badge": "NEW"
+                            "to": "/scrollpanel"
                         },
                         {
                             "name": "TabView",
@@ -193,8 +195,7 @@
                         },
                         {
                             "name": "Toolbar",
-                            "to": "/toolbar",
-                            "badge": "NEW"
+                            "to": "/toolbar"
                         }
                     ]
                 },
@@ -203,8 +204,7 @@
                     "children": [
                         {
                             "name": "Breacrumb",
-                            "to": "/breadcrumb",
-                            "badge": "NEW"
+                            "to": "/breadcrumb"
                         },
                         {
                             "name": "ContextMenu",
@@ -220,8 +220,7 @@
                         },
                         {
                             "name": "PanelMenu",
-                            "to": "/panelmenu",
-                            "badge": "NEW"
+                            "to": "/panelmenu"
                         },
                         {
                             "name": "Steps",
@@ -238,13 +237,11 @@
                     "children": [
                         {
                             "name": "ConfirmDialog",
-                            "to": "/confirmdialog",
-                            "badge": "NEW"
+                            "to": "/confirmdialog"
                         },
                         {
                             "name": "ConfirmPopup",
-                            "to": "/confirmpopup",
-                            "badge": "NEW"
+                            "to": "/confirmpopup"
                         },
                         {
                             "name": "Dialog",
@@ -306,8 +303,7 @@
                         },
                         {
                             "name": "ScrollTop",
-                            "to": "/scrolltop",
-                            "badge": "NEW"
+                            "to": "/scrolltop"
                         },
                         {
                             "name": "Skeleton",
