@@ -6,7 +6,7 @@
         <Sidebar v-model:visible="visible">
             <template #container="{ closeCallback }">
                 <div class="flex flex-col h-full">
-                    <div class="flex items-center justify-between px-4 pt-4 flex-shrink-0">
+                    <div class="flex items-center justify-between px-4 pt-4 shrink-0">
                         <span class="inline-flex items-center gap-2">
                             <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -385,7 +385,7 @@ export default {
         <Sidebar v-model:visible="visible">
             <template #container="{ closeCallback }">
                 <div class="flex flex-col h-full">
-                    <div class="flex items-center justify-between px-4 pt-4 flex-shrink-0">
+                    <div class="flex items-center justify-between px-4 pt-4 shrink-0">
                         <span class="inline-flex items-center gap-2">
                             <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -586,7 +586,7 @@ export default {
         <Sidebar v-model:visible="visible">
             <template #container="{ closeCallback }">
                 <div class="flex flex-col h-full">
-                    <div class="flex items-center justify-between px-4 pt-4 flex-shrink-0">
+                    <div class="flex items-center justify-between px-4 pt-4 shrink-0">
                         <span class="inline-flex items-center gap-2">
                             <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path

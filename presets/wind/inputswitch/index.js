@@ -3,7 +3,7 @@ export default {
         class: [
             // Alignments
             'inline-flex relative',
-            'flex-shrink-0',
+            'shrink-0',
 
             // Shape
             'rounded-2xl',

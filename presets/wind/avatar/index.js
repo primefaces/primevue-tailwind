@@ -10,7 +10,7 @@ export default {
 
             // Alignments
             'inline-flex items-center justify-center',
-            'flex-shrink-0',
+            'shrink-0',
             'relative',
 
             // Sizes

@@ -1,108 +1,254 @@
 export default {
     root: {
-        class: 'flex'
+        class: [
+            // Flexbox
+            'flex'
+        ]
     },
     controls: {
-        class: 'flex flex-col justify-center p-5'
+        class: [
+            // Flexbox & Alignment
+            'flex flex-col justify-center',
+
+            // Spacing
+            'p-5'
+        ]
     },
     moveupbutton: {
         root: ({ context }) => ({
             class: [
-                'relative inline-flex cursor-pointer user-select-none items-center align-bottom text-center overflow-hidden m-0', // button component
-                'text-white bg-primary-500 border border-primary-500 rounded-md',
+                // Flexbox & Alignment
+                'relative inline-flex items-center justify-center',
+
+                // Shape
+                'rounded-md',
+
+                // Color
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
+
+                // Spacing & Size
+                'w-12',
+                'm-0 mb-2',
+                'px-0 py-3',
+
+                // Transitions
                 'transition duration-200 ease-in-out',
-                'justify-center px-0 py-3', // icon only
-                'mb-2', // orderlist button
-                'dark:bg-sky-300 dark:border-sky-300 dark:text-surface-900', //Dark Mode
-                {
-                    'cursor-default pointer-events-none opacity-60': context.disabled
-                }
+
+                // State
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                { 'cursor-default pointer-events-none opacity-60': context.disabled },
+
+                // Interactivity
+                'cursor-pointer user-select-none'
             ]
         }),
         label: {
-            class: 'flex-initial w-0'
-        }
-    },
-    movetopbutton: {
-        root: ({ context }) => ({
             class: [
-                'relative inline-flex cursor-pointer user-select-none items-center align-bottom text-center overflow-hidden m-0', // button component
-                'text-white bg-primary-500 border border-primary-500 rounded-md',
-                'transition duration-200 ease-in-out',
-                'justify-center px-0 py-3', // icon only
-                'mb-2', // orderlist button
-                'dark:bg-sky-300 dark:border-sky-300 dark:text-surface-900', //Dark Mode
-                {
-                    'cursor-default pointer-events-none opacity-60': context.disabled
-                }
+                // Flexbox
+                'flex-initial',
+
+                // Size
+                'w-0'
             ]
-        }),
-        label: {
-            class: 'flex-initial w-0'
         }
     },
     movedownbutton: {
         root: ({ context }) => ({
             class: [
-                'relative inline-flex cursor-pointer user-select-none items-center align-bottom text-center overflow-hidden m-0', // button component
-                'text-white bg-primary-500 border border-primary-500 rounded-md',
+                // Flexbox & Alignment
+                'relative inline-flex items-center justify-center',
+
+                // Shape
+                'rounded-md',
+
+                // Color
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
+
+                // Spacing & Size
+                'w-12',
+                'm-0 mb-2',
+                'px-0 py-3',
+
+                // Transitions
                 'transition duration-200 ease-in-out',
-                'justify-center px-0 py-3', // icon only
-                'mb-2', // orderlist button
-                'dark:bg-sky-300 dark:border-sky-300 dark:text-surface-900', //Dark Mode
-                {
-                    'cursor-default pointer-events-none opacity-60': context.disabled
-                }
+
+                // State
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                { 'cursor-default pointer-events-none opacity-60': context.disabled },
+
+                // Interactivity
+                'cursor-pointer user-select-none'
             ]
         }),
         label: {
-            class: 'flex-initial w-0'
+            class: [
+                // Flexbox
+                'flex-initial',
+
+                // Size
+                'w-0'
+            ]
+        }
+    },
+    movetopbutton: {
+        root: ({ context }) => ({
+            class: [
+                // Flexbox & Alignment
+                'relative inline-flex items-center justify-center',
+
+                // Shape
+                'rounded-md',
+
+                // Color
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
+
+                // Spacing & Size
+                'w-12',
+                'm-0 mb-2',
+                'px-0 py-3',
+
+                // Transitions
+                'transition duration-200 ease-in-out',
+
+                // State
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                { 'cursor-default pointer-events-none opacity-60': context.disabled },
+
+                // Interactivity
+                'cursor-pointer user-select-none'
+            ]
+        }),
+        label: {
+            class: [
+                // Flexbox
+                'flex-initial',
+
+                // Size
+                'w-0'
+            ]
         }
     },
     movebottombutton: {
         root: ({ context }) => ({
             class: [
-                'relative inline-flex cursor-pointer user-select-none items-center align-bottom text-center overflow-hidden m-0', // button component
-                'text-white bg-primary-500 border border-primary-500 rounded-md',
+                // Flexbox & Alignment
+                'relative inline-flex items-center justify-center',
+
+                // Shape
+                'rounded-md',
+
+                // Color
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
+
+                // Spacing & Size
+                'w-12',
+                'm-0 mb-2',
+                'px-0 py-3',
+
+                // Transitions
                 'transition duration-200 ease-in-out',
-                'justify-center px-0 py-3', // icon only
-                'mb-2', // orderlist button
-                'dark:bg-sky-300 dark:border-sky-300 dark:text-surface-900', //Dark Mode
-                {
-                    'cursor-default pointer-events-none opacity-60': context.disabled
-                }
+
+                // State
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                { 'cursor-default pointer-events-none opacity-60': context.disabled },
+
+                // Interactivity
+                'cursor-pointer user-select-none'
             ]
         }),
         label: {
-            class: 'flex-initial w-0'
+            class: [
+                // Flexbox
+                'flex-initial',
+
+                // Size
+                'w-0'
+            ]
         }
     },
     container: {
-        class: 'flex-auto'
+        class: ['flex-auto']
     },
     header: {
         class: [
-            'bg-slate-50 text-slate-700 border border-surface-200 p-5 font-bold border-b-0 rounded-t-md',
-            'dark:bg-surface-900 dark:text-white/80 dark:border-surface-700' //Dark Mode
+            'font-bold',
+
+            // Shape
+            'border-b-0 rounded-t-md',
+
+            // Spacing
+            'p-5',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
+            'bg-surface-50 dark:bg-surface-800',
+            'border border-surface-200 dark:border-surface-700'
         ]
     },
     list: {
         class: [
-            'list-none m-0 p-0 overflow-auto min-h-[12rem] max-h-[24rem]',
-            'border border-surface-200 bg-surface-0 text-surface-600 py-3 px-0 rounded-b-md outline-none',
-            'dark:border-surface-700 dark:bg-surface-900 dark:text-white/80' //Dark Mode
+            // Spacing
+            'list-none m-0 p-0',
+
+            // Size
+            'min-h-[12rem] max-h-[24rem]',
+
+            // Shape
+            'rounded-b-md',
+
+            // Color
+            'text-surface-600 dark:text-white/80',
+            'bg-surface-0 dark:bg-surface-800',
+            'border border-surface-200 dark:border-surface-700',
+
+            // Spacing
+            'py-3 px-0',
+
+            // Focus & Outline
+            'outline-none',
+
+            // Misc
+            'overflow-auto'
         ]
     },
     item: ({ context }) => ({
         class: [
-            'relative cursor-pointer overflow-hidden',
-            'py-3 px-5 m-0 border-none text-surface-600 dark:text-white/80',
+            // Position
+            'relative',
+
+            // Spacing
+            'py-3 px-5 m-0',
+
+            // Shape
+            'border-none',
+
+            // Transition
             'transition duration-200',
-            {
-                'text-primary-700 bg-primary-500/20 dark:bg-primary-300/20': context.active && !context.focused,
-                'text-primary-700 bg-primary-500/30 dark:bg-primary-300/30': context.active && context.focused,
-                'text-surface-600 bg-surface-300 pdark:bg-surface-900/40': !context.active && context.focused
-            }
+
+            // Color
+            'text-surface-700 dark:text-white/80',
+            { 'bg-primary-500/20 dark:bg-primary-300/20': context.active && !context.focused },
+            { 'bg-primary-500/30 dark:bg-primary-400/30': context.active && context.focused },
+            { 'bg-surface-100 dark:bg-surface-700/70': !context.active && context.focused },
+
+            // Misc
+            'cursor-pointer overflow-hidden'
         ]
     })
 };

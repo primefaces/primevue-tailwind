@@ -14,7 +14,7 @@
                 ]"
                 @contextmenu="onRightClick($event, product.id)"
             >
-                <div class="flex flex-wrap p-2 items-center gap-3">
+                <div class="flex flex-wrap p-2 items-center gap-4">
                     <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
                     <div class="flex-1 flex flex-col gap-1">
                         <span class="font-bold">{{ product.name }}</span>
@@ -90,7 +90,7 @@ export default {
         :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary-500 dark:border-primary-400': selectedId === product.id }]"
         @contextmenu="onRightClick($event, product.id)"
     >
-        <div class="flex flex-wrap p-2 items-center gap-3">
+        <div class="flex flex-wrap p-2 items-center gap-4">
             <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'/images/product/' + product.image" :alt="product.name" />
             <div class="flex-1 flex flex-col gap-1">
                 <span class="font-bold">{{ product.name }}</span>
@@ -125,7 +125,7 @@ export default {
                 :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary-500 dark:border-primary-400': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
-                <div class="flex flex-wrap p-2 items-center gap-3">
+                <div class="flex flex-wrap p-2 items-center gap-4">
                     <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
                     <div class="flex-1 flex flex-col gap-1">
                         <span class="font-bold">{{ product.name }}</span>
@@ -215,7 +215,7 @@ export default {
                 :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary-500 dark:border-primary-400': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
-                <div class="flex flex-wrap p-2 items-center gap-3">
+                <div class="flex flex-wrap p-2 items-center gap-4">
                     <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
                     <div class="flex-1 flex flex-col gap-1">
                         <span class="font-bold">{{ product.name }}</span>
