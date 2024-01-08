@@ -6,45 +6,103 @@ export default {
             // Flexbox
             'flex',
 
-            // Shape
+            // Shape & Size
             'rounded-md',
 
             // Color
             'bg-surface-50 dark:bg-surface-700',
             'border border-surface-200 dark:border-surface-700',
-            { 'p-2 items-center': props.orientation == 'horizontal', 'flex-col w-48 p-0 py-1': props.orientation !== 'horizontal' }
+            { 'p-2 items-center': props.orientation == 'horizontal', 'flex-col sm:w-48 p-0 py-1': props.orientation !== 'horizontal' }
         ]
     }),
-    menu: {
-        class: ['m-0 sm:p-0 list-none relative', 'outline-none', 'flex items-center flex-wrap flex-row top-auto left-auto relative bg-transparent shadow-none w-auto']
-    },
+    menu: ({ props }) => ({
+        class: [
+            // Flexbox
+            'sm:flex',
+            'items-center',
+            'flex-wrap',
+            'flex-col sm:flex-row',
+            { hidden: !props?.mobileActive, flex: props?.mobileActive },
+
+            // Position
+            'absolute sm:relative',
+            'top-full left-0',
+            'sm:top-auto sm:left-auto',
+
+            // Size
+            'w-full sm:w-auto',
+
+            // Spacing
+            'm-0',
+            'py-1 sm:py-0 sm:p-0',
+            'list-none',
+
+            // Shape
+            'shadow-md sm:shadow-none',
+            'border-0',
+
+            // Color
+            'bg-surface-0 dark:bg-surface-700 sm:bg-transparent dark:sm:bg-transparent',
+
+            // Misc
+            'outline-none'
+        ]
+    }),
     menuitem: ({ props }) => ({
         class: [
-            'relative',
+            'sm:relative static',
             {
-                'w-auto': props.horizontal,
+                'sm:w-auto w-full': props.horizontal,
                 'w-full': !props.horizontal
             }
         ]
     }),
     content: ({ props, context }) => ({
         class: [
-            'transition-shadow duration-200',
+            // Shape
             { 'rounded-md': props.level < 1 && props.horizontal },
+
+            //  Colors
             {
-                'text-surface-700 dark:text-white/80': !context.focused && !context.active,
-                'bg-surface-300 text-surface-700 dark:text-white/80 dark:bg-surface-800/90': context.focused && !context.active,
-                'bg-primary-100 text-primary-700 dark:bg-primary-400 dark:text-white/80': context.focused && context.active,
-                'bg-primary-50 text-primary-700 dark:bg-primary-300 dark:text-white/80': !context.focused && context.active
+                'text-surface-500 dark:text-white/70': !context.focused && !context.active,
+                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': context.focused && context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': !context.focused && context.active
             },
+
+            // Hover States
             {
-                'hover:text-surface-700 dark:hover:text-white/80 hover:bg-surface-100 dark:hover:bg-surface-800/80': !context.active,
-                'hover:bg-primary-200 dark:hover:bg-primary-500': context.active
-            }
+                'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
+                'hover:bg-primary-500/50 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
+            },
+
+            // Transitions
+            'transition-all',
+            'duration-200'
         ]
     }),
     action: {
-        class: ['select-none', 'cursor-pointer flex items-center no-underline overflow-hidden relative', 'py-3 px-5 select-none']
+        class: [
+            'relative',
+
+            // Flexbox
+            'flex',
+            'items-center',
+
+            // Spacing
+            'py-3',
+            'px-5',
+
+            // Size
+            'py-3 pr-5 pl-9 sm:pl-5',
+            'leading-none',
+
+            // Misc
+            'select-none',
+            'cursor-pointer',
+            'no-underline ',
+            'overflow-hidden'
+        ]
     },
     icon: {
         class: 'mr-2'
@@ -52,31 +110,59 @@ export default {
     submenuicon: ({ props }) => ({
         class: [
             {
-                'ml-2': props.horizontal,
+                'ml-auto sm:ml-2': props.horizontal,
                 'ml-auto': !props.horizontal
             }
         ]
     }),
     panel: ({ props }) => ({
         class: [
-            'py-1 bg-surface-0 dark:bg-surface-900 border-0 shadow-md w-auto',
-            'absolute z-10',
+            // Size
+            'w-auto',
+
+            // Spacing
+            'py-1',
+            'm-0',
+
+            // Shape
+            'shadow-none sm:shadow-md',
+            'border-0',
+
+            // Color
+            'bg-surface-0 dark:bg-surface-700',
+
+            // Position
+            'static sm:absolute',
+            'z-10',
             {
-                'left-full top-0': !props.horizontal
+                'sm:left-full top-0': !props.horizontal
             }
         ]
     }),
     grid: {
-        class: 'flex'
+        class: 'flex flex-wrap sm:flex-nowrap'
     },
     column: {
-        class: 'w-1/2'
+        class: 'w-full sm:w-1/2'
     },
     submenu: {
-        class: ['m-0 list-none', 'py-1 w-48']
+        class: ['m-0 list-none', 'py-1 px-2 w-full sm:min-w-[14rem]']
     },
     submenuheader: {
-        class: ['m-0 py-3 px-5 text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900 font-semibold rounded-tr-md rounded-tl-md']
+        class: [
+            'font-semibold',
+
+            // Spacing
+            'py-3 px-5',
+            'm-0',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
+            'bg-surface-0 dark:bg-surface-700'
+        ]
+    },
+    separator: {
+        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
     },
     menubutton: {
         class: [
