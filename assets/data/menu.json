@@ -166,10 +166,14 @@
                             "to": "/picklist",
                             "badge": "NEW"
                         },
-
                         {
                             "name": "Tree",
                             "to": "/tree"
+                        },
+                        {
+                            "name": "TreeTable",
+                            "to": "/treetable",
+                            "badge": "NEW"
                         }
                     ]
                 },
