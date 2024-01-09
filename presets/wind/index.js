@@ -60,6 +60,7 @@ import splitbutton from './splitbutton';
 import steps from './steps';
 import tabview from './tabview';
 import tag from './tag';
+import terminal from './terminal';
 import textarea from './textarea';
 import tieredmenu from './tieredmenu';
 import toast from './toast';
@@ -159,5 +160,6 @@ export default {
     chip,
     progressbar,
     skeleton,
-    scrolltop
+    scrolltop,
+    terminal
 };

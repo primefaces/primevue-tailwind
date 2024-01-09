@@ -338,6 +338,11 @@
                         {
                             "name": "Tag",
                             "to": "/tag"
+                        },
+                        {
+                            "name": "Terminal",
+                            "to": "/terminal",
+                            "badge": "NEW"
                         }
                     ]
                 }
