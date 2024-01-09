@@ -288,6 +288,16 @@
                     ]
                 },
                 {
+                    "name": "Media",
+                    "children": [
+                        {
+                            "name": "Carousel",
+                            "to": "/carousel",
+                            "badge": "NEW"
+                        }
+                    ]
+                },
+                {
                     "name": "Messages",
                     "children": [
                         {

@@ -8,6 +8,7 @@ import breadcrumb from './breadcrumb';
 import button from './button';
 import calendar from './calendar';
 import card from './card';
+import carousel from './carousel';
 import cascadeselect from './cascadeselect';
 import checkbox from './checkbox';
 import chip from './chip';
@@ -151,6 +152,9 @@ export default {
     message,
     inlinemessage,
     toast,
+
+    //media
+    carousel,
 
     //misc
     badge,
