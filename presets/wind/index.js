@@ -59,6 +59,7 @@ import skeleton from './skeleton';
 import slider from './slider';
 import splitbutton from './splitbutton';
 import steps from './steps';
+import tabmenu from './tabmenu';
 import tabview from './tabview';
 import tag from './tag';
 import terminal from './terminal';
@@ -143,6 +144,7 @@ export default {
     panelmenu,
     megamenu,
     dock,
+    tabmenu,
 
     //overlays
     dialog,
