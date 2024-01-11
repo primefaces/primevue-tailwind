@@ -246,7 +246,7 @@ export default {
 
                 // Flex & Alignment
                 'inline-flex items-center justify-center',
-                'text-left',
+                'text-left align-middle',
 
                 // Spacing
                 'm-0 mr-2 p-0',
