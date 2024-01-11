@@ -280,7 +280,7 @@ export default {
         sortbadge: {
             class: [
                 // Flex & Alignment
-                'flex items-center justify-center align-middle',
+                'inline-flex items-center justify-center align-middle',
 
                 // Shape
                 'rounded-full',
