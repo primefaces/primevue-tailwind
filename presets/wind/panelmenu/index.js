@@ -5,11 +5,11 @@ export default {
     header: {
         class: ['rounded-md', 'outline-none', 'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50']
     },
-    headercontent: ({ context }) => ({
+    headercontent: ({ context, instance }) => ({
         class: [
             // Shape
             'rounded-t-md',
-            { 'rounded-br-md rounded-bl-md': !context.active, 'rounded-br-0 rounded-bl-0': context.active },
+            { 'rounded-br-md rounded-bl-md': !context.active || instance.activeItem?.items === undefined, 'rounded-br-0 rounded-bl-0': context.active && instance.activeItem?.items !== undefined },
 
             // Color
             'border border-surface-200 dark:border-surface-700',
