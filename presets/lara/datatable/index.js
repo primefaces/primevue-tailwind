@@ -70,7 +70,7 @@ export default {
     tbody: ({ instance, context }) => ({
         class: [
             {
-                'sticky z-20 ': instance.frozenRow && context.scrollable
+                'sticky z-20': instance.frozenRow && context.scrollable
             }
         ]
     }),

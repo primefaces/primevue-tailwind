@@ -19,7 +19,7 @@
                 </template>
             </Column>
             <template #footer>
-                <div class="flex justify-content-start">
+                <div class="flex justify-start">
                     <Button icon="pi pi-refresh" label="Reload" severity="warning" />
                 </div>
             </template>
@@ -53,7 +53,7 @@ export default {
         </template>
     </Column>
     <template #footer>
-        <div class="flex justify-content-start">
+        <div class="flex justify-start">
             <Button icon="pi pi-refresh" label="Reload" severity="warning" />
         </div>
     </template>
@@ -78,7 +78,7 @@ export default {
                 </template>
             </Column>
             <template #footer>
-                <div class="flex justify-content-start">
+                <div class="flex justify-start">
                     <Button icon="pi pi-refresh" label="Reload" severity="warning" />
                 </div>
             </template>
@@ -120,7 +120,7 @@ export default {
                 </template>
             </Column>
             <template #footer>
-                <div class="flex justify-content-start">
+                <div class="flex justify-start">
                     <Button icon="pi pi-refresh" label="Reload" severity="warning" />
                 </div>
             </template>

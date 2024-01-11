@@ -7,15 +7,15 @@
         </p>
     </DocSectionText>
     <div class="card">
-        <div class="flex justify-content-center mb-4">
+        <div class="flex justify-center mb-4">
             <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
         </div>
         <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
             <template #header>
                 <div class="text-right">
-                    <div class="p-input-icon-left">
-                        <i class="pi pi-search"></i>
-                        <InputText v-model="filters['global']" placeholder="Global Search" />
+                    <div class="relative inline-block">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600"></i>
+                        <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
                     </div>
                 </div>
             </template>
@@ -58,9 +58,9 @@ export default {
 <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
     <template #header>
         <div class="text-right">
-            <div class="p-input-icon-left">
+            <div class="relative">
                 <i class="pi pi-search"></i>
-                <InputText v-model="filters['global']" placeholder="Global Search" />
+                <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
             </div>
         </div>
     </template>
@@ -84,15 +84,15 @@ export default {
                 options: `
 <template>
     <div class="card">
-        <div class="flex justify-content-center mb-4">
+        <div class="flex justify-center mb-4">
             <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
         </div>
         <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
             <template #header>
                 <div class="text-right">
-                    <div class="p-input-icon-left">
-                        <i class="pi pi-search"></i>
-                        <InputText v-model="filters['global']" placeholder="Global Search" />
+                    <div class="relative inline-block">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600"></i>
+                        <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
                     </div>
                 </div>
             </template>
@@ -139,15 +139,15 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <div class="flex justify-content-center mb-4">
+        <div class="flex justify-center mb-4">
             <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
         </div>
         <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
             <template #header>
                 <div class="text-right">
-                    <div class="p-input-icon-left">
-                        <i class="pi pi-search"></i>
-                        <InputText v-model="filters['global']" placeholder="Global Search" />
+                    <div class="relative inline-block">
+                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600"></i>
+                        <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
                     </div>
                 </div>
             </template>

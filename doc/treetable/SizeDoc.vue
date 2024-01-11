@@ -3,7 +3,7 @@
         <p>In addition to a regular table, alternatives with alternative sizes are available.</p>
     </DocSectionText>
     <div class="card">
-        <div class="flex justify-content-center mb-4">
+        <div class="flex justify-center mb-4">
             <SelectButton v-model="size" :options="sizeOptions" optionLabel="label" dataKey="label" />
         </div>
         <TreeTable :value="nodes" :class="`p-treetable-${size.class}`">

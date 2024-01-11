@@ -7,7 +7,7 @@
         <p>In multiple selection mode, value binding should be a key-value pair where key is the node key and value is a boolean to indicate selection.</p>
     </DocSectionText>
     <div class="card">
-        <div class="flex justify-content-center align-items-center mb-4 gap-2">
+        <div class="flex justify-center items-center mb-4 gap-2">
             <InputSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
@@ -42,7 +42,7 @@ export default {
                 options: `
 <template>
     <div class="card">
-        <div class="flex justify-content-center align-items-center mb-4 gap-2">
+        <div class="flex justify-center items-center mb-4 gap-2">
             <InputSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
@@ -74,7 +74,7 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <div class="flex justify-content-center align-items-center mb-4 gap-2">
+        <div class="flex justify-center items-center mb-4 gap-2">
             <InputSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>

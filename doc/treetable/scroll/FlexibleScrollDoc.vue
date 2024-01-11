@@ -5,7 +5,7 @@
             adjusts itself according to the size changes.
         </p>
     </DocSectionText>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
 
         <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
@@ -46,7 +46,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
         <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
             <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex">
@@ -79,7 +79,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-center">
         <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
         <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
             <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex">
