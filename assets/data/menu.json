@@ -34,6 +34,11 @@
                             "to": "/calendar"
                         },
                         {
+                            "name": "CascadeSelect",
+                            "to": "/cascadeselect",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Checkbox",
                             "to": "/checkbox"
                         },
@@ -141,12 +146,24 @@
                         },
                         {
                             "name": "Dataview",
-                            "to": "/dataview",
+                            "to": "/dataview"
+                        },
+                        {
+                            "name": "OrderList",
+                            "to": "/orderlist",
                             "badge": "NEW"
                         },
                         {
                             "name": "Org Chart",
-                            "to": "/organizationchart",
+                            "to": "/organizationchart"
+                        },
+                        {
+                            "name": "Paginator",
+                            "to": "/paginator"
+                        },
+                        {
+                            "name": "PickList",
+                            "to": "/picklist",
                             "badge": "NEW"
                         },
                         {
@@ -154,8 +171,9 @@
                             "to": "/tree"
                         },
                         {
-                            "name": "Paginator",
-                            "to": "/paginator"
+                            "name": "TreeTable",
+                            "to": "/treetable",
+                            "badge": "NEW"
                         }
                     ]
                 },
@@ -184,8 +202,7 @@
                         },
                         {
                             "name": "ScrollPanel",
-                            "to": "/scrollpanel",
-                            "badge": "NEW"
+                            "to": "/scrollpanel"
                         },
                         {
                             "name": "TabView",
@@ -193,8 +210,7 @@
                         },
                         {
                             "name": "Toolbar",
-                            "to": "/toolbar",
-                            "badge": "NEW"
+                            "to": "/toolbar"
                         }
                     ]
                 },
@@ -202,13 +218,17 @@
                     "name": "Menu",
                     "children": [
                         {
-                            "name": "Breacrumb",
-                            "to": "/breadcrumb",
-                            "badge": "NEW"
+                            "name": "Breadcrumb",
+                            "to": "/breadcrumb"
                         },
                         {
                             "name": "ContextMenu",
                             "to": "/contextmenu"
+                        },
+                        {
+                            "name": "Dock",
+                            "to": "/dock",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Menu",
@@ -219,13 +239,22 @@
                             "to": "/menubar"
                         },
                         {
-                            "name": "PanelMenu",
-                            "to": "/panelmenu",
+                            "name": "MegaMenu",
+                            "to": "/megamenu",
                             "badge": "NEW"
+                        },
+                        {
+                            "name": "PanelMenu",
+                            "to": "/panelmenu"
                         },
                         {
                             "name": "Steps",
                             "to": "/steps"
+                        },
+                        {
+                            "name": "TabMenu",
+                            "to": "/tabmenu",
+                            "badge": "NEW"
                         },
                         {
                             "name": "TieredMenu",
@@ -238,17 +267,20 @@
                     "children": [
                         {
                             "name": "ConfirmDialog",
-                            "to": "/confirmdialog",
-                            "badge": "NEW"
+                            "to": "/confirmdialog"
                         },
                         {
                             "name": "ConfirmPopup",
-                            "to": "/confirmpopup",
-                            "badge": "NEW"
+                            "to": "/confirmpopup"
                         },
                         {
                             "name": "Dialog",
                             "to": "/dialog"
+                        },
+                        {
+                            "name": "DynamicDialog",
+                            "to": "/dynamicdialog",
+                            "badge": "NEW"
                         },
                         {
                             "name": "OverlayPanel",
@@ -306,8 +338,7 @@
                         },
                         {
                             "name": "ScrollTop",
-                            "to": "/scrolltop",
-                            "badge": "NEW"
+                            "to": "/scrolltop"
                         },
                         {
                             "name": "Skeleton",
@@ -316,6 +347,11 @@
                         {
                             "name": "Tag",
                             "to": "/tag"
+                        },
+                        {
+                            "name": "Terminal",
+                            "to": "/terminal",
+                            "badge": "NEW"
                         }
                     ]
                 }

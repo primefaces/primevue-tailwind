@@ -13,8 +13,7 @@
                 },
                 {
                     "name": "CascadeSelect",
-                    "path": "cascadeselect",
-                    "disabled": true
+                    "path": "cascadeselect"
                 },
                 {
                     "name": "Checkbox",
@@ -142,8 +141,7 @@
                 },
                 {
                     "name": "OrderList",
-                    "path": "orderlist",
-                    "disabled": true
+                    "path": "orderlist"
                 },
                 {
                     "name": "Org Chart",
@@ -155,8 +153,7 @@
                 },
                 {
                     "name": "PickList",
-                    "path": "picklist",
-                    "disabled": true
+                    "path": "picklist"
                 },
                 {
                     "name": "Tree",
@@ -164,8 +161,7 @@
                 },
                 {
                     "name": "TreeTable",
-                    "path": "treetable",
-                    "disabled": true
+                    "path": "treetable"
                 },
                 {
                     "name": "Timeline",
@@ -238,11 +234,6 @@
                     "path": "dialog"
                 },
                 {
-                    "name": "DynamicDialog",
-                    "path": "dynamicdialog",
-                    "disabled": true
-                },
-                {
                     "name": "OverlayPanel",
                     "path": "overlaypanel"
                 },
@@ -279,8 +270,7 @@
                 },
                 {
                     "name": "Dock",
-                    "path": "dock",
-                    "disabled": true
+                    "path": "dock"
                 },
                 {
                     "name": "Menu",
@@ -292,8 +282,7 @@
                 },
                 {
                     "name": "MegaMenu",
-                    "path": "megamenu",
-                    "disabled": true
+                    "path": "megamenu"
                 },
                 {
                     "name": "PanelMenu",
@@ -305,8 +294,7 @@
                 },
                 {
                     "name": "TabMenu",
-                    "path": "tabmenu",
-                    "disabled": true
+                    "path": "tabmenu"
                 },
                 {
                     "name": "TieredMenu",
@@ -409,8 +397,7 @@
                 },
                 {
                     "name": "Terminal",
-                    "path": "terminal",
-                    "disabled": true
+                    "path": "terminal"
                 }
             ]
         }
