@@ -11,7 +11,6 @@ import ImportDoc from '@/doc/menu/ImportDoc.vue';
 import PopupDoc from '@/doc/menu/PopupDoc.vue';
 import RouterDoc from '@/doc/menu/RouterDoc.vue';
 import TemplateDoc from '@/doc/menu/TemplateDoc.vue';
-import PresetDoc from '@/doc/menu/preset/index.vue';
 
 export default {
     data() {
@@ -58,7 +57,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'menu'
+            }
         };
     }
 };

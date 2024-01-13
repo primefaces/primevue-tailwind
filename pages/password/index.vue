@@ -11,7 +11,6 @@ import LocaleDoc from '@/doc/password/LocaleDoc.vue';
 import MeterDoc from '@/doc/password/MeterDoc.vue';
 import TemplateDoc from '@/doc/password/TemplateDoc.vue';
 import ToggleMaskDoc from '@/doc/password/ToggleMaskDoc.vue';
-import PresetDoc from '@/doc/password/preset/index.vue';
 export default {
     data() {
         return {
@@ -68,7 +67,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'password'
+            }
         };
     }
 };

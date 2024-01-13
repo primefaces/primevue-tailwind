@@ -23,7 +23,6 @@ import SeverityDoc from '@/doc/splitbutton/SeverityDoc.vue';
 import SizesDoc from '@/doc/splitbutton/SizesDoc.vue';
 import TemplateDoc from '@/doc/splitbutton/TemplateDoc.vue';
 import TextDoc from '@/doc/splitbutton/TextDoc.vue';
-import PresetDoc from '@/doc/splitbutton/preset/index.vue';
 export default {
     data() {
         return {
@@ -89,7 +88,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'splitbutton'
+            }
         };
     }
 };

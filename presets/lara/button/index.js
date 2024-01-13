@@ -7,13 +7,14 @@ export default {
             'items-center inline-flex text-center align-bottom justify-center',
 
             // Sizes & Spacing
+            'leading-[normal]',
             {
-                'px-4 py-3 leading-none': props.size === null && props.label !== null,
+                'px-4 py-3': props.size === null && props.label !== null,
                 'text-sm py-2 px-3': props.size === 'small',
                 'text-xl py-3 px-4': props.size === 'large'
             },
             {
-                'h-12 w-12 p-0': props.label == null
+                'w-12 p-0 py-3': props.label == null
             },
 
             // Shapes
@@ -163,7 +164,7 @@ export default {
             // Text & Outlined Button
             { 'hover:bg-purple-300/20': (props.text || props.outlined) && props.severity === 'help' && !props.plain },
 
-            // Warning
+            // Danger
             { 'hover:bg-red-600 dark:hover:bg-red-300 hover:border-red-600 dark:hover:border-red-300': props.severity === 'danger' && !props.text && !props.outlined && !props.plain },
             { 'focus:ring-red-400/50 dark:focus:ring-red-300/50': props.severity === 'danger' },
             // Text & Outlined Button
@@ -209,7 +210,8 @@ export default {
                 'ml-2 order-1': props.iconPos == 'right' && props.label != null,
                 'mb-2': props.iconPos == 'top' && props.label != null,
                 'mt-2': props.iconPos == 'bottom' && props.label != null
-            }
+            },
+            'animate-spin'
         ]
     }),
     badge: ({ props }) => ({

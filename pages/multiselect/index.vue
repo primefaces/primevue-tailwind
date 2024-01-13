@@ -21,7 +21,6 @@ import ImportDoc from '@/doc/multiselect/ImportDoc.vue';
 import LoadingStateDoc from '@/doc/multiselect/LoadingStateDoc.vue';
 import TemplateDoc from '@/doc/multiselect/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/multiselect/VirtualScrollDoc.vue';
-import PresetDoc from '@/doc/multiselect/preset/index.vue';
 export default {
     data() {
         return {
@@ -87,7 +86,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'multiselect'
+            }
         };
     }
 };

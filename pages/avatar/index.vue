@@ -9,7 +9,6 @@ import IconDoc from '@/doc/avatar/IconDoc.vue';
 import ImageDoc from '@/doc/avatar/ImageDoc.vue';
 import ImportDoc from '@/doc/avatar/ImportDoc.vue';
 import LabelDoc from '@/doc/avatar/LabelDoc.vue';
-import PresetDoc from '@/doc/avatar/preset/index.vue';
 
 export default {
     data() {
@@ -46,7 +45,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'avatar'
+            }
         };
     }
 };

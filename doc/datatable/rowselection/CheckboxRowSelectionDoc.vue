@@ -6,15 +6,17 @@
         </p>
         <p>The header checkbox toggles the selection state of the whole dataset by default, when paginator is enabled you may add <i>selectAll</i> property and <i>select-all-change</i> event to only control the selection of visible rows.</p>
     </DocSectionText>
-    <div class="card">
-        <DataTable v-model:selection="selectedProduct" :value="products" dataKey="id" tableStyle="min-width: 50rem">
-            <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
-            <Column field="code" header="Code"></Column>
-            <Column field="name" header="Name"></Column>
-            <Column field="category" header="Category"></Column>
-            <Column field="quantity" header="Quantity"></Column>
-        </DataTable>
-    </div>
+    <DeferredDemo @load="loadDemoData">
+        <div class="card">
+            <DataTable v-model:selection="selectedProduct" :value="products" dataKey="id" tableStyle="min-width: 50rem">
+                <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
+                <Column field="code" header="Code"></Column>
+                <Column field="name" header="Name"></Column>
+                <Column field="category" header="Category"></Column>
+                <Column field="quantity" header="Quantity"></Column>
+            </DataTable>
+        </div>
+    </DeferredDemo>
     <DocSectionCode :code="code" :service="['ProductService']" />
 </template>
 
@@ -112,8 +114,10 @@ const metaKey = ref(true);
             }
         };
     },
-    mounted() {
-        ProductService.getProductsMini().then((data) => (this.products = data));
+    methods: {
+        loadDemoData() {
+            ProductService.getProductsMini().then((data) => (this.products = data));
+        }
     }
 };
 </script>

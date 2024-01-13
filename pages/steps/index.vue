@@ -8,7 +8,6 @@ import BasicDoc from '@/doc/steps/BasicDoc.vue';
 import ControlledDoc from '@/doc/steps/ControlledDoc.vue';
 import ImportDoc from '@/doc/steps/ImportDoc.vue';
 import LinearDoc from '@/doc/steps/LinearDoc.vue';
-import PresetDoc from '@/doc/steps/preset/index.vue';
 export default {
     data() {
         return {
@@ -44,7 +43,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'steps'
+            }
         };
     }
 };

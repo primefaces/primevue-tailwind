@@ -19,7 +19,6 @@ import DocumentDoc from '@/doc/contextmenu/DocumentDoc.vue';
 import ImportDoc from '@/doc/contextmenu/ImportDoc.vue';
 import RouterDoc from '@/doc/contextmenu/RouterDoc.vue';
 import TemplateDoc from '@/doc/contextmenu/TemplateDoc.vue';
-import PresetDoc from '@/doc/contextmenu/preset/index.vue';
 
 export default {
     data() {
@@ -66,7 +65,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'contextmenu'
+            }
         };
     }
 };

@@ -6,7 +6,7 @@
         <Sidebar v-model:visible="visible">
             <template #container="{ closeCallback }">
                 <div class="flex flex-col h-full">
-                    <div class="flex items-center justify-between px-4 pt-4 flex-shrink-0">
+                    <div class="flex items-center justify-between px-4 pt-4 shrink-0">
                         <span class="inline-flex items-center gap-2">
                             <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -178,7 +178,7 @@
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
+                        <hr class="mb-3 mx-3 border-t-1 border-none border-surface-200 dark:border-surface-700" />
                         <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>
@@ -368,7 +368,7 @@ export default {
                 </ul>
             </div>
             <div class="mt-auto">
-                <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
+                <hr class="mb-3 mx-3 border-t-1 border-none border-surface-200 dark:border-surface-700" />
                 <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                     <Avatar image="/images/avatar/amyelsner.png" shape="circle" />
                     <span class="font-bold">Amy Elsner</span>
@@ -385,7 +385,7 @@ export default {
         <Sidebar v-model:visible="visible">
             <template #container="{ closeCallback }">
                 <div class="flex flex-col h-full">
-                    <div class="flex items-center justify-between px-4 pt-4 flex-shrink-0">
+                    <div class="flex items-center justify-between px-4 pt-4 shrink-0">
                         <span class="inline-flex items-center gap-2">
                             <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -557,7 +557,7 @@ export default {
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
+                        <hr class="mb-3 mx-3 border-t-1 border-none border-surface-200 dark:border-surface-700" />
                         <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>
@@ -586,7 +586,7 @@ export default {
         <Sidebar v-model:visible="visible">
             <template #container="{ closeCallback }">
                 <div class="flex flex-col h-full">
-                    <div class="flex items-center justify-between px-4 pt-4 flex-shrink-0">
+                    <div class="flex items-center justify-between px-4 pt-4 shrink-0">
                         <span class="inline-flex items-center gap-2">
                             <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -758,7 +758,7 @@ export default {
                         </ul>
                     </div>
                     <div class="mt-auto">
-                        <hr class="mb-3 mx-3 border-top-1 border-none border-surface-200 dark:border-surface-700" />
+                        <hr class="mb-3 mx-3 border-t-1 border-none border-surface-200 dark:border-surface-700" />
                         <a v-ripple class="m-3 flex items-center cursor-pointer p-3 gap-2 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>

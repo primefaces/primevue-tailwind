@@ -15,7 +15,6 @@ import AccessibilityDoc from '@/doc/tristatecheckbox/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tristatecheckbox/BasicDoc.vue';
 import DisabledDoc from '@/doc/tristatecheckbox/DisabledDoc.vue';
 import ImportDoc from '@/doc/tristatecheckbox/ImportDoc.vue';
-import PresetDoc from '@/doc/tristatecheckbox/preset/index.vue';
 export default {
     data() {
         return {
@@ -46,7 +45,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'tristatecheckbox'
+            }
         };
     }
 };

@@ -1,3 +1,4 @@
+import DeferredDemo from '@/components/demo/DeferredDemo.vue';
 import CodeHighlight from '@/directives/CodeHighlight';
 import Lara from '@/presets/lara';
 import Wind from '@/presets/wind';
@@ -19,6 +20,7 @@ const $appStatePlugin = {
 };
 
 export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.component('DeferredDemo', DeferredDemo);
     nuxtApp.vueApp.directive('code', CodeHighlight);
     nuxtApp.vueApp.use($appStatePlugin);
 });

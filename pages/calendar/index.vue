@@ -29,7 +29,6 @@ import RangeDoc from '@/doc/calendar/RangeDoc.vue';
 import TimeDoc from '@/doc/calendar/TimeDoc.vue';
 import TouchUIDoc from '@/doc/calendar/TouchUIDoc.vue';
 import YearPickerDoc from '@/doc/calendar/YearPickerDoc.vue';
-import PresetDoc from '@/doc/calendar/preset/index.vue';
 
 export default {
     data() {
@@ -136,7 +135,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'calendar'
+            }
         };
     }
 };

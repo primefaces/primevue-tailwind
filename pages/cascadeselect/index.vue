@@ -17,7 +17,6 @@ import DisabledDoc from '@/doc/cascadeselect/DisabledDoc.vue';
 import ImportDoc from '@/doc/cascadeselect/ImportDoc.vue';
 import LoadingStateDoc from '@/doc/cascadeselect/LoadingStateDoc.vue';
 import TemplateDoc from '@/doc/cascadeselect/TemplateDoc.vue';
-import PresetDoc from '@/doc/cascadeselect/preset/index.vue';
 
 export default {
     data() {
@@ -65,7 +64,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'cascadeselect'
+            }
         };
     }
 };

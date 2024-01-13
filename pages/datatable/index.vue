@@ -18,6 +18,7 @@ import ReorderDoc from '@/doc/datatable/ReorderDoc.vue';
 import RowExpansionDoc from '@/doc/datatable/RowExpansionDoc.vue';
 import SizeDoc from '@/doc/datatable/SizeDoc.vue';
 import StatefulDoc from '@/doc/datatable/StatefulDoc.vue';
+import StripedRowsDoc from '@/doc/datatable/StripedRowsDoc.vue';
 import TemplateDoc from '@/doc/datatable/TemplateDoc.vue';
 import ExpandModeDoc from '@/doc/datatable/colresize/ExpandModeDoc.vue';
 import FitModeDoc from '@/doc/datatable/colresize/FitModeDoc.vue';
@@ -28,7 +29,6 @@ import AdvancedFilterDoc from '@/doc/datatable/filter/AdvancedFilterDoc.vue';
 import BasicFilterDoc from '@/doc/datatable/filter/BasicFilterDoc.vue';
 import PaginatorBasicDoc from '@/doc/datatable/paginator/PaginatorBasicDoc.vue';
 import PaginatorTemplateDoc from '@/doc/datatable/paginator/PaginatorTemplateDoc.vue';
-import PresetDoc from '@/doc/datatable/preset/index.vue';
 import ExpandableRowGroupDoc from '@/doc/datatable/rowgroup/ExpandableRowGroupDoc.vue';
 import RowSpanRowGroupDoc from '@/doc/datatable/rowgroup/RowSpanRowGroupDoc.vue';
 import SubHeaderRowGroupDoc from '@/doc/datatable/rowgroup/SubHeaderRowGroupDoc.vue';
@@ -49,7 +49,6 @@ import RemovableSortDoc from '@/doc/datatable/sort/RemovableSortDoc.vue';
 import SingleColumnDoc from '@/doc/datatable/sort/SingleColumnDoc.vue';
 import LazyVirtualScrollDoc from '@/doc/datatable/virtualscroll/LazyVirtualScrollDoc.vue';
 import PreloadVirtualScrollDoc from '@/doc/datatable/virtualscroll/PreloadVirtualScrollDoc.vue';
-
 export default {
     data() {
         return {
@@ -84,11 +83,11 @@ export default {
                     label: 'Grid Lines',
                     component: GridLinesDoc
                 },
-                // {
-                //     id: 'striped',
-                //     label: 'Striped Rows',
-                //     component: StripedRowsDoc
-                // },
+                {
+                    id: 'striped',
+                    label: 'Striped Rows',
+                    component: StripedRowsDoc
+                },
                 {
                     id: 'paginator',
                     label: 'Paginator',
@@ -350,7 +349,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'datatable'
+            }
         };
     }
 };

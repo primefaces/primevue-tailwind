@@ -21,7 +21,6 @@ import SeverityDoc from '@/doc/button/SeverityDoc.vue';
 import SizesDoc from '@/doc/button/SizesDoc.vue';
 import TemplateDoc from '@/doc/button/TemplateDoc.vue';
 import TextDoc from '@/doc/button/TextDoc.vue';
-import PresetDoc from '@/doc/button/preset/index.vue';
 
 export default {
     data() {
@@ -118,7 +117,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'button'
+            }
         };
     }
 };

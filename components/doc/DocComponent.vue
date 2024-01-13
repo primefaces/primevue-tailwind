@@ -45,7 +45,7 @@
             </div>
 
             <div v-if="tab === 1" class="doc-tabpanel">
-                <component :is="{ ...presetDoc }" />
+                <DocPreset :presetKey="presetDoc?.key" :introText="`${header} Presets`" />
             </div>
         </div>
     </div>

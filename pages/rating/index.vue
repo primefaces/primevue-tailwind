@@ -11,7 +11,6 @@ import NumberOfStarsDoc from '@/doc/rating/NumberOfStarsDoc.vue';
 import ReadOnlyDoc from '@/doc/rating/ReadOnlyDoc.vue';
 import TemplateDoc from '@/doc/rating/TemplateDoc.vue';
 import WithoutCancelDoc from '@/doc/rating/WithoutCancelDoc.vue';
-import PresetDoc from '@/doc/rating/preset/index.vue';
 
 export default {
     data() {
@@ -58,7 +57,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'rating'
+            }
         };
     }
 };

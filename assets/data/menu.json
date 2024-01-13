@@ -34,6 +34,11 @@
                             "to": "/calendar"
                         },
                         {
+                            "name": "CascadeSelect",
+                            "to": "/cascadeselect",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Checkbox",
                             "to": "/checkbox"
                         },
@@ -43,8 +48,7 @@
                         },
                         {
                             "name": "ColorPicker",
-                            "to": "/colorpicker",
-                            "badge": "NEW"
+                            "to": "/colorpicker"
                         },
                         {
                             "name": "Dropdown",
@@ -52,8 +56,7 @@
                         },
                         {
                             "name": "InputGroup",
-                            "to": "/inputgroup",
-                            "badge": "NEW"
+                            "to": "/inputgroup"
                         },
                         {
                             "name": "InputNumber",
@@ -61,8 +64,7 @@
                         },
                         {
                             "name": "InputMask",
-                            "to": "/inputmask",
-                            "badge": "NEW"
+                            "to": "/inputmask"
                         },
                         {
                             "name": "InputSwitch",
@@ -74,13 +76,11 @@
                         },
                         {
                             "name": "Knob",
-                            "to": "/knob",
-                            "badge": "NEW"
+                            "to": "/knob"
                         },
                         {
                             "name": "Listbox",
-                            "to": "/listbox",
-                            "badge": "NEW"
+                            "to": "/listbox"
                         },
                         {
                             "name": "MultiSelect",
@@ -88,8 +88,7 @@
                         },
                         {
                             "name": "Password",
-                            "to": "/password",
-                            "badge": "NEW"
+                            "to": "/password"
                         },
                         {
                             "name": "RadioButton",
@@ -109,8 +108,7 @@
                         },
                         {
                             "name": "Textarea",
-                            "to": "/textarea",
-                            "badge": "NEW"
+                            "to": "/textarea"
                         },
                         {
                             "name": "ToggleButton",
@@ -118,13 +116,11 @@
                         },
                         {
                             "name": "TreeSelect",
-                            "to": "/treeselect",
-                            "badge": "NEW"
+                            "to": "/treeselect"
                         },
                         {
                             "name": "TriStateCheckbox",
-                            "to": "/tristatecheckbox",
-                            "badge": "NEW"
+                            "to": "/tristatecheckbox"
                         }
                     ]
                 },
@@ -149,13 +145,35 @@
                             "to": "/datatable"
                         },
                         {
-                            "name": "Tree",
-                            "to": "/tree",
+                            "name": "Dataview",
+                            "to": "/dataview"
+                        },
+                        {
+                            "name": "OrderList",
+                            "to": "/orderlist",
                             "badge": "NEW"
+                        },
+                        {
+                            "name": "Org Chart",
+                            "to": "/organizationchart"
                         },
                         {
                             "name": "Paginator",
                             "to": "/paginator"
+                        },
+                        {
+                            "name": "PickList",
+                            "to": "/picklist",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "Tree",
+                            "to": "/tree"
+                        },
+                        {
+                            "name": "TreeTable",
+                            "to": "/treetable",
+                            "badge": "NEW"
                         }
                     ]
                 },
@@ -172,8 +190,7 @@
                         },
                         {
                             "name": "Divider",
-                            "to": "/divider",
-                            "badge": "NEW"
+                            "to": "/divider"
                         },
                         {
                             "name": "Fieldset",
@@ -184,8 +201,16 @@
                             "to": "/panel"
                         },
                         {
+                            "name": "ScrollPanel",
+                            "to": "/scrollpanel"
+                        },
+                        {
                             "name": "TabView",
                             "to": "/tabview"
+                        },
+                        {
+                            "name": "Toolbar",
+                            "to": "/toolbar"
                         }
                     ]
                 },
@@ -193,8 +218,17 @@
                     "name": "Menu",
                     "children": [
                         {
+                            "name": "Breadcrumb",
+                            "to": "/breadcrumb"
+                        },
+                        {
                             "name": "ContextMenu",
                             "to": "/contextmenu"
+                        },
+                        {
+                            "name": "Dock",
+                            "to": "/dock",
+                            "badge": "NEW"
                         },
                         {
                             "name": "Menu",
@@ -205,8 +239,22 @@
                             "to": "/menubar"
                         },
                         {
+                            "name": "MegaMenu",
+                            "to": "/megamenu",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "PanelMenu",
+                            "to": "/panelmenu"
+                        },
+                        {
                             "name": "Steps",
                             "to": "/steps"
+                        },
+                        {
+                            "name": "TabMenu",
+                            "to": "/tabmenu",
+                            "badge": "NEW"
                         },
                         {
                             "name": "TieredMenu",
@@ -218,8 +266,21 @@
                     "name": "Overlays",
                     "children": [
                         {
+                            "name": "ConfirmDialog",
+                            "to": "/confirmdialog"
+                        },
+                        {
+                            "name": "ConfirmPopup",
+                            "to": "/confirmpopup"
+                        },
+                        {
                             "name": "Dialog",
                             "to": "/dialog"
+                        },
+                        {
+                            "name": "DynamicDialog",
+                            "to": "/dynamicdialog",
+                            "badge": "NEW"
                         },
                         {
                             "name": "OverlayPanel",
@@ -276,12 +337,21 @@
                             "to": "/ripple"
                         },
                         {
+                            "name": "ScrollTop",
+                            "to": "/scrolltop"
+                        },
+                        {
                             "name": "Skeleton",
                             "to": "/skeleton"
                         },
                         {
                             "name": "Tag",
                             "to": "/tag"
+                        },
+                        {
+                            "name": "Terminal",
+                            "to": "/terminal",
+                            "badge": "NEW"
                         }
                     ]
                 }

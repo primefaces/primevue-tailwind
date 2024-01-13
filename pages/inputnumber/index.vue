@@ -12,7 +12,6 @@ import LocaleDoc from '@/doc/inputnumber/LocaleDoc.vue';
 import NumeralsDoc from '@/doc/inputnumber/NumeralsDoc.vue';
 import PrefixSuffixDoc from '@/doc/inputnumber/PrefixSuffixDoc.vue';
 import VerticalDoc from '@/doc/inputnumber/VerticalDoc.vue';
-import PresetDoc from '@/doc/inputnumber/preset/index.vue';
 
 export default {
     data() {
@@ -74,7 +73,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'inputnumber'
+            }
         };
     }
 };

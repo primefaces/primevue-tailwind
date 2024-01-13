@@ -11,7 +11,6 @@ import DynamicDoc from '@/doc/accordion/DynamicDoc.vue';
 import ImportDoc from '@/doc/accordion/ImportDoc.vue';
 import MultipleDoc from '@/doc/accordion/MultipleDoc.vue';
 import TemplateDoc from '@/doc/accordion/TemplateDoc.vue';
-import PresetDoc from '@/doc/accordion/preset/index.vue';
 
 export default {
     data() {
@@ -58,7 +57,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'accordion'
+            }
         };
     }
 };

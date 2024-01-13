@@ -22,7 +22,7 @@ import MultipleDoc from '@/doc/autocomplete/MultipleDoc.vue';
 import ObjectsDoc from '@/doc/autocomplete/ObjectsDoc.vue';
 import TemplateDoc from '@/doc/autocomplete/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/autocomplete/VirtualScrollDoc.vue';
-import PresetDoc from '@/doc/autocomplete/preset/index.vue';
+
 export default {
     data() {
         return {
@@ -94,7 +94,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'autocomplete'
+            }
         };
     }
 };

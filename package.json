@@ -1,6 +1,6 @@
 {
     "name": "primevue-tailwind",
-    "version": "0.3.0",
+    "version": "0.5.0",
     "homepage": "https://tailwind.primevue.org/",
     "repository": {
         "type": "git",
@@ -50,10 +50,10 @@
     },
     "dependencies": {
         "@docsearch/js": "^3.3.3",
-        "nuxt": "3.8.2",
+        "nuxt": "3.3.2",
         "nuxt-gtag": "^0.6.2",
         "nuxt-primevue": "^0.2.0",
         "primeicons": "^6.0.1",
-        "primevue": "^3.45.0"
+        "primevue": "^3.46.0"
     }
 }

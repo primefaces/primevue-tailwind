@@ -10,7 +10,6 @@ import ImportDoc from '@/doc/tag/ImportDoc.vue';
 import PillDoc from '@/doc/tag/PillDoc.vue';
 import SeverityDoc from '@/doc/tag/SeverityDoc.vue';
 import TemplateDoc from '@/doc/tag/TemplateDoc.vue';
-import PresetDoc from '@/doc/tag/preset/index.vue';
 export default {
     data() {
         return {
@@ -51,7 +50,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'tag'
+            }
         };
     }
 };

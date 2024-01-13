@@ -16,7 +16,6 @@ import BasicDoc from '@/doc/togglebutton/BasicDoc.vue';
 import CustomizedDoc from '@/doc/togglebutton/CustomizedDoc.vue';
 import DisabledDoc from '@/doc/togglebutton/DisabledDoc.vue';
 import ImportDoc from '@/doc/togglebutton/ImportDoc.vue';
-import PresetDoc from '@/doc/togglebutton/preset/index.vue';
 
 export default {
     data() {
@@ -48,7 +47,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'togglebutton'
+            }
         };
     }
 };

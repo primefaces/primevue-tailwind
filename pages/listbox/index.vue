@@ -12,7 +12,6 @@ import ImportDoc from '@/doc/listbox/ImportDoc.vue';
 import MultipleDoc from '@/doc/listbox/MultipleDoc.vue';
 import TemplateDoc from '@/doc/listbox/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/listbox/VirtualScrollDoc.vue';
-import PresetDoc from '@/doc/listbox/preset/index.vue';
 export default {
     data() {
         return {
@@ -68,7 +67,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'listbox'
+            }
         };
     }
 };

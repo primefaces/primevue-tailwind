@@ -10,7 +10,6 @@ import ImportDoc from '@/doc/divider/ImportDoc.vue';
 import LoginDoc from '@/doc/divider/LoginDoc.vue';
 import TypeDoc from '@/doc/divider/TypeDoc.vue';
 import VerticalDoc from '@/doc/divider/VerticalDoc.vue';
-import PresetDoc from '@/doc/divider/preset/index.vue';
 
 export default {
     data() {
@@ -52,7 +51,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'divider'
+            }
         };
     }
 };

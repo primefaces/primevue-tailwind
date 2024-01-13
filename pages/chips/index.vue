@@ -9,7 +9,6 @@ import DisabledDoc from '@/doc/chips/DisabledDoc.vue';
 import ImportDoc from '@/doc/chips/ImportDoc.vue';
 import SeparatorDoc from '@/doc/chips/SeparatorDoc.vue';
 import TemplateDoc from '@/doc/chips/TemplateDoc.vue';
-import PresetDoc from '@/doc/chips/preset/index.vue';
 
 export default {
     data() {
@@ -56,7 +55,9 @@ export default {
                     component: AccessibilityDoc
                 }
             ],
-            presetDoc: PresetDoc
+            presetDoc: {
+                key: 'chips'
+            }
         };
     }
 };
