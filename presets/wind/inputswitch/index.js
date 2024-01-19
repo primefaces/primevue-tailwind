@@ -34,17 +34,17 @@ export default {
             'before:duration-200 before:transition before:ease-in-out',
             'before:bg-surface-0 before:dark:bg-surface-900',
             'before:shadow',
-            { 'before:transform before:translate-x-4': props.modelValue },
+            { 'before:transform before:translate-x-4': props.modelValue == props.trueValue },
 
             // Colors
             'border-2 border-transparent',
             {
-                'bg-surface-200 dark:bg-surface-700': !props.modelValue,
-                'bg-primary-500 dark:bg-primary-400': props.modelValue
+                'bg-surface-200 dark:bg-surface-700': !(props.modelValue == props.trueValue),
+                'bg-primary-500 dark:bg-primary-400': props.modelValue == props.trueValue
             },
 
             // States
-            { 'hover:bg-surface-300 hover:dark:bg-surface-600 ': !props.modelValue },
+            { 'hover:bg-surface-300 hover:dark:bg-surface-600 ': !(props.modelValue == props.trueValue) },
 
             // Transition
             'transition-colors duration-200',
