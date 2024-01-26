@@ -1,7 +1,7 @@
 export default {
     root: {
         class: [
-            'relative has-[input]:border-pink-500',
+            'relative',
 
             // Alignment
             'inline-flex',
