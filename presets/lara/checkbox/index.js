@@ -63,7 +63,7 @@ export default {
             'top-0 left-0',
             'z-10',
 
-            // Sizing
+            // Spacing
             'p-0',
             'm-0',
 
