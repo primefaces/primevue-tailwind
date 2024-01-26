@@ -213,7 +213,7 @@ export default {
                     // States
                     {
                         'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !context.checked,
-                        'peer-hover:bg-primary-700 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.checked,
+                        'peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'cursor-default opacity-60': props.disabled
                     },
