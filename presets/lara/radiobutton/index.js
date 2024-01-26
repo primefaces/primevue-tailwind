@@ -15,7 +15,7 @@ export default {
             'select-none'
         ]
     },
-    input: ({ props, state }) => ({
+    box: ({ props }) => ({
         class: [
             // Flexbox
             'flex justify-center items-center',
@@ -41,13 +41,41 @@ export default {
 
             // States
             {
-                'hover:border-primary-600 dark:hover:border-primary-300': !props.disabled,
-                'outline-none outline-offset-0': !props.disabled && state.focused,
-                'ring ring-primary-400/50 dark:ring-primary-300/50': !props.disabled && state.focused,
+                'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled,
+                'peer-hover:border-primary-600 dark:peer-hover:border-primary-300 peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
+                'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                 'opacity-60 cursor-default': props.disabled
             }
         ]
     }),
+    input: {
+        class: [
+            'peer',
+
+            // Size
+            'w-full ',
+            'h-full',
+
+            // Position
+            'absolute',
+            'top-0 left-0',
+            'z-10',
+
+            // Spacing
+            'p-0',
+            'm-0',
+
+            // Shape
+            'opacity-0',
+            'rounded-md',
+            'outline-none',
+            'border-2 border-surface-200 dark:border-surface-700',
+
+            // Misc
+            'appareance-none',
+            'cursor-pointer'
+        ]
+    },
     icon: ({ props }) => ({
         class: [
             'block',
@@ -56,8 +84,7 @@ export default {
             'rounded-full',
 
             // Size
-            'w-3',
-            'h-3',
+            'w-[0.857rem] h-[0.857rem]',
 
             // Colors
             'bg-surface-0 dark:bg-surface-900',
