@@ -28,7 +28,7 @@ export default {
             },
 
             // States
-            'focus:outline-none focus:outline-offset-0 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
             'hover:bg-surface-200 dark:hover:bg-surface-600/80',
             { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 
