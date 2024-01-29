@@ -12,7 +12,7 @@
                     }"
                     @click="setPreset('lara')"
                 >
-                    PrimeOne
+                    Lara
                 </button>
                 <button
                     type="button"
