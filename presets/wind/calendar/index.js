@@ -13,6 +13,9 @@ export default {
     }),
     input: ({ props }) => ({
         class: [
+            // Display
+            'flex flex-auto',
+
             // Font
             'font-sans leading-none  sm:text-sm',
 
@@ -419,6 +422,17 @@ export default {
         ]
     },
     minutepicker: {
+        class: [
+            // Flexbox and Alignment
+            'flex',
+            'items-center',
+            'flex-col',
+
+            // Spacing
+            'px-2'
+        ]
+    },
+    secondPicker: {
         class: [
             // Flexbox and Alignment
             'flex',

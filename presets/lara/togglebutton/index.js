@@ -1,8 +1,21 @@
 export default {
-    root: ({ props, context }) => ({
+    root: {
+        class: [
+            'relative',
+
+            // Alignment
+            'inline-flex',
+            'align-bottom',
+
+            // Misc
+            'cursor-pointer',
+            'select-none'
+        ]
+    },
+    box: ({ props }) => ({
         class: [
             // Alignments
-            'items-center inline-flex text-center align-bottom justify-center',
+            'items-center inline-flex flex-1 text-center align-bottom justify-center',
 
             // Sizes & Spacing
             'px-4 py-3 leading-none',
@@ -20,9 +33,9 @@ export default {
 
             // States
             {
-                'hover:bg-surface-50 dark:hover:bg-surface-800/80 hover:border-surface-200 dark:hover:bg-surface-700 hover:text-surface-700 dark:hover:text-white/80': !props.modelValue,
-                'hover:bg-primary-600 hover:border-primary-600 dark:hover:bg-primary-300 dark:hover:border-primary-300': props.modelValue,
-                'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': context.focused && !props.disabled
+                'peer-hover:bg-surface-50 dark:peer-hover:bg-surface-800/80 peer-hover:border-surface-200 dark:peer-hover:bg-surface-700 peer-hover:text-surface-700 dark:peer-hover:text-white/80': !props.modelValue,
+                'peer-hover:bg-primary-600 peer-hover:border-primary-600 dark:peer-hover:bg-primary-300 dark:peer-hover:border-primary-300': props.modelValue,
+                'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50': !props.disabled
             },
 
             // Transitions
@@ -34,6 +47,34 @@ export default {
     }),
     label: {
         class: 'font-bold text-center w-full'
+    },
+    input: {
+        class: [
+            'peer',
+
+            // Size
+            'w-full ',
+            'h-full',
+
+            // Position
+            'absolute',
+            'top-0 left-0',
+            'z-10',
+
+            // Spacing
+            'p-0',
+            'm-0',
+
+            // Shape
+            'opacity-0',
+            'rounded-md',
+            'outline-none',
+            'border border-surface-200 dark:border-surface-700',
+
+            // Misc
+            'appareance-none',
+            'cursor-pointer'
+        ]
     },
     icon: ({ props }) => ({
         class: [

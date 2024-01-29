@@ -15,7 +15,7 @@ export default {
             'select-none'
         ]
     },
-    input: ({ props, state }) => ({
+    box: ({ props }) => ({
         class: [
             // Flexbox
             'flex justify-center items-center',
@@ -42,12 +42,41 @@ export default {
 
             // States
             {
-                'outline-none outline-offset-0': !props.disabled && state.focused,
-                'ring-2 ring-offset-2 ring-offset-surface-0 dark:ring-offset-surface-800 ring-primary-500 dark:ring-primary-400': !props.disabled && state.focused,
+                'outline-none outline-offset-0': !props.disabled,
+                'peer-focus-visible:ring-2 peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-surface-0 dark:focus-visible:ring-offset-surface-800 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400':
+                    !props.disabled,
                 'opacity-60 cursor-default': props.disabled
             }
         ]
     }),
+    input: {
+        class: [
+            'peer',
+
+            // Size
+            'w-full ',
+            'h-full',
+
+            // Position
+            'absolute',
+            'top-0 left-0',
+            'z-10',
+
+            // Spacing
+            'p-0',
+            'm-0',
+
+            // Shape
+            'opacity-0',
+            'rounded-md',
+            'outline-none',
+            'border-2 border-surface-300 dark:border-surface-700',
+
+            // Misc
+            'appareance-none',
+            'cursor-default'
+        ]
+    },
     icon: {
         class: 'hidden'
     }

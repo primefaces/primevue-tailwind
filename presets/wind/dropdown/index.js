@@ -36,7 +36,7 @@ export default {
             // Color and Background
             'bg-transparent',
             'border-0',
-            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            { 'text-surface-800 dark:text-white/80': props.modelValue != undefined, 'text-surface-400 dark:text-surface-500': props.modelValue == undefined },
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Sizing and Spacing
@@ -131,7 +131,8 @@ export default {
             'py-2 px-4',
 
             // Color
-            { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
+            { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected && !context.disabled },
+            { 'text-surface-600 dark:text-white/70': !context.focused && !context.selected && context.disabled },
             { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
             { 'bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-700': context.focused && context.selected },
             { 'bg-transparent text-surface-700 dark:text-white/80': !context.focused && context.selected },
@@ -141,7 +142,8 @@ export default {
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
             // Misc
-            'cursor-pointer',
+            { 'pointer-events-none cursor-default': context.disabled },
+            { 'cursor-pointer': !context.disabled },
             'overflow-hidden',
             'whitespace-nowrap'
         ]

@@ -1,13 +1,12 @@
 export default {
-    root: ({ props, state }) => ({
+    root: ({ props }) => ({
         class: [
             'inline-block relative',
             'w-12 h-7',
             'rounded-2xl',
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled
-            },
-            { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused }
+            }
         ]
     }),
     slider: ({ props }) => ({
@@ -35,7 +34,9 @@ export default {
             },
 
             // States
-            { 'hover:bg-surface-300 hover:dark:bg-surface-600 ': !(props.modelValue == props.trueValue) },
+            { 'peer-hover:bg-surface-300 dark:peer-hover:bg-surface-600 ': !(props.modelValue == props.trueValue) && !props.disabled },
+            { 'peer-hover:bg-primary-600 dark:peer-hover:bg-surface-300 ': (props.modelValue == props.trueValue) && !props.disabled },
+            'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50',
 
             // Transition
             'transition-colors duration-200',
@@ -43,5 +44,32 @@ export default {
             // Misc
             'cursor-pointer'
         ]
-    })
+    }),
+    input: {
+        class: [
+            'peer',
+
+            // Size
+            'w-full ',
+            'h-full',
+
+            // Position
+            'absolute',
+            'top-0 left-0',
+            'z-10',
+
+            // Spacing
+            'p-0',
+            'm-0',
+
+            // Shape
+            'opacity-0',
+            'rounded-[2.5rem]',
+            'outline-none',
+
+            // Misc
+            'appareance-none',
+            'cursor-pointer'
+        ]
+    }
 };

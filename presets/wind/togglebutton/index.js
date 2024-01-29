@@ -1,8 +1,21 @@
 export default {
-    root: ({ props, context }) => ({
+    root: {
+        class: [
+            'relative',
+
+            // Alignment
+            'inline-flex',
+            'align-bottom',
+
+            // Misc
+            'cursor-pointer',
+            'select-none'
+        ]
+    },
+    box: ({ props }) => ({
         class: [
             // Alignments
-            'items-center inline-flex text-center align-bottom justify-center',
+            'items-center inline-flex flex-1 text-center align-bottom justify-center',
 
             // Sizes & Spacing
             'px-2.5 py-1.5',
@@ -13,16 +26,16 @@ export default {
 
             // Colors
             'text-surface-700 dark:text-white/80',
-            { 'ring-1 ring-surface-200 dark:ring-surface-700': !context.focused },
+            'ring-1 ring-surface-200 dark:ring-surface-700',
             {
                 'bg-surface-0 dark:bg-surface-900 ': !props.modelValue,
                 'bg-surface-100 dark:bg-surface-700': props.modelValue
             },
 
             // States
-            'hover:bg-surface-200 dark:hover:bg-surface-600/80',
+            'peer-hover:bg-surface-200 dark:peer-hover:bg-surface-600/80',
             {
-                'outline-none outline-offset-0 ring-2 ring-inset ring-primary-500 dark:ring-primary-400': context.focused && !props.disabled
+                'peer-focus-visible:ring-2 peer-focus-visible:ring-inset peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled
             },
 
             // Transitions
@@ -34,6 +47,34 @@ export default {
     }),
     label: {
         class: 'font-semibold text-center w-full'
+    },
+    input: {
+        class: [
+            'peer',
+
+            // Size
+            'w-full ',
+            'h-full',
+
+            // Position
+            'absolute',
+            'top-0 left-0',
+            'z-10',
+
+            // Spacing
+            'p-0',
+            'm-0',
+
+            // Shape
+            'opacity-0',
+            'rounded-md',
+            'outline-none',
+            'border border-surface-200 dark:border-surface-700',
+
+            // Misc
+            'appareance-none',
+            'cursor-pointer'
+        ]
     },
     icon: {
         class: [' mr-2', 'text-surface-700 dark:text-white/80']
