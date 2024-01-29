@@ -432,6 +432,17 @@ export default {
             'px-2'
         ]
     },
+    secondPicker: {
+        class: [
+            // Flexbox and Alignment
+            'flex',
+            'items-center',
+            'flex-col',
+
+            // Spacing
+            'px-2'
+        ]
+    },
     ampmpicker: {
         class: [
             // Flexbox and Alignment
