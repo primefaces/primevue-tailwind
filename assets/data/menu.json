@@ -35,8 +35,7 @@
                         },
                         {
                             "name": "CascadeSelect",
-                            "to": "/cascadeselect",
-                            "badge": "NEW"
+                            "to": "/cascadeselect"
                         },
                         {
                             "name": "Checkbox",
@@ -150,8 +149,7 @@
                         },
                         {
                             "name": "OrderList",
-                            "to": "/orderlist",
-                            "badge": "NEW"
+                            "to": "/orderlist"
                         },
                         {
                             "name": "Org Chart",
@@ -163,8 +161,7 @@
                         },
                         {
                             "name": "PickList",
-                            "to": "/picklist",
-                            "badge": "NEW"
+                            "to": "/picklist"
                         },
                         {
                             "name": "Tree",
@@ -172,8 +169,7 @@
                         },
                         {
                             "name": "TreeTable",
-                            "to": "/treetable",
-                            "badge": "NEW"
+                            "to": "/treetable"
                         }
                     ]
                 },
@@ -227,8 +223,7 @@
                         },
                         {
                             "name": "Dock",
-                            "to": "/dock",
-                            "badge": "NEW"
+                            "to": "/dock"
                         },
                         {
                             "name": "Menu",
@@ -240,8 +235,7 @@
                         },
                         {
                             "name": "MegaMenu",
-                            "to": "/megamenu",
-                            "badge": "NEW"
+                            "to": "/megamenu"
                         },
                         {
                             "name": "PanelMenu",
@@ -253,8 +247,7 @@
                         },
                         {
                             "name": "TabMenu",
-                            "to": "/tabmenu",
-                            "badge": "NEW"
+                            "to": "/tabmenu"
                         },
                         {
                             "name": "TieredMenu",
@@ -279,8 +272,7 @@
                         },
                         {
                             "name": "DynamicDialog",
-                            "to": "/dynamicdialog",
-                            "badge": "NEW"
+                            "to": "/dynamicdialog"
                         },
                         {
                             "name": "OverlayPanel",
@@ -350,8 +342,7 @@
                         },
                         {
                             "name": "Terminal",
-                            "to": "/terminal",
-                            "badge": "NEW"
+                            "to": "/terminal"
                         }
                     ]
                 }
