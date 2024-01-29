@@ -13,6 +13,9 @@ export default {
     }),
     input: ({ props }) => ({
         class: [
+            // Display
+            'flex flex-auto',
+
             // Font
             'font-sans leading-none  sm:text-sm',
 
