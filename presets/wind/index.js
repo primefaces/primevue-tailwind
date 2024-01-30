@@ -24,6 +24,7 @@ import divider from './divider';
 import dock from './dock';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
+import galleria from './galleria';
 import global from './global';
 import inlinemessage from './inlinemessage';
 import inputgroup from './inputgroup';
@@ -73,7 +74,6 @@ import tree from './tree';
 import treeselect from './treeselect';
 import treetable from './treetable';
 import tristatecheckbox from './tristatecheckbox';
-
 export default {
     global,
     directives: {
@@ -159,6 +159,7 @@ export default {
 
     //media
     carousel,
+    galleria,
 
     //misc
     badge,
