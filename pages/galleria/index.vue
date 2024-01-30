@@ -151,7 +151,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: 'dropdown'
+                key: 'galleria'
             }
         };
     }
