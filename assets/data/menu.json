@@ -317,6 +317,11 @@
                             "name": "Galleria",
                             "to": "/galleria",
                             "badge": "NEW"
+                        },
+                        {
+                            "name": "Image",
+                            "to": "/image",
+                            "badge": "NEW"
                         }
                     ]
                 },
