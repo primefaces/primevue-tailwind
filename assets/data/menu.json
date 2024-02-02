@@ -306,6 +306,26 @@
                     ]
                 },
                 {
+                    "name": "Media",
+                    "children": [
+                        {
+                            "name": "Carousel",
+                            "to": "/carousel",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "Galleria",
+                            "to": "/galleria",
+                            "badge": "NEW"
+                        },
+                        {
+                            "name": "Image",
+                            "to": "/image",
+                            "badge": "NEW"
+                        }
+                    ]
+                },
+                {
                     "name": "Misc",
                     "children": [
                         {

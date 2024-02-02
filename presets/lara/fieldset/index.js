@@ -52,7 +52,7 @@ export default {
             { 'rounded-md': props.toggleable },
 
             // Color
-            { 'text-surface-700 dark:text-surface-200 hover:text-surface-900 hover:text-surface-900': props.toggleable },
+            { 'text-surface-700 dark:text-surface-200 hover:text-surface-900': props.toggleable },
 
             // States
             { 'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable },

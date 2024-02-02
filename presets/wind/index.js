@@ -24,7 +24,9 @@ import divider from './divider';
 import dock from './dock';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
+import galleria from './galleria';
 import global from './global';
+import image from './image';
 import inlinemessage from './inlinemessage';
 import inputgroup from './inputgroup';
 import inputgroupaddon from './inputgroupaddon';
@@ -159,6 +161,8 @@ export default {
 
     //media
     carousel,
+    galleria,
+    image,
 
     //misc
     badge,
