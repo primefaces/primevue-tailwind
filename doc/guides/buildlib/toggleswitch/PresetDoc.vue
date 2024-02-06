@@ -83,9 +83,9 @@ const preset = {
 
             // States
             {
-                'hover:before:bg-surface-400 hover:dark:before:bg-surface-600': !props.modelValue,
-                'hover:before:bg-violet-600': !attrs.type & props.modelValue,
-                'hover:before:bg-amber-600': attrs.type === 'accent' && props.modelValue
+                'peer-hover:before:bg-surface-400 peer-hover:dark:before:bg-surface-600': !props.modelValue,
+                'peer-hover:before:bg-violet-600': !attrs.type & props.modelValue,
+                'peer-hover:before:bg-amber-600': attrs.type === 'accent' && props.modelValue
             },
 
             // Transition
@@ -94,7 +94,34 @@ const preset = {
             // Misc
             'cursor-pointer'
         ]
-    })
+    }),
+    input: {
+        class: [
+            'peer',
+
+            // Size
+            'w-full ',
+            'h-full',
+
+            // Position
+            'absolute',
+            'top-0 left-0',
+            'z-10',
+
+            // Spacing
+            'p-0',
+            'm-0',
+
+            // Shape
+            'opacity-0',
+            'rounded-[2.5rem]',
+            'outline-none',
+
+            // Misc
+            'appareance-none',
+            'cursor-pointer'
+        ]
+    }
 };
 <\/script>
 `
