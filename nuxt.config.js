@@ -18,6 +18,10 @@ export default defineNuxtConfig({
     vite: {
         optimizeDeps: {
             disabled: true
+        },
+        esbuild: {
+            minifyIdentifiers: false,
+            minifyWhitespace: false
         }
     },
     runtimeConfig: {

@@ -709,6 +709,7 @@ export default {
 `
     };
 
+    // @todo - Refactor
     const stringify = (value, indent = 2, currentIndent = 0) => {
         const currentIndentStr = ' '.repeat(currentIndent);
         const nextIndentStr = ' '.repeat(currentIndent + indent);
@@ -718,7 +719,17 @@ export default {
         } else if (ObjectUtils.isDate(value)) {
             return value.toISOString();
         } else if (ObjectUtils.isFunction(value)) {
-            return value.toString();
+            return value
+                .toString()
+                .split('\n')
+                .map((line, i, arr) => {
+                    try {
+                        return process?.dev ? line : i === 0 ? line : arr.length - 1 === i ? ' '.repeat(2) + line : currentIndentStr + line;
+                    } catch {
+                        return i === 0 ? line : arr.length - 1 === i ? ' '.repeat(2) + line : currentIndentStr + line;
+                    }
+                })
+                .join('\n');
         } else if (ObjectUtils.isObject(value)) {
             return (
                 '{\n' +
