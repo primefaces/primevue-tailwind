@@ -1,8 +1,7 @@
 <template>
     <DocSectionText v-bind="$attrs">
         <p>
-            The prerequisite steps are covered by the <a href="https://tailwindcss.com/docs/guides/nuxtjs" target="_blank" rel="noopener noreferrer">Install Tailwind CSS with Nuxt</a> guide. You may choose to install manually or via the Tailwind
-            module of nuxt. If you have Nuxt and Tailwind configured successfully, follow the next steps.
+            You may choose to install <a href="https://github.com/nuxt-modules/tailwindcss" target="_blank" rel="noopener noreferrer">the @nuxtjs/tailwindcss module</a> or <a href="https://tailwindcss.com/docs/guides/nuxtjs" target="_blank" rel="noopener noreferrer">install Tailwind CSS manually</a>; the prerequisite steps are covered by their guides. If you have Nuxt and Tailwind configured successfully, follow the next steps.
         </p>
     </DocSectionText>
 </template>
