@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Buttons can be placed at either side of an input element.</p>
     </DocSectionText>
-    <div class="card flex flex-col md:flex-row gap-3">
+    <div class="card flex flex-col gap-3">
         <InputGroup>
             <Button label="Search" />
             <InputText placeholder="Keyword" />

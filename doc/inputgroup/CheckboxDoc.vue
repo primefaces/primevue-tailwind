@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Checkbox and RadioButton components can be combined with an input element under the same group.</p>
     </DocSectionText>
-    <div class="card flex flex-col md:flex-row gap-3">
+    <div class="card flex flex-col gap-3">
         <InputGroup>
             <InputText placeholder="Price" />
             <InputGroupAddon>
