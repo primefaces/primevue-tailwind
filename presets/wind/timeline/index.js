@@ -41,11 +41,20 @@ export default {
         ]
     }),
     marker: {
-        class: 'flex self-baseline w-4 h-4 rounded-full border-2 border-primary-500 bg-surface-0 dark:border-primary-300 pdark:bg-surface-900/40'
+        class: [
+            // Display & Flexbox
+            'flex self-baseline',
+
+            // Size
+            'w-4 h-4',
+
+            // Appearance
+            'rounded-full border-2 border-primary-500 bg-surface-0 dark:border-primary-300 dark:bg-surface-900/40'
+        ]
     },
     connector: ({ props }) => ({
         class: [
-            'grow bg-surface-300 pdark:bg-surface-900/40',
+            'grow bg-surface-300 dark:bg-surface-700',
             {
                 'w-[2px]': props.layout === 'vertical',
                 'w-full h-[2px]': props.layout === 'horizontal'
