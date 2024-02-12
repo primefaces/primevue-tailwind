@@ -131,6 +131,11 @@
                             "to": "/button"
                         },
                         {
+                            "name": "Speed Dial",
+                            "to": "/speeddial",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "SplitButton",
                             "to": "/splitbutton"
                         }

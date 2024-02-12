@@ -60,6 +60,7 @@ import selectbutton from './selectbutton';
 import sidebar from './sidebar';
 import skeleton from './skeleton';
 import slider from './slider';
+import speeddial from './speeddial';
 import splitbutton from './splitbutton';
 import steps from './steps';
 import tabmenu from './tabmenu';
@@ -116,6 +117,7 @@ export default {
     //buttons
     button,
     splitbutton,
+    speeddial,
 
     //data
     paginator,
