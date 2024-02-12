@@ -164,6 +164,11 @@
                             "to": "/picklist"
                         },
                         {
+                            "name": "Timeline",
+                            "to": "/timeline",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Tree",
                             "to": "/tree"
                         },

@@ -67,6 +67,7 @@ import tag from './tag';
 import terminal from './terminal';
 import textarea from './textarea';
 import tieredmenu from './tieredmenu';
+import timeline from './timeline';
 import toast from './toast';
 import togglebutton from './togglebutton';
 import toolbar from './toolbar';
@@ -125,6 +126,7 @@ export default {
     orderlist,
     picklist,
     treetable,
+    timeline,
 
     //panels
     accordion,

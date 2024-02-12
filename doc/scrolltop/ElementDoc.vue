@@ -54,7 +54,7 @@ export default {
                 :threshold="100"
                 icon="pi pi-arrow-up"
                 :pt="{
-                    root: 'w-2rem h-2rem rounded-sm bg-primary',
+                    root: 'w-[2rem] h-[2rem] rounded-sm bg-primary',
                     icon: {
                         class: 'text-base'
                     }
@@ -80,7 +80,7 @@ export default {
                 :threshold="100"
                 icon="pi pi-arrow-up"
                 :pt="{
-                    root: 'w-2rem h-2rem rounded-sm bg-primary',
+                    root: 'w-[2rem] h-[2rem] rounded-sm bg-primary',
                     icon: {
                         class: 'text-base'
                     }
