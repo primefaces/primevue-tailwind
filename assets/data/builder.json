@@ -119,8 +119,7 @@
                 },
                 {
                     "name": "Speed Dial",
-                    "path": "speeddial",
-                    "disabled": true
+                    "path": "speeddial"
                 },
                 {
                     "name": "SplitButton",
@@ -165,13 +164,7 @@
                 },
                 {
                     "name": "Timeline",
-                    "path": "timeline",
-                    "disabled": true
-                },
-                {
-                    "name": "VirtualScroller",
-                    "path": "virtualscroller",
-                    "disabled": true
+                    "path": "timeline"
                 }
             ]
         },
@@ -188,8 +181,7 @@
                 },
                 {
                     "name": "Deferred",
-                    "path": "deferredcontent",
-                    "disabled": true
+                    "path": "deferredcontent"
                 },
                 {
                     "name": "Divider",
@@ -334,8 +326,7 @@
                 },
                 {
                     "name": "Image",
-                    "path": "image",
-                    "disabled": true
+                    "path": "image"
                 }
             ]
         },
@@ -357,8 +348,7 @@
                 },
                 {
                     "name": "BlockUI",
-                    "path": "blockui",
-                    "disabled": true
+                    "path": "blockui"
                 },
                 {
                     "name": "Chip",
