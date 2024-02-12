@@ -12,19 +12,53 @@ export default {
         class: 'relative flex h-full'
     },
     item: {
-        class: 'flex justify-center items-center h-full w-full'
+        class: [
+            // Flex
+            'flex justify-center items-center h-full w-full',
+
+            // Sizing
+            'h-full w-full'
+        ]
     },
     thumbnailwrapper: {
-        class: 'flex flex-col overflow-auto shrink-0'
+        class: [
+            // Flex
+            'flex flex-col shrink-0',
+
+            // Misc
+            'overflow-auto'
+        ]
     },
     thumbnailcontainer: {
-        class: ['flex flex-row', 'bg-black/90 p-4']
+        class: [
+            // Flex
+            'flex flex-row',
+
+            // Spacing
+            'p-4',
+
+            // Colors
+            'bg-black/90'
+        ]
     },
     previousthumbnailbutton: {
         class: [
-            'self-center flex shrink-0 justify-center items-center overflow-hidden relative',
-            'm-2 bg-transparent text-white w-8 h-8 transition duration-200 ease-in-out rounded-full',
+            // Positioning
+            'self-center relative',
+
+            // Display & Flexbox
+            'flex shrink-0 justify-center items-center overflow-hidden',
+
+            // Spacing
+            'm-2',
+
+            // Appearance
+            'bg-transparent text-white w-8 h-8 rounded-full transition duration-200 ease-in-out',
+
+            // Hover Effects
             'hover:bg-surface-0/10 hover:text-white',
+
+            // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
     },
@@ -39,9 +73,22 @@ export default {
     },
     nextthumbnailbutton: {
         class: [
-            'self-center flex shrink-0 justify-center items-center overflow-hidden relative',
-            'm-2 bg-transparent text-white w-8 h-8 transition duration-200 ease-in-out rounded-full',
+            // Positioning
+            'self-center relative',
+
+            // Display & Flexbox
+            'flex shrink-0 justify-center items-center overflow-hidden',
+
+            // Spacing
+            'm-2',
+
+            // Appearance
+            'bg-transparent text-white w-8 h-8 rounded-full transition duration-200 ease-in-out',
+
+            // Hover Effects
             'hover:bg-surface-0/10 hover:text-white',
+
+            // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
     },
@@ -53,12 +100,20 @@ export default {
     },
     indicatorbutton: ({ context }) => ({
         class: [
-            'w-4 h-4 transition duration-200 rounded-full',
+            // Size
+            'w-4 h-4',
+
+            // Appearance
+            'rounded-full transition duration-200',
+
+            // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
-            {
-                'bg-surface-200 hover:bg-surface-300 dark:bg-surface-700 dark:hover:bg-surface-600': !context.highlighted,
-                'bg-primary-500 hover:bg-primary-600': context.highlighted
-            }
+
+            // Conditional Appearance: Not Highlighted
+            { 'bg-surface-200 hover:bg-surface-300 dark:bg-surface-700 dark:hover:bg-surface-600': !context.highlighted },
+
+            // Conditional Appearance: Highlighted
+            { 'bg-primary-500 hover:bg-primary-600': context.highlighted }
         ]
     }),
     mask: {
@@ -66,9 +121,22 @@ export default {
     },
     closebutton: {
         class: [
-            'absolute top-0 right-0 flex justify-center items-center overflow-hidden m-2',
+            // Positioning
+            'absolute top-0 right-0',
+
+            // Display & Flexbox
+            'flex justify-center items-center overflow-hidden',
+
+            // Spacing
+            'm-2',
+
+            // Appearance
             'text-white bg-transparent w-12 h-12 rounded-full transition duration-200 ease-in-out',
+
+            // Hover Effect
             'hover:text-white hover:bg-surface-0/10',
+
+            // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
     },
@@ -77,26 +145,54 @@ export default {
     },
     previousitembutton: {
         class: [
+            // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
-            'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md mx-2',
-            'fixed top-1/2 mt-[-0.5rem]',
-            'left-0',
+
+            // Appearance
+            'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md',
+
+            // Spacing
+            'mx-2',
+
+            // Positioning
+            'fixed top-1/2 mt-[-0.5rem] left-0',
+
+            // Hover Effect
             'hover:bg-surface-0/10 hover:text-white',
+
+            // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
     },
     nextitembutton: {
         class: [
+            // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
-            'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md mx-2',
-            'fixed top-1/2 mt-[-0.5rem]',
-            'right-0',
+
+            // Appearance
+            'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md',
+
+            // Spacing
+            'mx-2',
+
+            // Positioning
+            'fixed top-1/2 mt-[-0.5rem] right-0',
+
+            // Hover Effect
             'hover:bg-surface-0/10 hover:text-white',
+
+            // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
     },
     caption: {
-        class: ['absolute bottom-0 left-0 w-full', 'bg-black/50 text-white p-4']
+        class: [
+            // Positioning
+            'absolute bottom-0 left-0 w-full',
+
+            // Appearance
+            'bg-black/50 text-white p-4'
+        ]
     },
     transition: {
         enterFromClass: 'opacity-0 scale-75',
