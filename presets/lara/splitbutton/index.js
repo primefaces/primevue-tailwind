@@ -19,13 +19,14 @@ export default {
                 'items-center inline-flex text-center align-bottom justify-center',
 
                 // Sizes & Spacing
+                'leading-[normal]',
                 {
-                    'px-4 py-3 leading-none': parent.props.size === null && parent.props.label !== null,
+                    'px-4 py-3': parent.props.size === null,
                     'text-sm py-2 px-3': parent.props.size === 'small',
                     'text-xl py-3 px-4': parent.props.size === 'large'
                 },
                 {
-                    'h-12 w-12 p-0': parent.props.label == null
+                    'min-w-12 p-0 py-3': parent.props.label == null && parent.props.icon !== null
                 },
 
                 // Shape
@@ -204,13 +205,14 @@ export default {
                 'items-center inline-flex text-center align-bottom justify-center',
 
                 // Sizes & Spacing
+                'leading-[normal]',
                 {
-                    'px-4 py-3 leading-none': parent.props.size === null && parent.props.label !== null,
-                    'text-xs py-2 px-3': parent.props.size === 'small',
+                    'px-4 py-3': parent.props.size === null,
+                    'text-sm py-2 px-3': parent.props.size === 'small',
                     'text-xl py-3 px-4': parent.props.size === 'large'
                 },
                 {
-                    'h-12 w-12 p-0': parent.props.label == null
+                    'min-w-12 p-0 py-3': parent.props.label == null && parent.props.icon !== null
                 },
 
                 // Shape

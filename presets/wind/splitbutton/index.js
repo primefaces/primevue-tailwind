@@ -20,12 +20,12 @@ export default {
                 // Sizes & Spacing
                 'text-sm',
                 {
-                    'px-2.5 py-1.5 min-w-[2rem]': parent.props.size === null && parent.props.label !== null,
+                    'px-2.5 py-1.5 min-w-[2rem]': parent.props.size === null,
                     'px-2 py-1': parent.props.size === 'small',
                     'px-3 py-2': parent.props.size === 'large'
                 },
                 {
-                    'h-8 w-8 p-0': parent.props.label == null
+                    'min-w-8 p-0 py-1.5': parent.props.label == null && parent.props.icon !== null
                 },
 
                 // Shape
@@ -208,12 +208,12 @@ export default {
                 // Sizes & Spacing
                 'text-sm',
                 {
-                    'px-2.5 py-1.5 min-w-[2rem]': parent.props.size === null && parent.props.label !== null,
+                    'px-2.5 py-1.5 min-w-[2rem]': parent.props.size === null,
                     'px-2 py-1': parent.props.size === 'small',
                     'px-3 py-2': parent.props.size === 'large'
                 },
                 {
-                    'h-8 w-8 p-0': parent.props.label == null
+                    'min-w-8 p-0 py-1.5': parent.props.label == null && parent.props.icon !== null
                 },
                 'ml-[1px]',
 
