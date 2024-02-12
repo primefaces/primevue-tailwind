@@ -175,6 +175,11 @@
                         {
                             "name": "TreeTable",
                             "to": "/treetable"
+                        },
+                        {
+                            "name": "VirtualScroller",
+                            "to": "/virtualscroller",
+                            "badge": "NEW"
                         }
                     ]
                 },
