@@ -4,6 +4,7 @@ import avatar from './avatar';
 import avatargroup from './avatargroup';
 import badge from './badge';
 import badgedirective from './badgedirective';
+import blockui from './blockui';
 import breadcrumb from './breadcrumb';
 import button from './button';
 import calendar from './calendar';
@@ -175,5 +176,6 @@ export default {
     progressbar,
     skeleton,
     scrolltop,
-    terminal
+    terminal,
+    blockui
 };

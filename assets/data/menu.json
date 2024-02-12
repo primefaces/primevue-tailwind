@@ -342,6 +342,11 @@
                             "to": "/badge"
                         },
                         {
+                            "name": "BlockUI",
+                            "to": "/blockui",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Chip",
                             "to": "/chip"
                         },
