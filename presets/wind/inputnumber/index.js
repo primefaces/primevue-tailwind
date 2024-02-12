@@ -1,10 +1,10 @@
 export default {
     root: ({ props, parent }) => ({
         class: [
-            // Display
+            // Flex
             'inline-flex',
-
             { 'flex-col': props.showButtons && props.buttonLayout == 'vertical' },
+            { 'flex-1 w-[1%]': parent.instance.$name == 'InputGroup' },
 
             //Sizing
             { '!w-16': props.showButtons && props.buttonLayout == 'vertical' },
@@ -21,7 +21,7 @@ export default {
     input: {
         root: ({ parent }) => ({
             class: [
-                 // Display
+                // Display
                 'flex flex-auto',
 
                 //Text

@@ -4,6 +4,9 @@ export default {
             // Font
             'font-sans leading-none',
 
+            // Flex
+            { 'flex-1 w-[1%]': parent.instance.$name == 'InputGroup' },
+
             // Spacing
             'm-0',
             {
