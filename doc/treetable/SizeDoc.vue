@@ -6,7 +6,7 @@
         <div class="flex justify-center mb-4">
             <SelectButton v-model="size" :options="sizeOptions" optionLabel="label" dataKey="label" />
         </div>
-        <TreeTable :value="nodes" :class="`p-treetable-${size.class}`">
+        <TreeTable :value="nodes" :size="size.value">
             <Column field="name" header="Name" expander></Column>
             <Column field="size" header="Size"></Column>
             <Column field="type" header="Type"></Column>
@@ -24,9 +24,9 @@ export default {
             nodes: null,
             size: { label: 'Normal', value: 'normal' },
             sizeOptions: [
-                { label: 'Small', value: 'small', class: 'sm' },
-                { label: 'Normal', value: 'normal' },
-                { label: 'Large', value: 'large', class: 'lg' }
+                { label: 'Small', value: 'small' },
+                { label: 'Normal', value: 'null' },
+                { label: 'Large', value: 'large' }
             ],
             code: {
                 basic: `
@@ -56,9 +56,9 @@ export default {
             nodes: null,
             size: { label: 'Normal', value: 'normal' },
             sizeOptions: [
-                { label: 'Small', value: 'small', class: 'sm' },
-                { label: 'Normal', value: 'normal' },
-                { label: 'Large', value: 'large', class: 'lg' }
+                { label: 'Small', value: 'small' },
+                { label: 'Normal', value: 'null' },
+                { label: 'Large', value: 'large' }
             ]
         }
     },
@@ -90,9 +90,9 @@ onMounted(() => {
 const nodes = ref();
 const size = ref({ label: 'Normal', value: 'normal' });
 const sizeOptions = ref([
-    { label: 'Small', value: 'small', class: 'sm' },
-    { label: 'Normal', value: 'normal' },
-    { label: 'Large', value: 'large', class: 'lg' }
+{ label: 'Small', value: 'small' },
+    { label: 'Normal', value: 'null' },
+    { label: 'Large', value: 'large' }
 ]);
 <\/script>
 `,
