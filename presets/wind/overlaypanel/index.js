@@ -16,11 +16,17 @@ export default {
             'dark:border-surface-700',
 
             // Before: Triangle
-            'before:absolute before:-top-2 before:ml-4 before:z-50',
+            'before:absolute before:-top-[9px] before:-ml-[9px] before:left-[calc(var(--overlayArrowLeft,0)+1.25rem)] z-0',
             'before:w-0 before:h-0 before:shadow-xl',
             'before:border-transparent before:border-solid',
-            'before:border-x-[0.5rem] before:border-b-[0.5rem]',
-            'before:border-t-0 before:border-b-surface-0 dark:before:border-b-surface-800'
+            'before:border-x-[8px] before:border-[8px]',
+            'before:border-t-0 before:border-b-surface-300/10 dark:before:border-b-surface-700',
+
+            'after:absolute after:-top-2 after:-ml-[8px] after:left-[calc(var(--overlayArrowLeft,0)+1.25rem)]',
+            'after:w-0 after:h-0',
+            'after:border-transparent after:border-solid',
+            'after:border-x-[0.5rem] after:border-[0.5rem]',
+            'after:border-t-0 after:border-b-surface-0 dark:after:border-b-surface-800'
         ]
     },
     content: {
