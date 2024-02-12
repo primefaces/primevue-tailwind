@@ -6,7 +6,6 @@ export default {
             'relative',
 
             // Shape
-            'w-full md:w-56',
             'rounded-md',
             'shadow-sm',
 

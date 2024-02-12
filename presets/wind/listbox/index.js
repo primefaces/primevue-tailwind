@@ -4,7 +4,6 @@ export default {
             // Sizing and Shape
             'min-w-[12rem]',
             'rounded-md',
-            // Spacing
 
             // Colors
             'bg-surface-0 dark:bg-surface-700',
