@@ -1,7 +1,4 @@
 export default {
-    root: {
-        class: 'flex flex-col'
-    },
     content: {
         class: 'flex flex-col'
     },

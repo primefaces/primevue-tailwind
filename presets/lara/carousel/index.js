@@ -89,14 +89,13 @@ export default {
             }
         ]
     }),
-    item: ({ props }) => ({
+    item: ({ props, state }) => ({
         class: [
             // Flexbox
-            'flex shrink-0 grow',
-
+            'flex shrink-0 grow ',
             // Width
             {
-                'w-1/3': props.orientation !== 'vertical',
+                [`w-[${100 / 10}%]`]: props.orientation !== 'vertical',
                 'w-full': props.orientation == 'vertical'
             }
         ]
