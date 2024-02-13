@@ -25,6 +25,7 @@ import divider from './divider';
 import dock from './dock';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
+import floatlabel from './floatlabel';
 import galleria from './galleria';
 import global from './global';
 import iconfield from './iconfield';
@@ -116,6 +117,7 @@ export default {
     textarea,
     password,
     iconfield,
+    floatlabel,
 
     //buttons
     button,

@@ -54,6 +54,11 @@
                             "to": "/dropdown"
                         },
                         {
+                            "name": "FloatLabel",
+                            "to": "/floatlabel",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "IconField",
                             "to": "/iconfield",
                             "badge": "NEW"
