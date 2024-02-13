@@ -5,15 +5,21 @@ export default {
             'inline-flex',
             'relative',
 
+            // Flex
+            { 'flex-1 w-[1%]': parent.instance.$name == 'InputGroup' },
+
             // Shape
-            'rounded-md',
             'shadow-sm',
+            { 'rounded-md': parent.instance.$name !== 'InputGroup' },
+            { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
+            { 'border-0 border-y border-l last:border-r border-surface-300 dark:border-surface-600': parent.instance.$name == 'InputGroup' },
+            { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
 
             // States
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': parent.instance.$name !== 'InputGroup' && !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': parent.instance.$name !== 'InputGroup' && state.focused },
 
             // Misc
             'cursor-default',
