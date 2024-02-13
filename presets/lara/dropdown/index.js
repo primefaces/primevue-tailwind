@@ -6,11 +6,17 @@ export default {
             'relative',
 
             // Shape
-            'rounded-md',
+            { 'rounded-md': parent.instance.$name !== 'InputGroup' },
+            { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
+            { 'border-0 border-y border-l last:border-r': parent.instance.$name == 'InputGroup' },
+            { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'border border-surface-300',
+            {'dark:border-surface-700': parent.instance.$name != 'InputGroup'},
+            {'dark:border-surface-600': parent.instance.$name == 'InputGroup'},
+                
 
             // Transitions
             'transition-all',
