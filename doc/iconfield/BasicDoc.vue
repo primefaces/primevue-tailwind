@@ -5,7 +5,7 @@
             the default value is <i>right</i> and also <i>left</i> option is available.
         </p>
     </DocSectionText>
-    <div class="card flex flex-wrap justify-content-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-3">
         <IconField iconPosition="left">
             <InputIcon>
                 <i class="pi pi-search" />
@@ -47,7 +47,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex flex-wrap justify-content-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-3">
         <IconField iconPosition="left">
             <InputIcon>
                 <i class="pi pi-search" />
@@ -77,7 +77,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex flex-wrap justify-content-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-3">
         <IconField iconPosition="left">
             <InputIcon>
                 <i class="pi pi-search" />
