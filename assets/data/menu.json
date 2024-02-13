@@ -54,6 +54,11 @@
                             "to": "/dropdown"
                         },
                         {
+                            "name": "IconField",
+                            "to": "/iconfield",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "InputGroup",
                             "to": "/inputgroup"
                         },
@@ -132,8 +137,7 @@
                         },
                         {
                             "name": "Speed Dial",
-                            "to": "/speeddial",
-                            "badge": "NEW"
+                            "to": "/speeddial"
                         },
                         {
                             "name": "SplitButton",
@@ -170,8 +174,7 @@
                         },
                         {
                             "name": "Timeline",
-                            "to": "/timeline",
-                            "badge": "NEW"
+                            "to": "/timeline"
                         },
                         {
                             "name": "Tree",
@@ -183,8 +186,7 @@
                         },
                         {
                             "name": "VirtualScroller",
-                            "to": "/virtualscroller",
-                            "badge": "NEW"
+                            "to": "/virtualscroller"
                         }
                     ]
                 },
@@ -201,8 +203,7 @@
                         },
                         {
                             "name": "Defered",
-                            "to": "/deferredcontent",
-                            "badge": "NEW"
+                            "to": "/deferredcontent"
                         },
                         {
                             "name": "Divider",
@@ -330,8 +331,7 @@
                     "children": [
                         {
                             "name": "Image",
-                            "to": "/image",
-                            "badge": "NEW"
+                            "to": "/image"
                         }
                     ]
                 },
@@ -348,12 +348,16 @@
                         },
                         {
                             "name": "BlockUI",
-                            "to": "/blockui",
-                            "badge": "NEW"
+                            "to": "/blockui"
                         },
                         {
                             "name": "Chip",
                             "to": "/chip"
+                        },
+                        {
+                            "name": "MeterGroup",
+                            "to": "/metergroup",
+                            "badge": "NEW"
                         },
                         {
                             "name": "ProgressBar",

@@ -27,6 +27,7 @@ import dropdown from './dropdown';
 import fieldset from './fieldset';
 import galleria from './galleria';
 import global from './global';
+import iconfield from './iconfield';
 import image from './image';
 import inlinemessage from './inlinemessage';
 import inputgroup from './inputgroup';
@@ -41,6 +42,7 @@ import megamenu from './megamenu';
 import menu from './menu';
 import menubar from './menubar';
 import message from './message';
+import metergroup from './metergroup';
 import multiselect from './multiselect';
 import orderlist from './orderlist';
 import organizationchart from './organizationchart';
@@ -113,6 +115,7 @@ export default {
     tristatecheckbox,
     textarea,
     password,
+    iconfield,
 
     //buttons
     button,
@@ -179,5 +182,6 @@ export default {
     skeleton,
     scrolltop,
     terminal,
-    blockui
+    blockui,
+    metergroup
 };
