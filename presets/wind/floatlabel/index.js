@@ -1,5 +1,5 @@
 export default {
-    root: ({ instance }) => ({
+    root: {
         class: [
             'block relative',
 
@@ -19,8 +19,8 @@ export default {
             '[&>*:last-child]:has-[:focus]:text-sm',
 
             // Filled Input Label Appearance
-            { '[&>*:last-child]:-top-3': instance.$params.parent.instance.value !== null },
-            { '[&>*:last-child]:text-sm': instance.$params.parent.instance.value !== null }
+            '[&>*:last-child]:has-[.filled]:-top-3',
+            '[&>*:last-child]:has-[.filled]:text-sm'
         ]
-    })
+    }
 };

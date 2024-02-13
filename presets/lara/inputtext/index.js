@@ -34,6 +34,9 @@ export default {
                 'opacity-60 select-none pointer-events-none cursor-default': context.disabled
             },
 
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && context.filled },
+
             // Misc
             'appearance-none',
             'transition-colors duration-200'
