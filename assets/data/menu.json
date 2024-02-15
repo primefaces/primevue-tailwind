@@ -374,6 +374,11 @@
                             "to": "/progressbar"
                         },
                         {
+                            "name": "ProgressSpinner",
+                            "to": "/progressspinner",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "Ripple",
                             "to": "/ripple"
                         },

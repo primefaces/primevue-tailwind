@@ -55,6 +55,7 @@ import panelmenu from './panelmenu';
 import password from './password';
 import picklist from './picklist';
 import progressbar from './progressbar';
+import progressspinner from './progressspinner';
 import radiobutton from './radiobutton';
 import rating from './rating';
 import ripple from './ripple';
@@ -187,5 +188,6 @@ export default {
     terminal,
     blockui,
     metergroup,
-    inplace
+    inplace,
+    progressspinner
 };
