@@ -48,7 +48,10 @@ export default {
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
                 'hover:bg-primary-400/30 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
-            }
+            },
+
+            // Disabled
+            { 'opacity-60 pointer-events-none cursor-default': context.disabled }
         ]
     }),
     action: {

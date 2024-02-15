@@ -48,7 +48,10 @@ export default {
 
             // Transitions
             'transition-shadow',
-            'duration-200'
+            'duration-200',
+
+            // Disabled
+            { 'opacity-60 pointer-events-none cursor-default': context.disabled }
         ]
     }),
     action: {

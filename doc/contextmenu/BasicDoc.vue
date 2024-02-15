@@ -15,7 +15,8 @@ export default {
         return {
             items: [
                 { label: 'Copy', icon: 'pi pi-copy' },
-                { label: 'Rename', icon: 'pi pi-file-edit' }
+                { label: 'Rename', icon: 'pi pi-file-edit' },
+                { label: 'Delete', icon: 'pi pi-trash', disabled: true },
             ],
             code: {
                 basic: `
@@ -36,7 +37,8 @@ export default {
         return {
             items: [
                 { label: 'Copy', icon: 'pi pi-copy' },
-                { label: 'Rename', icon: 'pi pi-file-edit' }
+                { label: 'Rename', icon: 'pi pi-file-edit' },
+                { label: 'Delete', icon: 'pi pi-trash', disabled: true },
             ]
         };
     },
@@ -62,7 +64,8 @@ import { ref } from 'vue';
 const menu = ref();
 const items = ref([
     { label: 'Copy', icon: 'pi pi-copy' },
-    { label: 'Rename', icon: 'pi pi-file-edit' }
+    { label: 'Rename', icon: 'pi pi-file-edit' },
+    { label: 'Delete', icon: 'pi pi-trash', disabled: true },
 ]);
 
 const onImageRightClick = (event) => {
