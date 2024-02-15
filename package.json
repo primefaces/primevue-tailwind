@@ -50,7 +50,7 @@
     },
     "dependencies": {
         "@docsearch/js": "^3.3.3",
-        "nuxt": "3.3.2",
+        "nuxt": "~3.8.2",
         "nuxt-gtag": "^0.6.2",
         "nuxt-primevue": "^0.3.0",
         "primeicons": "^6.0.1",
