@@ -360,6 +360,11 @@
                             "to": "/chip"
                         },
                         {
+                            "name": "Inplace",
+                            "to": "/inplace",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "MeterGroup",
                             "to": "/metergroup",
                             "badge": "NEW"

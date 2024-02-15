@@ -31,6 +31,7 @@ import global from './global';
 import iconfield from './iconfield';
 import image from './image';
 import inlinemessage from './inlinemessage';
+import inplace from './inplace';
 import inputgroup from './inputgroup';
 import inputgroupaddon from './inputgroupaddon';
 import inputmask from './inputmask';
@@ -185,5 +186,6 @@ export default {
     scrolltop,
     terminal,
     blockui,
-    metergroup
+    metergroup,
+    inplace
 };
