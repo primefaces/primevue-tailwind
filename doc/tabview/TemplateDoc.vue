@@ -8,7 +8,7 @@
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                        <span class="font-bold whitespace-nowrap">Amy Elsner</span>
                     </div>
                 </template>
                 <p class="m-0">
@@ -20,7 +20,7 @@
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Onyama Limba</span>
+                        <span class="font-bold whitespace-nowrap">Onyama Limba</span>
                     </div>
                 </template>
                 <p class="m-0">
@@ -32,7 +32,7 @@
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/ionibowcher.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Ioni Bowcher</span>
+                        <span class="font-bold whitespace-nowrap">Ioni Bowcher</span>
                         <Badge value="2" />
                     </div>
                 </template>
@@ -57,7 +57,7 @@ export default {
         <template #header>
             <div class="flex items-center gap-2">
                 <Avatar image="/images/avatar/amyelsner.png" shape="circle" />
-                <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                <span class="font-bold whitespace-nowrap	">Amy Elsner</span>
             </div>
         </template>
         <p class="m-0">
@@ -69,7 +69,7 @@ export default {
         <template #header>
             <div class="flex items-center gap-2">
                 <Avatar image="/images/avatar/onyamalimba.png" shape="circle" />
-                <span class="font-bold white-space-nowrap">Onyama Limba</span>
+                <span class="font-bold whitespace-nowrap	">Onyama Limba</span>
             </div>
         </template>
         <p class="m-0">
@@ -81,7 +81,7 @@ export default {
         <template #header>
             <div class="flex items-center gap-2">
                 <Avatar image="/images/avatar/ionibowcher.png" shape="circle" />
-                <span class="font-bold white-space-nowrap">Ioni Bowcher</span>
+                <span class="font-bold whitespace-nowrap	">Ioni Bowcher</span>
                 <Badge value="2" />
             </div>
         </template>
@@ -100,7 +100,7 @@ export default {
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                        <span class="font-bold whitespace-nowrap	">Amy Elsner</span>
                     </div>
                 </template>
                 <p class="m-0">
@@ -112,7 +112,7 @@ export default {
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Onyama Limba</span>
+                        <span class="font-bold whitespace-nowrap	">Onyama Limba</span>
                     </div>
                 </template>
                 <p class="m-0">
@@ -124,7 +124,7 @@ export default {
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/ionibowcher.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Ioni Bowcher</span>
+                        <span class="font-bold whitespace-nowrap	">Ioni Bowcher</span>
                         <Badge value="2" />
                     </div>
                 </template>
@@ -148,7 +148,7 @@ export default {
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                        <span class="font-bold whitespace-nowrap	">Amy Elsner</span>
                     </div>
                 </template>
                 <p class="m-0">
@@ -160,7 +160,7 @@ export default {
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Onyama Limba</span>
+                        <span class="font-bold whitespace-nowrap	">Onyama Limba</span>
                     </div>
                 </template>
                 <p class="m-0">
@@ -172,7 +172,7 @@ export default {
                 <template #header>
                     <div class="flex items-center gap-2">
                         <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/ionibowcher.png" shape="circle" />
-                        <span class="font-bold white-space-nowrap">Ioni Bowcher</span>
+                        <span class="font-bold whitespace-nowrap	">Ioni Bowcher</span>
                         <Badge value="2" />
                     </div>
                 </template>

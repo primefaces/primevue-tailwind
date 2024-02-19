@@ -26,6 +26,7 @@ import dock from './dock';
 import dropdown from './dropdown';
 import editor from './editor';
 import fieldset from './fieldset';
+import fileupload from './fileupload';
 import floatlabel from './floatlabel';
 import galleria from './galleria';
 import global from './global';
@@ -149,6 +150,9 @@ export default {
     divider,
     toolbar,
     scrollpanel,
+
+    //file
+    fileupload,
 
     //menu
     contextmenu,

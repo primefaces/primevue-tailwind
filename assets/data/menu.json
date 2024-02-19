@@ -242,6 +242,16 @@
                     ]
                 },
                 {
+                    "name": "File",
+                    "children": [
+                        {
+                            "name": "Upload",
+                            "to": "/fileupload",
+                            "badge": "NEW"
+                        }
+                    ]
+                },
+                {
                     "name": "Menu",
                     "children": [
                         {

@@ -9,7 +9,7 @@
             <template #header>
                 <div class="inline-flex items-center justify-center gap-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                    <span class="font-bold whitespace-nowrap">Amy Elsner</span>
                 </div>
             </template>
             <p class="m-0">
@@ -37,7 +37,7 @@ export default {
     <template #header>
         <div class="inline-flex items-center justify-center gap-2">
             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-            <span class="font-bold white-space-nowrap">Amy Elsner</span>
+            <span class="font-bold whitespace-nowrap	">Amy Elsner</span>
         </div>
     </template>
     <p class="m-0">
@@ -57,7 +57,7 @@ export default {
             <template #header>
                 <div class="inline-flex items-center justify-center gap-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                    <span class="font-bold whitespace-nowrap	">Amy Elsner</span>
                 </div>
             </template>
             <p class="m-0">
@@ -89,7 +89,7 @@ export default {
             <template #header>
                 <div class="inline-flex items-center justify-center gap-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                    <span class="font-bold whitespace-nowrap	">Amy Elsner</span>
                 </div>
             </template>
             <p class="m-0">
