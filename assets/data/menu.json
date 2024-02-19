@@ -232,6 +232,11 @@
                             "to": "/scrollpanel"
                         },
                         {
+                            "name": "Splitter",
+                            "to": "/splitter",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "TabView",
                             "to": "/tabview"
                         },

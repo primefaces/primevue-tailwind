@@ -69,6 +69,7 @@ import skeleton from './skeleton';
 import slider from './slider';
 import speeddial from './speeddial';
 import splitbutton from './splitbutton';
+import splitter from './splitter';
 import steps from './steps';
 import tabmenu from './tabmenu';
 import tabview from './tabview';
@@ -150,6 +151,7 @@ export default {
     divider,
     toolbar,
     scrollpanel,
+    splitter,
 
     //file
     fileupload,
