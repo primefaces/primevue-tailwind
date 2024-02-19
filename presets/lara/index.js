@@ -24,6 +24,7 @@ import dialog from './dialog';
 import divider from './divider';
 import dock from './dock';
 import dropdown from './dropdown';
+import editor from './editor';
 import fieldset from './fieldset';
 import floatlabel from './floatlabel';
 import galleria from './galleria';
@@ -120,6 +121,7 @@ export default {
     password,
     iconfield,
     floatlabel,
+    editor,
 
     //buttons
     button,

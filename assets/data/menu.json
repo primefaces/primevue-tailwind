@@ -54,6 +54,11 @@
                             "to": "/dropdown"
                         },
                         {
+                            "name": "Editor",
+                            "to": "/editor",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "FloatLabel",
                             "to": "/floatlabel",
                             "badge": "NEW"
