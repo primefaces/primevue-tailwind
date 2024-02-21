@@ -11,18 +11,13 @@ export default {
             'rounded-lg',
 
             // Borders (Conditional)
-            { 'border border-solid border-surface-50 dark:border-surface-700': !context.nested }
+            { 'border border-solid border-surface-50 dark:border-surface-700': !context.nested },
+
+            // Nested
+            { 'flex grow border-0': context.nested }
         ]
     }),
-    splitterpanel: {
-        root: {
-            class: [
-                // Flexbox
-                'flex',
-                'grow'
-            ]
-        }
-    },
+
     gutter: ({ props }) => ({
         class: [
             // Flexbox

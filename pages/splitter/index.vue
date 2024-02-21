@@ -45,7 +45,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: 'splitter'
+                key: ['splitter', 'splitterpanel']
             }
         };
     }

@@ -70,6 +70,7 @@ import slider from './slider';
 import speeddial from './speeddial';
 import splitbutton from './splitbutton';
 import splitter from './splitter';
+import splitterpanel from './splitterpanel';
 import steps from './steps';
 import tabmenu from './tabmenu';
 import tabview from './tabview';
@@ -152,6 +153,7 @@ export default {
     toolbar,
     scrollpanel,
     splitter,
+    splitterpanel,
 
     //file
     fileupload,
