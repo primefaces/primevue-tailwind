@@ -8,7 +8,7 @@
                 <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
             </template>
             <template #thumbnail="slotProps">
-                <div class="grid grid-nogutter justify-center">
+                <div class="justify-center">
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
                 </div>
             </template>
@@ -41,7 +41,7 @@ export default {
         <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
     </template>
     <template #thumbnail="slotProps">
-        <div class="grid grid-nogutter justify-center">
+        <div class="justify-center">
             <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
         </div>
     </template>
@@ -55,7 +55,7 @@ export default {
                 <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
             </template>
             <template #thumbnail="slotProps">
-                <div class="grid grid-nogutter justify-center">
+                <div class="justify-center">
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
                 </div>
             </template>
@@ -96,7 +96,7 @@ export default {
                 <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
             </template>
             <template #thumbnail="slotProps">
-                <div class="grid grid-nogutter justify-center">
+                <div class="justify-center">
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
                 </div>
             </template>
