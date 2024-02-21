@@ -6,18 +6,20 @@
     <div class="card">
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
             <template #item="slotProps">
-                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 text-center py-5 px-3">
-                    <div class="mb-4 w-full flex justify-center">
-                        <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-6/12 shadow-md" />
-                    </div>
-                    <div>
-                        <h4 class="mb-1">{{ slotProps.data.name }}</h4>
-                        <h6 class="mt-0 mb-4">${{ slotProps.data.price }}</h6>
-                        <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" />
-                        <div class="mt-5 flex items-center justify-center gap-2">
-                            <Button icon="pi pi-search" rounded />
-                            <Button icon="pi pi-star-fill" rounded severity="secondary" />
+                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
+                    <div class="mb-3">
+                        <div class="relative mx-auto">
+                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full border-round" />
+                            <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left: 5px; top: 5px" />
                         </div>
+                    </div>
+                    <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+                    <div class="flex justify-between items-center">
+                        <div class="mt-0 font-semibold text-xl">${{ slotProps.data.price }}</div>
+                        <span>
+                            <Button icon="pi pi-heart" severity="secondary" outlined />
+                            <Button icon="pi pi-shopping-cart" class="ml-2" />
+                        </span>
                     </div>
                 </div>
             </template>
@@ -59,18 +61,20 @@ export default {
                 basic: `
 <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
     <template #item="slotProps">
-        <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 text-center py-5 px-3">
-            <div class="mb-4 w-full flex justify-center">
-                <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-6/12 shadow-md" />
-            </div>
-            <div>
-                <h4 class="mb-1">{{ slotProps.data.name }}</h4>
-                <h6 class="mt-0 mb-4">\${{ slotProps.data.price }}</h6>
-                <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" />
-                <div class="mt-5 flex items-center justify-center gap-2">
-                    <Button icon="pi pi-search" rounded />
-                    <Button icon="pi pi-star-fill" rounded severity="secondary" />
+        <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
+            <div class="mb-3">
+                <div class="relative mx-auto">
+                    <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full border-round" />
+                    <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left:5px; top: 5px"/>
                 </div>
+            </div>
+            <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+            <div class="flex justify-between items-center">
+                <div class="mt-0 font-semibold text-xl">\${{ slotProps.data.price }}</div>
+                <span>
+                    <Button icon="pi pi-heart" severity="secondary" outlined />
+                    <Button icon="pi pi-shopping-cart" class="ml-2"/>
+                </span>
             </div>
         </div>
     </template>
@@ -81,18 +85,20 @@ export default {
     <div class="card">
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
             <template #item="slotProps">
-                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 text-center py-5 px-3">
-                    <div class="mb-4 w-full flex justify-center">
-                        <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-6/12 shadow-md" />
-                    </div>
-                    <div>
-                        <h4 class="mb-1">{{ slotProps.data.name }}</h4>
-                        <h6 class="mt-0 mb-4">\${{ slotProps.data.price }}</h6>
-                        <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" />
-                        <div class="mt-5 flex items-center justify-center gap-2">
-                            <Button icon="pi pi-search" rounded />
-                            <Button icon="pi pi-star-fill" rounded severity="secondary" />
+                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
+                    <div class="mb-3">
+                        <div class="relative mx-auto">
+                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full border-round" />
+                            <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left:5px; top: 5px"/>
                         </div>
+                    </div>
+                    <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+                    <div class="flex justify-between items-center">
+                        <div class="mt-0 font-semibold text-xl">\${{ slotProps.data.price }}</div>
+                        <span>
+                            <Button icon="pi pi-heart" severity="secondary" outlined />
+                            <Button icon="pi pi-shopping-cart" class="ml-2"/>
+                        </span>
                     </div>
                 </div>
             </template>
@@ -159,18 +165,20 @@ export default {
     <div class="card">
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
             <template #item="slotProps">
-                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 text-center py-5 px-3">
-                    <div class="mb-4 w-full flex justify-center">
-                        <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-6/12 shadow-md" />
-                    </div>
-                    <div>
-                        <h4 class="mb-1">{{ slotProps.data.name }}</h4>
-                        <h6 class="mt-0 mb-4">\${{ slotProps.data.price }}</h6>
-                        <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" />
-                        <div class="mt-5 flex items-center justify-center gap-2">
-                            <Button icon="pi pi-search" rounded />
-                            <Button icon="pi pi-star-fill" rounded severity="secondary" />
+                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
+                    <div class="mb-3">
+                        <div class="relative mx-auto">
+                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full border-round" />
+                            <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left:5px; top: 5px"/>
                         </div>
+                    </div>
+                    <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+                    <div class="flex justify-between items-center">
+                        <div class="mt-0 font-semibold text-xl">\${{ slotProps.data.price }}</div>
+                        <span>
+                            <Button icon="pi pi-heart" severity="secondary" outlined />
+                            <Button icon="pi pi-shopping-cart" class="ml-2"/>
+                        </span>
                     </div>
                 </div>
             </template>
