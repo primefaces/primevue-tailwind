@@ -21,7 +21,7 @@ export default {
             // Borders
             'border',
             'border-solid',
-            'border-surface-50',
+            'border-surface-200',
             'dark:border-surface-700',
             'border-b-0',
 
@@ -32,24 +32,32 @@ export default {
     },
     chooseButton: {
         class: [
-            // Colors
-            'text-white',
-            'bg-primary-500',
-            'border-primary-500',
+            'relative',
+
+            // Alignments
+            'items-center inline-flex text-center align-bottom justify-center',
 
             // Spacing
-            'p-3',
-            'px-5',
+            'px-2.5 py-1.5',
 
             // Shape
             'rounded-md',
 
             // Font
-            'text-base',
+            'text-sm',
+            'font-semibold',
+
+            // Colors
+            'text-white dark:text-surface-900',
+            'bg-primary-500 dark:bg-primary-400',
+            'border-primary-500 dark:border-primary-400',
+
+            // States
+            'hover:bg-primary-600 dark:hover:bg-primary-300',
 
             // Misc
             'overflow-hidden',
-            'relative'
+            'cursor-pointer'
         ]
     },
     chooseIcon: {
@@ -84,7 +92,7 @@ export default {
 
             // Borders
             'border',
-            'border-surface-50',
+            'border-surface-200',
             'dark:border-surface-700',
 
             // Shape
@@ -105,7 +113,7 @@ export default {
 
             // Borders
             'border',
-            'border-surface-50',
+            'border-surface-200',
             'dark:border-surface-700',
             'gap-2',
 
@@ -124,5 +132,42 @@ export default {
     },
     uploadicon: {
         class: 'mr-2'
+    },
+    progressbar: {
+        root: {
+            class: [
+                // Position and Overflow
+                'overflow-hidden',
+                'absolute top-0 left-0',
+
+                // Shape and Size
+                'border-0',
+                'h-2',
+                'rounded-md',
+                'w-full',
+
+                // Colors
+                'bg-surface-100 dark:bg-surface-700'
+            ]
+        },
+        value: {
+            class: [
+                // Flexbox & Overflow & Position
+                'absolute flex items-center justify-center overflow-hidden',
+
+                // Colors
+                'bg-primary-500 dark:bg-primary-400',
+
+                // Spacing & Sizing
+                'm-0',
+                'h-full w-0',
+
+                // Shape
+                'border-0',
+
+                // Transitions
+                'transition-width duration-1000 ease-in-out'
+            ]
+        }
     }
 };
