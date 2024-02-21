@@ -1,14 +1,27 @@
 export default {
-    content: {
-        class: 'flex flex-col'
-    },
+    content: ({ parent }) => ({
+        class: [
+            'flex',
+
+            {
+                'flex-col': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'bottom',
+                'flex-row': parent.props.thumbnailsPosition === 'right' || parent.props.thumbnailsPosition === 'left'
+            }
+        ]
+    }),
     itemwrapper: ({ parent }) => ({
         class: [
+            'group',
             'flex relative',
             // Indicators Position
+            console.log(parent.props),
             {
                 'flex-col': parent.props.indicatorsPosition === 'bottom' || parent.props.indicatorsPosition === 'top',
                 'flex-row items-center': parent.props.indicatorsPosition === 'left' || parent.props.indicatorsPosition === 'right'
+            },
+            {
+                'order-2': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'left',
+                'flex-row': parent.props.thumbnailsPosition === 'right'
             }
         ]
     }),
@@ -31,27 +44,36 @@ export default {
             'h-full w-full'
         ]
     },
-    thumbnailwrapper: {
+    thumbnailwrapper: ({ parent }) => ({
         class: [
             // Flex
             'flex flex-col shrink-0',
 
+            {
+                'order-1': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'left'
+            },
+
             // Misc
             'overflow-auto'
         ]
-    },
-    thumbnailcontainer: {
+    }),
+    thumbnailcontainer: ({ parent }) => ({
         class: [
             // Flex
-            'flex flex-row',
+            'flex',
 
             // Spacing
             'p-4',
 
             // Colors
-            'bg-black/90'
+            'bg-black/90',
+
+            {
+                'flex-row': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'bottom',
+                'flex-col grow': parent.props.thumbnailsPosition === 'right' || parent.props.thumbnailsPosition === 'left'
+            }
         ]
-    },
+    }),
     previousthumbnailbutton: {
         class: [
             // Positioning
@@ -76,9 +98,14 @@ export default {
     thumbnailitemscontainer: {
         class: 'overflow-hidden w-full'
     },
-    thumbnailitems: {
-        class: 'flex'
-    },
+    thumbnailitems: ({ parent }) => ({
+        class: [
+            'flex',
+            {
+                'flex-col h-full': parent.props.thumbnailsPosition === 'right' || parent.props.thumbnailsPosition === 'left'
+            }
+        ]
+    }),
     thumbnailitem: {
         class: [
             // Flexbox
@@ -174,12 +201,12 @@ export default {
         ]
     }),
     mask: {
-        class: ['fixed top-0 left-0 w-full h-full', 'flex items-center justify-center', 'bg-black bg-opacity-90']
+        class: ['fixed top-0 left-0 w-full h-full', 'flex items-center justify-center', 'bg-black/90']
     },
     closebutton: {
         class: [
             // Positioning
-            'absolute top-0 right-0',
+            '!absolute top-0 right-0',
 
             // Display & Flexbox
             'flex justify-center items-center overflow-hidden',
@@ -200,19 +227,26 @@ export default {
     closeicon: {
         class: 'w-6 h-6'
     },
-    previousitembutton: {
+    previousitembutton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
 
             // Appearance
             'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md',
+            {
+                'opacity-0 group-hover:opacity-100': parent.props.showItemNavigatorsOnHover
+            },
 
             // Spacing
             'mx-2',
 
             // Positioning
-            'fixed top-1/2 mt-[-0.5rem] left-0',
+            'top-1/2 mt-[-0.5rem] left-0',
+            {
+                '!absolute': parent.props.showItemNavigators,
+                '!fixed': !parent.props.showItemNavigators
+            },
 
             // Hover Effect
             'hover:bg-surface-0/10 hover:text-white',
@@ -220,20 +254,27 @@ export default {
             // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
-    },
-    nextitembutton: {
+    }),
+    nextitembutton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
 
             // Appearance
             'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md',
+            {
+                'opacity-0 group-hover:opacity-100': parent.props.showItemNavigatorsOnHover
+            },
 
             // Spacing
             'mx-2',
 
             // Positioning
-            'fixed top-1/2 mt-[-0.5rem] right-0',
+            'top-1/2 mt-[-0.5rem] right-0',
+            {
+                '!absolute': parent.props.showItemNavigators,
+                '!fixed': !parent.props.showItemNavigators
+            },
 
             // Hover Effect
             'hover:bg-surface-0/10 hover:text-white',
@@ -241,7 +282,7 @@ export default {
             // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
-    },
+    }),
     caption: {
         class: [
             // Positioning
