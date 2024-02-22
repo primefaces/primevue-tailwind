@@ -24,7 +24,6 @@ import dialog from './dialog';
 import divider from './divider';
 import dock from './dock';
 import dropdown from './dropdown';
-import editor from './editor';
 import fieldset from './fieldset';
 import fileupload from './fileupload';
 import floatlabel from './floatlabel';
@@ -124,7 +123,6 @@ export default {
     password,
     iconfield,
     floatlabel,
-    editor,
 
     //buttons
     button,
