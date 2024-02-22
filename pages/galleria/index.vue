@@ -4,13 +4,11 @@
 
 <script>
 import AccessibilityDoc from '@/doc/galleria/AccessibilityDoc.vue';
-import AdvancedDoc from '@/doc/galleria/AdvancedDoc.vue';
 import AutoPlayDoc from '@/doc/galleria/AutoPlayDoc.vue';
 import BasicDoc from '@/doc/galleria/BasicDoc.vue';
 import CaptionDoc from '@/doc/galleria/CaptionDoc.vue';
 import ControlledDoc from '@/doc/galleria/ControlledDoc.vue';
 import ImportDoc from '@/doc/galleria/ImportDoc.vue';
-import ResponsiveDoc from '@/doc/galleria/ResponsiveDoc.vue';
 import ThumbnailDoc from '@/doc/galleria/ThumbnailDoc.vue';
 import CustomContentDoc from '@/doc/galleria/fullscreen/CustomContentDoc.vue';
 import WithThumbnailsDoc from '@/doc/galleria/fullscreen/WithThumbnailsDoc.vue';
@@ -75,11 +73,11 @@ export default {
                     label: 'Thumbnail',
                     component: ThumbnailDoc
                 },
-                {
-                    id: 'responsive',
-                    label: 'Responsive',
-                    component: ResponsiveDoc
-                },
+                // {
+                //     id: 'responsive',
+                //     label: 'Responsive',
+                //     component: ResponsiveDoc
+                // },
                 {
                     id: 'fullscreen',
                     label: 'Full Screen',
@@ -138,11 +136,6 @@ export default {
                     id: 'caption',
                     label: 'Caption',
                     component: CaptionDoc
-                },
-                {
-                    id: 'advanced',
-                    label: 'Advanced',
-                    component: AdvancedDoc
                 },
                 {
                     id: 'accessibility',

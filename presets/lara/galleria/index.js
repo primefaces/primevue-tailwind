@@ -1,20 +1,23 @@
 export default {
-    content: ({ parent }) => ({
+    content: ({ parent, props }) => ({
         class: [
             'flex',
-
+            {
+                'flex-col': props.fullScreen
+            },
             {
                 'flex-col': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'bottom',
                 'flex-row': parent.props.thumbnailsPosition === 'right' || parent.props.thumbnailsPosition === 'left'
             }
         ]
     }),
-    itemwrapper: ({ parent }) => ({
+    itemwrapper: ({ parent, props }) => ({
         class: [
             'group',
             'flex relative',
-            // Indicators Position
-            console.log(parent.props),
+            {
+                'grow shrink w-0 justify-center': props.fullScreen
+            },
             {
                 'flex-col': parent.props.indicatorsPosition === 'bottom' || parent.props.indicatorsPosition === 'top',
                 'flex-row items-center': parent.props.indicatorsPosition === 'left' || parent.props.indicatorsPosition === 'right'
@@ -106,14 +109,16 @@ export default {
             }
         ]
     }),
-    thumbnailitem: {
+    thumbnailitem: ({ parent }) => ({
         class: [
             // Flexbox
             'flex items-center justify-center',
             'grow shrink-0',
 
             // Sizing
-            'w-full md:w-[25%] lg:w-[20%]',
+            {
+                'w-full md:w-[25%] lg:w-[20%]': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'bottom'
+            },
 
             // Misc
             'overflow-auto',
@@ -125,7 +130,7 @@ export default {
             'hover:transition-opacity',
             'hover:duration-300'
         ]
-    },
+    }),
     nextthumbnailbutton: {
         class: [
             // Positioning
