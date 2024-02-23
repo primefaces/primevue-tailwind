@@ -84,7 +84,12 @@ export default {
                 'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                 'bg-surface-0 dark:bg-surface-900',
                 'shadow-sm',
-                { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': parent.instance.$name !== 'InputGroup' },
+                { 'ring-1 ring-inset ring-offset-0': parent.instance.$name !== 'InputGroup' },
+
+                { 'ring-surface-300 dark:ring-surface-700': !parent.props.invalid },
+
+                // Invalid State
+                { 'ring-red-500 dark:ring-red-400': parent.props.invalid },
 
                 // Shape
                 { 'rounded-md': parent.instance.$name !== 'InputGroup' },
