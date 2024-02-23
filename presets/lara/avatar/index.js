@@ -22,7 +22,7 @@ export default {
             // Shapes
             {
                 'rounded-lg': props.shape == 'square',
-                'rounded-full': props.shape == 'circle'
+                'rounded-full overflow-hidden': props.shape == 'circle'
             },
             { 'border-2': parent.instance.$style?.name == 'avatargroup' },
 
