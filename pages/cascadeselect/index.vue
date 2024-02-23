@@ -15,6 +15,7 @@ import AccessibilityDoc from '@/doc/cascadeselect/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/cascadeselect/BasicDoc.vue';
 import DisabledDoc from '@/doc/cascadeselect/DisabledDoc.vue';
 import ImportDoc from '@/doc/cascadeselect/ImportDoc.vue';
+import InvalidDoc from '@/doc/cascadeselect/InvalidDoc.vue';
 import LoadingStateDoc from '@/doc/cascadeselect/LoadingStateDoc.vue';
 import TemplateDoc from '@/doc/cascadeselect/TemplateDoc.vue';
 
@@ -47,11 +48,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',
