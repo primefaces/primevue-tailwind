@@ -3,7 +3,7 @@
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Textarea v-model="value" rows="5" cols="30" class="p-invalid" />
+        <Textarea v-model="value" rows="5" cols="30" invalid />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -20,7 +20,7 @@ export default {
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Textarea v-model="value" rows="5" cols="30" class="p-invalid" />
+        <Textarea v-model="value" rows="5" cols="30" invalid />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Textarea v-model="value" rows="5" cols="30"   class="p-invalid" />
+        <Textarea v-model="value" rows="5" cols="30"   invalid />
     </div>
 </template>
 
