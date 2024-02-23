@@ -16,6 +16,7 @@ import BasicDoc from '@/doc/togglebutton/BasicDoc.vue';
 import CustomizedDoc from '@/doc/togglebutton/CustomizedDoc.vue';
 import DisabledDoc from '@/doc/togglebutton/DisabledDoc.vue';
 import ImportDoc from '@/doc/togglebutton/ImportDoc.vue';
+import InvalidDoc from '@/doc/togglebutton/InvalidDoc.vue';
 
 export default {
     data() {
@@ -40,6 +41,11 @@ export default {
                     id: 'disabled',
                     label: 'Disabled',
                     component: DisabledDoc
+                },
+                {
+                    id: 'inavlid',
+                    label: 'Invalid',
+                    component: InvalidDoc
                 },
                 {
                     id: 'accessibility',
