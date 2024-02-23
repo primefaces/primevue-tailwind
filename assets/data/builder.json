@@ -32,9 +32,12 @@
                     "path": "dropdown"
                 },
                 {
-                    "name": "Editor",
-                    "path": "editor",
-                    "disabled": true
+                    "name": "FloatLabel",
+                    "path": "floatlabel"
+                },
+                {
+                    "name": "IconFiled",
+                    "path": "iconfield"
                 },
                 {
                     "name": "InputGroup",
@@ -201,8 +204,7 @@
                 },
                 {
                     "name": "Splitter",
-                    "path": "splitter",
-                    "disabled": true
+                    "path": "splitter"
                 },
                 {
                     "name": "TabView",
@@ -244,8 +246,7 @@
             "components": [
                 {
                     "name": "Upload",
-                    "path": "fileupload",
-                    "disabled": true
+                    "path": "fileupload"
                 }
             ]
         },
@@ -316,13 +317,11 @@
             "components": [
                 {
                     "name": "Carousel",
-                    "path": "carousel",
-                    "disabled": true
+                    "path": "carousel"
                 },
                 {
                     "name": "Galleria",
-                    "path": "galleria",
-                    "disabled": true
+                    "path": "galleria"
                 },
                 {
                     "name": "Image",
@@ -356,8 +355,11 @@
                 },
                 {
                     "name": "Inplace",
-                    "path": "inplace",
-                    "disabled": true
+                    "path": "inplace"
+                },
+                {
+                    "name": "MeterGroup",
+                    "path": "metergroup"
                 },
                 {
                     "name": "ScrollTop",
@@ -373,8 +375,7 @@
                 },
                 {
                     "name": "ProgressSpinner",
-                    "path": "progressspinner",
-                    "disabled": true
+                    "path": "progressspinner"
                 },
                 {
                     "name": "Ripple",
