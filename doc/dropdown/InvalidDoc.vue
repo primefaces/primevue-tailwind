@@ -3,7 +3,7 @@
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-[14rem]" />
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -22,12 +22,12 @@ export default {
             ],
             code: {
                 basic: `
-<Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-[14rem]" />
+<Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-[14rem]" />
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
     </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!border !border-red-300 !dark:border-red-400 w-full md:w-[14rem]" />
+        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
     </div>
 </template>
 
