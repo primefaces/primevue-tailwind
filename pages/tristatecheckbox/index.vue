@@ -15,6 +15,7 @@ import AccessibilityDoc from '@/doc/tristatecheckbox/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tristatecheckbox/BasicDoc.vue';
 import DisabledDoc from '@/doc/tristatecheckbox/DisabledDoc.vue';
 import ImportDoc from '@/doc/tristatecheckbox/ImportDoc.vue';
+import InvalidDoc from '@/doc/tristatecheckbox/InvalidDoc.vue';
 export default {
     data() {
         return {
@@ -29,11 +30,11 @@ export default {
                     label: 'Basic',
                     component: BasicDoc
                 },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',
