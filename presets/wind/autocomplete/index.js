@@ -45,7 +45,13 @@ export default {
 
             // States
             'focus:outline-none focus:outline-offset-0',
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': !state.focused, 'ring-2 ring-primary-500 dark:ring-primary-400': state.focused },
+            // States
+            { 'ring-1 ring-inset': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+
+            { 'ring-surface-300 dark:ring-surface-600': !props.invalid && !state.focused },
+
+            // Invalid State
+            { 'ring-red-500 dark:ring-red-400': props.invalid && !state.focused },
 
             // Transition
             'transition duration-200 ease-in-out',
@@ -76,11 +82,15 @@ export default {
 
             // Colors
             'text-surface-700 dark:text-white/80',
+            'border',
             {
                 'bg-surface-0 dark:bg-surface-900': !props.multiple,
-                'border border-surface-300 dark:border-surface-700': !props.multiple,
+                'border-surface-300 dark:border-surface-700': !props.multiple && !props.invalid,
                 'border-0 bg-transparent': props.multiple
             },
+
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
 
             // States
             { 'focus:outline-none focus:outline-offset-0 focus:ring-inset focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400': !props.multiple },
