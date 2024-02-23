@@ -183,10 +183,6 @@
                     "path": "card"
                 },
                 {
-                    "name": "Deferred",
-                    "path": "deferredcontent"
-                },
-                {
                     "name": "Divider",
                     "path": "divider"
                 },
