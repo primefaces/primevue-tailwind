@@ -76,7 +76,7 @@ export default {
             'border-2 border-surface-300 dark:border-surface-700',
 
             // Misc
-            'appareance-none',
+            'appearance-none',
             'cursor-default'
         ]
     },

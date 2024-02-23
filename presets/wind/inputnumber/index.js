@@ -19,7 +19,7 @@ export default {
         ]
     }),
     input: {
-        root: ({ parent }) => ({
+        root: ({ parent, context }) => ({
             class: [
                 // Display
                 'flex flex-auto',
@@ -50,9 +50,13 @@ export default {
 
                 // Invalid State
                 { 'border border-red-500 dark:border-red-400': parent.props.invalid },
+
                 // States
                 'outline-none focus:ring-primary-600 dark:focus:ring-primary-500',
                 'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:focus:ring-primary-500',
+
+                // Filled State *for FloatLabel
+                { filled: parent.instance?.$name == 'FloatLabel' && context.filled },
 
                 //Position
                 { 'order-2': parent.props.buttonLayout == 'horizontal' || parent.props.buttonLayout == 'vertical' }

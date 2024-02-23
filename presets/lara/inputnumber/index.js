@@ -55,6 +55,9 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50 focus:z-10',
                 { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 
+                // Filled State *for FloatLabel
+                { filled: parent.instance?.$name == 'FloatLabel' && context.filled },
+
                 //Position
                 { 'order-2': parent.props.buttonLayout == 'horizontal' || parent.props.buttonLayout == 'vertical' }
             ]

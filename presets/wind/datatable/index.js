@@ -938,7 +938,7 @@ export default {
                     'border-2 border-surface-300 dark:border-surface-700',
 
                     // Misc
-                    'appareance-none',
+                    'appearance-none',
                     'cursor-default'
                 ]
             },
@@ -1030,7 +1030,7 @@ export default {
                     'border-2 border-surface-300 dark:border-surface-700',
 
                     // Misc
-                    'appareance-none'
+                    'appearance-none'
                 ]
             },
             icon: {
@@ -1135,7 +1135,7 @@ export default {
                     'border-2 border-surface-300 dark:border-surface-700',
 
                     // Misc
-                    'appareance-none'
+                    'appearance-none'
                 ]
             },
             icon: {

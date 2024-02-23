@@ -73,7 +73,7 @@ export default {
             'outline-none',
 
             // Misc
-            'appareance-none',
+            'appearance-none',
             'cursor-pointer'
         ]
     }
