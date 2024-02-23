@@ -15,6 +15,7 @@ import AccessibilityDoc from '@/doc/selectbutton/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/selectbutton/BasicDoc.vue';
 import DisabledDoc from '@/doc/selectbutton/DisabledDoc.vue';
 import ImportDoc from '@/doc/selectbutton/ImportDoc.vue';
+import InvalidDoc from '@/doc/selectbutton/InvalidDoc.vue';
 import MultipleDoc from '@/doc/selectbutton/MultipleDoc.vue';
 import TemplateDoc from '@/doc/selectbutton/TemplateDoc.vue';
 
@@ -42,11 +43,11 @@ export default {
                     label: 'Template',
                     component: TemplateDoc
                 },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',
