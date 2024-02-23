@@ -9,6 +9,7 @@ import DisabledDoc from '@/doc/checkbox/DisabledDoc.vue';
 import DynamicDoc from '@/doc/checkbox/DynamicDoc.vue';
 import GroupDoc from '@/doc/checkbox/GroupDoc.vue';
 import ImportDoc from '@/doc/checkbox/ImportDoc.vue';
+import InvalidDoc from '@/doc/checkbox/InvalidDoc.vue';
 
 export default {
     data() {
@@ -34,11 +35,11 @@ export default {
                     label: 'Dynamic',
                     component: DynamicDoc
                 },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',
