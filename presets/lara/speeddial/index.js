@@ -235,7 +235,7 @@ export default {
             'transform transition-transform duration-200 ease-out transition-opacity duration-800',
 
             // Conditional Appearance
-            context.hidden ? 'opacity-0 scale-0' : 'opacity-1 scale-100',
+            context.hidden ? 'opacity-0 scale-0' : 'opacity-100 scale-100',
 
             // Conditional Spacing
             {
