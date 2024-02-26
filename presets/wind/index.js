@@ -37,6 +37,7 @@ import inputgroup from './inputgroup';
 import inputgroupaddon from './inputgroupaddon';
 import inputmask from './inputmask';
 import inputnumber from './inputnumber';
+import inputotp from './inputotp';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
 import knob from './knob';
@@ -123,6 +124,7 @@ export default {
     password,
     iconfield,
     floatlabel,
+    inputotp,
 
     //buttons
     button,

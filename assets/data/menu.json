@@ -55,17 +55,20 @@
                         },
                         {
                             "name": "FloatLabel",
-                            "to": "/floatlabel",
-                            "badge": "NEW"
+                            "to": "/floatlabel"
                         },
                         {
                             "name": "IconField",
-                            "to": "/iconfield",
-                            "badge": "NEW"
+                            "to": "/iconfield"
                         },
                         {
                             "name": "InputGroup",
                             "to": "/inputgroup"
+                        },
+                        {
+                            "name": "InputOtp",
+                            "to": "/inputotp",
+                            "badge": "NEW"
                         },
                         {
                             "name": "InputNumber",
@@ -228,8 +231,7 @@
                         },
                         {
                             "name": "Splitter",
-                            "to": "/splitter",
-                            "badge": "NEW"
+                            "to": "/splitter"
                         },
                         {
                             "name": "TabView",
@@ -246,8 +248,7 @@
                     "children": [
                         {
                             "name": "Upload",
-                            "to": "/fileupload",
-                            "badge": "NEW"
+                            "to": "/fileupload"
                         }
                     ]
                 },
@@ -351,13 +352,11 @@
                     "children": [
                         {
                             "name": "Carousel",
-                            "to": "/carousel",
-                            "badge": "NEW"
+                            "to": "/carousel"
                         },
                         {
                             "name": "Galleria",
-                            "to": "/galleria",
-                            "badge": "NEW"
+                            "to": "/galleria"
                         },
                         {
                             "name": "Image",
@@ -386,13 +385,11 @@
                         },
                         {
                             "name": "Inplace",
-                            "to": "/inplace",
-                            "badge": "NEW"
+                            "to": "/inplace"
                         },
                         {
                             "name": "MeterGroup",
-                            "to": "/metergroup",
-                            "badge": "NEW"
+                            "to": "/metergroup"
                         },
                         {
                             "name": "ProgressBar",
@@ -400,8 +397,7 @@
                         },
                         {
                             "name": "ProgressSpinner",
-                            "to": "/progressspinner",
-                            "badge": "NEW"
+                            "to": "/progressspinner"
                         },
                         {
                             "name": "Ripple",
