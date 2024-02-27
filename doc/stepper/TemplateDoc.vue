@@ -20,7 +20,7 @@
                 <template #content="{ nextCallback }">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                         <div class="text-center mt-3 mb-3 text-xl font-semibold">Create your account</div>
-                        <div class="field p-fluid">
+                        <div class="mb-4">
                             <IconField>
                                 <InputIcon>
                                     <i class="pi pi-user" />
@@ -28,7 +28,7 @@
                                 <InputText id="input" v-model="name" type="text" placeholder="Name" />
                             </IconField>
                         </div>
-                        <div class="field p-fluid">
+                        <div class="mb-4">
                             <IconField>
                                 <InputIcon>
                                     <i class="pi pi-envelope" />
@@ -36,8 +36,8 @@
                                 <InputText id="email" v-model="email" type="email" placeholder="Email" />
                             </IconField>
                         </div>
-                        <div class="field p-fluid">
-                            <Password v-model="password" toggleMask placeholder="Password" />
+                        <div class="mb-4">
+                            <Password v-model="password" toggleMask placeholder="Password" class="w-full" />
                         </div>
                     </div>
                     <div class="flex pt-4 justify-end">
@@ -96,7 +96,7 @@
                 <template #content="{ prevCallback }">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-3 mb-3 text-xl font-semibold">Account created successfully</div>
-                        <div class="text-center">
+                        <div class="flex justify-center">
                             <img alt="logo" src="https://primefaces.org/cdn/primevue/images/stepper/content.svg" />
                         </div>
                     </div>
@@ -142,7 +142,7 @@ export default {
         <template #content="{ nextCallback }">
             <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                 <div class="text-center mt-3 mb-3 text-xl font-semibold">Create your account</div>
-                <div class="field p-fluid">
+                <div class="mb-4">
                     <IconField>
                         <InputIcon>
                             <i class="pi pi-user" />
@@ -150,7 +150,7 @@ export default {
                         <InputText id="input" v-model="name" type="text" placeholder="Name" />
                     </IconField>
                 </div>
-                <div class="field p-fluid">
+                <div class="mb-4">
                     <IconField>
                         <InputIcon>
                             <i class="pi pi-envelope" />
@@ -158,8 +158,8 @@ export default {
                         <InputText id="email" v-model="email" type="email" placeholder="Email" />
                     </IconField>
                 </div>
-                <div class="field p-fluid">
-                    <Password v-model="password" toggleMask placeholder="Password" />
+                <div class="mb-4">
+                    <Password v-model="password" toggleMask placeholder="Password" class="w-full" />
                 </div>
             </div>
             <div class="flex pt-4 justify-end">
@@ -208,7 +208,7 @@ export default {
         <template #content="{ prevCallback }">
             <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                 <div class="text-center mt-3 mb-3 text-xl font-semibold">Account created successfully</div>
-                <div class="text-center">
+                <div class="flex justify-center">
                     <img alt="logo" src="https://primefaces.org/cdn/primevue/images/stepper/content.svg" />
                 </div>
             </div>
@@ -234,7 +234,7 @@ export default {
                 <template #content="{ nextCallback }">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                         <div class="text-center mt-3 mb-3 text-xl font-semibold">Create your account</div>
-                        <div class="field p-fluid">
+                        <div class="mb-4">
                             <IconField>
                                 <InputIcon>
                                     <i class="pi pi-user" />
@@ -242,7 +242,7 @@ export default {
                                 <InputText id="input" v-model="name" type="text" placeholder="Name" />
                             </IconField>
                         </div>
-                        <div class="field p-fluid">
+                        <div class="mb-4">
                             <IconField>
                                 <InputIcon>
                                     <i class="pi pi-envelope" />
@@ -250,8 +250,8 @@ export default {
                                 <InputText id="email" v-model="email" type="email" placeholder="Email" />
                             </IconField>
                         </div>
-                        <div class="field p-fluid">
-                            <Password v-model="password" toggleMask placeholder="Password" />
+                        <div class="mb-4">
+                            <Password v-model="password" toggleMask placeholder="Password" class="w-full" />
                         </div>
                     </div>
                     <div class="flex pt-4 justify-end">
@@ -300,7 +300,7 @@ export default {
                 <template #content="{ prevCallback }">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-3 mb-3 text-xl font-semibold">Account created successfully</div>
-                        <div class="text-center">
+                        <div class="flex justify-center">
                             <img alt="logo" src="https://primefaces.org/cdn/primevue/images/stepper/content.svg" />
                         </div>
                     </div>
@@ -358,7 +358,7 @@ export default {
                 <template #content="{ nextCallback }">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 20rem">
                         <div class="text-center mt-3 mb-3 text-xl font-semibold">Create your account</div>
-                        <div class="field p-fluid">
+                        <div class="mb-4">
                             <IconField>
                                 <InputIcon>
                                     <i class="pi pi-user" />
@@ -366,7 +366,7 @@ export default {
                                 <InputText id="input" v-model="name" type="text" placeholder="Name" />
                             </IconField>
                         </div>
-                        <div class="field p-fluid">
+                        <div class="mb-4">
                             <IconField>
                                 <InputIcon>
                                     <i class="pi pi-envelope" />
@@ -374,8 +374,8 @@ export default {
                                 <InputText id="email" v-model="email" type="email" placeholder="Email" />
                             </IconField>
                         </div>
-                        <div class="field p-fluid">
-                            <Password v-model="password" toggleMask placeholder="Password" />
+                        <div class="mb-4">
+                            <Password v-model="password" toggleMask placeholder="Password" class="w-full" />
                         </div>
                     </div>
                     <div class="flex pt-4 justify-end">
@@ -424,7 +424,7 @@ export default {
                 <template #content="{ prevCallback }">
                     <div class="flex flex-col gap-2 mx-auto" style="min-height: 16rem; max-width: 24rem">
                         <div class="text-center mt-3 mb-3 text-xl font-semibold">Account created successfully</div>
-                        <div class="text-center">
+                        <div class="flex justify-center">
                             <img alt="logo" src="https://primefaces.org/cdn/primevue/images/stepper/content.svg" />
                         </div>
                     </div>

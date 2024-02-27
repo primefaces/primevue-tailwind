@@ -77,6 +77,7 @@ export default {
                     'px-2 py-2': props.size == 'small',
                     'p-3': props.size == null
                 },
+                'w-full',
 
                 // Shape
                 { 'rounded-md': parent.instance.$name !== 'InputGroup' },

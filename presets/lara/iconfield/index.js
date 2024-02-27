@@ -2,6 +2,8 @@ export default {
     root: ({ props }) => ({
         class: [
             'relative',
+            '[&>input]:w-full',
+
             '[&>*:first-child]:absolute',
             '[&>*:first-child]:top-1/2',
             '[&>*:first-child]:-mt-2',

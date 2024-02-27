@@ -78,6 +78,7 @@ export default {
                     'py-1 px-2 sm:text-sm': props.size == 'small',
                     'py-1.5 px-3 sm:text-sm': props.size == null
                 },
+                'w-full',
 
                 // Colors
                 'text-surface-900 dark:text-surface-0',
