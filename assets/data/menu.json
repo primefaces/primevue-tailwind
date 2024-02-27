@@ -55,11 +55,13 @@
                         },
                         {
                             "name": "FloatLabel",
-                            "to": "/floatlabel"
+                            "to": "/floatlabel",
+                            "badge": "NEW"
                         },
                         {
                             "name": "IconField",
-                            "to": "/iconfield"
+                            "to": "/iconfield",
+                            "badge": "NEW"
                         },
                         {
                             "name": "InputGroup",
@@ -394,7 +396,8 @@
                         },
                         {
                             "name": "MeterGroup",
-                            "to": "/metergroup"
+                            "to": "/metergroup",
+                            "badge": "NEW"
                         },
                         {
                             "name": "ProgressBar",

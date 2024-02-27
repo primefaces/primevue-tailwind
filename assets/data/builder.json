@@ -44,6 +44,10 @@
                     "path": "inputgroup"
                 },
                 {
+                    "name": "InputOtp",
+                    "path": "inputotp"
+                },
+                {
                     "name": "InputGroupAddon",
                     "path": "inputgroupaddon"
                 },
@@ -201,6 +205,10 @@
                 {
                     "name": "Splitter",
                     "path": "splitter"
+                },
+                {
+                    "name": "Stepper",
+                    "path": "stepper"
                 },
                 {
                     "name": "TabView",
