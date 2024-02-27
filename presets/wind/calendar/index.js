@@ -31,7 +31,7 @@ export default {
 
             // Spacing
             'm-0 py-1.5 px-3',
-            '-ml-[1px]',
+            '-ml-px',
 
             // Shape
             'appearance-none',

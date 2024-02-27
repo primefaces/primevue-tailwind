@@ -149,7 +149,7 @@ export default {
 
                 // Size
                 'px-2.5 py-1.5',
-                '-ml-[1px]',
+                '-ml-px',
 
                 // Colors
                 'text-surface-600 dark:text-surface-100',

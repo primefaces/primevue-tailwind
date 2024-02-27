@@ -33,7 +33,7 @@ export default {
 
             // Spacing
             'py-4 px-3',
-            '-mb-[1px]',
+            '-mb-px',
 
             // Shape
             'border-b-2',
