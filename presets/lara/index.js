@@ -71,6 +71,7 @@ import speeddial from './speeddial';
 import splitbutton from './splitbutton';
 import splitter from './splitter';
 import splitterpanel from './splitterpanel';
+import stepper from './stepper';
 import steps from './steps';
 import tabmenu from './tabmenu';
 import tabview from './tabview';
@@ -154,6 +155,7 @@ export default {
     scrollpanel,
     splitter,
     splitterpanel,
+    stepper,
 
     //file
     fileupload,
