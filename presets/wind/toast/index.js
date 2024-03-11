@@ -24,9 +24,15 @@ export default {
             }
         ]
     }),
-    content: {
-        class: 'flex items-start p-4'
-    },
+    content: ({ props }) => ({
+        class: [
+          'flex p-4',
+          {
+            'items-start': props.message.summary,
+            'items-center': !props.message.summary,
+          },
+        ],
+    }),
     icon: {
         class: [
             // Sizing and Spacing
@@ -45,9 +51,13 @@ export default {
     summary: {
         class: 'font-medium block'
     },
-    detail: {
-        class: 'mt-1.5 block text-surface-600 dark:text-surface-0/70'
-    },
+    detail: ({ props }) => ({
+        class: [
+          'block',
+          'text-surface-600 dark:text-surface-0/70',
+          { 'mt-1.5': props.message.summary },
+        ],
+    }),
     closebutton: {
         class: [
             // Flexbox
