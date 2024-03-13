@@ -1,6 +1,6 @@
 {
     "name": "primevue-tailwind",
-    "version": "0.8.1",
+    "version": "0.8.2-SNAPSHOT",
     "homepage": "https://tailwind.primevue.org/",
     "repository": {
         "type": "git",
