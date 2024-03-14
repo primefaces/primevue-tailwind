@@ -21,7 +21,7 @@ export default {
     container: ({ props, state }) => ({
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
+            'font-sans text-base leading-none',
 
             // Flex
             'flex items-center flex-wrap',
