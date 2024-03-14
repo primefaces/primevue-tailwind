@@ -185,7 +185,7 @@ export default {
                 'text-surface-500 dark:text-white/70'
             ]
         },
-        nodeCheckbox: ({ instance }) => ({
+        nodeCheckbox: {
             root: {
                 class: [
                     'relative',
@@ -280,15 +280,19 @@ export default {
                     // Font
                     'text-normal',
 
+                    // Size
+                    'w-3',
+                    'h-3',
+
                     // Colors
-                    instance.partialChecked ? 'text-surface-800 dark:text-white/80' : 'text-white dark:text-surface-900',
+                    'text-white dark:text-surface-900',
 
                     // Transitions
                     'transition-all',
                     'duration-200'
                 ]
             }
-        }),
+        },
         nodeicon: {
             class: [
                 // Space

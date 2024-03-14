@@ -172,7 +172,7 @@ export default {
                 'cursor-pointer select-none'
             ]
         }),
-        nodeCheckbox: ({ instance }) => ({
+        nodeCheckbox: {
             root: {
                 class: [
                     'relative',
@@ -265,14 +265,14 @@ export default {
                     'h-4',
 
                     // Colors
-                    instance.partialChecked ? 'text-surface-800 dark:text-white/80' : 'text-white dark:text-surface-900',
+                    'text-white dark:text-surface-900',
 
                     // Transitions
                     'transition-all',
                     'duration-200'
                 ]
             }
-        }),
+        },
         nodeicon: {
             class: [
                 // Space
