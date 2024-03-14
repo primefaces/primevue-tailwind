@@ -316,7 +316,7 @@ export default {
                 'cursor-col-resize'
             ]
         },
-        rowCheckbox: {
+        rowCheckbox: ({ instance }) => ({
             root: {
                 class: [
                     'relative',
@@ -409,14 +409,14 @@ export default {
                     'h-4',
 
                     // Colors
-                    'text-white dark:text-surface-900',
+                    instance.partialChecked ? 'text-surface-800 dark:text-white/80' : 'text-white dark:text-surface-900',
 
                     // Transitions
                     'transition-all',
                     'duration-200'
                 ]
             }
-        },
+        }),
 
         transition: {
             enterFromClass: 'opacity-0 scale-y-[0.8]',

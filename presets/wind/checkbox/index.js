@@ -93,10 +93,6 @@ export default {
             // Font
             'text-normal',
 
-            // Size
-            'w-3',
-            'h-3',
-
             // Colors
             'text-white dark:text-surface-900',
 
