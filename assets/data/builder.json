@@ -187,9 +187,14 @@
                     "path": "card"
                 },
                 {
+                    "name": "Deferred",
+                    "path": "deferred"
+                },
+                {
                     "name": "Divider",
                     "path": "divider"
                 },
+
                 {
                     "name": "Fieldset",
                     "path": "fieldset"

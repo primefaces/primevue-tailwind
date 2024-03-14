@@ -20,6 +20,7 @@ import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dataview from './dataview';
 import dataviewlayoutoptions from './dataviewlayoutoptions';
+import deferred from './deferred';
 import dialog from './dialog';
 import divider from './divider';
 import dock from './dock';
@@ -156,6 +157,7 @@ export default {
     splitter,
     splitterpanel,
     stepper,
+    deferred,
 
     //file
     fileupload,
