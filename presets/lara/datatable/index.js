@@ -146,7 +146,7 @@ export default {
             class: [
                 //Position
                 { 'sticky box-border border-b': parent.instance.frozenRow },
-                { 'sticky box-border border-b': props.frozen || props.frozen === '' },
+                { 'sticky box-border border-b z-20': props.frozen || props.frozen === '' },
 
                 // Alignment
                 'text-left',
