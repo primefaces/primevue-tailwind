@@ -71,7 +71,8 @@ export default {
         class: [
             {
                 'sticky z-20': instance.frozenRow && context.scrollable
-            }
+            },
+            'bg-surface-50 dark:bg-surface-800'
         ]
     }),
     tfoot: ({ context }) => ({
