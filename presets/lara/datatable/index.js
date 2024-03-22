@@ -63,7 +63,7 @@ export default {
     thead: ({ context }) => ({
         class: [
             {
-                'bg-surface-50 top-0 z-40 sticky': context.scrollable
+                'bg-surface-50 dark:bg-surface-800 top-0 z-40 sticky': context.scrollable
             }
         ]
     }),
