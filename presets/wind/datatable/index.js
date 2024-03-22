@@ -75,7 +75,8 @@ export default {
             'border-t border-surface-300 dark:border-surface-600',
             {
                 'sticky z-20 font-semibold': instance.frozenRow && context.scrollable
-            }
+            },
+            'bg-surface-50 dark:bg-surface-800'
         ]
     }),
     tfoot: ({ context }) => ({
