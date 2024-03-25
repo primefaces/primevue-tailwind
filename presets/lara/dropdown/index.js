@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, state }) => ({
+    root: ({ props, state, parent }) => ({
         class: [
             // Display and Position
             'inline-flex',
@@ -15,8 +15,8 @@ export default {
             'bg-surface-0 dark:bg-surface-900',
 
             'border border-surface-300',
-            {'dark:border-surface-700': parent.instance.$name != 'InputGroup'},
-            {'dark:border-surface-600': parent.instance.$name == 'InputGroup'},
+            { 'dark:border-surface-700': parent.instance.$name != 'InputGroup' },
+            { 'dark:border-surface-600': parent.instance.$name == 'InputGroup' },
             { 'border-surface-300 dark:border-surface-600': !props.invalid },
 
             // Invalid State
