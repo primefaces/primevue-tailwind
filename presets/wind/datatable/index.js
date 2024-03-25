@@ -75,7 +75,8 @@ export default {
             'border-t border-surface-300 dark:border-surface-600',
             {
                 'sticky z-20 font-semibold': instance.frozenRow && context.scrollable
-            }
+            },
+            'bg-surface-50 dark:bg-surface-800'
         ]
     }),
     tfoot: ({ context }) => ({
@@ -148,7 +149,7 @@ export default {
             class: [
                 //Position
                 { 'sticky box-border border-b': parent.instance.frozenRow },
-                { 'sticky box-border border-b': props.frozen || props.frozen === '' },
+                { 'sticky box-border border-b z-20': props.frozen || props.frozen === '' },
                 'text-sm',
 
                 // Alignment
@@ -938,7 +939,7 @@ export default {
                     'border-2 border-surface-300 dark:border-surface-700',
 
                     // Misc
-                    'appareance-none',
+                    'appearance-none',
                     'cursor-default'
                 ]
             },
@@ -1030,7 +1031,7 @@ export default {
                     'border-2 border-surface-300 dark:border-surface-700',
 
                     // Misc
-                    'appareance-none'
+                    'appearance-none'
                 ]
             },
             icon: {
@@ -1135,7 +1136,7 @@ export default {
                     'border-2 border-surface-300 dark:border-surface-700',
 
                     // Misc
-                    'appareance-none'
+                    'appearance-none'
                 ]
             },
             icon: {
@@ -1170,7 +1171,7 @@ export default {
             { 'bg-surface-100 dark:bg-surface-500/30': context.selected && context.stripedRows },
             { 'bg-surface-50 dark:bg-surface-500/30': context.selected && !context.stripedRows },
             { 'bg-surface-0 text-surface-600 dark:bg-surface-800': !context.selected },
-            { 'bg-surface-0 dark:bg-surface-800': props.frozenRow },
+            { 'bg-surface-0 dark:bg-surface-800 z-20': props.frozenRow },
             { 'odd:bg-surface-0 odd:text-surface-600 dark:odd:bg-surface-800 even:bg-surface-50 even:text-surface-600 dark:even:bg-surface-900/60': context.stripedRows && !context.selected },
 
             // State

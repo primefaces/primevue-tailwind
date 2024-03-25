@@ -29,7 +29,7 @@
                     </span>
                     <span class="inline-flex flex-col gap-1">
                         <span class="font-medium text-lg text-surface-900 dark:text-surface-0">{{ item.label }}</span>
-                        <span class="white-space-nowrap">{{ item.subtext }}</span>
+                        <span class="whitespace-nowrap">{{ item.subtext }}</span>
                     </span>
                 </a>
                 <div v-else class="flex flex-col items-start gap-3">
@@ -118,7 +118,7 @@ export default {
             </span>
             <span class="inline-flex flex-col gap-1">
                 <span class="font-medium text-lg text-surface-900 dark:text-surface-0">{{ item.label }}</span>
-                <span class="white-space-nowrap">{{ item.subtext }}</span>
+                <span class="whitespace-nowrap	">{{ item.subtext }}</span>
             </span>
         </a>
         <div v-else class="flex flex-col items-start gap-3">
@@ -159,7 +159,7 @@ export default {
                     </span>
                     <span class="inline-flex flex-col gap-1">
                         <span class="font-medium text-lg text-surface-900 dark:text-surface-0">{{ item.label }}</span>
-                        <span class="white-space-nowrap">{{ item.subtext }}</span>
+                        <span class="whitespace-nowrap	">{{ item.subtext }}</span>
                     </span>
                 </a>
                 <div v-else class="flex flex-col items-start gap-3">
@@ -259,7 +259,7 @@ export default {
                     </span>
                     <span class="inline-flex flex-col gap-1">
                         <span class="font-medium text-lg text-surface-900 dark:text-surface-0">{{ item.label }}</span>
-                        <span class="white-space-nowrap">{{ item.subtext }}</span>
+                        <span class="whitespace-nowrap	">{{ item.subtext }}</span>
                     </span>
                 </a>
                 <div v-else class="flex flex-col items-start gap-3">

@@ -26,7 +26,7 @@ export default {
             'border-2 border-surface-200 dark:border-surface-700',
 
             // Misc
-            'appareance-none',
+            'appearance-none',
             'cursor-pointer'
         ]
     },
@@ -47,13 +47,16 @@ export default {
 
             // Colors
             {
-                'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.active,
+                'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.active && !props.invalid,
                 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.active
             },
 
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
             // States
             {
-                'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !context.active,
+                'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !context.active && !props.invalid,
                 'peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.active,
                 'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                 'cursor-default opacity-60': props.disabled

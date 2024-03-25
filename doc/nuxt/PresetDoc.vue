@@ -22,7 +22,9 @@ export default defineNuxtConfig({
         'nuxt-primevue'
     ],
     primevue: {
-        unstyled: true,
+        options: {
+          unstyled: true
+        },
         importPT: { from: path.resolve(__dirname, './presets/lara/') }      //import and apply preset   
     }
 })

@@ -8,7 +8,7 @@
     <div class="card">
         <div class="flex flex-wrap justify-center gap-5 text-center">
             <div v-for="icon of filteredIcons" :key="icon.properties.name" class="w-full sm:w-6/2 md:w-4/12 lg:w-2/12">
-                <i :class="'text-2xl mb-3 text-color-secondary pi pi-' + icon.properties.name"></i>
+                <i :class="'text-2xl mb-3 text-surface-700 dark:text-surface-0/70 pi pi-' + icon.properties.name"></i>
                 <div>pi-{{ icon.properties.name }}</div>
             </div>
         </div>

@@ -7,6 +7,7 @@ import AccessibilityDoc from '@/doc/password/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/password/BasicDoc.vue';
 import DisabledDoc from '@/doc/password/DisabledDoc.vue';
 import ImportDoc from '@/doc/password/ImportDoc.vue';
+import InvalidDoc from '@/doc/password/InvalidDoc.vue';
 import LocaleDoc from '@/doc/password/LocaleDoc.vue';
 import MeterDoc from '@/doc/password/MeterDoc.vue';
 import TemplateDoc from '@/doc/password/TemplateDoc.vue';
@@ -50,11 +51,11 @@ export default {
                 //     label: 'FloatLabel',
                 //     component: FloatLabelDoc
                 // },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',

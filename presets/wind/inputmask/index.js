@@ -1,5 +1,5 @@
 export default {
-    root: ({ context }) => ({
+    root: ({ context, props }) => ({
         class: [
             // Font
             'font-sans leading-6',
@@ -11,8 +11,12 @@ export default {
             'text-surface-900 dark:text-surface-0',
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0',
+            'ring-1 ring-inset ring-offset-0',
             'shadow-sm',
+            { 'ring-surface-300 dark:ring-surface-700': !props.invalid },
+
+            // Invalid State
+            { 'ring-red-500 dark:ring-red-400': props.invalid },
 
             // Shape
             'rounded-md',

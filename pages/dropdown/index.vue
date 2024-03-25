@@ -20,6 +20,7 @@ import FilterDoc from '@/doc/dropdown/FilterDoc.vue';
 // import FloatLabelDoc from '@/doc/dropdown/FloatLabelDoc.vue';
 import GroupDoc from '@/doc/dropdown/GroupDoc.vue';
 import ImportDoc from '@/doc/dropdown/ImportDoc.vue';
+import InvalidDoc from '@/doc/dropdown/InvalidDoc.vue';
 import LazyVirtualScrollDoc from '@/doc/dropdown/LazyVirtualScrollDoc.vue';
 import LoadingStateDoc from '@/doc/dropdown/LoadingStateDoc.vue';
 import TemplateDoc from '@/doc/dropdown/TemplateDoc.vue';
@@ -84,11 +85,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',

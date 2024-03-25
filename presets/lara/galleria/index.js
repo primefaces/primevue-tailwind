@@ -1,13 +1,43 @@
 export default {
-    content: {
-        class: 'flex flex-col'
-    },
-    itemwrapper: {
-        class: 'flex flex-col relative'
-    },
-    itemcontainer: {
-        class: 'relative flex h-full'
-    },
+    content: ({ parent, props }) => ({
+        class: [
+            'flex',
+            {
+                'flex-col': props.fullScreen
+            },
+            {
+                'flex-col': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'bottom',
+                'flex-row': parent.props.thumbnailsPosition === 'right' || parent.props.thumbnailsPosition === 'left'
+            }
+        ]
+    }),
+    itemwrapper: ({ parent, props }) => ({
+        class: [
+            'group',
+            'flex relative',
+            {
+                'grow shrink w-0 justify-center': props.fullScreen
+            },
+            {
+                'flex-col': parent.props.indicatorsPosition === 'bottom' || parent.props.indicatorsPosition === 'top',
+                'flex-row items-center': parent.props.indicatorsPosition === 'left' || parent.props.indicatorsPosition === 'right'
+            },
+            {
+                'order-2': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'left',
+                'flex-row': parent.props.thumbnailsPosition === 'right'
+            }
+        ]
+    }),
+
+    itemcontainer: ({ parent }) => ({
+        class: [
+            'flex h-full relative',
+            {
+                'order-1': parent.props.indicatorsPosition === 'bottom' || parent.props.indicatorsPosition === 'right',
+                'order-2': parent.props.indicatorsPosition === 'top' || parent.props.indicatorsPosition === 'left'
+            }
+        ]
+    }),
     item: {
         class: [
             // Flex
@@ -17,27 +47,36 @@ export default {
             'h-full w-full'
         ]
     },
-    thumbnailwrapper: {
+    thumbnailwrapper: ({ parent }) => ({
         class: [
             // Flex
             'flex flex-col shrink-0',
 
+            {
+                'order-1': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'left'
+            },
+
             // Misc
             'overflow-auto'
         ]
-    },
-    thumbnailcontainer: {
+    }),
+    thumbnailcontainer: ({ parent }) => ({
         class: [
             // Flex
-            'flex flex-row',
+            'flex',
 
             // Spacing
             'p-4',
 
             // Colors
-            'bg-black/90'
+            'bg-black/90',
+
+            {
+                'flex-row': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'bottom',
+                'flex-col grow': parent.props.thumbnailsPosition === 'right' || parent.props.thumbnailsPosition === 'left'
+            }
         ]
-    },
+    }),
     previousthumbnailbutton: {
         class: [
             // Positioning
@@ -62,12 +101,36 @@ export default {
     thumbnailitemscontainer: {
         class: 'overflow-hidden w-full'
     },
-    thumbnailitems: {
-        class: 'flex'
-    },
-    thumbnailitem: {
-        class: ['overflow-auto flex items-center justify-center cursor-pointer opacity-50', 'flex-1 grow-0 shrink-0 w-20', 'hover:opacity-100 hover:transition-opacity hover:duration-300']
-    },
+    thumbnailitems: ({ parent }) => ({
+        class: [
+            'flex',
+            {
+                'flex-col h-full': parent.props.thumbnailsPosition === 'right' || parent.props.thumbnailsPosition === 'left'
+            }
+        ]
+    }),
+    thumbnailitem: ({ parent }) => ({
+        class: [
+            // Flexbox
+            'flex items-center justify-center',
+            'grow shrink-0',
+
+            // Sizing
+            {
+                'w-full md:w-[25%] lg:w-[20%]': parent.props.thumbnailsPosition === 'top' || parent.props.thumbnailsPosition === 'bottom'
+            },
+
+            // Misc
+            'overflow-auto',
+            'cursor-pointer',
+            'opacity-50',
+
+            // States
+            'hover:opacity-100',
+            'hover:transition-opacity',
+            'hover:duration-300'
+        ]
+    }),
     nextthumbnailbutton: {
         class: [
             // Positioning
@@ -89,12 +152,41 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
     },
-    indicators: {
-        class: ['flex items-center justify-center', 'p-4']
-    },
-    indicator: {
-        class: 'mr-2'
-    },
+    indicators: ({ parent }) => ({
+        class: [
+            // flex
+            'flex items-center justify-center',
+
+            // Spacing
+            'p-4',
+
+            // Indicators Position
+            {
+                'order-2': parent.props.indicatorsPosition == 'bottom',
+                'order-1': parent.props.indicatorsPosition == 'top',
+                'order-1 flex-col': parent.props.indicatorsPosition == 'left',
+                'flex-col order-2': parent.props.indicatorsPosition == 'right'
+            },
+            {
+                'absolute z-10 bg-black/50': parent.props.showIndicatorsOnItem
+            },
+
+            {
+                'bottom-0 left-0 w-full items-start': parent.props.indicatorsPosition == 'bottom' && parent.props.showIndicatorsOnItem,
+                'top-0 left-0 w-full items-start': parent.props.indicatorsPosition == 'top' && parent.props.showIndicatorsOnItem,
+                'left-0 top-0 h-full items-start': parent.props.indicatorsPosition == 'left' && parent.props.showIndicatorsOnItem,
+                'right-0 top-0 h-full items-start': parent.props.indicatorsPosition == 'right' && parent.props.showIndicatorsOnItem
+            }
+        ]
+    }),
+    indicator: ({ parent }) => ({
+        class: [
+            {
+                'mr-2': parent.props.indicatorsPosition == 'bottom' || parent.props.indicatorsPosition == 'top',
+                'mb-2': parent.props.indicatorsPosition == 'left' || parent.props.indicatorsPosition == 'right'
+            }
+        ]
+    }),
     indicatorbutton: ({ context }) => ({
         class: [
             // Size
@@ -114,12 +206,12 @@ export default {
         ]
     }),
     mask: {
-        class: ['fixed top-0 left-0 w-full h-full', 'flex items-center justify-center', 'bg-black bg-opacity-90']
+        class: ['fixed top-0 left-0 w-full h-full', 'flex items-center justify-center', 'bg-black/90']
     },
     closebutton: {
         class: [
             // Positioning
-            'absolute top-0 right-0',
+            '!absolute top-0 right-0',
 
             // Display & Flexbox
             'flex justify-center items-center overflow-hidden',
@@ -140,19 +232,26 @@ export default {
     closeicon: {
         class: 'w-6 h-6'
     },
-    previousitembutton: {
+    previousitembutton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
 
             // Appearance
             'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md',
+            {
+                'opacity-0 group-hover:opacity-100': parent.props.showItemNavigatorsOnHover
+            },
 
             // Spacing
             'mx-2',
 
             // Positioning
-            'fixed top-1/2 mt-[-0.5rem] left-0',
+            'top-1/2 mt-[-0.5rem] left-0',
+            {
+                '!absolute': parent.props.showItemNavigators,
+                '!fixed': !parent.props.showItemNavigators
+            },
 
             // Hover Effect
             'hover:bg-surface-0/10 hover:text-white',
@@ -160,20 +259,27 @@ export default {
             // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
-    },
-    nextitembutton: {
+    }),
+    nextitembutton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
 
             // Appearance
             'bg-transparent text-white w-16 h-16 transition duration-200 ease-in-out rounded-md',
+            {
+                'opacity-0 group-hover:opacity-100': parent.props.showItemNavigatorsOnHover
+            },
 
             // Spacing
             'mx-2',
 
             // Positioning
-            'fixed top-1/2 mt-[-0.5rem] right-0',
+            'top-1/2 mt-[-0.5rem] right-0',
+            {
+                '!absolute': parent.props.showItemNavigators,
+                '!fixed': !parent.props.showItemNavigators
+            },
 
             // Hover Effect
             'hover:bg-surface-0/10 hover:text-white',
@@ -181,7 +287,7 @@ export default {
             // Focus Effects
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
-    },
+    }),
     caption: {
         class: [
             // Positioning

@@ -19,7 +19,7 @@
                                 <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" />
                             </NuxtLink>
                             <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
-                                <Button label="Give a Star" icon="pi pi-star-fill text-yellow-400" iconPos="right" text severity="secondary" />
+                                <Button label="Give a Star" icon="pi pi-star-fill" iconPos="right" severity="secondary" />
                             </a>
                         </div>
                     </div>

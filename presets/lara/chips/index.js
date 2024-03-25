@@ -7,7 +7,7 @@ export default {
             }
         ]
     }),
-    container: ({ state }) => ({
+    container: ({ state, props }) => ({
         class: [
             // Font
             'font-sans text-base leading-none',
@@ -29,10 +29,14 @@ export default {
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'border',
+            { 'border-surface-300 dark:border-surface-600': !props.invalid },
+
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
 
             // States
-            'hover:border-primary-500 dark:hover:border-primary-400',
+            { 'hover:border-primary-500 dark:hover:border-primary-400': !props.invalid },
             'focus:outline-none focus:outline-offset-0',
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.hovered },

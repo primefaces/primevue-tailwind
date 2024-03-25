@@ -33,13 +33,16 @@ export default {
 
             // Colors
             {
-                'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
+                'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked && !props.invalid,
                 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
             },
 
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
             // States
             {
-                'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !context.checked,
+                'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !context.checked && !props.invalid,
                 'peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.checked,
                 'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                 'cursor-default opacity-60': props.disabled
@@ -74,7 +77,7 @@ export default {
             'border-2 border-surface-200 dark:border-surface-700',
 
             // Misc
-            'appareance-none',
+            'appearance-none',
             'cursor-pointer'
         ]
     },

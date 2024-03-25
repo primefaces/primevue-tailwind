@@ -13,7 +13,12 @@ export default {
             'bg-surface-0 dark:bg-surface-900',
 
             // States
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+            { 'ring-1 ring-inset': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+
+            { 'ring-surface-300 dark:ring-surface-600': !props.invalid && !state.focused },
+
+            // Invalid State
+            { 'ring-red-500 dark:ring-red-400': props.invalid && !state.focused },
 
             // Misc
             'cursor-default',
@@ -31,7 +36,7 @@ export default {
             props.display === 'chip' && props?.modelValue?.length > 0 ? 'py-1 px-3' : 'py-1.5 px-3',
 
             // Color
-            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
+            { 'text-surface-800 dark:text-white/80': props.modelValue?.length, 'text-surface-400 dark:text-surface-500': !props.modelValue?.length },
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Transitions
@@ -263,7 +268,7 @@ export default {
                 'border-2 border-surface-300 dark:border-surface-700',
 
                 // Misc
-                'appareance-none'
+                'appearance-none'
             ]
         },
         icon: {
@@ -371,7 +376,7 @@ export default {
                 'border-2 border-surface-300 dark:border-surface-700',
 
                 // Misc
-                'appareance-none'
+                'appearance-none'
             ]
         },
         icon: {

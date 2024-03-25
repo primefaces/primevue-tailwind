@@ -26,14 +26,17 @@ export default {
             // Colors
             {
                 'bg-surface-0 dark:bg-surface-900 ': !props.modelValue,
-                'border-surface-200 dark:border-surface-700 ': !props.modelValue,
+                'border-surface-200 dark:border-surface-700 ': !props.modelValue && !props.invalid,
                 'text-surface-700 dark:text-white/80': !props.modelValue,
                 'bg-primary-500 dark:bg-primary-400 border-primary-500 dark:border-primary-400 text-white dark:text-surface-900': props.modelValue
             },
 
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
             // States
             {
-                'peer-hover:bg-surface-50 dark:peer-hover:bg-surface-800/80 peer-hover:border-surface-200 dark:peer-hover:bg-surface-700 peer-hover:text-surface-700 dark:peer-hover:text-white/80': !props.modelValue,
+                'peer-hover:bg-surface-50 dark:peer-hover:bg-surface-800/80 peer-hover:border-surface-200 dark:peer-hover:bg-surface-700 peer-hover:text-surface-700 dark:peer-hover:text-white/80': !props.modelValue && !props.invalid,
                 'peer-hover:bg-primary-600 peer-hover:border-primary-600 dark:peer-hover:bg-primary-300 dark:peer-hover:border-primary-300': props.modelValue,
                 'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50': !props.disabled
             },
@@ -72,7 +75,7 @@ export default {
             'border border-surface-200 dark:border-surface-700',
 
             // Misc
-            'appareance-none',
+            'appearance-none',
             'cursor-pointer'
         ]
     },

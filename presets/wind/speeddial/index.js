@@ -3,7 +3,7 @@ export default {
         class: 'absolute flex'
     },
     button: {
-        root: ({ props, context }) => ({
+        root: ({ props, context, parent }) => ({
             class: [
                 'relative',
                 'z-20',
@@ -173,6 +173,7 @@ export default {
 
                 // Transitions
                 'transition duration-200 ease-in-out',
+                parent.state.d_visible ? 'rotate-45' : 'rotate-0',
 
                 // Misc
                 'cursor-pointer overflow-hidden select-none'
@@ -236,7 +237,7 @@ export default {
             'transform transition-transform duration-200 ease-out transition-opacity duration-800',
 
             // Conditional Appearance
-            context.hidden ? 'opacity-0 scale-0' : 'opacity-1 scale-100',
+            context.hidden ? 'opacity-0 scale-0' : 'opacity-100 scale-100',
 
             // Conditional Spacing
             {

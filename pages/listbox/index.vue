@@ -9,6 +9,7 @@ import DisabledDoc from '@/doc/listbox/DisabledDoc.vue';
 import FilterDoc from '@/doc/listbox/FilterDoc.vue';
 import GroupDoc from '@/doc/listbox/GroupDoc.vue';
 import ImportDoc from '@/doc/listbox/ImportDoc.vue';
+import InvalidDoc from '@/doc/listbox/InvalidDoc.vue';
 import MultipleDoc from '@/doc/listbox/MultipleDoc.vue';
 import TemplateDoc from '@/doc/listbox/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/listbox/VirtualScrollDoc.vue';
@@ -51,11 +52,11 @@ export default {
                     label: 'Virtual Scroll',
                     component: VirtualScrollDoc
                 },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',

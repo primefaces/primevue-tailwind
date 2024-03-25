@@ -27,15 +27,20 @@ export default {
             'before:bg-surface-0 before:dark:bg-surface-900',
 
             // Colors
-            'border border-transparent',
+            'border',
             {
                 'bg-surface-200 dark:bg-surface-700': !(props.modelValue == props.trueValue),
                 'bg-primary-500 dark:bg-primary-400': props.modelValue == props.trueValue
             },
 
+            { 'border-transparent': !props.invalid },
+
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
             // States
             { 'peer-hover:bg-surface-300 dark:peer-hover:bg-surface-600 ': !(props.modelValue == props.trueValue) && !props.disabled },
-            { 'peer-hover:bg-primary-600 dark:peer-hover:bg-surface-300 ': (props.modelValue == props.trueValue) && !props.disabled },
+            { 'peer-hover:bg-primary-600 dark:peer-hover:bg-surface-300 ': props.modelValue == props.trueValue && !props.disabled },
             'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50',
 
             // Transition
@@ -68,7 +73,7 @@ export default {
             'outline-none',
 
             // Misc
-            'appareance-none',
+            'appearance-none',
             'cursor-pointer'
         ]
     }
