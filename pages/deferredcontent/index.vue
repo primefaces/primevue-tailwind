@@ -40,7 +40,10 @@ export default {
                     label: 'Accessibility',
                     component: AccessibilityDoc
                 }
-            ]
+            ],
+            presetDoc: {
+                key: 'deferred'
+            }
         };
     }
 };

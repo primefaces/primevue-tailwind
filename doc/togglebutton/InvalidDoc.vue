@@ -3,7 +3,7 @@
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <ToggleButton v-model="checked" onIcon="pi pi-check" offIcon="pi pi-times" class="!border !border-red-400 w-full sm:w-[10rem]" aria-label="Confirmation" />
+        <ToggleButton v-model="checked" onIcon="pi pi-check" offIcon="pi pi-times" class="w-full sm:w-[10rem]" aria-label="Confirmation" invalid />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             checked: true,
             code: {
                 basic: `
-<ToggleButton v-model="checked1" onIcon="pi pi-check" offIcon="pi pi-times" class="!border !border-red-400 w-full sm:w-[10rem]" aria-label="Confirmation" />
+<ToggleButton v-model="checked1" onIcon="pi pi-check" offIcon="pi pi-times" class="w-full sm:w-[10rem]" aria-label="Confirmation" invalid />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <ToggleButton v-model="checked1" onIcon="pi pi-check" offIcon="pi pi-times" class="!border !border-red-400 w-full sm:w-[10rem]" aria-label="Confirmation" />
+        <ToggleButton v-model="checked1" onIcon="pi pi-check" offIcon="pi pi-times" class="w-full sm:w-[10rem]" aria-label="Confirmation" invalid />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <ToggleButton v-model="checked1" onIcon="pi pi-check" offIcon="pi pi-times" class="!border !border-red-400 w-full sm:w-[10rem]" aria-label="Confirmation" />
+        <ToggleButton v-model="checked1" onIcon="pi pi-check" offIcon="pi pi-times" class="w-full sm:w-[10rem]" aria-label="Confirmation" invalid />
     </div>
 </template>
 

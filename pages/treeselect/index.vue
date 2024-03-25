@@ -8,7 +8,9 @@ import BasicDoc from '@/doc/treeselect/BasicDoc.vue';
 import CheckboxDoc from '@/doc/treeselect/CheckboxDoc.vue';
 import DisabledDoc from '@/doc/treeselect/DisabledDoc.vue';
 import ImportDoc from '@/doc/treeselect/ImportDoc.vue';
+import InvalidDoc from '@/doc/treeselect/InvalidDoc.vue';
 import MultipleDoc from '@/doc/treeselect/MultipleDoc.vue';
+
 export default {
     data() {
         return {
@@ -38,11 +40,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',

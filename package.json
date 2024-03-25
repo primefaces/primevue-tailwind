@@ -1,6 +1,6 @@
 {
     "name": "primevue-tailwind",
-    "version": "0.8.0-SNAPSHOT",
+    "version": "0.8.2",
     "homepage": "https://tailwind.primevue.org/",
     "repository": {
         "type": "git",
@@ -46,14 +46,15 @@
         "sass": "^1.45.0",
         "sass-loader": "^8.0.2",
         "tailwindcss": "^3.4.1",
-        "jszip": "3.10.1"
+        "jszip": "3.10.1",
+        "chart.js": "3.7.0"
     },
     "dependencies": {
         "@docsearch/js": "^3.3.3",
         "nuxt": "3.3.2",
         "nuxt-gtag": "^0.6.2",
-        "nuxt-primevue": "^0.3.0",
+        "nuxt-primevue": "^0.3.1",
         "primeicons": "^6.0.1",
-        "primevue": "^3.48.1"
+        "primevue": "^3.49.1"
     }
 }

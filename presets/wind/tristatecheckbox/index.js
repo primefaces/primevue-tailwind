@@ -20,7 +20,7 @@ export default {
             // Colors
             'text-surface-600',
             {
-                'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.active,
+                'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.active && !props.invalid,
                 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.active
             },
 
@@ -28,6 +28,9 @@ export default {
                 'ring-2 ring-primary-500 dark:ring-primary-400': !props.disabled && context.focused,
                 'cursor-default opacity-60': props.disabled
             },
+
+            // Invalid State
+            { 'ring-1 ring-red-500 dark:ring-red-400': props.invalid },
 
             // States
             {
@@ -68,7 +71,7 @@ export default {
             'border-2 border-surface-300 dark:border-surface-700',
 
             // Misc
-            'appareance-none'
+            'appearance-none'
         ]
     },
     checkicon: {

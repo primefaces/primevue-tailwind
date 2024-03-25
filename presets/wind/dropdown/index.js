@@ -13,7 +13,12 @@ export default {
             'bg-surface-0 dark:bg-surface-900',
 
             // States
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+            { 'ring-1 ring-inset': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
+
+            { 'ring-surface-300 dark:ring-surface-600': !props.invalid && !state.focused },
+
+            // Invalid State
+            { 'ring-red-500 dark:ring-red-400': props.invalid && !state.focused },
 
             // Misc
             'cursor-default',

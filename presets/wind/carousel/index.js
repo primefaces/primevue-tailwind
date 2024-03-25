@@ -92,12 +92,27 @@ export default {
     item: ({ props }) => ({
         class: [
             // Flexbox
-            'flex shrink-0 grow',
+            'flex shrink-0 grow ',
 
-            // Width
+            // Size
             {
-                'w-1/3': props.orientation !== 'vertical',
-                'w-full': props.orientation == 'vertical'
+                'w-full sm:w-[50%] md:w-[33.333333333333336%]': props.orientation !== 'vertical',
+
+                'w-full h-full': props.orientation == 'vertical'
+            }
+        ]
+    }),
+    itemcloned: ({ props }) => ({
+        class: [
+            // Flexbox
+            'flex shrink-0 grow',
+            'unvisible',
+
+            // Size
+            {
+                'w-full sm:w-[50%] md:w-[33.333333333333336%]': props.orientation !== 'vertical',
+
+                'w-full h-full': props.orientation == 'vertical'
             }
         ]
     }),
@@ -116,13 +131,13 @@ export default {
     indicatorbutton: ({ context }) => ({
         class: [
             // Sizing & Shape
-            'w-8 h-2 rounded-0',
+            'w-6 h-1.5 rounded-md',
 
             // Transitions
             'transition duration-200',
 
             // Focus Styles
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Color & Background
             {

@@ -68,6 +68,11 @@
                             "to": "/inputgroup"
                         },
                         {
+                            "name": "InputOtp",
+                            "to": "/inputotp",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "InputNumber",
                             "to": "/inputnumber"
                         },
@@ -227,12 +232,30 @@
                             "to": "/scrollpanel"
                         },
                         {
+                            "name": "Splitter",
+                            "to": "/splitter"
+                        },
+                        {
+                            "name": "Stepper",
+                            "to": "/stepper",
+                            "badge": "NEW"
+                        },
+                        {
                             "name": "TabView",
                             "to": "/tabview"
                         },
                         {
                             "name": "Toolbar",
                             "to": "/toolbar"
+                        }
+                    ]
+                },
+                {
+                    "name": "File",
+                    "children": [
+                        {
+                            "name": "Upload",
+                            "to": "/fileupload"
                         }
                     ]
                 },
@@ -335,6 +358,14 @@
                     "name": "Media",
                     "children": [
                         {
+                            "name": "Carousel",
+                            "to": "/carousel"
+                        },
+                        {
+                            "name": "Galleria",
+                            "to": "/galleria"
+                        },
+                        {
                             "name": "Image",
                             "to": "/image"
                         }
@@ -361,8 +392,7 @@
                         },
                         {
                             "name": "Inplace",
-                            "to": "/inplace",
-                            "badge": "NEW"
+                            "to": "/inplace"
                         },
                         {
                             "name": "MeterGroup",
@@ -375,8 +405,7 @@
                         },
                         {
                             "name": "ProgressSpinner",
-                            "to": "/progressspinner",
-                            "badge": "NEW"
+                            "to": "/progressspinner"
                         },
                         {
                             "name": "Ripple",

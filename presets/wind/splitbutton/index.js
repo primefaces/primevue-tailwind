@@ -215,7 +215,7 @@ export default {
                 {
                     'min-w-8 p-0 py-1.5': parent.props.label == null && parent.props.icon !== null
                 },
-                'ml-[1px]',
+                'ml-px',
 
                 // Shape
                 'rounded-l-none',

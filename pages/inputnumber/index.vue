@@ -12,6 +12,7 @@ import LocaleDoc from '@/doc/inputnumber/LocaleDoc.vue';
 import NumeralsDoc from '@/doc/inputnumber/NumeralsDoc.vue';
 import PrefixSuffixDoc from '@/doc/inputnumber/PrefixSuffixDoc.vue';
 import VerticalDoc from '@/doc/inputnumber/VerticalDoc.vue';
+import InvalidDoc from '../../doc/inputnumber/InvalidDoc.vue';
 
 export default {
     data() {
@@ -57,11 +58,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
-                // {
-                //     id: 'invalid',
-                //     label: 'Invalid',
-                //     component: InvalidDoc
-                // },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
+                },
                 {
                     id: 'disabled',
                     label: 'Disabled',

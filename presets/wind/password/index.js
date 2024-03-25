@@ -4,7 +4,8 @@ export default {
             'inline-flex relative',
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled
-            }
+            },
+            { '[&>input]:pr-10': props.toggleMask }
         ]
     }),
     panel: {
@@ -57,10 +58,10 @@ export default {
         ]
     }),
     showicon: {
-        class: ['absolute top-1/2 right-3 -mt-2', 'text-surface-600 dark:text-white/70']
+        class: ['absolute top-1/2 right-3 -mt-2 z-10', 'text-surface-600 dark:text-white/70']
     },
     hideicon: {
-        class: ['absolute top-1/2 right-3 -mt-2', 'text-surface-600 dark:text-white/70']
+        class: ['absolute top-1/2 right-3 -mt-2 z-10', 'text-surface-600 dark:text-white/70']
     },
     input: {
         root: ({ props, context, parent }) => ({
@@ -78,19 +79,25 @@ export default {
                     'py-1 px-2 sm:text-sm': props.size == 'small',
                     'py-1.5 px-3 sm:text-sm': props.size == null
                 },
+                'w-full',
 
                 // Colors
                 'text-surface-900 dark:text-surface-0',
                 'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                 'bg-surface-0 dark:bg-surface-900',
                 'shadow-sm',
-                { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': parent.instance.$name !== 'InputGroup' },
+                { 'ring-1 ring-inset ring-offset-0': parent.instance.$name !== 'InputGroup' },
+
+                { 'ring-surface-300 dark:ring-surface-700': !parent.props.invalid },
+
+                // Invalid State
+                { 'ring-red-500 dark:ring-red-400': parent.props.invalid },
 
                 // Shape
                 { 'rounded-md': parent.instance.$name !== 'InputGroup' },
                 { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
                 { 'border-0 border-y border-l last:border-r border-surface-300 dark:border-surface-600': parent.instance.$name == 'InputGroup' },
-                { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
+                { 'first:ml-0 -ml-px': parent.instance.$name == 'InputGroup' && !props.showButtons },
                 'appearance-none',
 
                 // Interactions

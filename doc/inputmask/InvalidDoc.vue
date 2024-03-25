@@ -3,7 +3,7 @@
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <InputMask v-model="value" mask="99-999999" placeholder="99-999999" class="p-invalid" />
+        <InputMask v-model="value" mask="99-999999" placeholder="99-999999" invalid />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             value: '',
             code: {
                 basic: `
-<InputMask v-model="value" mask="99-999999" placeholder="99-999999" class="p-invalid"/>
+<InputMask v-model="value" mask="99-999999" placeholder="99-999999" invalid/>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <InputMask v-model="value" mask="99-999999" placeholder="99-999999" class="p-invalid"/>
+        <InputMask v-model="value" mask="99-999999" placeholder="99-999999" invalid/>
     </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <InputMask v-model="value" mask="99-999999" placeholder="99-999999" class="p-invalid"/>
+        <InputMask v-model="value" mask="99-999999" placeholder="99-999999" invalid/>
     </div>
 </template>
 

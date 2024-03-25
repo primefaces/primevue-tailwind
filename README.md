@@ -150,6 +150,6 @@ We've created various samples for the popular options in the Vue ecosystem. Visi
 
 ## Contributors
 
-<a href="https://github.com/primefaces/primevue/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=primefaces/primevue" />
+<a href="https://github.com/primefaces/primevue-tailwind/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=primefaces/primevue-tailwind" />
 </a>

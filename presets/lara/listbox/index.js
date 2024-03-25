@@ -1,5 +1,5 @@
 export default {
-    root: {
+    root: ({ props }) => ({
         class: [
             // Sizing and Shape
             'min-w-[12rem]',
@@ -8,9 +8,13 @@ export default {
             // Colors
             'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-white/80',
-            'border border-surface-200 dark:border-surface-600'
+            'border',
+            { 'border-surface-300 dark:border-surface-600': !props.invalid },
+
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid }
         ]
-    },
+    }),
     wrapper: {
         class: [
             // Overflow

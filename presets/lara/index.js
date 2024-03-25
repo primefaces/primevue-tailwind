@@ -20,11 +20,13 @@ import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dataview from './dataview';
 import dataviewlayoutoptions from './dataviewlayoutoptions';
+import deferred from './deferred';
 import dialog from './dialog';
 import divider from './divider';
 import dock from './dock';
 import dropdown from './dropdown';
 import fieldset from './fieldset';
+import fileupload from './fileupload';
 import floatlabel from './floatlabel';
 import galleria from './galleria';
 import global from './global';
@@ -36,6 +38,7 @@ import inputgroup from './inputgroup';
 import inputgroupaddon from './inputgroupaddon';
 import inputmask from './inputmask';
 import inputnumber from './inputnumber';
+import inputotp from './inputotp';
 import inputswitch from './inputswitch';
 import inputtext from './inputtext';
 import knob from './knob';
@@ -67,6 +70,9 @@ import skeleton from './skeleton';
 import slider from './slider';
 import speeddial from './speeddial';
 import splitbutton from './splitbutton';
+import splitter from './splitter';
+import splitterpanel from './splitterpanel';
+import stepper from './stepper';
 import steps from './steps';
 import tabmenu from './tabmenu';
 import tabview from './tabview';
@@ -120,6 +126,7 @@ export default {
     password,
     iconfield,
     floatlabel,
+    inputotp,
 
     //buttons
     button,
@@ -147,6 +154,13 @@ export default {
     divider,
     toolbar,
     scrollpanel,
+    splitter,
+    splitterpanel,
+    stepper,
+    deferred,
+
+    //file
+    fileupload,
 
     //menu
     contextmenu,

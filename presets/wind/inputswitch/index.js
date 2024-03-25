@@ -36,15 +36,20 @@ export default {
             { 'before:transform before:translate-x-4': props.modelValue == props.trueValue },
 
             // Colors
-            'border-2 border-transparent',
+            'border',
             {
                 'bg-surface-200 dark:bg-surface-700': !(props.modelValue == props.trueValue),
                 'bg-primary-500 dark:bg-primary-400': props.modelValue == props.trueValue
             },
 
+            { 'border-transparent': !props.invalid },
+
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
             // States
             { 'peer-hover:bg-surface-300 dark:peer-hover:bg-surface-600 ': !(props.modelValue == props.trueValue) && !props.disabled },
-            { 'peer-hover:bg-primary-600 dark:peer-hover:bg-surface-300 ': (props.modelValue == props.trueValue) && !props.disabled },
+            { 'peer-hover:bg-primary-600 dark:peer-hover:bg-surface-300 ': props.modelValue == props.trueValue && !props.disabled },
             'peer-focus-visible:ring-2 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400',
 
             // Transition
@@ -82,7 +87,7 @@ export default {
             'border-2 border-surface-300 dark:border-surface-700',
 
             // Misc
-            'appareance-none'
+            'appearance-none'
         ]
     }
 };

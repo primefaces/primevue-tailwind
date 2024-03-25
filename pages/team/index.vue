@@ -10,8 +10,8 @@
             </p>
         </div>
 
-        <div class="card !p-20">
-            <div class="flex flex-wrap gap-20">
+        <div class="card p-8">
+            <div class="flex flex-wrap gap-8">
                 <div class="flex flex-col items-center flex-auto">
                     <img src="https://primefaces.org/cdn/primevue/images/team/cagatay.jpg" class="rounded-full mb-4" alt="Cagatay Civici" />
                     <span class="mb-2 text-xl font-bold">Çağatay Çivici</span>
@@ -58,13 +58,23 @@
                     <span>UI/UX Designer</span>
                 </div>
                 <div class="flex flex-col items-center flex-auto">
-                    <img src="https://primefaces.org/cdn/primevue/images/team/bugra.jpg" class="rounded-full mb-4" alt="Buğra Beydüz" />
-                    <span class="mb-2 text-xl font-bold">Buğra Beydüz</span>
+                    <img src="https://primefaces.org/cdn/primevue/images/team/aliriza.jpg" class="rounded-full mb-4" alt="Alirıza Gücal" />
+                    <span class="mb-2 text-xl font-bold">Alirıza Gücal</span>
                     <span>Front-End Developer</span>
                 </div>
                 <div class="flex flex-col items-center flex-auto">
-                    <img src="https://primefaces.org/cdn/primevue/images/team/aliriza.jpg" class="rounded-full mb-4" alt="Alirıza Gücal" />
-                    <span class="mb-2 text-xl font-bold">Alirıza Gücal</span>
+                    <img src="https://primefaces.org/cdn/primevue/images/team/umit.jpg" class="rounded-full mb-4" alt="Ümit Çelik" />
+                    <span class="mb-2 text-xl font-bold">Ümit Çelik</span>
+                    <span>UI/UX Designer</span>
+                </div>
+                <div class="flex flex-col items-center flex-auto">
+                    <img src="https://primefaces.org/cdn/primevue/images/team/toprak.jpg" class="rounded-full mb-4" alt="Toprak Koç" />
+                    <span class="mb-2 text-xl font-bold">Toprak Koç</span>
+                    <span>Front-End Developer</span>
+                </div>
+                <div class="flex flex-col items-center flex-auto">
+                    <img src="https://primefaces.org/cdn/primevue/images/team/mehmet.jpg" class="rounded-full mb-4" alt="Mehmet Çetin" />
+                    <span class="mb-2 text-xl font-bold">Mehmet Çetin</span>
                     <span>Front-End Developer</span>
                 </div>
                 <div class="flex flex-col items-center flex-auto">
@@ -73,14 +83,9 @@
                     <span>Front-End Developer</span>
                 </div>
                 <div class="flex flex-col items-center flex-auto">
-                    <img src="https://primefaces.org/cdn/primevue/images/team/burak.jpg" class="rounded-full mb-4" alt="Burak Sağlam" />
-                    <span class="mb-2 text-xl font-bold">Burak Sağlam</span>
+                    <img src="https://primefaces.org/cdn/primevue/images/team/taner.jpg" class="rounded-full mb-4" alt="Taner Engin" />
+                    <span class="mb-2 text-xl font-bold">Taner Engin</span>
                     <span>Front-End Developer</span>
-                </div>
-                <div class="flex flex-col items-center flex-auto">
-                    <img src="https://primefaces.org/cdn/primevue/images/team/umit.jpg" class="rounded-full mb-4" alt="Ümit Çelik" />
-                    <span class="mb-2 text-xl font-bold">Ümit Çelik</span>
-                    <span>UI/UX Designer</span>
                 </div>
             </div>
         </div>

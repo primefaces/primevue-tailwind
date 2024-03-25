@@ -20,13 +20,18 @@ export default {
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
             'shadow-sm',
-            { 'ring-1 ring-inset ring-surface-300 dark:ring-surface-700 ring-offset-0': parent.instance.$name !== 'InputGroup' },
+            { 'ring-1 ring-inset ring-offset-0': parent.instance.$name !== 'InputGroup' },
+
+            { 'ring-surface-300 dark:ring-surface-700': !props.invalid },
+
+            // Invalid State
+            { 'ring-red-500 dark:ring-red-400': props.invalid },
 
             // Shape
             { 'rounded-md': parent.instance.$name !== 'InputGroup' },
             { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
             { 'border-0 border-y border-l last:border-r border-surface-300 dark:border-surface-600': parent.instance.$name == 'InputGroup' },
-            { 'first:ml-0 ml-[-1px]': parent.instance.$name == 'InputGroup' && !props.showButtons },
+            { 'first:ml-0 -ml-px': parent.instance.$name == 'InputGroup' && !props.showButtons },
             'appearance-none',
 
             // Interactions

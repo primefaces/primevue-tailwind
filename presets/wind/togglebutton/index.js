@@ -26,11 +26,15 @@ export default {
 
             // Colors
             'text-surface-700 dark:text-white/80',
-            'ring-1 ring-surface-200 dark:ring-surface-700',
+            'ring-1',
+            { 'ring-surface-200 dark:ring-surface-700': !props.invalid },
             {
                 'bg-surface-0 dark:bg-surface-900 ': !props.modelValue,
                 'bg-surface-100 dark:bg-surface-700': props.modelValue
             },
+
+            // Invalid State
+            { 'ring-red-500 dark:ring-red-400': props.invalid },
 
             // States
             'peer-hover:bg-surface-200 dark:peer-hover:bg-surface-600/80',
@@ -72,7 +76,7 @@ export default {
             'border border-surface-200 dark:border-surface-700',
 
             // Misc
-            'appareance-none',
+            'appearance-none',
             'cursor-pointer'
         ]
     },

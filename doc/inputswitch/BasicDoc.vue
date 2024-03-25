@@ -15,7 +15,8 @@ export default {
             checked: false,
             code: {
                 basic: `
-<InputSwitch v-model="checked" />`,
+<InputSwitch v-model="checked" />
+`,
                 options: `
 <template>
     <div class="card flex justify-center">

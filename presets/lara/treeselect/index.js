@@ -10,14 +10,18 @@ export default {
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-            'border border-surface-300 dark:border-surface-700',
+            'border',
+            { 'border-surface-300 dark:border-surface-600': !props.invalid },
+
+            // Invalid State
+            { 'border-red-500 dark:border-red-400': props.invalid },
 
             // Transitions
             'transition-all',
             'duration-200',
 
             // States
-            'hover:border-primary-500 dark:hover:border-primary-300',
+            { 'hover:border-primary-500 dark:hover:border-primary-300': !props.invalid },
             { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
             // Misc
@@ -168,7 +172,7 @@ export default {
                 'cursor-pointer select-none'
             ]
         }),
-        nodeCheckbox: {
+        nodeCheckbox: ({ props, context, instance }) => ({
             root: {
                 class: [
                     'relative',
@@ -189,7 +193,7 @@ export default {
                     'select-none'
                 ]
             },
-            box: ({ props, context }) => ({
+            box: {
                 class: [
                     // Alignment
                     'flex',
@@ -222,7 +226,7 @@ export default {
                     'transition-colors',
                     'duration-200'
                 ]
-            }),
+            },
             input: {
                 class: [
                     'peer',
@@ -247,7 +251,7 @@ export default {
                     'border-2 border-surface-200 dark:border-surface-700',
 
                     // Misc
-                    'appareance-none',
+                    'appearance-none',
                     'cursor-pointer'
                 ]
             },
@@ -261,14 +265,17 @@ export default {
                     'h-4',
 
                     // Colors
-                    'text-white dark:text-surface-900',
+                    {
+                        'text-white dark:text-surface-900': !instance.partialChecked,
+                        'text-gray dark:text-white': instance.partialChecked
+                    },
 
                     // Transitions
                     'transition-all',
                     'duration-200'
                 ]
             }
-        },
+        }),
         nodeicon: {
             class: [
                 // Space

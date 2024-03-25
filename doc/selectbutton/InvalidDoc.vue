@@ -3,7 +3,7 @@
         <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <SelectButton v-model="value" :options="options" aria-labelledby="basic" class="p-invalid" />
+        <SelectButton v-model="value" :options="options" aria-labelledby="basic" invalid />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -16,12 +16,12 @@ export default {
             options: ['Off', 'On'],
             code: {
                 basic: `
-<SelectButton v-model="value" :options="options" aria-labelledby="basic" class="p-invalid" />
+<SelectButton v-model="value" :options="options" aria-labelledby="basic" invalid />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <SelectButton v-model="value" :options="options" aria-labelledby="basic" class="p-invalid" />
+        <SelectButton v-model="value" :options="options" aria-labelledby="basic" invalid />
     </div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <SelectButton v-model="value" :options="options" aria-labelledby="basic" class="p-invalid" />
+        <SelectButton v-model="value" :options="options" aria-labelledby="basic" invalid />
     </div>
 </template>
 

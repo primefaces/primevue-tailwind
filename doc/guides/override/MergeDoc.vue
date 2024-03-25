@@ -8,7 +8,7 @@
         <DocSectionCode :code="code1" importCode hideToggleCode hideCodeSandbox hideStackBlitz />
         <DocSectionCode :code="code2" hideToggleCode hideCodeSandbox hideStackBlitz />
         <p>
-            With the default values, component would use the following values. Since <i>mergeProps</i> is false, the sections with the same name (panel, content) are overriden. There is no footer in the local component so the global footer section is
+            With the default values, component would use the following values. Since <i>mergeProps</i> is false, the sections with the same name (header, content) are overriden. There is no footer in the local component so the global footer section is
             used because <i>mergeSections</i> is true.
         </p>
         <DocSectionCode :code="code3" importCode hideToggleCode hideCodeSandbox hideStackBlitz />
