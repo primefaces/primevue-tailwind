@@ -58,7 +58,7 @@ export default {
                 { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 
                 // Filled State *for FloatLabel
-                { filled: parent.instance?.$name == 'FloatLabel' && context.filled },
+                { filled: parent.instance?.$parentInstance?.$name == 'FloatLabel' && parent.state.d_modelValue !== null },
 
                 //Position
                 { 'order-2': parent.props.buttonLayout == 'horizontal' || parent.props.buttonLayout == 'vertical' }
