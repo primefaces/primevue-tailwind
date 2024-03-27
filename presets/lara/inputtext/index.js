@@ -22,7 +22,7 @@ export default {
             { 'first:ml-0 -ml-px': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
             // Colors
-            'text-surface-600 dark:text-surface-200',
+            'text-surface-800 dark:text-white/80',
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
             'border',

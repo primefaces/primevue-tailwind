@@ -27,8 +27,6 @@ export default {
 
             // Invalid State
             { 'ring-red-500 dark:ring-red-400': props.invalid && !state.focused },
-            
-
 
             // Misc
             'cursor-default',
@@ -50,7 +48,7 @@ export default {
             // Color and Background
             'bg-transparent',
             'border-0',
-            { 'text-surface-800 dark:text-white/80': props.modelValue != undefined, 'text-surface-400 dark:text-surface-500': props.modelValue == undefined },
+            { 'text-surface-900 dark:text-surface-0': props.modelValue != undefined, 'text-surface-400 dark:text-surface-500': props.modelValue == undefined },
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
 
             // Sizing and Spacing
