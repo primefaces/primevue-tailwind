@@ -271,4 +271,7 @@ export default {
     checkicon: {
         class: ['inline-block', 'mr-1.5'],
     },
+    blankIcon: {
+        class: ['inline-block', 'mr-1.5'],
+    },
 };
