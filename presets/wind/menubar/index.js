@@ -77,6 +77,9 @@ export default {
                 'hover:bg-surface-100 dark:hover:bg-black/40 text-surface-900 dark:text-surface-0/80': context.active
             },
 
+            // Disabled State
+            { 'opacity-60 pointer-events-none cursor-default': context.disabled },
+
             // Transitions
             'transition-all',
             'duration-200'
