@@ -9,8 +9,8 @@
 </template>
 
 <script>
+import AuraDoc from './AuraDoc.vue';
 import LaraDoc from './LaraDoc.vue';
-import WindDoc from './WindDoc.vue';
 
 export default {
     data() {
@@ -22,9 +22,9 @@ export default {
                     component: LaraDoc
                 },
                 {
-                    id: 'presets.wind',
-                    label: 'Wind',
-                    component: WindDoc
+                    id: 'presets.aura',
+                    label: 'Aura',
+                    component: AuraDoc
                 }
             ]
         };

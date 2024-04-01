@@ -38,8 +38,8 @@ export default {
                     ...common
                 },
                 {
-                    id: 'presets.wind',
-                    label: 'Wind',
+                    id: 'presets.aura',
+                    label: 'Aura',
                     ...common
                 }
             ]

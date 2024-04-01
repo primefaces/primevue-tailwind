@@ -57,7 +57,7 @@ export default {
             preset: 'lara',
             presets: [
                 { name: 'Lara', value: 'lara' },
-                { name: 'Wind', value: 'wind' }
+                { name: 'Aura', value: 'aura' }
             ],
             groups: [],
             filename: ''

@@ -9,10 +9,10 @@
                         </div>
                         <div class="flex-col justify-start items-start gap-4 flex">
                             <div class="text-5xl font-bold">
-                                <span class="text-neutral-800 dark:text-surface-50 leading-tight">Tailwind CSS Based <br />UI Component Library <br />for </span>
+                                <span class="text-neutral-800 dark:text-surface-50 leading-tight">Tailaura CSS Based <br />UI Component Library <br />for </span>
                                 <span class="text-primary-400 font-bold leading-tight">Vue.js</span>
                             </div>
-                            <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</div>
+                            <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailaura CSS and the convenience of PrimeVue components.</div>
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
                             <NuxtLink to="/overview">
@@ -44,12 +44,12 @@
                                                 type="button"
                                                 class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                                 :class="{
-                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
-                                                    'dark:bg-surface-900': !isWind
+                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isAura,
+                                                    'dark:bg-surface-900': !isAura
                                                 }"
-                                                @click="setPreset('wind')"
+                                                @click="setPreset('aura')"
                                             >
-                                                Wind
+                                                Aura
                                             </button>
                                         </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="21" viewBox="0 0 41 21" fill="none" class="mt-5 ml-[-3px]">
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">
                                     <span class="text-surface-900 dark:text-white text-lg font-medium">Color Palette</span>
-                                    <span class="text-surface-900 dark:text-white text-sm font-light">Leverage the full potential of Tailwind's robust color palette to enhance your design.</span>
+                                    <span class="text-surface-900 dark:text-white text-sm font-light">Leverage the full potential of Tailaura's robust color palette to enhance your design.</span>
                                 </div>
                             </div>
                             <div class="w-[20.5rem] light-dark-card flex p-[0.571rem] flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch">
@@ -2826,12 +2826,12 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isWind,
-                                                'dark:bg-surface-900': !isWind
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isAura,
+                                                'dark:bg-surface-900': !isAura
                                             }"
-                                            @click="setPreset('wind')"
+                                            @click="setPreset('aura')"
                                         >
-                                            Wind
+                                            Aura
                                         </button>
                                     </div>
                                 </div>
@@ -2900,7 +2900,7 @@ export default {
             selectbutton_value: { icon: 'pi pi-th-large', value: 'Grid' },
             lightdark_value: 'light',
             value1: 20,
-            presetoptions: [{ value: 'TailwindUI' }, { value: 'Lara' }],
+            presetoptions: [{ value: 'TailauraUI' }, { value: 'Lara' }],
             slider_value: [20, 80],
             date: '12/12/2024',
             components: {
@@ -2947,8 +2947,8 @@ export default {
         isLara() {
             return this.$appState.preset === 'lara';
         },
-        isWind() {
-            return this.$appState.preset === 'wind';
+        isAura() {
+            return this.$appState.preset === 'aura';
         }
     }
 };

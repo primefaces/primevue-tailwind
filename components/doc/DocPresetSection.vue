@@ -4,8 +4,8 @@
 </template>
 
 <script>
+import Aura from '@/presets/aura';
 import Lara from '@/presets/lara';
-import Wind from '@/presets/wind';
 import { ObjectUtils } from 'primevue/utils';
 
 export default {
@@ -45,7 +45,7 @@ export default {
             }
         };
 
-        const preset = this.$attrs?.label === 'Wind' ? Wind : Lara;
+        const preset = this.$attrs?.label === 'Aura' ? Aura : Lara;
         const presetKey = this.$attrs?.data?.presetKey ?? '';
         const keys = ObjectUtils.isArray(presetKey) ? presetKey : [presetKey];
         const basicCode = keys.map((key) => `\n${key.indexOf('.') > -1 ? `'${key}'` : key}: ${stringify(ObjectUtils.resolveFieldData(preset, key), 4).replace(/['"]/g, (match) => (match === '"' ? "'" : '"'))}`).join(',');
