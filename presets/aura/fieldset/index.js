@@ -1,42 +1,39 @@
 export default {
     root: {
         class: [
-            'block',
-
             // Spacing
-            'px-4 pt-2 py-3',
-            'inline-size-min',
+            'p-[1.125rem] pt-0',
 
             // Shape
             'rounded-md',
+
             // Color
             'border border-surface-200 dark:border-surface-700',
-            'bg-surface-0 dark:bg-surface-900',
+            'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
     legend: ({ props }) => ({
         class: [
             // Font
-            'font-bold',
+            'font-semibold',
             'leading-none',
 
             //Spacing
-            { 'p-0': props.toggleable, 'p-5': !props.toggleable },
+            'p-0 mb-[0.375rem]',
 
             // Shape
             'rounded-md',
 
             // Color
             'text-surface-700 dark:text-surface-0/80',
-            'border border-surface-200 dark:border-surface-700',
-            'bg-surface-50 dark:bg-surface-900',
+            'bg-surface-0 dark:bg-surface-800',
 
             // Transition
             'transition-none',
 
             // States
-            { 'hover:bg-surface-100 hover:border-surface-200 hover:text-surface-900 dark:hover:text-surface-0/80 dark:hover:bg-surface-800/80': props.toggleable }
+            { 'hover:bg-surface-100 dark:hover:bg-surface-700': props.toggleable }
         ]
     }),
     toggler: ({ props }) => ({
@@ -46,7 +43,7 @@ export default {
             'relative',
 
             //Spacing
-            { 'p-5': props.toggleable },
+            { 'py-2 px-3': props.toggleable },
 
             // Shape
             { 'rounded-md': props.toggleable },
@@ -56,7 +53,7 @@ export default {
 
             // States
             { 'hover:text-surface-900 dark:hover:text-surface-100': props.toggleable },
-            { 'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50': props.toggleable },
+            { 'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300': props.toggleable },
 
             // Misc
             {
@@ -67,11 +64,11 @@ export default {
     togglerIcon: {
         class: 'mr-2 inline-block'
     },
-    legendTitle: {
-        class: 'flex items-center justify-center leading-none'
-    },
+    legendTitle: ({ props }) => ({
+        class: ['flex items-center justify-center leading-none', { 'py-2 px-3': !props.toggleable }]
+    }),
     content: {
-        class: 'p-5'
+        class: 'p-0'
     },
     transition: {
         enterFromClass: 'max-h-0',
