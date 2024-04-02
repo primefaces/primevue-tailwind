@@ -1,20 +1,36 @@
 export default {
     root: {
         class: [
+            //Flex
+            'flex flex-col',
+
             //Shape
-            'rounded-md',
+            'rounded-[12px]',
             'shadow-md',
 
             //Color
-            'bg-surface-0 dark:bg-surface-900',
+            'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-surface-0'
         ]
     },
     body: {
-        class: 'p-5'
+        class: [
+            //Flex
+            'flex flex-col',
+            'gap-4',
+
+            'p-6'
+        ]
+    },
+    caption: {
+        class: [
+            //Flex
+            'flex flex-col',
+            'gap-2'
+        ]
     },
     title: {
-        class: 'text-2xl font-bold mb-2'
+        class: 'text-xl font-semibold mb-0'
     },
     subtitle: {
         class: [
@@ -22,16 +38,16 @@ export default {
             'font-normal',
 
             //Spacing
-            'mb-2',
+            'mb-0',
 
             //Color
             'text-surface-600 dark:text-surface-0/60'
         ]
     },
     content: {
-        class: 'py-5' // Vertical padding.
+        class: 'p-0'
     },
     footer: {
-        class: 'pt-5' // Top padding.
+        class: 'p-0'
     }
 };
