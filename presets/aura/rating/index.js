@@ -5,7 +5,7 @@ export default {
 
             // Flex & Alignment
             'flex items-center',
-            'gap-1',
+            'gap-2',
 
             // Misc
             {
@@ -20,7 +20,7 @@ export default {
 
             //State
             {
-                'outline-none ring-2 ring-primary-500 dark:ring-primary-400': context.focused
+                'outline-none ring ring-primary-500/50 dark:ring-primary-400/50': context.focused
             },
 
             // Misc
@@ -33,7 +33,13 @@ export default {
             'w-5 h-5',
 
             // Color
-            'text-red-500 dark:text-red-400'
+            'text-red-500 dark:text-red-400',
+
+            // State
+            'hover:text-red-600 dark:hover:text-red-300',
+
+            // Transition
+            'transition duration-200 ease-in'
         ]
     },
     item: ({ props, context }) => ({
@@ -43,7 +49,7 @@ export default {
 
             // State
             {
-                'outline-none ring-2 ring-primary-500 dark:ring-primary-400': context.focused
+                'outline-none ring ring-primary-500/50 dark:ring-primary-400/50': context.focused
             },
 
             // Misc
@@ -59,7 +65,7 @@ export default {
             'w-5 h-5',
 
             // Color
-            'text-surface-700 dark:text-surface-0/70',
+            'text-surface-700 dark:text-surface-0/80',
 
             // State
             { 'hover:text-primary-500 dark:hover:text-primary-400': !props.readonly },
@@ -75,6 +81,9 @@ export default {
 
             // Color
             'text-primary-500 dark:text-primary-400',
+
+            // State
+            { 'hover:text-primary-600 dark:hover:text-primary-300': !props.readonly },
 
             // Transition
             'transition duration-200 ease-in'

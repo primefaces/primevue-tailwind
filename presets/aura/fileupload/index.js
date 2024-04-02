@@ -38,14 +38,14 @@ export default {
             'items-center inline-flex text-center align-bottom justify-center',
 
             // Spacing
-            'px-2.5 py-1.5',
+            'px-4 py-3',
 
             // Shape
             'rounded-md',
 
             // Font
-            'text-sm',
-            'font-semibold',
+            'leading-[normal]',
+            'font-bold',
 
             // Colors
             'text-white dark:text-surface-900',

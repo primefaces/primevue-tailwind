@@ -2,8 +2,7 @@ export default {
     root: {
         class: [
             // Shape
-            'rounded-lg',
-            'shadow-xl',
+            'rounded-md shadow-lg',
             'border-0 dark:border',
 
             // Position
@@ -17,7 +16,7 @@ export default {
 
             // Before: Triangle
             'before:absolute before:-top-[9px] before:-ml-[9px] before:left-[calc(var(--overlayArrowLeft,0)+1.25rem)] z-0',
-            'before:w-0 before:h-0 before:shadow-xl',
+            'before:w-0 before:h-0',
             'before:border-transparent before:border-solid',
             'before:border-x-[8px] before:border-[8px]',
             'before:border-t-0 before:border-b-surface-300/10 dark:before:border-b-surface-700',
@@ -30,7 +29,7 @@ export default {
         ]
     },
     content: {
-        class: 'p-6 items-center flex'
+        class: 'p-5 items-center flex'
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',

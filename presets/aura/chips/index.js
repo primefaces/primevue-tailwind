@@ -10,34 +10,36 @@ export default {
     container: ({ state, props }) => ({
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
+            'font-sans text-base leading-none',
 
             // Flex
-            'flex items-center flex-wrap gap-1',
+            'flex items-center flex-wrap gap-2',
 
             // Spacing
-            'm-0 py-1 px-3',
+            'm-0 py-1.5 px-3',
 
             // Size
             'w-full',
+            'min-h-[2.877rem]',
 
             // Shape
             'list-none',
             'rounded-md',
 
             // Color
-            'text-surface-900 dark:text-surface-0',
+            'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'shadow-sm',
-
-            // States
-            { 'ring-1 ring-inset': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
-
-            { 'ring-surface-300 dark:ring-surface-600': !props.invalid && !state.focused },
+            'border',
+            { 'border-surface-300 dark:border-surface-600': !props.invalid },
 
             // Invalid State
-            { 'ring-red-500 dark:ring-red-400': props.invalid && !state.focused },
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
+            // States
+            { 'hover:border-primary-500 dark:hover:border-primary-400': !props.invalid },
+            'focus:outline-none focus:outline-offset-0',
+            { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
+            { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.hovered },
 
             // Transition
             'transition-colors duration-200',
@@ -49,12 +51,12 @@ export default {
     }),
 
     inputtoken: {
-        class: ['py-0.5 px-0', 'inline-flex flex-auto']
+        class: ['py-1.5 px-0', 'inline-flex flex-auto']
     },
     input: {
         class: [
             // Font
-            'font-sans sm:text-sm leading-none',
+            'font-sans text-base leading-[1.2]',
 
             // Size
             'w-full',
@@ -65,11 +67,11 @@ export default {
             // Shape
             'appearance-none rounded-none',
             'border-0 outline-none',
+            'shadow-none',
 
             // Color
             'text-surface-700 dark:text-white/80',
-            'bg-transparent',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500'
+            'bg-transparent'
         ]
     },
     token: {
@@ -78,7 +80,7 @@ export default {
             'inline-flex items-center',
 
             // Spacing
-            'py-0.5 px-3',
+            'py-1.5 px-3',
 
             // Shape
             'rounded-[1.14rem]',

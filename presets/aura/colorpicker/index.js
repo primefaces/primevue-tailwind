@@ -44,7 +44,7 @@ export default {
             },
 
             // Shape
-            'shadow-md border rounded-md',
+            'shadow-md border',
 
             // Colors
             'bg-surface-800 border-surface-900 dark:border-surface-600'

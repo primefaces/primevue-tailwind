@@ -2,8 +2,8 @@ export default {
     root: ({ context }) => ({
         class: [
             // Font
-            'font-medium',
-            'text-xs leading-6 font-sans',
+            'font-bold font-sans',
+            'text-xs leading-5',
 
             // Alignment
             'flex items-center justify-center',
@@ -16,9 +16,9 @@ export default {
             'm-0',
             {
                 'p-0': context.nogutter || context.dot,
-                'p-1': !context.nogutter && !context.dot,
-                'min-w-[0.5rem] h-2': context.dot,
-                'min-w-[1rem] h-4': !context.dot
+                'px-2': !context.nogutter && !context.dot,
+                'min-w-[0.5rem] w-2 h-2': context.dot,
+                'min-w-[1.5rem] h-6': !context.dot
             },
 
             // Shape
@@ -29,7 +29,6 @@ export default {
 
             // Color
             'text-white dark:text-surface-900',
-            'ring-1 ring-white dark:ring-surface-900',
             {
                 'bg-primary-500 dark:bg-primary-400': !context.info && !context.success && !context.warning && !context.danger && !context.help && !context.secondary,
                 'bg-surface-500 dark:bg-surface-400': context.secondary,

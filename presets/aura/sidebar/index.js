@@ -10,13 +10,13 @@ export default {
 
             // Size
             {
-                'h-full w-full max-w-[28rem]': props.position == 'left' || props.position == 'right',
+                'h-full w-80': props.position == 'left' || props.position == 'right',
                 'h-auto w-full': props.position == 'top' || props.position == 'bottom'
             },
 
             // Shape
             'border-0 dark:border',
-            'shadow-xl',
+            'shadow-lg',
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
@@ -38,7 +38,7 @@ export default {
             'shrink-0',
 
             // Spacing
-            'px-6 pt-6',
+            'p-5',
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
@@ -46,7 +46,7 @@ export default {
         ]
     },
     title: {
-        class: ['font-semibold leading-6 text-base m-0']
+        class: ['font-bold text-lg']
     },
     icons: {
         class: ['flex items-center']
@@ -61,7 +61,7 @@ export default {
             // Size and Spacing
             'mr-2',
             'last:mr-0',
-            'w-6 h-6',
+            'w-8 h-8',
 
             // Shape
             'border-0',
@@ -77,28 +77,28 @@ export default {
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
             'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Misc
             'overflow-hidden'
         ]
     },
-    closeicon: {
+    closeButtonIcon: {
         class: [
             // Display
             'inline-block',
 
             // Size
-            'w-3',
-            'h-3'
+            'w-4',
+            'h-4'
         ]
     },
     content: {
         class: [
             // Spacing and Size
-            'px-6 pb-6',
-            'mt-6',
+            'p-5',
+            'pt-0',
             'h-full',
             'w-full',
 
@@ -110,12 +110,12 @@ export default {
     mask: ({ props }) => ({
         class: [
             // Transitions
-            'transition',
+            'transition-all',
             'duration-300',
             { 'p-5': !props.position == 'full' },
 
             // Background and Effects
-            { 'has-[.mask-active]:bg-transparent dark:has-[.mask-active]:bg-transparent bg-surface-500/70 dark:bg-surface-700/70': props.modal, 'has-[.mask-active]:backdrop-blur-none backdrop-blur-sm': props.modal }
+            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal, 'has-[.mask-active]:backdrop-blur-none backdrop-blur-sm': props.modal }
         ]
     }),
     transition: ({ props }) => {

@@ -5,10 +5,7 @@ export default {
             'inline',
 
             // Spacing
-            'px-2.5 py-1.5',
-
-            // Size
-            'text-sm',
+            'p-3',
 
             // Shape
             'rounded-md',

@@ -1,37 +1,46 @@
 export default {
     root: ({ context, props }) => ({
         class: [
-            // Position
+            // Position and Shadows
             'absolute',
+            'shadow-md',
+            'p-fadein',
             // Spacing
             {
-                'px-1.5': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
-                'py-1.5': context?.top || context?.bottom
+                'py-0 px-1': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                'py-1 px-0': context?.top || context?.bottom
             }
         ]
     }),
-    arrow: {
-        class: 'hidden'
-    },
-    text: {
+    arrow: ({ context, props }) => ({
         class: [
-            // Size
-            'text-xs leading-none',
+            // Position
 
-            // Spacing
-            'p-2',
+            'absolute',
+
+            // Size
+            'w-0',
+            'h-0',
 
             // Shape
-            'rounded-md',
+            'border-transparent',
+            'border-solid',
+            {
+                'border-y-[0.25rem] border-r-[0.25rem] border-l-0 border-r-surface-600': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                'border-y-[0.25rem] border-l-[0.25rem] border-r-0 border-l-surface-600': context?.left,
+                'border-x-[0.25rem] border-t-[0.25rem] border-b-0 border-t-surface-600': context?.top,
+                'border-x-[0.25rem] border-b-[0.25rem] border-t-0 border-b-surface-600': context?.bottom
+            },
 
-            // Color
-            'text-surface-900 dark:text-surface-0/80',
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-surface-200 dark:ring-surface-800 ring-offset-0',
-
-            // Misc
-            'whitespace-pre-line',
-            'break-words'
+            // Spacing
+            {
+                '-mt-1 ': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                '-mt-1': context?.left,
+                '-ml-1': context?.top || context?.bottom
+            }
         ]
+    }),
+    text: {
+        class: ['p-3', 'bg-surface-600 dark:bg-surface-700', 'text-white', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words']
     }
 };

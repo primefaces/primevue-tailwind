@@ -11,16 +11,27 @@ export default {
     container: ({ props }) => ({
         class: [
             'my-4 rounded-md w-full',
+            'border-solid border-0 border-l-[6px]',
+            'backdrop-blur-[10px] shadow-md',
 
-            'shadow-lg',
-            'bg-surface-0 dark:bg-surface-800',
-            'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
             // Colors
             {
-                'text-blue-500 dark:text-blue-300': props.message.severity == 'info',
-                'text-green-500 dark:text-green-300': props.message.severity == 'success',
-                'text-orange-500 dark:text-orange-300': props.message.severity == 'warn',
-                'text-red-500 dark:text-red-300': props.message.severity == 'error'
+                'bg-blue-100/70 dark:bg-blue-500/20': props.message.severity == 'info',
+                'bg-green-100/70 dark:bg-green-500/20': props.message.severity == 'success',
+                'bg-orange-100/70 dark:bg-orange-500/20': props.message.severity == 'warn',
+                'bg-red-100/70 dark:bg-red-500/20': props.message.severity == 'error'
+            },
+            {
+                'border-blue-500 dark:border-blue-400': props.message.severity == 'info',
+                'border-green-500 dark:border-green-400': props.message.severity == 'success',
+                'border-orange-500 dark:border-orange-400': props.message.severity == 'warn',
+                'border-red-500 dark:border-red-400': props.message.severity == 'error'
+            },
+            {
+                'text-blue-700 dark:text-blue-300': props.message.severity == 'info',
+                'text-green-700 dark:text-green-300': props.message.severity == 'success',
+                'text-orange-700 dark:text-orange-300': props.message.severity == 'warn',
+                'text-red-700 dark:text-red-300': props.message.severity == 'error'
             }
         ]
     }),
@@ -36,27 +47,23 @@ export default {
     icon: {
         class: [
             // Sizing and Spacing
-            'w-5 h-5',
-            'mr-2 shrink-0'
+            'w-6 h-6',
+            'text-lg leading-none mr-2 shrink-0'
         ]
     },
     text: {
         class: [
             // Font and Text
-            'text-sm leading-none',
+            'text-base leading-none',
             'ml-2',
             'flex-1'
         ]
     },
     summary: {
-        class: 'font-medium block'
+        class: 'font-bold block'
     },
     detail: ({ props }) => ({
-        class: [
-          'block',
-          'text-surface-600 dark:text-surface-0/70',
-          { 'mt-1.5': props.message.summary },
-        ],
+        class: ['block', { 'mt-2': props.message.summary }],
     }),
     closebutton: {
         class: [
@@ -64,35 +71,25 @@ export default {
             'flex items-center justify-center',
 
             // Size
-            'w-6 h-6',
+            'w-8 h-8',
 
             // Spacing and Misc
-            'ml-auto relative',
+            'ml-auto  relative',
 
             // Shape
             'rounded-full',
 
             // Colors
             'bg-transparent',
-            'text-surface-700 dark:text-surface-0/80',
 
             // Transitions
             'transition duration-200 ease-in-out',
 
             // States
-            'hover:bg-surface-100 dark:hover:bg-surface-700',
-            'outline-none focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
+            'hover:bg-surface-0/50 dark:hover:bg-surface-0/10',
 
             // Misc
             'overflow-hidden'
-        ]
-    },
-    closeicon: {
-        class: [
-            // Sizing and Spacing
-            'w-3 h-3',
-            'shrink-0'
         ]
     },
     transition: {

@@ -5,24 +5,24 @@ export default {
             'inline-flex items-center',
 
             // Spacing
-            'px-2 py-0.5',
+            'px-3',
 
             // Shape
             'rounded-[1.14rem]',
 
             // Colors
-            'text-surface-700 dark:text-surface-0/70',
+            'text-surface-700 dark:text-white/70',
             'bg-surface-200 dark:bg-surface-700'
         ]
     },
     label: {
-        class: 'text-xs leading-6 mx-0'
+        class: 'leading-6 my-1.5 mx-0'
     },
     icon: {
         class: 'leading-6 mr-2'
     },
     image: {
-        class: ['w-6 h-6 mr-2', 'rounded-full']
+        class: ['w-9 h-9 -ml-3 mr-2', 'rounded-full']
     },
     removeIcon: {
         class: [

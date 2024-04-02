@@ -2,18 +2,28 @@ export default {
     root: ({ props }) => ({
         class: [
             // Spacing and Shape
-            'my-2 mx-0',
+            'my-4 mx-0',
             'rounded-md',
-            'ring-1 ring-inset ring-surface-200 dark:ring-surface-700 ring-offset-0',
+            'border-solid border-0 border-l-[6px]',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
-
             {
-                'text-blue-500 dark:text-blue-300': props.severity == 'info',
-                'text-green-500 dark:text-green-300': props.severity == 'success',
-                'text-orange-500 dark:text-orange-300': props.severity == 'warn',
-                'text-red-500 dark:text-red-300': props.severity == 'error'
+                'bg-blue-100/70 dark:bg-blue-500/20': props.severity == 'info',
+                'bg-green-100/70 dark:bg-green-500/20': props.severity == 'success',
+                'bg-orange-100/70 dark:bg-orange-500/20': props.severity == 'warn',
+                'bg-red-100/70 dark:bg-red-500/20': props.severity == 'error'
+            },
+            {
+                'border-blue-500 dark:border-blue-400': props.severity == 'info',
+                'border-green-500 dark:border-green-400': props.severity == 'success',
+                'border-orange-500 dark:border-orange-400': props.severity == 'warn',
+                'border-red-500 dark:border-red-400': props.severity == 'error'
+            },
+            {
+                'text-blue-700 dark:text-blue-300': props.severity == 'info',
+                'text-green-700 dark:text-green-300': props.severity == 'success',
+                'text-orange-700 dark:text-orange-300': props.severity == 'warn',
+                'text-red-700 dark:text-red-300': props.severity == 'error'
             }
         ]
     }),
@@ -23,58 +33,48 @@ export default {
             'flex items-center',
 
             // Spacing
-            'p-4'
+            'py-5 px-7'
         ]
     },
     icon: {
         class: [
             // Sizing and Spacing
-            'w-5 h-5',
-            'mr-3 shrink-0'
+            'w-6 h-6',
+            'text-lg leading-none mr-2 shrink-0'
         ]
     },
     text: {
         class: [
             // Font and Text
-            'text-sm leading-none',
+            'text-base leading-none',
             'font-medium'
         ]
     },
-    button: ({ props }) => ({
+    button: {
         class: [
             // Flexbox
             'flex items-center justify-center',
 
             // Size
-            'w-6 h-6',
+            'w-8 h-8',
 
             // Spacing and Misc
-            'ml-auto relative',
+            'ml-auto  relative',
 
             // Shape
             'rounded-full',
 
             // Colors
             'bg-transparent',
-            'text-surface-700 dark:text-surface-0/80',
 
             // Transitions
             'transition duration-200 ease-in-out',
 
             // States
-            'hover:bg-surface-100 dark:hover:bg-surface-700',
-            'outline-none focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
+            'hover:bg-surface-0/50 dark:hover:bg-surface-0/10',
 
             // Misc
             'overflow-hidden'
-        ]
-    }),
-    closeicon: {
-        class: [
-            // Sizing and Spacing
-            'w-3 h-3',
-            'shrink-0'
         ]
     },
     transition: {

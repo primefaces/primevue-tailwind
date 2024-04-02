@@ -2,13 +2,12 @@ export default {
     root: ({ props }) => ({
         class: [
             'relative',
-            'flex items-center',
 
             // Size
-            { 'h-2 w-full min-w-[15rem]': props.orientation == 'horizontal', 'w-2 h-full min-h-[15rem]': props.orientation == 'vertical' },
+            { 'h-1 w-60': props.orientation == 'horizontal', 'w-1 h-56': props.orientation == 'vertical' },
 
             // Shape
-            'border-0 rounded-lg',
+            'border-0',
 
             // Colors
             'bg-surface-100 dark:bg-surface-700',
@@ -32,9 +31,6 @@ export default {
                 'w-full': props.orientation == 'vertical'
             },
 
-            //Shape
-            'rounded-lg',
-
             // Colors
             'bg-primary-500 dark:bg-primary-400'
         ]
@@ -44,20 +40,25 @@ export default {
             'block',
 
             // Size
-            'h-4',
-            'w-4',
+            'h-[1.143rem]',
+            'w-[1.143rem]',
             {
-                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+                'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'vertical'
             },
 
             // Shape
             'rounded-full',
-            'ring-2',
+            'border-2',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'bg-surface-0 dark:bg-surface-600',
+            'border-primary-500 dark:border-primary-400',
+
+            // States
+            'hover:bg-primary-500 hover:border-primary-500',
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring',
+            'ring-primary-400/50 dark:ring-primary-300/50',
 
             // Transitions
             'transition duration-200',
@@ -72,20 +73,25 @@ export default {
             'block',
 
             // Size
-            'h-4',
-            'w-4',
+            'h-[1.143rem]',
+            'w-[1.143rem]',
             {
-                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+                'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical'
             },
 
             // Shape
             'rounded-full',
-            'ring-2',
+            'border-2',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'bg-surface-0 dark:bg-surface-600',
+            'border-primary-500 dark:border-primary-400',
+
+            // States
+            'hover:bg-primary-500 hover:border-primary-500',
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring',
+            'focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transitions
             'transition duration-200',
@@ -100,20 +106,25 @@ export default {
             'block',
 
             // Size
-            'h-4',
-            'w-4',
+            'h-[1.143rem]',
+            'w-[1.143rem]',
             {
-                'top-[50%] mt-[-0.5rem] ml-[-0.5rem]': props.orientation == 'horizontal',
-                'left-[50%] mb-[-0.5rem] ml-[-0.5rem]': props.orientation == 'vertical'
+                'top-[50%] mt-[-0.5715rem] ml-[-0.5715rem]': props.orientation == 'horizontal',
+                'left-[50%] mb-[-0.5715rem] ml-[-0.4715rem]': props.orientation == 'vertical'
             },
 
             // Shape
             'rounded-full',
-            'ring-2',
+            'border-2',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-primary-500 dark:ring-primary-400',
+            'bg-surface-0 dark:bg-surface-600',
+            'border-primary-500 dark:border-primary-400',
+
+            // States
+            'hover:bg-primary-500 hover:border-primary-500',
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring',
+            'focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transitions
             'transition duration-200',

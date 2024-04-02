@@ -18,28 +18,27 @@ export default {
             'items-center inline-flex flex-1 text-center align-bottom justify-center',
 
             // Sizes & Spacing
-            'px-2.5 py-1.5',
-            'text-sm',
+            'px-4 py-3 leading-none',
 
             // Shapes
-            'rounded-md shadow-sm',
+            'rounded-md border',
 
             // Colors
-            'text-surface-700 dark:text-white/80',
-            'ring-1',
-            { 'ring-surface-200 dark:ring-surface-700': !props.invalid },
             {
                 'bg-surface-0 dark:bg-surface-900 ': !props.modelValue,
-                'bg-surface-100 dark:bg-surface-700': props.modelValue
+                'border-surface-200 dark:border-surface-700 ': !props.modelValue && !props.invalid,
+                'text-surface-700 dark:text-white/80': !props.modelValue,
+                'bg-primary-500 dark:bg-primary-400 border-primary-500 dark:border-primary-400 text-white dark:text-surface-900': props.modelValue
             },
 
             // Invalid State
-            { 'ring-red-500 dark:ring-red-400': props.invalid },
+            { 'border-red-500 dark:border-red-400': props.invalid },
 
             // States
-            'peer-hover:bg-surface-200 dark:peer-hover:bg-surface-600/80',
             {
-                'peer-focus-visible:ring-2 peer-focus-visible:ring-inset peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled
+                'peer-hover:bg-surface-50 dark:peer-hover:bg-surface-800/80 peer-hover:border-surface-200 dark:peer-hover:bg-surface-700 peer-hover:text-surface-700 dark:peer-hover:text-white/80': !props.modelValue && !props.invalid,
+                'peer-hover:bg-primary-600 peer-hover:border-primary-600 dark:peer-hover:bg-primary-300 dark:peer-hover:border-primary-300': props.modelValue,
+                'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50': !props.disabled
             },
 
             // Transitions
@@ -50,7 +49,7 @@ export default {
         ]
     }),
     label: {
-        class: 'font-semibold text-center w-full'
+        class: 'font-bold text-center w-full'
     },
     input: {
         class: [
@@ -80,7 +79,13 @@ export default {
             'cursor-pointer'
         ]
     },
-    icon: {
-        class: [' mr-2', 'text-surface-700 dark:text-white/80']
-    }
+    icon: ({ props }) => ({
+        class: [
+            ' mr-2',
+            {
+                'text-surface-600 dark:text-white/70': !props.modelValue,
+                'text-white dark:text-surface-900': props.modelValue
+            }
+        ]
+    })
 };

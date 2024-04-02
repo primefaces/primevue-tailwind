@@ -13,9 +13,13 @@ export default {
 
             // Color
             'border border-surface-200 dark:border-surface-700',
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-50 dark:bg-surface-800',
             'text-surface-600 dark:text-surface-0/80',
-            { 'text-surface-900 ark:text-surface-0': context.active },
+            { 'text-surface-900': context.active },
+
+            // States
+            'hover:bg-surface-100 dark:hover:bg-surface-700/80',
+            'hover:text-surface-900',
 
             // Transition
             'transition duration-200 ease-in-out',
@@ -27,15 +31,14 @@ export default {
             'relative',
 
             // Font
-            'font-semibold',
-            'text-sm',
+            'font-bold',
             'leading-none',
 
             // Flex & Alignments
             'flex items-center',
 
             // Spacing
-            'px-3 py-2',
+            'p-5',
 
             // Misc
             'select-none cursor-pointer no-underline'
@@ -45,15 +48,15 @@ export default {
         class: 'leading-none'
     },
     headerIcon: {
-        class: 'mr-2 text-sm'
+        class: 'mr-2'
     },
     submenuicon: {
-        class: 'ml-auto order-last text-sm'
+        class: 'mr-2'
     },
     menucontent: {
         class: [
             // Spacing
-            'py-1',
+            'py-2',
 
             // Shape
             'border border-t-0',
@@ -85,13 +88,13 @@ export default {
             'relative',
 
             // Font
-            'text-sm leading-none',
+            'leading-none',
 
             // Flex & Alignments
             'flex items-center',
 
             // Spacing
-            'py-2 px-3',
+            'py-3 px-5',
 
             // Color
             'text-surface-700 dark:text-white/80',

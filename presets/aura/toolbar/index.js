@@ -3,19 +3,17 @@ export default {
         class: [
             // Flex & Alignment
             'flex items-center justify-between flex-wrap',
-            'gap-6',
+            'gap-2',
 
             // Spacing
-            'px-6 py-2',
-            'min-h-[4rem]',
+            'p-5',
 
             // Shape
             'rounded-md',
-            'shadow-md',
 
             // Color
-            'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-surface-100 dark:ring-surface-700'
+            'bg-surface-50 dark:bg-surface-800',
+            'border border-surface-200 dark:border-surface-700'
         ]
     },
     start: {

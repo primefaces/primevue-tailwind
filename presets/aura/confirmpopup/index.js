@@ -3,7 +3,7 @@ export default {
         class: [
             // Shape
             'rounded-lg',
-            'shadow-xl',
+            'shadow-lg',
             'border-0',
 
             // Positioning
@@ -21,24 +21,10 @@ export default {
         ]
     },
     content: {
-        class: [
-            // Font
-            'text-sm',
-
-            // Spacing
-            'px-6',
-            'py-3',
-
-            // Colors
-            'bg-surface-0 dark:bg-surface-800',
-            'text-surface-600 dark:text-surface-0/70',
-
-            // Misc
-            'overflow-y-auto'
-        ]
+        class: 'p-5 items-center flex'
     },
     icon: {
-        class: 'text-xl mr-2'
+        class: 'text-2xl mr-4'
     },
     footer: {
         class: [
@@ -46,18 +32,18 @@ export default {
             'flex items-center justify-end',
             'shrink-0',
             'text-right',
-            'gap-3',
+            'gap-2',
 
             // Spacing
             'px-6',
-            'py-3',
+            'pb-6',
 
             // Shape
             'border-t-0',
             'rounded-b-lg',
 
             // Colors
-            'bg-surface-50 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
@@ -70,8 +56,7 @@ export default {
                 'items-center inline-flex text-center align-bottom justify-center',
 
                 // Sizes & Spacing
-                'px-2.5 py-1.5 min-w-[2rem]',
-                'text-sm',
+                'px-4 py-3 leading-none',
 
                 // Shape
                 'rounded-md',
@@ -81,8 +66,8 @@ export default {
 
                 // States
                 'hover:bg-primary-300/20',
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset',
-                'focus:ring-primary-500 dark:focus:ring-primary-400'
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
             ]
         }
     },
@@ -95,8 +80,7 @@ export default {
                 'items-center inline-flex text-center align-bottom justify-center',
 
                 // Sizes & Spacing
-                'px-2.5 py-1.5 min-w-[2rem]',
-                'text-sm',
+                'px-4 py-3 leading-none',
 
                 // Shape
                 'rounded-md',
@@ -104,12 +88,12 @@ export default {
                 // Color
                 'text-white dark:text-surface-900',
                 'bg-primary-500 dark:bg-primary-400',
-                'ring-1 ring-primary-500 dark:ring-primary-400',
+                'border border-primary-500 dark:border-primary-400',
 
                 // States
                 'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-offset-current',
-                'focus:ring-primary-500 dark:focus:ring-primary-400'
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
             ]
         }
     },

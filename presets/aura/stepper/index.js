@@ -83,8 +83,11 @@ export default {
                 // Size and Shape
                 'min-w-[2rem]',
                 'h-[2rem]',
+                'line-height-[2rem]',
                 'rounded-full',
-                'leading-none',
+
+                // Text
+                'text-lg',
 
                 // Borders
                 context.active ? 'border-0 border-none' : 'border-solid border-2',
@@ -110,7 +113,7 @@ export default {
 
                 // Text
                 context.active ? 'text-surface-900 dark:text-surface-0' : 'text-surface-700 dark:text-surface-0/80',
-                'font-semibold',
+                'font-bold',
 
                 // Transitions
                 'transition',

@@ -17,32 +17,30 @@ export default {
             'py-0 px-3'
         ]
     },
-    node: ({ context }) => ({
+    node: ({ props, context }) => ({
         class: [
             'relative inline-block',
 
-            // Font
-            'text-sm leading-none',
-
             // Spacing
-            'px-5 py-3',
+            'p-5',
 
             // Shape
             'border',
-            'rounded',
 
             // Color
-            'border-surface-200 dark:border-surface-700',
             {
                 'text-surface-600 dark:text-white/80': !context?.selected,
                 'bg-surface-0 dark:bg-surface-800': !context?.selected,
-                'text-surface-700 dark:text-surface-0': context?.selected,
-                'bg-surface-50 dark:bg-surface-700': context?.selected
+                'border-surface-200 dark:border-surface-700': !context?.selected,
+                'text-primary-700 dark:text-surface-0': context?.selected,
+                'bg-primary-50 dark:bg-primary-400/30': context?.selected,
+                'border-primary-200 dark:border-primary-600': context?.selected
             },
 
             // States
             {
-                'hover:bg-surface-100 dark:hover:bg-surface-600/40': context?.selectable
+                'hover:bg-surface-100 dark:hover:bg-surface-700': context?.selectable && !context?.selected,
+                'hover:bg-primary-100 dark:hover:bg-primary-300/30': context?.selectable && context?.selected
             },
 
             { 'cursor-pointer': context?.selectable }
@@ -122,7 +120,7 @@ export default {
             'bg-inherit text-inherit',
 
             // Focus
-            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Misc
             'cursor-pointer no-underline select-none'

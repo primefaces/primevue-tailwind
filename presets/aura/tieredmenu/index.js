@@ -6,11 +6,11 @@ export default {
 
             // Size
             'min-w-[12rem]',
-            'p-1.5',
+            'py-1',
 
             // Colors
             'bg-surface-0 dark:bg-surface-700',
-            'ring-1 ring-surface-200 dark:ring-surface-700'
+            'border border-surface-200 dark:border-surface-700'
         ]
     },
     menu: {
@@ -23,25 +23,28 @@ export default {
         ]
     },
     menuitem: {
-        class: ['relative first:mt-0 mt-1']
+        class: [
+            // Position
+            'relative'
+        ]
     },
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-md',
+            'rounded-none',
 
             //  Colors
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-black/70': context.focused && !context.active,
-                'text-surface-900 dark:text-surface-0/80 bg-surface-50 dark:bg-black/70': context.focused && context.active,
-                'text-surface-900 dark:text-surface-0/80 bg-surface-50 dark:bg-black/70': !context.focused && context.active
+                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': context.focused && context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': !context.focused && context.active
             },
 
             // Hover States
             {
-                'hover:bg-surface-50 dark:hover:bg-surface-800': !context.active,
-                'hover:bg-surface-100 dark:hover:bg-black/40 text-surface-900 dark:text-surface-0/80': context.active
+                'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
+                'hover:bg-primary-500/50 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
             },
 
             // Transitions
@@ -52,17 +55,17 @@ export default {
     action: {
         class: [
             'relative',
-
-            // Font
-            'font-semibold',
-
             // Flexbox
+
             'flex',
             'items-center',
 
             // Spacing
-            'py-2',
-            'px-3',
+            'py-3',
+            'px-5',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
 
             // Misc
             'no-underline',
@@ -75,12 +78,13 @@ export default {
         class: [
             // Spacing
             'mr-2',
-            'leading-6',
-            'text-sm'
+
+            // Color
+            'text-surface-600 dark:text-white/70'
         ]
     },
     label: {
-        class: ['leading-none', 'text-sm']
+        class: ['leading-none']
     },
     submenuicon: {
         class: [
@@ -94,8 +98,8 @@ export default {
             'w-full sm:w-48',
 
             // Spacing
-            'p-1.5',
-            'm-0 mx-1.5',
+            'py-1',
+            'm-0',
             'list-none',
 
             // Shape

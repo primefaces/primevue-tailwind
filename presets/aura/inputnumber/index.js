@@ -6,16 +6,13 @@ export default {
             { 'flex-col': props.showButtons && props.buttonLayout == 'vertical' },
             { 'flex-1 w-[1%]': parent.instance.$name == 'InputGroup' },
 
-            //Sizing
-            { '!w-16': props.showButtons && props.buttonLayout == 'vertical' },
-
             // Shape
             { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' && !props.showButtons },
             { 'border-0 border-y border-l last:border-r border-surface-300 dark:border-surface-600': parent.instance.$name == 'InputGroup' && !props.showButtons },
+            { 'first:ml-0 -ml-px': parent.instance.$name == 'InputGroup' && !props.showButtons },
 
-            { 'ring-1 ring-surface-300 dark:ring-surface-700 ring-offset-0': parent.instance.$name !== 'InputGroup' },
-            'shadow-sm',
-            'rounded-md'
+            //Sizing
+            { '!w-16': props.showButtons && props.buttonLayout == 'vertical' }
         ]
     }),
     input: {
@@ -24,36 +21,41 @@ export default {
                 // Display
                 'flex flex-auto',
 
+                // Font
+                'font-sans leading-none',
+
                 //Text
-                'sm:text-sm',
                 { 'text-center': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Spacing
+                'p-3',
                 'm-0',
-                'py-1.5 px-3',
 
                 // Shape
-                'rounded-md',
+                'rounded-lg',
                 { 'rounded-tr-none rounded-br-none': parent.props.showButtons },
                 { 'rounded-tl-none rounded-bl-none': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'rounded-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
+                { '!rounded-none': parent.instance.$parentInstance?.$name == 'InputGroup' && !parent.props.showButtons },
+                { 'border-0': parent.instance.$parentInstance?.$name == 'InputGroup' && !parent.props.showButtons },
+
                 // Colors
-                'text-surface-900 dark:text-surface-0',
+                'text-surface-800 dark:text-white/80',
                 'placeholder:text-surface-400 dark:placeholder:text-surface-500',
                 'bg-surface-0 dark:bg-surface-900',
-                { 'border-r': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
-                { 'border-x': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
-                { 'border-y': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
-
-                { 'border-surface-300 dark:border-surface-700': !parent.props.invalid },
+                'border',
+                { 'border-surface-300 dark:border-surface-600': !parent.props.invalid },
 
                 // Invalid State
-                { 'border border-red-500 dark:border-red-400': parent.props.invalid },
+                'invalid:focus:ring-red-200',
+                'invalid:hover:border-red-500',
+                { 'border-red-500 dark:border-red-400': parent.props.invalid },
 
                 // States
-                'outline-none focus:ring-primary-600 dark:focus:ring-primary-500',
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:focus:ring-primary-500',
+                { 'hover:border-primary-500 dark:hover:border-primary-400': !parent.props.invalid },
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50 focus:z-10',
+                { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 
                 // Filled State *for FloatLabel
                 { filled: parent.instance?.$parentInstance?.$name == 'FloatLabel' && parent.state.d_modelValue !== null },
@@ -63,10 +65,13 @@ export default {
             ]
         })
     },
-
-    buttongroup: {
-        class: ['flex', 'flex-col']
-    },
+    buttongroup: ({ props }) => ({
+        class: [
+            // Flex
+            'flex',
+            'flex-col'
+        ]
+    }),
 
     incrementbutton: {
         root: ({ parent }) => ({
@@ -85,12 +90,13 @@ export default {
                 { 'order-1': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 //Color
-                'text-surface-600 dark:text-surface-400',
-                'bg-surface-0 dark:bg-surface-800',
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
 
                 // Sizing
                 'w-[3rem]',
-                { 'px-2.5 py-1.5': parent.props.showButtons && parent.props.buttonLayout !== 'stacked' },
+                { 'px-4 py-3': parent.props.showButtons && parent.props.buttonLayout !== 'stacked' },
                 { 'p-0': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'w-full': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
@@ -101,8 +107,8 @@ export default {
                 { 'rounded-bl-none rounded-br-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 //States
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-600 focus:dark:ring-primary-500',
-                'hover:bg-surface-50 dark:hover:bg-surface-700',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'
@@ -129,12 +135,13 @@ export default {
                 { 'order-3': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 //Color
-                'text-surface-600 dark:text-surface-400',
-                'bg-surface-0 dark:bg-surface-800',
+                'text-white dark:text-surface-900',
+                'bg-primary-500 dark:bg-primary-400',
+                'border border-primary-500 dark:border-primary-400',
 
                 // Sizing
                 'w-[3rem]',
-                { 'px-2.5 py-1.5': parent.props.showButtons && parent.props.buttonLayout !== 'stacked' },
+                { 'px-4 py-3': parent.props.showButtons && parent.props.buttonLayout !== 'stacked' },
                 { 'p-0': parent.props.showButtons && parent.props.buttonLayout == 'stacked' },
                 { 'w-full': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
@@ -145,8 +152,8 @@ export default {
                 { 'rounded-tr-none rounded-tl-none ': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 //States
-                'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-inset focus:ring-primary-600 focus:dark:ring-primary-500',
-                'hover:bg-surface-50 dark:hover:bg-surface-700',
+                'focus:outline-none focus:outline-offset-0 focus:ring',
+                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'

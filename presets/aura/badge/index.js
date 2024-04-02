@@ -1,8 +1,9 @@
 export default {
-    root: ({ props, context }) => ({
+    root: ({ props }) => ({
         class: [
             // Font
-            'font-medium',
+            'font-bold',
+
             {
                 'text-xs leading-[1.5rem]': props.size == null,
                 'text-lg leading-[2.25rem]': props.size == 'large',

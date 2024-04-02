@@ -3,6 +3,6 @@ export default {
         class: 'relative'
     },
     mask: {
-        class: 'bg-surface-900/60 backdrop-blur-sm'
+        class: 'bg-black/40'
     }
 };

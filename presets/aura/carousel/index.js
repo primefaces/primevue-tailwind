@@ -131,13 +131,13 @@ export default {
     indicatorbutton: ({ context }) => ({
         class: [
             // Sizing & Shape
-            'w-6 h-1.5 rounded-md',
+            'w-8 h-2 rounded-0',
 
             // Transitions
             'transition duration-200',
 
             // Focus Styles
-            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Color & Background
             {

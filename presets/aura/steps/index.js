@@ -3,60 +3,63 @@ export default {
         class: 'relative'
     },
     menu: {
-        class: 'p-0 m-0 list-none flex justify-center'
+        class: 'p-0 m-0 list-none flex'
     },
     menuitem: {
         class: [
             // Flexbox and Position
             'relative',
             'flex',
-            'justify-center'
+            'justify-center',
+            'flex-1',
+            'overflow-hidden',
+
+            // Before
+            'before:border-t',
+            'before:border-surface-200',
+            'before:dark:border-surface-700',
+            'before:w-full',
+            'before:absolute',
+            'before:top-1/2',
+            'before:left-0',
+            'before:transform',
+            'before:-mt-4'
         ]
     },
-    action: ({ props, context, state }) => ({
+    action: ({ props }) => ({
         class: [
             // Flexbox
-            'inline-flex items-start relative',
+            'inline-flex items-center',
             'flex-col',
 
             // Transitions and Shape
             'transition-shadow',
             'rounded-md',
 
-            // Spacing
-            { 'pr-4 min-[576px]:pr-32 md:pr-40': props.model.length !== context.index + 1 },
-
             // Colors
             'bg-surface-0',
             'dark:bg-transparent',
 
-            // Misc
-            { 'cursor-pointer': !props.readonly },
+            // States
+            'focus:outline-none focus:outline-offset-0 focus:ring',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
-            // After
-            'after:border-t-2',
-            { 'after:border-surface-200 after:dark:border-surface-700': state.d_activeStep <= context.index },
-            { 'after:border-primary-500 after:dark:border-primary-400': state.d_activeStep > context.index },
-            'after:w-full',
-            'after:absolute',
-            'after:top-1/2',
-            'after:left-0',
-            'after:transform',
-            'after:-mt-3',
-            { 'after:hidden': props.model.length == context.index + 1 }
+            // Misc
+            'overflow-hidden',
+            { 'cursor-pointer': !props.readonly }
         ]
     }),
-    step: ({ context, props, state }) => ({
+    step: ({ context, props }) => ({
         class: [
             // Flexbox
             'flex items-center justify-center',
 
             // Position
-            'z-40',
+            'z-20',
 
             // Shape
             'rounded-full',
-            'border-2',
+            'border',
 
             // Size
             'w-[2rem]',
@@ -66,18 +69,12 @@ export default {
 
             // Colors
             {
-                'text-surface-400 dark:text-white/60': !context.active && state.d_activeStep < context.index,
-                'border-surface-100 dark:border-surface-700': !context.active && state.d_activeStep < context.index,
-                'bg-surface-0 dark:bg-surface-800': state.d_activeStep <= context.index
-            },
-            {
+                'text-surface-400 dark:text-white/60': !context.active,
+                'border-surface-100 dark:border-surface-700': !context.active,
+                'bg-surface-0 dark:bg-surface-800': !context.active,
+                'bg-primary-500 dark:bg-primary-400': context.active,
                 'border-primary-500 dark:border-primary-400': context.active,
-                'text-primary-500 dark:text-primary-400': context.active
-            },
-            {
-                'bg-primary-500 dark:bg-primary-400': state.d_activeStep > context.index,
-                'text-surface-0 dark:text-surface-900': state.d_activeStep > context.index,
-                'border-primary-500 dark:border-primary-400': state.d_activeStep > context.index
+                'text-surface-0 dark:text-surface-900': context.active
             },
 
             // States
@@ -91,10 +88,9 @@ export default {
     }),
     label: ({ context }) => ({
         class: [
-            'relative',
             // Font
-            'text-sm leading-none',
-            { 'font-medium': context.active },
+            'leading-5',
+            { 'font-bold': context.active },
 
             // Display
             'block',
@@ -107,6 +103,7 @@ export default {
 
             // Text and Overflow
             'whitespace-nowrap',
+            'overflow-hidden',
             'overflow-ellipsis',
             'max-w-full'
         ]

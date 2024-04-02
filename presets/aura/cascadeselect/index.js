@@ -7,38 +7,41 @@ export default {
 
             // Shape
             'rounded-md',
-            'shadow-sm',
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-
-            // States
-            { 'ring-1 ring-inset': !state.focused, 'ring-2 ring-inset ring-primary-500 dark:ring-primary-400': state.focused },
-
-            { 'ring-surface-300 dark:ring-surface-600': !props.invalid && !state.focused },
+            'border',
+            { 'border-surface-300 dark:border-surface-600': !props.invalid },
 
             // Invalid State
-            { 'ring-red-500 dark:ring-red-400': props.invalid && !state.focused },
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
+            // Transitions
+            'transition-all',
+            'duration-200',
+
+            // States
+            { 'hover:border-primary-500 dark:hover:border-primary-300': !props.invalid },
+            { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
             // Misc
-            'cursor-default',
+            'cursor-pointer',
             'select-none',
-            { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled }
+            { 'opacity-60': props.disabled, 'pointer-events-none': props.disabled, 'cursor-default': props.disabled }
         ]
     }),
     label: ({ props }) => ({
         class: [
             //Font
             'font-sans',
-            'leading-6',
-            'sm:text-sm',
+            'leading-none',
 
             // Flex & Alignment
             ' flex flex-auto',
 
             // Sizing and Spacing
             'w-[1%]',
-            'py-1.5 px-3',
+            'p-3',
 
             //Shape
             'rounded-none',
@@ -66,9 +69,6 @@ export default {
     }),
     dropdownbutton: {
         class: [
-            //Font
-            'sm:text-sm',
-
             // Flexbox
             'flex items-center justify-center',
             'shrink-0',
@@ -89,17 +89,16 @@ export default {
         class: [
             // Position
             'absolute top-0 left-0',
-            'mt-2',
 
             // Shape
-            'border-0',
+            'border-0 dark:border',
             'rounded-md',
             'shadow-md',
 
             // Color
             'bg-surface-0 dark:bg-surface-700',
             'text-surface-800 dark:text-white/80',
-            'ring-1 ring-inset ring-surface-300 dark:ring-surface-700'
+            'dark:border-surface-700'
         ]
     },
     wrapper: {
@@ -112,17 +111,17 @@ export default {
         ]
     },
     list: {
-        class: 'py-1 list-none mx-1.5'
+        class: 'py-3 list-none m-0'
     },
     item: ({ context }) => ({
         class: [
             // Font
-            'sm:text-sm',
+            'font-normal',
             'leading-none',
 
             // Shape
             'border-0',
-            'rounded-md',
+            'rounded-none',
 
             // Spacing
             'm-0',
@@ -130,15 +129,15 @@ export default {
             //  Colors
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-black/70': context.focused && !context.active,
-                'text-surface-900 dark:text-surface-0/80 bg-surface-50 dark:bg-black/70': context.focused && context.active,
-                'text-surface-900 dark:text-surface-0/80 bg-surface-50 dark:bg-black/70': !context.focused && context.active
+                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': context.focused && context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': !context.focused && context.active
             },
 
             // Hover States
             {
-                'hover:bg-surface-50 dark:hover:bg-surface-800': !context.active,
-                'hover:bg-surface-100 dark:hover:bg-black/40 text-surface-900 dark:text-surface-0/80': context.active
+                'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
+                'hover:bg-primary-500/50 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
             },
 
             // Transitions
@@ -160,7 +159,8 @@ export default {
             'items-center',
 
             // Spacing
-            'py-2 px-4',
+            'py-3',
+            'px-5',
 
             // Misc
             'no-underline',
@@ -178,10 +178,10 @@ export default {
     sublist: {
         class: [
             // Size
-            'w-full sm:w-48',
+            'w-full',
 
             // Spacing
-            'p-1.5',
+            'py-1',
             'm-0',
             'list-none',
 

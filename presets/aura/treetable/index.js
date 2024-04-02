@@ -4,10 +4,7 @@ export default {
             'relative',
             {
                 'flex flex-col h-full': props.scrollHeight === 'flex'
-            },
-
-            // Shape
-            'border-spacing-0 border-separate'
+            }
         ]
     }),
     loadingoverlay: {
@@ -44,34 +41,29 @@ export default {
     }),
     header: ({ props }) => ({
         class: [
-            'font-semibold',
+            'font-bold',
 
             // Shape
-            props.showGridlines ? 'border-b' : 'border-b border-x-0',
-
-            // Spacing
-            'py-3.5 px-3',
-
-            // Color
-            'bg-surface-0 dark:bg-surface-800',
-            'border-surface-300 dark:border-surface-600',
-            'text-surface-700 dark:text-white/80'
-        ]
-    }),
-    footer: {
-        class: [
-            'font-semibold',
-
-            // Shape
-            'border-t-0 border-t border-x-0',
+            props.showGridlines ? 'border-x border-t border-b-0' : 'border-y border-x-0',
 
             // Spacing
             'p-4',
 
             // Color
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-50 dark:bg-surface-800',
             'border-surface-200 dark:border-surface-700',
             'text-surface-700 dark:text-white/80'
+        ]
+    }),
+    footer: {
+        class: [
+            // Background, Border & Text
+            'bg-slate-50 text-slate-700',
+            'border border-x-0 border-t-0 border-surface-50',
+            // Padding & Font
+            'p-4 font-bold',
+            // Dark Mode
+            'dark:bg-surface-900 dark:text-white/70 dark:border-surface-700'
         ]
     },
     table: {
@@ -90,6 +82,7 @@ export default {
     }),
     tbody: ({ props }) => ({
         class: [
+            // Block Display
             {
                 block: props.scrollable
             }
@@ -118,14 +111,14 @@ export default {
 
             // Color
             'dark:text-white/80',
-            { 'bg-surface-50 dark:bg-surface-500/30': context.selected },
+            { 'bg-primary-50 text-primary-700 dark:bg-primary-400/30': context.selected },
             { 'bg-surface-0 text-surface-600 dark:bg-surface-800': !context.selected },
 
             // Hover & Flexbox
             {
                 'hover:bg-surface-300/20 hover:text-surface-600': context.selectable && !context.selected
             },
-            'focus:outline-none focus:outline-offset-0 focus:ring-2 focus:ring-primary-500 ring-inset dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50',
 
             // Transition
             { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover }
@@ -133,8 +126,7 @@ export default {
     }),
     headercell: ({ context, props }) => ({
         class: [
-            'font-semibold',
-            'text-sm',
+            'font-bold',
 
             // Position
             { 'sticky z-40': context.scrollable && context.scrollDirection === 'both' && context.frozen },
@@ -147,19 +139,20 @@ export default {
             'text-left',
 
             // Shape
-            { 'border-r last:border-r-0': context?.showGridlines },
+            { 'first:border-l border-y border-r': context?.showGridlines },
             'border-0 border-b border-solid',
 
             // Spacing
-            context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
+            context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
             // Color
-            (props.sortable === '' || props.sortable) && context.sorted ? 'text-primary-500' : 'bg-surface-0 text-surface-700',
-            (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80 dark:bg-surface-800',
-            'border-surface-200 dark:border-surface-700 ',
+            (props.sortable === '' || props.sortable) && context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-50 text-surface-700',
+            (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
+            'border-surface-200 dark:border-surface-700',
 
             // States
-            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+            { 'hover:bg-surface-100 dark:hover:bg-surface-400/30': (props.sortable === '' || props.sortable) && !context?.sorted },
+            'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transition
             { 'transition duration-200': props.sortable === '' || props.sortable },
@@ -173,8 +166,7 @@ export default {
     column: {
         headercell: ({ context, props }) => ({
             class: [
-                'font-semibold',
-                'text-sm',
+                'font-bold',
 
                 // Position
                 { 'sticky z-40': context.scrollable && context.scrollDirection === 'both' && context.frozen },
@@ -187,19 +179,20 @@ export default {
                 'text-left',
 
                 // Shape
-                { 'border-r last:border-r-0': context?.showGridlines },
+                { 'first:border-l border-y border-r': context?.showGridlines },
                 'border-0 border-b border-solid',
 
                 // Spacing
-                context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
+                context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
                 // Color
-                (props.sortable === '' || props.sortable) && context.sorted ? 'text-primary-500' : 'bg-surface-0 text-surface-700',
-                (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-primary-400' : 'dark:text-white/80 dark:bg-surface-800',
-                'border-surface-200 dark:border-surface-700 ',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'bg-primary-50 text-primary-700' : 'bg-surface-50 text-surface-700',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'dark:text-white dark:bg-primary-400/30' : 'dark:text-white/80 dark:bg-surface-800',
+                'border-surface-200 dark:border-surface-700',
 
                 // States
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+                { 'hover:bg-surface-100 dark:hover:bg-surface-400/30': (props.sortable === '' || props.sortable) && !context?.sorted },
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
                 // Transition
                 { 'transition duration-200': props.sortable === '' || props.sortable },
@@ -217,9 +210,6 @@ export default {
                     sticky: context.scrollable && context.scrollDirection === 'both' && context.frozen
                 },
 
-                // Font
-                'text-sm',
-
                 // Flex & Alignment
                 {
                     'flex flex-1 items-center': context.scrollable,
@@ -229,19 +219,24 @@ export default {
 
                 // Shape
                 'border-0 border-b border-solid',
-                { 'last:border-r-0 border-r border-b': context?.showGridlines },
+                'border-surface-200 dark:border-surface-700',
+                {
+                    'border-x-0 border-l-0': !context.showGridlines
+                },
+                { 'first:border-l border-r border-b': context?.showGridlines },
 
                 // Color
-                'border-surface-200 dark:border-surface-700',
-                { 'bg-surface-0 dark:bg-surface-800': !context.selected },
+                'bg-surface-0 dark:bg-surface-800',
 
                 // Spacing
-                context?.size === 'small' ? 'py-2.5 px-2' : context?.size === 'large' ? 'py-5 px-4' : 'py-3.5 px-3',
+                context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
                 // Misc
-                'space-nowrap',
+                'dark:border-surface-700',
                 {
-                    'cursor-pointer': context.selectable
+                    'cursor-pointer': context.selectable,
+                    sticky: context.scrollable && context.scrollDirection === 'both' && context.frozen,
+                    'border-x-0 border-l-0': !context.showGridlines
                 }
             ]
         }),
@@ -269,7 +264,7 @@ export default {
                 // States
                 'hover:bg-surface-50 dark:hover:bg-surface-700',
                 'focus-visible:outline-none focus-visible:outline-offset-0',
-                'focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+                'focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
                 // Transition
                 'transition duration-200',
@@ -331,14 +326,14 @@ export default {
                     'align-middle',
 
                     // Size
-                    'w-4',
-                    'h-4',
+                    'w-6',
+                    'h-6',
 
                     // Spacing
                     'mr-2',
 
                     // Misc
-                    'cursor-default',
+                    'cursor-pointer',
                     'select-none'
                 ]
             },
@@ -350,28 +345,24 @@ export default {
                     'justify-center',
 
                     // Size
-                    'w-4',
-                    'h-4',
+                    'w-6',
+                    'h-6',
 
                     // Shape
-                    'rounded',
-                    'border',
+                    'rounded-md',
+                    'border-2',
 
                     // Colors
-                    'text-surface-600',
                     {
-                        'border-surface-300 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
+                        'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
                         'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
-                    },
-
-                    {
-                        'ring-2 ring-primary-500 dark:ring-primary-400': !props.disabled && context.focused,
-                        'cursor-default opacity-60': props.disabled
                     },
 
                     // States
                     {
-                        'peer-focus-visible:ring-2 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
+                        'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !context.checked,
+                        'peer-hover:bg-primary-700 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.checked,
+                        'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'cursor-default opacity-60': props.disabled
                     },
 
@@ -398,27 +389,24 @@ export default {
                     'm-0',
 
                     // Shape
-                    'rounded',
-                    'border',
-
-                    // Shape
                     'opacity-0',
                     'rounded-md',
                     'outline-none',
-                    'border-2 border-surface-300 dark:border-surface-700',
+                    'border-2 border-surface-200 dark:border-surface-700',
 
                     // Misc
-                    'appearance-none'
+                    'appearance-none',
+                    'cursor-pointer'
                 ]
             },
             icon: {
                 class: [
                     // Font
-                    'text-normal',
+                    'text-base leading-none',
 
                     // Size
-                    'w-3',
-                    'h-3',
+                    'w-4',
+                    'h-4',
 
                     // Colors
                     {
@@ -432,6 +420,7 @@ export default {
                 ]
             }
         }),
+
         transition: {
             enterFromClass: 'opacity-0 scale-y-[0.8]',
             enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',

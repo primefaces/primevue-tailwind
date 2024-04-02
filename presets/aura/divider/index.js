@@ -58,7 +58,7 @@ export default {
     content: {
         class: [
             // Space and Position
-            'p-2 z-10',
+            'px-1 z-10',
 
             // Color
             'bg-surface-0 dark:bg-surface-800'

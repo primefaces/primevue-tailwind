@@ -3,14 +3,12 @@ export default {
         class: [
             // Font
             {
-                'text-sm': props.size == null || props.size == 'normal',
-                'text-lg': props.size == 'large',
-                'text-xl': props.size == 'xlarge'
+                'text-xl': props.size == 'large',
+                'text-2xl': props.size == 'xlarge'
             },
 
             // Alignments
             'inline-flex items-center justify-center',
-            'shrink-0',
             'relative',
 
             // Sizes
@@ -29,7 +27,7 @@ export default {
             { 'border-2': parent.instance.$style?.name == 'avatargroup' },
 
             // Colors
-            'bg-surface-100 dark:bg-surface-700',
+            'bg-surface-300 dark:bg-surface-700',
             { 'border-white dark:border-surface-800': parent.instance.$style?.name == 'avatargroup' }
         ]
     }),

@@ -3,21 +3,21 @@ export default {
         class: [
             // Shape
             'rounded-lg',
-            'shadow-xl',
+            'shadow-lg',
             'border-0',
 
             // Size
             'max-h-[90vh]',
-            { 'sm:w-full sm:max-w-lg': !state.maximized },
+            'w-[50vw]',
             'm-0',
-
-            // Transitions
-            'transform',
-            'scale-100',
 
             // Color
             'dark:border',
             'dark:border-surface-700',
+
+            // Transitions
+            'transform',
+            'scale-100',
 
             // Maximized State
             {
@@ -38,9 +38,10 @@ export default {
             'shrink-0',
 
             // Spacing
-            'p-6 pt-4',
+            'p-6',
 
             // Shape
+            'border-t-0',
             'rounded-tl-lg',
             'rounded-tr-lg',
 
@@ -50,7 +51,7 @@ export default {
         ]
     },
     title: {
-        class: ['font-semibold text-base leading-6']
+        class: ['font-bold text-lg']
     },
     icons: {
         class: ['flex items-center']
@@ -65,7 +66,7 @@ export default {
             // Size and Spacing
             'mr-2',
             'last:mr-0',
-            'w-6 h-6',
+            'w-8 h-8',
 
             // Shape
             'border-0',
@@ -81,8 +82,8 @@ export default {
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
             'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Misc
             'overflow-hidden'
@@ -98,7 +99,7 @@ export default {
             // Size and Spacing
             'mr-2',
             'last:mr-0',
-            'w-6 h-6',
+            'w-8 h-8',
 
             // Shape
             'border-0',
@@ -114,8 +115,8 @@ export default {
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
             'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 
             // Misc
             'overflow-hidden'
@@ -127,8 +128,8 @@ export default {
             'inline-block',
 
             // Size
-            'w-3',
-            'h-3'
+            'w-4',
+            'h-4'
         ]
     },
     maximizableicon: {
@@ -137,17 +138,15 @@ export default {
             'inline-block',
 
             // Size
-            'w-3',
-            'h-3'
+            'w-4',
+            'h-4'
         ]
     },
     content: ({ state, instance }) => ({
         class: [
-            // Font
-            'text-sm',
             // Spacing
             'px-6',
-            'pb-3',
+            'pb-8',
             'pt-0',
 
             // Shape
@@ -159,7 +158,7 @@ export default {
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
-            'text-surface-600 dark:text-surface-0/70',
+            'text-surface-700 dark:text-surface-0/80',
 
             // Misc
             'overflow-y-auto'
@@ -171,30 +170,30 @@ export default {
             'flex items-center justify-end',
             'shrink-0',
             'text-right',
-            'gap-3',
+            'gap-2',
 
             // Spacing
             'px-6',
-            'py-3',
+            'pb-6',
 
             // Shape
             'border-t-0',
             'rounded-b-lg',
 
             // Colors
-            'bg-surface-50 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
     mask: ({ props }) => ({
         class: [
             // Transitions
-            'transition',
+            'transition-all',
             'duration-300',
             { 'p-5': !props.position == 'full' },
 
             // Background and Effects
-            { 'has-[.mask-active]:bg-transparent dark:has-[.mask-active]:bg-transparent bg-surface-500/70 dark:bg-surface-700/70': props.modal, 'has-[.mask-active]:backdrop-blur-none backdrop-blur-sm': props.modal }
+            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal, 'has-[.mask-active]:backdrop-blur-none backdrop-blur-sm': props.modal }
         ]
     }),
     transition: ({ props }) => {
@@ -224,7 +223,7 @@ export default {
                   enterFromClass: 'opacity-0 scale-75 translate-x-full translate-y-0 translate-z-0 mask-active',
                   enterActiveClass: 'transition-all duration-200 ease-out',
                   leaveActiveClass: 'transition-all duration-200 ease-out',
-                  leaveToClass: 'opacity-0 scale-75 opacity-0 scale-75 translate-x-full translate-y-0 translate-z-0 mask-active'
+                  leaveToClass: 'opacity-0 scale-75 translate-x-full translate-y-0 translate-z-0 mask-active'
               }
             : {
                   enterFromClass: 'opacity-0 scale-75 mask-active',

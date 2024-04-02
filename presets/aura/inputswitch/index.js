@@ -1,17 +1,9 @@
 export default {
     root: ({ props }) => ({
         class: [
-            // Alignments
-            'inline-flex relative',
-            'shrink-0',
-
-            // Shape
+            'inline-block relative',
+            'w-12 h-7',
             'rounded-2xl',
-
-            // Size
-            'h-5 w-9',
-
-            // States
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled
             }
@@ -21,19 +13,18 @@ export default {
         class: [
             // Position
             'absolute top-0 left-0 right-0 bottom-0',
+            { 'before:transform before:translate-x-5': props.modelValue == props.trueValue },
 
             // Shape
             'rounded-2xl',
 
             // Before:
-            'before:absolute before:top-1/2',
-            'before:-mt-2',
-            'before:h-4 before:w-4',
+            'before:absolute before:top-1/2 before:left-1',
+            'before:-mt-2.5',
+            'before:h-5 before:w-5',
             'before:rounded-full',
-            'before:duration-200 before:transition before:ease-in-out',
+            'before:duration-200',
             'before:bg-surface-0 before:dark:bg-surface-900',
-            'before:shadow',
-            { 'before:transform before:translate-x-4': props.modelValue == props.trueValue },
 
             // Colors
             'border',
@@ -50,7 +41,7 @@ export default {
             // States
             { 'peer-hover:bg-surface-300 dark:peer-hover:bg-surface-600 ': !(props.modelValue == props.trueValue) && !props.disabled },
             { 'peer-hover:bg-primary-600 dark:peer-hover:bg-surface-300 ': props.modelValue == props.trueValue && !props.disabled },
-            'peer-focus-visible:ring-2 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400',
+            'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50',
 
             // Transition
             'transition-colors duration-200',
@@ -77,17 +68,13 @@ export default {
             'm-0',
 
             // Shape
-            'rounded',
-            'border',
-
-            // Shape
             'opacity-0',
-            'rounded-md',
+            'rounded-[2.5rem]',
             'outline-none',
-            'border-2 border-surface-300 dark:border-surface-700',
 
             // Misc
-            'appearance-none'
+            'appearance-none',
+            'cursor-pointer'
         ]
     }
 };

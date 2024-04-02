@@ -5,11 +5,11 @@ export default {
             'min-w-[12rem]',
             'rounded-md',
             // Spacing
-            'p-1.5',
+            'py-2',
             // Colors
             'bg-surface-0 dark:bg-surface-700',
             'text-surface-700 dark:text-white/80',
-            'ring-1 ring-surface-200 dark:ring-surface-700'
+            'border border-surface-200 dark:border-surface-700'
         ]
     },
     menu: {
@@ -21,46 +21,37 @@ export default {
             'outline-none'
         ]
     },
-    menuitem: {
-        class: [
-            // Space
-            'first:mt-0 mt-1'
-        ]
-    },
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-md',
-
+            'rounded-none',
             // Colors
+            'text-surface-700 dark:text-white/80',
             {
-                'text-surface-700 dark:text-surface-0': !context.focused,
-                'bg-surface-100 text-primary-500 dark:bg-surface-300/10 dark:text-primary-400': context.focused
+                'bg-surface-200 text-surface-700 dark:bg-surface-300/10 dark:text-white': context.focused
             },
-
             // Transitions
             'transition-shadow',
             'duration-200',
-
             // States
-            'hover:text-primary-600 dark:hover:text-primary-400',
-            'hover:bg-surface-100 dark:hover:bg-surface-400/10'
+            'hover:text-surface-700 dark:hover:text-white/80',
+            'hover:bg-surface-100 dark:bg-surface-700 dark:hover:bg-surface-400/10'
         ]
     }),
     action: {
         class: [
             'relative',
-
-            // Font
-            'font-semibold',
-
             // Flexbox
+
             'flex',
             'items-center',
 
             // Spacing
-            'py-2',
-            'px-3',
+            'py-3',
+            'px-5',
+
+            // Color
+            'text-surface-700 dark:text-white/80',
 
             // Misc
             'no-underline',
@@ -73,31 +64,27 @@ export default {
         class: [
             // Spacing
             'mr-2',
-            'leading-6',
-            'text-sm'
+
+            // Color
+            'text-surface-600 dark:text-white/70'
         ]
     },
     label: {
-        class: ['leading-6', 'text-sm']
+        class: ['leading-none']
     },
     submenuheader: {
         class: [
             // Font
-            'font-semibold',
-            'text-xs leading-6',
-
+            'font-bold',
             // Spacing
-            'm-0 ',
-            'py-1',
-            'px-3',
-
+            'm-0',
+            'py-3 px-5',
             // Shape
             'rounded-tl-none',
             'rounded-tr-none',
-
             // Colors
             'bg-surface-0 dark:bg-surface-700',
-            'text-surface-600 dark:text-surface-0/60'
+            'text-surface-700 dark:text-white'
         ]
     },
     transition: {

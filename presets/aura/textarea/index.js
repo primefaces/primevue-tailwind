@@ -2,31 +2,29 @@ export default {
     root: ({ context, props }) => ({
         class: [
             // Font
-            'font-sans leading-6',
-            'sm:text-sm',
+            'font-sans leading-none',
 
             // Spacing
             'm-0',
-            'py-1.5 px-3',
+            'p-3',
 
             // Shape
             'rounded-md',
-            'appearance-none',
 
             // Colors
-            'text-surface-900 dark:text-surface-0',
+            'text-surface-600 dark:text-surface-200',
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
             'bg-surface-0 dark:bg-surface-900',
-            'ring-1 ring-inset ring-offset-0',
-            'shadow-sm',
-            { ' ring-surface-300 dark:ring-surface-700': !props.invalid },
+            'border',
+            { 'border-surface-300 dark:border-surface-600': !props.invalid },
 
             // Invalid State
-            { 'ring-red-500 dark:ring-red-400': props.invalid },
+            { 'border-red-500 dark:border-red-400': props.invalid },
 
             // States
             {
-                'outline-none focus:ring-primary-500 dark:focus:ring-primary-400': !context.disabled,
+                'hover:border-primary-500 dark:hover:border-primary-400': !context.disabled && !props.invalid,
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50': !context.disabled,
                 'opacity-60 select-none pointer-events-none cursor-default': context.disabled
             },
 

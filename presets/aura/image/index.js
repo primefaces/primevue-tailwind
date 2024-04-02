@@ -17,7 +17,7 @@ export default {
             'bg-transparent text-surface-100',
 
             // States
-            'hover:opacity-100 hover:cursor-pointer hover:bg-surface-900 hover:bg-opacity-50'
+            'hover:opacity-100 hover:cursor-pointer hover:bg-black/50 hover:bg-opacity-50'
         ]
     },
     mask: {
@@ -32,7 +32,7 @@ export default {
             'w-full h-full',
 
             // Color
-            'bg-surface-900/90'
+            'bg-black/90'
         ]
     },
     toolbar: {
