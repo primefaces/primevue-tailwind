@@ -44,7 +44,7 @@ export default {
             ]
         },
         headerIcon: ({ context }) => ({
-            class: ['inline-block mr-2', { 'text-surface-900 dark:text-surface-0': context.active }]
+            class: ['inline-block ml-2', { 'text-surface-900 dark:text-surface-0': context.active }]
         }),
         headerTitle: {
             class: 'leading-none'
