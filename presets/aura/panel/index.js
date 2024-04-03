@@ -1,4 +1,14 @@
 export default {
+    root: {
+        class: [
+            //Shape
+            'rounded-md',
+
+            //Colors
+            'border border-surface-200 dark:border-surface-700',
+            'bg-surface-0 dark:bg-surface-800'
+        ]
+    },
     header: ({ props }) => ({
         class: [
             // Flex
@@ -6,18 +16,18 @@ export default {
 
             // Colors
             'text-surface-700 dark:text-surface-0/80',
-            'bg-surface-50 dark:bg-surface-900',
-            'border border-surface-200 dark:border-surface-700',
+            'bg-transparent',
 
             //Shape
-            'rounded-tl-lg rounded-tr-lg',
+            'rounded-tl-md rounded-tr-md',
+            'border-0',
 
             // Conditional Spacing
-            { 'p-5': !props.toggleable, 'py-3 px-5': props.toggleable }
+            { 'p-[1.125rem]': !props.toggleable, 'py-3 px-[1.125rem]': props.toggleable }
         ]
     }),
     title: {
-        class: 'leading-none font-bold'
+        class: 'leading-none font-semibold'
     },
     toggler: {
         class: [
@@ -26,7 +36,7 @@ export default {
             'relative',
 
             // Sized
-            'w-8 h-8',
+            'w-7 h-7',
             'm-0 p-0',
 
             //Shape
@@ -37,9 +47,9 @@ export default {
             'text-surface-600 dark:text-surface-0/80',
 
             // States
-            'hover:text-surface-800 dark:hover:text-surface-0/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 focus-visible:ring-inset dark:focus-visible:ring-primary-300/50',
+            'hover:text-surface-800 dark:hover:text-surface-0',
+            'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]',
+            'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300',
 
             // Transitions
             'transition-all duration-200 ease-in-out',
@@ -50,33 +60,29 @@ export default {
         ]
     },
     togglerIcon: {
-        class: 'inline-block'
+        class: 'inline-block w-4 h-4'
     },
     content: {
         class: [
             // Spacing
-            'p-5',
+            'p-[1.125rem] pt-0',
 
             // Shape
-            'border border-t-0 last:rounded-br-lg last:rounded-bl-lg',
+            'border-0 border-t-0 last:rounded-br-md last:rounded-bl-md',
 
             //Color
-            'border-surface-200 dark:border-surface-700',
-            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
     footer: {
         class: [
             // Spacing
-            'py-3 p-5',
+            'p-[1.125rem] pt-0',
 
             // Shape
-            'border border-t-0 rounded-br-lg rounded-bl-lg',
+            'border-0 border-t-0 rounded-br-lg rounded-bl-lg',
 
             //Color
-            'border-surface-200 dark:border-surface-700',
-            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
