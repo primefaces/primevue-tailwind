@@ -8,7 +8,7 @@ export default {
             { 'overflow-hidden': props.scrollable }
         ]
     }),
-    navContent: {
+    navContent: ({ instance }) => ({
         class: [
             // Overflow and Scrolling
             'overflow-y-hidden overscroll-contain',
@@ -16,7 +16,7 @@ export default {
             'scroll-smooth',
             '[&::-webkit-scrollbar]:hidden'
         ]
-    },
+    }),
     previousButton: {
         class: [
             // Flexbox and Alignment
@@ -28,13 +28,13 @@ export default {
             'z-20',
 
             // Size and Shape
-            'h-full w-12',
+            'h-full w-10',
             'rounded-none',
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
-            'text-primary-500 dark:text-primary-400',
-            'shadow-md'
+            'text-surface-700 dark:text-surface-0/80',
+            'shadow-sm'
         ]
     },
     nextButton: {
@@ -48,13 +48,13 @@ export default {
             'z-20',
 
             // Size and Shape
-            'h-full w-12',
+            'h-full w-10',
             'rounded-none',
 
             // Colors
+            'text-surface-700 dark:text-surface-0/80',
             'bg-surface-0 dark:bg-surface-800',
-            'text-primary-500 dark:text-primary-400',
-            'shadow-md'
+            'shadow-sm'
         ]
     },
     nav: {
@@ -68,7 +68,7 @@ export default {
 
             // Colors
             'bg-surface-0 dark:bg-surface-800',
-            'border-b-2 border-surface-200 dark:border-surface-700',
+            'border-b border-surface-200 dark:border-surface-700',
             'text-surface-900 dark:text-surface-0/80'
         ]
     },
@@ -79,6 +79,7 @@ export default {
                 'mr-0',
 
                 // Misc
+                'outline-none',
                 {
                     'opacity-60 cursor-default user-select-none select-none pointer-events-none': props?.disabled
                 }
@@ -89,14 +90,14 @@ export default {
                 'relative',
 
                 // Font
-                'font-bold',
+                'font-semibold',
 
                 // Flexbox and Alignment
                 'flex items-center',
 
                 // Spacing
-                'p-5',
-                '-mb-[2px]',
+                'py-4 px-[1.125rem]',
+                '-mb-px',
 
                 // Shape
                 'border-b-2',
@@ -114,11 +115,10 @@ export default {
                 },
 
                 // States
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset',
-                'focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
+                'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 ring-inset focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300',
                 {
                     'hover:bg-surface-0 dark:hover:bg-surface-800/80': parent.state.d_activeIndex !== context.index,
-                    'hover:border-surface-400 dark:hover:border-primary-400': parent.state.d_activeIndex !== context.index,
+
                     'hover:text-surface-900 dark:hover:text-surface-0': parent.state.d_activeIndex !== context.index
                 },
 
@@ -137,20 +137,20 @@ export default {
                 'leading-none',
                 'whitespace-nowrap'
             ]
-        },
-        content: {
-            class: [
-                // Spacing
-                'p-5',
-
-                // Shape
-                'rounded-b-md',
-
-                // Colors
-                'bg-surface-0 dark:bg-surface-800',
-                'text-surface-700 dark:text-surface-0/80',
-                'border-0'
-            ]
         }
+    },
+    panelcontainer: {
+        class: [
+            // Spacing
+            'p-[1.125rem] pt-[0.875rem]',
+
+            // Shape
+            'border-0 rounded-none',
+            'border-br-md border-bl-md',
+
+            // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'text-surface-900 dark:text-surface-0/80'
+        ]
     }
 };
