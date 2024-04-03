@@ -36,7 +36,6 @@ export default {
                 'transition-shadow duration-200',
 
                 // States
-
                 'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300', // Focus
 
                 // Misc
