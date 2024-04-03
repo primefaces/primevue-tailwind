@@ -77,8 +77,11 @@ export default {
                 'items-center',
                 'justify-center',
 
+                //Colors
+                'border-solid border-2 border-surface-200 dark:border-surface-700',
+
                 // Colors (Conditional)
-                context.active ? 'bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900' : 'border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-surface-0', // Adjust colors as needed
+                context.active ? 'text-primary-500 dark:text-primary-400' : 'text-surface-900 dark:text-surface-0', // Adjust colors as needed
 
                 // Size and Shape
                 'min-w-[2rem]',
@@ -88,9 +91,6 @@ export default {
 
                 // Text
                 'text-lg',
-
-                // Borders
-                context.active ? 'border-0 border-none' : 'border-solid border-2',
 
                 // Transitions
                 'transition',
@@ -112,8 +112,8 @@ export default {
                 'ml-2',
 
                 // Text
-                context.active ? 'text-surface-900 dark:text-surface-0' : 'text-surface-700 dark:text-surface-0/80',
-                'font-bold',
+                context.active ? 'text-primary-500 dark:text-primary-400' : 'text-surface-700 dark:text-surface-0/80',
+                'font-medium',
 
                 // Transitions
                 'transition',
