@@ -5,6 +5,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                'primary-color': 'rgb(var(--primary-color))',
+                'primary-inverse-color': 'rgb(var(--primary-inverse-color))',
+                'primary-hover-color': 'rgb(var(--primary-hover-color))',
+                'primary-active-color': 'rgb(var(--primary-active-color))',
+
                 'primary-50': 'rgb(var(--primary-50))',
                 'primary-100': 'rgb(var(--primary-100))',
                 'primary-200': 'rgb(var(--primary-200))',

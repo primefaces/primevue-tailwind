@@ -38,7 +38,7 @@
     &:not(.dark){
         --primary-color: var(--primary-950);
         --primary-inverse-color: var(--surface-0);
-        --primary-hover-color: var(--primary-900);
+        --primary-hover-color: var(--primary-800);
         --primary-active-color: var(--primary-900);
     }
 }
@@ -52,10 +52,11 @@
     &.customized-primary{
         --primary-color: var(--primary-50);
         --primary-inverse-color: var(--surface-950);
-        --primary-hover-color: var(--primary-50);
-        --primary-active-color: var(--primary-50);
+        --primary-hover-color: var(--primary-100);
+        --primary-active-color: var(--primary-100);
     }
 }
+
 html {
     font-size: 14px;
 }
