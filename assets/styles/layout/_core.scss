@@ -27,8 +27,35 @@
     --surface-800: 30 41 59;
     --surface-900: 15 23 42;
     --surface-950: 3 6 23;
+
+    --primary-color: var(--primary-500);
+    --primary-inverse-color: var(--surface-0);
+    --primary-hover-color: var(--primary-600);
+    --primary-active-color: var(--primary-600);
 }
 
+.customized-primary {
+    &:not(.dark){
+        --primary-color: var(--primary-950);
+        --primary-inverse-color: var(--surface-0);
+        --primary-hover-color: var(--primary-900);
+        --primary-active-color: var(--primary-900);
+    }
+}
+.dark {
+    &:not(.customized-primary){
+        --primary-color: var(--primary-400);
+        --primary-inverse-color: var(--surface-900);
+        --primary-hover-color: var(--primary-300);
+        --primary-active-color: var(--primary-300);
+    }
+    &.customized-primary{
+        --primary-color: var(--primary-50);
+        --primary-inverse-color: var(--surface-950);
+        --primary-hover-color: var(--primary-50);
+        --primary-active-color: var(--primary-50);
+    }
+}
 html {
     font-size: 14px;
 }

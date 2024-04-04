@@ -86,7 +86,7 @@ export default {
                 { name: 'fuchsia', palette: ['253 244 255', '250 232 255', '245 208 254', '240 171 252', '232 121 249', '217 70 239', '192 38 211', '162 28 175', '126 34 153', '109 40 121', '74 9 78'] },
                 { name: 'pink', palette: ['253 242 248', '252 231 243', '251 207 232', '249 168 212', '244 114 182', '236 72 153', '219 39 119', '190 24 93', '157 23 77', '131 24 67', '80 7 36'] },
                 { name: 'rose', palette: ['255 241 242', '255 228 230', '254 205 211', '253 164 175', '251 113 133', '244 63 94', '225 29 72', '190 18 60', '159 18 57', '136 19 55', '76 5 25'] },
-                { name: 'noir', palette: ['250 250 250', '244 244 245', '228 228 231', '212 212 216', '161 161 170', '113 113 122', '#52525b', '63 63 70', '39 39 42', '24 24 27', '9 9 11'] }
+                { name: 'noir', palette: ['250 250 250', '244 244 245', '228 228 231', '212 212 216', '161 161 170', '113 113 122', '82 82 91', '63 63 70', '39 39 42', '24 24 27', '9 9 11'] }
             ],
             surfaces: [
                 {
@@ -127,10 +127,17 @@ export default {
     methods: {
         updateColors(type, colorName) {
             let selectedColor;
+            const root = document.documentElement;
 
             if (type === 'primary') {
                 selectedColor = this.primaryColors.find((color) => color.name === colorName);
                 this.selectedPrimaryColor = colorName;
+
+                if (colorName === 'noir') {
+                    root.classList.add('customized-primary');
+                } else {
+                    root.classList.remove('customized-primary');
+                }
             } else if (type === 'surface') {
                 selectedColor = this.surfaces.find((color) => color.name === colorName);
                 this.selectedSurfaceColor = colorName;

@@ -1,4 +1,4 @@
-:root[class="dark"] {
+:root[class*="dark"] {
     color-scheme: dark;
     --primary-color-default:rgb(var(--primary-400));
     --primary-color-inverse-default:rgb(var(--gray-900));
