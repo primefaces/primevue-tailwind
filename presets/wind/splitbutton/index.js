@@ -81,7 +81,7 @@ export default {
                     'ring-1 ring-green-500 dark:ring-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
                 // Success Text Button
-                { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'secondary' && !parent.props.plain },
+                { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'success' && !parent.props.plain },
                 // Success Outlined Button
                 { 'text-green-500 ring-1 ring-green-500 hover:bg-green-300/20': parent.props.outlined && parent.props.severity === 'success' && !parent.props.plain },
 
@@ -269,7 +269,7 @@ export default {
                     'ring-1 ring-green-500 dark:ring-green-400': parent.props.severity === 'success' && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
                 // Success Text Button
-                { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'secondary' && !parent.props.plain },
+                { 'text-surface-500 dark:text-surface-400': parent.props.text && parent.props.severity === 'success' && !parent.props.plain },
                 // Success Outlined Button
                 { 'text-green-500 ring-1 ring-green-500 hover:bg-green-300/20': parent.props.outlined && parent.props.severity === 'success' && !parent.props.plain },
 
