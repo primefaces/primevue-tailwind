@@ -11,7 +11,7 @@ export default {
             'absolute',
 
             // Shape
-            'inset-0 opacity-0 transition-opacity duration-300',
+            'inset-0 opacity-0 transition-opacity duration-300 w-full h-full',
 
             // Color
             'bg-transparent text-surface-100',
