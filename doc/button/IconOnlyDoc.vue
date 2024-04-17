@@ -11,6 +11,7 @@
             <Button icon="pi pi-bell" severity="warning" aria-label="Notification" />
             <Button icon="pi pi-heart" severity="help" aria-label="Favorite" />
             <Button icon="pi pi-times" severity="danger" aria-label="Cancel" />
+            <Button icon="pi pi-palette" severity="contrast" aria-label="Palette" />
         </div>
 
         <div class="flex flex-wrap justify-center gap-3 mb-4">
@@ -21,6 +22,7 @@
             <Button icon="pi pi-bell" severity="warning" rounded aria-label="Notification" />
             <Button icon="pi pi-heart" severity="help" rounded aria-label="Favorite" />
             <Button icon="pi pi-times" severity="danger" rounded aria-label="Cancel" />
+            <Button icon="pi pi-palette" severity="contrast" rounded aria-label="Palette" />
         </div>
 
         <div class="flex flex-wrap justify-center gap-3 mb-4">
@@ -31,6 +33,7 @@
             <Button icon="pi pi-bell" severity="warning" rounded outlined aria-label="Notification" />
             <Button icon="pi pi-heart" severity="help" rounded outlined aria-label="Favorite" />
             <Button icon="pi pi-times" severity="danger" rounded outlined aria-label="Cancel" />
+            <Button icon="pi pi-palette" severity="contrast" rounded outlined aria-label="Palette" />
         </div>
 
         <div class="flex flex-wrap justify-center gap-3 mb-4">
@@ -41,6 +44,7 @@
             <Button icon="pi pi-bell" severity="warning" text raised rounded aria-label="Notification" />
             <Button icon="pi pi-heart" severity="help" text raised rounded aria-label="Favorite" />
             <Button icon="pi pi-times" severity="danger" text raised rounded aria-label="Cancel" />
+            <Button icon="pi pi-palette" severity="contrast" text raised rounded aria-label="Palette" />
         </div>
 
         <div class="flex flex-wrap justify-center gap-3">
@@ -51,6 +55,7 @@
             <Button icon="pi pi-bell" severity="warning" text rounded aria-label="Notification" />
             <Button icon="pi pi-heart" severity="help" text rounded aria-label="Favorite" />
             <Button icon="pi pi-times" severity="danger" text rounded aria-label="Cancel" />
+            <Button icon="pi pi-palette" severity="contrast" text rounded aria-label="Palette" />
         </div>
     </div>
     <DocSectionCode :code="code" />

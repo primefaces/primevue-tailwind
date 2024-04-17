@@ -34,6 +34,13 @@
     --primary-active-color: var(--primary-600);
 }
 
+.dark{
+    --primary-color: var(--primary-400);
+    --primary-inverse-color: var(--surface-900);
+    --primary-hover-color: var(--primary-300);
+    --primary-active-color: var(--primary-300);
+}
+
 .customized-primary {
     &:not(.dark){
         --primary-color: var(--primary-950);
@@ -42,6 +49,7 @@
         --primary-active-color: var(--primary-900);
     }
 }
+
 .dark {
     &:not(.customized-primary){
         --primary-color: var(--primary-400);
