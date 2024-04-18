@@ -24,9 +24,9 @@ export default {
             // Colors
             'text-surface-800 dark:text-white/80',
             'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            { 'bg-surface-0 dark:bg-surface-900': !context.disabled },
+            { 'bg-surface-0 dark:bg-surface-950': !context.disabled },
             'border',
-            { 'border-surface-300 dark:border-surface-600': !props.invalid },
+            { 'border-surface-300 dark:border-surface-700': !props.invalid },
 
             // Invalid State
             'invalid:focus:ring-red-200',
