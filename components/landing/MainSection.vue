@@ -9,7 +9,7 @@
                         </div>
                         <div class="flex-col justify-start items-start gap-4 flex">
                             <div class="text-5xl font-bold">
-                                <span class="text-neutral-800 dark:text-surface-50 leading-tight">Tailaura CSS Based <br />UI Component Library <br />for </span>
+                                <span class="text-neutral-800 dark:text-surface-50 leading-tight">Tailwind CSS Based <br />UI Component Library <br />for </span>
                                 <span class="text-primary-400 font-bold leading-tight">Vue.js</span>
                             </div>
                             <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailaura CSS and the convenience of PrimeVue components.</div>
@@ -2861,8 +2861,8 @@
             </div>
         </div>
         <div class="w-full flex fixed top-0 h-screen z-0">
-            <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 h-screen bg-surface-0 dark:bg-surface-900"></div>
-            <div class="hidden lg:block w-[35%] min-[1100px]:w-[39%] xl:w-5/12 min-[1419px]:w-1/2 h-screen bg-primary-50 dark:bg-surface-800"></div>
+            <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 h-screen bg-surface-0 dark:bg-surface-950"></div>
+            <div class="hidden lg:block w-[35%] min-[1100px]:w-[39%] xl:w-5/12 min-[1419px]:w-1/2 h-screen bg-primary-50 dark:bg-surface-900"></div>
         </div>
     </div>
 </template>
