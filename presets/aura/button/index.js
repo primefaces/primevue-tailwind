@@ -185,7 +185,7 @@ export default {
             { 'hover:bg-surface-800 dark:hover:bg-surface-100 hover:border-surface-800 dark:hover:border-surface-100': props.severity === 'contrast' && !props.text && !props.outlined && !props.plain },
             { 'focus:ring-surface-400/50 dark:focus:ring-surface-300/50': props.severity === 'contrast' },
             // Text & Outlined Button
-            { 'hover:bg-surface-900/10 dark:bg-surface-0/10': (props.text || props.outlined) && props.severity === 'contrast' && !props.plain },
+            { 'hover:bg-surface-900/10 dark:hover:bg-surface-0/10': (props.text || props.outlined) && props.severity === 'contrast' && !props.plain },
 
             // Disabled
             { 'opacity-60 pointer-events-none cursor-default': context.disabled },
