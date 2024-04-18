@@ -871,10 +871,10 @@ const tailauraConfig = `@tailaura base;
 }
 
 :root[class='dark'] {
-    --body-bg: rgb(var(--surface-900));
+    --body-bg: rgb(var(--surface-950));
     --body-text-color: rgb(var(--surface-50));
     --card-border: 1px solid transparent;
-    --card-bg: rgb(var(--surface-800));
+    --card-bg: rgb(var(--surface-900));
     --border-color: rgba(255, 255, 255, 0.1);
 }
 
