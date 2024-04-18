@@ -14,7 +14,7 @@ export default {
                 'text-xl py-3 px-4': props.size === 'large'
             },
             {
-                'w-12 p-0 py-3': props.label == null && props.icon !== null
+                'w-12 p-0 py-3': props.label == null && props.icon !== null && props.size !== 'small'
             },
 
             // Shapes

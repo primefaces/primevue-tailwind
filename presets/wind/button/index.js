@@ -14,7 +14,7 @@ export default {
                 'px-3 py-2': props.size === 'large'
             },
             {
-                'h-8 w-8 p-0': props.label == null && props.icon !== null
+                'h-8 w-8 p-0': props.label == null && props.icon !== null && props.size !== 'small'
             },
 
             // Shapes
