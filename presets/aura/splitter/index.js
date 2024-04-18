@@ -3,7 +3,7 @@ export default {
         class: [
             // Colors
             'bg-surface-0',
-            'dark:bg-surface-800',
+            'dark:bg-surface-900',
             'text-surface-700',
             'dark:text-surface-0/80',
 

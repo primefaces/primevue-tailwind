@@ -136,7 +136,7 @@ export default {
             ]
         }),
         transition: {
-            class: ['flex flex-1', 'bg-surface-0 dark:bg-surface-800', 'text-surface-900 dark:text-surface-0'],
+            class: ['flex flex-1', 'bg-surface-0 dark:bg-surface-900', 'text-surface-900 dark:text-surface-0'],
             enterFromClass: 'max-h-0',
             enterActiveClass: 'overflow-hidden transition-[max-height] duration-1000 ease-[cubic-bezier(0.42,0,0.58,1)]',
             enterToClass: 'max-h-[1000px]',
@@ -151,7 +151,7 @@ export default {
     panelcontainer: {
         class: [
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-900 dark:text-surface-0',
 
             // Spacing

@@ -28,7 +28,7 @@ export default {
                 'border-0',
 
                 // Color
-                'bg-surface-0 dark:bg-surface-800',
+                'bg-surface-0 dark:bg-surface-900',
                 'text-surface-600 dark:text-surface-0/80',
 
                 // Transition
@@ -57,7 +57,7 @@ export default {
                 'border-0 rounded-none',
 
                 // Color
-                'bg-surface-0 dark:bg-surface-800',
+                'bg-surface-0 dark:bg-surface-900',
                 'text-surface-600 dark:text-surface-0/70'
             ]
         },

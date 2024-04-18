@@ -7,7 +7,7 @@
             <StepperPanel header="Header I">
                 <template #content="{ nextCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content I</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content I</div>
                     </div>
                     <div class="flex pt-4 justify-end">
                         <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="nextCallback" />
@@ -17,7 +17,7 @@
             <StepperPanel header="Header II">
                 <template #content="{ prevCallback, nextCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content II</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-4 justify-between">
                         <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
@@ -28,7 +28,7 @@
             <StepperPanel header="Header III">
                 <template #content="{ prevCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content III</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
                     </div>
                     <div class="flex pt-4 justify-start">
                         <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
@@ -50,7 +50,7 @@ export default {
     <StepperPanel header="Header I">
         <template #content="{ nextCallback }">
             <div class="flex flex-col h-[12rem]">
-                <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content I</div>
+                <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content I</div>
             </div>
             <div class="flex pt-4 justify-end">
                 <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="nextCallback" />
@@ -60,7 +60,7 @@ export default {
     <StepperPanel header="Header II">
         <template #content="{ prevCallback, nextCallback }">
             <div class="flex flex-col h-[12rem]">
-                <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content II</div>
+                <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
             </div>
             <div class="flex pt-4 justify-between">
                 <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
@@ -71,7 +71,7 @@ export default {
     <StepperPanel header="Header III">
         <template #content="{ prevCallback }">
             <div class="flex flex-col h-[12rem]">
-                <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content III</div>
+                <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
             </div>
             <div class="flex pt-4 justify-start">
                 <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
@@ -87,7 +87,7 @@ export default {
             <StepperPanel header="Header I">
                 <template #content="{ nextCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content I</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content I</div>
                     </div>
                     <div class="flex pt-4 justify-end">
                         <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="nextCallback" />
@@ -97,7 +97,7 @@ export default {
             <StepperPanel header="Header II">
                 <template #content="{ prevCallback, nextCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content II</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-4 justify-between">
                         <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
@@ -108,7 +108,7 @@ export default {
             <StepperPanel header="Header III">
                 <template #content="{ prevCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content III</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
                     </div>
                     <div class="flex pt-4 justify-start">
                         <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
@@ -132,7 +132,7 @@ export default {
             <StepperPanel header="Header I">
                 <template #content="{ nextCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content I</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content I</div>
                     </div>
                     <div class="flex pt-4 justify-end">
                         <Button label="Next" icon="pi pi-arrow-right" iconPos="right" @click="nextCallback" />
@@ -142,7 +142,7 @@ export default {
             <StepperPanel header="Header II">
                 <template #content="{ prevCallback, nextCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content II</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content II</div>
                     </div>
                     <div class="flex pt-4 justify-between">
                         <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
@@ -153,7 +153,7 @@ export default {
             <StepperPanel header="Header III">
                 <template #content="{ prevCallback }">
                     <div class="flex flex-col h-[12rem]">
-                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-900 flex-auto flex justify-center items-center font-medium">Content III</div>
+                        <div class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded-md bg-surface-0 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium">Content III</div>
                     </div>
                     <div class="flex pt-4 justify-start">
                         <Button label="Back" severity="secondary" icon="pi pi-arrow-left" @click="prevCallback" />
