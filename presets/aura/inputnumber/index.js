@@ -70,7 +70,6 @@ export default {
             // Flex
             'flex',
             'flex-col',
-            console.log(props),
             { 'absolute top-px right-px h-[calc(100%-2px)] z-20': props.showButtons && props.buttonLayout == 'stacked' }
         ]
     }),
