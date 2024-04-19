@@ -172,7 +172,7 @@ export default {
             'shadow-md',
 
             // Size
-            'max-h-[200px] overflow-auto'
+            'overflow-auto'
         ]
     },
     list: {
