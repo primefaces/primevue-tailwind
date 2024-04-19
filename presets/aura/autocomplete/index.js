@@ -51,7 +51,7 @@ export default {
 
             // States
             { 'hover:border-surface-400 dark:hover:border-surface-700': !props.invalid },
-            { 'focus:outline-none focus:outline-offset-0 focus:z-10focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': state.focused },
+            { 'focus:outline-none focus:outline-offset-0 focus:z-10 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': state.focused },
 
             // Transition
             'transition duration-200 ease-in-out',
