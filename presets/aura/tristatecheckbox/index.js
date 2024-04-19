@@ -1,7 +1,61 @@
 export default {
     root: {
-        class: ['cursor-pointer inline-flex relative select-none align-bottom', 'w-6 h-6']
+        class: [
+            'relative',
+
+            // Alignment
+            'inline-flex',
+            'align-bottom',
+
+            // Size
+            'w-5',
+            'h-5',
+
+            // Misc
+            'cursor-pointer',
+            'select-none'
+        ]
     },
+    box: ({ props, context }) => ({
+        class: [
+            // Alignment
+            'flex',
+            'items-center',
+            'justify-center',
+
+            // Size
+            'w-5',
+            'h-5',
+
+            // Shape
+            'rounded',
+            'border',
+
+            // Colors
+            {
+                'border-surface-300 dark:border-surface-700': !context.checked && !props.invalid,
+                'bg-surface-0 dark:bg-surface-900': !context.active && !props.invalid && !props.disabled,
+                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.active
+            },
+
+            // Invalid State
+            'invalid:focus:ring-red-200',
+            'invalid:hover:border-red-500',
+            { 'border-red-500 dark:border-red-400': props.invalid },
+
+            // States
+            {
+                'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
+                'peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.checked,
+                'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
+                'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
+            },
+
+            // Transitions
+            'transition-colors',
+            'duration-200'
+        ]
+    }),
     input: {
         class: [
             'peer',
@@ -21,63 +75,23 @@ export default {
 
             // Shape
             'opacity-0',
-            'rounded-md',
+            'rounded',
             'outline-none',
-            'border-2 border-surface-200 dark:border-surface-700',
+            'border border-surface-300 dark:border-surface-700',
 
             // Misc
             'appearance-none',
             'cursor-pointer'
         ]
     },
-    box: ({ props, context }) => ({
-        class: [
-            // Alignment
-            'flex',
-            'items-center',
-            'justify-center',
-
-            // Size
-            'w-6',
-            'h-6',
-
-            // Shape
-            'rounded-md',
-            'border-2',
-
-            // Colors
-            {
-                'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.active && !props.invalid,
-                'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.active
-            },
-
-            // Invalid State
-            { 'border-red-500 dark:border-red-400': props.invalid },
-
-            // States
-            {
-                'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !context.active && !props.invalid,
-                'peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.active,
-                'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
-                'cursor-default opacity-60': props.disabled
-            },
-
-            // Transitions
-            'transition-colors',
-            'duration-200'
-        ]
-    }),
     checkicon: {
         class: [
-            // Font
-            'text-base leading-none',
-
             // Size
-            'w-4',
-            'h-4',
+            'w-[0.875rem]',
+            'h-[0.875rem]',
 
             // Colors
-            'text-white dark:text-surface-900',
+            'text-white dark:text-surface-950',
 
             // Transitions
             'transition-all',
@@ -86,15 +100,12 @@ export default {
     },
     uncheckicon: {
         class: [
-            // Font
-            'text-base leading-none',
-
             // Size
-            'w-4',
-            'h-4',
+            'w-[0.875rem]',
+            'h-[0.875rem]',
 
             // Colors
-            'text-white dark:text-surface-900',
+            'text-white dark:text-surface-950',
 
             // Transitions
             'transition-all',

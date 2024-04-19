@@ -75,7 +75,7 @@ export default {
 
             // Shape
             'opacity-0',
-            'rounded-md',
+            'rounded',
             'outline-none',
             'border border-surface-300 dark:border-surface-700',
 
