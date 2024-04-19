@@ -235,7 +235,7 @@ export default {
             'leading-none',
 
             // Spacing
-            'py-3 px-5',
+            'py-2 px-3',
 
             // Color
             'text-surface-800 dark:text-white/80',
