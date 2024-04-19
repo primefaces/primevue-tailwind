@@ -14,7 +14,7 @@ export default {
 
             //States
             {
-                'opacity-60 select-none pointer-events-none cursor-default': props.disabled
+                'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
             }
         ]
     }),
@@ -51,7 +51,7 @@ export default {
 
             // States
             { 'hover:border-surface-400 dark:hover:border-surface-700': !props.invalid },
-            { 'focus:outline-none focus:outline-offset-0 focus:z-10 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400': state.focused },
+            { 'outline-none outline-offset-0 z-10 ring-1 ring-primary-500 dark:ring-primary-400': state.focused },
 
             // Transition
             'transition duration-200 ease-in-out',
