@@ -14,15 +14,15 @@ export default {
             'border-r-0',
 
             // Space
-            'p-3',
+            'p-2',
 
             // Size
-            'min-w-[3rem]',
+            'min-w-[2.5rem]',
 
             // Color
-            'bg-surface-50 dark:bg-surface-800',
-            'text-surface-600 dark:text-surface-400',
-            'border-surface-300 dark:border-surface-600'
+            'bg-transparent dark:bg-surface-900',
+            'text-surface-800 dark:text-white/80',
+            'border-surface-300 dark:border-surface-700'
         ]
     }
 };
