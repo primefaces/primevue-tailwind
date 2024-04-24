@@ -19,10 +19,12 @@ export default {
             },
 
             // Color
-            'text-white dark:text-surface-900',
+
             {
+                'text-white dark:text-surface-900': props.target === 'parent',
+                'text-surface-0': props.target === 'window',
                 'bg-primary-500 dark:bg-primary-400 hover:bg-primary-600 dark:hover:bg-primary-300': props.target === 'parent',
-                'bg-surface-500 dark:bg-surface-400 hover:bg-surface-600 dark:hover:bg-surface-300': props.target === 'window'
+                'bg-surface-600 dark:bg-surface-700 hover:bg-surface-700 dark:hover:bg-surface-600': props.target === 'window'
             },
 
             // States
