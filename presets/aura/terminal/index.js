@@ -2,14 +2,14 @@ export default {
     root: {
         class: [
             // Spacing
-            'p-5',
+            'py-2 px-3',
 
             // Shape
             'rounded-md',
 
             // Color
-            'bg-surface-900 text-white',
-            'border border-surface-700',
+            'bg-surface-0 dark:bg-surface-950 text-surface-700 dark:text-surface-0',
+            'border border-surface-200 dark:border-surface-700',
 
             // Sizing & Overflow
             'h-72 overflow-auto'
@@ -24,19 +24,19 @@ export default {
     prompt: {
         class: [
             // Color
-            'text-surface-400'
+            'text-surface-700 dark:text-surface-0'
         ]
     },
     response: {
         class: [
             // Color
-            'text-primary-400'
+            'text-surface-700 dark:text-surface-0'
         ]
     },
     command: {
         class: [
             // Color
-            'text-primary-400'
+            'text-surface-700 dark:text-surface-0'
         ]
     },
     commandtext: {
