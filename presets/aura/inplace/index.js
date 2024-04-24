@@ -5,7 +5,7 @@ export default {
             'inline',
 
             // Spacing
-            'p-3',
+            'px-3 py-2',
 
             // Shape
             'rounded-md',
@@ -14,7 +14,7 @@ export default {
             'text-surface-700 dark:text-white/80',
 
             // States
-            'hover:bg-surface-100 hover:text-surface-700 dark:hover:bg-surface-700/80 dark:hover:text-white/80',
+            'hover:bg-surface-100 hover:text-surface-700 dark:hover:bg-surface-800 dark:hover:text-white/80',
 
             // Transitions
             'transition',
