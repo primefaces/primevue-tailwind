@@ -45,7 +45,7 @@ export default {
     label: {
         class: [
             //Font
-            'text-sm font-semibold',
+            'text-xs font-semibold',
 
             // Flexbox
             'inline-flex',

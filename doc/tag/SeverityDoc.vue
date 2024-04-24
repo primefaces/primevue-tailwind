@@ -5,9 +5,11 @@
     <div class="card flex flex-wrap justify-center gap-2">
         <Tag value="Primary"></Tag>
         <Tag severity="success" value="Success"></Tag>
+        <Tag severity="secondary" value="Secondary"></Tag>
         <Tag severity="info" value="Info"></Tag>
         <Tag severity="warning" value="Warning"></Tag>
         <Tag severity="danger" value="Danger"></Tag>
+        <Tag severity="contrast" value="Contrast"></Tag>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -20,18 +22,22 @@ export default {
                 basic: `
 <Tag value="Primary"></Tag>
 <Tag severity="success" value="Success"></Tag>
+<Tag severity="secondary" value="Secondary"></Tag>
 <Tag severity="info" value="Info"></Tag>
 <Tag severity="warning" value="Warning"></Tag>
 <Tag severity="danger" value="Danger"></Tag>
+<Tag severity="contrast" value="Contrast"></Tag>
 `,
                 options: `
 <template>
     <div class="flex flex-wrap justify-center gap-2">
         <Tag value="Primary"></Tag>
         <Tag severity="success" value="Success"></Tag>
+        <Tag severity="secondary" value="Secondary"></Tag>
         <Tag severity="info" value="Info"></Tag>
         <Tag severity="warning" value="Warning"></Tag>
         <Tag severity="danger" value="Danger"></Tag>
+        <Tag severity="contrast" value="Contrast"></Tag>
     </div>
 </template>
 
@@ -44,9 +50,11 @@ export default {
     <div class="flex flex-wrap justify-center gap-2">
         <Tag value="Primary"></Tag>
         <Tag severity="success" value="Success"></Tag>
+        <Tag severity="secondary" value="Secondary"></Tag>
         <Tag severity="info" value="Info"></Tag>
         <Tag severity="warning" value="Warning"></Tag>
         <Tag severity="danger" value="Danger"></Tag>
+        <Tag severity="contrast" value="Contrast"></Tag>
     </div>
 </template>
 
