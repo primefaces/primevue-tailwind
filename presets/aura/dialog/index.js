@@ -12,8 +12,9 @@ export default {
             'm-0',
 
             // Color
-            'dark:border',
-            'dark:border-surface-700',
+            'bg-surface-0 dark:bg-surface-900',
+            '[&:last-child]:border-b',
+            'border-surface-200 dark:border-surface-700',
 
             // Transitions
             'transform',
@@ -41,17 +42,17 @@ export default {
             'p-6',
 
             // Shape
-            'border-t-0',
             'rounded-tl-lg',
             'rounded-tr-lg',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
-            'text-surface-700 dark:text-surface-0/80'
+            'text-surface-700 dark:text-surface-0/80',
+            'border border-b-0',
+            'border-surface-200 dark:border-surface-700'
         ]
     },
     title: {
-        class: ['font-bold text-lg']
+        class: ['font-semibold text-xl leading-[normal]']
     },
     icons: {
         class: ['flex items-center']
@@ -66,7 +67,7 @@ export default {
             // Size and Spacing
             'mr-2',
             'last:mr-0',
-            'w-8 h-8',
+            'w-7 h-7',
 
             // Shape
             'border-0',
@@ -81,9 +82,9 @@ export default {
 
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
-            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'hover:bg-surface-100 dark:hover:bg-surface-0/10',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1',
+            'focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Misc
             'overflow-hidden'
@@ -99,7 +100,7 @@ export default {
             // Size and Spacing
             'mr-2',
             'last:mr-0',
-            'w-8 h-8',
+            'w-7 h-7',
 
             // Shape
             'border-0',
@@ -114,9 +115,9 @@ export default {
 
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
-            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'hover:bg-surface-100 dark:hover:bg-surface-0/10',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1',
+            'focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Misc
             'overflow-hidden'
@@ -146,7 +147,7 @@ export default {
         class: [
             // Spacing
             'px-6',
-            'pb-8',
+            'pb-6',
             'pt-0',
 
             // Shape
@@ -157,8 +158,9 @@ export default {
             },
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-surface-0/80',
+            'border border-t-0 border-b-0',
+            'border-surface-200 dark:border-surface-700',
 
             // Misc
             'overflow-y-auto'
@@ -181,8 +183,10 @@ export default {
             'rounded-b-lg',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
-            'text-surface-700 dark:text-surface-0/80'
+            'bg-surface-0 dark:bg-surface-900',
+            'text-surface-700 dark:text-surface-0/80',
+            'border border-t-0 border-b-0',
+            'border-surface-200 dark:border-surface-700'
         ]
     },
     mask: ({ props }) => ({
@@ -193,7 +197,7 @@ export default {
             { 'p-5': !props.position == 'full' },
 
             // Background and Effects
-            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal, 'has-[.mask-active]:backdrop-blur-none backdrop-blur-sm': props.modal }
+            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal, 'has-[.mask-active]:backdrop-blur-none': props.modal }
         ]
     }),
     transition: ({ props }) => {
