@@ -63,7 +63,7 @@ export default {
         <Toast position="top-left" group="tl" />
         <Toast position="bottom-left" group="bl" />
         <Toast position="bottom-right" group="br" />
-        
+
         <div class="flex flex-wrap gap-2">
             <Button label="Top Left" @click="showTopLeft" />
             <Button label="Bottom Left" severity="warning" @click="showBottomLeft" />
