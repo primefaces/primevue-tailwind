@@ -18,7 +18,7 @@ export default {
             {
                 'bg-blue-50/90 dark:bg-blue-500/20': props.message.severity == 'info',
                 'bg-green-50/90 dark:bg-green-500/20': props.message.severity == 'success',
-                'bg-surface-50 dark:bg-surface-500': props.message.severity == 'secondary',
+                'bg-surface-50 dark:bg-surface-800': props.message.severity == 'secondary',
                 'bg-orange-50/90 dark:bg-orange-500/20': props.message.severity == 'warn',
                 'bg-red-50/90 dark:bg-red-500/20': props.message.severity == 'error',
                 'bg-surface-950 dark:bg-surface-0': props.message.severity == 'contrast'
@@ -26,7 +26,7 @@ export default {
             {
                 'border-blue-200 dark:border-blue-500/20': props.message.severity == 'info',
                 'border-green-200 dark:border-green-500/20': props.message.severity == 'success',
-                'border-surface-200 dark:border-surface-500/20': props.message.severity == 'secondary',
+                'border-surface-300 dark:border-surface-500/20': props.message.severity == 'secondary',
                 'border-orange-200 dark:border-orange-500/20': props.message.severity == 'warn',
                 'border-red-200 dark:border-red-500/20': props.message.severity == 'error',
                 'border-surface-950 dark:border-surface-0': props.message.severity == 'contrast'
@@ -47,8 +47,7 @@ export default {
             {
                 'items-start': props.message.summary,
                 'items-center': !props.message.summary
-            },
-            console.log('props.message.summary', props)
+            }
         ]
     }),
     icon: ({ props }) => ({
