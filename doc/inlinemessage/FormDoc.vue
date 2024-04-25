@@ -8,11 +8,11 @@
             <InputText id="username" placeholder="Username" class="p-invalid" />
             <InlineMessage>Username is required</InlineMessage>
         </div>
-        <div class="flex flex-wrap items-center gap-2">
+        <!-- <div class="flex flex-wrap items-center gap-2">
             <label for="email" class="p-sr-only">email</label>
             <InputText id="email" placeholder="Email" class="p-invalid" />
             <InlineMessage />
-        </div>
+        </div> -->
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -28,11 +28,6 @@ export default {
     <InputText id="username" placeholder="Username" class="p-invalid" />
     <InlineMessage>Username is required</InlineMessage>
 </div>
-<div class="flex flex-wrap items-center gap-2">
-    <label for="email" class="p-sr-only">email</label>
-    <InputText id="email" placeholder="Email" class="p-invalid" />
-    <InlineMessage />
-</div>
 `,
                 options: `
 <template>
@@ -41,11 +36,6 @@ export default {
             <label for="username" class="p-sr-only">Username</label>
             <InputText id="username" placeholder="Username" class="p-invalid" />
             <InlineMessage>Username is required</InlineMessage>
-        </div>
-        <div class="flex flex-wrap items-center gap-2">
-            <label for="email" class="p-sr-only">email</label>
-            <InputText id="email" placeholder="Email" class="p-invalid" />
-            <InlineMessage />
         </div>
     </div>
 </template>
@@ -60,11 +50,6 @@ export default {
             <label for="username" class="p-sr-only">Username</label>
             <InputText id="username" placeholder="Username" class="p-invalid" />
             <InlineMessage>Username is required</InlineMessage>
-        </div>
-        <div class="flex flex-wrap items-center gap-2">
-            <label for="email" class="p-sr-only">email</label>
-            <InputText id="email" placeholder="Email" class="p-invalid" />
-            <InlineMessage />
         </div>
     </div>
 </template>
