@@ -1,7 +1,8 @@
 export default {
-    root: ({ props }) => ({
+    root: ({ props, parent }) => ({
         class: [
             'flex',
+            { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
             {
                 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
             }

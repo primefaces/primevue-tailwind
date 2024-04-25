@@ -4,7 +4,7 @@
     </DocSectionText>
     <ConfirmPopup group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="border-round p-3">
+            <div class="rounded-full p-3">
                 <span>{{ message.message }}</span>
                 <div class="flex items-center gap-2 mt-3">
                     <Button label="Save" @click="acceptCallback" size="small"></Button>
@@ -27,7 +27,7 @@ export default {
                 basic: `
 <ConfirmPopup group="headless">
     <template #container="{ message, acceptCallback, rejectCallback }">
-        <div class="border-round p-3">
+        <div class="rounded-full p-3">
             <span>{{ message.message }}</span>
             <div class="flex items-center gap-2 mt-3">
                 <Button label="Save" @click="acceptCallback" size="small"></Button>
@@ -43,7 +43,7 @@ export default {
     <Toast />
     <ConfirmPopup group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="border-round p-3">
+            <div class="rounded-full p-3">
                 <span>{{ message.message }}</span>
                 <div class="flex items-center gap-2 mt-3">
                     <Button label="Save" @click="acceptCallback" size="small"></Button>
@@ -82,7 +82,7 @@ export default {
     <Toast />
     <ConfirmPopup group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="border-round p-3">
+            <div class="rounded-full p-3">
                 <span>{{ message.message }}</span>
                 <div class="flex items-center gap-2 mt-3">
                     <Button label="Save" @click="acceptCallback" size="small"></Button>

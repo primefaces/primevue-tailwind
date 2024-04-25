@@ -112,7 +112,7 @@ export default {
 
 <style scoped>
 .rounded-md dark:border dark:border-surface-700 p-6 flex select-none justify-center items-center  {
-    background: var(--surface-card);
+    background: var(--bg-surface-0 dark:bg-surface-900);
     padding: 2rem;
     border-radius: 10px;
     width: 110px;
@@ -158,7 +158,7 @@ export default {
 
 <style scoped>
 .rounded-md dark:border dark:border-surface-700 p-6 flex select-none justify-center items-center  {
-    background: var(--surface-card);
+    background: var(--bg-surface-0 dark:bg-surface-900);
     padding: 2rem;
     border-radius: 10px;
     width: 110px;
@@ -174,7 +174,7 @@ export default {
 
 <style scoped>
 .rounded-md dark:border dark:border-surface-700 p-6 flex select-none justify-center items-center {
-    background: var(--surface-card);
+    background: var(--bg-surface-0 dark: bg-surface-900);
     padding: 2rem;
     border-radius: 10px;
     width: 110px;
