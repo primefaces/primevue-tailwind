@@ -262,6 +262,9 @@ export default {
             '-mt-2'
         ]
     },
+    loadingicon: {
+        class: 'w-5 h-5 animate-spin'
+    },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',
         enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
