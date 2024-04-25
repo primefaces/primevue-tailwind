@@ -12,7 +12,7 @@
                             borderBottomColor: 'rgb(var(--primary-500))'
                         }
                     },
-                    text: 'bg-primary-500 dark:bg-primary-400 font-medium'
+                    text: ['p-2', 'bg-primary-500 dark:bg-primary-400', 'text-white dark:text-surface-950', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words']
                 }
             }"
             severity="secondary"

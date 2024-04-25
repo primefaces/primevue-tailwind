@@ -1,5 +1,5 @@
 export default {
-    root: ({ context, props }) => ({
+    root: ({ context }) => ({
         class: [
             // Position and Shadows
             'absolute',
@@ -12,7 +12,7 @@ export default {
             }
         ]
     }),
-    arrow: ({ context, props }) => ({
+    arrow: ({ context }) => ({
         class: [
             // Position
 
@@ -26,21 +26,20 @@ export default {
             'border-transparent',
             'border-solid',
             {
-                'border-y-[0.25rem] border-r-[0.25rem] border-l-0 border-r-surface-600': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
-                'border-y-[0.25rem] border-l-[0.25rem] border-r-0 border-l-surface-600': context?.left,
-                'border-x-[0.25rem] border-t-[0.25rem] border-b-0 border-t-surface-600': context?.top,
-                'border-x-[0.25rem] border-b-[0.25rem] border-t-0 border-b-surface-600': context?.bottom
+                'border-y-[10px] border-r-[10px] border-l-0 border-r-surface-700': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                'border-y-[10px] border-l-[10px] border-r-0 border-l-surface-700': context?.left,
+                'border-x-[10px] border-t-[10px] border-b-0 border-t-surface-700': context?.top,
+                'border-x-[10px] border-b-[10px] border-t-0 border-b-surface-700': context?.bottom
             },
 
             // Spacing
             {
-                '-mt-1 ': context?.right || (!context?.right && !context?.left && !context?.top && !context?.bottom),
-                '-mt-1': context?.left,
-                '-ml-1': context?.top || context?.bottom
+                '-mt-[10px] top-1/2': context?.right || context?.left || (!context?.right && !context?.left && !context?.top && !context?.bottom),
+                '-ml-[10px] left-1/2': context?.top || context?.bottom
             }
         ]
     }),
     text: {
-        class: ['p-3', 'bg-surface-600 dark:bg-surface-700', 'text-white', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words']
+        class: ['p-3', 'bg-surface-700', 'text-white', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words']
     }
 };
