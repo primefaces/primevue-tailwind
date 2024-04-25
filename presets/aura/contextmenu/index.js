@@ -2,17 +2,17 @@ export default {
     root: {
         class: [
             // Sizing and Shape
-            'min-w-[12rem]',
+            'min-w-[12.5rem]',
             'rounded-md',
             'shadow-md',
 
             // Spacing
-            'py-2',
+            'p-1',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-white/80',
-            'dark:border dark:border-surface-700'
+            'border border-surface-200 dark:border-surface-700'
         ]
     },
     menu: {
@@ -25,19 +25,19 @@ export default {
         ]
     },
     menuitem: {
-        class: 'relative'
+        class: 'relative my-[2px] [&:first-child]:mt-0'
     },
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-none',
+            'rounded-[4px]',
             // Colors
             'text-surface-700 dark:text-white/80',
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
                 'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': context.focused && context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': !context.focused && context.active
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': context.focused && context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': !context.focused && context.active
             },
 
             // Transitions
@@ -63,8 +63,8 @@ export default {
             'items-center',
 
             // Spacing
-            'py-3',
-            'px-5',
+            'py-2',
+            'px-3',
 
             // Color
             'text-surface-700 dark:text-white/80',
@@ -94,7 +94,7 @@ export default {
             'w-full sm:w-48',
 
             // Spacing
-            'py-1',
+            'p-1',
             'm-0',
             'list-none',
 
@@ -109,7 +109,7 @@ export default {
             { 'sm:absolute sm:left-full sm:top-0': props.level > 1 },
 
             // Color
-            'bg-surface-0 dark:bg-surface-700'
+            'bg-surface-0 dark:bg-surface-900'
         ]
     }),
     submenuicon: {
