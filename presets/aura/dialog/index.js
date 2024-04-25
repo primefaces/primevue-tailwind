@@ -197,7 +197,7 @@ export default {
             { 'p-5': !props.position == 'full' },
 
             // Background and Effects
-            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal, 'has-[.mask-active]:backdrop-blur-none': props.modal }
+            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal }
         ]
     }),
     transition: ({ props }) => {

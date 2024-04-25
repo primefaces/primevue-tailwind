@@ -19,7 +19,7 @@ export default {
             'shadow-lg',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-white/80',
             'dark:border-surface-700',
 
@@ -38,15 +38,15 @@ export default {
             'shrink-0',
 
             // Spacing
-            'p-5',
+            'p-[1.125rem]',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80'
         ]
     },
     title: {
-        class: ['font-bold text-lg']
+        class: ['font-semibold text-xl']
     },
     icons: {
         class: ['flex items-center']
@@ -61,7 +61,7 @@ export default {
             // Size and Spacing
             'mr-2',
             'last:mr-0',
-            'w-8 h-8',
+            'w-7 h-7',
 
             // Shape
             'border-0',
@@ -76,9 +76,9 @@ export default {
 
             // States
             'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-inset',
-            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'hover:bg-surface-100 dark:hover:bg-surface-0/10',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1',
+            'focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Misc
             'overflow-hidden'
@@ -97,7 +97,7 @@ export default {
     content: {
         class: [
             // Spacing and Size
-            'p-5',
+            'p-[1.125rem]',
             'pt-0',
             'h-full',
             'w-full',
@@ -115,7 +115,7 @@ export default {
             { 'p-5': !props.position == 'full' },
 
             // Background and Effects
-            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal, 'has-[.mask-active]:backdrop-blur-none backdrop-blur-sm': props.modal }
+            { 'has-[.mask-active]:bg-transparent bg-black/40': props.modal }
         ]
     }),
     transition: ({ props }) => {
