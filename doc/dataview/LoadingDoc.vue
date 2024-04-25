@@ -14,7 +14,7 @@
                 <div class="flex flex-wrap">
                     <div v-for="i in 6" :key="i" class="w-full p-3">
                         <div class="flex flex-col xl:flex-row xl:items-start p-4 gap-4" :class="{ 'border-t border-surface-200 dark:border-surface-700': i !== 0 }">
-                            <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
+                            <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-[6rem] block xl:block mx-auto rounded" />
                             <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                                 <div class="flex flex-col items-center sm:items-start gap-3">
                                     <Skeleton class="w-[8rem] rounded h-[2rem]" />
@@ -81,7 +81,7 @@ export default {
         <div class="flex flex-wrap">
             <div v-for="i in 6" :key="i" class="w-full p-3">
                 <div class="flex flex-col xl:flex-row xl:items-start p-4 gap-4" :class="{ 'border-t border-surface-200 dark:border-surface-700': i !== 0 }">
-                    <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
+                    <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-[6rem] block xl:block mx-auto rounded" />
                     <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                         <div class="flex flex-col items-center sm:items-start gap-3">
                             <Skeleton class="w-[8rem] rounded h-[2rem]" />
@@ -138,7 +138,7 @@ export default {
                 <div class="flex flex-wrap">
                     <div v-for="i in 6" :key="i" class="w-full p-3">
                         <div class="flex flex-col xl:flex-row xl:items-start p-4 gap-4" :class="{ 'border-t border-surface-200 dark:border-surface-700': i !== 0 }">
-                            <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
+                            <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-[6rem] block xl:block mx-auto rounded" />
                             <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                                 <div class="flex flex-col items-center sm:items-start gap-3">
                                     <Skeleton class="w-[8rem] rounded h-[2rem]" />
@@ -230,7 +230,7 @@ export default {
                 <div class="flex flex-wrap">
                     <div v-for="i in 6" :key="i" class="w-full p-3">
                         <div class="flex flex-col xl:flex-row xl:items-start p-4 gap-4" :class="{ 'border-t border-surface-200 dark:border-surface-700': i !== 0 }">
-                            <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-6rem block xl:block mx-auto rounded" />
+                            <Skeleton class="w-9/12 sm:w-[16rem] xl:w-[10rem] shadow-md h-[6rem] block xl:block mx-auto rounded" />
                             <div class="flex flex-col sm:flex-row justify-between items-center xl:items-start flex-1 gap-4">
                                 <div class="flex flex-col items-center sm:items-start gap-3">
                                     <Skeleton class="w-[8rem] rounded h-[2rem]" />

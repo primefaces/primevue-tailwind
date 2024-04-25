@@ -4,8 +4,8 @@
     </DocSectionText>
     <ConfirmDialog></ConfirmDialog>
     <div class="card flex flex-wrap gap-2 justify-center">
-        <Button @click="confirm1()" icon="pi pi-check" label="Confirm"></Button>
-        <Button @click="confirm2()" icon="pi pi-times" label="Delete" severity="danger"></Button>
+        <Button @click="confirm1()" label="Save" outlined></Button>
+        <Button @click="confirm2()" label="Delete" severity="danger" outlined></Button>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -17,16 +17,16 @@ export default {
             code: {
                 basic: `
 <ConfirmDialog></ConfirmDialog>
-<Button @click="confirm1()" icon="pi pi-check" label="Confirm"></Button>
-<Button @click="confirm2()" icon="pi pi-times" label="Delete" severity="danger"></Button>
+<Button @click="confirm1()" label="Save" outlined></Button>
+<Button @click="confirm2()" label="Delete" severity="danger" outlined></Button>
 `,
                 options: `
 <template>
     <Toast />
     <ConfirmDialog></ConfirmDialog>
     <div class="card flex flex-wrap gap-2 justify-center">
-        <Button @click="confirm1()" icon="pi pi-check" label="Confirm"></Button>
-        <Button @click="confirm2()" icon="pi pi-times" label="Delete" severity="danger"></Button>
+        <Button @click="confirm1()" label="Save" outlined></Button>
+        <Button @click="confirm2()" label="Delete" severity="danger" outlined></Button>
     </div>
 </template>
 
@@ -37,6 +37,15 @@ export default {
             this.$confirm.require({
                 message: 'Are you sure you want to proceed?',
                 header: 'Confirmation',
+                icon: 'pi pi-exclamation-triangle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Save'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -48,9 +57,17 @@ export default {
         confirm2() {
             this.$confirm.require({
                 message: 'Do you want to delete this record?',
-                header: 'Delete Confirmation',
-                rejectClass: 'p-button-text p-button-text',
-                acceptClass: 'p-button-danger p-button-text',
+                header: 'Danger Zone',
+                icon: 'pi pi-info-circle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Delete',
+                    severity: 'danger'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
                 },
@@ -68,8 +85,8 @@ export default {
     <Toast />
     <ConfirmDialog></ConfirmDialog>
     <div class="card flex flex-wrap gap-2 justify-center">
-        <Button @click="confirm1()" icon="pi pi-check" label="Confirm"></Button>
-        <Button @click="confirm2()" icon="pi pi-times" label="Delete" severity="danger"></Button>
+        <Button @click="confirm1()" label="Save" outlined></Button>
+        <Button @click="confirm2()" label="Delete" severity="danger" outlined></Button>
     </div>
 </template>
 
@@ -84,6 +101,15 @@ const confirm1 = () => {
     confirm.require({
         message: 'Are you sure you want to proceed?',
         header: 'Confirmation',
+        icon: 'pi pi-exclamation-triangle',
+        rejectProps: {
+            label: 'Cancel',
+            severity: 'secondary',
+            outlined: true
+        },
+        acceptProps: {
+            label: 'Save'
+        },
         accept: () => {
             toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
         },
@@ -96,9 +122,18 @@ const confirm1 = () => {
 const confirm2 = () => {
     confirm.require({
         message: 'Do you want to delete this record?',
-        header: 'Delete Confirmation',
-        rejectClass: 'p-button-text p-button-text',
-        acceptClass: 'p-button-danger p-button-text',
+        header: 'Danger Zone',
+        icon: 'pi pi-info-circle',
+        rejectLabel: 'Cancel',
+        rejectProps: {
+            label: 'Cancel',
+            severity: 'secondary',
+            outlined: true
+        },
+        acceptProps: {
+            label: 'Delete',
+            severity: 'danger'
+        },
         accept: () => {
             toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
         },
@@ -117,6 +152,15 @@ const confirm2 = () => {
             this.$confirm.require({
                 message: 'Are you sure you want to proceed?',
                 header: 'Confirmation',
+                icon: 'pi pi-exclamation-triangle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Save'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -128,9 +172,17 @@ const confirm2 = () => {
         confirm2() {
             this.$confirm.require({
                 message: 'Do you want to delete this record?',
-                header: 'Delete Confirmation',
-                rejectClass: 'p-button-text p-button-text',
-                acceptClass: 'p-button-danger p-button-text',
+                header: 'Danger Zone',
+                icon: 'pi pi-info-circle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Delete',
+                    severity: 'danger'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
                 },

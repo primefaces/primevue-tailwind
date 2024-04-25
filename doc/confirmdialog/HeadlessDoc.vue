@@ -4,8 +4,8 @@
     </DocSectionText>
     <ConfirmDialog group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-700 rounded-md">
-                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-[3rem]">
+            <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
+                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                     <i class="pi pi-question text-5xl"></i>
                 </div>
                 <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>
@@ -18,7 +18,7 @@
         </template>
     </ConfirmDialog>
     <div class="card flex justify-center">
-        <Button @click="requireConfirmation()" icon="pi pi-check" label="Confirm"></Button>
+        <Button @click="requireConfirmation()" label="Save"></Button>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -31,8 +31,8 @@ export default {
                 basic: `
 <ConfirmDialog group="headless">
     <template #container="{ message, acceptCallback, rejectCallback }">
-        <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-700 rounded-md">
-            <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-[3rem]">
+        <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
+            <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                 <i class="pi pi-question text-5xl"></i>
             </div>
             <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>
@@ -44,14 +44,14 @@ export default {
         </div>
     </template>
 </ConfirmDialog>
-<Button @click="requireConfirmation()" icon="pi pi-check" label="Confirm"></Button>
+<Button @click="requireConfirmation()" label="Save"></Button>
 `,
                 options: `
 <template>
     <ConfirmDialog group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-700 rounded-md">
-                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-[3rem]">
+            <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
+                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                     <i class="pi pi-question text-5xl"></i>
                 </div>
                 <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>
@@ -64,7 +64,7 @@ export default {
         </template>
     </ConfirmDialog>
     <div class="card flex justify-center">
-        <Button @click="requireConfirmation()" icon="pi pi-check" label="Confirm"></Button>
+        <Button @click="requireConfirmation()" label="Save"></Button>
     </div>
     <Toast />
 </template>
@@ -93,8 +93,8 @@ export default {
 <template>
     <ConfirmDialog group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-700 rounded-md">
-                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-[3rem]">
+            <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
+                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                     <i class="pi pi-question text-5xl"></i>
                 </div>
                 <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>
@@ -107,7 +107,7 @@ export default {
         </template>
     </ConfirmDialog>
     <div class="card flex justify-center">
-        <Button @click="requireConfirmation()" icon="pi pi-check" label="Confirm"></Button>
+        <Button @click="requireConfirmation()" label="Save"></Button>
     </div>
     <Toast />
 </template>

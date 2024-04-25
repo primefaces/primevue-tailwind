@@ -5,13 +5,13 @@
     <ConfirmDialog group="templating">
         <template #message="slotProps">
             <div class="flex flex-col items-center w-full gap-3 border-b border-surface-200 dark:border-surface-700">
-                <i :class="slotProps.message.icon" class="text-6xl text-primary-500"></i>
+                <i :class="slotProps.message.icon" class="text-6xl text-primary-500 dark:text-primary-400"></i>
                 <p>{{ slotProps.message.message }}</p>
             </div>
         </template>
     </ConfirmDialog>
     <div class="card flex justify-center">
-        <Button @click="showTemplate()" icon="pi pi-check" label="Confirm"></Button>
+        <Button @click="showTemplate()" label="Save"></Button>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -25,12 +25,12 @@ export default {
 <ConfirmDialog group="templating">
     <template #message="slotProps">
         <div class="flex flex-col items-center w-full gap-3 border-b border-surface-200 dark:border-surface-700">
-            <i :class="slotProps.message.icon" class="text-6xl text-primary-500"></i>
+            <i :class="slotProps.message.icon" class="text-6xl text-primary-500 dark:text-primary-400"></i>
             <p>{{ slotProps.message.message }}</p>
         </div>
     </template>
 </ConfirmDialog>
-<Button @click="showTemplate()" icon="pi pi-check" label="Confirm"></Button>
+<Button @click="showTemplate()" label="Save"></Button>
 `,
                 options: `
 <template>
@@ -43,7 +43,7 @@ export default {
         </template>
     </ConfirmDialog>
     <div class="card flex justify-center">
-        <Button @click="showTemplate()" icon="pi pi-check" label="Confirm"></Button>
+        <Button @click="showTemplate()" label="Save"></Button>
     </div>
     <Toast />
 </template>
@@ -57,10 +57,17 @@ export default {
                 header: 'Confirmation',
                 message: 'Please confirm to proceed moving forward.',
                 icon: 'pi pi-exclamation-circle',
-                acceptIcon: 'pi pi-check',
-                rejectIcon: 'pi pi-times',
-                rejectClass: 'p-button-sm',
-                acceptClass: 'p-button-outlined p-button-sm',
+                rejectProps: {
+                    label: 'Cancel',
+                    icon: 'pi pi-times',
+                    outlined: true,
+                    size: 'small'
+                },
+                acceptProps: {
+                    label: 'Save',
+                    icon: 'pi pi-check',
+                    size: 'small'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -78,13 +85,13 @@ export default {
     <ConfirmDialog group="templating">
         <template #message="slotProps">
             <div class="flex flex-col items-center w-full gap-3 border-b border-surface-200 dark:border-surface-700">
-                <i :class="slotProps.message.icon" class="text-6xl text-primary-500"></i>
+                <i :class="slotProps.message.icon" class="text-6xl text-primary-500 dark:text-primary-400"></i>
                 <p>{{ slotProps.message.message }}</p>
             </div>
         </template>
     </ConfirmDialog>
     <div class="card flex justify-center">
-        <Button @click="showTemplate()" icon="pi pi-check" label="Confirm"></Button>
+        <Button @click="showTemplate()" label="Save"></Button>
     </div>
     <Toast />
 </template>
@@ -102,10 +109,17 @@ const showTemplate = () => {
         header: 'Confirmation',
         message: 'Please confirm to proceed moving forward.',
         icon: 'pi pi-exclamation-circle',
-        acceptIcon: 'pi pi-check',
-        rejectIcon: 'pi pi-times',
-        rejectClass: 'p-button-sm',
-        acceptClass: 'p-button-outlined p-button-sm',
+        rejectProps: {
+            label: 'Cancel',
+            icon: 'pi pi-times',
+            outlined: true,
+            size: 'small'
+        },
+        acceptProps: {
+            label: 'Save',
+            icon: 'pi pi-check',
+            size: 'small'
+        },
         accept: () => {
             toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
         },
@@ -126,10 +140,17 @@ const showTemplate = () => {
                 header: 'Confirmation',
                 message: 'Please confirm to proceed moving forward.',
                 icon: 'pi pi-exclamation-circle',
-                acceptIcon: 'pi pi-check',
-                rejectIcon: 'pi pi-times',
-                rejectClass: 'p-button-sm',
-                acceptClass: 'p-button-outlined p-button-sm',
+                rejectProps: {
+                    label: 'Cancel',
+                    icon: 'pi pi-times',
+                    outlined: true,
+                    size: 'small'
+                },
+                acceptProps: {
+                    label: 'Save',
+                    icon: 'pi pi-check',
+                    size: 'small'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
