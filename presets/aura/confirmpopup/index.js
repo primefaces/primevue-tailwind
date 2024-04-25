@@ -11,17 +11,16 @@ export default {
             'mt-3 absolute left-0 top-0',
 
             // Color
-            'dark:border',
-            'dark:border-surface-700',
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-surface-0/80',
 
             // Before: Arrow
-            'before:absolute before:w-0 before:-top-3 before:h-0 before:border-transparent before:border-solid before:ml-6 before:border-x-[0.75rem] before:border-b-[0.75rem] before:border-t-0 before:border-b-surface-0 dark:before:border-b-surface-800'
+            'before:absolute before:w-0 before:-top-3 before:h-0 before:border-transparent before:border-solid before:ml-6 before:border-x-[10px] before:border-b-[10px] before:border-t-0 before:border-b-surface-200 dark:before:border-b-surface-700',
+            'after:absolute after:w-0 after:-top-[0.54rem] after:h-0 after:border-transparent after:border-solid after:ml-[1.6rem] after:border-x-[9px] after:border-b-[8px] after:border-t-0 after:border-b-surface-0 dark:after:border-b-surface-900'
         ]
     },
     content: {
-        class: 'p-5 items-center flex'
+        class: ['p-4 items-center flex', 'rounded-t-lg', 'border-x border-t last:border-b border-surface-200 dark:border-surface-700']
     },
     icon: {
         class: 'text-2xl mr-4'
@@ -35,16 +34,17 @@ export default {
             'gap-2',
 
             // Spacing
-            'px-6',
-            'pb-6',
+            'px-4',
+            'pb-4',
 
             // Shape
             'border-t-0',
             'rounded-b-lg',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-800',
-            'text-surface-700 dark:text-surface-0/80'
+            'bg-surface-0 dark:bg-surface-900',
+            'text-surface-700 dark:text-surface-0/80',
+            'border-x border-b border-surface-200 dark:border-surface-700'
         ]
     },
     rejectbutton: {
@@ -56,7 +56,7 @@ export default {
                 'items-center inline-flex text-center align-bottom justify-center',
 
                 // Sizes & Spacing
-                'px-4 py-3 leading-none',
+                'px-4 py-2 leading-none',
 
                 // Shape
                 'rounded-md',
@@ -80,7 +80,7 @@ export default {
                 'items-center inline-flex text-center align-bottom justify-center',
 
                 // Sizes & Spacing
-                'px-4 py-3 leading-none',
+                'px-4 py-2 leading-none',
 
                 // Shape
                 'rounded-md',

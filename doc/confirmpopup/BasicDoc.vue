@@ -4,8 +4,8 @@
     </DocSectionText>
     <ConfirmPopup></ConfirmPopup>
     <div class="card flex flex-wrap gap-2 justify-center">
-        <Button @click="confirm1($event)" icon="pi pi-check" label="Confirm"></Button>
-        <Button @click="confirm2($event)" icon="pi pi-times" label="Delete" severity="danger"></Button>
+        <Button @click="confirm1($event)" label="Save" outlined></Button>
+        <Button @click="confirm2($event)" label="Delete" severity="danger" outlined></Button>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -17,16 +17,16 @@ export default {
             code: {
                 basic: `
 <ConfirmPopup></ConfirmPopup>
-<Button @click="confirm1($event)" icon="pi pi-check" label="Confirm"></Button>
-<Button @click="confirm2($event)" icon="pi pi-times" label="Delete" severity="danger"></Button>
+<Button @click="confirm1($event)" label="Save" outlined></Button>
+<Button @click="confirm2($event)" label="Delete" severity="danger" outlined></Button>
 `,
                 options: `
 <template>
     <Toast />
     <ConfirmPopup></ConfirmPopup>
     <div class="card flex flex-wrap gap-2 justify-center">
-        <Button @click="confirm1($event)" icon="pi pi-check" label="Confirm"></Button>
-        <Button @click="confirm2($event)" icon="pi pi-times" label="Delete" severity="danger"></Button>
+        <Button @click="confirm1($event)" label="Save" outlined></Button>
+        <Button @click="confirm2($event)" label="Delete" severity="danger" outlined></Button>
     </div>
 </template>
 
@@ -37,6 +37,15 @@ export default {
             this.$confirm.require({
                 target: event.currentTarget,
                 message: 'Are you sure you want to proceed?',
+                icon: 'pi pi-exclamation-triangle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Save'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -49,7 +58,16 @@ export default {
             this.$confirm.require({
                 target: event.currentTarget,
                 message: 'Do you want to delete this record?',
-                acceptClass: '!bg-red-500 dark:!bg-red-40 !border-red-500 dark:!border-red-400 !ring-red-500 dark:!ring-red-400 hover:!bg-red-600 dark:hover:!bg-red-300 hover:!border-red-600 dark:hover:!border-red-300 focus:!ring-red-400/50 dark:!focus:ring-red-300/50',
+                icon: 'pi pi-info-circle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Delete',
+                    severity: 'danger'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
                 },
@@ -67,8 +85,8 @@ export default {
     <Toast />
     <ConfirmPopup></ConfirmPopup>
     <div class="card flex flex-wrap gap-2 justify-center">
-        <Button @click="confirm1($event)" icon="pi pi-check" label="Confirm"></Button>
-        <Button @click="confirm2($event)" icon="pi pi-times" label="Delete" severity="danger"></Button>
+        <Button @click="confirm1($event)" label="Save" outlined></Button>
+        <Button @click="confirm2($event)" label="Delete" severity="danger" outlined></Button>
     </div>
 </template>
 
@@ -83,6 +101,15 @@ const confirm1 = (event) => {
     confirm.require({
         target: event.currentTarget,
         message: 'Are you sure you want to proceed?',
+        icon: 'pi pi-exclamation-triangle',
+        rejectProps: {
+            label: 'Cancel',
+            severity: 'secondary',
+            outlined: true
+        },
+        acceptProps: {
+            label: 'Save'
+        },
         accept: () => {
             toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
         },
@@ -96,7 +123,16 @@ const confirm2 = (event) => {
     confirm.require({
         target: event.currentTarget,
         message: 'Do you want to delete this record?',
-        acceptClass: '!bg-red-500 dark:!bg-red-40 !border-red-500 dark:!border-red-400 !ring-red-500 dark:!ring-red-400 hover:!bg-red-600 dark:hover:!bg-red-300 hover:!border-red-600 dark:hover:!border-red-300 focus:!ring-red-400/50 dark:!focus:ring-red-300/50',
+        icon: 'pi pi-info-circle',
+        rejectProps: {
+            label: 'Cancel',
+            severity: 'secondary',
+            outlined: true
+        },
+        acceptProps: {
+            label: 'Delete',
+            severity: 'danger'
+        },
         accept: () => {
             toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
         },
@@ -115,6 +151,15 @@ const confirm2 = (event) => {
             this.$confirm.require({
                 target: event.currentTarget,
                 message: 'Are you sure you want to proceed?',
+                icon: 'pi pi-exclamation-triangle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Save'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted', life: 3000 });
                 },
@@ -127,8 +172,16 @@ const confirm2 = (event) => {
             this.$confirm.require({
                 target: event.currentTarget,
                 message: 'Do you want to delete this record?',
-                acceptClass:
-                    '!bg-red-500 dark:!bg-red-40 !border-red-500 dark:!border-red-400 !ring-red-500 dark:!ring-red-400 hover:!bg-red-600 dark:hover:!bg-red-300 hover:!border-red-600 dark:hover:!border-red-300 focus:!ring-red-400/50 dark:!focus:ring-red-300/50',
+                icon: 'pi pi-info-circle',
+                rejectProps: {
+                    label: 'Cancel',
+                    severity: 'secondary',
+                    outlined: true
+                },
+                acceptProps: {
+                    label: 'Delete',
+                    severity: 'danger'
+                },
                 accept: () => {
                     this.$toast.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted', life: 3000 });
                 },
