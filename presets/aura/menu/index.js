@@ -2,12 +2,14 @@ export default {
     root: {
         class: [
             // Sizing and Shape
-            'min-w-[12rem]',
+            'min-w-[12.5rem]',
             'rounded-md',
+
             // Spacing
-            'py-2',
+            'p-1',
+
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-900',
             'text-surface-700 dark:text-white/80',
             'border border-surface-200 dark:border-surface-700'
         ]
@@ -21,21 +23,34 @@ export default {
             'outline-none'
         ]
     },
+    menuitem: {
+        class: 'relative my-[2px] [&:first-child]:mt-0'
+    },
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-none',
+            'rounded-[4px]',
             // Colors
             'text-surface-700 dark:text-white/80',
             {
-                'bg-surface-200 text-surface-700 dark:bg-surface-300/10 dark:text-white': context.focused
+                'text-surface-500 dark:text-white/70': !context.focused && !context.active,
+                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': context.focused && context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': !context.focused && context.active
             },
+
             // Transitions
             'transition-shadow',
             'duration-200',
+
             // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:bg-surface-700 dark:hover:bg-surface-400/10'
+            {
+                'hover:bg-surface-100 dark:hover:bg-surface-0/10': !context.active,
+                'hover:bg-primary-400/30 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
+            },
+
+            // Disabled
+            { 'opacity-60 pointer-events-none cursor-default': context.disabled }
         ]
     }),
     action: {
@@ -47,8 +62,8 @@ export default {
             'items-center',
 
             // Spacing
-            'py-3',
-            'px-5',
+            'py-2',
+            'px-3',
 
             // Color
             'text-surface-700 dark:text-white/80',
@@ -70,21 +85,24 @@ export default {
         ]
     },
     label: {
-        class: ['leading-none']
+        class: ['leading-[normal]']
     },
     submenuheader: {
         class: [
             // Font
             'font-bold',
+
             // Spacing
             'm-0',
-            'py-3 px-5',
+            'py-2 px-3',
+
             // Shape
             'rounded-tl-none',
             'rounded-tr-none',
+
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
-            'text-surface-700 dark:text-white'
+            'bg-surface-0 dark:bg-surface-900',
+            'text-surface-400 dark:text-surface-600'
         ]
     },
     transition: {
