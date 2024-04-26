@@ -6,10 +6,10 @@ export default {
 
             // Size
             'min-w-[12rem]',
-            'py-1',
+            'p-1',
 
             // Colors
-            'bg-surface-0 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-900',
             'border border-surface-200 dark:border-surface-700'
         ]
     },
@@ -23,33 +23,33 @@ export default {
         ]
     },
     menuitem: {
-        class: [
-            // Position
-            'relative'
-        ]
+        class: 'relative my-[2px] [&:first-child]:mt-0'
     },
     content: ({ context }) => ({
         class: [
             //Shape
-            'rounded-none',
-
-            //  Colors
+            'rounded-[4px]',
+            // Colors
+            'text-surface-700 dark:text-white/80',
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
                 'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': context.focused && context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-400/30': !context.focused && context.active
-            },
-
-            // Hover States
-            {
-                'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
-                'hover:bg-primary-500/50 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': context.focused && context.active,
+                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': !context.focused && context.active
             },
 
             // Transitions
             'transition-shadow',
-            'duration-200'
+            'duration-200',
+
+            // States
+            {
+                'hover:bg-surface-100 dark:hover:bg-surface-0/10': !context.active,
+                'hover:bg-primary-400/30 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
+            },
+
+            // Disabled
+            { 'opacity-60 pointer-events-none cursor-default': context.disabled }
         ]
     }),
     action: {
@@ -61,8 +61,8 @@ export default {
             'items-center',
 
             // Spacing
-            'py-3',
-            'px-5',
+            'py-2',
+            'px-3',
 
             // Color
             'text-surface-700 dark:text-white/80',
@@ -94,27 +94,25 @@ export default {
     },
     submenu: {
         class: [
-            // Size
-            'w-full sm:w-48',
-
             // Spacing
-            'py-1',
+            'p-1',
             'm-0',
             'list-none',
+            'min-w-[12.5rem]',
 
             // Shape
             'shadow-none sm:shadow-md',
-            'border-0',
+            'border border-surface-200 dark:border-surface-700',
 
             // Position
             'static sm:absolute',
             'z-10',
 
             // Color
-            'bg-surface-0 dark:bg-surface-700'
+            'bg-surface-0 dark:bg-surface-900'
         ]
     },
     separator: {
-        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
+        class: 'border-t border-surface-200 dark:border-surface-600 my-[2px]'
     }
 };
