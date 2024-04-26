@@ -8,7 +8,7 @@ export default {
             'align-bottom',
 
             // Size
-            'w-[1.571rem] h-[1.571rem]',
+            'w-5 h-5',
 
             // Misc
             'cursor-pointer',
@@ -21,32 +21,32 @@ export default {
             'flex justify-center items-center',
 
             // Size
-            'w-[1.571rem] h-[1.571rem]',
+            'w-5 h-5',
 
             // Shape
-            'border-2',
+            'border',
             'rounded-full',
 
             // Transition
             'transition duration-200 ease-in-out',
 
             // Colors
+            { 'bg-surface-0 dark:bg-surface-950': !props.disabled },
             {
                 'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
-                'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue && props.value !== undefined,
                 'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined && !props.invalid,
-                'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined,
-                'bg-primary-500 dark:bg-primary-400': props.value == props.modelValue && props.value !== undefined
+                'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined && !props.disabled
             },
             // Invalid State
             { 'border-red-500 dark:border-red-400': props.invalid },
 
             // States
             {
-                'peer-hover:border-primary-500 dark:peer-hover:border-primary-400': !props.disabled && !props.invalid,
-                'peer-hover:border-primary-600 dark:peer-hover:border-primary-300 peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
-                'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
-                'opacity-60 cursor-default': props.disabled
+                'peer-hover:border-surface-400 dark:peer-hover:border-surface-400': !props.disabled && !props.invalid && props.value !== props.modelValue,
+                'peer-hover:border-primary-600 dark:peer-hover:border-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
+                'peer-hover:[&>*:first-child]:bg-primary-600 dark:peer-hover:[&>*:first-child]:bg-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
+                'peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
+                'bg-surface-200 [&>*:first-child]:bg-surface-600 dark:bg-surface-700 dark:[&>*:first-child]:bg-surface-400 border-surface-300 dark:border-surface-700 select-none pointer-events-none cursor-default': props.disabled
             }
         ]
     }),
@@ -71,7 +71,7 @@ export default {
             'opacity-0',
             'rounded-md',
             'outline-none',
-            'border-2 border-surface-200 dark:border-surface-700',
+            'border-1 border-surface-200 dark:border-surface-700',
 
             // Misc
             'appearance-none',
@@ -86,15 +86,14 @@ export default {
             'rounded-full',
 
             // Size
-            'w-[0.857rem] h-[0.857rem]',
-
-            // Colors
-            'bg-surface-0 dark:bg-surface-900',
+            'w-3 h-3',
 
             // Conditions
             {
-                'backface-hidden scale-10 invisible': props.value !== props.modelValue,
-                'transform visible scale-[1.1]': props.value == props.modelValue
+                'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue,
+                'bg-primary-500 dark:bg-primary-400': props.value == props.modelValue,
+                'backface-hidden invisible scale-[0.1]': props.value !== props.modelValue,
+                'transform visible translate-z-0 scale-[1,1]': props.value == props.modelValue
             },
 
             // Transition
