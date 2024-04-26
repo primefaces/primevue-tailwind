@@ -118,8 +118,8 @@ export default {
     submenu: ({ props }) => ({
         class: [
             // Size
-            'min-w-[12.5rem]',
             'rounded-md',
+
             // Spacing
             'p-1',
             'm-0',
