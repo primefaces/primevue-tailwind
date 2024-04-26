@@ -14,7 +14,7 @@ export default {
             'rounded-md',
 
             // Color
-            'bg-surface-50 dark:bg-surface-700',
+            'bg-surface-0 dark:bg-surface-900',
             'border border-surface-200 dark:border-surface-700'
         ]
     },
@@ -37,7 +37,7 @@ export default {
 
             // Spacing
             'm-0',
-            'py-1 sm:py-0 sm:p-0',
+            'p-1 sm:py-0 sm:p-0',
             'list-none',
 
             // Shape
@@ -45,19 +45,19 @@ export default {
             'border-0',
 
             // Color
-            'bg-surface-0 dark:bg-surface-700 sm:bg-transparent',
+            'bg-surface-0 dark:bg-surface-900 sm:bg-transparent',
 
             // Misc
             'outline-none'
         ]
     }),
     menuitem: {
-        class: 'sm:relative sm:w-auto w-full static'
+        class: 'sm:relative sm:w-auto w-full static my-[2px] [&:first-child]:mt-0'
     },
     content: ({ props, context }) => ({
         class: [
             // Shape
-            { 'rounded-md': props.root },
+            'rounded-[4px]',
 
             //  Colors
             {
@@ -69,7 +69,7 @@ export default {
 
             // Hover States
             {
-                'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
+                'hover:bg-surface-100 dark:hover:bg-surface-0/10': !context.active,
                 'hover:bg-primary-500/50 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
             },
 
@@ -87,8 +87,8 @@ export default {
             'items-center',
 
             // Spacing
-            'py-3',
-            'px-5',
+            'py-2',
+            'px-3',
 
             // Size
             {
@@ -118,16 +118,16 @@ export default {
     submenu: ({ props }) => ({
         class: [
             // Size
-            'w-full sm:w-48',
-
+            'min-w-[12.5rem]',
+            'rounded-md',
             // Spacing
-            'py-1',
+            'p-1',
             'm-0',
             'list-none',
 
             // Shape
             'shadow-none sm:shadow-md',
-            'border-0',
+            'border border-surface-200 dark:border-surface-700',
 
             // Position
             'static sm:absolute',
@@ -135,7 +135,7 @@ export default {
             { 'sm:absolute sm:left-full sm:top-0': props.level > 1 },
 
             // Color
-            'bg-surface-0 dark:bg-surface-700'
+            'bg-surface-0 dark:bg-surface-900'
         ]
     }),
     separator: {
@@ -148,8 +148,8 @@ export default {
             'items-center justify-center',
 
             // Size
-            'w-8',
-            'h-8',
+            'w-7',
+            'h-7',
 
             // Shape
             'rounded-full',
@@ -160,7 +160,7 @@ export default {
             'hover:text-surface-600 dark:hover:text-white/60',
             'hover:bg-surface-100 dark:hover:bg-surface-600/80',
             'focus:outline-none focus:outline-offset-0',
-            'focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transitions
             'transition duration-200 ease-in-out',
