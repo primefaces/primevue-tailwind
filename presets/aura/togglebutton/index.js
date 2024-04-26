@@ -14,31 +14,36 @@ export default {
     },
     box: ({ props }) => ({
         class: [
+            'relative',
+
             // Alignments
             'items-center inline-flex flex-1 text-center align-bottom justify-center',
 
             // Sizes & Spacing
-            'px-4 py-3 leading-none',
+            'px-4 py-2 leading-none',
 
             // Shapes
-            'rounded-md border',
+            'rounded-md',
+            'border',
+            { 'border-transparent': !props.invalid },
 
             // Colors
+            'bg-surface-100 dark:bg-surface-950',
             {
-                'bg-surface-0 dark:bg-surface-900 ': !props.modelValue,
-                'border-surface-200 dark:border-surface-700 ': !props.modelValue && !props.invalid,
-                'text-surface-700 dark:text-white/80': !props.modelValue,
-                'bg-primary-500 dark:bg-primary-400 border-primary-500 dark:border-primary-400 text-white dark:text-surface-900': props.modelValue
+                'text-surface-600 dark:text-white/60 before:bg-transparent': !props.modelValue,
+                'text-surface-800 dark:text-white/80 before:bg-surface-0 dark:before:bg-surface-800': props.modelValue
             },
+
+            // Before
+            'before:absolute before:left-1 before:top-1 before:w-[calc(100%-0.5rem)] before:h-[calc(100%-0.5rem)] before:rounded-[4px] before:z-0',
 
             // Invalid State
             { 'border-red-500 dark:border-red-400': props.invalid },
 
             // States
             {
-                'peer-hover:bg-surface-50 dark:peer-hover:bg-surface-800/80 peer-hover:border-surface-200 dark:peer-hover:bg-surface-700 peer-hover:text-surface-700 dark:peer-hover:text-white/80': !props.modelValue && !props.invalid,
-                'peer-hover:bg-primary-600 peer-hover:border-primary-600 dark:peer-hover:bg-primary-300 dark:peer-hover:border-primary-300': props.modelValue,
-                'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50': !props.disabled
+                'peer-hover:text-surface-800 dark:peer-hover:text-white/80': !props.disabled && !props.modelValue,
+                'peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled
             },
 
             // Transitions
@@ -49,7 +54,7 @@ export default {
         ]
     }),
     label: {
-        class: 'font-bold text-center w-full'
+        class: 'font-medium leading-[normal] text-center w-full z-10 relative'
     },
     input: {
         class: [
@@ -62,7 +67,7 @@ export default {
             // Position
             'absolute',
             'top-0 left-0',
-            'z-10',
+            'z-20',
 
             // Spacing
             'p-0',
@@ -80,12 +85,6 @@ export default {
         ]
     },
     icon: ({ props }) => ({
-        class: [
-            ' mr-2',
-            {
-                'text-surface-600 dark:text-white/70': !props.modelValue,
-                'text-white dark:text-surface-900': props.modelValue
-            }
-        ]
+        class: ['relative z-10', 'mr-2']
     })
 };
