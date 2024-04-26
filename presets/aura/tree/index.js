@@ -26,7 +26,7 @@ export default {
         ]
     },
     node: {
-        class: ['p-0 my-[2px] mx-0 first:mt-0', 'rounded-md']
+        class: ['p-0 my-[2px] mx-0 first:mt-0', 'rounded-md', 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10']
     },
     content: ({ context, props }) => ({
         class: [
