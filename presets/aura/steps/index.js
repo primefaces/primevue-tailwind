@@ -15,15 +15,18 @@ export default {
             'overflow-hidden',
 
             // Before
-            'before:border-t',
+            'before:border-t-2',
             'before:border-surface-200',
             'before:dark:border-surface-700',
             'before:w-full',
+            '[&:first-child]:before:w-[calc(50%+1rem)]',
+            '[&:last-child]:before:w-1/2',
             'before:absolute',
             'before:top-1/2',
             'before:left-0',
             'before:transform',
-            'before:-mt-4'
+            'before:mt-[calc(-1rem+1px)]',
+            '[&:first-child]:before:translate-x-[100%]'
         ]
     },
     action: ({ props }) => ({
@@ -59,22 +62,21 @@ export default {
 
             // Shape
             'rounded-full',
-            'border',
+            'border-2',
 
             // Size
-            'w-[2rem]',
-            'h-[2rem]',
+            'w-8',
+            'h-8',
             'text-sm',
             'leading-[2rem]',
+            'font-medium',
 
             // Colors
+            'bg-surface-0 dark:bg-surface-800',
+            'border-surface-100 dark:border-surface-700',
             {
                 'text-surface-400 dark:text-white/60': !context.active,
-                'border-surface-100 dark:border-surface-700': !context.active,
-                'bg-surface-0 dark:bg-surface-800': !context.active,
-                'bg-primary-500 dark:bg-primary-400': context.active,
-                'border-primary-500 dark:border-primary-400': context.active,
-                'text-surface-0 dark:text-surface-900': context.active
+                'text-primary-500 dark:text-primary-400': context.active
             },
 
             // States
@@ -89,8 +91,8 @@ export default {
     label: ({ context }) => ({
         class: [
             // Font
-            'leading-5',
-            { 'font-bold': context.active },
+            'leading-[normal]',
+            'font-medium',
 
             // Display
             'block',
@@ -99,7 +101,7 @@ export default {
             'mt-2',
 
             // Colors
-            { 'text-surface-400 dark:text-white/60': !context.active, 'text-surface-800 dark:text-white/80': context.active },
+            { 'text-surface-700 dark:text-white/70': !context.active, 'text-primary-500 dark:text-primary-400': context.active },
 
             // Text and Overflow
             'whitespace-nowrap',
