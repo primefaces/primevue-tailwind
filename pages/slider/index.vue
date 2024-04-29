@@ -10,6 +10,7 @@ import InputDoc from '@/doc/slider/InputDoc.vue';
 import RangeDoc from '@/doc/slider/RangeDoc.vue';
 import StepDoc from '@/doc/slider/StepDoc.vue';
 import VerticalDoc from '@/doc/slider/VerticalDoc.vue';
+import FilterDoc from '../../doc/slider/FilterDoc.vue';
 export default {
     data() {
         return {
@@ -38,6 +39,11 @@ export default {
                     id: 'range',
                     label: 'Range',
                     component: RangeDoc
+                },
+                {
+                    id: 'filter',
+                    label: 'Filter',
+                    component: FilterDoc
                 },
                 {
                     id: 'vertical',

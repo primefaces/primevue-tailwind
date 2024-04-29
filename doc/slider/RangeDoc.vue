@@ -3,7 +3,7 @@
         <p>When <i>range</i> property is present, slider provides two handles to define two values. In range mode, value should be an array instead of a single value.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Slider v-model="value" range class="w-14rem" />
+        <Slider v-model="value" range class="w-[14rem]" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             value: [20, 80],
             code: {
                 basic: `
-<Slider v-model="value" range class="w-14rem" />
+<Slider v-model="value" range class="w-[14rem]" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Slider v-model="value" range class="w-14rem" />
+        <Slider v-model="value" range class="w-[14rem]" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Slider v-model="value" range class="w-14rem" />
+        <Slider v-model="value" range class="w-[14rem]" />
     </div>
 </template>
 
