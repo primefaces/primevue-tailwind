@@ -84,7 +84,7 @@ export default {
             'cursor-pointer'
         ]
     },
-    icon: ({ props }) => ({
+    icon: {
         class: ['relative z-10', 'mr-2']
-    })
+    }
 };
