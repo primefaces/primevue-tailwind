@@ -126,7 +126,7 @@ export default {
 
                 // States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-800/50': (props.sortable === '' || props.sortable) && !context?.sorted },
-                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
+                'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
                 // Transition
                 { 'transition duration-200': props.sortable === '' || props.sortable },
@@ -712,7 +712,7 @@ export default {
 
                 // States
                 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
-                'hover:text-surface-700 hover:bg-surface-800/50',
+                'hover:text-surface-700 hover:bg-surface-50 dark:hover:bg-surface-800/50',
 
                 // Transition
                 'transition duration-200',
