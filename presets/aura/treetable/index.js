@@ -235,14 +235,10 @@ export default {
                 },
                 { 'first:border-l border-r border-b': context?.showGridlines },
 
-                // Color
-                'bg-surface-0 dark:bg-surface-900',
-
                 // Spacing
                 context?.size === 'small' ? 'py-[0.375rem] px-2' : context?.size === 'large' ? 'py-[0.9375rem] px-5' : 'py-3 px-4',
 
                 // Misc
-                'dark:border-surface-700',
                 {
                     'cursor-pointer': context.selectable,
                     sticky: context.scrollable && context.scrollDirection === 'both' && context.frozen,

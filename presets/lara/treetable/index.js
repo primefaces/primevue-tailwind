@@ -225,14 +225,10 @@ export default {
                 },
                 { 'first:border-l border-r border-b': context?.showGridlines },
 
-                // Color
-                'bg-surface-0 dark:bg-surface-800',
-
                 // Spacing
                 context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
                 // Misc
-                'dark:border-surface-700',
                 {
                     'cursor-pointer': context.selectable,
                     sticky: context.scrollable && context.scrollDirection === 'both' && context.frozen,
