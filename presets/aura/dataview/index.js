@@ -9,7 +9,7 @@ export default {
 
             // Color
             'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-800'
+            'bg-surface-0 dark:bg-surface-900'
         ]
     },
     grid: {
@@ -21,20 +21,20 @@ export default {
             'ml-0 mr-0 mt-0',
 
             // Color
-            'bg-surface-0 dark:bg-surface-800'
+            'bg-surface-0 dark:bg-surface-900'
         ]
     },
     header: {
         class: [
-            'font-bold',
+            'font-semibold',
 
             // Spacing
-            'p-4',
+            'py-3 px-4',
 
             // Color
             'text-surface-800 dark:text-white/80',
-            'bg-surface-50 dark:bg-surface-800',
-            'border-surface-200 dark:border-surface-700 border-y'
+            'bg-surface-00 dark:bg-surface-900',
+            'border-b border-surface-200 dark:border-surface-700'
         ]
     }
 };
