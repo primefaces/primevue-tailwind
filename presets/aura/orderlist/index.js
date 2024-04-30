@@ -2,16 +2,16 @@ export default {
     root: {
         class: [
             // Flexbox
-            'flex'
+            'flex xl:flex-row flex-col'
         ]
     },
     controls: {
         class: [
             // Flexbox & Alignment
-            'flex flex-col justify-center gap-2',
+            'flex xl:flex-col justify-center gap-2',
 
             // Spacing
-            'p-5'
+            'p-[1.125rem]'
         ]
     },
     moveupbutton: {
@@ -24,22 +24,22 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-surface-700 dark:text-surface-0',
+                'bg-surface-100 dark:bg-surface-800',
+                'border border-surface-100 dark:border-surface-800',
 
                 // Spacing & Size
-                'w-12',
+                'w-10',
                 'm-0',
-                'px-0 py-3',
+                'px-0 py-2',
 
                 // Transitions
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
-                'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'focus:outline-none focus:outline-offset-0 focus:ring-1',
+                'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -48,6 +48,9 @@ export default {
         }),
         label: {
             class: [
+                //Font
+                'leading-[normal]',
+
                 // Flexbox
                 'flex-initial',
 
@@ -66,22 +69,22 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-surface-700 dark:text-surface-0',
+                'bg-surface-100 dark:bg-surface-800',
+                'border border-surface-100 dark:border-surface-800',
 
                 // Spacing & Size
-                'w-12',
+                'w-10',
                 'm-0',
-                'px-0 py-3',
+                'px-0 py-2',
 
                 // Transitions
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
-                'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'focus:outline-none focus:outline-offset-0 focus:ring-1',
+                'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -90,6 +93,9 @@ export default {
         }),
         label: {
             class: [
+                //Font
+                'leading-[normal]',
+
                 // Flexbox
                 'flex-initial',
 
@@ -108,22 +114,22 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-surface-700 dark:text-surface-0',
+                'bg-surface-100 dark:bg-surface-800',
+                'border border-surface-100 dark:border-surface-800',
 
                 // Spacing & Size
-                'w-12',
+                'w-10',
                 'm-0',
-                'px-0 py-3',
+                'px-0 py-2',
 
                 // Transitions
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
-                'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'focus:outline-none focus:outline-offset-0 focus:ring-1',
+                'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -132,6 +138,9 @@ export default {
         }),
         label: {
             class: [
+                //Font
+                'leading-[normal]',
+
                 // Flexbox
                 'flex-initial',
 
@@ -150,22 +159,22 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-surface-700 dark:text-surface-0',
+                'bg-surface-100 dark:bg-surface-800',
+                'border border-surface-100 dark:border-surface-800',
 
                 // Spacing & Size
-                'w-12',
+                'w-10',
                 'm-0',
-                'px-0 py-3',
+                'px-0 py-2',
 
                 // Transitions
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
-                'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'focus:outline-none focus:outline-offset-0 focus:ring-1',
+                'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -174,6 +183,9 @@ export default {
         }),
         label: {
             class: [
+                //Font
+                'leading-[normal]',
+
                 // Flexbox
                 'flex-initial',
 
@@ -183,28 +195,38 @@ export default {
         }
     },
     container: {
-        class: ['flex-auto']
+        class: [
+            'flex-auto',
+
+            // Shape
+            'rounded-md',
+
+            // Color
+            'bg-surface-0 dark:bg-surface-900',
+            'border border-surface-200 dark:border-surface-700',
+            'outline-none'
+        ]
     },
     header: {
         class: [
-            'font-bold',
+            'font-semibold',
 
             // Shape
-            'border-b-0 rounded-t-md',
+            'border-0 rounded-t-md',
 
             // Spacing
-            'p-5',
+            'pt-3 px-4 pb-2',
 
             // Color
             'text-surface-700 dark:text-white/80',
-            'bg-surface-50 dark:bg-surface-800',
-            'border border-surface-200 dark:border-surface-700'
+            'bg-surface-0 dark:bg-surface-900'
         ]
     },
     list: {
         class: [
             // Spacing
-            'list-none m-0 p-0',
+            'list-none m-0',
+            'p-1',
 
             // Size
             'min-h-[12rem] max-h-[24rem]',
@@ -213,12 +235,8 @@ export default {
             'rounded-b-md',
 
             // Color
-            'text-surface-600 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-800',
-            'border border-surface-200 dark:border-surface-700',
-
-            // Spacing
-            'py-3 px-0',
+            'text-surface-700 dark:text-white/80',
+            'bg-surface-0 dark:bg-surface-900',
 
             // Focus & Outline
             'outline-none',
@@ -233,22 +251,25 @@ export default {
             'relative',
 
             // Spacing
-            'py-3 px-5 m-0',
+            'py-2 px-3 m-0 my-[2px] first:mt-0 last:mb-0',
 
             // Shape
             'border-none',
+            'rounded-md',
 
             // Transition
             'transition duration-200',
 
             // Color
             'text-surface-700 dark:text-white/80',
-            { 'bg-primary-500/20 dark:bg-primary-300/20': context.active && !context.focused },
-            { 'bg-primary-500/30 dark:bg-primary-400/30': context.active && context.focused },
-            { 'bg-surface-100 dark:bg-surface-700/70': !context.active && context.focused },
+            { 'bg-surface-0 dark:bg-surface-900': !context.active },
+            { 'bg-primary-500/30 dark:bg-primary-500/10': context.active },
 
             // State
-            'hover:bg-surface-100 dark:hover:bg-surface-700',
+            {
+                'hover:bg-surface-100 dark:hover:bg-surface-700': !context.active,
+                'hover:bg-primary-500/30 dark:hover:bg-primary-500/20': context.active
+            },
 
             // Misc
             'cursor-pointer overflow-hidden'
