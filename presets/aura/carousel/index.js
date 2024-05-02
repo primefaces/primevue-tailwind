@@ -43,6 +43,10 @@ export default {
             // Color
             'text-surface-600',
 
+            // States
+            'hover:bg-surface-50 dark:hover:bg-surface-800',
+            'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
+
             // Transitions
             'transition duration-200 ease-in-out'
         ]
@@ -66,6 +70,10 @@ export default {
 
             // Color
             'text-surface-600',
+
+            // States
+            'hover:bg-surface-50 dark:hover:bg-surface-800',
+            'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
             // Transitions
             'transition duration-200 ease-in-out'
@@ -131,13 +139,13 @@ export default {
     indicatorbutton: ({ context }) => ({
         class: [
             // Sizing & Shape
-            'w-8 h-2 rounded-0',
+            'w-8 h-2 rounded-md',
 
             // Transitions
             'transition duration-200',
 
             // Focus Styles
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Color & Background
             {
