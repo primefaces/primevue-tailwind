@@ -25,7 +25,7 @@ export default {
             'relative',
 
             // Font
-            'font-bold',
+            'font-semibold leading-none',
 
             // Flexbox and Alignment
             'flex items-center',
