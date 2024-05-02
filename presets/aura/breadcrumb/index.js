@@ -36,7 +36,7 @@ export default {
 
             // States
             'focus-visible:outline-none focus-visible:outline-offset-0',
-            'focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
+            'focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
 
             // Transitions
             'transition-shadow duration-200',

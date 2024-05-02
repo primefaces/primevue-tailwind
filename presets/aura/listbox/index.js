@@ -51,9 +51,9 @@ export default {
             },
 
             //States
-            { 'hover:bg-surface-100 dark:hover:bg-surface-0/10': !context.focused && !context.selected },
+            { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
             { 'hover:bg-primary-200 dark:hover:bg-primary-400/40': context.selected },
-            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-0/10': context.focused && !context.selected },
+            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
 
             // Transition
             'transition-shadow duration-200',

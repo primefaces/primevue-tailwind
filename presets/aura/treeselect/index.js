@@ -135,7 +135,7 @@ export default {
                 context.selected ? 'bg-primary-50 dark:bg-primary-500/20 text-primary-600 dark:text-surface-0' : 'bg-transparent text-surface-600 dark:text-white/70',
 
                 // States
-                { 'hover:bg-surface-50 dark:hover:bg-surface-700/40': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
+                { 'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
 
                 // Transition
                 'transition-shadow duration-200',

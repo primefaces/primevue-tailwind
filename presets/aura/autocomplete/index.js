@@ -151,9 +151,9 @@ export default {
                 'border border-primary-500 dark:border-primary-400',
 
                 // States
-                'focus:outline-none focus:outline-offset-0 focus:ring ',
+                'focus:outline-none focus:outline-offset-0 focus:ring-1 ',
                 'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+                'focus:ring-primary-500 dark:focus:ring-primary-400'
             ]
         }
     },
@@ -204,9 +204,9 @@ export default {
             },
 
             //States
-            { 'hover:bg-surface-100 dark:hover:bg-surface-0/10': !context.focused && !context.selected },
+            { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
             { 'hover:bg-primary-200 dark:hover:bg-primary-400/40': context.selected },
-            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-0/10': context.focused && !context.selected },
+            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
 
             // Transition
             'transition-shadow duration-200',

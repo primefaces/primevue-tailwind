@@ -77,7 +77,7 @@ export default {
             'transition duration-200 ease-in-out',
 
             // States
-            'hover:bg-surface-0/30 dark:hover:bg-surface-0/10',
+            'hover:bg-surface-0/30 dark:hover:bg-[rgba(255,255,255,0.03)]',
             'focus:outline-none focus:outline-offset-0 focus:ring-1',
             {
                 'focus:ring-blue-500 dark:focus:ring-blue-400': props.severity == 'info',

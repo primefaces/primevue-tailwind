@@ -37,7 +37,7 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'hover:bg-surface-200 dark:hover:bg-[rgba(255,255,255,0.03)] hover:border-surface-200 dark:hover:border-surface-700',
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
                 'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
@@ -82,7 +82,7 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'hover:bg-surface-200 dark:hover:bg-[rgba(255,255,255,0.03)] hover:border-surface-200 dark:hover:border-surface-700',
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
                 'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
@@ -127,7 +127,7 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'hover:bg-surface-200 dark:hover:bg-[rgba(255,255,255,0.03)] hover:border-surface-200 dark:hover:border-surface-700',
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
                 'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
@@ -172,7 +172,7 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-surface-200 dark:hover:bg-surface-700 hover:border-surface-200 dark:hover:border-surface-700',
+                'hover:bg-surface-200 dark:hover:bg-[rgba(255,255,255,0.03)] hover:border-surface-200 dark:hover:border-surface-700',
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
                 'focus:ring-primary-500 dark:focus:ring-primary-400',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
@@ -267,7 +267,7 @@ export default {
 
             // State
             {
-                'hover:bg-surface-100 dark:hover:bg-surface-700': !context.active,
+                'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.active,
                 'hover:bg-primary-500/30 dark:hover:bg-primary-500/20': context.active
             },
 

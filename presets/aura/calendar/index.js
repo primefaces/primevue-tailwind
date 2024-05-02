@@ -379,7 +379,7 @@ export default {
             // States
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
             {
-                'hover:bg-surface-100 dark:hover:bg-surface-0/10': !context.selected && !context.disabled
+                'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.selected && !context.disabled
             },
 
             // Misc
@@ -413,7 +413,7 @@ export default {
             // States
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
             {
-                'hover:bg-surface-100 dark:hover:bg-surface-0/10': !context.selected && !context.disabled
+                'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.selected && !context.disabled
             },
 
             // Misc

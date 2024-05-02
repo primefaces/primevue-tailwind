@@ -112,7 +112,7 @@ export default {
                 { 'rounded-bl-none rounded-br-none': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 //States
-                'hover:bg-surface-100 dark:hover:bg-surface-600',
+                'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'
@@ -160,7 +160,7 @@ export default {
                 { 'rounded-tr-none rounded-tl-none ': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 //States
-                'hover:bg-surface-100 dark:hover:bg-surface-700',
+                'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'

@@ -68,7 +68,7 @@ export default {
 
             // States
             'hover:text-white hover:bg-surface-0/10',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transition
             'transition duration-200 ease-in-out'
@@ -98,7 +98,7 @@ export default {
 
             // States
             'hover:text-white hover:bg-surface-0/10',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transition
             'transition duration-200 ease-in-out'
@@ -128,7 +128,7 @@ export default {
 
             // States
             'hover:text-white hover:bg-surface-0/10',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transition
             'transition duration-200 ease-in-out'
@@ -158,7 +158,7 @@ export default {
 
             // States
             'hover:text-white hover:bg-surface-0/10',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transition
             'transition duration-200 ease-in-out'
@@ -188,7 +188,7 @@ export default {
 
             // States
             'hover:text-white hover:bg-surface-0/10',
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400',
 
             // Transition
             'transition duration-200 ease-in-out'
