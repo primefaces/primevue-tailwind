@@ -33,7 +33,6 @@ export default {
     label: ({ props }) => ({
         class: [
             //Font
-            'font-sans',
             'leading-none',
 
             // Flex & Alignment

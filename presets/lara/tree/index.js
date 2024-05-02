@@ -216,7 +216,7 @@ export default {
         class: [
             'relative',
             // Font
-            'font-sans leading-none',
+            'leading-none',
 
             // Spacing
             'm-0',

@@ -10,7 +10,7 @@ export default {
     container: ({ state, props }) => ({
         class: [
             // Font
-            'font-sans text-base leading-none',
+            'text-base leading-none',
 
             // Flex
             'flex items-center flex-wrap gap-2',
@@ -56,7 +56,7 @@ export default {
     input: {
         class: [
             // Font
-            'font-sans text-base leading-[1.2]',
+            'text-base leading-[1.2]',
 
             // Size
             'w-full',
@@ -91,7 +91,7 @@ export default {
         ]
     },
     label: {
-        class: 'leading-5'
+        class: 'leading-[normal]'
     },
     removeTokenIcon: {
         class: [

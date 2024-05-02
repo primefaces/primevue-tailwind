@@ -2,8 +2,8 @@ export default {
     root: ({ context }) => ({
         class: [
             // Font
-            'font-bold font-sans',
-            'text-xs leading-5',
+            'font-bold',
+            'text-xs leading-[normal]',
 
             // Alignment
             'flex items-center justify-center',

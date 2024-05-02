@@ -16,7 +16,7 @@ export default {
             'flex flex-auto',
 
             // Font
-            'font-sans leading-none',
+            'leading-none',
 
             // Colors
             'text-surface-600 dark:text-surface-200',
@@ -167,7 +167,7 @@ export default {
     monthTitle: {
         class: [
             // Font
-            'text-base leading-5',
+            'text-base leading-[normal]',
             'font-semibold',
 
             // Colors
@@ -190,7 +190,7 @@ export default {
     yearTitle: {
         class: [
             // Font
-            'text-base leading-5',
+            'text-base leading-[normal]',
             'font-semibold',
 
             // Colors
@@ -259,7 +259,7 @@ export default {
         ]
     },
     weekheader: {
-        class: ['leading-5', 'text-surface-600 dark:text-white/70', 'opacity-60 cursor-default']
+        class: ['leading-[normal]', 'text-surface-600 dark:text-white/70', 'opacity-60 cursor-default']
     },
     weeknumber: {
         class: ['text-surface-600 dark:text-white/70', 'opacity-60 cursor-default']

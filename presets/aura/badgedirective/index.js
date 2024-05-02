@@ -2,7 +2,7 @@ export default {
     root: ({ context }) => ({
         class: [
             // Font
-            'font-bold font-sans',
+            'font-bold',
             'text-xs leading-5',
 
             // Alignment

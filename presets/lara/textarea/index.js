@@ -2,7 +2,7 @@ export default {
     root: ({ context, props }) => ({
         class: [
             // Font
-            'font-sans leading-none',
+            'leading-none',
 
             // Spacing
             'm-0',

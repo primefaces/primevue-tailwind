@@ -35,7 +35,7 @@ export default {
     },
     label: {
         class: [
-            'block leading-5',
+            'block leading-[normal]',
 
             // Space
             'p-3',
@@ -303,7 +303,7 @@ export default {
             class: [
                 'relative',
                 // Font
-                'font-sans leading-none',
+                'leading-none',
 
                 // Spacing
                 'm-0',

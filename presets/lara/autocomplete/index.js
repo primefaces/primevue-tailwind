@@ -21,7 +21,7 @@ export default {
     container: ({ props, state }) => ({
         class: [
             // Font
-            'font-sans text-base leading-none',
+            'text-base leading-none',
 
             // Flex
             'flex items-center flex-wrap',
@@ -66,7 +66,7 @@ export default {
     input: ({ props }) => ({
         class: [
             // Font
-            'font-sans text-base leading-none',
+            'text-base leading-none',
 
             // Shape
             'appearance-none rounded-md',
@@ -119,7 +119,7 @@ export default {
         ]
     },
     label: {
-        class: 'leading-5'
+        class: 'leading-[normal]'
     },
     removeTokenIcon: {
         class: [

@@ -102,7 +102,6 @@ export default {
     filterinput: {
         class: [
             // Font
-            'font-sans',
             'leading-none',
 
             // Sizing

@@ -11,7 +11,7 @@ export default {
     input: {
         class: [
             // Font
-            'font-sans text-base ',
+            'text-base ',
 
             // Spacing
             'm-0',

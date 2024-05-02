@@ -353,7 +353,6 @@ export default {
             input: ({ props }) => ({
                 class: [
                     //Font
-                    'font-sans',
                     'leading-none',
 
                     // Display

@@ -205,8 +205,7 @@ export default {
         input: {
             class: [
                 //Font
-                'font-sans',
-                'leading-5',
+                'leading-[normal]',
 
                 // Display
                 'block',
@@ -332,7 +331,6 @@ export default {
                     'relative',
 
                     //Font
-                    'font-sans',
                     'leading-none',
 
                     // Display
@@ -405,8 +403,7 @@ export default {
         input: {
             class: [
                 //Font
-                'font-sans',
-                'leading-5',
+                'leading-[normal]',
 
                 // Display
                 'block',

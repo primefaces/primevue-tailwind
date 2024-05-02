@@ -89,7 +89,7 @@ export default {
     label: ({ context }) => ({
         class: [
             // Font
-            'leading-5',
+            'leading-[normal]',
             { 'font-bold': context.active },
 
             // Display
