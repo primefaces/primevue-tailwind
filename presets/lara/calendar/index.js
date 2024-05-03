@@ -10,7 +10,7 @@ export default {
             { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
         ]
     }),
-    input: ({ props }) => ({
+    input: ({ props, parent }) => ({
         class: [
             // Display
             'flex flex-auto',
@@ -43,7 +43,10 @@ export default {
 
             // States
             { 'hover:border-primary-500 dark:hover:border-primary-400': !props.invalid },
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50'
+            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50',
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null }
         ]
     }),
     inputicon: {

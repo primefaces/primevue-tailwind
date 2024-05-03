@@ -63,7 +63,7 @@ export default {
     inputtoken: {
         class: ['py-1 px-0 ml-2', 'inline-flex flex-auto']
     },
-    input: ({ props }) => ({
+    input: ({ props, parent }) => ({
         class: [
             // Font
             'text-base leading-none',
@@ -94,6 +94,9 @@ export default {
 
             // States
             { 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10': !props.multiple },
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== '' },
 
             // Transition
             'transition-colors duration-200'

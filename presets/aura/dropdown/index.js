@@ -37,7 +37,7 @@ export default {
             { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled }
         ]
     }),
-    input: ({ props }) => ({
+    input: ({ props, parent }) => ({
         class: [
             //Font
             'leading-[normal]',
@@ -66,6 +66,9 @@ export default {
 
             // States
             'focus:outline-none focus:shadow-none',
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null },
 
             // Misc
             'relative',

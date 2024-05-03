@@ -7,7 +7,7 @@ export default {
             'relative'
         ]
     },
-    input: ({ props }) => ({
+    input: ({ props, parent, context }) => ({
         class: [
             // Display
             'flex flex-auto',
@@ -45,7 +45,10 @@ export default {
                 'hover:border-surface-400 dark:hover:border-surface-600': !props.disabled && !props.invalid,
                 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10': !props.disabled,
                 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
-            }
+            },
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null }
         ]
     }),
     inputicon: {

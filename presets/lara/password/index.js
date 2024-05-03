@@ -103,6 +103,9 @@ export default {
                     'opacity-60 select-none pointer-events-none cursor-default': context.disabled
                 },
 
+                // Filled State *for FloatLabel
+                { filled: parent.instance?.$parentInstance?.$name == 'FloatLabel' && parent.props.modelValue !== null && parent.props.modelValue?.length !== 0 },
+
                 // Misc
                 'appearance-none',
                 'transition-colors duration-200'

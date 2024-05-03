@@ -7,7 +7,7 @@ export default {
             }
         ]
     }),
-    container: ({ state, props }) => ({
+    container: ({ state, props, parent }) => ({
         class: [
             // Font
             'text-base leading-none',
@@ -40,6 +40,9 @@ export default {
             'focus:outline-none focus:outline-offset-0',
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.hovered },
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null && props.modelValue?.length !== 0 },
 
             // Transition
             'transition-colors duration-200',

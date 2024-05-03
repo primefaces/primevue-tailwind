@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, state }) => ({
+    root: ({ props, state, parent }) => ({
         class: [
             // Font
             'leading-none',

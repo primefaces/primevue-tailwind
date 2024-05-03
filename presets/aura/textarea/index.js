@@ -1,5 +1,5 @@
 export default {
-    root: ({ context, props }) => ({
+    root: ({ context, props, parent }) => ({
         class: [
             // Font
             'leading-none',
@@ -29,6 +29,9 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10': !context.disabled,
                 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': context.disabled
             },
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null && props.modelValue?.length !== 0 },
 
             // Misc
             'appearance-none',

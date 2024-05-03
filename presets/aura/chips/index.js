@@ -8,7 +8,7 @@ export default {
             }
         ]
     }),
-    container: ({ state, props }) => ({
+    container: ({ state, props, parent }) => ({
         class: [
             // Font
             'leading-none',
@@ -42,6 +42,9 @@ export default {
             // States
             { 'hover:border-surface-400 dark:hover:border-surface-700': !props.invalid },
             { 'outline-none outline-offset-0 z-10 ring-1 ring-primary-500 dark:ring-primary-400': state.focused },
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null && props.modelValue?.length !== 0 },
 
             // Transition
             'transition duration-200 ease-in-out',
