@@ -126,9 +126,11 @@ export default {
             'opacity-50',
 
             // States
+            '[&[data-p-active="true"]]:opacity-100',
             'hover:opacity-100',
-            'hover:transition-opacity',
-            'hover:duration-300'
+
+            // Transitions
+            'transition-opacity duration-300'
         ]
     }),
     nextthumbnailbutton: {
