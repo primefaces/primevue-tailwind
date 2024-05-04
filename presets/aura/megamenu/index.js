@@ -122,7 +122,7 @@ export default {
 
             // Shape
             'shadow-none sm:shadow-md',
-            'border border-surface-200 dark:border-surface-700',
+
             'rounded-md',
 
             // Color
