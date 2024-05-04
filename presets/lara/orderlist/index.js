@@ -24,9 +24,9 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-primary-inverse-color',
+                'bg-primary-color',
+                'border border-primary-color',
 
                 // Spacing & Size
                 'w-12',
@@ -37,9 +37,9 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-primary-hover-color hover:border-primary-hover-color',
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:ring-primary-color/50',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -66,9 +66,9 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-primary-inverse-color',
+                'bg-primary-color',
+                'border border-primary-color',
 
                 // Spacing & Size
                 'w-12',
@@ -79,9 +79,9 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-primary-hover-color hover:border-primary-hover-color',
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:ring-primary-color/50',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -108,9 +108,9 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-primary-inverse-color',
+                'bg-primary-color',
+                'border border-primary-color',
 
                 // Spacing & Size
                 'w-12',
@@ -121,9 +121,9 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-primary-hover-color hover:border-primary-hover-color',
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:ring-primary-color/50',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -150,9 +150,9 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-primary-inverse-color',
+                'bg-primary-color',
+                'border border-primary-color',
 
                 // Spacing & Size
                 'w-12',
@@ -163,9 +163,9 @@ export default {
                 'transition duration-200 ease-in-out',
 
                 // State
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-primary-hover-color hover:border-primary-hover-color',
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+                'focus:ring-primary-color/50',
                 { 'cursor-default pointer-events-none opacity-60': context.disabled },
 
                 // Interactivity
@@ -242,13 +242,14 @@ export default {
             'transition duration-200',
 
             // Color
-            'text-surface-700 dark:text-white/80',
-            { 'bg-primary-500/20 dark:bg-primary-300/20': context.active && !context.focused },
-            { 'bg-primary-500/30 dark:bg-primary-400/30': context.active && context.focused },
-            { 'bg-surface-100 dark:bg-surface-700/70': !context.active && context.focused },
+            { 'text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900': !context.active },
+            { 'text-primary-highlight-inverse-color bg-primary-highlight-color': context.active },
 
             // State
-            'hover:bg-surface-100 dark:hover:bg-surface-700',
+            {
+                'hover:bg-surface-100 dark:hover:bg-surface-700': !context.active,
+                'hover:bg-primary-highlight-hover-color': context.active
+            },
 
             // Misc
             'cursor-pointer overflow-hidden'

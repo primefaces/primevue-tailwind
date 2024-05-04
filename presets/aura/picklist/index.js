@@ -262,14 +262,13 @@ export default {
             'transition duration-200',
 
             // Color
-            'text-surface-700 dark:text-white/80',
-            { 'bg-surface-0 dark:bg-surface-900': !context.active },
-            { 'bg-primary-500/30 dark:bg-primary-500/10': context.active },
+            { 'text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900': !context.active },
+            { 'text-primary-highlight-inverse-color bg-primary-highlight-color': context.active },
 
             // State
             {
                 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.active,
-                'hover:bg-primary-500/30 dark:hover:bg-primary-500/20': context.active
+                'hover:bg-primary-highlight-hover-color': context.active
             },
 
             // Misc

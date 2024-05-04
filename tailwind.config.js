@@ -10,6 +10,10 @@ module.exports = {
                 'primary-hover-color': 'rgb(var(--primary-hover-color))',
                 'primary-active-color': 'rgb(var(--primary-active-color))',
 
+                'primary-highlight-color': 'rgb(var(--primary-color)/var(--primary-highlight-opacity))',
+                'primary-highlight-inverse-color': 'rgb(var(--primary-highlight-inverse-color))',
+                'primary-highlight-hover-color': 'rgb(var(--primary-color)/var(--primary-highlight-hover-opacity))',
+
                 'primary-50': 'rgb(var(--primary-50))',
                 'primary-100': 'rgb(var(--primary-100))',
                 'primary-200': 'rgb(var(--primary-200))',

@@ -32,6 +32,10 @@
     --primary-inverse-color: var(--surface-0);
     --primary-hover-color: var(--primary-600);
     --primary-active-color: var(--primary-600);
+
+    --primary-highlight-opacity: 0.1;
+    --primary-highlight-inverse-color: var(--surface-700);
+    --primary-highlight-hover-opacity: 0.2;
 }
 
 .dark{
@@ -39,6 +43,10 @@
     --primary-inverse-color: var(--surface-900);
     --primary-hover-color: var(--primary-300);
     --primary-active-color: var(--primary-300);
+
+    --primary-highlight-opacity: 0.2;
+    --primary-highlight-inverse-color: var(--surface-0);
+    --primary-highlight-hover-opacity: 0.3;
 }
 
 .customized-primary {
@@ -47,23 +55,24 @@
         --primary-inverse-color: var(--surface-0);
         --primary-hover-color: var(--primary-800);
         --primary-active-color: var(--primary-900);
-    }
-}
 
-.dark {
-    &:not(.customized-primary){
-        --primary-color: var(--primary-400);
-        --primary-inverse-color: var(--surface-900);
-        --primary-hover-color: var(--primary-300);
-        --primary-active-color: var(--primary-300);
+        --primary-highlight-opacity: 1;
+        --primary-highlight-inverse-color: var(--surface-0);
+        --primary-highlight-hover-opacity: 0.8;
     }
-    &.customized-primary{
+    &.dark{
         --primary-color: var(--primary-50);
         --primary-inverse-color: var(--surface-950);
         --primary-hover-color: var(--primary-100);
         --primary-active-color: var(--primary-100);
+
+        --primary-highlight-opacity: 0.1;
+        --primary-highlight-inverse-color: var(--surface-0);
+        --primary-highlight-hover-opacity: 0.2;
+
     }
 }
+
 
 html {
     font-size: 14px;
