@@ -55,14 +55,14 @@ export default {
 
                 // Primary Button
                 {
-                    'text-white dark:text-surface-900': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'bg-primary-500 dark:bg-primary-400': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-primary-500 dark:border-primary-400': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'text-primary-inverse-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
+                    'bg-primary-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
+                    'border border-primary-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
                 // Primary Text Button
-                { 'text-primary-500 dark:text-primary-400': parent.props.text && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color': props.text && props.severity === null && !props.plain },
                 // Primary Outlined Button
-                { 'text-primary-500 border border-primary-500 hover:bg-primary-300/20': parent.props.outlined && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color border border-primary-color': props.outlined && props.severity === null && !props.plain },
 
                 // Secondary Button
                 {
@@ -134,7 +134,7 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring',
 
                 // Link
-                { 'focus:ring-primary-400/50 dark:focus:ring-primary-300/50': parent.props.link },
+                { 'focus:ring-primary-color/50': parent.props.link },
 
                 // Plain
                 { 'hover:bg-gray-600 hover:border-gray-600': parent.props.plain && !parent.props.outlined && !parent.props.text },
@@ -142,8 +142,8 @@ export default {
                 { 'hover:bg-surface-300/20': parent.props.plain && (parent.props.text || parent.props.outlined) },
 
                 // Primary
-                { 'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
-                { 'focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
+                { 'hover:bg-primary-hover-color hover:border-primary-hover-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
+                { 'focus:ring-primary-color/50': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
                 // Text & Outlined Button
                 { 'hover:bg-primary-300/20': (parent.props.text || parent.props.outlined) && parent.props.severity === null && !parent.props.plain },
 
@@ -240,14 +240,14 @@ export default {
 
                 // Primary Button
                 {
-                    'text-white dark:text-surface-900': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'bg-primary-500 dark:bg-primary-400': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
-                    'border border-primary-500 dark:border-primary-400': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
+                    'text-primary-inverse-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
+                    'bg-primary-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
+                    'border border-primary-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
                 // Primary Text Button
-                { 'text-primary-500 dark:text-primary-400': parent.props.text && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color': props.text && props.severity === null && !props.plain },
                 // Primary Outlined Button
-                { 'text-primary-500 border border-primary-500 hover:bg-primary-300/20': parent.props.outlined && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color border border-primary-color': props.outlined && props.severity === null && !props.plain },
 
                 // Secondary Button
                 {
@@ -319,7 +319,7 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring',
 
                 // Link
-                { 'focus:ring-primary-400/50 dark:focus:ring-primary-300/50': parent.props.link },
+                { 'focus:ring-primary-color/50': parent.props.link },
 
                 // Plain
                 { 'hover:bg-gray-600 hover:border-gray-600': parent.props.plain && !parent.props.outlined && !parent.props.text },
@@ -327,8 +327,8 @@ export default {
                 { 'hover:bg-surface-300/20': parent.props.plain && (parent.props.text || parent.props.outlined) },
 
                 // Primary
-                { 'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
-                { 'focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
+                { 'hover:bg-primary-hover-color hover:border-primary-hover-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
+                { 'focus:ring-primary-color/50': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
                 // Text & Outlined Button
                 { 'hover:bg-primary-300/20': (parent.props.text || parent.props.outlined) && parent.props.severity === null && !parent.props.plain },
 

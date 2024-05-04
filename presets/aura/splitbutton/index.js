@@ -60,9 +60,9 @@ export default {
                     'border border-primary-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
                 // Primary Text Button
-                { 'text-primary-500 dark:text-primary-400': parent.props.text && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color': parent.props.text && parent.props.severity === null && !parent.props.plain },
                 // Primary Outlined Button
-                { 'text-primary-500 border border-primary-500 hover:bg-primary-300/10': parent.props.outlined && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color border border-primary-color': parent.props.outlined && parent.props.severity === null && !parent.props.plain },
 
                 // Secondary Button
                 {
@@ -145,7 +145,7 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
 
                 // Link
-                { 'focus:ring-primary-500 dark:focus:ring-primary-400': parent.props.link },
+                { 'focus:ring-primary-color': parent.props.link },
 
                 // Plain
                 { 'hover:bg-gray-600 hover:border-gray-600': parent.props.plain && !parent.props.outlined && !parent.props.text },
@@ -154,7 +154,7 @@ export default {
 
                 // Primary
                 { 'hover:bg-primary-hover-color hover:border-primary-hover-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
-                { 'focus:ring-primary-500 dark:focus:ring-primary-400': parent.props.severity === null },
+                { 'focus:ring-primary-color': parent.props.severity === null },
                 // Text & Outlined Button
                 { 'hover:bg-primary-300/10': (parent.props.text || parent.props.outlined) && parent.props.severity === null && !parent.props.plain },
 
@@ -263,9 +263,9 @@ export default {
                     'border border-primary-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
                 // Primary Text Button
-                { 'text-primary-500 dark:text-primary-400': parent.props.text && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color': parent.props.text && parent.props.severity === null && !parent.props.plain },
                 // Primary Outlined Button
-                { 'text-primary-500 border border-primary-500 hover:bg-primary-300/10': parent.props.outlined && parent.props.severity === null && !parent.props.plain },
+                { 'text-primary-color border border-primary-color': parent.props.outlined && parent.props.severity === null && !parent.props.plain },
 
                 // Secondary Button
                 {
@@ -348,7 +348,7 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
 
                 // Link
-                { 'focus:ring-primary-500 dark:focus:ring-primary-400': parent.props.link },
+                { 'focus:ring-primary-color': parent.props.link },
 
                 // Plain
                 { 'hover:bg-gray-600 hover:border-gray-600': parent.props.plain && !parent.props.outlined && !parent.props.text },
@@ -357,7 +357,7 @@ export default {
 
                 // Primary
                 { 'hover:bg-primary-hover-color hover:border-primary-hover-color': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
-                { 'focus:ring-primary-500 dark:focus:ring-primary-400': parent.props.severity === null },
+                { 'focus:ring-primary-color': parent.props.severity === null },
                 // Text & Outlined Button
                 { 'hover:bg-primary-300/10': (parent.props.text || parent.props.outlined) && parent.props.severity === null && !parent.props.plain },
 

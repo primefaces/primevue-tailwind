@@ -18,7 +18,6 @@ export default {
                 // Shapes
                 'rounded-full',
                 'shadow-md',
-
                 // Link Button
                 { 'text-primary-600 bg-transparent border-transparent': props.link },
 
@@ -44,9 +43,9 @@ export default {
                     'border border-primary-color': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
                 },
                 // Primary Text Button
-                { 'text-primary-500 dark:text-primary-400': props.text && props.severity === null && !props.plain },
+                { 'text-primary-color': props.text && props.severity === null && !props.plain },
                 // Primary Outlined Button
-                { 'text-primary-500 border border-primary-500 hover:bg-primary-300/10': props.outlined && props.severity === null && !props.plain },
+                { 'text-primary-color border border-primary-color': props.outlined && props.severity === null && !props.plain },
 
                 // Secondary Button
                 {
@@ -129,7 +128,7 @@ export default {
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
 
                 // Link
-                { 'focus:ring-primary-500 dark:focus:ring-primary-400': props.link },
+                { 'focus:ring-primary-color': props.link },
 
                 // Plain
                 { 'hover:bg-gray-600 hover:border-gray-600': props.plain && !props.outlined && !props.text },
@@ -138,7 +137,7 @@ export default {
 
                 // Primary
                 { 'hover:bg-primary-hover-color hover:border-primary-hover-color': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain },
-                { 'focus:ring-primary-500 dark:focus:ring-primary-400': props.severity === null },
+                { 'focus:ring-primary-color': props.severity === null },
                 // Text & Outlined Button
                 { 'hover:bg-primary-300/10': (props.text || props.outlined) && props.severity === null && !props.plain },
 
@@ -189,7 +188,6 @@ export default {
 
                 // Transitions
                 'transition duration-200 ease-in-out',
-                parent.state.d_visible ? 'rotate-45' : 'rotate-0',
 
                 // Misc
                 'cursor-pointer overflow-hidden select-none'
@@ -198,7 +196,7 @@ export default {
         label: ({ props }) => ({
             class: [
                 'duration-200',
-                'font-bold',
+                'font-medium',
                 {
                     'hover:underline': props.link
                 },
