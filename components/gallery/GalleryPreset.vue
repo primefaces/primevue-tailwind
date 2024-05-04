@@ -16,7 +16,12 @@
             {{ description }}
         </div>
         <div class="flex items-center gap-2 mt-auto">
-            <a target="_blank" rel="noopener noreferrer" :href="`https://github.com/${preset.owner}/${preset.repository}`" class="flex-auto border text-center rounded p-2 border-surface-200 hover:bg-surface-100 font-semibold duration-150">
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                :href="`https://github.com/${preset.owner}/${preset.repository}`"
+                class="flex-auto border text-center rounded p-2 border-surface-200 hover:bg-surface-100 dark:hover:bg-surface-100/10 font-semibold duration-150"
+            >
                 View Source
             </a>
             <a
