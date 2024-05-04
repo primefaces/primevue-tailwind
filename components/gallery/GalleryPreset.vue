@@ -1,7 +1,8 @@
 <template>
     <div class="card flex flex-col gap-4 h-full">
         <a class="flex items-center justify-center" target="_blank" rel="noopener noreferrer" :href="`https://stackblitz.com/github.com/${preset.owner}/${preset.repository}`">
-            <img :src="preset.thumbnail" class="w-full overflow-hidden mx-auto rounded" />
+            <img v-if="preset.thumbnail" :src="preset.thumbnail" class="w-full overflow-hidden mx-auto rounded" />
+            <img v-if="!preset.thumbnail" src="assets/wind.jpg" class="w-full overflow-hidden mx-auto rounded" />
         </a>
         <div class="flex items-center gap-2">
             <img :src="avatar" width="32" class="rounded-full" />
