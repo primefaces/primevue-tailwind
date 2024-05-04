@@ -35,14 +35,14 @@ export default {
     },
     label: ({ props }) => ({
         class: [
-            'leading-none',
+            'leading-[normal]',
             'block ',
 
             // Spacing
             {
                 'p-3': props.display !== 'chip',
                 'py-3 px-3': props.display === 'chip' && !props?.modelValue?.length,
-                'py-1.5 px-3': props.display === 'chip' && props?.modelValue?.length > 0
+                'py-[0.375rem] px-3': props.display === 'chip' && props?.modelValue?.length > 0
             },
 
             // Color
@@ -474,7 +474,7 @@ export default {
     filterinput: {
         class: [
             // Font
-            'leading-none',
+            'leading-[normal]',
 
             // Sizing
             'pr-7 py-3 px-3',

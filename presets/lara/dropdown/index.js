@@ -39,7 +39,7 @@ export default {
     input: ({ props, parent }) => ({
         class: [
             //Font
-            'leading-none',
+            'leading-[normal]',
 
             // Display
             'block',
@@ -219,7 +219,7 @@ export default {
     filterinput: {
         class: [
             // Font
-            'leading-none',
+            'leading-[normal]',
 
             // Sizing
             'pr-7 py-3 px-3',

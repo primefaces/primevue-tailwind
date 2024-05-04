@@ -22,7 +22,7 @@ export default {
                 'flex flex-auto',
 
                 // Font
-                'leading-none',
+                'leading-[normal]',
 
                 //Text
                 { 'text-center': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },

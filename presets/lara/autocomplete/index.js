@@ -21,7 +21,7 @@ export default {
     container: ({ props, state }) => ({
         class: [
             // Font
-            'text-base leading-none',
+            'text-base leading-[normal]',
 
             // Flex
             'flex items-center flex-wrap',
@@ -66,7 +66,7 @@ export default {
     input: ({ props, parent }) => ({
         class: [
             // Font
-            'text-base leading-none',
+            'text-base leading-[normal]',
 
             // Shape
             'appearance-none rounded-md',
@@ -154,7 +154,7 @@ export default {
                 'rounded-r-md',
 
                 // Size
-                'px-4 py-3 leading-none',
+                'px-4 py-3 leading-[normal]',
 
                 // Colors
                 'text-primary-inverse',
@@ -194,7 +194,7 @@ export default {
             'relative',
 
             // Font
-            'font-normal text-base leading-none',
+            'font-normal text-base leading-[normal]',
 
             // Spacing
             'm-0 px-5 py-3',
@@ -242,7 +242,7 @@ export default {
     emptymessage: {
         class: [
             // Font
-            'leading-none',
+            'leading-[normal]',
 
             // Spacing
             'py-3 px-5',

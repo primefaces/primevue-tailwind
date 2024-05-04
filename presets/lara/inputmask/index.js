@@ -2,7 +2,7 @@ export default {
     root: ({ context, props, parent }) => ({
         class: [
             // Font
-            'leading-none',
+            'leading-[normal]',
 
             // Spacing
             'm-0 p-3',

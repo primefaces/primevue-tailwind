@@ -350,7 +350,7 @@ export default {
             input: ({ props }) => ({
                 class: [
                     //Font
-                    'leading-none',
+                    'leading-[normal]',
 
                     // Display
                     'block',

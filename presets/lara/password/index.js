@@ -66,7 +66,7 @@ export default {
         root: ({ props, context, parent }) => ({
             class: [
                 // Font
-                'leading-none',
+                'leading-[normal]',
 
                 // Flex
                 { 'flex-1 w-[1%]': parent.instance.$name == 'InputGroup' },
