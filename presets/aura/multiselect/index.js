@@ -199,8 +199,8 @@ export default {
                 // Colors
                 {
                     'border-surface-300 dark:border-surface-700': !context.checked && !props.invalid,
-                    'bg-surface-0  dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
-                    'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
+                    'bg-surface-0 dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
+                    'border-primary bg-primary': context.checked
                 },
 
                 // Invalid State
@@ -211,7 +211,7 @@ export default {
                 // States
                 {
                     'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                    'peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.checked,
+                    'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
                     'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                     'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
                 },
@@ -304,7 +304,7 @@ export default {
                 {
                     'border-surface-300 dark:border-surface-700': !context.checked && !props.invalid,
                     'bg-surface-0  dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
-                    'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400': context.checked
+                    'border-primary bg-primary': context.checked
                 },
 
                 // Invalid State
@@ -315,7 +315,7 @@ export default {
                 // States
                 {
                     'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                    'peer-hover:bg-primary-600 dark:peer-hover:bg-primary-300 peer-hover:border-primary-700 dark:peer-hover:border-primary-300': !props.disabled && context.checked,
+                    'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
                     'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                     'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
                 },
@@ -436,14 +436,13 @@ export default {
                 'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
 
-                'text-primary-700 dark:text-white/80': context.selected,
-                'bg-primary-100 dark:bg-primary-400/30': context.selected,
-                'text-primary-700 dark:text-white/80': !context.focused && context.selected
+                'text-primary-highlight-inverse': context.selected,
+                'bg-primary-highlight': context.selected
             },
 
             //States
             { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
-            { 'hover:bg-primary-200 dark:hover:bg-primary-400/40': context.selected },
+            { 'hover:bg-primary-highlight-hover': context.selected },
             { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
 
             // Transition

@@ -1,6 +1,6 @@
 :root {
     color-scheme: light;
-    --primary-color-default:rgb(var(--primary-600));
+    --primary-color-default:rgb(var(--primary));
     --primary-color-inverse-default:rgb(var(--surface-0));
     --body-bg:rgb(var(--surface-50));
     --body-text-color:rgb(var(--surface-900));
@@ -49,6 +49,6 @@
     --docsearch-hit-shadow: none;
     --docsearch-spacing: 1rem;
     --docsearch-hit-color: rgb(var(--surface-900));
-    --docsearch-highlight-color: var(--primary-color-default);
+    --docsearch-highlight-color: var(--primary);
     --docsearch-hit-active-color: var(--primary-color-inverse-default);
 }

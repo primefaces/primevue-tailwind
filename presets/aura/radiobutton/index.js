@@ -35,7 +35,7 @@ export default {
             {
                 'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
                 'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined && !props.invalid,
-                'border-primary-500 dark:border-primary-400': props.value == props.modelValue && props.value !== undefined && !props.disabled
+                'border-primary': props.value == props.modelValue && props.value !== undefined && !props.disabled
             },
             // Invalid State
             { 'border-red-500 dark:border-red-400': props.invalid },
@@ -43,7 +43,7 @@ export default {
             // States
             {
                 'peer-hover:border-surface-400 dark:peer-hover:border-surface-400': !props.disabled && !props.invalid && props.value !== props.modelValue,
-                'peer-hover:border-primary-600 dark:peer-hover:border-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
+                'peer-hover:border-primary-hover-color': !props.disabled && props.value == props.modelValue && props.value !== undefined,
                 'peer-hover:[&>*:first-child]:bg-primary-600 dark:peer-hover:[&>*:first-child]:bg-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
                 'peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                 'bg-surface-200 [&>*:first-child]:bg-surface-600 dark:bg-surface-700 dark:[&>*:first-child]:bg-surface-400 border-surface-300 dark:border-surface-700 select-none pointer-events-none cursor-default': props.disabled
@@ -91,7 +91,7 @@ export default {
             // Conditions
             {
                 'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue,
-                'bg-primary-500 dark:bg-primary-400': props.value == props.modelValue,
+                'bg-primary': props.value == props.modelValue,
                 'backface-hidden invisible scale-[0.1]': props.value !== props.modelValue,
                 'transform visible translate-z-0 scale-[1,1]': props.value == props.modelValue
             },

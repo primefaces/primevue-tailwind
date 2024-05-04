@@ -19,7 +19,12 @@
                                 <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" />
                             </NuxtLink>
                             <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
-                                <Button label="Give a Star" icon="pi pi-star-fill text-yellow-500 dark:text-yellow-400" iconPos="right" class="!text-surface-700 dark:!text-surface-0 bg-surface-0 dark:bg-surface-900 border-surface-200 dark:border-surface-700 hover:bg-surface-50 dark:hover:bg-surface-800 hover:border-surface-200 dark:hover:border-surface-700 hover:text-surface-700 dark:hover:text-surface-0" />
+                                <Button
+                                    label="Give a Star"
+                                    icon="pi pi-star-fill text-yellow-500 dark:text-yellow-400"
+                                    iconPos="right"
+                                    class="!text-surface-700 dark:!text-surface-0 bg-surface-0 dark:bg-surface-900 border-surface-200 dark:border-surface-700 hover:bg-surface-50 dark:hover:bg-surface-800 hover:border-surface-200 dark:hover:border-surface-700 hover:text-surface-700 dark:hover:text-surface-0"
+                                />
                             </a>
                         </div>
                     </div>
@@ -2847,11 +2852,11 @@
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center justify-center gap-5">
                                 <Tag value="Lightful"></Tag>
 
-                                <Avatar icon="pi pi-user" class="bg-white dark:bg-surface-900 text-primary-500 dark:text-primary-400" shape="circle" />
+                                <Avatar icon="pi pi-user" class="bg-white dark:bg-surface-900 text-primary" shape="circle" />
 
                                 <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" />
 
-                                <Avatar label="P" class="bg-white dark:bg-surface-900 text-primary-500 dark:text-primary-400" shape="circle" />
+                                <Avatar label="P" class="bg-white dark:bg-surface-900 text-primary" shape="circle" />
 
                                 <Tag value="Easy"></Tag>
                             </div>

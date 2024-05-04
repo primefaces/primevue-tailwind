@@ -76,7 +76,7 @@ export default {
             'border-surface-100 dark:border-surface-700',
             {
                 'text-surface-400 dark:text-white/60': !context.active,
-                'text-primary-500 dark:text-primary-400': context.active
+                'text-primary': context.active
             },
 
             // States
@@ -101,7 +101,7 @@ export default {
             'mt-2',
 
             // Colors
-            { 'text-surface-700 dark:text-white/70': !context.active, 'text-primary-500 dark:text-primary-400': context.active },
+            { 'text-surface-700 dark:text-white/70': !context.active, 'text-primary': context.active },
 
             // Text and Overflow
             'whitespace-nowrap',

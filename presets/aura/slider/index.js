@@ -36,7 +36,7 @@ export default {
             'rounded-md',
 
             // Colors
-            'bg-primary-500 dark:bg-primary-400'
+            'bg-primary'
         ]
     }),
     handle: ({ props }) => ({

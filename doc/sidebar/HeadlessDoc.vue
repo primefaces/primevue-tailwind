@@ -18,7 +18,7 @@
                                     class="fill-surface-700 dark:fill-surface-200"
                                 />
                             </svg>
-                            <span class="font-semibold text-2xl text-primary-500 dark:text-primary-400">Your Logo</span>
+                            <span class="font-semibold text-2xl text-primary">Your Logo</span>
                         </span>
                         <span>
                             <Button type="button" @click="closeCallback" icon="pi pi-times" rounded outlined class="h-8 w-8"></Button>
@@ -120,7 +120,7 @@
                                         <a v-ripple class="flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                                             <i class="pi pi-comments mr-2"></i>
                                             <span class="font-medium">Messages</span>
-                                            <span class="inline-flex items-center justify-center ml-auto bg-primary-500 dark:bg-primary-400 rounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
+                                            <span class="inline-flex items-center justify-center ml-auto bg-primaryrounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
                                         </a>
                                     </li>
                                     <li>
@@ -205,10 +205,10 @@ export default {
             <div class="flex items-center justify-between px-4 pt-4 shrink-0">
                 <span class="inline-flex items-center gap-2">
                     <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="..." fill="var(--primary-color-color)" />
+                        <path d="..." fill="var(--primary)" />
                         <path d="..." class="fill-surface-700 dark:fill-surface-200" />
                     </svg>
-                    <span class="font-semibold text-2xl text-primary-500 dark:text-primary-400">Your Logo</span>
+                    <span class="font-semibold text-2xl text-primary">Your Logo</span>
                 </span>
                 <span>
                     <Button type="button" @click="closeCallback" icon="pi pi-times" rounded outlined ></Button>
@@ -310,7 +310,7 @@ export default {
                                 <a v-ripple class="flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                                     <i class="pi pi-comments mr-2"></i>
                                     <span class="font-medium">Messages</span>
-                                    <span class="inline-flex items-center justify-center ml-auto bg-primary-500 dark:bg-primary-400 rounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
+                                    <span class="inline-flex items-center justify-center ml-auto bg-primaryrounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
                                 </a>
                             </li>
                             <li>
@@ -397,7 +397,7 @@ export default {
                                     class="fill-surface-700 dark:fill-surface-200"
                                 />
                             </svg>
-                            <span class="font-semibold text-2xl text-primary-500 dark:text-primary-400">Your Logo</span>
+                            <span class="font-semibold text-2xl text-primary">Your Logo</span>
                         </span>
                         <span>
                             <Button type="button" @click="closeCallback" icon="pi pi-times" rounded outlined class="h-8 w-8"></Button>
@@ -499,7 +499,7 @@ export default {
                                         <a v-ripple class="flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                                             <i class="pi pi-comments mr-2"></i>
                                             <span class="font-medium">Messages</span>
-                                            <span class="inline-flex items-center justify-center ml-auto bg-primary-500 dark:bg-primary-400 rounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
+                                            <span class="inline-flex items-center justify-center ml-auto bg-primaryrounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
                                         </a>
                                     </li>
                                     <li>
@@ -598,7 +598,7 @@ export default {
                                     class="fill-surface-700 dark:fill-surface-200"
                                 />
                             </svg>
-                            <span class="font-semibold text-2xl text-primary-500 dark:text-primary-400">Your Logo</span>
+                            <span class="font-semibold text-2xl text-primary">Your Logo</span>
                         </span>
                         <span>
                             <Button type="button" @click="closeCallback" icon="pi pi-times" rounded outlined class="h-8 w-8"></Button>
@@ -700,7 +700,7 @@ export default {
                                         <a v-ripple class="flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
                                             <i class="pi pi-comments mr-2"></i>
                                             <span class="font-medium">Messages</span>
-                                            <span class="inline-flex items-center justify-center ml-auto bg-primary-500 dark:bg-primary-400 rounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
+                                            <span class="inline-flex items-center justify-center ml-auto bg-primaryrounded-full w-6 h-6 text-surface-0 dark:text-surface-900">3</span>
                                         </a>
                                     </li>
                                     <li>

@@ -8,8 +8,8 @@
         <DocSectionCode :code="code1" importCode hideToggleCode hideCodeSandbox hideStackBlitz />
         <DocSectionCode :code="code2" hideToggleCode hideCodeSandbox hideStackBlitz />
         <p>
-            With the default values, component would use the following values. Since <i>mergeProps</i> is false, the sections with the same name (header, content) are overriden. There is no footer in the local component so the global footer section is
-            used because <i>mergeSections</i> is true.
+            With the default values, component would use the following values. Since <i>mergeProps</i> is false, the sections with the same name (header, content) are overriden. There is no footer in the local component so the global footer section
+            is used because <i>mergeSections</i> is true.
         </p>
         <DocSectionCode :code="code3" importCode hideToggleCode hideCodeSandbox hideStackBlitz />
 
@@ -39,14 +39,14 @@ app.use(PrimeVue, {
             code2: {
                 basic: `
 <!-- local preset -->
-<Panel header="Overriden" :pt="{ header: 'text-xl text-primary-500', content: 'p-8' }">Content</Panel>
+<Panel header="Overriden" :pt="{ header: 'text-xl text-primary', content: 'p-8' }">Content</Panel>
 `
             },
             code3: {
                 basic: `
 // Default ptOptions as { mergeSections: true, mergeProps: false }
 panel: {
-    header: 'text-xl text-primary-500',
+    header: 'text-xl text-primary',
     content: 'p-8',
     footer: 'p-4 border'
 }
@@ -56,7 +56,7 @@ panel: {
                 basic: `
 // ptOptions as { mergeSections: true, mergeProps: true }
 panel: {
-    header: 'bg-gray-50 text-gray-900 p-4 border text-xl text-primary-500',
+    header: 'bg-gray-50 text-gray-900 p-4 border text-xl text-primary',
     content: 'border p-4 text-gray-900 p-8',
     footer: 'p-4 border'
 }
@@ -64,14 +64,14 @@ panel: {
 // ptOptions as { mergeSections: false, mergeProps: false }
 // this basically ignores the global config
 panel: {
-    header: 'text-xl text-primary-500',
+    header: 'text-xl text-primary',
     content: 'p-8'
     //no footer
 }
 
 // ptOptions as { mergeSections: false, mergeProps: true }
 panel: {
-    header: 'bg-gray-50 text-gray-900 p-4 border text-xl text-primary-500',
+    header: 'bg-gray-50 text-gray-900 p-4 border text-xl text-primary',
     content: 'border p-4 text-gray-900 p-8'
     //no footer
 }

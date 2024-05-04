@@ -8,7 +8,7 @@
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
                     <a :href="href" v-bind="props.action" @click="navigate">
                         <span :class="[item.icon, 'text-color']" />
-                        <span class="text-primary-500 dark:text-primary-400 font-semibold">{{ item.label }}</span>
+                        <span class="text-primary font-semibold">{{ item.label }}</span>
                     </a>
                 </router-link>
                 <a v-else :href="item.url" :target="item.target" v-bind="props.action">
@@ -36,7 +36,7 @@ export default {
         <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
             <a :href="href" v-bind="props.action" @click="navigate">
                 <span :class="[item.icon, 'text-color']" />
-                <span class="text-primary-500 dark:text-primary-400 font-semibold">{{ item.label }}</span>
+                <span class="text-primary font-semibold">{{ item.label }}</span>
             </a>
         </router-link>
         <a v-else :href="item.url" :target="item.target" v-bind="props.action">
@@ -53,7 +53,7 @@ export default {
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
                     <a :href="href" v-bind="props.action" @click="navigate">
                         <span :class="[item.icon, 'text-color']" />
-                        <span class="text-primary-500 dark:text-primary-400 font-semibold">{{ item.label }}</span>
+                        <span class="text-primary font-semibold">{{ item.label }}</span>
                     </a>
                 </router-link>
                 <a v-else :href="item.url" :target="item.target" v-bind="props.action">
@@ -90,7 +90,7 @@ export default {
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
                     <a :href="href" v-bind="props.action" @click="navigate">
                         <span :class="[item.icon, 'text-color']" />
-                        <span class="text-primary-500 dark:text-primary-400 font-semibold">{{ item.label }}</span>
+                        <span class="text-primary font-semibold">{{ item.label }}</span>
                     </a>
                 </router-link>
                 <a v-else :href="item.url" :target="item.target" v-bind="props.action">

@@ -19,11 +19,11 @@
                             class="fill-surface-700 dark:fill-surface-0/80"
                         />
                     </svg>
-                    <span class="font-medium text-xl">PRIME<span class="text-primary-500 dark:text-primary-400">APP</span></span>
+                    <span class="font-medium text-xl">PRIME<span class="text-primary">APP</span></span>
                 </span>
             </template>
             <template #submenuheader="{ item }">
-                <span class="text-primary-500 dark:text-primary-400 font-bold leading-none">{{ item.label }}</span>
+                <span class="text-primary font-bold leading-none">{{ item.label }}</span>
             </template>
             <template #item="{ item, props }">
                 <a v-ripple class="flex items-center" v-bind="props.action">
@@ -103,11 +103,11 @@ export default {
                 <path d="..." class="fill-primary-500 dark:fill-primary-400" />
                 <path d="..." class="fill-surface-700 dark:fill-surface-0/80" />
             </svg>
-            <span class="font-medium text-xl">PRIME<span class="text-primary-500 dark:text-primary-400">APP</span></span>
+            <span class="font-medium text-xl">PRIME<span class="text-primary">APP</span></span>
         </span>
     </template>
     <template #submenuheader="{ item }">
-        <span class="text-primary-500 dark:text-primary-400 font-bold leading-none">{{ item.label }}</span>
+        <span class="text-primary font-bold leading-none">{{ item.label }}</span>
     </template>
     <template #item="{ item, props }">
         <a v-ripple class="flex items-center" v-bind="props.action">
@@ -144,11 +144,11 @@ export default {
                             class="fill-surface-700 dark:fill-surface-0/80"
                         />
                     </svg>
-                    <span class="font-medium text-xl">PRIME<span class="text-primary-500 dark:text-primary-400">APP</span></span>
+                    <span class="font-medium text-xl">PRIME<span class="text-primary">APP</span></span>
                 </span>
             </template>
             <template #submenuheader="{ item }">
-                <span class="text-primary-500 dark:text-primary-400 font-bold leading-none">{{ item.label }}</span>
+                <span class="text-primary font-bold leading-none">{{ item.label }}</span>
             </template>
             <template #item="{ item, props }">
                 <a v-ripple class="flex items-center" v-bind="props.action">
@@ -239,11 +239,11 @@ export default {
                             class="fill-surface-700 dark:fill-surface-0/80"
                         />
                     </svg>
-                    <span class="font-medium text-xl">PRIME<span class="text-primary-500 dark:text-primary-400">APP</span></span>
+                    <span class="font-medium text-xl">PRIME<span class="text-primary">APP</span></span>
                 </span>
             </template>
             <template #submenuheader="{ item }">
-                <span class="text-primary-500 dark:text-primary-400 font-bold leading-none">{{ item.label }}</span>
+                <span class="text-primary font-bold leading-none">{{ item.label }}</span>
             </template>
             <template #item="{ item, props }">
                 <a v-ripple class="flex items-center" v-bind="props.action">

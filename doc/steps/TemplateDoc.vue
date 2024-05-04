@@ -7,8 +7,8 @@
             <template #item="{ item, active }">
                 <span
                     :class="[
-                        'inline-flex items-center justify-center items-center rounded-full border-primary-500 dark:border-primary-400 border h-12 w-12 z-20 cursor-pointer',
-                        { 'bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900': active, 'bg-surface-0 dark:bg-surface-700 text-primary-500 dark:text-primary-400': !active }
+                        'inline-flex items-center justify-center items-center rounded-full border-primary border h-12 w-12 z-20 cursor-pointer',
+                        { 'bg-primary text-primary-inverse': active, 'bg-surface-0 dark:bg-surface-700 text-primary': !active }
                     ]"
                 >
                     <i :class="[item.icon, 'text-xl']" />
@@ -38,7 +38,7 @@ export default {
                 basic: `
 <Steps :model="items" class="custom-steps" :readonly="false">
     <template #item="{ item, active }">
-        <span :class="['inline-flex items-center justify-center items-center rounded-full border-primary-500 dark:border-primary-400 border h-12 w-12 z-20 cursor-pointer', { 'bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900': active, 'bg-surface-0 dark:bg-surface-700 text-primary-500 dark:text-primary-400': !active }]">
+        <span :class="['inline-flex items-center justify-center items-center rounded-full border-primary border h-12 w-12 z-20 cursor-pointer', { 'bg-primary text-primary-inverse': active, 'bg-surface-0 dark:bg-surface-700 text-primary': !active }]">
             <i :class="[item.icon, 'text-xl']" />
         </span>
     </template>
@@ -49,7 +49,7 @@ export default {
     <div class="card">
         <Steps :model="items" class="custom-steps" :readonly="false">
             <template #item="{ item, active }">
-                <span :class="['inline-flex items-center justify-center items-center rounded-full border-primary-500 dark:border-primary-400 border h-12 w-12 z-20 cursor-pointer', { 'bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900': active, 'bg-surface-0 dark:bg-surface-700 text-primary-500 dark:text-primary-400': !active }]">
+                <span :class="['inline-flex items-center justify-center items-center rounded-full border-primary border h-12 w-12 z-20 cursor-pointer', { 'bg-primary text-primary-inverse': active, 'bg-surface-0 dark:bg-surface-700 text-primary': !active }]">
                     <i :class="[item.icon, 'text-xl']" />
                 </span>
             </template>
@@ -82,7 +82,7 @@ export default {
     <div class="card">
         <Steps :model="items" class="custom-steps" :readonly="false">
             <template #item="{ item, active }">
-                <span :class="['inline-flex items-center justify-center items-center rounded-full border-primary-500 dark:border-primary-400 border h-12 w-12 z-20 cursor-pointer', { 'bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900': active, 'bg-surface-0 dark:bg-surface-700 text-primary-500 dark:text-primary-400': !active }]">
+                <span :class="['inline-flex items-center justify-center items-center rounded-full border-primary border h-12 w-12 z-20 cursor-pointer', { 'bg-primary text-primary-inverse': active, 'bg-surface-0 dark:bg-surface-700 text-primary': !active }]">
                     <i :class="[item.icon, 'text-xl']" />
                 </span>
             </template>
@@ -117,7 +117,7 @@ const items = ref([
 ::v-deep(.custom-steps) {
     .p-steps-item:before {
         margin-top: 0;
-        border-color: var(--primary-color);
+        border-color: var(--primary);
     }
 }
 </style>

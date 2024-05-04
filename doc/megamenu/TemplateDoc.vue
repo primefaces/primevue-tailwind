@@ -24,7 +24,7 @@
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
                 <a v-else-if="!item.image" class="flex items-center p-3 cursor-pointer mb-2 gap-2">
-                    <span class="inline-flex items-center justify-center rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 w-[3rem] h-[3rem] shrink-0">
+                    <span class="inline-flex items-center justify-center rounded-full bg-primary text-primary-inverse w-[3rem] h-[3rem] shrink-0">
                         <i :class="[item.icon, 'text-lg']"></i>
                     </span>
                     <span class="inline-flex flex-col gap-1">
@@ -113,7 +113,7 @@ export default {
             <span class="ml-2">{{ item.label }}</span>
         </a>
         <a v-else-if="!item.image" class="flex items-center p-3 cursor-pointer mb-2 gap-2">
-            <span class="inline-flex items-center justify-center rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 w-[3rem] h-[3rem] shrink-0">
+            <span class="inline-flex items-center justify-center rounded-full bg-primary text-primary-inverse w-[3rem] h-[3rem] shrink-0">
                 <i :class="[item.icon, 'text-lg']"></i>
             </span>
             <span class="inline-flex flex-col gap-1">
@@ -154,7 +154,7 @@ export default {
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
                 <a v-else-if="!item.image" class="flex items-center p-3 cursor-pointer mb-2 gap-2">
-                    <span class="inline-flex items-center justify-center rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 w-[3rem] h-[3rem] shrink-0">
+                    <span class="inline-flex items-center justify-center rounded-full bg-primary text-primary-inverse w-[3rem] h-[3rem] shrink-0">
                         <i :class="[item.icon, 'text-lg']"></i>
                     </span>
                     <span class="inline-flex flex-col gap-1">
@@ -254,7 +254,7 @@ export default {
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
                 <a v-else-if="!item.image" class="flex items-center p-3 cursor-pointer mb-2 gap-2">
-                    <span class="inline-flex items-center justify-center rounded-full bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 w-[3rem] h-[3rem] shrink-0">
+                    <span class="inline-flex items-center justify-center rounded-full bg-primary text-primary-inverse w-[3rem] h-[3rem] shrink-0">
                         <i :class="[item.icon, 'text-lg']"></i>
                     </span>
                     <span class="inline-flex flex-col gap-1">

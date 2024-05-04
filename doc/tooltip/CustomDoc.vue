@@ -37,7 +37,7 @@ export default {
                     borderBottomColor: 'rgb(var(--primary-500))'
                 }
             },
-            text: 'bg-primary-500 dark:bg-primary-400 font-medium'
+            text: 'bg-primaryfont-medium'
         }
     }"
     label="Button"
@@ -55,7 +55,7 @@ export default {
                             borderBottomColor: 'rgb(var(--primary-500))'
                         }
                     },
-                    text: 'bg-primary-500 dark:bg-primary-400 font-medium'
+                    text: 'bg-primaryfont-medium'
                 }
             }"
             severity="secondary"
@@ -76,7 +76,7 @@ export default {
                             borderBottomColor: 'rgb(var(--primary-500))'
                         }
                     },
-                    text: 'bg-primary-500 dark:bg-primary-400 font-medium'
+                    text: 'bg-primaryfont-medium'
                 }
             }"
             severity="secondary"

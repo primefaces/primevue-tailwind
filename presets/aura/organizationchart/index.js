@@ -32,14 +32,14 @@ export default {
             {
                 'text-surface-600 dark:text-white/80': !context?.selected,
                 'bg-surface-0 dark:bg-surface-900': !context?.selected,
-                'text-primary-700 dark:text-surface-0': context?.selected,
-                'bg-primary-50 dark:bg-primary-500/10': context?.selected
+                'text-primary-highlight-inverse': context?.selected,
+                'bg-primary-highlight': context?.selected
             },
 
             // States
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-800': context?.selectable && !context?.selected,
-                'hover:bg-primary-100 dark:hover:bg-primary-500/20': context?.selectable && context?.selected
+                'hover:bg-primary-highlight-hover': context?.selectable && context?.selected
             },
 
             { 'cursor-pointer': context?.selectable }

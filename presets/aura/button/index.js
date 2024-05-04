@@ -42,14 +42,14 @@ export default {
 
             // Primary Button
             {
-                'text-primary-inverse-color': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'bg-primary-color': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-                'border border-primary-color': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
+                'text-primary-inverse': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'bg-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'border border-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
             },
             // Primary Text Button
-            { 'text-primary-color': props.text && props.severity === null && !props.plain },
+            { 'text-primary': props.text && props.severity === null && !props.plain },
             // Primary Outlined Button
-            { 'text-primary-color border border-primary-color': props.outlined && props.severity === null && !props.plain },
+            { 'text-primary border border-primary': props.outlined && props.severity === null && !props.plain },
 
             // Secondary Button
             {
@@ -132,7 +132,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring-1',
 
             // Link
-            { 'focus:ring-primary-color': props.link },
+            { 'focus:ring-primary': props.link },
 
             // Plain
             { 'hover:bg-gray-600 hover:border-gray-600': props.plain && !props.outlined && !props.text },
@@ -140,8 +140,8 @@ export default {
             { 'hover:bg-surface-300/10': props.plain && (props.text || props.outlined) },
 
             // Primary
-            { 'hover:bg-primary-hover-color hover:border-primary-hover-color': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain },
-            { 'focus:ring-primary-color': props.severity === null },
+            { 'hover:bg-primary-hover hover:border-primary-hover': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain },
+            { 'focus:ring-primary': props.severity === null },
             // Text & Outlined Button
             { 'hover:bg-primary-300/10': (props.text || props.outlined) && props.severity === null && !props.plain },
 

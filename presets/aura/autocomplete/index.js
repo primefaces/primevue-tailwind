@@ -149,13 +149,13 @@ export default {
                 'w-10',
 
                 // Colors
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                'text-primary-inverse',
+                'bg-primary',
+                'border border-primary',
 
                 // States
                 'focus:outline-none focus:outline-offset-0 focus:ring-1 ',
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-primary-hover hover:border-hover-color',
                 'focus:ring-primary-500 dark:focus:ring-primary-400'
             ]
         }
@@ -201,14 +201,13 @@ export default {
                 'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
 
-                'text-primary-700 dark:text-white/80': context.selected,
-                'bg-primary-100 dark:bg-primary-400/30': context.selected,
-                'text-primary-700 dark:text-white/80': !context.focused && context.selected
+                'text-primary-highlight-inverse': context.selected,
+                'bg-primary-highlight': context.selected
             },
 
             //States
             { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
-            { 'hover:bg-primary-200 dark:hover:bg-primary-400/40': context.selected },
+            { 'hover:bg-primary-highlight-hover': context.selected },
             { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
 
             // Transition

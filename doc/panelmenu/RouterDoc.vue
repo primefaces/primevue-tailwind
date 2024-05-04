@@ -14,7 +14,7 @@
                 <a v-else v-ripple class="flex items-center cursor-pointer text-surface-700 dark:text-surface-0/80 px-3 py-2" :href="item.url" :target="item.target">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
-                    <span v-if="item.items" class="pi pi-angle-down text-primary-500 dark:text-primary-400 ml-auto" />
+                    <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto" />
                 </a>
             </template>
         </PanelMenu>
@@ -80,7 +80,7 @@ export default {
         <a v-else v-ripple class="flex items-center cursor-pointer text-surface-700 dark:text-surface-0/80 px-3 py-2" :href="item.url" :target="item.target">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
-            <span v-if="item.items" class="pi pi-angle-down text-primary-500 dark:text-primary-400 ml-auto" />
+            <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto" />
         </a>
     </template>
 </PanelMenu>
@@ -99,7 +99,7 @@ export default {
                 <a v-else v-ripple class="flex items-center cursor-pointer text-surface-700 dark:text-surface-0/80 px-3 py-2" :href="item.url" :target="item.target">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
-                    <span v-if="item.items" class="pi pi-angle-down text-primary-500 dark:text-primary-400 ml-auto" />
+                    <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto" />
                 </a>
             </template>
         </PanelMenu>
@@ -170,7 +170,7 @@ export default {
                 <a v-else v-ripple class="flex items-center cursor-pointer text-surface-700 dark:text-surface-0/80 px-3 py-2" :href="item.url" :target="item.target">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
-                    <span v-if="item.items" class="pi pi-angle-down text-primary-500 dark:text-primary-400 ml-auto" />
+                    <span v-if="item.items" class="pi pi-angle-down text-primary ml-auto" />
                 </a>
             </template>
         </PanelMenu>

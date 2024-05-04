@@ -263,12 +263,12 @@ export default {
 
             // Color
             { 'text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900': !context.active },
-            { 'text-primary-highlight-inverse-color bg-primary-highlight-color': context.active },
+            { 'text-primary-highlight-inverse bg-primary-highlight': context.active },
 
             // State
             {
                 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.active,
-                'hover:bg-primary-highlight-hover-color': context.active
+                'hover:bg-primary-highlight-hover': context.active
             },
 
             // Misc

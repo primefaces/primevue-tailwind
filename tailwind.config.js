@@ -5,14 +5,14 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'primary-color': 'rgb(var(--primary-color))',
-                'primary-inverse-color': 'rgb(var(--primary-inverse-color))',
-                'primary-hover-color': 'rgb(var(--primary-hover-color))',
+                primary: 'rgb(var(--primary))',
+                'primary-inverse': 'rgb(var(--primary-inverse))',
+                'primary-hover': 'rgb(var(--primary-hover))',
                 'primary-active-color': 'rgb(var(--primary-active-color))',
 
-                'primary-highlight-color': 'rgb(var(--primary-color)/var(--primary-highlight-opacity))',
-                'primary-highlight-inverse-color': 'rgb(var(--primary-highlight-inverse-color))',
-                'primary-highlight-hover-color': 'rgb(var(--primary-color)/var(--primary-highlight-hover-opacity))',
+                'primary-highlight': 'rgb(var(--primary)/var(--primary-highlight-opacity))',
+                'primary-highlight-inverse': 'rgb(var(--primary-highlight-inverse))',
+                'primary-highlight-hover': 'rgb(var(--primary)/var(--primary-highlight-hover-opacity))',
 
                 'primary-50': 'rgb(var(--primary-50))',
                 'primary-100': 'rgb(var(--primary-100))',

@@ -53,7 +53,7 @@ export default {
                 { 'border-red-500 dark:border-red-400': parent.props.invalid },
 
                 // States
-                { 'hover:border-primary-500 dark:hover:border-primary-400': !parent.props.invalid },
+                { 'hover:border-primary-color': !parent.props.invalid },
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50 focus:z-10',
                 { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 
@@ -89,10 +89,10 @@ export default {
                 { 'order-3': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'order-1': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
-                //Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                // Colors
+                'text-primary-inverse',
+                'bg-primary',
+                'border-primary',
 
                 // Sizing
                 'w-[3rem]',
@@ -108,7 +108,7 @@ export default {
 
                 //States
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-primary-hover hover:border-primary-hover',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'
@@ -134,10 +134,10 @@ export default {
                 { 'order-1': parent.props.showButtons && parent.props.buttonLayout == 'horizontal' },
                 { 'order-3': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
-                //Color
-                'text-white dark:text-surface-900',
-                'bg-primary-500 dark:bg-primary-400',
-                'border border-primary-500 dark:border-primary-400',
+                // Colors
+                'text-primary-inverse',
+                'bg-primary',
+                'border-primary',
 
                 // Sizing
                 'w-[3rem]',
@@ -153,7 +153,7 @@ export default {
 
                 //States
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-600 dark:hover:bg-primary-300 hover:border-primary-600 dark:hover:border-primary-300',
+                'hover:bg-primary-hover hover:border-primary-hover',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'

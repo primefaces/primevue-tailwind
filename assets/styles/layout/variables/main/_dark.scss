@@ -1,6 +1,6 @@
 :root[class*="dark"] {
     color-scheme: dark;
-    --primary-color-default:rgb(var(--primary-400));
+    --primary-color-default:rgb(var(--primary));
     --primary-color-inverse-default:rgb(var(--gray-900));
     --body-bg:rgb(var(--surface-950));
     --body-text-color:rgb(var(--surface-50));
@@ -49,7 +49,7 @@
     --docsearch-hit-shadow: none;
     --docsearch-spacing: 1rem;
     --docsearch-hit-color: rgb(var(--surface-50));
-    --docsearch-highlight-color: var(--primary-color-default);
+    --docsearch-highlight-color: var(--primary);
     --docsearch-hit-active-color: var(--primary-color-inverse-default);
 
     

@@ -36,7 +36,7 @@ export default {
             { 'border-red-500 dark:border-red-400': props.invalid },
 
             // States
-            { 'hover:border-primary-500 dark:hover:border-primary-400': !props.invalid },
+            { 'hover:border-primary-color': !props.invalid },
             'focus:outline-none focus:outline-offset-0',
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
             { 'ring ring-primary-400/50 dark:ring-primary-300/50': state.hovered },

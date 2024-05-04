@@ -7,11 +7,7 @@
             <li
                 v-for="product in products"
                 :key="product.id"
-                :class="[
-                    'p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200',
-                    { 'border-transparent': selectedId !== product.id },
-                    { 'border-primary-500 dark:border-primary-400': selectedId === product.id }
-                ]"
+                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
                 <div class="flex flex-wrap p-2 items-center gap-4">
@@ -87,7 +83,7 @@ export default {
     <li
         v-for="product in products"
         :key="product.id"
-        :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary-500 dark:border-primary-400': selectedId === product.id }]"
+        :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
         @contextmenu="onRightClick($event, product.id)"
     >
         <div class="flex flex-wrap p-2 items-center gap-4">
@@ -122,7 +118,7 @@ export default {
             <li
                 v-for="product in products"
                 :key="product.id"
-                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary-500 dark:border-primary-400': selectedId === product.id }]"
+                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
                 <div class="flex flex-wrap p-2 items-center gap-4">
@@ -212,7 +208,7 @@ export default {
             <li
                 v-for="product in products"
                 :key="product.id"
-                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary-500 dark:border-primary-400': selectedId === product.id }]"
+                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
                 <div class="flex flex-wrap p-2 items-center gap-4">

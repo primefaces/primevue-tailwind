@@ -10,7 +10,7 @@
                         <span
                             :class="[
                                 'rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center',
-                                { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }
+                                { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }
                             ]"
                         >
                             <i class="pi pi-user" />
@@ -51,7 +51,7 @@
                         <span
                             :class="[
                                 'rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center',
-                                { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }
+                                { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }
                             ]"
                         >
                             <i class="pi pi-star" />
@@ -86,7 +86,7 @@
                         <span
                             :class="[
                                 'rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center',
-                                { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }
+                                { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }
                             ]"
                         >
                             <i class="pi pi-id-card" />
@@ -134,7 +134,7 @@ export default {
     <StepperPanel>
         <template #header="{ index, clickCallback }">
             <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                     <i class="pi pi-user" />
                 </span>
             </button>
@@ -170,7 +170,7 @@ export default {
     <StepperPanel>
         <template #header="{ index, clickCallback }">
             <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                     <i class="pi pi-star" />
                 </span>
             </button>
@@ -200,7 +200,7 @@ export default {
     <StepperPanel>
         <template #header="{ index, clickCallback }">
             <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                     <i class="pi pi-id-card" />
                 </span>
             </button>
@@ -226,7 +226,7 @@ export default {
             <StepperPanel>
                 <template #header="{ index, clickCallback }">
                     <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                             <i class="pi pi-user" />
                         </span>
                     </button>
@@ -262,7 +262,7 @@ export default {
             <StepperPanel>
                 <template #header="{ index, clickCallback }">
                     <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                             <i class="pi pi-star" />
                         </span>
                     </button>
@@ -292,7 +292,7 @@ export default {
             <StepperPanel>
                 <template #header="{ index, clickCallback }">
                     <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                             <i class="pi pi-id-card" />
                         </span>
                     </button>
@@ -350,7 +350,7 @@ export default {
             <StepperPanel>
                 <template #header="{ index, clickCallback }">
                     <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                             <i class="pi pi-user" />
                         </span>
                     </button>
@@ -386,7 +386,7 @@ export default {
             <StepperPanel>
                 <template #header="{ index, clickCallback }">
                     <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                             <i class="pi pi-star" />
                         </span>
                     </button>
@@ -416,7 +416,7 @@ export default {
             <StepperPanel>
                 <template #header="{ index, clickCallback }">
                     <button class="bg-transparent border-none inline-flex flex-col gap-2" @click="clickCallback">
-                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primary-500 dark:bg-primary-400 border-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
+                        <span :class="['rounded-md border-2 w-[3rem] h-[3rem] inline-flex items-center justify-center', { 'bg-primaryborder-primary*500 dark:border-primary-400': index <= active, 'border-surface-200 dark:border-surface-700': index > active }]">
                             <i class="pi pi-id-card" />
                         </span>
                     </button>

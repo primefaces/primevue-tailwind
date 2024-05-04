@@ -72,9 +72,9 @@ export default {
                 'text-surface-400 dark:text-white/60': !context.active,
                 'border-surface-100 dark:border-surface-700': !context.active,
                 'bg-surface-0 dark:bg-surface-800': !context.active,
-                'bg-primary-500 dark:bg-primary-400': context.active,
-                'border-primary-500 dark:border-primary-400': context.active,
-                'text-surface-0 dark:text-surface-900': context.active
+                'bg-primary': context.active,
+                'border-primary': context.active,
+                'text-primary-inverse': context.active
             },
 
             // States

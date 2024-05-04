@@ -6,7 +6,7 @@
         <Toast position="top-center" group="headless" @close="visible = false">
             <template #container="{ message, closeCallback }">
                 <section class="flex p-3 gap-3 w-full bg-black/90 shadow-md rounded-md">
-                    <i class="pi pi-cloud-upload text-primary-500 text-2xl"></i>
+                    <i class="pi pi-cloud-upload text-primary text-2xl"></i>
                     <div class="flex flex-col gap-3 w-full">
                         <p class="m-0 font-semibold text-base leading-none text-white">{{ message.summary }}</p>
                         <p class="m-0 text-base leading-none text-surface-700 dark:text-surface-0">{{ message.detail }}</p>
@@ -39,7 +39,7 @@ export default {
 <Toast position="top-center" group="headless" @close="visible = false">
     <template #container="{ message, closeCallback }">
         <section class="flex p-3 gap-3 w-full bg-black/90 shadow-md" >
-            <i class="pi pi-cloud-upload text-primary-500 text-2xl"></i>
+            <i class="pi pi-cloud-upload text-primary text-2xl"></i>
             <div class="flex flex-col gap-3 w-full">
                 <p class="m-0 font-semibold text-base leading-none text-white">{{ message.summary }}</p>
                 <p class="m-0 text-base leading-none text-surface-700 dark:text-surface-0">{{ message.detail }}</p>
@@ -63,7 +63,7 @@ export default {
         <Toast position="top-center" group="headless" @close="visible = false">
             <template #container="{ message, closeCallback }">
                 <section class="flex p-3 gap-3 w-full bg-black/90 shadow-md" >
-                    <i class="pi pi-cloud-upload text-primary-500 text-2xl"></i>
+                    <i class="pi pi-cloud-upload text-primary text-2xl"></i>
                     <div class="flex flex-col gap-3 w-full">
                         <p class="m-0 font-semibold text-base leading-none text-white">{{ message.summary }}</p>
                         <p class="m-0 text-base leading-none text-surface-700 dark:text-surface-0">{{ message.detail }}</p>
@@ -130,7 +130,7 @@ export default {
         <Toast position="top-center" group="headless" @close="visible = false">
             <template #container="{ message, closeCallback }">
                 <section class="flex p-3 gap-3 w-full bg-black/90 shadow-md" >
-                    <i class="pi pi-cloud-upload text-primary-500 text-2xl"></i>
+                    <i class="pi pi-cloud-upload text-primary text-2xl"></i>
                     <div class="flex flex-col gap-3 w-full">
                         <p class="m-0 font-semibold text-base leading-none text-white">{{ message.summary }}</p>
                         <p class="m-0 text-base leading-none text-surface-700 dark:text-surface-0">{{ message.detail }}</p>

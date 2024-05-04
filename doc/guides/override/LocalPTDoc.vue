@@ -6,7 +6,7 @@
         </p>
         <div class="card">
             <Panel header="Global" class="mb-4">Content</Panel>
-            <Panel header="Overriden" :pt="{ title: 'text-xl font-bold font-mono text-primary-500' }">Content</Panel>
+            <Panel header="Overriden" :pt="{ title: 'text-xl font-bold font-mono text-primary' }">Content</Panel>
         </div>
         <DocSectionCode :code="code" hideCodeSandbox hideStackBlitz />
     </DocSectionText>
@@ -19,7 +19,7 @@ export default {
             code: {
                 basic: `
 <Panel header="Global" class="mb-4">Content</Panel>
-<Panel header="Overriden" :pt="{ title: 'text-xl font-bold font-mono text-primary-500' }">Content</Panel>
+<Panel header="Overriden" :pt="{ title: 'text-xl font-bold font-mono text-primary' }">Content</Panel>
 `
             }
         };

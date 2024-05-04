@@ -202,7 +202,7 @@ export default {
             { 'bg-surface-200 hover:bg-surface-300 dark:bg-surface-700 dark:hover:bg-surface-600': !context.highlighted },
 
             // Conditional Appearance: Highlighted
-            { 'bg-primary-500 hover:bg-primary-600': context.highlighted }
+            { 'bg-primary hover:bg-primary-hover': context.highlighted }
         ]
     }),
     mask: {

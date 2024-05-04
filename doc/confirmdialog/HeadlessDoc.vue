@@ -5,7 +5,7 @@
     <ConfirmDialog group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
             <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
-                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
+                <div class="rounded-full bg-primarytext-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                     <i class="pi pi-question text-5xl"></i>
                 </div>
                 <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>
@@ -32,7 +32,7 @@ export default {
 <ConfirmDialog group="headless">
     <template #container="{ message, acceptCallback, rejectCallback }">
         <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
-            <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
+            <div class="rounded-full bg-primarytext-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                 <i class="pi pi-question text-5xl"></i>
             </div>
             <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>
@@ -51,7 +51,7 @@ export default {
     <ConfirmDialog group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
             <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
-                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
+                <div class="rounded-full bg-primarytext-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                     <i class="pi pi-question text-5xl"></i>
                 </div>
                 <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>
@@ -94,7 +94,7 @@ export default {
     <ConfirmDialog group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
             <div class="flex flex-col items-center p-5 bg-surface-0 dark:bg-surface-900 rounded-md">
-                <div class="rounded-full bg-primary-500 dark:bg-primary-400 text-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
+                <div class="rounded-full bg-primarytext-white dark:text-surface-950 inline-flex justify-center items-center h-[6rem] w-[6rem] -mt-8">
                     <i class="pi pi-question text-5xl"></i>
                 </div>
                 <span class="font-bold text-2xl block mb-2 mt-4">{{ message.header }}</span>

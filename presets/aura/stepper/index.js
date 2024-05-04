@@ -81,7 +81,7 @@ export default {
                 'border-solid border-2 border-surface-200 dark:border-surface-700',
 
                 // Colors (Conditional)
-                context.active ? 'text-primary-500 dark:text-primary-400' : 'text-surface-900 dark:text-surface-0', // Adjust colors as needed
+                context.active ? 'text-primary' : 'text-surface-900 dark:text-surface-0', // Adjust colors as needed
 
                 // Size and Shape
                 'min-w-[2rem]',
@@ -112,7 +112,7 @@ export default {
                 'ml-2',
 
                 // Text
-                context.active ? 'text-primary-500 dark:text-primary-400' : 'text-surface-700 dark:text-surface-0/80',
+                context.active ? 'text-primary' : 'text-surface-700 dark:text-surface-0/80',
                 'font-medium',
 
                 // Transitions
@@ -125,7 +125,7 @@ export default {
         separator: ({ context, state, parent }) => ({
             class: [
                 // Colors (Conditional for active step)
-                state.d_activeStep <= context.index ? 'bg-surface-200 dark:bg-surface-700' : 'bg-primary-500 dark:bg-primary-400',
+                state.d_activeStep <= context.index ? 'bg-surface-200 dark:bg-surface-700' : 'bg-primary',
 
                 // Conditional for Vertical Orientation
                 parent.props.orientation === 'vertical' ? ['flex-none', 'w-[2px]', 'h-auto', 'ml-[calc(1.29rem+2px)]'] : ['flex-1', 'w-full', 'h-[2px]', 'ml-4'],

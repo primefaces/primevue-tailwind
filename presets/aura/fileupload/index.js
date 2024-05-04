@@ -48,12 +48,12 @@ export default {
             'font-bold',
 
             // Colors
-            'text-white dark:text-surface-900',
-            'bg-primary-500 dark:bg-primary-400',
-            'border-primary-500 dark:border-primary-400',
+            'text-primary-inverse',
+            'bg-primary',
+            'border-primary',
 
             // States
-            'hover:bg-primary-600 dark:hover:bg-primary-300',
+            'hover:bg-primary-hover',
 
             // Misc
             'overflow-hidden',
@@ -156,7 +156,7 @@ export default {
                 'absolute flex items-center justify-center overflow-hidden',
 
                 // Colors
-                'bg-primary-500 dark:bg-primary-400',
+                'bg-primary',
 
                 // Spacing & Sizing
                 'm-0',

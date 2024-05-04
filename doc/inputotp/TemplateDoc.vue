@@ -60,7 +60,7 @@ export default {
 
 .custom-otp-input:focus {
     outline: 0 none;
-    border-bottom-color: var(--primary-color);
+    border-bottom-color: var(--primary);
 }
 <\/style>
 `,
@@ -95,7 +95,7 @@ const value = ref(null);
 
 .custom-otp-input:focus {
     outline: 0 none;
-    border-bottom-color: var(--primary-color);
+    border-bottom-color: var(--primary);
 }
 <\/style>
 `
@@ -119,6 +119,6 @@ const value = ref(null);
 
 .custom-otp-input:focus {
     outline: 0 none;
-    border-bottom-color: var(--primary-color);
+    border-bottom-color: var(--primary);
 }
 </style>

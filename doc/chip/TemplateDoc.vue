@@ -4,7 +4,7 @@
     </DocSectionText>
     <div class="card">
         <Chip class="pl-0 pr-3">
-            <span class="bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 rounded-full w-8 h-8 flex items-center justify-center">P</span>
+            <span class="bg-primary text-primary-inverse rounded-full w-8 h-8 flex items-center justify-center">P</span>
             <span class="ml-2 font-medium">PRIME</span>
         </Chip>
     </div>
@@ -18,7 +18,7 @@ export default {
             code: {
                 basic: `
 <Chip class="pl-0 pr-3">
-    <span class="bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 rounded-full w-8 h-8 flex items-center justify-center">P</span>
+    <span class="bg-primary text-primary-inverse rounded-full w-8 h-8 flex items-center justify-center">P</span>
     <span class="ml-2 font-medium">PRIME</span>
 </Chip>
 `,
@@ -26,7 +26,7 @@ export default {
 <template>
     <div class="card">
         <Chip class="pl-0 pr-3">
-            <span class="bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 rounded-full w-8 h-8 flex items-center justify-center">P</span>
+            <span class="bg-primary text-primary-inverse rounded-full w-8 h-8 flex items-center justify-center">P</span>
             <span class="ml-2 font-medium">PRIME</span>
         </Chip>
     </div>
@@ -40,7 +40,7 @@ export default {
 <template>
     <div class="card">
         <Chip class="pl-0 pr-3">
-            <span class="bg-primary-500 dark:bg-primary-400 text-surface-0 dark:text-surface-900 rounded-full w-8 h-8 flex items-center justify-center">P</span>
+            <span class="bg-primary text-primary-inverse rounded-full w-8 h-8 flex items-center justify-center">P</span>
             <span class="ml-2 font-medium">PRIME</span>
         </Chip>
     </div>

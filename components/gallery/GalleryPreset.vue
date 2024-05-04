@@ -8,7 +8,7 @@
             <span class="text-lg font-medium">{{ preset.name }}</span>
             <span class="inline-flex gap-1 items-center ml-auto">
                 <span>{{ stars }}</span>
-                <i class="pi pi-star-fill text-primary-500"></i>
+                <i class="pi pi-star-fill text-primary"></i>
             </span>
         </div>
         <div class="overflow-hidden whitespace-nowrap text-ellipsis">
@@ -22,7 +22,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 :href="`https://stackblitz.com/github.com/${preset.owner}/${preset.repository}`"
-                class="flex-auto border text-center rounded p-2 border-primary-500 text-primary-500 font-semibold hover:bg-primary-500 hover:text-white duration-150"
+                class="flex-auto border text-center rounded p-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-inverse duration-150"
             >
                 Live Preview
             </a>

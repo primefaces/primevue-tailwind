@@ -30,13 +30,13 @@ export default {
         class: [
             //Shape
             'rounded-[4px]',
+
             // Colors
             'text-surface-700 dark:text-white/80',
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
                 'text-surface-500 dark:text-white/70 bg-surface-200': context.focused && !context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': context.focused && context.active,
-                'text-primary-700 dark:text-surface-0/80 bg-primary-50 dark:bg-primary-500/20': !context.focused && context.active
+                'text-primary-highlight-inverse bg-primary-hightlight-color': context.active
             },
 
             // Transitions
@@ -46,7 +46,7 @@ export default {
             // States
             {
                 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.active,
-                'hover:bg-primary-400/30 dark:hover:bg-primary-300/30 text-primary-700 dark:text-surface-0/80': context.active
+                'hover:bg-primary-highlight-hover text-primary-highlight-inverse': context.active
             },
 
             // Disabled
