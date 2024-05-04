@@ -48,9 +48,6 @@ export default {
                     'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': context.disabled
                 },
 
-                // Filled State *for FloatLabel
-                { filled: parent.instance?.$name == 'FloatLabel' && context.filled },
-
                 // Misc
                 'appearance-none',
                 'transition-colors duration-200'
