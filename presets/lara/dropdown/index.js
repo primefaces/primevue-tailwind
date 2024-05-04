@@ -140,16 +140,20 @@ export default {
             'm-0',
             'py-3 px-5',
 
-            // Color
-            { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected && !context.disabled },
-            { 'text-surface-600 dark:text-white/70': !context.focused && !context.selected && context.disabled },
-            { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
-            { 'bg-primary-100 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': context.focused && context.selected },
-            { 'bg-primary-50 dark:bg-primary-400/40 text-primary-700 dark:text-white/80': !context.focused && context.selected },
+            // Colors
+            {
+                'text-surface-700 dark:text-white/80': !context.focused && !context.selected,
+                'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
+                'text-surface-700 dark:text-white/80': context.focused && !context.selected,
+
+                'text-primary-highlight-inverse-color': context.selected,
+                'bg-primary-highlight-color': context.selected
+            },
 
             //States
-            { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
-            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-surface-600/80': context.focused && !context.selected },
+            { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
+            { 'hover:bg-primary-highlight-hover-color': context.selected },
+            { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transitions
