@@ -1,6 +1,12 @@
 {
     "data": [
         {
+            "name": "Wind Preset",
+            "owner": "atakantepe",
+            "repository": "primevue-tailwind-wind",
+            "thumbnail": "https://private-user-images.githubusercontent.com/28745098/327949100-ff08008e-f25e-498a-9064-f2b99437e61f.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTQ4Mjc0NTIsIm5iZiI6MTcxNDgyNzE1MiwicGF0aCI6Ii8yODc0NTA5OC8zMjc5NDkxMDAtZmYwODAwOGUtZjI1ZS00OThhLTkwNjQtZjJiOTk0MzdlNjFmLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTA0VDEyNTIzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQ1N2FiZWRlYjhiODI1N2M3NmUyYzRkNmFjNWFkNjUxYzkzOGU3NTk2ZjRmZTRhYjIzZGMzZjNiNjQ5YzViNWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.yoBrAZx9qEIcsQgtU8URrZv_lKjQir4grJ-6lM7JzDQ"
+        },
+        {
             "name": "Pure Accordion",
             "owner": "cagataycivici",
             "repository": "pure-accordion-vue",
@@ -35,12 +41,6 @@
             "owner": "cagataycivici",
             "repository": "glassmorphic-login-vue",
             "thumbnail": "https://primefaces.org/cdn/primevue/images/tailwind/gallery/preset-glassmorphic-login.png"
-        },
-        {
-            "name": "Wind Preset",
-            "owner": "atakantepe",
-            "repository": "primevue-tailwind-wind",
-            "thumbnail": "https://private-user-images.githubusercontent.com/28745098/318398770-549e4bd4-91f5-44ed-a680-90ea67f6053c.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTE5NzQwOTIsIm5iZiI6MTcxMTk3Mzc5MiwicGF0aCI6Ii8yODc0NTA5OC8zMTgzOTg3NzAtNTQ5ZTRiZDQtOTFmNS00NGVkLWE2ODAtOTBlYTY3ZjYwNTNjLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDAxVDEyMTYzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk1ODAzYmIwMzA0MTgwNTQ4ZmFjOGUxODcwNDA1NGJkZWI1NTc5N2U5YTkzMzM1YjM5YWJmN2ZhOWMxYTFiZmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.W8Je6TAuVI7Wav9Cn4WCiDRvjMh8QxgmpeLr2kr8jl4"
         }
     ]
 }
