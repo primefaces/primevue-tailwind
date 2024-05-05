@@ -2,6 +2,8 @@ import path from 'path';
 
 const baseUrl = '/';
 
+let lara = process.platform === 'win32' ? { as: 'Lara', from: '~/presets/lara' } : { from: path.resolve(__dirname, './presets/lara/') };
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     typescript: false,
@@ -32,7 +34,7 @@ export default defineNuxtConfig({
             ripple: true,
             unstyled: true
         },
-        importPT: { from: path.resolve(__dirname, './presets/lara/') }
+        importPT: lara
     },
     app: {
         baseURL: baseUrl,
