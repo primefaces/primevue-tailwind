@@ -12,7 +12,7 @@
                                 <span class="text-neutral-800 dark:text-surface-50 leading-tight">Tailwind CSS Based <br />UI Component Library <br />for </span>
                                 <span class="text-primary-400 font-bold leading-tight">Vue.js</span>
                             </div>
-                            <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailaura CSS and the convenience of PrimeVue components.</div>
+                            <div class="text-zinc-600 dark:text-surface-50 leading-relaxed max-w-[35rem] text-xl">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</div>
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
                             <NuxtLink to="/overview">
@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">
                                     <span class="text-surface-900 dark:text-white text-lg font-medium">Color Palette</span>
-                                    <span class="text-surface-900 dark:text-white text-sm font-light">Leverage the full potential of Tailaura's robust color palette to enhance your design.</span>
+                                    <span class="text-surface-900 dark:text-white text-sm font-light">Leverage the full potential of Tailwind's robust color palette to enhance your design.</span>
                                 </div>
                             </div>
                             <div class="w-[20.5rem] light-dark-card flex p-[0.571rem] flex-col justify-end items-start rounded-[1.14rem] bg-white dark:bg-surface-900 dark:border dark:border-surface-700 shadow h-full self-stretch">
@@ -2905,7 +2905,7 @@ export default {
             selectbutton_value: { icon: 'pi pi-th-large', value: 'Grid' },
             lightdark_value: 'light',
             value1: 20,
-            presetoptions: [{ value: 'TailauraUI' }, { value: 'Lara' }],
+            presetoptions: [{ value: 'TailwindUI' }, { value: 'Lara' }],
             slider_value: [20, 80],
             date: '12/12/2024',
             components: {
