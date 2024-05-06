@@ -48,7 +48,7 @@
     --primary-highlight-inverse: var(--surface-0);
     --primary-highlight-hover-opacity: 0.3;
 }
-
+// For Noir and similar primary colors 
 .customized-primary {
     &:not(.dark){
         --primary: var(--primary-950);
