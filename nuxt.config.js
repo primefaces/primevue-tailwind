@@ -32,7 +32,7 @@ export default defineNuxtConfig({
             ripple: true,
             unstyled: true
         },
-        importPT: { from: path.resolve(__dirname, './presets/lara/') }
+        importPT: { from: path.resolve(__dirname, './presets/aura/') }
     },
     app: {
         baseURL: baseUrl,
