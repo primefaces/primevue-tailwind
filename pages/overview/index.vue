@@ -6,6 +6,10 @@
     <div class="doc">
         <div class="doc-main">
             <div class="doc-intro">
+                <div style="border-radius: 20px; max-height: 640px" class="overflow-hidden mb-5 flex items-center">
+                    <img alt="PrimeVue Bento" :src="introDesktopImg" class="w-full hidden md:block" />
+                    <img alt="PrimeVue Bento Mobile" :src="introMobileImg" class="w-full md:hidden" />
+                </div>
                 <h1>Overview</h1>
                 <p>The flexibility of Tailwind CSS meets the convenience of PrimeVue components.</p>
             </div>
@@ -66,6 +70,14 @@ export default {
                 }
             ]
         };
+    },
+    computed: {
+        introDesktopImg() {
+            return `https://primefaces.org/cdn/primevue/images/overview${this.$appState.darkMode ? '-dark' : ''}.png`;
+        },
+        introMobileImg() {
+            return `https://primefaces.org/cdn/primevue/images/overview${this.$appState.darkMode ? '-dark' : ''}-mobile.png`;
+        }
     }
 };
 </script>
