@@ -1,8 +1,8 @@
 <template>
     <DocSectionText v-bind="$attrs">
         <p>
-            A Tailaura CSS preset is a pass-through object to style PrimeVue, the components are not aware of Tailaura in core as the utility classes are injected via <i>pt</i>. This makes the architecture flexible as another CSS library like UnoCSS
-            or Bootstrap can be used instead of Tailaura.
+            A Tailwind CSS preset is a pass-through object to style PrimeVue, the components are not aware of Tailwind in core as the utility classes are injected via <i>pt</i>. This makes the architecture flexible as another CSS library like UnoCSS
+            or Bootstrap can be used instead of Tailwind.
         </p>
         <p>
             The release bundle contains two built-in presets; <b>lara</b> and <b>aura</b>. In the future, more presets are planned e.g. for Material Design. The presets are implemented for you to use as a base to build your own, you may use them as

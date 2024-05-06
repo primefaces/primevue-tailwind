@@ -5,7 +5,7 @@ import Lara from '@/presets/lara';
 
 const $appStatePlugin = {
     install: (app) => {
-        const _appState = reactive({ preset: 'aura', darkMode: false, codeSandbox: false, sourceType: 'options-api', newsActive: false, announcement: null, storageKey: 'primevue-tailaura' });
+        const _appState = reactive({ preset: 'aura', darkMode: false, codeSandbox: false, sourceType: 'options-api', newsActive: false, announcement: null, storageKey: 'primevue-tailwind ' });
 
         watch(
             () => _appState.preset,
