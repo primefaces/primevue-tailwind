@@ -6,6 +6,8 @@
             your <i>nuxt-config</i> file, configure the <i>importPT</i> property of PrimeVue to the main preset file.
         </p>
         <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+        <h4>For Windows Users</h4>
+        <DocSectionCode :code="code2" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
     </DocSectionText>
 </template>
 
@@ -25,7 +27,22 @@ export default defineNuxtConfig({
         options: {
           unstyled: true
         },
-        importPT: { from: path.resolve(__dirname, './presets/lara/') }      //import and apply preset   
+        importPT: { from: path.resolve(__dirname, './presets/aura/') }      //import and apply preset   
+    }
+})
+`
+            },
+            code2: {
+                basic: `
+export default defineNuxtConfig({
+    modules: [
+        'nuxt-primevue'
+    ],
+    primevue: {
+        options: {
+          unstyled: true
+        },
+        importPT: { as: 'Aura', from: '~/presets/aura' }     //import and apply preset   
     }
 })
 `
