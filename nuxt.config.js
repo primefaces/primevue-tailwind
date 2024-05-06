@@ -33,6 +33,7 @@ export default defineNuxtConfig({
             unstyled: true
         },
         importPT: { from: path.resolve(__dirname, './presets/aura/') }
+        // importPT: { as: 'Lara', from: '~/presets/aura' } for Windows Users
     },
     app: {
         baseURL: baseUrl,
