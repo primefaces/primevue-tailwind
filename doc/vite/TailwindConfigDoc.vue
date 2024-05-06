@@ -13,7 +13,7 @@ export default {
                 basic: `
 export default {
     darkMode: 'class', // This enables dark mode based on the presence of the "dark" class in the HTML tag
-    content: [<your paths>],
+    ...
     theme: {
         extend: {
             colors: {
@@ -53,7 +53,7 @@ export default {
             }
         }
     }
-    plugins: []
+    ...
 }
 `
             }
