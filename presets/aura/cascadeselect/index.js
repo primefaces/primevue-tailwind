@@ -132,7 +132,7 @@ export default {
             // States
             {
                 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.active,
-                'hover:bg-primary-hover text-primary-highlight-inverse': context.active
+                'hover:bg-primary-highlight-hover text-primary-highlight-inverse': context.active
             },
 
             // Disabled
