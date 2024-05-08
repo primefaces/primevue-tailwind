@@ -9,13 +9,13 @@ export default {
             'flex-wrap',
 
             // Colors
-            'bg-surface-50',
-            'dark:bg-surface-800',
+            'bg-surface-0',
+            'dark:bg-surface-900',
             'text-surface-700',
             'dark:text-white/80',
 
             // Spacing
-            'p-5',
+            'p-[1.125rem]',
             'gap-2',
 
             // Borders
@@ -38,14 +38,14 @@ export default {
             'items-center inline-flex text-center align-bottom justify-center',
 
             // Spacing
-            'px-4 py-3',
+            'px-4 py-2',
 
             // Shape
             'rounded-md',
 
             // Font
             'leading-[normal]',
-            'font-bold',
+            'font-medium',
 
             // Colors
             'text-primary-inverse',
@@ -54,6 +54,8 @@ export default {
 
             // States
             'hover:bg-primary-hover',
+            'focus:outline-none focus:outline-offset-0 focus:ring-1',
+            'focus:ring-primary',
 
             // Misc
             'overflow-hidden',
@@ -88,10 +90,10 @@ export default {
             'dark:text-white/80',
 
             // Spacing
-            'p-8',
+            'p-[1.125rem]',
 
             // Borders
-            'border',
+            'border border-t-0',
             'border-surface-200',
             'dark:border-surface-700',
 
