@@ -259,7 +259,7 @@ export default {
                     'duration-200',
 
                     // States
-                    'hover:border-primary-color',
+                    'hover:border-primary',
                     { 'outline-none outline-offset-0 ring-1 ring-primary-500 dark:ring-primary-400': state.focused },
 
                     // Misc
@@ -291,7 +291,7 @@ export default {
                 // Color
                 { 'text-surface-700 dark:text-white/80': !context?.highlighted },
                 { 'bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80': !context?.highlighted },
-                { 'bg-primary-highlight text-primary-hihlight-inverse-color': context?.highlighted },
+                { 'bg-primary-highlight text-primary-hihlight-inverse': context?.highlighted },
 
                 //States
                 { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context?.highlighted },
@@ -596,7 +596,7 @@ export default {
                 'rounded-full',
 
                 // Color
-                { 'bg-primary-highlight text-primary-highliht-inverse-color': context.active },
+                { 'bg-primary-highlight text-primary-highliht-inverse': context.active },
                 'dark:text-white/70 dark:hover:text-white/80 dark:bg-surface-900',
 
                 // States
@@ -820,7 +820,7 @@ export default {
                     },
                     {
                         'peer-hover:border-surface-400 dark:peer-hover:border-surface-400': !props.disabled && !props.invalid && props.value !== props.modelValue,
-                        'peer-hover:border-primary-hover-color': !props.disabled && props.value == props.modelValue && props.value !== undefined,
+                        'peer-hover:border-primary-hover': !props.disabled && props.value == props.modelValue && props.value !== undefined,
                         'peer-hover:[&>*:first-child]:bg-primary-600 dark:peer-hover:[&>*:first-child]:bg-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
                         'peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                         'bg-surface-200 [&>*:first-child]:bg-surface-600 dark:bg-surface-700 dark:[&>*:first-child]:bg-surface-400 border-surface-300 dark:border-surface-700 select-none pointer-events-none cursor-default': props.disabled

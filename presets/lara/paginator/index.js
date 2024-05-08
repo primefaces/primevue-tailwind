@@ -196,7 +196,7 @@ export default {
                 'duration-200',
 
                 // States
-                'hover:border-primary-color',
+                'hover:border-primary',
                 { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !state.focused },
 
                 // Misc
@@ -358,7 +358,7 @@ export default {
                     'duration-200',
 
                     // States
-                    'hover:border-primary-color',
+                    'hover:border-primary',
                     'focus:outline-none focus:shadow-none',
                     'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50',
 
@@ -391,7 +391,7 @@ export default {
                 'duration-200',
 
                 // States
-                'hover:border-primary-color',
+                'hover:border-primary',
                 { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50': !state.focused },
 
                 // Misc

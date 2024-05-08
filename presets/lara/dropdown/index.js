@@ -27,7 +27,7 @@ export default {
             'duration-200',
 
             // States
-            { 'hover:border-primary-color': !props.invalid },
+            { 'hover:border-primary': !props.invalid },
             { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
             // Misc
@@ -241,7 +241,7 @@ export default {
             'duration-200',
 
             // States
-            'hover:border-primary-color',
+            'hover:border-primary',
             'focus:ring focus:outline-none focus:outline-offset-0',
             'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
 

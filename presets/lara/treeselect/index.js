@@ -21,7 +21,7 @@ export default {
             'duration-200',
 
             // States
-            { 'hover:border-primary-color': !props.invalid },
+            { 'hover:border-primary': !props.invalid },
             { 'outline-none outline-offset-0 ring ring-primary-400/50 dark:ring-primary-300/50': state.focused },
 
             // Misc
@@ -216,7 +216,7 @@ export default {
 
                     // States
                     {
-                        'peer-hover:border-primary-color': !props.disabled && !context.checked,
+                        'peer-hover:border-primary': !props.disabled && !context.checked,
                         'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'cursor-default opacity-60': props.disabled
@@ -322,7 +322,7 @@ export default {
                 'border border-surface-300 dark:border-surface-600',
 
                 // States
-                'hover:border-primary-color',
+                'hover:border-primary',
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50',
 
                 // Transition & Misc

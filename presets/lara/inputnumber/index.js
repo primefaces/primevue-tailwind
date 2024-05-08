@@ -52,7 +52,7 @@ export default {
                 { 'border-red-500 dark:border-red-400': parent.props.invalid },
 
                 // States
-                { 'hover:border-primary-color': !parent.props.invalid },
+                { 'hover:border-primary': !parent.props.invalid },
                 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50 focus:z-10',
                 { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
 

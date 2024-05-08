@@ -155,7 +155,7 @@ export default {
 
                 // States
                 'focus:outline-none focus:outline-offset-0 focus:ring-1 ',
-                'hover:bg-primary-hover hover:border-hover-color',
+                'hover:bg-primary-hover hover:border-primary-hover',
                 'focus:ring-primary-500 dark:focus:ring-primary-400'
             ]
         }

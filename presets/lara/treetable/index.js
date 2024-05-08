@@ -353,7 +353,7 @@ export default {
 
                     // States
                     {
-                        'peer-hover:border-primary-color': !props.disabled && !context.checked,
+                        'peer-hover:border-primary': !props.disabled && !context.checked,
                         'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'cursor-default opacity-60': props.disabled
