@@ -22,7 +22,7 @@ export default {
         ]
     },
     list: {
-        class: 'py-3 list-none m-0'
+        class: 'py-3 list-none m-0 outline-none'
     },
     item: ({ context }) => ({
         class: [

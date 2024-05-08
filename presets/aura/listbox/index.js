@@ -23,7 +23,7 @@ export default {
         ]
     },
     list: {
-        class: 'p-1 list-none m-0'
+        class: 'p-1 list-none m-0 outline-none'
     },
     item: ({ context }) => ({
         class: [
