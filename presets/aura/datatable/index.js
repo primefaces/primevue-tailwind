@@ -291,7 +291,7 @@ export default {
                 // Color
                 { 'text-surface-700 dark:text-white/80': !context?.highlighted },
                 { 'bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80': !context?.highlighted },
-                { 'bg-primary-highlight text-primary-hihlight-inverse': context?.highlighted },
+                { 'bg-primary-highlight text-primary-highlight-inverse': context?.highlighted },
 
                 //States
                 { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context?.highlighted },
