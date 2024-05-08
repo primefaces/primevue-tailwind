@@ -10,6 +10,7 @@
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="warning"></SplitButton>
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="help"></SplitButton>
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="danger"></SplitButton>
+        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="contrast"></SplitButton>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -51,6 +52,8 @@ export default {
 <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="warning"></SplitButton>
 <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="help"></SplitButton>
 <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="danger"></SplitButton>
+<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="contrast"></SplitButton>
+
 `,
                 options: `
 <template>
@@ -63,6 +66,7 @@ export default {
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="warning"></SplitButton>
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="help"></SplitButton>
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="danger"></SplitButton>
+        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="contrast"></SplitButton>
     </div>
 </template>
 
@@ -115,6 +119,8 @@ export default {
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="warning"></SplitButton>
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="help"></SplitButton>
         <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="danger"></SplitButton>
+        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" raised text severity="contrast"></SplitButton>
+
     </div>
 </template>
 
