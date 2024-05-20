@@ -49,7 +49,7 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <Button label="Turn off Sticky" @click="sticky.value = false" />
+        <Button label="Turn off Sticky" @click="sticky = false" />
         <Message severity="success" :sticky="sticky" :life="1000">Success Message</Message>
         <Message severity="info" :sticky="sticky" :life="2000">Info Message</Message>
         <Message severity="warn" :sticky="sticky" :life="3000">Warning Message</Message>
