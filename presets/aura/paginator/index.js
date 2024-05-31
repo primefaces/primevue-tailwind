@@ -155,7 +155,10 @@ export default {
 
             // Color
             'text-surface-500 dark:text-white/60',
-
+            {
+                'bg-primary-highlight border-primary-highlight  text-primary-highlight-inverse': context.active
+            },
+            
             // State
             {
                 'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.disabled,
