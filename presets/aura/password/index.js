@@ -73,7 +73,8 @@ export default {
                     'py-1.5 px-2': props.size == 'small',
                     'py-2 px-3': props.size == null
                 },
-
+                'w-full',
+                
                 // Shape
                 { 'rounded-md': parent.instance.$name !== 'InputGroup' },
                 { 'first:rounded-l-md rounded-none last:rounded-r-md': parent.instance.$name == 'InputGroup' },
