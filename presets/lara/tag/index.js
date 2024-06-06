@@ -21,6 +21,8 @@ export default {
             {
                 'bg-primary dark:bg-primary': props.severity == null || props.severity == 'primary',
                 'bg-green-500 dark:bg-green-400': props.severity == 'success',
+                'text-surface-700 dark:text-surface-300 bg-surface-100 dark:bg-surface-500/20':
+              props.severity == 'secondary',
                 'bg-blue-500 dark:bg-blue-400': props.severity == 'info',
                 'bg-orange-500 dark:bg-orange-400': props.severity == 'warning',
                 'bg-red-500 dark:bg-red-400': props.severity == 'danger'
