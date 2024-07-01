@@ -8,10 +8,6 @@
                     "path": "autocomplete"
                 },
                 {
-                    "name": "Calendar",
-                    "path": "calendar"
-                },
-                {
                     "name": "CascadeSelect",
                     "path": "cascadeselect"
                 },
@@ -20,23 +16,19 @@
                     "path": "checkbox"
                 },
                 {
-                    "name": "Chips",
-                    "path": "chips"
-                },
-                {
                     "name": "ColorPicker",
                     "path": "colorpicker"
                 },
                 {
-                    "name": "Dropdown",
-                    "path": "dropdown"
+                    "name": "DatePicker",
+                    "path": "datepicker"
                 },
                 {
                     "name": "FloatLabel",
                     "path": "floatlabel"
                 },
                 {
-                    "name": "IconFiled",
+                    "name": "IconField",
                     "path": "iconfield"
                 },
                 {
@@ -58,10 +50,6 @@
                 {
                     "name": "InputNumber",
                     "path": "inputnumber"
-                },
-                {
-                    "name": "InputSwitch",
-                    "path": "inputswitch"
                 },
                 {
                     "name": "InputText",
@@ -92,6 +80,10 @@
                     "path": "rating"
                 },
                 {
+                    "name": "Select",
+                    "path": "select"
+                },
+                {
                     "name": "SelectButton",
                     "path": "selectbutton"
                 },
@@ -106,6 +98,10 @@
                 {
                     "name": "ToggleButton",
                     "path": "togglebutton"
+                },
+                {
+                    "name": "ToggleSwitch",
+                    "path": "toggleswitch"
                 },
                 {
                     "name": "TreeSelect",
@@ -237,12 +233,12 @@
                     "path": "dialog"
                 },
                 {
-                    "name": "OverlayPanel",
-                    "path": "overlaypanel"
+                    "name": "Drawer",
+                    "path": "drawer"
                 },
                 {
-                    "name": "Sidebar",
-                    "path": "sidebar"
+                    "name": "Popover",
+                    "path": "popover"
                 },
                 {
                     "name": "Tooltip",
