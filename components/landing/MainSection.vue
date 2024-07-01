@@ -2786,9 +2786,9 @@
                             </defs>
                         </svg>
                         <div class="absolute top-[12.4rem] left-[14rem] z-40">
-                            <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
+                            <!-- <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
                                 <Chips v-model="chipsValue" class="!w-full" :pt="{ container: 'flex-nowrap' }" :ptOptions="{ mergeProps: true }" />
-                            </div>
+                            </div> -->
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center">
                                 <div class="flex items-center w-[6.5rem]">
                                     <Checkbox id="unstyled" v-model="checked" :binary="true" />
@@ -2810,7 +2810,7 @@
                                     <InputNumber v-model="value1" inputId="stacked-buttons" showButtons mode="currency" currency="USD" inputClass="w-full" />
                                 </div>
                                 <div class="flex items-center justify-center w-[3.4rem] ml-[1.5rem]">
-                                    <InputSwitch v-model="switched" class="mx-auto" />
+                                    <ToggleSwitch v-model="switched" class="mx-auto" />
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.95rem] p-3 justify-center items-center">
@@ -2879,7 +2879,7 @@ import Calendar from 'primevue/calendar';
 import Checkbox from 'primevue/checkbox';
 import Dropdown from 'primevue/dropdown';
 import InputNumber from 'primevue/inputnumber';
-import InputSwitch from 'primevue/inputswitch';
+import ToggleSwitch from 'primevue/toggleswitch';
 import SelectButton from 'primevue/selectbutton';
 import Slider from 'primevue/slider';
 import Tag from 'primevue/tag';
@@ -2914,7 +2914,7 @@ export default {
                 Checkbox,
                 SelectButton,
                 InputNumber,
-                InputSwitch,
+                ToggleSwitch,
                 Slider,
                 Calendar,
                 Tag,
