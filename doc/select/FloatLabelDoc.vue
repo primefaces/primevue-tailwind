@@ -1,9 +1,12 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Invalid state style is added using the <i>p-invalid</i> class to indicate a failed validation.</p>
+        <p>A floating label appears on top of the input field when focused. Visit <PrimeVueNuxtLink to="/floatlabel">FloatLabel</PrimeVueNuxtLink> documentation for more information.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
+        <FloatLabel class="w-full md:w-56">
+            <Select v-model="selectedCity" inputId="dd-city" :options="cities" optionLabel="name" class="w-full" />
+            <label for="dd-city">Select a City</label>
+        </FloatLabel>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -22,12 +25,18 @@ export default {
             ],
             code: {
                 basic: `
-<Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
+<FloatLabel class="w-full md:w-56">
+    <Select v-model="selectedCity" inputId="dd-city" :options="cities" optionLabel="name" class="w-full" />
+    <label for="dd-city">Select a City</label>
+</FloatLabel>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
+        <FloatLabel class="w-full md:w-56">
+            <Select v-model="selectedCity" inputId="dd-city" :options="cities" optionLabel="name" class="w-full" />
+            <label for="dd-city">Select a City</label>
+        </FloatLabel>
     </div>
 </template>
 
@@ -51,7 +60,10 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="w-full md:w-[14rem]" invalid />
+        <FloatLabel class="w-full md:w-56">
+            <Select v-model="selectedCity" inputId="dd-city" :options="cities" optionLabel="name" class="w-full" />
+            <label for="dd-city">Select a City</label>
+        </FloatLabel>
     </div>
 </template>
 

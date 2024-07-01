@@ -37,7 +37,7 @@ export default {
             { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled }
         ]
     }),
-    input: ({ props, parent }) => ({
+    label: ({ props, parent }) => ({
         class: [
             //Font
             'leading-[normal]',
@@ -78,7 +78,7 @@ export default {
             'appearance-none'
         ]
     }),
-    trigger: {
+    dropdown: {
         class: [
             // Flexbox
             'flex items-center justify-center',
@@ -95,7 +95,7 @@ export default {
             'rounded-r-md'
         ]
     },
-    panel: {
+    overlay: {
         class: [
             // Colors
             'bg-surface-0 dark:bg-surface-900',
@@ -107,7 +107,7 @@ export default {
             'shadow-md'
         ]
     },
-    wrapper: {
+    listContainer: {
         class: [
             // Sizing
             'max-h-[200px]',
@@ -119,9 +119,10 @@ export default {
     list: {
         class: 'p-1 list-none m-0'
     },
-    item: ({ context }) => ({
+    option: ({ context }) => ({
         class: [
             'relative',
+            'flex items-center',
 
             // Font
             'leading-none',
@@ -155,7 +156,7 @@ export default {
             'cursor-pointer overflow-hidden whitespace-nowrap'
         ]
     }),
-    itemgroup: {
+    optionGroup: {
         class: [
             'font-semibold',
 
@@ -169,7 +170,9 @@ export default {
             'cursor-auto'
         ]
     },
-    emptymessage: {
+    optionCheckIcon: 'relative -ms-1.5 me-1.5 text-surface-700 dark:text-white/80 w-4 h-4',
+    optionBlankIcon: 'w-4 h-4',
+    emptyMessage: {
         class: [
             // Font
             'leading-none',
@@ -199,45 +202,7 @@ export default {
             'border-surface-300 dark:border-surface-700'
         ]
     },
-    filtercontainer: {
-        class: 'relative'
-    },
-    filterinput: {
-        class: [
-            // Font
-            'leading-[normal]',
-
-            // Sizing
-            'py-2 pl-3 pr-7',
-            '-mr-7',
-            'w-full',
-
-            //Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-950',
-            'border-surface-200 dark:border-surface-700',
-
-            // Shape
-            'border',
-            'rounded-lg',
-            'appearance-none',
-
-            // Transitions
-            'transition',
-            'duration-200',
-
-            // States
-            'hover:border-surface-400 dark:hover:border-surface-600',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
-
-            // Misc
-            'appearance-none'
-        ]
-    },
-    filtericon: {
-        class: ['absolute', 'top-1/2 right-3', '-mt-2']
-    },
-    clearicon: {
+    clearIcon: {
         class: [
             // Color
             'text-surface-400 dark:text-surface-500',
@@ -251,7 +216,7 @@ export default {
             '-mt-2'
         ]
     },
-    loadingicon: {
+    loadingIcon: {
         class: 'text-surface-400 dark:text-surface-500 animate-spin'
     },
     transition: {

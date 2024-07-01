@@ -1,30 +1,24 @@
 <template>
-    <DocComponent
-        title="Vue Select Component"
-        header="Dropdown"
-        description="Dropdown also known as Select, is used to choose an item from a collection of options."
-        :componentDocs="docs"
-        :presetDoc="presetDoc"
-        apiLink="/dropdown/#api"
-        ptLink="/dropdown/#pt"
-    />
+    <DocComponent title="Vue Select Component" header="Select" description="Select is used to choose an item from a collection of options." :componentDocs="docs" :apiDocs="['Select']" />
 </template>
 
 <script>
-import AccessibilityDoc from '@/doc/dropdown/AccessibilityDoc.vue';
-import BasicDoc from '@/doc/dropdown/BasicDoc.vue';
-import ClearIconDoc from '@/doc/dropdown/ClearIconDoc.vue';
-import DisabledDoc from '@/doc/dropdown/DisabledDoc.vue';
-import EditableDoc from '@/doc/dropdown/EditableDoc.vue';
-import FilterDoc from '@/doc/dropdown/FilterDoc.vue';
-// import FloatLabelDoc from '@/doc/dropdown/FloatLabelDoc.vue';
-import GroupDoc from '@/doc/dropdown/GroupDoc.vue';
-import ImportDoc from '@/doc/dropdown/ImportDoc.vue';
-import InvalidDoc from '@/doc/dropdown/InvalidDoc.vue';
-import LazyVirtualScrollDoc from '@/doc/dropdown/LazyVirtualScrollDoc.vue';
-import LoadingStateDoc from '@/doc/dropdown/LoadingStateDoc.vue';
-import TemplateDoc from '@/doc/dropdown/TemplateDoc.vue';
-import VirtualScrollDoc from '@/doc/dropdown/VirtualScrollDoc.vue';
+import AccessibilityDoc from '@/doc/select/AccessibilityDoc.vue';
+import BasicDoc from '@/doc/select/BasicDoc.vue';
+import CheckmarkDoc from '@/doc/select/CheckmarkDoc.vue';
+import ClearIconDoc from '@/doc/select/ClearIconDoc.vue';
+import DisabledDoc from '@/doc/select/DisabledDoc.vue';
+import EditableDoc from '@/doc/select/EditableDoc.vue';
+// import FilledDoc from '@/doc/select/FilledDoc.vue';
+import FilterDoc from '@/doc/select/FilterDoc.vue';
+import FloatLabelDoc from '@/doc/select/FloatLabelDoc.vue';
+import GroupDoc from '@/doc/select/GroupDoc.vue';
+import ImportDoc from '@/doc/select/ImportDoc.vue';
+import InvalidDoc from '@/doc/select/InvalidDoc.vue';
+import LazyVirtualScrollDoc from '@/doc/select/LazyVirtualScrollDoc.vue';
+import LoadingStateDoc from '@/doc/select/LoadingStateDoc.vue';
+import TemplateDoc from '@/doc/select/TemplateDoc.vue';
+import VirtualScrollDoc from '@/doc/select/VirtualScrollDoc.vue';
 
 export default {
     data() {
@@ -39,6 +33,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'checkmark',
+                    label: 'Checkmark',
+                    component: CheckmarkDoc
                 },
                 {
                     id: 'editable',
@@ -80,10 +79,15 @@ export default {
                     label: 'Lazy Virtual Scroll',
                     component: LazyVirtualScrollDoc
                 },
+                {
+                    id: 'floatlabel',
+                    label: 'Float Label',
+                    component: FloatLabelDoc
+                },
                 // {
-                //     id: 'floatlabel',
-                //     label: 'Float Label',
-                //     component: FloatLabelDoc
+                //     id: 'filled',
+                //     label: 'Filled',
+                //     component: FilledDoc
                 // },
                 {
                     id: 'invalid',
@@ -95,7 +99,6 @@ export default {
                     label: 'Disabled',
                     component: DisabledDoc
                 },
-
                 {
                     id: 'accessibility',
                     label: 'Accessibility',

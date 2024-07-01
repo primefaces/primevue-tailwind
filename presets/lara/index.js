@@ -24,7 +24,6 @@ import deferred from './deferred';
 import dialog from './dialog';
 import divider from './divider';
 import dock from './dock';
-import dropdown from './dropdown';
 import fieldset from './fieldset';
 import fileupload from './fileupload';
 import floatlabel from './floatlabel';
@@ -64,6 +63,7 @@ import rating from './rating';
 import ripple from './ripple';
 import scrollpanel from './scrollpanel';
 import scrolltop from './scrolltop';
+import select from './select';
 import selectbutton from './selectbutton';
 import sidebar from './sidebar';
 import skeleton from './skeleton';
@@ -100,7 +100,7 @@ export default {
 
     //forms
     autocomplete,
-    dropdown,
+    select,
     inputnumber,
     inputtext,
     calendar,

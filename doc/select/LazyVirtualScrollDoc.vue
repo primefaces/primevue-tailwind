@@ -1,14 +1,14 @@
 <template>
     <DocSectionText v-bind="$attrs" />
     <div class="card flex justify-center">
-        <Dropdown
+        <Select
             v-model="selectedItem"
             :options="items"
             optionLabel="label"
             optionValue="value"
             :virtualScrollerOptions="{ lazy: true, onLazyLoad: onLazyLoad, itemSize: 38, showLoader: true, loading: loading, delay: 250 }"
             placeholder="Select Item"
-            class="w-full md:w-[14rem]"
+            class="w-full md:w-56"
         />
     </div>
     <DocSectionCode :code="code" />
@@ -23,13 +23,13 @@ export default {
             loading: false,
             code: {
                 basic: `
-<Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-[14rem]"
+<Select v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-56"
     :virtualScrollerOptions="{ lazy: true, onLazyLoad: onLazyLoad, itemSize: 38, showLoader: true, loading: loading, delay: 250 }" placeholder="Select Item" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-[14rem]"
+        <Select v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-56"
             :virtualScrollerOptions="{ lazy: true, onLazyLoad: onLazyLoad, itemSize: 38, showLoader: true, loading: loading, delay: 250 }" placeholder="Select Item" />
     </div>
 </template>
@@ -72,7 +72,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-[14rem]"
+        <Select v-model="selectedItem" :options="items" optionLabel="label" optionValue="value" class="w-full md:w-56"
             :virtualScrollerOptions="{ lazy: true, onLazyLoad: onLazyLoad, itemSize: 38, showLoader: true, loading: loading, delay: 250 }" placeholder="Select Item" />
     </div>
 </template>

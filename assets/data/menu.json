@@ -50,8 +50,8 @@
                             "to": "/colorpicker"
                         },
                         {
-                            "name": "Dropdown",
-                            "to": "/dropdown"
+                            "name": "Select",
+                            "to": "/select"
                         },
                         {
                             "name": "FloatLabel",

@@ -83,11 +83,11 @@
                         <Tag :value="data.status" :severity="getSeverity(data.status)" />
                     </template>
                     <template #filter="{ filterModel }">
-                        <Dropdown v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                        <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
                             <template #option="slotProps">
                                 <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                             </template>
-                        </Dropdown>
+                        </Select>
                     </template>
                 </Column>
                 <Column field="activity" header="Activity" sortable :showFilterMatchModes="false" style="min-width: 12rem">
@@ -115,7 +115,7 @@
 
 <script>
 import { CustomerService } from '@/service/CustomerService';
-import { FilterMatchMode, FilterOperator } from 'primevue/api';
+import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 
 export default {
     data() {
@@ -209,11 +209,11 @@ export default {
             <Tag :value="data.status" :severity="getSeverity(data.status)" />
         </template>
         <template #filter="{ filterModel }">
-            <Dropdown v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+            <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
                 <template #option="slotProps">
                     <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                 </template>
-            </Dropdown>
+            </Select>
         </template>
     </Column>
     <Column field="activity" header="Activity" sortable :showFilterMatchModes="false" style="min-width: 12rem">
@@ -309,11 +309,11 @@ export default {
                     <Tag :value="data.status" :severity="getSeverity(data.status)" />
                 </template>
                 <template #filter="{ filterModel }">
-                    <Dropdown v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
                         <template #option="slotProps">
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
-                    </Dropdown>
+                    </Select>
                 </template>
             </Column>
             <Column field="activity" header="Activity" sortable :showFilterMatchModes="false" style="min-width: 12rem">
@@ -339,7 +339,7 @@ export default {
 
 <script>
 import { CustomerService } from '@/service/CustomerService';
-import { FilterMatchMode, FilterOperator } from 'primevue/api';
+import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 
 export default {
     data() {
@@ -500,11 +500,11 @@ export default {
                     <Tag :value="data.status" :severity="getSeverity(data.status)" />
                 </template>
                 <template #filter="{ filterModel }">
-                    <Dropdown v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
                         <template #option="slotProps">
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
-                    </Dropdown>
+                    </Select>
                 </template>
             </Column>
             <Column field="activity" header="Activity" sortable :showFilterMatchModes="false" style="min-width: 12rem">
@@ -531,7 +531,7 @@ export default {
 <script setup>
 import { ref, onMounted } from 'vue';
 import { CustomerService } from '@/service/CustomerService';
-import { FilterMatchMode, FilterOperator } from 'primevue/api';
+import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 
 const customers = ref();
 const selectedCustomers = ref();

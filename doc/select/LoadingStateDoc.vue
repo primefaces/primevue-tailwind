@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
+        <p>Loading state can be used <i>loading</i> property.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Dropdown disabled placeholder="Select a City" class="w-full md:w-[14rem]" />
+        <Select placeholder="Loading..." loading class="w-full md:w-56"></Select>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -14,28 +14,26 @@ export default {
         return {
             code: {
                 basic: `
-<Dropdown disabled placeholder="Select a City" class="w-full md:w-[14rem]" />
+<Select placeholder="Loading..." loading class="w-full md:w-56"></Select>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown disabled placeholder="Select a City" class="w-full md:w-[14rem]" />
+        <Select placeholder="Loading..." loading class="w-full md:w-56"></Select>
     </div>
 </template>
 
 <script>
-
 <\/script>
 `,
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Dropdown disabled placeholder="Select a City" class="w-full md:w-[14rem]" />
+        <Select placeholder="Loading..." loading class="w-full md:w-56"></Select>
     </div>
 </template>
 
 <script setup>
-
 <\/script>
 `
             }

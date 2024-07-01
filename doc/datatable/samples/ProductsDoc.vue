@@ -86,7 +86,7 @@
 
         <div class="field">
             <label for="inventoryStatus" class="mb-3">Inventory Status</label>
-            <Dropdown id="inventoryStatus" v-model="product.inventoryStatus" :options="statuses" optionLabel="label" placeholder="Select a Status">
+            <Select id="inventoryStatus" v-model="product.inventoryStatus" :options="statuses" optionLabel="label" placeholder="Select a Status">
                 <template #value="slotProps">
                     <div v-if="slotProps.value && slotProps.value.value">
                         <Tag :value="slotProps.value.value" :severity="getStatusLabel(slotProps.value.label)" />
@@ -98,7 +98,7 @@
                         {{ slotProps.placeholder }}
                     </span>
                 </template>
-            </Dropdown>
+            </Select>
         </div>
 
         <div class="field">
@@ -169,7 +169,7 @@
 
 <script>
 import { ProductService } from '@/service/ProductService';
-import { FilterMatchMode } from 'primevue/api';
+import { FilterMatchMode } from '@primevue/core/api';
 
 export default {
     data() {
@@ -321,7 +321,7 @@ export default {
 
             <div class="field">
 				<label for="inventoryStatus" class="mb-3">Inventory Status</label>
-				<Dropdown id="inventoryStatus" v-model="product.inventoryStatus" :options="statuses" optionLabel="label" placeholder="Select a Status">
+				<Select id="inventoryStatus" v-model="product.inventoryStatus" :options="statuses" optionLabel="label" placeholder="Select a Status">
 					<template #value="slotProps">
 						<div v-if="slotProps.value && slotProps.value.value">
                             <Tag :value="slotProps.value.value" :severity="getStatusLabel(slotProps.value.label)" />
@@ -333,7 +333,7 @@ export default {
 							{{slotProps.placeholder}}
 						</span>
 					</template>
-				</Dropdown>
+				</Select>
 			</div>
 
             <div class="field">
@@ -399,7 +399,7 @@ export default {
 </template>
 
 <script>
-import { FilterMatchMode } from 'primevue/api';
+import { FilterMatchMode } from '@primevue/core/api';
 import { ProductService } from '@/service/ProductService';
 
 export default {
@@ -610,7 +610,7 @@ export default {
 
             <div class="field">
 				<label for="inventoryStatus" class="mb-3">Inventory Status</label>
-				<Dropdown id="inventoryStatus" v-model="product.inventoryStatus" :options="statuses" optionLabel="label" placeholder="Select a Status">
+				<Select id="inventoryStatus" v-model="product.inventoryStatus" :options="statuses" optionLabel="label" placeholder="Select a Status">
 					<template #value="slotProps">
 						<div v-if="slotProps.value && slotProps.value.value">
                             <Tag :value="slotProps.value.value" :severity="getStatusLabel(slotProps.value.label)" />
@@ -622,7 +622,7 @@ export default {
 							{{slotProps.placeholder}}
 						</span>
 					</template>
-				</Dropdown>
+				</Select>
 			</div>
 
             <div class="field">
@@ -689,7 +689,7 @@ export default {
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { FilterMatchMode } from 'primevue/api';
+import { FilterMatchMode } from '@primevue/core/api';
 import { useToast } from 'primevue/usetoast';
 import { ProductService } from '@/service/ProductService';
 

@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs"></DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
         return {
             code: {
                 basic: `
-import Dropdown from 'primevue/dropdown';
+import Select from 'primevue/select';
 `
             }
         };
