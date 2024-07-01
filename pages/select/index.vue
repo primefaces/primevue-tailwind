@@ -1,5 +1,5 @@
 <template>
-    <DocComponent title="Vue Select Component" header="Select" description="Select is used to choose an item from a collection of options." :componentDocs="docs" :apiDocs="['Select']" />
+    <DocComponent title="Vue Select Component" header="Select" description="Select is used to choose an item from a collection of options." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/select/#api" ptLink="/select/#pt" />
 </template>
 
 <script>
@@ -106,7 +106,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: 'dropdown'
+                key: 'select'
             }
         };
     }
