@@ -85,7 +85,7 @@
                     </button>
                 </li>
                 <li class="relative">
-                    <button v-styleclass="{ selector: '@next', enterClass: 'hidden', enterActiveClass: 'scalein', leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true }" type="button" class="topbar-item">
+                    <button v-styleclass="{ selector: '@next', enterFromClass: 'hidden', enterActiveClass: 'scalein', leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true }" type="button" class="topbar-item">
                         <i class="pi pi-palette"></i>
                     </button>
                     <AppConfig />

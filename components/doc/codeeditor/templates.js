@@ -1,7 +1,7 @@
 import pkg from '@/package.json';
 import Aura from '@/presets/aura';
 import Lara from '@/presets/lara';
-import { ObjectUtils } from 'primevue/utils';
+import { isArray, isDate, isFunction, isObject } from '@primeuix/utils/object';
 import { services } from './services';
 
 const PrimeVue = {
@@ -714,11 +714,11 @@ export default {
         const currentIndentStr = ' '.repeat(currentIndent);
         const nextIndentStr = ' '.repeat(currentIndent + indent);
 
-        if (ObjectUtils.isArray(value)) {
+        if (isArray(value)) {
             return '[' + value.map((v) => stringify(v, indent, currentIndent + indent)).join(', ') + ']';
-        } else if (ObjectUtils.isDate(value)) {
+        } else if (isDate(value)) {
             return value.toISOString();
-        } else if (ObjectUtils.isFunction(value)) {
+        } else if (isFunction(value)) {
             return value
                 .toString()
                 .split('\n')
@@ -730,7 +730,7 @@ export default {
                     }
                 })
                 .join('\n');
-        } else if (ObjectUtils.isObject(value)) {
+        } else if (isObject(value)) {
             return (
                 '{\n' +
                 Object.entries(value)

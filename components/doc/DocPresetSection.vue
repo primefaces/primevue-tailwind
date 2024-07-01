@@ -6,7 +6,7 @@
 <script>
 import Aura from '@/presets/aura';
 import Lara from '@/presets/lara';
-import { ObjectUtils } from 'primevue/utils';
+import { isArray, isDate, isFunction, isObject, resolveFieldData } from '@primeuix/utils/object';
 
 export default {
     data() {
@@ -15,11 +15,11 @@ export default {
             const currentIndentStr = ' '.repeat(currentIndent);
             const nextIndentStr = ' '.repeat(currentIndent + indent);
 
-            if (ObjectUtils.isArray(value)) {
+            if (isArray(value)) {
                 return '[' + value.map((v) => stringify(v, indent, currentIndent + indent)).join(', ') + ']';
-            } else if (ObjectUtils.isDate(value)) {
+            } else if (isDate(value)) {
                 return value.toISOString();
-            } else if (ObjectUtils.isFunction(value)) {
+            } else if (isFunction(value)) {
                 return value
                     .toString()
                     .split('\n')
@@ -31,7 +31,7 @@ export default {
                         }
                     })
                     .join('\n');
-            } else if (ObjectUtils.isObject(value)) {
+            } else if (isObject(value)) {
                 return (
                     '{\n' +
                     Object.entries(value)
@@ -47,8 +47,8 @@ export default {
 
         const preset = this.$attrs?.label === 'Aura' ? Aura : Lara;
         const presetKey = this.$attrs?.data?.presetKey ?? '';
-        const keys = ObjectUtils.isArray(presetKey) ? presetKey : [presetKey];
-        const basicCode = keys.map((key) => `\n${key.indexOf('.') > -1 ? `'${key}'` : key}: ${stringify(ObjectUtils.resolveFieldData(preset, key), 4).replace(/['"]/g, (match) => (match === '"' ? "'" : '"'))}`).join(',');
+        const keys = isArray(presetKey) ? presetKey : [presetKey];
+        const basicCode = keys.map((key) => `\n${key.indexOf('.') > -1 ? `'${key}'` : key}: ${stringify(resolveFieldData(preset, key), 4).replace(/['"]/g, (match) => (match === '"' ? "'" : '"'))}`).join(',');
 
         return {
             code: {

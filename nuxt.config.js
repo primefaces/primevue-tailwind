@@ -5,7 +5,7 @@ const baseUrl = '/';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     typescript: false,
-    modules: ['nuxt-gtag', 'nuxt-primevue'],
+    modules: ['nuxt-gtag', '@primevue/nuxt-module'],
     components: [
         {
             path: '~/components',
@@ -32,6 +32,7 @@ export default defineNuxtConfig({
             ripple: true,
             unstyled: true
         },
+        autoImport: true,
         importPT: { from: path.resolve(__dirname, './presets/aura/') }
         // importPT: { as: 'Aura', from: '~/presets/aura' } for Windows Users
     },
@@ -84,5 +85,6 @@ export default defineNuxtConfig({
                 dir: '../presets'
             }
         ]
-    }
+    },
+    devtools: { enabled: false }
 });

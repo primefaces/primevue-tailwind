@@ -68,7 +68,7 @@
                                         </svg>
                                     </div>
                                     <div class="flex items-center px-[1.2rem] py-2 dropdown-bg mt-2 bg-white dark:bg-surface-900 rounded-md min-h-[4.3rem]">
-                                        <Dropdown v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" :pt="{ panel: 'w-full' }" :ptOptions="{ mergeProps: true }" />
+                                        <Select v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" :pt="{ panel: 'w-full' }" :ptOptions="{ mergeProps: true }" />
                                     </div>
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">

@@ -57,7 +57,7 @@
         </div>
         <div class="flex justify-between items-center gap-2 w-full pt-4 pb-2 border-t border-surface-200 dark:border-surface-700">
             <span class="text-black dark:text-surface-0 text-sm font-medium m-0">Ripple Effect</span>
-            <InputSwitch :modelValue="$primevue.config.ripple" @update:model-value="setRipple($event)" />
+            <ToggleSwitch :modelValue="$primevue.config.ripple" @update:model-value="setRipple($event)" />
         </div>
     </div>
 </template>
