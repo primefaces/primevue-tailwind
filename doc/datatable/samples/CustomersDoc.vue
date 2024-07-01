@@ -641,7 +641,6 @@ const getSeverity = (status) => {
     },
     methods: {
         loadDemoData() {
-
             CustomerService.getCustomersLarge().then((data) => {
                 this.customers = this.getCustomers(data);
             });

@@ -156,7 +156,6 @@ const formatCurrency = (value) => {
     },
     methods: {
         loadDemoData() {
-
             CustomerService.getCustomersMedium().then((data) => {
                 this.customers = data;
             });

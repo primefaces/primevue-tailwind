@@ -37,12 +37,12 @@ export default {
     }),
     content: ({ props }) => ({
         class: [
-          'flex p-4',
-          {
-            'items-start': props.message.summary,
-            'items-center': !props.message.summary,
-          },
-        ],
+            'flex p-4',
+            {
+                'items-start': props.message.summary,
+                'items-center': !props.message.summary
+            }
+        ]
     }),
     icon: {
         class: [
@@ -63,7 +63,7 @@ export default {
         class: 'font-bold block'
     },
     detail: ({ props }) => ({
-        class: ['block', { 'mt-2': props.message.summary }],
+        class: ['block', { 'mt-2': props.message.summary }]
     }),
     closebutton: {
         class: [

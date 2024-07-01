@@ -16,7 +16,7 @@ export default {
             items: [
                 { label: 'Copy', icon: 'pi pi-copy' },
                 { label: 'Rename', icon: 'pi pi-file-edit' },
-                { label: 'Delete', icon: 'pi pi-trash', disabled: true },
+                { label: 'Delete', icon: 'pi pi-trash', disabled: true }
             ],
             code: {
                 basic: `
