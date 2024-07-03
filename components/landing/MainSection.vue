@@ -1,5 +1,6 @@
 <template>
-    <div class="w-full relative flex flex-col justify-center items-center">
+    <p>Under development</p>
+    <!-- <div class="w-full relative flex flex-col justify-center items-center">
         <div class="w-full min-[1419px]:h-screen relative top-0 mx-auto max-w-[1728px] z-20 pb-[6rem]">
             <div class="w-full min-[1419px]:h-screen flex">
                 <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 min-h-[1060px] relative pr-4 sm:pr-8 lg:pr-0 pl-4 sm:pl-8 xl:pl-20 min-[1419px]:pl-28 pr-15 flex-col justify-start items-center inline-flex">
@@ -2786,9 +2787,9 @@
                             </defs>
                         </svg>
                         <div class="absolute top-[12.4rem] left-[14rem] z-40">
-                            <!-- <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
+                            <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
                                 <Chips v-model="chipsValue" class="!w-full" :pt="{ container: 'flex-nowrap' }" :ptOptions="{ mergeProps: true }" />
-                            </div> -->
+                            </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center">
                                 <div class="flex items-center w-[6.5rem]">
                                     <Checkbox id="unstyled" v-model="checked" :binary="true" />
@@ -2847,7 +2848,7 @@
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <Calendar v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full" :pt="{ panel: 'z-40' }" :ptOptions="{ mergeProps: true }" />
+                                <DatePicker v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full" :pt="{ panel: 'z-40' }" :ptOptions="{ mergeProps: true }" />
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center justify-center gap-5">
                                 <Tag value="Lightful"></Tag>
@@ -2869,7 +2870,7 @@
             <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 h-screen bg-surface-0 dark:bg-surface-950"></div>
             <div class="hidden lg:block w-[35%] min-[1100px]:w-[39%] xl:w-5/12 min-[1419px]:w-1/2 h-screen bg-primary-50 dark:bg-surface-900"></div>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script>
@@ -2879,10 +2880,10 @@ import Calendar from 'primevue/calendar';
 import Checkbox from 'primevue/checkbox';
 import Dropdown from 'primevue/dropdown';
 import InputNumber from 'primevue/inputnumber';
-import ToggleSwitch from 'primevue/toggleswitch';
 import SelectButton from 'primevue/selectbutton';
 import Slider from 'primevue/slider';
 import Tag from 'primevue/tag';
+import ToggleSwitch from 'primevue/toggleswitch';
 
 export default {
     data() {
