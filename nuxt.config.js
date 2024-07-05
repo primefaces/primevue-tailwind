@@ -17,7 +17,8 @@ export default defineNuxtConfig({
     },
     vite: {
         optimizeDeps: {
-            disabled: true
+            noDiscovery: true,
+            include: []
         },
         esbuild: {
             minifyIdentifiers: false,

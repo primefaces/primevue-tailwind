@@ -19,7 +19,7 @@
                 <div>
                     <span class="font-medium text-surface-700 dark:text-surface-0/80 block mb-2">Invite Member</span>
                     <InputGroup class="w-full">
-                        <Chips class="w-full" disabled></Chips>
+                        <InputText class="w-full" disabled></InputText>
                         <Button label="Invite" icon="pi pi-users"></Button>
                     </InputGroup>
                 </div>
@@ -72,7 +72,7 @@ export default {
         <div>
             <span class="font-medium text-surface-700 dark:text-surface-0/80 block mb-2">Invite Member</span>
             <InputGroup class="w-full">
-                <Chips class="w-full" disabled></Chips>
+                <InputText class="w-full" disabled></InputText>
                 <Button label="Invite" icon="pi pi-users"></Button>
             </InputGroup>
         </div>
@@ -114,7 +114,7 @@ export default {
                 <div>
                     <span class="font-medium text-surface-700 dark:text-surface-0/80 block mb-2">Invite Member</span>
                     <InputGroup class="w-full">
-                        <Chips class="w-full" disabled></Chips>
+                        <InputText class="w-full" disabled></InputText>
                         <Button label="Invite" icon="pi pi-users"></Button>
                     </InputGroup>
                 </div>
@@ -177,7 +177,7 @@ export default {
                 <div>
                     <span class="font-medium text-surface-700 dark:text-surface-0/80 block mb-2">Invite Member</span>
                     <InputGroup class="w-full">
-                        <Chips class="w-full" disabled></Chips>
+                        <InputText class="w-full" disabled></InputText>
                         <Button label="Invite" icon="pi pi-users"></Button>
                     </InputGroup>
                 </div>

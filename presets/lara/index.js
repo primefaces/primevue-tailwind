@@ -13,13 +13,11 @@ import carousel from './carousel';
 import cascadeselect from './cascadeselect';
 import checkbox from './checkbox';
 import chip from './chip';
-import chips from './chips';
 import colorpicker from './colorpicker';
 import confirmpopup from './confirmpopup';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dataview from './dataview';
-import dataviewlayoutoptions from './dataviewlayoutoptions';
 import deferred from './deferred';
 import dialog from './dialog';
 import divider from './divider';
@@ -109,7 +107,6 @@ export default {
     inputswitch,
     selectbutton,
     slider,
-    chips,
     rating,
     multiselect,
     togglebutton,
@@ -138,7 +135,6 @@ export default {
     datatable,
     tree,
     dataview,
-    dataviewlayoutoptions,
     organizationchart,
     orderlist,
     picklist,

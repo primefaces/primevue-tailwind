@@ -159,7 +159,6 @@ import CascadeSelect from 'primevue/cascadeselect';
 import Carousel from 'primevue/carousel';
 import Checkbox from 'primevue/checkbox';
 import Chip from 'primevue/chip';
-import Chips from 'primevue/chips';
 import ColorPicker from 'primevue/colorpicker';
 import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';
@@ -169,7 +168,6 @@ import ConfirmationService from 'primevue/confirmationservice';
 import ContextMenu from 'primevue/contextmenu';
 import DataTable from 'primevue/datatable';
 import DataView from 'primevue/dataview';
-import DataViewLayoutOptions from 'primevue/dataviewlayoutoptions';
 import DeferredContent from 'primevue/deferredcontent';
 import Dialog from 'primevue/dialog';
 import DialogService from 'primevue/dialogservice'
