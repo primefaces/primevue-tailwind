@@ -15,3 +15,14 @@
     --p-text-muted-color: var(--p-surface-500);
     --p-text-hover-muted-color: var(--p-surface-600);
 }
+
+:root.p-noir {
+    --p-primary-color: var(--p-primary-950);
+    --p-primary-contrast-color: #ffffff;
+    --p-primary-hover-color: var(--p-primary-800);
+    --p-primary-active-color: var(--p-primary-700);
+    --p-highlight-background: var(--p-surface-950);
+    --p-highlight-color: #ffffff;
+    --p-highlight-focus-background: var(--p-surface-700);
+    --p-highlight-focus-color: #ffffff;
+}

@@ -1,4 +1,4 @@
-:root[class="p-dark"] {
+:root.p-dark {
     --p-primary-color: var(--p-primary-400);
     --p-primary-contrast-color: var(--p-surface-900);
     --p-primary-hover-color: var(--p-primary-300);
@@ -14,4 +14,15 @@
     --p-text-hover-color: var(--p-surface-0);
     --p-text-muted-color: var(--p-surface-400);
     --p-text-hover-muted-color: var(--p-surface-300);
+}
+
+:root.p-dark.p-noir {
+    --p-primary-color: var(--p-primary-50);
+    --p-primary-contrast-color: var(--p-surface-950);
+    --p-primary-hover-color: var(--p-primary-200);
+    --p-primary-active-color: var(--p-primary-300);
+    --p-highlight-background: var(--p-surface-50);
+    --p-highlight-color: var(--p-surface-950);
+    --p-highlight-focus-background: var(--p-surface-300);
+    --p-highlight-focus-color: var(--p-surface-950);
 }

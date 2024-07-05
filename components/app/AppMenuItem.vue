@@ -1,6 +1,6 @@
 <template>
     <li v-for="(menuitem, index) in menu" :key="`_root${index}`">
-        <button v-if="menuitem.children && root" v-styleclass="{ selector: '@next', enterFromClass: 'hidden', enterActiveClass: 'p-slidedown', leaveToClass: 'hidden', leaveActiveClass: 'p-slideup' }" type="button">
+        <button v-if="menuitem.children && root" v-styleclass="{ selector: '@next', enterFromClass: 'hidden', enterActiveClass: 'animate-slidedown', leaveToClass: 'hidden', leaveActiveClass: 'animate-slideup' }" type="button">
             <span class="menu-icon">
                 <i :class="menuitem.icon"></i>
             </span>
@@ -13,18 +13,19 @@
                 <i :class="menuitem.icon"></i>
             </span>
             <span>{{ menuitem.name }}</span>
-            <Badge v-if="menuitem.badge" :value="menuitem.badge" class="ml-auto"></Badge>
+            <Tag v-if="menuitem.badge" :value="menuitem.badge"></Tag>
         </a>
+
         <PrimeVueNuxtLink v-if="menuitem.to" :to="menuitem.to" :class="{ 'router-link-active': menuitem.to === $route.fullPath }">
             <span v-if="menuitem.icon && root" class="menu-icon">
                 <i :class="menuitem.icon"></i>
             </span>
             <span>{{ menuitem.name }}</span>
-            <Badge v-if="menuitem.badge" :value="menuitem.badge" class="ml-auto"></Badge>
+            <Tag v-if="menuitem.badge" :value="menuitem.badge"></Tag>
         </PrimeVueNuxtLink>
 
         <span v-if="!root && menuitem.children" class="menu-child-category">{{ menuitem.name }}</span>
-        <div v-if="menuitem.children" class="overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out" :class="{ hidden: menuitem.children && root && isActiveRootmenuItem(menuitem) }">
+        <div v-if="menuitem.children" :class="{ hidden: menuitem.children && root && isActiveRootmenuItem(menuitem) }">
             <ol>
                 <AppMenuItem :root="false" :menu="menuitem.children"></AppMenuItem>
             </ol>
@@ -47,7 +48,8 @@ export default {
     methods: {
         isActiveRootmenuItem(menuitem) {
             return (
-                menuitem.children && !menuitem.children.some((item) => item.to === `/${this.$router.currentRoute.value?.name?.replace('-', '/')}` || (item.children && item.children.some((it) => it.to === `/${this.$router.currentRoute.value.name}`)))
+                menuitem.children &&
+                !menuitem.children.some((item) => item.to === `/${this.$router.currentRoute.value?.name?.replaceAll('-', '/')}` || (item.children && item.children.some((it) => it.to === `/${this.$router.currentRoute.value.name}`)))
             );
         }
     }
