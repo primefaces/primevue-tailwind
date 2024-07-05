@@ -46,10 +46,6 @@
                             "to": "/colorpicker"
                         },
                         {
-                            "name": "Select",
-                            "to": "/select"
-                        },
-                        {
                             "name": "FloatLabel",
                             "to": "/floatlabel"
                         },
@@ -104,6 +100,10 @@
                         {
                             "name": "Rating",
                             "to": "/rating"
+                        },
+                        {
+                            "name": "Select",
+                            "to": "/select"
                         },
                         {
                             "name": "SelectButton",

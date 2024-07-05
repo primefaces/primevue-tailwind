@@ -28,7 +28,7 @@ export default {
             },
 
             // Color
-            'text-primary-inverse',
+            'text-primary-contrast',
             {
                 'bg-primary': !context.info && !context.success && !context.warning && !context.danger && !context.help && !context.secondary,
                 'bg-surface-500 dark:bg-surface-400': context.secondary,

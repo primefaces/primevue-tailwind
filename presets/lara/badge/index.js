@@ -28,7 +28,7 @@ export default {
             },
 
             // Color
-            'text-primary-inverse',
+            'text-primary-contrast',
             {
                 'bg-primary': props.severity == null || props.severity == 'primary',
                 'bg-surface-500 dark:bg-surface-400': props.severity == 'secondary',

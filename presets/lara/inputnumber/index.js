@@ -89,7 +89,7 @@ export default {
                 { 'order-1': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Colors
-                'text-primary-inverse',
+                'text-primary-contrast',
                 'bg-primary',
                 'border-primary',
 
@@ -107,7 +107,7 @@ export default {
 
                 //States
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-hover hover:border-primary-hover',
+                'hover:bg-primary-emphasis hover:border-primary-emphasis',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'
@@ -134,7 +134,7 @@ export default {
                 { 'order-3': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Colors
-                'text-primary-inverse',
+                'text-primary-contrast',
                 'bg-primary',
                 'border-primary',
 
@@ -152,7 +152,7 @@ export default {
 
                 //States
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-hover hover:border-primary-hover',
+                'hover:bg-primary-emphasis hover:border-primary-emphasis',
 
                 //Misc
                 'cursor-pointer overflow-hidden select-none'

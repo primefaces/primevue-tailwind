@@ -78,7 +78,7 @@ export default {
                 'justify-center',
 
                 // Colors (Conditional)
-                context.active ? 'bg-primary text-primary-inverse' : 'border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-surface-0', // Adjust colors as needed
+                context.active ? 'bg-primary text-primary-contrast' : 'border border-surface-200 dark:border-surface-700 text-surface-900 dark:text-surface-0', // Adjust colors as needed
 
                 // Size and Shape
                 'min-w-[2rem]',

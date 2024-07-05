@@ -146,14 +146,12 @@ export default {
                 'text-surface-700 dark:text-white/80': !context.focused && !context.selected,
                 'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
-
-                'text-primary-highlight-inverse': context.selected,
-                'bg-primary-highlight': context.selected
+                'bg-highlight': context.selected
             },
 
             //States
             { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
-            { 'hover:bg-primary-highlight-hover': context.selected },
+            { 'hover:bg-highlight-emphasis': context.selected },
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transitions

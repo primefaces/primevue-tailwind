@@ -1,8 +1,7 @@
-.layout-wrapper {
-    background-color: var(--body-bg);
-    background-image: var(--glow-image);
+.landing, .layout-wrapper {
     background-blend-mode: var(--glow-blend);
-    background-position: top center;
+    background-image: var(--glow-image);
+    background-position: top;
     background-repeat: no-repeat;
     background-size: auto 20rem;
 }

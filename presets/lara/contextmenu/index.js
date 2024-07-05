@@ -36,7 +36,7 @@ export default {
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
                 'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
-                'text-primary-highlight-inverse bg-primary-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active)
+                'bg-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active)
             },
 
             // Transitions
@@ -46,7 +46,7 @@ export default {
             // States
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.active,
-                'hover:bg-primary-highlight-hover text-primary-highlight-inverse': context.active
+                'hover:bg-highlight-emphasis': context.active
             },
 
             // Disabled

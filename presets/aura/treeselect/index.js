@@ -132,7 +132,7 @@ export default {
                 'py-1 px-2',
 
                 // Colors
-                context.selected ? 'bg-primary-highlight text-primary-highlight-inverse' : 'bg-transparent text-surface-600 dark:text-white/70',
+                context.selected ? 'bg-highlight' : 'bg-transparent text-surface-600 dark:text-white/70',
 
                 // States
                 { 'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
@@ -222,7 +222,7 @@ export default {
                     // States
                     {
                         'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                        'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                        'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                         'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                         'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
                     },

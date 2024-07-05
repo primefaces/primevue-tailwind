@@ -43,7 +43,7 @@ export default {
             // States
             {
                 'peer-hover:border-surface-400 dark:peer-hover:border-surface-400': !props.disabled && !props.invalid && props.value !== props.modelValue,
-                'peer-hover:border-primary-hover': !props.disabled && props.value == props.modelValue && props.value !== undefined,
+                'peer-hover:border-primary-emphasis': !props.disabled && props.value == props.modelValue && props.value !== undefined,
                 'peer-hover:[&>*:first-child]:bg-primary-600 dark:peer-hover:[&>*:first-child]:bg-primary-300': !props.disabled && props.value == props.modelValue && props.value !== undefined,
                 'peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                 'bg-surface-200 [&>*:first-child]:bg-surface-600 dark:bg-surface-700 dark:[&>*:first-child]:bg-surface-400 border-surface-300 dark:border-surface-700 select-none pointer-events-none cursor-default': props.disabled

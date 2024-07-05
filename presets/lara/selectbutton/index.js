@@ -24,7 +24,7 @@ export default {
                 'bg-surface-0 dark:bg-surface-900': !context.active,
                 'text-surface-700 dark:text-white/80': !context.active,
                 'border-surface-200 dark:border-surface-700': !context.active && !props.invalid,
-                'bg-primary border-primary text-primary-inverse': context.active
+                'bg-primary border-primary text-primary-contrast': context.active
             },
             // Invalid State
             { 'border-red-500 dark:border-red-400': props.invalid },
@@ -33,7 +33,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50 focus:z-10',
             {
                 'hover:bg-surface-50 dark:hover:bg-surface-800/80': !context.active && !props.invalid,
-                'hover:bg-primary-hover': context.active
+                'hover:bg-primary-emphasis': context.active
             },
             { 'opacity-60 select-none pointer-events-none cursor-default': context.disabled },
             // Transition

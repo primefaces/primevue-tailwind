@@ -29,7 +29,7 @@ export default {
 
             // States
             {
-                'hover:bg-primary-hover': props.target === 'parent',
+                'hover:bg-primary-emphasis': props.target === 'parent',
                 'hover:bg-surface-600 dark:hover:bg-surface-300': props.target === 'window'
             }
         ]

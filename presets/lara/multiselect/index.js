@@ -207,7 +207,7 @@ export default {
                 // States
                 {
                     'peer-hover:border-primary': !props.disabled && !context.checked,
-                    'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                    'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                     'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                     'cursor-default opacity-60': props.disabled
                 },
@@ -308,7 +308,7 @@ export default {
                 // States
                 {
                     'peer-hover:border-primary': !props.disabled && !context.checked,
-                    'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                    'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                     'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                     'cursor-default opacity-60': props.disabled
                 },
@@ -435,7 +435,7 @@ export default {
             // Color
             { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
             { 'bg-surface-200 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
-            { 'bg-primary-highlight text-primary-highlight-inverse': context.selected },
+            { 'bg-highlight': context.selected },
 
             //States
             { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },

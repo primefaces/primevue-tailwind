@@ -71,13 +71,13 @@ export default {
                 'leading-[normal]',
 
                 // Colors
-                'text-primary-inverse',
+                'text-primary-contrast',
                 'bg-primary',
                 'border border-primary',
 
                 // States
                 'focus:outline-none focus:outline-offset-0 focus:ring-1',
-                'hover:bg-primary-hover hover:border-primary-hover',
+                'hover:bg-primary-emphasis hover:border-primary-emphasis',
                 'focus:ring-primary-500 dark:focus:ring-primary-400'
             ]
         }
@@ -310,14 +310,14 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
+                'bg-highlight': context.selected && !context.disabled
             },
 
             // States
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
             {
                 'hover:bg-surface-50 dark:hover:bg-surface-500/10': !context.selected && !context.disabled,
-                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
+                'hover:bg-highlight-emphasis': context.selected && !context.disabled
             },
             {
                 'opacity-60 cursor-default': context.disabled,
@@ -341,7 +341,7 @@ export default {
             {
                 'bg-surface-100 dark:bg-surface-800 text-surface-600 dark:text-white/70': context.date.today && !context.selected && !context.disabled,
                 'bg-transparent text-surface-600 dark:text-white/70': !context.selected && !context.disabled && !context.date.today,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
+                'bg-highlight': context.selected && !context.disabled
             },
 
             // States
@@ -376,7 +376,7 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
+                'bg-highlight': context.selected && !context.disabled
             },
 
             // States
@@ -410,7 +410,7 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
+                'bg-highlight': context.selected && !context.disabled
             },
 
             // States

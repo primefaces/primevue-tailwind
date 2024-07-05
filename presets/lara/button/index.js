@@ -42,7 +42,7 @@ export default {
 
             // Primary Button
             {
-                'text-primary-inverse': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
+                'text-primary-contrast': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
                 'bg-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
                 'border border-primary': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain
             },
@@ -139,7 +139,7 @@ export default {
             { 'hover:bg-surface-300/20': props.plain && (props.text || props.outlined) },
 
             // Primary
-            { 'hover:bg-primary-hover hover:border-primary-hover': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain },
+            { 'hover:bg-primary-emphasis hover:border-primary-emphasis': !props.link && props.severity === null && !props.text && !props.outlined && !props.plain },
             { 'focus:ring-primary': props.severity === null },
             // Text & Outlined Button
             { 'hover:bg-primary-300/20': (props.text || props.outlined) && props.severity === null && !props.plain },

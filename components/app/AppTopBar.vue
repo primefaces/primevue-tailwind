@@ -159,9 +159,9 @@ export default {
             const root = document.documentElement;
 
             if (this.$appState.darkMode) {
-                root.classList.remove('dark');
+                root.classList.remove('p-dark');
             } else {
-                root.classList.add('dark');
+                root.classList.add('p-dark');
             }
 
             this.$appState.darkMode = !this.$appState.darkMode;

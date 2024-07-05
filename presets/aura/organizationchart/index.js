@@ -32,14 +32,13 @@ export default {
             {
                 'text-surface-600 dark:text-white/80': !context?.selected,
                 'bg-surface-0 dark:bg-surface-900': !context?.selected,
-                'text-primary-highlight-inverse': context?.selected,
-                'bg-primary-highlight': context?.selected
+                'bg-highlight': context?.selected
             },
 
             // States
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-800': context?.selectable && !context?.selected,
-                'hover:bg-primary-highlight-hover': context?.selectable && context?.selected
+                'hover:bg-highlight-emphasis': context?.selectable && context?.selected
             },
 
             { 'cursor-pointer': context?.selectable }

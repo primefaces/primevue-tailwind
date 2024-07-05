@@ -20,13 +20,13 @@ export default {
 
             // Color
             {
-                'text-primary-inverse bg-primary': props.target === 'parent',
+                'text-primary-contrast bg-primary': props.target === 'parent',
                 'text-white dark:text-surface-900 bg-surface-500 dark:bg-surface-400': props.target === 'window'
             },
 
             // States
             {
-                'hover:bg-primary-hover': props.target === 'parent',
+                'hover:bg-primary-emphasis': props.target === 'parent',
                 'hover:bg-surface-600 dark:hover:bg-surface-300': props.target === 'window'
             }
         ]

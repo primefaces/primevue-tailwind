@@ -55,7 +55,7 @@ export default {
 
                 // Primary Button
                 {
-                    'text-primary-inverse': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
+                    'text-primary-contrast': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'border border-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
@@ -153,7 +153,7 @@ export default {
                 { 'hover:bg-surface-300/10': parent.props.plain && (parent.props.text || parent.props.outlined) },
 
                 // Primary
-                { 'hover:bg-primary-hover hover:border-primary-hover': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
+                { 'hover:bg-primary-emphasis hover:border-primary-emphasis': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
                 { 'focus:ring-primary': parent.props.severity === null },
                 // Text & Outlined Button
                 { 'hover:bg-primary-300/10': (parent.props.text || parent.props.outlined) && parent.props.severity === null && !parent.props.plain },
@@ -258,7 +258,7 @@ export default {
 
                 // Primary Button
                 {
-                    'text-primary-inverse': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
+                    'text-primary-contrast': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'bg-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain,
                     'border border-primary': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain
                 },
@@ -356,7 +356,7 @@ export default {
                 { 'hover:bg-surface-300/10': parent.props.plain && (parent.props.text || parent.props.outlined) },
 
                 // Primary
-                { 'hover:bg-primary-hover hover:border-primary-hover': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
+                { 'hover:bg-primary-emphasis hover:border-primary-emphasis': !parent.props.link && parent.props.severity === null && !parent.props.text && !parent.props.outlined && !parent.props.plain },
                 { 'focus:ring-primary': parent.props.severity === null },
                 // Text & Outlined Button
                 { 'hover:bg-primary-300/10': (parent.props.text || parent.props.outlined) && parent.props.severity === null && !parent.props.plain },
@@ -452,7 +452,7 @@ export default {
                 {
                     'text-surface-500 dark:text-white/70': !context.focused && !context.active,
                     'text-surface-500 dark:text-white/70 bg-surface-200': context.focused && !context.active,
-                    'text-primary-highlight-inverse bg-primary-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active)
+                    'bg-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active)
                 },
 
                 // Transitions
@@ -462,7 +462,7 @@ export default {
                 // States
                 {
                     'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.active,
-                    'hover:bg-primary-highlight-hover text-primary-highlight-inverse': context.active
+                    'hover:bg-highlight-emphasis': context.active
                 },
 
                 // Disabled

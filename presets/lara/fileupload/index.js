@@ -48,12 +48,12 @@ export default {
             'font-bold',
 
             // Colors
-            'text-primary-inverse',
+            'text-primary-contrast',
             'bg-primary',
             'border-primary',
 
             // States
-            'hover:bg-primary-hover',
+            'hover:bg-primary-emphasis',
 
             // Misc
             'overflow-hidden',

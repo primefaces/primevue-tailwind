@@ -119,7 +119,7 @@ export default {
                 context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
                 // Color
-                (props.sortable === '' || props.sortable) && context.sorted ? 'bg-primary-highlight text-primary-highlight-inverse' : 'bg-surface-50 text-surface-700 dark:text-white/80 dark:bg-surface-800',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'bg-highlight' : 'bg-surface-50 text-surface-700 dark:text-white/80 dark:bg-surface-800',
                 'border-surface-200 dark:border-surface-700 ',
 
                 // States
@@ -188,7 +188,7 @@ export default {
             ]
         }),
         sorticon: ({ context }) => ({
-            class: ['ml-2', context.sorted ? 'text-primary-highlight-inverse' : 'text-surface-700 dark:text-white/70']
+            class: ['ml-2', context.sorted ? 'text-inherit' : 'text-surface-700 dark:text-white/70']
         }),
         sortbadge: {
             class: [
@@ -205,8 +205,7 @@ export default {
                 'ml-2',
 
                 // Color
-                'text-primary-highlight-inverse',
-                'bg-primary-highlight'
+                'bg-highlight'
             ]
         },
         columnfilter: {
@@ -287,7 +286,7 @@ export default {
 
                 // Color
                 { 'bg-surface-0 dark:bg-surface-800 text-surface-700 dark:text-white/80': !context?.highlighted },
-                { 'bg-primary-highlight text-primary-highlight-inverse': context?.highlighted },
+                { 'bg-highlight': context?.highlighted },
 
                 //States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context?.highlighted },
@@ -438,7 +437,7 @@ export default {
                     // Color
                     { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
                     { 'bg-surface-50 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
-                    { 'bg-primary-highlight text-primary-highlight-inverse': !context.focused && context.selected },
+                    { 'bg-highlight': !context.focused && context.selected },
 
                     //States
                     { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
@@ -582,9 +581,9 @@ export default {
                     // Shape
                     'rounded-md',
 
-                    'text-primary-inverse',
+                    'text-primary-contrast',
                     'bg-primary',
-                    'hover:bg-primary-hover hover:border-primary-hover',
+                    'hover:bg-primary-emphasis hover:border-primary-emphasis',
 
                     // Transitions
                     'transition duration-200 ease-in-out',
@@ -610,7 +609,7 @@ export default {
                 'rounded-full',
 
                 // Color
-                { 'bg-primary-highlight text-highlight-inverse': context.active },
+                { 'bg-highlight text-highlight-inverse': context.active },
                 'dark:text-white/70 dark:hover:text-white/80 dark:bg-surface-800',
 
                 // States
@@ -836,7 +835,7 @@ export default {
                     // States
                     {
                         'peer-hover:border-primary': !props.disabled,
-                        'peer-hover:border-primary-hover peer-hover:bg-primary-hover': !props.disabled && props.modelValue,
+                        'peer-hover:border-primary-emphasis peer-hover:bg-primary-emphasis': !props.disabled && props.modelValue,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'opacity-60 cursor-default': props.disabled
                     }
@@ -936,7 +935,7 @@ export default {
                     // States
                     {
                         'peer-hover:border-primary': !props.disabled && !context.checked,
-                        'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                        'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'cursor-default opacity-60': props.disabled
                     },
@@ -1034,7 +1033,7 @@ export default {
                     // States
                     {
                         'peer-hover:border-primary': !props.disabled && !context.checked,
-                        'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                        'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'cursor-default opacity-60': props.disabled
                     },
@@ -1101,7 +1100,7 @@ export default {
         class: [
             // Color
             'dark:text-white/80',
-            { 'bg-primary-highlight text-primary-highlight-inverse': context.selected },
+            { 'bg-highlight': context.selected },
             { 'bg-surface-0 text-surface-600 dark:bg-surface-800': !context.selected },
             { 'font-bold bg-surface-0 dark:bg-surface-800 z-20': props.frozenRow },
             { 'odd:bg-surface-0 odd:text-surface-600 dark:odd:bg-surface-800 even:bg-surface-50 even:text-surface-600 dark:even:bg-surface-900/50': context.stripedRows },

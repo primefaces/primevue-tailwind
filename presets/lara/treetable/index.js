@@ -111,7 +111,7 @@ export default {
 
             // Color
             'dark:text-white/80',
-            { 'bg-primary-highlight text-primary-highlight-inverse': context.selected },
+            { 'bg-highlight': context.selected },
             { 'bg-surface-0 text-surface-600 dark:bg-surface-800': !context.selected },
 
             // Hover & Flexbox
@@ -146,7 +146,7 @@ export default {
             context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
             // Color
-            (props.sortable === '' || props.sortable) && context.sorted ? 'bg-primary-highlight text-primary-highlight-inverse' : 'bg-surface-50 text-surface-700 dark:text-white/80 dark:bg-surface-800',
+            (props.sortable === '' || props.sortable) && context.sorted ? 'bg-highlight' : 'bg-surface-50 text-surface-700 dark:text-white/80 dark:bg-surface-800',
             'border-surface-200 dark:border-surface-700',
 
             // States
@@ -185,7 +185,7 @@ export default {
                 context?.size === 'small' ? 'p-2' : context?.size === 'large' ? 'p-5' : 'p-4',
 
                 // Color
-                (props.sortable === '' || props.sortable) && context.sorted ? 'bg-primary-highlight text-primary-highlight-inverse' : 'bg-surface-50 text-surface-700 dark:text-white/80 dark:bg-surface-800',
+                (props.sortable === '' || props.sortable) && context.sorted ? 'bg-highlight' : 'bg-surface-50 text-surface-700 dark:text-white/80 dark:bg-surface-800',
                 'border-surface-200 dark:border-surface-700',
 
                 // States
@@ -269,7 +269,7 @@ export default {
             ]
         },
         sorticon: ({ context }) => ({
-            class: ['ml-2 inline-block', context.sorted ? 'fill-primary-highlight-inverse' : 'fill-surface-700 dark:fill-white/70']
+            class: ['ml-2 inline-block', context.sorted ? 'text-inherit' : 'fill-surface-700 dark:fill-white/70']
         }),
         sortbadge: {
             class: [
@@ -286,7 +286,7 @@ export default {
                 'ml-2',
 
                 // Color
-                'text-primary-highlight-inverse bg-primary-highlight'
+                'bg-highlight'
             ]
         },
         columnresizer: {
@@ -354,7 +354,7 @@ export default {
                     // States
                     {
                         'peer-hover:border-primary': !props.disabled && !context.checked,
-                        'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                        'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                         'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
                         'cursor-default opacity-60': props.disabled
                     },

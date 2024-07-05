@@ -9,9 +9,10 @@
         max-width: 1728px;
         margin: 0 auto;
     }
+
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1199px) {
     .layout-topbar-inner {   
         padding-left: 2rem;
         padding-right: 2rem;
@@ -52,7 +53,7 @@
         z-index: 1102;
         height: 100%;
         transform: translateX(-100%);
-        background-color: var(--mobile-menu-bg);
+        background-color: var(--mobile-menu-background);
         backdrop-filter: blur(20px);
         width: 300px;
         opacity: 0;
@@ -119,7 +120,7 @@
 
     .blocked-scroll {
         overflow: hidden;
-        padding-right: var(--scrollbar-width);
+        padding-right: var(--p-scrollbar-width);
     }
 }
 

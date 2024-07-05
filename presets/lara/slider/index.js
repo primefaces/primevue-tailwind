@@ -56,7 +56,7 @@ export default {
             'border-primary',
 
             // States
-            'hover:bg-primary-hover',
+            'hover:bg-primary-emphasis',
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring',
             'ring-primary-400/50 dark:ring-primary-300/50',
 
@@ -89,7 +89,7 @@ export default {
             'border-primary',
 
             // States
-            'hover:bg-primary-hover',
+            'hover:bg-primary-emphasis',
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring',
             'focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
@@ -122,7 +122,7 @@ export default {
             'border-primary',
 
             // States
-            'hover:bg-primary-hover',
+            'hover:bg-primary-emphasis',
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring',
             'focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 

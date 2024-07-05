@@ -86,12 +86,12 @@ export default {
                 'rounded-md',
 
                 // Color
-                'text-primary-inverse',
+                'text-primary-contrast',
                 'bg-primary',
                 'border border-primary',
 
                 // States
-                'hover:bg-primary-hover hover:border-primary-hover',
+                'hover:bg-primary-emphasis hover:border-primary-emphasis',
                 'focus:outline-none focus:outline-offset-0 focus:ring',
                 'focus:ring-primary-500 dark:focus:ring-primary-400'
             ]

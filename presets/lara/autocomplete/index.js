@@ -157,13 +157,13 @@ export default {
                 'px-4 py-3 leading-[normal]',
 
                 // Colors
-                'text-primary-inverse',
+                'text-primary-contrast',
                 'bg-primary',
                 'border border-primary',
 
                 // States
                 'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-hover hover:border-primary-hover',
+                'hover:bg-primary-emphasis hover:border-primary-emphasis',
                 'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
             ]
         }
@@ -207,14 +207,12 @@ export default {
                 'text-surface-700 dark:text-white/80': !context.focused && !context.selected,
                 'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
-
-                'text-primary-highlight-inverse': context.selected,
-                'bg-primary-highlight': context.selected
+                'bg-highlight': context.selected
             },
 
             //States
             { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
-            { 'hover:bg-primary-highlight-hover': context.selected },
+            { 'hover:bg-highlight-emphasis': context.selected },
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transition

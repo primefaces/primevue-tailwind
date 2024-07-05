@@ -211,7 +211,7 @@ export default {
                 // States
                 {
                     'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                    'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                    'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                     'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                     'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
                 },
@@ -315,7 +315,7 @@ export default {
                 // States
                 {
                     'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                    'peer-hover:bg-primary-hover peer-hover:border-primary-hover': !props.disabled && context.checked,
+                    'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
                     'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
                     'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
                 },
@@ -435,14 +435,12 @@ export default {
                 'text-surface-700 dark:text-white/80': !context.focused && !context.selected,
                 'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
-
-                'text-primary-highlight-inverse': context.selected,
-                'bg-primary-highlight': context.selected
+                'bg-highlight': context.selected
             },
 
             //States
             { 'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.focused && !context.selected },
-            { 'hover:bg-primary-highlight-hover': context.selected },
+            { 'hover:bg-highlight-emphasis': context.selected },
             { 'hover:text-surface-700 hover:bg-surface-100 dark:hover:text-white dark:hover:bg-[rgba(255,255,255,0.03)]': context.focused && !context.selected },
 
             // Transition

@@ -74,7 +74,7 @@ export default {
                 'bg-surface-0 dark:bg-surface-800': !context.active,
                 'bg-primary': context.active,
                 'border-primary': context.active,
-                'text-primary-inverse': context.active
+                'text-primary-contrast': context.active
             },
 
             // States

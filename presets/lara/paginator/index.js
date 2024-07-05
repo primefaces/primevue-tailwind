@@ -156,7 +156,7 @@ export default {
             // Color
             'text-surface-500 dark:text-white/80',
             {
-                'bg-primary-highlight border-primary-highlight  text-primary-highlight-inverse': context.active
+                'bg-highlight': context.active
             },
 
             // State
@@ -307,7 +307,7 @@ export default {
                 // Color
                 { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
                 { 'bg-surface-50 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
-                { 'bg-primary-highlight text-primary-highlight-inverse': context.selected },
+                { 'bg-highlight': context.selected },
 
                 //States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
@@ -502,7 +502,7 @@ export default {
                 // Color
                 { 'text-surface-700 dark:text-white/80': !context.focused && !context.selected },
                 { 'bg-surface-50 dark:bg-surface-600/60 text-surface-700 dark:text-white/80': context.focused && !context.selected },
-                { 'bg-primary-highlight text-primary-highlight-inverse': context.selected },
+                { 'bg-highlight': context.selected },
 
                 //States
                 { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },

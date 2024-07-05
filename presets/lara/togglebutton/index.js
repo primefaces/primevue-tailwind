@@ -28,7 +28,7 @@ export default {
                 'bg-surface-0 dark:bg-surface-900 ': !props.modelValue,
                 'border-surface-200 dark:border-surface-700 ': !props.modelValue && !props.invalid,
                 'text-surface-700 dark:text-white/80': !props.modelValue,
-                'bg-primary border-primary text-primary-inverse': props.modelValue
+                'bg-primary border-primary text-primary-contrast': props.modelValue
             },
 
             // Invalid State
@@ -37,7 +37,7 @@ export default {
             // States
             {
                 'peer-hover:bg-surface-50 dark:peer-hover:bg-surface-800/80 peer-hover:border-surface-200 dark:peer-hover:bg-surface-700 peer-hover:text-surface-700 dark:peer-hover:text-white/80': !props.modelValue && !props.invalid,
-                'peer-hover:bg-primary-hover peer-hover:border-primary-hover': props.modelValue,
+                'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': props.modelValue,
                 'peer-focus-visible:ring peer-focus-visible:ring-primary-400/50 dark:peer-focus-visible:ring-primary-300/50': !props.disabled
             },
 

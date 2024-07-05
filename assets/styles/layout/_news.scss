@@ -6,13 +6,13 @@
     width: 100%;
     height: 2rem;
     padding: 0 2rem;
-    background-color:var(--news-bg);
+    background-color: var(--primary-color);
 
     .layout-news-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: calc(100% - var(--scrollbar-width, 0px));
+        width: calc(100% - var(--p-scrollbar-width, 0px));
         height: 100%;
     }
 
@@ -31,20 +31,20 @@
         text-overflow: ellipsis;
         overflow: hidden;
         min-width: 0%;
-        color:var(--news-text-color);
+        font-weight: 500;
+        color: var(--primary-contrast-color);
     }
 
     .layout-news-link {
         margin-left: 0.5rem;
         line-height: 1.5;
         white-space: nowrap;
-        color:var(--news-link-color);
     }
 
     .layout-news-link,
     .layout-news-link:visited,
     .layout-news-link:active {
-        color:var(--news-link-color);
+        color:var(--primary-contrast-color);
         font-weight:700;
     }
     .layout-news-link:hover {
@@ -52,6 +52,7 @@
     }
 
     .layout-news-close {
+        color:var(--primary-contrast-color);
         line-height: 1.5;
         cursor: pointer;
         display: inline-flex;
@@ -60,12 +61,11 @@
         border-radius: 50%;
         width: 1.5rem;
         height: 1.5rem;
-        transition: background-color 0.2s;
+        transition: background-color 0.3s;
         margin-left: 0.5rem;
-        color:var(--news-text-color);
 
         &:hover {
-            background-color:var(--news-close-hover-bg);
+            background-color: rgba(255, 255, 255, 0.2);
         }
     }
 }
@@ -85,6 +85,7 @@
     }
 
     .doc-section-label,
+    .doc-table tbody td .doc-option-name,
     .doc-table tbody td > i {
         scroll-margin-top: 8.5rem;
     }
