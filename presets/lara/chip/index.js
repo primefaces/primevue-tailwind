@@ -5,10 +5,10 @@ export default {
             'inline-flex items-center',
 
             // Spacing
-            'px-3',
+            'px-3 gap-2',
 
             // Shape
-            'rounded-[1.14rem]',
+            'rounded-[16px]',
 
             // Colors
             'text-surface-700 dark:text-white/70',
@@ -28,9 +28,6 @@ export default {
         class: [
             // Shape
             'rounded-md leading-6',
-
-            // Spacing
-            'ml-2',
 
             // Size
             'w-4 h-4',

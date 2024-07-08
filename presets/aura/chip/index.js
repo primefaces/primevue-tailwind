@@ -5,10 +5,10 @@ export default {
             'inline-flex items-center',
 
             // Spacing
-            'px-3 py-1',
+            'px-3 py-1 gap-2',
 
             // Shape
-            'rounded-[1.14rem]',
+            'rounded-[16px]',
 
             // Colors
             'text-surface-700 dark:text-white',
@@ -26,11 +26,9 @@ export default {
     },
     removeIcon: {
         class: [
+            'inline-block',
             // Shape
             'rounded-md leading-6',
-
-            // Spacing
-            'ml-[0.375rem]',
 
             // Size
             'w-4 h-4',

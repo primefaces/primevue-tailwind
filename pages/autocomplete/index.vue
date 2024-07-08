@@ -21,6 +21,8 @@ import ImportDoc from '@/doc/autocomplete/ImportDoc.vue';
 import InvalidDoc from '@/doc/autocomplete/InvalidDoc.vue';
 import MultipleDoc from '@/doc/autocomplete/MultipleDoc.vue';
 import ObjectsDoc from '@/doc/autocomplete/ObjectsDoc.vue';
+// import FloatLabelDoc from '@/doc/autocomplete/FloatLabelDoc.vue';
+// import FilledDoc from '@/doc/autocomplete/FilledDoc.vue';
 import TemplateDoc from '@/doc/autocomplete/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/autocomplete/VirtualScrollDoc.vue';
 
@@ -78,6 +80,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
+                // {
+                //     id: 'filled',
+                //     label: 'Filled',
+                //     component: FilledDoc
+                // },
                 {
                     id: 'invalid',
                     label: 'Invalid',
@@ -88,7 +95,6 @@ export default {
                     label: 'Disabled',
                     component: DisabledDoc
                 },
-
                 {
                     id: 'accessibility',
                     label: 'Accessibility',
