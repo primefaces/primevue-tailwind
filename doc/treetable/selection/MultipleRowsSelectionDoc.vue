@@ -8,7 +8,7 @@
     </DocSectionText>
     <div class="card">
         <div class="flex justify-center items-center mb-4 gap-2">
-            <InputSwitch v-model="metaKey" inputId="input-metakey" />
+            <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
         <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" :metaKeySelection="metaKey">
@@ -31,7 +31,7 @@ export default {
             metaKey: true,
             code: {
                 basic: `
-<InputSwitch v-model="metaKey" inputId="input-metakey" />
+<ToggleSwitch v-model="metaKey" inputId="input-metakey" />
 
 <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" :metaKeySelection="metaKey">
     <Column field="name" header="Name" expander></Column>
@@ -43,7 +43,7 @@ export default {
 <template>
     <div class="card">
         <div class="flex justify-center items-center mb-4 gap-2">
-            <InputSwitch v-model="metaKey" inputId="input-metakey" />
+            <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
         <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" :metaKeySelection="metaKey">
@@ -75,7 +75,7 @@ export default {
 <template>
     <div class="card">
         <div class="flex justify-center items-center mb-4 gap-2">
-            <InputSwitch v-model="metaKey" inputId="input-metakey" />
+            <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
         <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="multiple" :metaKeySelection="metaKey">

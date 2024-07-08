@@ -7,7 +7,6 @@ import badgedirective from './badgedirective';
 import blockui from './blockui';
 import breadcrumb from './breadcrumb';
 import button from './button';
-import calendar from './calendar';
 import card from './card';
 import carousel from './carousel';
 import cascadeselect from './cascadeselect';
@@ -18,10 +17,12 @@ import confirmpopup from './confirmpopup';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
 import dataview from './dataview';
+import datepicker from './datepicker';
 import deferred from './deferred';
 import dialog from './dialog';
 import divider from './divider';
 import dock from './dock';
+import drawer from './drawer';
 import fieldset from './fieldset';
 import fileupload from './fileupload';
 import floatlabel from './floatlabel';
@@ -36,7 +37,6 @@ import inputgroupaddon from './inputgroupaddon';
 import inputmask from './inputmask';
 import inputnumber from './inputnumber';
 import inputotp from './inputotp';
-import inputswitch from './inputswitch';
 import inputtext from './inputtext';
 import knob from './knob';
 import listbox from './listbox';
@@ -48,12 +48,12 @@ import metergroup from './metergroup';
 import multiselect from './multiselect';
 import orderlist from './orderlist';
 import organizationchart from './organizationchart';
-import overlaypanel from './overlaypanel';
 import paginator from './paginator';
 import panel from './panel';
 import panelmenu from './panelmenu';
 import password from './password';
 import picklist from './picklist';
+import popover from './popover';
 import progressbar from './progressbar';
 import progressspinner from './progressspinner';
 import radiobutton from './radiobutton';
@@ -63,7 +63,6 @@ import scrollpanel from './scrollpanel';
 import scrolltop from './scrolltop';
 import select from './select';
 import selectbutton from './selectbutton';
-import sidebar from './sidebar';
 import skeleton from './skeleton';
 import slider from './slider';
 import speeddial from './speeddial';
@@ -81,6 +80,7 @@ import tieredmenu from './tieredmenu';
 import timeline from './timeline';
 import toast from './toast';
 import togglebutton from './togglebutton';
+import toggleswitch from './toggleswitch';
 import toolbar from './toolbar';
 import tooltip from './tooltip';
 import tree from './tree';
@@ -101,10 +101,10 @@ export default {
     select,
     inputnumber,
     inputtext,
-    calendar,
+    datepicker,
     checkbox,
     radiobutton,
-    inputswitch,
+    toggleswitch,
     selectbutton,
     slider,
     rating,
@@ -172,8 +172,8 @@ export default {
 
     //overlays
     dialog,
-    overlaypanel,
-    sidebar,
+    popover,
+    drawer,
     confirmpopup,
 
     //messages

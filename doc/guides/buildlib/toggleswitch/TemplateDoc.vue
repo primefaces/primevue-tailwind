@@ -19,7 +19,7 @@ export default {
 <template>
     <div class="flex items-center gap-4">
         <label :for="$attrs.inputId">{{ label }}</label>
-        <InputSwitch v-bind="$attrs" />
+        <ToggleSwitch v-bind="$attrs" />
     </div>
 </template>
 `

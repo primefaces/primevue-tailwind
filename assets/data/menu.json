@@ -30,10 +30,6 @@
                             "to": "/autocomplete"
                         },
                         {
-                            "name": "Calendar",
-                            "to": "/calendar"
-                        },
-                        {
                             "name": "CascadeSelect",
                             "to": "/cascadeselect"
                         },
@@ -44,6 +40,10 @@
                         {
                             "name": "ColorPicker",
                             "to": "/colorpicker"
+                        },
+                        {
+                            "name": "DatePicker",
+                            "to": "/datepicker"
                         },
                         {
                             "name": "FloatLabel",
@@ -68,10 +68,6 @@
                         {
                             "name": "InputMask",
                             "to": "/inputmask"
-                        },
-                        {
-                            "name": "InputSwitch",
-                            "to": "/inputswitch"
                         },
                         {
                             "name": "InputText",
@@ -120,6 +116,10 @@
                         {
                             "name": "ToggleButton",
                             "to": "/togglebutton"
+                        },
+                        {
+                            "name": "ToggleSwitch",
+                            "to": "/toggleswitch"
                         },
                         {
                             "name": "TreeSelect",
@@ -316,12 +316,12 @@
                             "to": "/dynamicdialog"
                         },
                         {
-                            "name": "OverlayPanel",
-                            "to": "/overlaypanel"
+                            "name": "Drawer",
+                            "to": "/drawer"
                         },
                         {
-                            "name": "Sidebar",
-                            "to": "/sidebar"
+                            "name": "Popover",
+                            "to": "/popover"
                         },
                         {
                             "name": "Tooltip",

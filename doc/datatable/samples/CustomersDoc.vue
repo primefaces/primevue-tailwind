@@ -67,7 +67,7 @@
                         {{ formatDate(data.date) }}
                     </template>
                     <template #filter="{ filterModel }">
-                        <Calendar v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+                        <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
                     </template>
                 </Column>
                 <Column field="balance" header="Balance" sortable filterField="balance" dataType="numeric" style="min-width: 10rem">
@@ -193,7 +193,7 @@ export default {
             {{ formatDate(data.date) }}
         </template>
         <template #filter="{ filterModel }">
-            <Calendar v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+            <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
         </template>
     </Column>
     <Column field="balance" header="Balance" sortable filterField="balance" dataType="numeric" style="min-width: 10rem">
@@ -293,7 +293,7 @@ export default {
                     {{ formatDate(data.date) }}
                 </template>
                 <template #filter="{ filterModel }">
-                    <Calendar v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+                    <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
                 </template>
             </Column>
             <Column field="balance" header="Balance" sortable filterField="balance" dataType="numeric" style="min-width: 10rem">
@@ -484,7 +484,7 @@ export default {
                     {{ formatDate(data.date) }}
                 </template>
                 <template #filter="{ filterModel }">
-                    <Calendar v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+                    <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
                 </template>
             </Column>
             <Column field="balance" header="Balance" sortable filterField="balance" dataType="numeric" style="min-width: 10rem">

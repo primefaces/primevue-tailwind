@@ -23,7 +23,7 @@ export default {
 <template>
     <div class="flex items-center gap-4">
         <label :for="$attrs.inputId">{{ label }}</label>
-        <InputSwitch v-bind="$attrs" :pt="preset" :ptOptions="{ mergeSections: false, mergeProps: false }" />
+        <ToggleSwitch v-bind="$attrs" :pt="preset" :ptOptions="{ mergeSections: false, mergeProps: false }" />
     </div>
 </template>
 `
