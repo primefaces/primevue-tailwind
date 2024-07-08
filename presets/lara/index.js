@@ -99,6 +99,7 @@ export default {
     //forms
     autocomplete,
     select,
+    dropdown: select,
     inputnumber,
     inputtext,
     datepicker,
