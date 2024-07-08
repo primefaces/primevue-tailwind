@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Calendar is used a controlled input component with <i>v-model</i> property.</p>
+        <p>Specify the <i>variant</i> property as <i>filled</i> to display the component with a higher visual emphasis than the default <i>outlined</i> style.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date" inline showWeek />
+        <DatePicker v-model="date" variant="filled" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             date: null,
             code: {
                 basic: `
-<Calendar v-model="date" inline showWeek />
+<DatePicker v-model="date" variant="filled" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" inline showWeek />
+        <DatePicker v-model="date" variant="filled" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" inline showWeek />
+        <DatePicker v-model="date" variant="filled" />
     </div>
 </template>
 

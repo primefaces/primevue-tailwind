@@ -3,7 +3,7 @@
         <p>Specifying <i>view</i> as <i>year</i> in addition to a suitable <i>dateFormat</i> enables the year picker.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date" view="year" dateFormat="yy" />
+        <DatePicker v-model="date" view="year" dateFormat="yy" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             date: null,
             code: {
                 basic: `
-<Calendar v-model="date" view="year" dateFormat="yy" />
+<DatePicker v-model="date" view="year" dateFormat="yy" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" view="year" dateFormat="yy" />
+        <DatePicker v-model="date" view="year" dateFormat="yy" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" view="year" dateFormat="yy" />
+        <DatePicker v-model="date" view="year" dateFormat="yy" />
     </div>
 </template>
 

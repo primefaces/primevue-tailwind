@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Calendar is used a controlled input component with <i>v-model</i> property.</p>
+        <p>When <i>showButtonBar</i> is present, today and clear buttons are displayed at the footer.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date" />
+        <DatePicker v-model="date" showButtonBar />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             date: null,
             code: {
                 basic: `
-<Calendar v-model="date" />
+<DatePicker v-model="date" showButtonBar />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" />
+        <DatePicker v-model="date" showButtonBar />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" />
+        <DatePicker v-model="date" showButtonBar />
     </div>
 </template>
 

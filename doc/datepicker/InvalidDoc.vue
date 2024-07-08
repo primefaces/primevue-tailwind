@@ -1,12 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>A floating label appears on top of the input field when focused.</p>
+        <p>Invalid state is displayed using the <i>invalid</i> prop to indicate a failed validation. You can use this style when integrating with form validation libraries.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <span class="p-float-label">
-            <Calendar v-model="date" inputId="birth_date" />
-            <label for="birth_date">Birth Date</label>
-        </span>
+        <DatePicker v-model="date" :invalid="date === null" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -18,18 +15,12 @@ export default {
             date: null,
             code: {
                 basic: `
-<span class="p-float-label">
-    <Calendar v-model="date" inputId="birth_date" />
-    <label for="birth_date">Birth Date</label>
-</span>
+<DatePicker v-model="date" :invalid="date === null"  />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <span class="p-float-label">
-            <Calendar v-model="date" inputId="birth_date" />
-            <label for="birth_date">Birth Date</label>
-        </span>
+        <DatePicker v-model="date" :invalid="date === null"  />
     </div>
 </template>
 
@@ -46,10 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <span class="p-float-label">
-            <Calendar v-model="date" inputId="birth_date" />
-            <label for="birth_date">Birth Date</label>
-        </span>
+        <DatePicker v-model="date" :invalid="date === null"  />
     </div>
 </template>
 

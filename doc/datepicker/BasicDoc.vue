@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Month only picker is enabled by specifying <i>view</i> as <i>month</i> in addition to a suitable <i>dateFormat</i>.</p>
+        <p>DatePicker is used a controlled input component with <i>v-model</i> property.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date" view="month" dateFormat="mm/yy" />
+        <DatePicker v-model="date" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             date: null,
             code: {
                 basic: `
-<Calendar v-model="date" view="month" dateFormat="mm/yy" />
+<DatePicker v-model="date" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" view="month" dateFormat="mm/yy" />
+        <DatePicker v-model="date" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" view="month" dateFormat="mm/yy" />
+        <DatePicker v-model="date" />
     </div>
 </template>
 

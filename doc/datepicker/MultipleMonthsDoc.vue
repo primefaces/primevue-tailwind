@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>In order to choose multiple dates, set <i>selectionMode</i> as <i>multiple</i>. In this mode, the value binding should be an array.</p>
+        <p>Number of months to display is configured with the <i>numberOfMonths</i> property.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="dates" selectionMode="multiple" :manualInput="false" />
+        <DatePicker v-model="date" :numberOfMonths="2" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -12,15 +12,15 @@
 export default {
     data() {
         return {
-            dates: null,
+            date: null,
             code: {
                 basic: `
-<Calendar v-model="dates" selectionMode="multiple" :manualInput="false" />
+<DatePicker v-model="date" :numberOfMonths="2" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="dates" selectionMode="multiple" :manualInput="false" />
+        <DatePicker v-model="date" :numberOfMonths="2" />
     </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 export default {
     data() {
         return {
-            dates: null
+            date: null
         };
     }
 };
@@ -37,14 +37,14 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="dates" selectionMode="multiple" :manualInput="false" />
+        <DatePicker v-model="date" :numberOfMonths="2" />
     </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 
-const dates = ref();
+const date = ref();
 <\/script>
 `
             }

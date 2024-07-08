@@ -102,6 +102,7 @@ export default {
     inputnumber,
     inputtext,
     datepicker,
+    calendar: datepicker,
     checkbox,
     radiobutton,
     toggleswitch,

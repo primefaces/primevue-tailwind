@@ -2,7 +2,10 @@ export default {
     root: ({ props }) => ({
         class: [
             // Display and Position
-            'inline-flex',
+            {
+                flex: props.fluid,
+                'inline-flex': !props.fluid
+            },
             'max-w-full',
             'relative',
 
@@ -10,74 +13,76 @@ export default {
             { 'opacity-60 select-none pointer-events-none cursor-default': props.disabled }
         ]
     }),
-    input: ({ props, parent }) => ({
-        class: [
-            // Display
-            'flex flex-auto',
-
-            // Font
-            'leading-none',
-
-            // Colors
-            'text-surface-600 dark:text-surface-200',
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
-            'bg-surface-0 dark:bg-surface-900',
-            'border',
-            { 'border-surface-300 dark:border-surface-600': !props.invalid },
-
-            // Invalid State
-            { 'border-red-500 dark:border-red-400': props.invalid },
-
-            // Spacing
-            'm-0 p-3',
-
-            // Shape
-            'appearance-none',
-            { 'rounded-md': !props.showIcon || props.iconDisplay == 'input' },
-            { 'rounded-l-md  flex-1 pr-9': props.showIcon && props.iconDisplay !== 'input' },
-            { 'rounded-md flex-1 pr-9': props.showIcon && props.iconDisplay === 'input' },
-
-            // Transitions
-            'transition-colors',
-            'duration-200',
-
-            // States
-            { 'hover:border-primary-emphasis': !props.invalid },
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50',
-
-            // Filled State *for FloatLabel
-            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null }
-        ]
-    }),
-    inputicon: {
-        class: ['absolute top-[50%] -mt-2', 'text-surface-600 dark:text-surface-200', 'right-[.75rem]']
-    },
-    dropdownbutton: {
+    pcInput: ({ props, parent }) => ({
         root: {
             class: [
-                'relative',
+                // Display
+                'flex-auto w-[1%]',
 
-                // Alignments
-                'items-center inline-flex text-center align-bottom',
-
-                // Shape
-                'rounded-r-md',
-
-                // Size
-                'px-4 py-3 leading-none',
+                // Font
+                'leading-none',
 
                 // Colors
-                'text-primary-contrast',
-                'bg-primary',
-                'border border-primary',
+                'text-surface-600 dark:text-surface-200',
+                'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+                'bg-surface-0 dark:bg-surface-900',
+                'border',
+                { 'border-surface-300 dark:border-surface-600': !props.invalid },
+
+                // Invalid State
+                { 'border-red-500 dark:border-red-400': props.invalid },
+
+                // Spacing
+                'm-0 p-3',
+
+                // Shape
+                'appearance-none',
+                { 'rounded-md': !props.showIcon || props.iconDisplay == 'input' },
+                { 'rounded-l-md  flex-1 pr-9': props.showIcon && props.iconDisplay !== 'input' },
+                { 'rounded-md flex-1 pr-9': props.showIcon && props.iconDisplay === 'input' },
+
+                // Transitions
+                'transition-colors',
+                'duration-200',
 
                 // States
-                'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-emphasis hover:border-primary-emphasis',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+                { 'hover:border-primary-emphasis': !props.invalid },
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50',
+
+                // Filled State *for FloatLabel
+                { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null }
             ]
         }
+    }),
+    dropdownIcon: {
+        class: ['absolute top-[50%] -mt-2', 'text-surface-600 dark:text-surface-200', 'right-[.75rem]']
     },
+    dropdown: {
+        class: [
+            'relative w-10',
+
+            // Alignments
+            'items-center inline-flex text-center align-bottom justify-center',
+
+            // Shape
+            'rounded-r-md',
+
+            // Size
+            'px-4 py-3 leading-none',
+
+            // Colors
+            'text-primary-inverse',
+            'bg-primary',
+            'border border-primary',
+
+            // States
+            'focus:outline-none focus:outline-offset-0 focus:ring',
+            'hover:bg-primary-hover hover:border-primary-hover',
+            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
+        ]
+    },
+    inputIconContainer: 'absolute cursor-pointer top-1/2 right-3 -mt-3',
+    inputIcon: 'inline-block text-base',
     panel: ({ props }) => ({
         class: [
             // Display & Position
@@ -105,9 +110,6 @@ export default {
             { 'overflow-x-auto': props.inline }
         ]
     }),
-    datepickerMask: {
-        class: ['fixed top-0 left-0 w-full h-full', 'flex items-center justify-center', 'bg-black bg-opacity-90']
-    },
     header: {
         class: [
             //Font
@@ -130,35 +132,37 @@ export default {
             'border-surface-200 dark:border-surface-700'
         ]
     },
-    previousbutton: {
-        class: [
-            'relative',
+    pcPrevButton: {
+        root: {
+            class: [
+                'relative',
 
-            // Flexbox and Alignment
-            'inline-flex items-center justify-center',
+                // Flexbox and Alignment
+                'inline-flex items-center justify-center',
 
-            // Size
-            'w-8 h-8',
-            'p-0 m-0',
+                // Size
+                'w-8 h-8',
+                'p-0 m-0',
 
-            // Shape
-            'rounded-full',
+                // Shape
+                'rounded-full',
 
-            // Colors
-            'text-surface-600 dark:text-white/70',
-            'border-0',
-            'bg-transparent',
+                // Colors
+                'text-surface-600 dark:text-white/70',
+                'border-0',
+                'bg-transparent',
 
-            // Transitions
-            'transition-colors duration-200 ease-in-out',
+                // Transitions
+                'transition-colors duration-200 ease-in-out',
 
-            // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+                // States
+                'hover:text-surface-700 dark:hover:text-white/80',
+                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
 
-            // Misc
-            'cursor-pointer overflow-hidden'
-        ]
+                // Misc
+                'cursor-pointer overflow-hidden'
+            ]
+        }
     },
     title: {
         class: [
@@ -167,7 +171,7 @@ export default {
             'mx-auto my-0'
         ]
     },
-    monthTitle: {
+    selectMonth: {
         class: [
             // Font
             'text-base leading-[normal]',
@@ -190,7 +194,7 @@ export default {
             'cursor-pointer'
         ]
     },
-    yearTitle: {
+    selectYear: {
         class: [
             // Font
             'text-base leading-[normal]',
@@ -213,35 +217,37 @@ export default {
             'cursor-pointer'
         ]
     },
-    nextbutton: {
-        class: [
-            'relative',
+    pcNextButton: {
+        root: {
+            class: [
+                'relative',
 
-            // Flexbox and Alignment
-            'inline-flex items-center justify-center',
+                // Flexbox and Alignment
+                'inline-flex items-center justify-center',
 
-            // Size
-            'w-8 h-8',
-            'p-0 m-0',
+                // Size
+                'w-8 h-8',
+                'p-0 m-0',
 
-            // Shape
-            'rounded-full',
+                // Shape
+                'rounded-full',
 
-            // Colors
-            'text-surface-600 dark:text-white/70',
-            'border-0',
-            'bg-transparent',
+                // Colors
+                'text-surface-600 dark:text-white/70',
+                'border-0',
+                'bg-transparent',
 
-            // Transitions
-            'transition-colors duration-200 ease-in-out',
+                // Transitions
+                'transition-colors duration-200 ease-in-out',
 
-            // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+                // States
+                'hover:text-surface-700 dark:hover:text-white/80',
+                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
 
-            // Misc
-            'cursor-pointer overflow-hidden'
-        ]
+                // Misc
+                'cursor-pointer overflow-hidden'
+            ]
+        }
     },
     table: {
         class: [
@@ -255,16 +261,16 @@ export default {
             'm-0 my-2'
         ]
     },
-    tableheadercell: {
+    tableHeaderCell: {
         class: [
             // Spacing
             'p-0 md:p-2'
         ]
     },
-    weekheader: {
+    weekHeader: {
         class: ['leading-[normal]', 'text-surface-600 dark:text-white/70', 'opacity-60 cursor-default']
     },
-    weeknumber: {
+    weekNumber: {
         class: ['text-surface-600 dark:text-white/70', 'opacity-60 cursor-default']
     },
     weekday: {
@@ -273,13 +279,13 @@ export default {
             'text-surface-500 dark:text-white/60'
         ]
     },
-    day: {
+    dayCell: {
         class: [
             // Spacing
             'p-0 md:p-2'
         ]
     },
-    weeklabelcontainer: ({ context }) => ({
+    weekLabelContainer: ({ context }) => ({
         class: [
             // Flexbox and Alignment
             'flex items-center justify-center',
@@ -293,14 +299,14 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'bg-highlight': context.selected && !context.disabled
+                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
             },
 
             // States
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-800/80': !context.selected && !context.disabled,
-                'hover:bg-highlight-emphasis': context.selected && !context.disabled
+                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
             },
             {
                 'opacity-60 cursor-default': context.disabled,
@@ -308,7 +314,8 @@ export default {
             }
         ]
     }),
-    daylabel: ({ context }) => ({
+    dayView: 'w-full',
+    day: ({ context }) => ({
         class: [
             // Flexbox and Alignment
             'flex items-center justify-center',
@@ -323,14 +330,14 @@ export default {
             {
                 'text-primary': context.date.today,
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled && !context.date.today,
-                'bg-highlight': context.selected && !context.disabled
+                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
             },
 
             // States
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.selected && !context.disabled,
-                'hover:bg-highlight-emphasis': context.selected && !context.disabled
+                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
             },
             {
                 'opacity-60 cursor-default': context.disabled,
@@ -338,7 +345,7 @@ export default {
             }
         ]
     }),
-    monthpicker: {
+    monthView: {
         class: [
             // Spacing
             'my-2'
@@ -359,21 +366,21 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'bg-highlight': context.selected && !context.disabled
+                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
             },
 
             // States
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.selected && !context.disabled,
-                'hover:bg-highlight-emphasis': context.selected && !context.disabled
+                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
             },
 
             // Misc
             'cursor-pointer'
         ]
     }),
-    yearpicker: {
+    yearView: {
         class: [
             // Spacing
             'my-2'
@@ -394,21 +401,21 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'bg-highlight': context.selected && !context.disabled
+                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
             },
 
             // States
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.selected && !context.disabled,
-                'hover:bg-highlight-emphasis': context.selected && !context.disabled
+                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
             },
 
             // Misc
             'cursor-pointer'
         ]
     }),
-    timepicker: {
+    timePicker: {
         class: [
             // Flexbox
             'flex',
@@ -422,7 +429,7 @@ export default {
             'p-2'
         ]
     },
-    separatorcontainer: {
+    separatorContainer: {
         class: [
             // Flexbox and Alignment
             'flex',
@@ -439,7 +446,7 @@ export default {
             'text-xl'
         ]
     },
-    hourpicker: {
+    hourPicker: {
         class: [
             // Flexbox and Alignment
             'flex',
@@ -450,7 +457,7 @@ export default {
             'px-2'
         ]
     },
-    minutepicker: {
+    minutePicker: {
         class: [
             // Flexbox and Alignment
             'flex',
@@ -472,7 +479,7 @@ export default {
             'px-2'
         ]
     },
-    ampmpicker: {
+    ampmPicker: {
         class: [
             // Flexbox and Alignment
             'flex',
@@ -483,92 +490,72 @@ export default {
             'px-2'
         ]
     },
-    incrementbutton: {
-        class: [
-            'relative',
+    pcIncrementButton: {
+        root: {
+            class: [
+                'relative',
 
-            // Flexbox and Alignment
-            'inline-flex items-center justify-center',
+                // Flexbox and Alignment
+                'inline-flex items-center justify-center',
 
-            // Size
-            'w-8 h-8',
-            'p-0 m-0',
+                // Size
+                'w-8 h-8',
+                'p-0 m-0',
 
-            // Shape
-            'rounded-full',
+                // Shape
+                'rounded-full',
 
-            // Colors
-            'text-surface-600 dark:text-white/70',
-            'border-0',
-            'bg-transparent',
+                // Colors
+                'text-surface-600 dark:text-white/70',
+                'border-0',
+                'bg-transparent',
 
-            // Transitions
-            'transition-colors duration-200 ease-in-out',
+                // Transitions
+                'transition-colors duration-200 ease-in-out',
 
-            // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+                // States
+                'hover:text-surface-700 dark:hover:text-white/80',
+                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
 
-            // Misc
-            'cursor-pointer overflow-hidden'
-        ]
+                // Misc
+                'cursor-pointer overflow-hidden'
+            ]
+        }
     },
-    decrementbutton: {
-        class: [
-            'relative',
+    pcDecrementButton: {
+        root: {
+            class: [
+                'relative',
 
-            // Flexbox and Alignment
-            'inline-flex items-center justify-center',
+                // Flexbox and Alignment
+                'inline-flex items-center justify-center',
 
-            // Size
-            'w-8 h-8',
-            'p-0 m-0',
+                // Size
+                'w-8 h-8',
+                'p-0 m-0',
 
-            // Shape
-            'rounded-full',
+                // Shape
+                'rounded-full',
 
-            // Colors
-            'text-surface-600 dark:text-white/70',
-            'border-0',
-            'bg-transparent',
+                // Colors
+                'text-surface-600 dark:text-white/70',
+                'border-0',
+                'bg-transparent',
 
-            // Transitions
-            'transition-colors duration-200 ease-in-out',
+                // Transitions
+                'transition-colors duration-200 ease-in-out',
 
-            // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
+                // States
+                'hover:text-surface-700 dark:hover:text-white/80',
+                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
 
-            // Misc
-            'cursor-pointer overflow-hidden'
-        ]
+                // Misc
+                'cursor-pointer overflow-hidden'
+            ]
+        }
     },
-    groupcontainer: {
-        class: [
-            // Flexbox
-            'flex'
-        ]
-    },
-    group: {
-        class: [
-            // Flexbox and Sizing
-            'flex-1',
-
-            // Borders
-            'border-l',
-            'border-surface-200',
-
-            // Spacing
-            'pr-0.5',
-            'pl-0.5',
-            'pt-0',
-            'pb-0',
-
-            // Pseudo-Classes
-            'first:pl-0',
-            'first:border-l-0'
-        ]
-    },
+    calendarContainer: 'flex',
+    calendar: 'flex-auto border-l first:border-l-0 border-surface-200',
     buttonbar: {
         class: [
             // Flexbox
@@ -581,7 +568,7 @@ export default {
             'border-t border-surface-200 dark:border-surface-700'
         ]
     },
-    todaybutton: {
+    pcTodayButton: {
         root: {
             class: [
                 // Flexbox and Alignment
@@ -609,7 +596,7 @@ export default {
             ]
         }
     },
-    clearbutton: {
+    pcClearButton: {
         root: {
             class: [
                 // Flexbox and Alignment

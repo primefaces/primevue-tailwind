@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>A range of dates can be selected by defining <i>selectionMode</i> as <i>range</i>, in this case the bound value would be an array with two values where first date is the start of the range and second date is the end.</p>
+        <p>Month only picker is enabled by specifying <i>view</i> as <i>month</i> in addition to a suitable <i>dateFormat</i>.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="dates" selectionMode="range" :manualInput="false" />
+        <DatePicker v-model="date" view="month" dateFormat="mm/yy" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -12,15 +12,15 @@
 export default {
     data() {
         return {
-            dates: null,
+            date: null,
             code: {
                 basic: `
-<Calendar v-model="dates" selectionMode="range" :manualInput="false" />
+<DatePicker v-model="date" view="month" dateFormat="mm/yy" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="dates" selectionMode="range" :manualInput="false" />
+        <DatePicker v-model="date" view="month" dateFormat="mm/yy" />
     </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 export default {
     data() {
         return {
-            dates: null
+            date: null
         };
     }
 };
@@ -37,14 +37,14 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="dates" selectionMode="range" :manualInput="false" />
+        <DatePicker v-model="date" view="month" dateFormat="mm/yy" />
     </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 
-const dates = ref();
+const date = ref();
 <\/script>
 `
             }

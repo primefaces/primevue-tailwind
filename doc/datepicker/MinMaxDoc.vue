@@ -3,7 +3,7 @@
         <p>Boundaries for the permitted dates that can be entered are defined with <i>minDate</i> and <i>maxDate</i> properties.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
+        <DatePicker v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -17,12 +17,12 @@ export default {
             maxDate: null,
             code: {
                 basic: `
-<Calendar v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
+<DatePicker v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
+        <DatePicker v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
     </div>
 </template>
 
@@ -57,7 +57,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
+        <DatePicker v-model="date" :minDate="minDate" :maxDate="maxDate" :manualInput="false" />
     </div>
 </template>
 

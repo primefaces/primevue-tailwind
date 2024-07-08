@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>When <i>showButtonBar</i> is present, today and clear buttons are displayed at the footer.</p>
+        <p>A range of dates can be selected by defining <i>selectionMode</i> as <i>range</i>, in this case the bound value would be an array with two values where first date is the start of the range and second date is the end.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date" showButtonBar />
+        <DatePicker v-model="dates" selectionMode="range" :manualInput="false" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -12,15 +12,15 @@
 export default {
     data() {
         return {
-            date: null,
+            dates: null,
             code: {
                 basic: `
-<Calendar v-model="date" showButtonBar />
+<DatePicker v-model="dates" selectionMode="range" :manualInput="false" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" showButtonBar />
+        <DatePicker v-model="dates" selectionMode="range" :manualInput="false" />
     </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
 export default {
     data() {
         return {
-            date: null
+            dates: null
         };
     }
 };
@@ -37,14 +37,14 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" showButtonBar />
+        <DatePicker v-model="dates" selectionMode="range" :manualInput="false" />
     </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 
-const date = ref();
+const dates = ref();
 <\/script>
 `
             }

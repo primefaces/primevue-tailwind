@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Calendar is used a controlled input component with <i>v-model</i> property.</p>
+        <p>DatePicker is used a controlled input component with <i>v-model</i> property.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date" disabled />
+        <DatePicker v-model="date" inline showWeek />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             date: null,
             code: {
                 basic: `
-<Calendar v-model="date" disabled />
+<DatePicker v-model="date" inline showWeek />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" disabled />
+        <DatePicker v-model="date" inline showWeek />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date" disabled />
+        <DatePicker v-model="date" inline showWeek />
     </div>
 </template>
 

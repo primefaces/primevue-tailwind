@@ -1,35 +1,28 @@
 <template>
-    <DocComponent
-        title="Vue Calendar Component"
-        header="Calendar"
-        description="Calendar, also known as DatePicker, is a form component to work with dates."
-        :componentDocs="docs"
-        :presetDoc="presetDoc"
-        apiLink="/calendar/#api"
-        ptLink="/calendar/#pt"
-    />
+    <DocComponent title="Vue DatePicker Component" header="DatePicker" description="DatePicker is a form component to work with dates." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/datepicker/#api" ptLink="/datepicker/#pt" />
 </template>
 
 <script>
-import AccessibilityDoc from '@/doc/calendar/AccessibilityDoc';
-import BasicDoc from '@/doc/calendar/BasicDoc.vue';
-import ButtonBarDoc from '@/doc/calendar/ButtonBarDoc.vue';
-import DateTemplateDoc from '@/doc/calendar/DateTemplateDoc.vue';
-import DisabledDoc from '@/doc/calendar/DisabledDoc.vue';
-import FormatDoc from '@/doc/calendar/FormatDoc.vue';
-import IconDoc from '@/doc/calendar/IconDoc.vue';
-import ImportDoc from '@/doc/calendar/ImportDoc.vue';
-import InlineDoc from '@/doc/calendar/InlineDoc.vue';
-import InvalidDoc from '@/doc/calendar/InvalidDoc.vue';
-import LocaleDoc from '@/doc/calendar/LocaleDoc.vue';
-import MinMaxDoc from '@/doc/calendar/MinMaxDoc.vue';
-import MonthPickerDoc from '@/doc/calendar/MonthPickerDoc.vue';
-import MultipleDoc from '@/doc/calendar/MultipleDoc.vue';
-import MultipleMonthsDoc from '@/doc/calendar/MultipleMonthsDoc.vue';
-import RangeDoc from '@/doc/calendar/RangeDoc.vue';
-import TimeDoc from '@/doc/calendar/TimeDoc.vue';
-import TouchUIDoc from '@/doc/calendar/TouchUIDoc.vue';
-import YearPickerDoc from '@/doc/calendar/YearPickerDoc.vue';
+import AccessibilityDoc from '@/doc/datepicker/AccessibilityDoc';
+import BasicDoc from '@/doc/datepicker/BasicDoc.vue';
+import ButtonBarDoc from '@/doc/datepicker/ButtonBarDoc.vue';
+import DateTemplateDoc from '@/doc/datepicker/DateTemplateDoc.vue';
+import DisabledDoc from '@/doc/datepicker/DisabledDoc.vue';
+// import FilledDoc from '@/doc/datepicker/FilledDoc.vue';
+// import FloatLabelDoc from '@/doc/datepicker/FloatLabelDoc.vue';
+import FormatDoc from '@/doc/datepicker/FormatDoc.vue';
+import IconDoc from '@/doc/datepicker/IconDoc.vue';
+import ImportDoc from '@/doc/datepicker/ImportDoc.vue';
+import InlineDoc from '@/doc/datepicker/InlineDoc.vue';
+import InvalidDoc from '@/doc/datepicker/InvalidDoc.vue';
+import LocaleDoc from '@/doc/datepicker/LocaleDoc.vue';
+import MinMaxDoc from '@/doc/datepicker/MinMaxDoc.vue';
+import MonthPickerDoc from '@/doc/datepicker/MonthPickerDoc.vue';
+import MultipleDoc from '@/doc/datepicker/MultipleDoc.vue';
+import MultipleMonthsDoc from '@/doc/datepicker/MultipleMonthsDoc.vue';
+import RangeDoc from '@/doc/datepicker/RangeDoc.vue';
+import TimeDoc from '@/doc/datepicker/TimeDoc.vue';
+import YearPickerDoc from '@/doc/datepicker/YearPickerDoc.vue';
 
 export default {
     data() {
@@ -106,11 +99,6 @@ export default {
                     component: DateTemplateDoc
                 },
                 {
-                    id: 'touchui',
-                    label: 'Touch UI',
-                    component: TouchUIDoc
-                },
-                {
                     id: 'inline',
                     label: 'Inline',
                     component: InlineDoc
@@ -119,6 +107,11 @@ export default {
                 //     id: 'floatlabel',
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
+                // },
+                // {
+                //     id: 'filled',
+                //     label: 'Filled',
+                //     component: FilledDoc
                 // },
                 {
                     id: 'invalid',
@@ -137,7 +130,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: 'calendar'
+                key: 'datepicker'
             }
         };
     }

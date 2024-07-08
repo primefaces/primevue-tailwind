@@ -3,12 +3,12 @@
         <p>Custom content can be placed inside date cells with the <i>date</i> slot that takes a Date as a parameter.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Calendar v-model="date">
+        <DatePicker v-model="date">
             <template #date="slotProps">
                 <strong v-if="slotProps.date.day > 10 && slotProps.date.day < 15" style="text-decoration: line-through">{{ slotProps.date.day }}</strong>
                 <template v-else>{{ slotProps.date.day }}</template>
             </template>
-        </Calendar>
+        </DatePicker>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -20,22 +20,22 @@ export default {
             date: null,
             code: {
                 basic: `
-<Calendar v-model="date">
+<DatePicker v-model="date">
     <template #date="slotProps">
         <strong v-if="slotProps.date.day > 10 && slotProps.date.day < 15" style="text-decoration: line-through">{{ slotProps.date.day }}</strong>
         <template v-else>{{ slotProps.date.day }}</template>
     </template>
-</Calendar>
+</DatePicker>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date">
+        <DatePicker v-model="date">
             <template #date="slotProps">
                 <strong v-if="slotProps.date.day > 10 && slotProps.date.day < 15" style="text-decoration: line-through">{{ slotProps.date.day }}</strong>
                 <template v-else>{{ slotProps.date.day }}</template>
             </template>
-        </Calendar>
+        </DatePicker>
     </div>
 </template>
 
@@ -52,12 +52,12 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Calendar v-model="date">
+        <DatePicker v-model="date">
             <template #date="slotProps">
                 <strong v-if="slotProps.date.day > 10 && slotProps.date.day < 15" style="text-decoration: line-through">{{ slotProps.date.day }}</strong>
                 <template v-else>{{ slotProps.date.day }}</template>
             </template>
-        </Calendar>
+        </DatePicker>
     </div>
 </template>
 

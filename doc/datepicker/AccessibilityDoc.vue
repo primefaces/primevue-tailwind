@@ -6,9 +6,9 @@
             <i>aria-autocomplete</i> as "none", <i>aria-haspopup</i> as "dialog" and <i>aria-expanded</i> attributes. The relation between the input and the popup is created with <i>aria-controls</i> attribute that refers to the id of the popup.
         </p>
         <p>
-            The optional calendar button requires includes <i>aria-haspopup</i>, <i>aria-expanded</i> for states along with <i>aria-controls</i> to define the relation between the popup and the button. The value to read is retrieved from the
-            <i>chooseDate</i> key of the aria property from the <a href="https://primevue.org/configuration/#locale" target="_blank" rel="noopener noreferrer">locale</a> API. This label is also used for the <i>aria-label</i> of the popup as well.
-            When there is a value selected, it is formatted and appended to the label to be able to notify users about the current value.
+            The optional datepicker button requires includes <i>aria-haspopup</i>, <i>aria-expanded</i> for states along with <i>aria-controls</i> to define the relation between the popup and the button. The value to read is retrieved from the
+            <i>chooseDate</i> key of the aria property from the <NuxtLink to="/configuration/#locale">locale</NuxtLink> API. This label is also used for the <i>aria-label</i> of the popup as well. When there is a value selected, it is formatted and
+            appended to the label to be able to notify users about the current value.
         </p>
 
         <p>
@@ -26,9 +26,9 @@
             <i>pm</i> keys.
         </p>
 
-        <p>Calendar also includes a hidden section that is only available to screen readers with <i>aria-live</i> as "polite". This element is updated when the selected date changes to instruct the user about the current date selected.</p>
+        <p>DatePicker also includes a hidden section that is only available to screen readers with <i>aria-live</i> as "polite". This element is updated when the selected date changes to instruct the user about the current date selected.</p>
 
-        <DocSectionCode :code="code" hideToggleCode hideCodeSandbox hideStackBlitz v-bind="$attrs" />
+        <DocSectionCode :code="code" hideToggleCode hideStackBlitz v-bind="$attrs" />
 
         <h3>Choose Date Button Keyboard Support</h3>
         <div class="doc-tablewrapper">
@@ -197,12 +197,12 @@ export default {
             code: {
                 basic: `
 <label for="date1">Date</label>
-<Calendar inputId="date1" />
+<DatePicker inputId="date1" />
 
 <span id="date2">Date</span>
-<Calendar aria-labelledby="date2" />
+<DatePicker aria-labelledby="date2" />
 
-<Calendar aria-label="Date" />
+<DatePicker aria-label="Date" />
 `
             }
         };
