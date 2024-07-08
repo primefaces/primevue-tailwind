@@ -106,6 +106,7 @@ export default {
     checkbox,
     radiobutton,
     toggleswitch,
+    inputswitch: toggleswitch,
     selectbutton,
     slider,
     rating,
@@ -174,7 +175,9 @@ export default {
     //overlays
     dialog,
     popover,
+    sidebar: popover,
     drawer,
+    overlaypanel: drawer,
     confirmpopup,
 
     //messages
