@@ -32,7 +32,7 @@ export default {
             'fill-none'
         ]
     },
-    label: {
+    text: {
         class: [
             // Text Style
             'text-center text-xl',

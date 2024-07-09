@@ -6,7 +6,7 @@ export default {
             'gap-2'
         ]
     },
-    input: {
+    pcInput: {
         root: ({ props, context, parent }) => ({
             class: [
                 // Font
