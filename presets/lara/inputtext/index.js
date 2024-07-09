@@ -9,6 +9,9 @@ export default {
 
             // Spacing
             'm-0',
+            { 'w-full': props.fluid },
+
+            // Size
             {
                 'px-4 py-4': props.size == 'large',
                 'px-2 py-2': props.size == 'small',
