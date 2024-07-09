@@ -34,7 +34,7 @@ export default {
             // Colors
             {
                 'border-surface-300 dark:border-surface-700': !context.checked && !props.invalid,
-                'bg-surface-0  dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
+                'bg-surface-0 dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
                 'border-primary bg-primary': context.checked
             },
 
@@ -84,18 +84,21 @@ export default {
             'cursor-pointer'
         ]
     },
-    icon: {
+    icon: ({ state }) => ({
         class: [
             // Size
             'w-[0.875rem]',
             'h-[0.875rem]',
 
             // Colors
-            'text-white dark:text-surface-950',
+            {
+                'text-white dark:text-surface-950': state.checked,
+                'text-primary': state.d_indeterminate
+            },
 
             // Transitions
             'transition-all',
             'duration-200'
         ]
-    }
+    })
 };

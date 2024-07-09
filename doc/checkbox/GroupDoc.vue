@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Multiple checkboxes can be grouped together.</p>
     </DocSectionText>
-    <div class="card flex flex-wrap justify-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-4">
         <div class="flex items-center">
             <Checkbox v-model="pizza" inputId="ingredient1" name="pizza" value="Cheese" />
             <label for="ingredient1" class="ml-2"> Cheese </label>
@@ -30,7 +30,7 @@ export default {
             pizza: null,
             code: {
                 basic: `
-<div class="card flex flex-wrap justify-center gap-3">
+<div class="card flex flex-wrap justify-center gap-4">
     <div class="flex items-center">
         <Checkbox v-model="pizza" inputId="ingredient1" name="pizza" value="Cheese" />
         <label for="ingredient1" class="ml-2"> Cheese </label>
@@ -51,7 +51,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex flex-wrap justify-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-4">
         <div class="flex items-center">
             <Checkbox v-model="pizza" inputId="ingredient1" name="pizza" value="Cheese" />
             <label for="ingredient1" class="ml-2"> Cheese </label>
@@ -83,7 +83,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex flex-wrap justify-center gap-3">
+    <div class="card flex flex-wrap justify-center gap-4">
         <div class="flex items-center">
             <Checkbox v-model="pizza" inputId="ingredient1" name="pizza" value="Cheese" />
             <label for="ingredient1" class="ml-2"> Cheese </label>

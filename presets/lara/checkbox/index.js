@@ -81,7 +81,7 @@ export default {
             'cursor-pointer'
         ]
     },
-    icon: {
+    icon: ({ state }) => ({
         class: [
             // Font
             'text-base leading-none',
@@ -91,11 +91,14 @@ export default {
             'h-4',
 
             // Colors
-            'text-white dark:text-surface-900',
+            {
+                'text-white dark:text-surface-900': state.checked,
+                'text-primary': state.d_indeterminate
+            },
 
             // Transitions
             'transition-all',
             'duration-200'
         ]
-    }
+    })
 };

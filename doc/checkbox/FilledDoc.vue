@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Invalid state is displayed using the <i>invalid</i> prop to indicate a failed validation. You can use this style when integrating with form validation libraries.</p>
+        <p>Specify the <i>variant</i> property as <i>filled</i> to display the component with a higher visual emphasis than the default <i>outlined</i> style.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Checkbox v-model="checked" :invalid="!checked" binary />
+        <Checkbox v-model="checked" binary variant="filled" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             checked: false,
             code: {
                 basic: `
-<Checkbox v-model="checked" :invalid="!checked"  binary />
+<Checkbox v-model="checked" binary variant="filled" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Checkbox v-model="checked" :invalid="!checked"  binary />
+        <Checkbox v-model="checked" binary variant="filled" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Checkbox v-model="checked" :invalid="!checked"  binary />
+        <Checkbox v-model="checked" binary variant="filled" />
     </div>
 </template>
 
