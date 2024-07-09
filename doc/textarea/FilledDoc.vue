@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>A model can be bound using the standard <i>v-model</i> directive.</p>
+        <p>Specify the <i>variant</i> property as <i>filled</i> to display the component with a higher visual emphasis than the default <i>outlined</i> style.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Textarea v-model="value" rows="5" cols="30" style="resize: none" />
+        <Textarea v-model="value" variant="filled" rows="5" cols="30" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,12 +15,12 @@ export default {
             value: '',
             code: {
                 basic: `
-<Textarea v-model="value" rows="5" cols="30" />
+<Textarea v-model="value" variant="filled" rows="5" cols="30" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Textarea v-model="value" rows="5" cols="30" />
+        <Textarea v-model="value" variant="filled" rows="5" cols="30" />
     </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Textarea v-model="value" rows="5" cols="30" />
+        <Textarea v-model="value" variant="filled" rows="5" cols="30" />
     </div>
 </template>
 

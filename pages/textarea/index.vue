@@ -38,9 +38,14 @@ export default {
                     component: AutoResizeDoc
                 },
                 // {
-                //     id: 'float-label',
+                //     id: 'floatlabel',
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
+                // },
+                // {
+                //     id: 'filled',
+                //     label: 'Filled',
+                //     component: FilledDoc
                 // },
                 {
                     id: 'invalid',
