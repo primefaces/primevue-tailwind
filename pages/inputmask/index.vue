@@ -51,8 +51,13 @@ export default {
                 },
                 // {
                 //     id: 'floatlabel',
-                //     label: 'FloatLabel',
+                //     label: 'Float Label',
                 //     component: FloatLabelDoc
+                // },
+                // {
+                //     id: 'filled',
+                //     label: 'Filled',
+                //     component: FilledDoc
                 // },
                 {
                     id: 'invalid',
