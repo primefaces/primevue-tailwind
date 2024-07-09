@@ -86,7 +86,6 @@ import tooltip from './tooltip';
 import tree from './tree';
 import treeselect from './treeselect';
 import treetable from './treetable';
-import tristatecheckbox from './tristatecheckbox';
 
 export default {
     global,
@@ -121,7 +120,6 @@ export default {
     inputmask,
     knob,
     treeselect,
-    tristatecheckbox,
     textarea,
     password,
     iconfield,

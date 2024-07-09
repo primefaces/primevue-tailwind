@@ -58,16 +58,16 @@
                             "to": "/inputgroup"
                         },
                         {
-                            "name": "InputOtp",
-                            "to": "/inputotp"
+                            "name": "InputMask",
+                            "to": "/inputmask"
                         },
                         {
                             "name": "InputNumber",
                             "to": "/inputnumber"
                         },
                         {
-                            "name": "InputMask",
-                            "to": "/inputmask"
+                            "name": "InputOtp",
+                            "to": "/inputotp"
                         },
                         {
                             "name": "InputText",
@@ -124,10 +124,6 @@
                         {
                             "name": "TreeSelect",
                             "to": "/treeselect"
-                        },
-                        {
-                            "name": "TriStateCheckbox",
-                            "to": "/tristatecheckbox"
                         }
                     ]
                 },
