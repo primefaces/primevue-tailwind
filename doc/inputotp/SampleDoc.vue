@@ -88,7 +88,7 @@ export default {
     text-align: center;
     transition: all 0.2s;
     border-radius: 0;
-    border: 1px solid rgb(var(--surface-400));
+    border: 1px solid var(--p-surface-400);
     background: transparent;
     outline-offset: -2px;
     outline-color: transparent;
@@ -98,7 +98,7 @@ export default {
 }
 
 .custom-otp-input:focus {
-    outline: 2px solid rgb(var(--primary-500));
+    outline: 2px solid var(--p-primary-500);
 }
 
 .custom-otp-input:first-child,
@@ -113,7 +113,7 @@ export default {
     border-bottom-right-radius: 12px;
     border-right-width: 1px;
     border-right-style: solid;
-    border-color: rgb(var(--surface-400));
+    border-color: var(--p-surface-400);
 }
 <\/style>
 `,
@@ -154,7 +154,7 @@ const value = ref(null);
     text-align: center;
     transition: all 0.2s;
     border-radius: 0;
-    border: 1px solid rgb(var(--surface-400));
+    border: 1px solid var(--p-surface-400);
     background: transparent;
     outline-offset: -2px;
     outline-color: transparent;
@@ -164,7 +164,7 @@ const value = ref(null);
 }
 
 .custom-otp-input:focus {
-    outline: 2px solid rgb(var(--primary-500));
+    outline: 2px solid var(--p-primary-500);
 }
 
 .custom-otp-input:first-child,
@@ -179,7 +179,7 @@ const value = ref(null);
     border-bottom-right-radius: 12px;
     border-right-width: 1px;
     border-right-style: solid;
-    border-color: rgb(var(--surface-400));
+    border-color: var(--p-surface-400);
 }
 <\/style>
 `
@@ -198,7 +198,7 @@ const value = ref(null);
     text-align: center;
     transition: all 0.2s;
     border-radius: 0;
-    border: 1px solid rgb(var(--surface-400));
+    border: 1px solid var(--p-surface-400);
     background: transparent;
     outline-offset: -2px;
     outline-color: transparent;
@@ -208,7 +208,7 @@ const value = ref(null);
 }
 
 .custom-otp-input:focus {
-    outline: 2px solid rgb(var(--primary-500));
+    outline: 2px solid var(--p-primary-500);
 }
 
 .custom-otp-input:first-child,
@@ -223,6 +223,6 @@ const value = ref(null);
     border-bottom-right-radius: 12px;
     border-right-width: 1px;
     border-right-style: solid;
-    border-color: rgb(var(--surface-400));
+    border-color: var(--p-surface-400);
 }
 </style>
