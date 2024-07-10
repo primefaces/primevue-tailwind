@@ -5,7 +5,8 @@
 <script>
 import AccessibilityDoc from '@/doc/listbox/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/listbox/BasicDoc.vue';
-import DisabledDoc from '@/doc/listbox/DisabledDoc.vue';
+import CheckmarkDoc from '@/doc/listbox/CheckmarkDoc.vue';
+// import DisabledDoc from '@/doc/listbox/DisabledDoc.vue';
 import FilterDoc from '@/doc/listbox/FilterDoc.vue';
 import GroupDoc from '@/doc/listbox/GroupDoc.vue';
 import ImportDoc from '@/doc/listbox/ImportDoc.vue';
@@ -13,6 +14,7 @@ import InvalidDoc from '@/doc/listbox/InvalidDoc.vue';
 import MultipleDoc from '@/doc/listbox/MultipleDoc.vue';
 import TemplateDoc from '@/doc/listbox/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/listbox/VirtualScrollDoc.vue';
+
 export default {
     data() {
         return {
@@ -26,6 +28,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'checkmark',
+                    label: 'Checkmark',
+                    component: CheckmarkDoc
                 },
                 {
                     id: 'multiple',
@@ -57,11 +64,11 @@ export default {
                     label: 'Invalid',
                     component: InvalidDoc
                 },
-                {
-                    id: 'disabled',
-                    label: 'Disabled',
-                    component: DisabledDoc
-                },
+                // {
+                //     id: 'disabled',
+                //     label: 'Disabled',
+                //     component: DisabledDoc
+                // },
                 {
                     id: 'accessibility',
                     label: 'Accessibility',

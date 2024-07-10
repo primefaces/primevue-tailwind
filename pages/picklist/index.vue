@@ -6,6 +6,7 @@
 import AccessibilityDoc from '@/doc/picklist/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/picklist/BasicDoc.vue';
 import ImportDoc from '@/doc/picklist/ImportDoc.vue';
+import TemplateDoc from '@/doc/picklist/TemplateDoc.vue';
 
 export default {
     data() {
@@ -20,6 +21,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'template',
+                    label: 'Template',
+                    component: TemplateDoc
                 },
                 {
                     id: 'accessibility',

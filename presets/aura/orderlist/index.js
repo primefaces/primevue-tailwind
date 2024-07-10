@@ -1,10 +1,5 @@
 export default {
-    root: {
-        class: [
-            // Flexbox
-            'flex xl:flex-row flex-col'
-        ]
-    },
+    root: 'flex',
     controls: {
         class: [
             // Flexbox & Alignment
@@ -14,7 +9,7 @@ export default {
             'p-[1.125rem]'
         ]
     },
-    moveupbutton: {
+    pcMoveUpButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -59,7 +54,7 @@ export default {
             ]
         }
     },
-    movedownbutton: {
+    pcMoveDownButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -104,7 +99,7 @@ export default {
             ]
         }
     },
-    movetopbutton: {
+    pcMoveTopButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -149,7 +144,7 @@ export default {
             ]
         }
     },
-    movebottombutton: {
+    pcMoveBottomButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -206,72 +201,5 @@ export default {
             'border border-surface-200 dark:border-surface-700',
             'outline-none'
         ]
-    },
-    header: {
-        class: [
-            'font-semibold',
-
-            // Shape
-            'border-0 rounded-t-md',
-
-            // Spacing
-            'pt-3 px-4 pb-2',
-
-            // Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-900'
-        ]
-    },
-    list: {
-        class: [
-            // Spacing
-            'list-none m-0',
-            'p-1',
-
-            // Size
-            'min-h-[12rem] max-h-[24rem]',
-
-            // Shape
-            'rounded-b-md',
-
-            // Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-900',
-
-            // Focus & Outline
-            'outline-none',
-
-            // Misc
-            'overflow-auto'
-        ]
-    },
-    item: ({ context }) => ({
-        class: [
-            // Position
-            'relative',
-
-            // Spacing
-            'py-2 px-3 m-0 my-[2px] first:mt-0 last:mb-0',
-
-            // Shape
-            'border-none',
-            'rounded-md',
-
-            // Transition
-            'transition duration-200',
-
-            // Color
-            { 'text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900': !context.active },
-            { 'bg-highlight': context.active },
-
-            // State
-            {
-                'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]': !context.active,
-                'hover:bg-highlight-emphasis': context.active
-            },
-
-            // Misc
-            'cursor-pointer overflow-hidden'
-        ]
-    })
+    }
 };

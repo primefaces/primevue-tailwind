@@ -1,11 +1,9 @@
 export default {
-    root: {
-        class: [
-            // Flexbox
-            'flex lg:flex-row flex-col'
-        ]
+    root: 'flex',
+    pcList: {
+        root: 'h-full'
     },
-    sourcecontrols: {
+    sourceControls: {
         class: [
             // Flexbox & Alignment
             'flex lg:flex-col justify-center gap-2',
@@ -14,7 +12,7 @@ export default {
             'p-5'
         ]
     },
-    sourcemoveupbutton: {
+    pcSourceMoveUpButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -56,7 +54,7 @@ export default {
             ]
         }
     },
-    sourcemovetopbutton: {
+    pcSourceMoveTopButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -98,7 +96,7 @@ export default {
             ]
         }
     },
-    sourcemovedownbutton: {
+    pcSourceMoveDownButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -140,7 +138,7 @@ export default {
             ]
         }
     },
-    sourcemovebottombutton: {
+    pcSourceMoveBottomButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -182,83 +180,24 @@ export default {
             ]
         }
     },
-    sourcewrapper: {
-        class: 'grow shrink basis-2/4'
-    },
-    sourceheader: {
+    sourceListContainer: {
         class: [
-            'font-bold',
+            // Flexbox
+            'grow shrink basis-2/4',
 
             // Shape
-            'border-b-0 rounded-t-md',
-
-            // Spacing
-            'p-5',
+            'rounded-md',
 
             // Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-50 dark:bg-surface-800',
-            'border border-surface-200 dark:border-surface-700'
-        ]
-    },
-    sourcelist: {
-        class: [
-            // Spacing
-            'list-none m-0 p-0',
-
-            // Size
-            'min-h-[12rem] max-h-[24rem]',
-
-            // Shape
-            'rounded-b-md',
-
-            // Color
-            'text-surface-600 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'border border-surface-200 dark:border-surface-700',
-
-            // Spacing
-            'py-3 px-0',
-
-            // Focus & Outline
-            'outline-none',
-
-            // Misc
-            'overflow-auto'
+            'outline-none'
         ]
     },
-    item: ({ context }) => ({
-        class: [
-            // Position
-            'relative',
-
-            // Spacing
-            'py-3 px-5 m-0',
-
-            // Shape
-            'border-none',
-
-            // Transition
-            'transition duration-200',
-
-            // Color
-            { 'text-surface-700 dark:text-white/80 bg-surface-0 dark:bg-surface-900': !context.active },
-            { 'bg-highlight': context.active },
-
-            // State
-            {
-                'hover:bg-surface-100 dark:hover:bg-surface-700': !context.active,
-                'hover:bg-highlight-emphasis': context.active
-            },
-
-            // Misc
-            'cursor-pointer overflow-hidden'
-        ]
-    }),
-    buttons: {
+    transferControls: {
         class: 'flex lg:flex-col justify-center gap-2 p-5'
     },
-    movetotargetbutton: {
+    moveToTargetButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -300,7 +239,7 @@ export default {
             ]
         }
     },
-    movealltotargetbutton: {
+    moveAllToTargetButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -342,7 +281,7 @@ export default {
             ]
         }
     },
-    movetosourcebutton: {
+    moveToSourceButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -384,7 +323,7 @@ export default {
             ]
         }
     },
-    movealltosourcebutton: {
+    moveAllToSourceButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -426,10 +365,7 @@ export default {
             ]
         }
     },
-    targetcontrols: {
-        class: 'flex lg:flex-col justify-center gap-2 p-5'
-    },
-    targetmoveupbutton: {
+    pcTargetMoveUpButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -471,7 +407,7 @@ export default {
             ]
         }
     },
-    targetmovetopbutton: {
+    pcTargetMoveTopButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -513,7 +449,7 @@ export default {
             ]
         }
     },
-    targetmovedownbutton: {
+    pcTargetMoveDownButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -555,7 +491,7 @@ export default {
             ]
         }
     },
-    targetmovebottombutton: {
+    pcTargetMoveBottomButton: {
         root: ({ context }) => ({
             class: [
                 // Flexbox & Alignment
@@ -597,50 +533,22 @@ export default {
             ]
         }
     },
-    targetwrapper: {
-        class: 'grow shrink basis-2/4'
-    },
-    targetheader: {
+    targetListContainer: {
         class: [
-            'font-bold',
+            // Flexbox
+            'grow shrink basis-2/4',
 
             // Shape
-            'border-b-0 rounded-t-md',
-
-            // Spacing
-            'p-5',
+            'rounded-md',
 
             // Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-50 dark:bg-surface-800',
-            'border border-surface-200 dark:border-surface-700'
-        ]
-    },
-    targetlist: {
-        class: [
-            // Spacing
-            'list-none m-0 p-0',
-
-            // Size
-            'min-h-[12rem] max-h-[24rem]',
-
-            // Shape
-            'rounded-b-md',
-
-            // Color
-            'text-surface-600 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-800',
+            'bg-surface-0 dark:bg-surface-900',
             'border border-surface-200 dark:border-surface-700',
-
-            // Spacing
-            'py-3 px-0',
-
-            // Focus & Outline
-            'outline-none',
-
-            // Misc
-            'overflow-auto'
+            'outline-none'
         ]
+    },
+    targetControls: {
+        class: 'flex lg:flex-col justify-center gap-2 p-5'
     },
     transition: {
         enterFromClass: '!transition-none',

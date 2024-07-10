@@ -6,6 +6,8 @@
 import AccessibilityDoc from '@/doc/orderlist/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/orderlist/BasicDoc.vue';
 import ImportDoc from '@/doc/orderlist/ImportDoc.vue';
+import TemplateDoc from '@/doc/orderlist/TemplateDoc.vue';
+
 export default {
     data() {
         return {
@@ -19,6 +21,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'template',
+                    label: 'Template',
+                    component: TemplateDoc
                 },
                 {
                     id: 'accessibility',

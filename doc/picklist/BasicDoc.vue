@@ -1,23 +1,11 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>PickList requires a multidimensional array as its value bound with the <i>v-model </i>directive and a template for its content that gets the <i>item</i> instance and the index via slotProps.</p>
+        <p>PickList requires a multidimensional array as its value bound with the <i>v-model </i>directive and a template for its content that gets the <i>option</i> instance and the index via slotProps.</p>
     </DocSectionText>
     <div class="card">
-        <PickList v-model="products" listStyle="height:342px" dataKey="id" breakpoint="1400px">
-            <template #sourceheader> Available </template>
-            <template #targetheader> Selected </template>
-            <template #item="slotProps">
-                <div class="flex flex-wrap p-2 items-center gap-4">
-                    <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-                    <div class="flex-1 flex flex-col gap-2">
-                        <span class="font-bold">{{ slotProps.item.name }}</span>
-                        <div class="flex items-center gap-2">
-                            <i class="pi pi-tag text-sm"></i>
-                            <span>{{ slotProps.item.category }}</span>
-                        </div>
-                    </div>
-                    <span class="font-bold text-surface-900 dark:text-surface-0">${{ slotProps.item.price }}</span>
-                </div>
+        <PickList v-model="products" dataKey="id" breakpoint="1400px">
+            <template #option="{ option }">
+                {{ option.name }}
             </template>
         </PickList>
     </div>
@@ -33,42 +21,18 @@ export default {
             products: null,
             code: {
                 basic: `
-<PickList v-model="products" listStyle="height:342px" dataKey="id" breakpoint="1400px">
-    <template #sourceheader> Available </template>
-    <template #targetheader> Selected </template>
-    <template #item="slotProps">
-        <div class="flex flex-wrap p-2 items-center gap-4">
-            <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-            <div class="flex-1 flex flex-col gap-2">
-                <span class="font-bold">{{ slotProps.item.name }}</span>
-                <div class="flex items-center gap-2">
-                    <i class="pi pi-tag text-sm"></i>
-                    <span>{{ slotProps.item.category }}</span>
-                </div>
-            </div>
-            <span class="font-bold text-surface-900 dark:text-surface-0">$ {{ slotProps.item.price }}</span>
-        </div>
+<PickList v-model="products" dataKey="id" breakpoint="1400px">
+    <template #option="{ option  }">
+        {{ option.name }}
     </template>
 </PickList>
 `,
                 options: `
 <template>
     <div class="card">
-        <PickList v-model="products" listStyle="height:342px" dataKey="id" breakpoint="1400px">
-            <template #sourceheader> Available </template>
-            <template #targetheader> Selected </template>
-            <template #item="slotProps">
-                <div class="flex flex-wrap p-2 items-center gap-4">
-                    <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-                    <div class="flex-1 flex flex-col gap-2">
-                        <span class="font-bold">{{ slotProps.item.name }}</span>
-                        <div class="flex items-center gap-2">
-                            <i class="pi pi-tag text-sm"></i>
-                            <span>{{ slotProps.item.category }}</span>
-                        </div>
-                    </div>
-                    <span class="font-bold text-surface-900 dark:text-surface-0">$ {{ slotProps.item.price }}</span>
-                </div>
+        <PickList v-model="products" dataKey="id" breakpoint="1400px">
+            <template #option="{ option  }">
+                {{ option.name }}
             </template>
         </PickList>
     </div>
@@ -91,21 +55,9 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <PickList v-model="products" listStyle="height:342px" dataKey="id" breakpoint="1400px">
-            <template #sourceheader> Available </template>
-            <template #targetheader> Selected </template>
-            <template #item="slotProps">
-                <div class="flex flex-wrap p-2 items-center gap-4">
-                    <img class="w-[4rem] shadow-md shrink-0 rounded-md" :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.item.image" :alt="slotProps.item.name" />
-                    <div class="flex-1 flex flex-col gap-2">
-                        <span class="font-bold">{{ slotProps.item.name }}</span>
-                        <div class="flex items-center gap-2">
-                            <i class="pi pi-tag text-sm"></i>
-                            <span>{{ slotProps.item.category }}</span>
-                        </div>
-                    </div>
-                    <span class="font-bold text-surface-900 dark:text-surface-0">$ {{ slotProps.item.price }}</span>
-                </div>
+        <PickList v-model="products" dataKey="id" breakpoint="1400px">
+            <template #option="{ option  }">
+                {{ option.name }}
             </template>
         </PickList>
     </div>

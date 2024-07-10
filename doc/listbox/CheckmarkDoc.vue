@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Listbox provides built-in filtering that is enabled by adding the <i>filter</i> property.</p>
+        <p>An alternative way to highlight the selected option is displaying a checkmark instead.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Listbox v-model="selectedCity" :options="cities" filter optionLabel="name" class="w-full md:w-56" />
+        <Listbox v-model="selectedCity" :options="cities" optionLabel="name" checkmark :highlightOnSelect="false" class="w-full md:w-56" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -22,12 +22,12 @@ export default {
             ],
             code: {
                 basic: `
-<Listbox v-model="selectedCity" :options="cities" filter optionLabel="name" class="w-full md:w-56" />
+<Listbox v-model="selectedCity" :options="cities" optionLabel="name" checkmark :highlightOnSelect="false" class="w-full md:w-56" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Listbox v-model="selectedCity" :options="cities" filter optionLabel="name" class="w-full md:w-56" />
+        <Listbox v-model="selectedCity" :options="cities" optionLabel="name" checkmark :highlightOnSelect="false" class="w-full md:w-56" />
     </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Listbox v-model="selectedCity" :options="cities" filter optionLabel="name" class="w-full md:w-56" />
+        <Listbox v-model="selectedCity" :options="cities" optionLabel="name" checkmark :highlightOnSelect="false" class="w-full md:w-56" />
     </div>
 </template>
 

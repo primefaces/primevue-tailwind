@@ -16,18 +16,16 @@ export default {
             { 'border-red-500 dark:border-red-400': props.invalid }
         ]
     }),
-    wrapper: {
-        class: [
-            // Overflow
-            'overflow-auto'
-        ]
-    },
+    listContainer: 'overflow-auto',
     list: {
         class: 'p-1 list-none m-0 outline-none'
     },
-    item: ({ context }) => ({
+    option: ({ context }) => ({
         class: [
             'relative',
+
+            // Flex
+            'flex items-center',
 
             // Font
             'leading-none',
@@ -59,7 +57,7 @@ export default {
             'cursor-pointer overflow-hidden whitespace-nowrap'
         ]
     }),
-    itemgroup: {
+    optionGroup: {
         class: [
             'font-semibold',
 
@@ -73,7 +71,8 @@ export default {
             'cursor-auto'
         ]
     },
-    emptymessage: {
+    optionCheckIcon: 'relative -ms-1.5 me-1.5 text-surface-700 dark:text-white/80 w-4 h-4',
+    emptyMessage: {
         class: [
             // Font
             'leading-none',
@@ -103,42 +102,38 @@ export default {
             'border-surface-300 dark:border-surface-700'
         ]
     },
-    filtercontainer: {
-        class: 'relative'
-    },
-    filterinput: {
-        class: [
-            // Font
-            'leading-[normal]',
+    pcFilter: {
+        root: {
+            class: [
+                // Font
+                'leading-[normal]',
 
-            // Sizing
-            'py-2 pl-3 pr-7',
-            '-mr-7',
-            'w-full',
+                // Sizing
+                'py-2 pl-3 pr-7',
+                '-mr-7',
+                'w-full',
 
-            //Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-950',
-            'border-surface-200 dark:border-surface-700',
+                //Color
+                'text-surface-700 dark:text-white/80',
+                'bg-surface-0 dark:bg-surface-950',
+                'border-surface-200 dark:border-surface-700',
 
-            // Shape
-            'border',
-            'rounded-lg',
-            'appearance-none',
+                // Shape
+                'border',
+                'rounded-lg',
+                'appearance-none',
 
-            // Transitions
-            'transition',
-            'duration-200',
+                // Transitions
+                'transition',
+                'duration-200',
 
-            // States
-            'hover:border-surface-400 dark:hover:border-surface-600',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
+                // States
+                'hover:border-surface-400 dark:hover:border-surface-600',
+                'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
 
-            // Misc
-            'appearance-none'
-        ]
-    },
-    filtericon: {
-        class: ['absolute', 'top-1/2 right-3', '-mt-2']
+                // Misc
+                'appearance-none'
+            ]
+        }
     }
 };

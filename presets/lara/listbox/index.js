@@ -15,20 +15,20 @@ export default {
             { 'border-red-500 dark:border-red-400': props.invalid }
         ]
     }),
-    wrapper: {
-        class: [
-            // Overflow
-            'overflow-auto'
-        ]
-    },
+    listContainer: 'overflow-auto',
     list: {
         class: 'py-3 list-none m-0 outline-none'
     },
-    item: ({ context }) => ({
+    option: ({ context }) => ({
         class: [
+            'relative',
+
             // Font
             'font-normal',
             'leading-none',
+
+            // Flex
+            'flex items-center',
 
             // Position
             'relative',
@@ -64,7 +64,7 @@ export default {
             'whitespace-nowrap'
         ]
     }),
-    itemgroup: {
+    optionGroup: {
         class: [
             //Font
             'font-bold',
@@ -81,6 +81,7 @@ export default {
             'cursor-auto'
         ]
     },
+    optionCheckIcon: 'relative -ms-1.5 me-1.5 text-surface-700 dark:text-white/80 w-4 h-4',
     header: {
         class: [
             // Spacing
@@ -98,46 +99,42 @@ export default {
             'border-surface-300 dark:border-surface-600'
         ]
     },
-    filtercontainer: {
-        class: 'relative'
+    pcFilter: {
+        root: {
+            class: [
+                // Font
+                'leading-none',
+
+                // Sizing
+                'pr-7 py-3 px-3',
+                '-mr-7',
+                'w-full',
+
+                //Color
+                'text-surface-700 dark:text-white/80',
+                'bg-surface-0 dark:bg-surface-900',
+                'border-surface-200 dark:border-surface-700',
+
+                // Shape
+                'border',
+                'rounded-lg',
+                'appearance-none',
+
+                // Transitions
+                'transition',
+                'duration-200',
+
+                // States
+                'hover:border-primary',
+                'focus:ring focus:outline-none focus:outline-offset-0',
+                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
+
+                // Misc
+                'appearance-none'
+            ]
+        }
     },
-    filterinput: {
-        class: [
-            // Font
-            'leading-none',
-
-            // Sizing
-            'pr-7 py-3 px-3',
-            '-mr-7',
-            'w-full',
-
-            //Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-900',
-            'border-surface-200 dark:border-surface-700',
-
-            // Shape
-            'border',
-            'rounded-lg',
-            'appearance-none',
-
-            // Transitions
-            'transition',
-            'duration-200',
-
-            // States
-            'hover:border-primary',
-            'focus:ring focus:outline-none focus:outline-offset-0',
-            'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
-
-            // Misc
-            'appearance-none'
-        ]
-    },
-    filtericon: {
-        class: ['absolute', 'top-1/2 right-3', '-mt-2']
-    },
-    emptymessage: {
+    emptyMessage: {
         class: [
             // Font
             'leading-none',
