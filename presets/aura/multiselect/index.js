@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, state, parent }) => ({
+    root: ({ props, state }) => ({
         class: [
             // Font
             'leading-none',
@@ -35,9 +35,7 @@ export default {
             { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled }
         ]
     }),
-    labelContainer: {
-        class: 'overflow-hidden flex flex-auto cursor-pointer '
-    },
+    labelContainer: 'overflow-hidden flex flex-auto cursor-pointer',
     label: ({ props }) => ({
         class: [
             'leading-none',
@@ -60,38 +58,7 @@ export default {
             'overflow-hidden whitespace-nowrap cursor-pointer overflow-ellipsis'
         ]
     }),
-    token: {
-        class: [
-            // Flex
-            'inline-flex items-center',
-
-            // Spacings
-            'py-1 px-3 m-0 mr-1',
-
-            // Shape
-            'rounded',
-
-            // Colors
-            'bg-surface-100 dark:bg-surface-700',
-            'text-surface-700 dark:text-white',
-
-            // Misc
-            'cursor-default'
-        ]
-    },
-    removeTokenIcon: {
-        class: [
-            // Spacing
-            'ml-[0.375rem]',
-
-            // Size
-            'w-4 h-4',
-
-            // Misc
-            'cursor-pointer'
-        ]
-    },
-    trigger: {
+    dropdown: {
         class: [
             // Flexbox
             'flex items-center justify-center',
@@ -108,7 +75,7 @@ export default {
             'rounded-r-md'
         ]
     },
-    panel: {
+    overlay: {
         class: [
             // Colors
             'bg-surface-0 dark:bg-surface-900',
@@ -126,7 +93,7 @@ export default {
             'flex items-center justify-between',
 
             // Spacing
-            'pt-2 px-4 pb-0',
+            'pt-2 px-4 pb-0 gap-2',
             'm-0',
 
             //Shape
@@ -140,271 +107,7 @@ export default {
             'border-surface-300 dark:border-surface-700'
         ]
     },
-    headerCheckboxContainer: {
-        class: [
-            'relative',
-
-            // Alignment
-            'inline-flex',
-            'align-bottom',
-
-            // Size
-            'w-5',
-            'h-5',
-
-            // Spacing
-            'mr-2',
-
-            // Misc
-            'cursor-pointer',
-            'select-none'
-        ]
-    },
-    headerCheckbox: {
-        root: {
-            class: [
-                'relative',
-
-                // Alignment
-                'inline-flex',
-                'align-bottom',
-
-                // Size
-                'w-5',
-                'h-5',
-
-                // Spacing
-                'mr-2',
-
-                // Misc
-                'cursor-pointer',
-                'select-none'
-            ]
-        },
-        box: ({ props, context }) => ({
-            class: [
-                // Alignment
-                'flex',
-                'items-center',
-                'justify-center',
-
-                // Size
-                'w-5',
-                'h-5',
-
-                // Shape
-                'rounded',
-                'border',
-
-                // Colors
-                {
-                    'border-surface-300 dark:border-surface-700': !context.checked && !props.invalid,
-                    'bg-surface-0 dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
-                    'border-primary bg-primary': context.checked
-                },
-
-                // Invalid State
-                'invalid:focus:ring-red-200',
-                'invalid:hover:border-red-500',
-                { 'border-red-500 dark:border-red-400': props.invalid },
-
-                // States
-                {
-                    'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                    'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
-                    'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
-                    'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
-                },
-
-                // Transitions
-                'transition-colors',
-                'duration-200'
-            ]
-        }),
-        input: {
-            class: [
-                'peer',
-
-                // Size
-                'w-full ',
-                'h-full',
-
-                // Position
-                'absolute',
-                'top-0 left-0',
-                'z-10',
-
-                // Spacing
-                'p-0',
-                'm-0',
-
-                // Shape
-                'opacity-0',
-                'rounded',
-                'outline-none',
-                'border border-surface-300 dark:border-surface-700',
-
-                // Misc
-                'appearance-none',
-                'cursor-pointer'
-            ]
-        },
-        icon: {
-            class: [
-                // Size
-                'w-[0.875rem]',
-                'h-[0.875rem]',
-
-                // Colors
-                'text-white dark:text-surface-950',
-
-                // Transitions
-                'transition-all',
-                'duration-200'
-            ]
-        }
-    },
-    itemCheckbox: {
-        root: {
-            class: [
-                'relative',
-
-                // Alignment
-                'inline-flex',
-                'align-bottom',
-
-                // Size
-                'w-5',
-                'h-5',
-
-                // Spacing
-                'mr-2',
-
-                // Misc
-                'cursor-pointer',
-                'select-none'
-            ]
-        },
-        box: ({ props, context }) => ({
-            class: [
-                // Alignment
-                'flex',
-                'items-center',
-                'justify-center',
-
-                // Size
-                'w-5',
-                'h-5',
-
-                // Shape
-                'rounded',
-                'border',
-
-                // Colors
-                {
-                    'border-surface-300 dark:border-surface-700': !context.checked && !props.invalid,
-                    'bg-surface-0  dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
-                    'border-primary bg-primary': context.checked
-                },
-
-                // Invalid State
-                'invalid:focus:ring-red-200',
-                'invalid:hover:border-red-500',
-                { 'border-red-500 dark:border-red-400': props.invalid },
-
-                // States
-                {
-                    'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                    'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
-                    'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
-                    'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
-                },
-
-                // Transitions
-                'transition-colors',
-                'duration-200'
-            ]
-        }),
-        input: {
-            class: [
-                'peer',
-
-                // Size
-                'w-full ',
-                'h-full',
-
-                // Position
-                'absolute',
-                'top-0 left-0',
-                'z-10',
-
-                // Spacing
-                'p-0',
-                'm-0',
-
-                // Shape
-                'opacity-0',
-                'rounded',
-                'outline-none',
-                'border border-surface-300 dark:border-surface-700',
-
-                // Misc
-                'appearance-none',
-                'cursor-pointer'
-            ]
-        },
-        icon: {
-            class: [
-                // Size
-                'w-[0.875rem]',
-                'h-[0.875rem]',
-
-                // Colors
-                'text-white dark:text-surface-950',
-
-                // Transitions
-                'transition-all',
-                'duration-200'
-            ]
-        }
-    },
-    closeButton: {
-        class: [
-            'relative',
-
-            // Flexbox and Alignment
-            'flex items-center justify-center',
-
-            // Size and Spacing
-            'ml-2',
-            'last:mr-0',
-            'w-8 h-8',
-
-            // Shape
-            'border-0',
-            'rounded-full',
-
-            // Colors
-            'text-surface-500',
-            'bg-transparent',
-
-            // Transitions
-            'transition duration-200 ease-in-out',
-
-            // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-inset',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
-
-            // Misc
-            'overflow-hidden'
-        ]
-    },
-    closeButtonIcon: {
-        class: 'w-4 h-4 inline-block'
-    },
-    wrapper: {
+    listContainer: {
         class: [
             // Sizing
             'max-h-[200px]',
@@ -416,15 +119,16 @@ export default {
     list: {
         class: 'p-1 list-none m-0'
     },
-    item: ({ context }) => ({
+    option: ({ context }) => ({
         class: [
             'relative',
+            'flex items-center',
 
             // Font
             'leading-none',
 
             // Spacing
-            'm-0 px-3 py-2',
+            'm-0 px-3 py-2 gap-2',
             'first:mt-0 mt-[2px]',
 
             // Shape
@@ -450,7 +154,7 @@ export default {
             'cursor-pointer overflow-hidden whitespace-nowrap'
         ]
     }),
-    itemgroup: {
+    optionGroup: {
         class: [
             'font-semibold',
 
@@ -464,59 +168,7 @@ export default {
             'cursor-auto'
         ]
     },
-    filtercontainer: {
-        class: 'relative'
-    },
-    filterinput: {
-        class: [
-            // Font
-            'leading-[normal]',
-
-            // Sizing
-            'py-2 pl-3 pr-7',
-            '-mr-7',
-            'w-full',
-
-            //Color
-            'text-surface-700 dark:text-white/80',
-            'bg-surface-0 dark:bg-surface-950',
-            'border-surface-200 dark:border-surface-700',
-
-            // Shape
-            'border',
-            'rounded-lg',
-            'appearance-none',
-
-            // Transitions
-            'transition',
-            'duration-200',
-
-            // States
-            'hover:border-surface-400 dark:hover:border-surface-600',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
-
-            // Misc
-            'appearance-none'
-        ]
-    },
-    filtericon: {
-        class: ['absolute', 'top-1/2 right-3', '-mt-2']
-    },
-    clearicon: {
-        class: [
-            // Color
-            'text-surface-400 dark:text-surface-500',
-
-            // Position
-            'absolute',
-            'top-1/2',
-            'right-12',
-
-            // Spacing
-            '-mt-2'
-        ]
-    },
-    emptymessage: {
+    emptyMessage: {
         class: [
             // Font
             'leading-none',
@@ -529,7 +181,61 @@ export default {
             'bg-transparent'
         ]
     },
-    loadingicon: {
+    pcFilterContainer: {
+        root: {
+            class: [
+                'flex-auto',
+                'relative',
+
+                '[&>[data-pc-name=inputicon]]:absolute',
+                '[&>[data-pc-name=inputicon]]:top-1/2',
+                '[&>[data-pc-name=inputicon]]:-mt-2',
+                '[&>[data-pc-name=inputicon]]:text-surface-900/60 dark:[&>[data-pc-name=inputicon]]:text-white/60',
+
+                '[&>[data-pc-name=inputicon]:last-child]:right-3',
+                '[&>[data-pc-name=inputtext]:last-child]:pl-10'
+            ]
+        }
+    },
+    pcFilter: {
+        root: ({ props }) => ({
+            class: [
+                'w-full',
+
+                // Font
+                'text-base leading-none',
+
+                'rounded-md',
+
+                // Spacing
+                'm-0 py-2 px-3',
+
+                // Colors
+                'text-surface-800 dark:text-white/80',
+                'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+                'bg-surface-0 dark:bg-surface-900',
+                'border',
+                { 'border-surface-300 dark:border-surface-600': !props.invalid },
+
+                // Invalid State
+                'invalid:focus:ring-red-200',
+                'invalid:hover:border-red-500',
+                { 'border-red-500 dark:border-red-400': props.invalid },
+
+                // States
+                {
+                    'hover:border-primary': !props.disabled && !props.invalid,
+                    'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-500/50 dark:focus:ring-primary-400/50 focus:z-10': !props.disabled,
+                    'opacity-60 select-none pointer-events-none cursor-default': props.disabled
+                },
+
+                // Misc
+                'appearance-none',
+                'transition-colors duration-200'
+            ]
+        })
+    },
+    loadingIcon: {
         class: 'text-surface-400 dark:text-surface-500 animate-spin'
     },
     transition: {

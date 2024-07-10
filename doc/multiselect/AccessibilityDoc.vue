@@ -19,7 +19,7 @@
             overriden with the <i>closeButtonProps</i>.
         </p>
 
-        <DocSectionCode :code="code" hideToggleCode hideCodeSandbox hideStackBlitz v-bind="$attrs" />
+        <DocSectionCode :code="code" hideToggleCode hideStackBlitz v-bind="$attrs" />
 
         <h3>Closed State Keyboard Support</h3>
         <div class="doc-tablewrapper">
@@ -216,32 +216,6 @@
                     <tr>
                         <td><i>tab</i></td>
                         <td>Moves focus to the next focusable element in the popup. If there is none, the focusable option is selected and the overlay is closed then moves focus to next element in page.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h3>Close Button Keyboard Support</h3>
-        <div class="doc-tablewrapper">
-            <table class="doc-table">
-                <thead>
-                    <tr>
-                        <th>Key</th>
-                        <th>Function</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><i>enter</i></td>
-                        <td>Closes the popup and moves focus to the multiselect element.</td>
-                    </tr>
-                    <tr>
-                        <td><i>space</i></td>
-                        <td>Closes the popup and moves focus to the multiselect element.</td>
-                    </tr>
-                    <tr>
-                        <td><i>escape</i></td>
-                        <td>Closes the popup and moves focus to the multiselect element.</td>
                     </tr>
                 </tbody>
             </table>
