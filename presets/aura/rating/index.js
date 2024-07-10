@@ -13,36 +13,7 @@ export default {
             }
         ]
     }),
-    cancelitem: ({ context }) => ({
-        class: [
-            // Flex & Alignment
-            'inline-flex items-center',
-
-            //State
-            {
-                'outline-none ring-1 ring-primary-500/50 dark:ring-primary-500': context.focused
-            },
-
-            // Misc
-            'cursor-pointer'
-        ]
-    }),
-    cancelicon: {
-        class: [
-            // Size
-            'w-4 h-4',
-
-            // Color
-            'text-red-500 dark:text-red-400',
-
-            // State
-            'hover:text-red-600 dark:hover:text-red-300',
-
-            // Transition
-            'transition duration-200 ease-in'
-        ]
-    },
-    item: ({ props, context }) => ({
+    option: ({ props, context }) => ({
         class: [
             // Flex & Alignment
             'inline-flex items-center',
@@ -59,7 +30,7 @@ export default {
             }
         ]
     }),
-    officon: ({ props }) => ({
+    offIcon: ({ props }) => ({
         class: [
             // Size
             'w-4 h-4',
@@ -74,7 +45,7 @@ export default {
             'transition duration-200 ease-in'
         ]
     }),
-    onicon: ({ props }) => ({
+    onIcon: ({ props }) => ({
         class: [
             // Size
             'w-4 h-4',

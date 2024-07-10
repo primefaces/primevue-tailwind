@@ -1,9 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Number of stars to display is defined with <i>stars</i> property.</p>
+        <p>Specify the <i>variant</i> property as <i>filled</i> to display the component with a higher visual emphasis than the default <i>outlined</i> style.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <Rating v-model="value" :stars="10" />
+        <RadioButton v-model="value" value="1" variant="filled" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -12,15 +12,15 @@
 export default {
     data() {
         return {
-            value: 5,
+            value: null,
             code: {
                 basic: `
-<Rating v-model="value" :stars="10" />
+<RadioButton v-model="value" value="1" variant="filled" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <Rating v-model="value" :stars="10" />
+        <RadioButton v-model="value" value="1" variant="filled" />
     </div>
 </template>
 
@@ -28,23 +28,23 @@ export default {
 export default {
     data() {
         return {
-            value: 5
+            value: null
         }
     }
-};
+}
 <\/script>
 `,
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <Rating v-model="value" :stars="10" />
+        <RadioButton v-model="value" value="1" variant="filled" />
     </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const value = ref(5);
+const value = ref(null);
 <\/script>
 `
             }

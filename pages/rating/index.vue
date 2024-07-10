@@ -10,7 +10,6 @@ import ImportDoc from '@/doc/rating/ImportDoc.vue';
 import NumberOfStarsDoc from '@/doc/rating/NumberOfStarsDoc.vue';
 import ReadOnlyDoc from '@/doc/rating/ReadOnlyDoc.vue';
 import TemplateDoc from '@/doc/rating/TemplateDoc.vue';
-import WithoutCancelDoc from '@/doc/rating/WithoutCancelDoc.vue';
 
 export default {
     data() {
@@ -25,11 +24,6 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
-                },
-                {
-                    id: 'withoutcancel',
-                    label: 'Without Cancel',
-                    component: WithoutCancelDoc
                 },
                 {
                     id: 'numberofstars',

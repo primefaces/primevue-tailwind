@@ -37,6 +37,11 @@ export default {
                     label: 'Dynamic',
                     component: DynamicDoc
                 },
+                // {
+                //     id: 'filled',
+                //     label: 'Filled',
+                //     component: FilledDoc
+                // },
                 {
                     id: 'invalid',
                     label: 'Invalid',
