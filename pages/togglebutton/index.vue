@@ -43,7 +43,7 @@ export default {
                     component: DisabledDoc
                 },
                 {
-                    id: 'inavlid',
+                    id: 'invalid',
                     label: 'Invalid',
                     component: InvalidDoc
                 },
