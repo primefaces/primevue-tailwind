@@ -71,7 +71,7 @@ export default {
             'touch-action-none'
         ]
     }),
-    starthandler: ({ props }) => ({
+    startHandler: ({ props }) => ({
         class: [
             'flex items-center justify-center',
 
@@ -103,7 +103,7 @@ export default {
             'touch-action-none'
         ]
     }),
-    endhandler: ({ props }) => ({
+    endHandler: ({ props }) => ({
         class: [
             'flex items-center justify-center',
 

@@ -27,15 +27,18 @@ export default {
             'before:bg-surface-0 before:dark:bg-surface-500',
 
             // Colors
+            'border',
             {
-                'bg-surface-300 dark:bg-surface-800': !(props.modelValue == props.trueValue) && !props.invalid,
-                'bg-primary': props.modelValue == props.trueValue && !props.invalid,
-                'before:dark:bg-surface-950': props.modelValue == props.trueValue
+                'bg-surface-300 dark:bg-surface-800': !(props.modelValue == props.trueValue),
+                'bg-primary': props.modelValue == props.trueValue,
+                'before:dark:bg-surface-950': props.modelValue == props.trueValue,
+                'border-transparent': !props.invalid
             },
 
             // Invalid State
-            { 'bg-red-400 dark:bg-red-300': props.invalid },
-            { 'peer-hover:bg-red-500 dark:peer-hover:bg-red-200': props.invalid },
+            { 'border-red-500 dark:border-red-400': props.invalid },
+            // { 'bg-red-400 dark:bg-red-300': props.invalid },
+            // { 'peer-hover:bg-red-500 dark:peer-hover:bg-red-200': props.invalid },
 
             // States
             { 'peer-hover:bg-surface-400 dark:peer-hover:bg-surface-700': !(props.modelValue == props.trueValue) && !props.disabled && !props.invalid },

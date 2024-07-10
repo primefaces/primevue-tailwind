@@ -68,7 +68,7 @@ export default {
             'touch-action-none'
         ]
     }),
-    starthandler: ({ props }) => ({
+    startHandler: ({ props }) => ({
         class: [
             'block',
 
@@ -101,7 +101,7 @@ export default {
             'touch-action-none'
         ]
     }),
-    endhandler: ({ props }) => ({
+    endHandler: ({ props }) => ({
         class: [
             'block',
 
