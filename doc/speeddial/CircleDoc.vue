@@ -3,8 +3,8 @@
         <p>Items can be displayed around the button when <i>type</i> is set to <i>circle</i>. Additional <i>radius</i> property defines the radius of the circle.</p>
     </DocSectionText>
     <div class="card">
-        <div :style="{ height: '500px' }" class="flex items-center justify-center">
-            <SpeedDial :model="items" :radius="80" type="circle" buttonClass="p-button-warning" />
+        <div :style="{ position: 'relative', height: '500px' }" class="flex items-center justify-center">
+            <SpeedDial :model="items" :radius="80" type="circle" :style="{ position: 'absolute' }" :buttonProps="{ severity: 'warning' }" />
         </div>
     </div>
     <DocSectionCode :code="code" />
@@ -19,21 +19,21 @@ export default {
                     label: 'Add',
                     icon: 'pi pi-pencil',
                     command: () => {
-                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
                     }
                 },
                 {
                     label: 'Update',
                     icon: 'pi pi-refresh',
                     command: () => {
-                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
                     }
                 },
                 {
                     label: 'Delete',
                     icon: 'pi pi-trash',
                     command: () => {
-                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                     }
                 },
                 {
@@ -53,13 +53,13 @@ export default {
             ],
             code: {
                 basic: `
-<SpeedDial :model="items" :radius="80" type="circle" buttonClass="p-button-warning" />
+<SpeedDial :model="items" :radius="80" type="circle" :style="{ position: 'absolute' }" :buttonProps="{ severity: 'warning' }" />
 `,
                 options: `
 <template>
     <div class="card">
-        <div :style="{ height: '500px' }" class="flex items-center justify-center">
-            <SpeedDial :model="items" :radius="80" type="circle" buttonClass="p-button-warning" />
+        <div :style="{ position: 'relative', height: '500px' }" class="flex items-center justify-center">
+            <SpeedDial :model="items" :radius="80" type="circle" :style="{ position: 'absolute' }" :buttonProps="{ severity: 'warning' }" />
             <Toast />
         </div>
     </div>
@@ -74,21 +74,21 @@ export default {
                     label: 'Add',
                     icon: 'pi pi-pencil',
                     command: () => {
-                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
                     }
                 },
                 {
                     label: 'Update',
                     icon: 'pi pi-refresh',
                     command: () => {
-                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
                     }
                 },
                 {
                     label: 'Delete',
                     icon: 'pi pi-trash',
                     command: () => {
-                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                     }
                 },
                 {
@@ -114,8 +114,8 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <div :style="{ height: '500px' }" class="flex items-center justify-center">
-            <SpeedDial :model="items" :radius="80" type="circle" buttonClass="p-button-warning" />
+        <div :style="{ position: 'relative', height: '500px' }" class="flex items-center justify-center">
+            <SpeedDial :model="items" :radius="80" type="circle" :style="{ position: 'absolute' }" :buttonProps="{ severity: 'warning' }" />
             <Toast />
         </div>
     </div>
@@ -134,21 +134,21 @@ const items = ref([
         label: 'Add',
         icon: 'pi pi-pencil',
         command: () => {
-            toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+            toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
         }
     },
     {
         label: 'Update',
         icon: 'pi pi-refresh',
         command: () => {
-            toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+            toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
         }
     },
     {
         label: 'Delete',
         icon: 'pi pi-trash',
         command: () => {
-            toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+            toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
         }
     },
     {

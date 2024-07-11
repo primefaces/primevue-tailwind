@@ -1,8 +1,6 @@
 export default {
-    root: {
-        class: 'absolute flex'
-    },
-    button: {
+    root: 'static flex gap-2',
+    pcButton: {
         root: ({ props, context, parent }) => ({
             class: [
                 'relative',
@@ -247,7 +245,7 @@ export default {
             'z-20'
         ]
     },
-    menuitem: ({ props, context }) => ({
+    item: ({ props, context }) => ({
         class: [
             'transform transition-transform duration-200 ease-out transition-opacity duration-800',
 
@@ -266,26 +264,28 @@ export default {
             { absolute: props.type !== 'linear' }
         ]
     }),
-    action: {
-        class: [
-            // Flexbox & Alignment
-            'flex items-center justify-center',
+    pcAction: {
+        root: {
+            class: [
+                // Flexbox & Alignment
+                'flex items-center justify-center',
 
-            // Size
-            'w-10 h-10',
+                // Size
+                'w-10 h-10',
 
-            // Shape
-            'rounded-full relative overflow-hidden',
+                // Shape
+                'rounded-full relative overflow-hidden',
 
-            // Appearance
-            'bg-surface-100 dark:bg-surface-800 text-surface-700 dark:text-surface-0/80',
+                // Appearance
+                'bg-surface-100 dark:bg-surface-800 text-surface-700 dark:text-surface-0/80',
 
-            // Hover Effects
-            'hover:bg-surface-200 dark:hover:bg-surface-800 dark:hover:text-surface-0',
+                // Hover Effects
+                'hover:bg-surface-200 dark:hover:bg-surface-800 dark:hover:text-surface-0',
 
-            // Transitions
-            'transition duration-200'
-        ]
+                // Transitions
+                'transition duration-200'
+            ]
+        }
     },
     mask: ({ state }) => ({
         class: [

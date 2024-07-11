@@ -2,9 +2,9 @@
     <DocSectionText v-bind="$attrs">
         <p>Adding <i>mask</i> property displays a modal layer behind the popup items.</p>
     </DocSectionText>
-    <div class="card p-3">
+    <div class="card p-4">
         <div :style="{ position: 'relative', height: '350px' }">
-            <SpeedDial :model="items" direction="up" mask :style="{ right: '1rem', bottom: '1rem' }" />
+            <SpeedDial :model="items" direction="up" mask :style="{ position: 'absolute', right: '1rem', bottom: '1rem' }" />
         </div>
     </div>
     <DocSectionCode :code="code" />
@@ -19,21 +19,21 @@ export default {
                     label: 'Add',
                     icon: 'pi pi-pencil',
                     command: () => {
-                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
                     }
                 },
                 {
                     label: 'Update',
                     icon: 'pi pi-refresh',
                     command: () => {
-                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
                     }
                 },
                 {
                     label: 'Delete',
                     icon: 'pi pi-trash',
                     command: () => {
-                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                     }
                 },
                 {
@@ -53,13 +53,13 @@ export default {
             ],
             code: {
                 basic: `
-<SpeedDial :model="items" direction="up" mask :style="{ right: '1rem', bottom: '1rem' }" />
+<SpeedDial :model="items" direction="up" mask :style="{ position: 'absolute', right: '1rem', bottom: '1rem' }" />
 `,
                 options: `
 <template>
-    <div class="card p-3">
+    <div class="card p-4">
         <div :style="{ position: 'relative', height: '350px' }">
-            <SpeedDial :model="items" direction="up" mask :style="{ right: '1rem', bottom: '1rem' }" />
+            <SpeedDial :model="items" direction="up" mask :style="{ position: 'absolute', right: '1rem', bottom: '1rem' }" />
         </div>
     </div>
 </template>
@@ -73,21 +73,21 @@ data() {
                 label: 'Add',
                 icon: 'pi pi-pencil',
                 command: () => {
-                    this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+                    this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
                 }
             },
             {
                 label: 'Update',
                 icon: 'pi pi-refresh',
                 command: () => {
-                    this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+                    this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
                 }
             },
             {
                 label: 'Delete',
                 icon: 'pi pi-trash',
                 command: () => {
-                    this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+                    this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                 }
             },
             {
@@ -112,9 +112,9 @@ data() {
 `,
                 composition: `
 <template>
-    <div class="card p-3">
+    <div class="card p-4">
         <div :style="{ position: 'relative', height: '350px' }">
-            <SpeedDial :model="items" direction="up" mask :style="{ right: '1rem', bottom: '1rem' }" />
+            <SpeedDial :model="items" direction="up" mask :style="{ position: 'absolute', right: '1rem', bottom: '1rem' }" />
         </div>
     </div>
 </template>
@@ -132,21 +132,21 @@ const items = ref([
         label: 'Add',
         icon: 'pi pi-pencil',
         command: () => {
-            toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+            toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
         }
     },
     {
         label: 'Update',
         icon: 'pi pi-refresh',
         command: () => {
-            toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+            toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
         }
     },
     {
         label: 'Delete',
         icon: 'pi pi-trash',
         command: () => {
-            toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+            toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
         }
     },
     {

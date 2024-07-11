@@ -3,11 +3,11 @@
         <p>When <i>type</i> is defined as <i>semi-circle</i>, items are displayed in a half-circle around the button.</p>
     </DocSectionText>
     <div class="card">
-        <div :style="{ position: 'relative', height: '500px' }">
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" :style="{ left: 'calc(50% - 2rem)', top: 0 }" />
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" :style="{ top: 'calc(50% - 2rem)', left: 0 }" />
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" :style="{ top: 'calc(50% - 2rem)', right: 0 }" />
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" :style="{ left: 'calc(50% - 2rem)', bottom: 0 }" />
+        <div style="position: relative; height: 500px">
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" style="position: absolute; left: calc(50% - 2rem); top: 0" />
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" style="position: absolute; top: calc(50% - 2rem); left: 0" />
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" style="position: absolute; top: calc(50% - 2rem); right: 0" />
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" style="position: absolute; left: calc(50% - 2rem); bottom: 0" />
         </div>
     </div>
     <DocSectionCode :code="code" />
@@ -22,21 +22,21 @@ export default {
                     label: 'Add',
                     icon: 'pi pi-pencil',
                     command: () => {
-                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
                     }
                 },
                 {
                     label: 'Update',
                     icon: 'pi pi-refresh',
                     command: () => {
-                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
                     }
                 },
                 {
                     label: 'Delete',
                     icon: 'pi pi-trash',
                     command: () => {
-                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                     }
                 },
                 {
@@ -56,19 +56,19 @@ export default {
             ],
             code: {
                 basic: `
-<SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" :style="{ left: 'calc(50% - 2rem)', bottom: 0 }" />
-<SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" :style="{ left: 'calc(50% - 2rem)', top: 0 }" />
-<SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" :style="{ top: 'calc(50% - 2rem)', right: 0 }" />
-<SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" :style="{ top: 'calc(50% - 2rem)', left: 0 }" />
+<SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" style="position: absolute; left: calc(50% - 2rem); bottom: 0" />
+<SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" style="position: absolute; left: calc(50% - 2rem); top: 0" />
+<SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" style="position: absolute; top: calc(50% - 2rem); right: 0" />
+<SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" style="position: absolute; top: calc(50% - 2rem); left: 0" />
 `,
                 options: `
 <template>
     <div class="card">
-        <div :style="{ position: 'relative', height: '500px' }">
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" :style="{ left: 'calc(50% - 2rem)', top: 0 }" />
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" :style="{ top: 'calc(50% - 2rem)', left: 0 }" />
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" :style="{ top: 'calc(50% - 2rem)', right: 0 }" />
-            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" :style="{ left: 'calc(50% - 2rem)', bottom: 0 }" />
+        <div style="position: relative; height: 500px">
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" style="position: absolute; left: calc(50% - 2rem); top: 0" />
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" style="position: absolute; top: calc(50% - 2rem); left: 0" />
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" style="position: absolute; top: calc(50% - 2rem); right: 0" />
+            <SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" style="position: absolute; left: calc(50% - 2rem); bottom: 0" />
             <Toast />
         </div>
     </div>
@@ -83,21 +83,21 @@ export default {
                     label: 'Add',
                     icon: 'pi pi-pencil',
                     command: () => {
-                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+                        this.$toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
                     }
                 },
                 {
                     label: 'Update',
                     icon: 'pi pi-refresh',
                     command: () => {
-                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+                        this.$toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
                     }
                 },
                 {
                     label: 'Delete',
                     icon: 'pi pi-trash',
                     command: () => {
-                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+                        this.$toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                     }
                 },
                 {
@@ -123,10 +123,10 @@ export default {
                 composition: `
 <template>
     <div class="card" :style="{ position: 'relative', height: '500px' }">
-        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" :style="{ left: 'calc(50% - 2rem)', bottom: 0 }" />
-        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" :style="{ left: 'calc(50% - 2rem)', top: 0 }" />
-        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" :style="{ top: 'calc(50% - 2rem)', right: 0 }" />
-        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" :style="{ top: 'calc(50% - 2rem)', left: 0 }" />
+        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" style="position: absolute; left: calc(50% - 2rem); bottom: 0" />
+        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="down" style="position: absolute; left: calc(50% - 2rem); top: 0" />
+        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="left" style="position: absolute; top: calc(50% - 2rem); right: 0" />
+        <SpeedDial :model="items" :radius="80" type="semi-circle" direction="right" style="position: absolute; top: calc(50% - 2rem); left: 0" />
         <Toast />
     </div>
 </template>
@@ -144,21 +144,21 @@ const items = ref([
         label: 'Add',
         icon: 'pi pi-pencil',
         command: () => {
-            toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
+            toast.add({ severity: 'info', summary: 'Add', detail: 'Data Added', life: 3000 });
         }
     },
     {
         label: 'Update',
         icon: 'pi pi-refresh',
         command: () => {
-            toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
+            toast.add({ severity: 'success', summary: 'Update', detail: 'Data Updated', life: 3000 });
         }
     },
     {
         label: 'Delete',
         icon: 'pi pi-trash',
         command: () => {
-            toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
+            toast.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
         }
     },
     {
