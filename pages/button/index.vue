@@ -4,9 +4,9 @@
 
 <script>
 import AccessibilityDoc from '@/doc/button/AccessibilityDoc.vue';
-import BadgesDoc from '@/doc/button/BadgesDoc.vue';
+import BadgeDoc from '@/doc/button/BadgeDoc.vue';
 import BasicDoc from '@/doc/button/BasicDoc.vue';
-import ButtonSetDoc from '@/doc/button/ButtonSetDoc.vue';
+import ButtonGroupDoc from '@/doc/button/ButtonGroupDoc.vue';
 import DisabledDoc from '@/doc/button/DisabledDoc.vue';
 import IconOnlyDoc from '@/doc/button/IconOnlyDoc.vue';
 import IconsDoc from '@/doc/button/IconsDoc.vue';
@@ -92,14 +92,14 @@ export default {
                     component: IconOnlyDoc
                 },
                 {
-                    id: 'badges',
-                    label: 'Badges',
-                    component: BadgesDoc
+                    id: 'badge',
+                    label: 'Badge',
+                    component: BadgeDoc
                 },
                 {
-                    id: 'buttonset',
-                    label: 'Button Set',
-                    component: ButtonSetDoc
+                    id: 'buttongroup',
+                    label: 'ButtonGroup',
+                    component: ButtonGroupDoc
                 },
                 {
                     id: 'sizes',
