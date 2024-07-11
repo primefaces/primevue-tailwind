@@ -7,7 +7,7 @@ export default {
             'items-center inline-flex text-center align-bottom justify-center',
 
             // Sizes & Spacing
-            'leading-[normal]',
+            'leading-[normal] gap-2',
             {
                 'px-4 py-2': props.size === null,
                 'text-sm py-1.5 px-3': props.size === 'small',
@@ -194,7 +194,10 @@ export default {
             'transition duration-200 ease-in-out',
 
             // Misc
-            'cursor-pointer overflow-hidden select-none'
+            'cursor-pointer overflow-hidden select-none',
+
+            // Badge
+            '[&>[data-pc-name=badge]]:min-w-4 [&>[data-pc-name=badge]]:h-4 [&>[data-pc-name=badge]]:leading-4'
         ]
     }),
     label: ({ props }) => ({

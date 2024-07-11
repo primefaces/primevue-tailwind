@@ -81,7 +81,7 @@ export default {
             'cursor-pointer'
         ]
     },
-    icon: ({ state }) => ({
+    icon: ({ state, context }) => ({
         class: [
             // Font
             'text-base leading-none',
@@ -92,7 +92,7 @@ export default {
 
             // Colors
             {
-                'text-white dark:text-surface-900': state.checked,
+                'text-white dark:text-surface-900': context.checked,
                 'text-primary': state.d_indeterminate
             },
 

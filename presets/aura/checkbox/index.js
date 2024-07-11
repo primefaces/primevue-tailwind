@@ -84,7 +84,7 @@ export default {
             'cursor-pointer'
         ]
     },
-    icon: ({ state }) => ({
+    icon: ({ context, state }) => ({
         class: [
             // Size
             'w-[0.875rem]',
@@ -92,7 +92,7 @@ export default {
 
             // Colors
             {
-                'text-white dark:text-surface-950': state.checked,
+                'text-white dark:text-surface-950': context.checked,
                 'text-primary': state.d_indeterminate
             },
 
