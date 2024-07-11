@@ -152,7 +152,7 @@
                             "to": "/datatable"
                         },
                         {
-                            "name": "Dataview",
+                            "name": "DataView",
                             "to": "/dataview"
                         },
                         {
@@ -201,7 +201,7 @@
                             "to": "/card"
                         },
                         {
-                            "name": "Defered",
+                            "name": "Deferred",
                             "to": "/deferredcontent"
                         },
                         {
