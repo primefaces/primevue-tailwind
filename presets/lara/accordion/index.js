@@ -1,4 +1,5 @@
 export default {
+    // For PrimeVue 3
     accordiontab: {
         root: {
             class: 'mb-1'

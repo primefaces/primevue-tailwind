@@ -1,4 +1,5 @@
 export default {
+    // For PrimeVue version 3
     accordiontab: {
         root: {
             class: ['mb-0', 'border-b border-surface-200 dark:border-surface-700']

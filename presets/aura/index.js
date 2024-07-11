@@ -1,4 +1,7 @@
 import accordion from './accordion';
+import accordioncontent from './accordioncontent';
+import accordionheader from './accordionheader';
+import accordionpanel from './accordionpanel';
 import autocomplete from './autocomplete';
 import avatar from './avatar';
 import avatargroup from './avatargroup';
@@ -7,6 +10,7 @@ import badgedirective from './badgedirective';
 import blockui from './blockui';
 import breadcrumb from './breadcrumb';
 import button from './button';
+import buttongroup from './buttongroup';
 import card from './card';
 import carousel from './carousel';
 import cascadeselect from './cascadeselect';
@@ -48,6 +52,7 @@ import metergroup from './metergroup';
 import multiselect from './multiselect';
 import orderlist from './orderlist';
 import organizationchart from './organizationchart';
+import overlaybadge from './overlaybadge';
 import paginator from './paginator';
 import panel from './panel';
 import panelmenu from './panelmenu';
@@ -128,6 +133,7 @@ export default {
 
     //buttons
     button,
+    buttongroup,
     splitbutton,
     speeddial,
 
@@ -144,6 +150,9 @@ export default {
 
     //panels
     accordion,
+    accordionpanel,
+    accordionheader,
+    accordioncontent,
     panel,
     fieldset,
     card,
@@ -191,6 +200,7 @@ export default {
 
     //misc
     badge,
+    overlaybadge,
     avatar,
     avatargroup,
     tag,
