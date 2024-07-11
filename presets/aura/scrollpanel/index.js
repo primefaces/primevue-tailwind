@@ -1,5 +1,5 @@
 export default {
-    wrapper: {
+    contentContainer: {
         class: [
             // Size & Position
             'h-full w-full',

@@ -11,7 +11,7 @@
                 dictum sit amet. Tristique senectus et netus et malesuada fames ac turpis egestas. Et tortor consequat id porta nibh venenatis cras sed. Diam maecenas ultricies mi eget mauris. Eget egestas purus viverra accumsan in nisl nisi.
                 Suscipit adipiscing bibendum est ultricies integer. Mattis aliquam faucibus purus in massa tempor nec.
             </p>
-            <ScrollTop target="parent" :threshold="100" icon="pi pi-arrow-up" />
+            <ScrollTop target="parent" :threshold="100" icon="pi pi-arrow-up" :buttonProps="{ severity: 'contrast', raised: true, rounded: true }" />
         </ScrollPanel>
     </div>
     <DocSectionCode :code="code" />
@@ -31,11 +31,7 @@ export default {
         dictum sit amet. Tristique senectus et netus et malesuada fames ac turpis egestas. Et tortor consequat id porta nibh venenatis cras sed. Diam maecenas ultricies mi eget mauris. Eget egestas purus viverra accumsan in nisl nisi.
         Suscipit adipiscing bibendum est ultricies integer. Mattis aliquam faucibus purus in massa tempor nec.
     </p>
-    <ScrollTop
-        target="parent"
-        :threshold="100"
-        icon="pi pi-arrow-up"
-    />
+    <ScrollTop target="parent" :threshold="100" icon="pi pi-arrow-up" :buttonProps="{ severity: 'contrast', raised: true, rounded: true }" />
 </ScrollPanel>
 `,
                 options: `
@@ -49,17 +45,7 @@ export default {
                 dictum sit amet. Tristique senectus et netus et malesuada fames ac turpis egestas. Et tortor consequat id porta nibh venenatis cras sed. Diam maecenas ultricies mi eget mauris. Eget egestas purus viverra accumsan in nisl nisi.
                 Suscipit adipiscing bibendum est ultricies integer. Mattis aliquam faucibus purus in massa tempor nec.
             </p>
-            <ScrollTop
-                target="parent"
-                :threshold="100"
-                icon="pi pi-arrow-up"
-                :pt="{
-                    root: 'w-[2rem] h-[2rem] rounded-sm bg-primary',
-                    icon: {
-                        class: 'text-base'
-                    }
-                }"
-            />
+            <ScrollTop target="parent" :threshold="100" icon="pi pi-arrow-up" :buttonProps="{ severity: 'contrast', raised: true, rounded: true }" />
         </ScrollPanel>
     </div>
 </template>
@@ -75,17 +61,7 @@ export default {
                 dictum sit amet. Tristique senectus et netus et malesuada fames ac turpis egestas. Et tortor consequat id porta nibh venenatis cras sed. Diam maecenas ultricies mi eget mauris. Eget egestas purus viverra accumsan in nisl nisi.
                 Suscipit adipiscing bibendum est ultricies integer. Mattis aliquam faucibus purus in massa tempor nec.
             </p>
-            <ScrollTop
-                target="parent"
-                :threshold="100"
-                icon="pi pi-arrow-up"
-                :pt="{
-                    root: 'w-[2rem] h-[2rem] rounded-sm bg-primary',
-                    icon: {
-                        class: 'text-base'
-                    }
-                }"
-            />
+            <ScrollTop target="parent" :threshold="100" icon="pi pi-arrow-up" :buttonProps="{ severity: 'contrast', raised: true, rounded: true }" />
         </ScrollPanel>
     </div>
 </template>

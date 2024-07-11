@@ -13,7 +13,7 @@
 <script>
 import AccessibilityDoc from '@/doc/scrollpanel/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/scrollpanel/BasicDoc.vue';
-import CustomDoc from '@/doc/scrollpanel/CustomDoc.vue';
+// import CustomDoc from '@/doc/scrollpanel/CustomDoc.vue';
 import ImportDoc from '@/doc/scrollpanel/ImportDoc.vue';
 
 export default {
@@ -30,11 +30,11 @@ export default {
                     label: 'Basic',
                     component: BasicDoc
                 },
-                {
-                    id: 'custom',
-                    label: 'Custom',
-                    component: CustomDoc
-                },
+                // {
+                //     id: 'custom',
+                //     label: 'Custom',
+                //     component: CustomDoc
+                // },
                 {
                     id: 'accessibility',
                     label: 'Accessibility',
