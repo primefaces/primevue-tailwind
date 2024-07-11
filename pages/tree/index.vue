@@ -7,13 +7,14 @@ import AccessibilityDoc from '@/doc/tree/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/tree/BasicDoc.vue';
 import ControlledDoc from '@/doc/tree/ControlledDoc.vue';
 import EventsDoc from '@/doc/tree/EventsDoc.vue';
-import FilterDoc from '@/doc/tree/FilterDoc.vue';
+// import FilterDoc from '@/doc/tree/FilterDoc.vue';
 import ImportDoc from '@/doc/tree/ImportDoc.vue';
 import LazyDoc from '@/doc/tree/LazyDoc.vue';
 import TemplateDoc from '@/doc/tree/TemplateDoc.vue';
 import CheckboxDoc from '@/doc/tree/selection/CheckboxDoc.vue';
 import MultipleDoc from '@/doc/tree/selection/MultipleDoc.vue';
 import SingleDoc from '@/doc/tree/selection/SingleDoc.vue';
+
 export default {
     data() {
         return {
@@ -69,11 +70,11 @@ export default {
                     label: 'Template',
                     component: TemplateDoc
                 },
-                {
-                    id: 'filter',
-                    label: 'Filter',
-                    component: FilterDoc
-                },
+                // {
+                //     id: 'filter',
+                //     label: 'Filter',
+                //     component: FilterDoc
+                // },
                 {
                     id: 'accessibility',
                     label: 'Accessibility',

@@ -40,6 +40,11 @@ export default {
                 //     label: 'Float Label',
                 //     component: FloatLabelDoc
                 // },
+                // {
+                //     id: 'filled',
+                //     label: 'Filled',
+                //     component: FilledDoc
+                // },
                 {
                     id: 'invalid',
                     label: 'Invalid',

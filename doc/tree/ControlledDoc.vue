@@ -6,7 +6,7 @@
         </p>
     </DocSectionText>
     <div class="card flex flex-col items-center">
-        <div class="flex flex-wrap gap-2 mb-4">
+        <div class="flex flex-wrap gap-2 mb-6">
             <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
             <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
         </div>
@@ -25,7 +25,7 @@ export default {
             expandedKeys: {},
             code: {
                 basic: `
-<div class="flex flex-wrap gap-2 mb-4">
+<div class="flex flex-wrap gap-2 mb-6">
     <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
     <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
 </div>
@@ -33,8 +33,8 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex flex-col items-cente">
-        <div class="flex flex-wrap gap-2 mb-4">
+    <div class="card flex flex-col align-items-cente">
+        <div class="flex flex-wrap gap-2 mb-6">
             <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
             <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
         </div>
@@ -81,8 +81,8 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex flex-col items-cente">
-        <div class="flex flex-wrap gap-2 mb-4">
+    <div class="card flex flex-col align-items-cente">
+        <div class="flex flex-wrap gap-2 mb-6">
             <Button type="button" icon="pi pi-plus" label="Expand All" @click="expandAll" />
             <Button type="button" icon="pi pi-minus" label="Collapse All" @click="collapseAll" />
         </div>
