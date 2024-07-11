@@ -1,14 +1,17 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Inplace can be used within a form to display a value as read only before making it editable. The <i>closable</i> property adds a close button next to the content to switch back to read only mode.</p>
+        <p>The <i>closeCallback</i> switches the state back to display mode when called from an event.</p>
     </DocSectionText>
     <div class="card">
-        <Inplace :closable="true">
+        <Inplace>
             <template #display>
                 {{ text || 'Click to Edit' }}
             </template>
-            <template #content>
-                <InputText v-model="text" autofocus />
+            <template #content="{ closeCallback }">
+                <span class="inline-flex items-center gap-2">
+                    <InputText v-model="text" autofocus />
+                    <Button icon="pi pi-times" text severity="danger" @click="closeCallback" />
+                </span>
             </template>
         </Inplace>
     </div>
@@ -22,24 +25,30 @@ export default {
             text: null,
             code: {
                 basic: `
-<Inplace :closable="true">
+<Inplace>
     <template #display>
         {{ text || 'Click to Edit' }}
     </template>
-    <template #content>
-        <InputText v-model="text" autofocus />
+    <template #content="{ closeCallback }">
+        <span class="inline-flex items-center gap-2">
+            <InputText v-model="text" autofocus />
+            <Button icon="pi pi-times" text severity="danger" @click="closeCallback" />
+        </span>
     </template>
 </Inplace>
 `,
                 options: `
 <template>
     <div class="card">
-        <Inplace :closable="true">
+        <Inplace>
             <template #display>
                 {{ text || 'Click to Edit' }}
             </template>
-            <template #content>
-                <InputText v-model="text" autofocus />
+            <template #content="{ closeCallback }">
+                <span class="inline-flex items-center gap-2">
+                    <InputText v-model="text" autofocus />
+                    <Button icon="pi pi-times" text severity="danger" @click="closeCallback" />
+                </span>
             </template>
         </Inplace>
     </div>
@@ -58,12 +67,15 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <Inplace :closable="true">
+        <Inplace>
             <template #display>
                 {{ text || 'Click to Edit' }}
             </template>
-            <template #content>
-                <InputText v-model="text" autofocus />
+            <template #content="{ closeCallback }">
+                <span class="inline-flex items-center gap-2">
+                    <InputText v-model="text" autofocus />
+                    <Button icon="pi pi-times" text severity="danger" @click="closeCallback" />
+                </span>
             </template>
         </Inplace>
     </div>

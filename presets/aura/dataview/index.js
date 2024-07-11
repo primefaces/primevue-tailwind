@@ -12,18 +12,6 @@ export default {
             'bg-surface-0 dark:bg-surface-900'
         ]
     },
-    grid: {
-        class: [
-            // flex
-            'flex flex-wrap',
-
-            // Spacing
-            'ml-0 mr-0 mt-0',
-
-            // Color
-            'bg-surface-0 dark:bg-surface-900'
-        ]
-    },
     header: {
         class: [
             'font-semibold',

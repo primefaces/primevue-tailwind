@@ -60,7 +60,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: ['dataview', 'dataviewlayoutoptions']
+                key: ['dataview']
             }
         };
     }
