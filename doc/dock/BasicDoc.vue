@@ -3,7 +3,7 @@
         <p>Menu requires a collection of menuitems as its <i>model</i> and an <i>icon</i> template. Default location is <i>bottom</i> and other edges are also available when defined with the <i>position</i> property.</p>
     </DocSectionText>
     <div class="card dock-demo">
-        <div class="flex flex-wrap gap-3 mb-5">
+        <div class="flex flex-wrap gap-4 mb-8">
             <div v-for="pos of positions" :key="pos.label" class="flex items-center">
                 <RadioButton v-model="position" :value="pos.value" :inputId="pos.label" name="dock" />
                 <label :for="pos.label" class="ml-2"> {{ pos.label }} </label>
@@ -11,8 +11,8 @@
         </div>
         <div class="dock-window" style="backgroundimage: 'url(https://primefaces.org/cdn/primevue/images/dock/window.jpg)'">
             <Dock :model="items" :position="position">
-                <template #icon="{ item }">
-                    <img :alt="item.label" :src="item.icon" style="width: 100%" />
+                <template #itemicon="{ item }">
+                    <img v-tooltip.top="item.label" :alt="item.label" :src="item.icon" style="width: 100%" />
                 </template>
             </Dock>
         </div>
@@ -64,15 +64,15 @@ export default {
             code: {
                 basic: `
 <Dock :model="items" :position="position">
-    <template #icon="{ item }">
-        <img :alt="item.label" :src="item.icon" style="width: 100%" />
+    <template #itemicon="{ item }">
+        <img v-tooltip.top="item.label" :alt="item.label" :src="item.icon" style="width: 100%" />
     </template>
 </Dock>
 `,
                 options: `
 <template>
     <div class="card dock-demo">
-        <div class="flex flex-wrap gap-3 mb-5">
+        <div class="flex flex-wrap gap-4 mb-8">
             <div v-for="pos of positions" :key="pos.label" class="flex items-center">
                 <RadioButton v-model="position" :value="pos.value" :inputId="pos.label" name="dock" />
                 <label :for="pos.label" class="ml-2"> {{ pos.label }} </label>
@@ -80,8 +80,8 @@ export default {
         </div>
         <div class="dock-window">
             <Dock :model="items" :position="position">
-                <template #icon="{ item }">
-                    <img :alt="item.label" :src="item.icon" style="width: 100%" />
+                <template #itemicon="{ item }">
+                    <img v-tooltip.top="item.label" :alt="item.label" :src="item.icon" style="width: 100%" />
                 </template>
             </Dock>
         </div>
@@ -153,7 +153,7 @@ export default {
                 composition: `
 <template>
     <div class="card dock-demo">
-        <div class="flex flex-wrap gap-3 mb-5">
+        <div class="flex flex-wrap gap-4 mb-8">
             <div v-for="pos of positions" :key="pos.label" class="flex items-center">
                 <RadioButton v-model="position" :value="pos.value" :inputId="pos.label" name="dock" />
                 <label :for="pos.label" class="ml-2"> {{ pos.label }} </label>
@@ -161,8 +161,8 @@ export default {
         </div>
         <div class="dock-window" style="backgroundimage: 'url(https://primefaces.org/cdn/primevue/images/dock/window.jpg))'">
             <Dock :model="items" :position="position">
-                <template #icon="{ item }">
-                    <img :alt="item.label" :src="item.icon" style="width: 100%" />
+                <template #itemicon="{ item }">
+                    <img v-tooltip.top="item.label" :alt="item.label" :src="item.icon" style="width: 100%" />
                 </template>
             </Dock>
         </div>

@@ -4,7 +4,7 @@
     </DocSectionText>
     <div class="card dock-demo">
         <Toast position="top-center" group="tc" />
-        <Menubar :model="menubarItems" class="shadow-none">
+        <Menubar :model="menubarItems">
             <template #start>
                 <i class="pi pi-apple px-2"></i>
             </template>
@@ -256,7 +256,7 @@ export default {
 <template>
     <div class="card dock-demo">
         <Toast position="top-center" group="tc" />
-        <Menubar :model="menubarItems" class="shadow-none">
+        <Menubar :model="menubarItems">
             <template #start>
                 <i class="pi pi-apple px-2"></i>
             </template>
@@ -561,7 +561,7 @@ export default {
         <div class="card dock-demo">
             <Toast position="top-center" group="tc" />
 
-            <Menubar :model="menubarItems" class="shadow-none">
+            <Menubar :model="menubarItems">
                 <template #start>
                     <i class="pi pi-apple px-2"></i>
                 </template>
