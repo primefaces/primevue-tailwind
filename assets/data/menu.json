@@ -279,14 +279,6 @@
                             "to": "/panelmenu"
                         },
                         {
-                            "name": "Steps",
-                            "to": "/steps"
-                        },
-                        {
-                            "name": "TabMenu",
-                            "to": "/tabmenu"
-                        },
-                        {
                             "name": "TieredMenu",
                             "to": "/tieredmenu"
                         }
