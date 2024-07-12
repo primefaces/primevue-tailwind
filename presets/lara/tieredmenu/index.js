@@ -13,22 +13,23 @@ export default {
             'border border-surface-200 dark:border-surface-700'
         ]
     },
-    menu: {
+    rootList: {
         class: [
             // Spacings and Shape
+            'flex flex-col',
             'list-none',
             'm-0',
             'p-0',
             'outline-none'
         ]
     },
-    menuitem: {
+    item: {
         class: [
             // Position
             'relative'
         ]
     },
-    content: ({ context }) => ({
+    itemContent: ({ context }) => ({
         class: [
             //Shape
             'rounded-none',
@@ -51,7 +52,7 @@ export default {
             'duration-200'
         ]
     }),
-    action: {
+    itemLink: {
         class: [
             'relative',
             // Flexbox
@@ -73,7 +74,7 @@ export default {
             'select-none'
         ]
     },
-    icon: {
+    itemIcon: {
         class: [
             // Spacing
             'mr-2',
@@ -82,10 +83,10 @@ export default {
             'text-surface-600 dark:text-white/70'
         ]
     },
-    label: {
+    itemLabel: {
         class: ['leading-none']
     },
-    submenuicon: {
+    submenuIcon: {
         class: [
             // Position
             'ml-auto'
@@ -93,6 +94,7 @@ export default {
     },
     submenu: {
         class: [
+            'flex flex-col',
             // Size
             'w-full sm:w-48',
 

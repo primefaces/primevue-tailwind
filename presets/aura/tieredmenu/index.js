@@ -13,19 +13,19 @@ export default {
             'border border-surface-200 dark:border-surface-700'
         ]
     },
-    menu: {
+    rootList: {
         class: [
             // Spacings and Shape
             'list-none',
-            'm-0',
-            'p-0',
+            'flex flex-col',
+            'm-0 p-0',
             'outline-none'
         ]
     },
-    menuitem: {
+    item: {
         class: 'relative my-[2px] [&:first-child]:mt-0'
     },
-    content: ({ context }) => ({
+    itemContent: ({ context }) => ({
         class: [
             //Shape
             'rounded-[4px]',
@@ -52,7 +52,7 @@ export default {
             { 'opacity-60 pointer-events-none cursor-default': context.disabled }
         ]
     }),
-    action: {
+    itemLink: {
         class: [
             'relative',
             // Flexbox
@@ -74,7 +74,7 @@ export default {
             'select-none'
         ]
     },
-    icon: {
+    itemIcon: {
         class: [
             // Spacing
             'mr-2',
@@ -83,10 +83,10 @@ export default {
             'text-surface-600 dark:text-white/70'
         ]
     },
-    label: {
+    itemLabel: {
         class: ['leading-none']
     },
-    submenuicon: {
+    submenuIcon: {
         class: [
             // Position
             'ml-auto'
@@ -95,8 +95,9 @@ export default {
     submenu: {
         class: [
             // Spacing
-            'p-1',
+            'flex flex-col',
             'm-0',
+            'p-1',
             'list-none',
             'min-w-[12.5rem]',
 
@@ -114,5 +115,9 @@ export default {
     },
     separator: {
         class: 'border-t border-surface-200 dark:border-surface-600 my-[2px]'
+    },
+    transition: {
+        enterFromClass: 'opacity-0',
+        enterActiveClass: 'transition-opacity duration-250'
     }
 };

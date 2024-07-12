@@ -19,7 +19,7 @@
             </template>
         </TieredMenu>
     </div>
-    <DocSectionCode :code="code" hideStackBlitz hideCodeSandbox />
+    <DocSectionCode :code="code" hideStackBlitz />
 </template>
 
 <script>
@@ -32,12 +32,12 @@ export default {
                     icon: 'pi pi-palette',
                     items: [
                         {
-                            label: 'Builder',
-                            route: '/builder'
+                            label: 'Styled',
+                            route: '/theming/styled'
                         },
                         {
-                            label: 'Gallery',
-                            route: '/gallery'
+                            label: 'Unstyled',
+                            route: '/theming/unstyled'
                         }
                     ]
                 },
@@ -45,7 +45,7 @@ export default {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/overview');
+                        this.$router.push('/introduction');
                     }
                 },
                 {
@@ -112,12 +112,12 @@ export default {
                     icon: 'pi pi-palette',
                     items: [
                         {
-                            label: 'Builder',
-                            route: '/builder'
+                            label: 'Styled',
+                            route: '/theming/styled'
                         },
                         {
-                            label: 'Gallery',
-                            route: '/gallery'
+                            label: 'Unstyled',
+                            route: '/theming/unstyled'
                         }
                     ]
                 },
@@ -125,7 +125,7 @@ export default {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/overview');
+                        this.$router.push('/introduction');
                     }
                 },
                 {
@@ -171,7 +171,7 @@ export default {
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue";
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
@@ -181,12 +181,12 @@ const items = ref([
         icon: 'pi pi-palette',
         items: [
             {
-                label: 'Builder',
-                route: '/builder'
+                label: 'Styled',
+                route: '/theming/styled'
             },
             {
-                label: 'Gallery',
-                route: '/gallery'
+                label: 'Unstyled',
+                route: '/theming/unstyled'
             }
         ]
     },
@@ -194,7 +194,7 @@ const items = ref([
         label: 'Programmatic',
         icon: 'pi pi-link',
         command: () => {
-            router.push('/overview');
+            router.push('/introduction');
         }
     },
     {
