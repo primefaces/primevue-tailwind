@@ -15,7 +15,7 @@ export default {
             { 'p-2 items-center': props.orientation == 'horizontal', 'flex-col sm:w-48 p-1': props.orientation !== 'horizontal' }
         ]
     }),
-    menu: ({ props }) => ({
+    rootList: ({ props }) => ({
         class: [
             // Flexbox
             'sm:flex',
@@ -48,7 +48,7 @@ export default {
             'outline-none'
         ]
     }),
-    menuitem: ({ props }) => ({
+    item: ({ props }) => ({
         class: [
             'sm:relative static my-[2px] [&:first-child]:mt-0',
             {
@@ -57,7 +57,7 @@ export default {
             }
         ]
     }),
-    content: ({ context }) => ({
+    itemContent: ({ context }) => ({
         class: [
             'rounded-[4px]',
 
@@ -79,7 +79,7 @@ export default {
             'duration-200'
         ]
     }),
-    action: {
+    itemLink: {
         class: [
             'relative',
 
@@ -101,10 +101,10 @@ export default {
             'overflow-hidden'
         ]
     },
-    icon: {
+    itemIcon: {
         class: 'mr-2'
     },
-    submenuicon: ({ props }) => ({
+    submenuIcon: ({ props }) => ({
         class: [
             {
                 'ml-auto sm:ml-2': props.horizontal,
@@ -112,7 +112,7 @@ export default {
             }
         ]
     }),
-    panel: ({ props }) => ({
+    overlay: ({ props }) => ({
         class: [
             // Size
             'w-auto',
@@ -145,7 +145,7 @@ export default {
     submenu: {
         class: ['m-0 list-none', 'p-1 px-2 w-full sm:min-w-[14rem]']
     },
-    submenuheader: {
+    submenuLabel: {
         class: [
             'font-semibold',
 
@@ -161,7 +161,7 @@ export default {
     separator: {
         class: 'border-t border-surface-200 dark:border-surface-600 my-1'
     },
-    menubutton: {
+    button: {
         class: [
             // Flexbox
             'flex sm:hidden',

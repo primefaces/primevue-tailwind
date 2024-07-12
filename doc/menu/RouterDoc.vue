@@ -18,7 +18,7 @@
             </template>
         </Menu>
     </div>
-    <DocSectionCode :code="code" hideStackBlitz hideCodeSandbox />
+    <DocSectionCode :code="code" hideStackBlitz />
 </template>
 
 <script>
@@ -32,13 +32,13 @@ export default {
                         {
                             label: 'Router Link',
                             icon: 'pi pi-palette',
-                            route: '/gallery'
+                            route: '/theming/unstyled'
                         },
                         {
                             label: 'Programmatic',
                             icon: 'pi pi-link',
                             command: () => {
-                                this.$router.push('/overview');
+                                this.$router.push('/introduction');
                             }
                         },
                         {
@@ -94,13 +94,13 @@ export default {
                 {
                     label: 'Router Link',
                     icon: 'pi pi-palette',
-                    route: '/gallery'
+                    route: '/theming/unstyled'
                 },
                 {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/overview');
+                        this.$router.push('/introduction');
                     }
                 },
                 {
@@ -136,7 +136,7 @@ export default {
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue";
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
@@ -144,13 +144,13 @@ const items = ref([
     {
         label: 'Router Link',
         icon: 'pi pi-palette',
-        route: '/gallery'
+        route: '/theming/unstyled'
     },
     {
         label: 'Programmatic',
         icon: 'pi pi-link',
         command: () => {
-            this.$router.push('/overview');
+            router.push('/introduction');
         }
     },
     {

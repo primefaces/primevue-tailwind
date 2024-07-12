@@ -12,7 +12,7 @@ export default {
             'border border-surface-200 dark:border-surface-700'
         ]
     },
-    menu: {
+    list: {
         class: [
             // Spacings and Shape
             'list-none',
@@ -21,7 +21,7 @@ export default {
             'outline-none'
         ]
     },
-    content: ({ context }) => ({
+    itemContent: ({ context }) => ({
         class: [
             //Shape
             'rounded-none',
@@ -38,7 +38,7 @@ export default {
             'hover:bg-surface-100 dark:bg-surface-700 dark:hover:bg-surface-400/10'
         ]
     }),
-    action: {
+    itemLink: {
         class: [
             'relative',
             // Flexbox
@@ -60,7 +60,7 @@ export default {
             'select-none'
         ]
     },
-    icon: {
+    itemIcon: {
         class: [
             // Spacing
             'mr-2',
@@ -69,10 +69,10 @@ export default {
             'text-surface-600 dark:text-white/70'
         ]
     },
-    label: {
+    itemLabel: {
         class: ['leading-none']
     },
-    submenuheader: {
+    submenuLabel: {
         class: [
             // Font
             'font-bold',

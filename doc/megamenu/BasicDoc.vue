@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>MegaMenu requires a collection of menuitems as its <i>model</i>.</p>
     </DocSectionText>
-    <div class="card lg:px-8">
+    <div class="card lg:px-20">
         <MegaMenu :model="items" />
     </div>
     <DocSectionCode :code="code" />
@@ -59,7 +59,7 @@ export default {
                         ],
                         [
                             {
-                                label: 'Home Theather',
+                                label: 'Home Theater',
                                 items: [{ label: 'Projector' }, { label: 'Speakers' }, { label: 'TVs' }]
                             }
                         ],
@@ -170,7 +170,7 @@ export default {
                         ],
                         [
                             {
-                                label: 'Home Theather',
+                                label: 'Home Theater',
                                 items: [{ label: 'Projector' }, { label: 'Speakers' }, { label: 'TVs' }]
                             }
                         ],
@@ -281,7 +281,7 @@ const items = ref([
             ],
             [
                 {
-                    label: 'Home Theather',
+                    label: 'Home Theater',
                     items: [{ label: 'Projector' }, { label: 'Speakers' }, { label: 'TVs' }]
                 }
             ],
