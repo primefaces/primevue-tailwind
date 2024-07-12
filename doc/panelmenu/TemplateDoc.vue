@@ -3,13 +3,13 @@
         <p>PanelMenu offers item customization with the <i>item</i> template that receives the menuitem instance from the model as a parameter.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <PanelMenu :model="items" class="w-full md:w-[20rem]">
+        <PanelMenu :model="items" class="w-full md:w-80">
             <template #item="{ item }">
-                <a v-ripple class="flex items-center px-3 py-2 cursor-pointer">
-                    <span :class="[item.icon, 'text-primary']" />
+                <a v-ripple class="flex items-center px-4 py-2 cursor-pointer group">
+                    <span :class="[item.icon, 'text-primary group-hover:text-inherit']" />
                     <span :class="['ml-2', { 'font-semibold': item.items }]">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-                    <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded bg-surface-100 dark:bg-surface-700 text-xs p-1">{{ item.shortcut }}</span>
+                    <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
                 </a>
             </template>
         </PanelMenu>
@@ -88,11 +88,11 @@ export default {
                 basic: `
 <PanelMenu :model="items">
     <template #item="{ item }">
-        <a v-ripple class="flex items-center px-3 py-2 cursor-pointer">
-            <span :class="[item.icon, 'text-primary']" />
+        <a v-ripple class="flex items-center px-4 py-2 cursor-pointer group">
+            <span :class="[item.icon, 'text-primary group-hover:text-inherit']" />
             <span :class="['ml-2', { 'font-semibold': item.items }]">{{ item.label }}</span>
             <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-            <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded bg-surface-100 dark:bg-surface-700 text-xs p-1">{{ item.shortcut }}</span>
+            <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
         </a>
     </template>
 </PanelMenu>
@@ -100,13 +100,13 @@ export default {
                 options: `
 <template>
     <div class="card flex justify-center">
-        <PanelMenu :model="items" class="w-full md:w-[20rem]">
+        <PanelMenu :model="items" class="w-full md:w-80">
             <template #item="{ item }">
-                <a v-ripple class="flex items-center px-3 py-2 cursor-pointer">
-                    <span :class="[item.icon, 'text-primary']" />
+                <a v-ripple class="flex items-center px-4 py-2 cursor-pointer group">
+                    <span :class="[item.icon, 'text-primary group-hover:text-inherit']" />
                     <span :class="['ml-2', { 'font-semibold': item.items }]">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-                    <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded bg-surface-100 dark:bg-surface-700 text-xs p-1">{{ item.shortcut }}</span>
+                    <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
                 </a>
             </template>
         </PanelMenu>
@@ -188,13 +188,13 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <PanelMenu :model="items" class="w-full md:w-[20rem]">
+        <PanelMenu :model="items" class="w-full md:w-80">
             <template #item="{ item }">
-                <a v-ripple class="flex items-center px-3 py-2 cursor-pointer">
-                    <span :class="[item.icon, 'text-primary']" />
+                <a v-ripple class="flex items-center px-4 py-2 cursor-pointer group">
+                    <span :class="[item.icon, 'text-primary group-hover:text-inherit']" />
                     <span :class="['ml-2', { 'font-semibold': item.items }]">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-                    <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded bg-surface-100 dark:bg-surface-700 text-xs p-1">{{ item.shortcut }}</span>
+                    <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
                 </a>
             </template>
         </PanelMenu>

@@ -3,7 +3,7 @@
         <p>The <i>command</i> property defines the callback to run when an item is activated by click or a key event.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <PanelMenu :model="items" class="w-full md:w-[20rem]" />
+        <PanelMenu :model="items" class="w-full md:w-80" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -76,7 +76,7 @@ export default {
                 options: `
 <template>
     <div class="card flex justify-center">
-        <PanelMenu :model="items" class="w-full md:w-[20rem]" />
+        <PanelMenu :model="items" class="w-full md:w-80" />
         <Toast />
     </div>
 </template>
@@ -149,7 +149,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <PanelMenu :model="items" class="w-full md:w-[20rem]" />
+        <PanelMenu :model="items" class="w-full md:w-80" />
         <Toast />
     </div>
 </template>

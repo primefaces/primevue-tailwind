@@ -5,7 +5,7 @@ export default {
     header: {
         class: ['rounded-md', 'outline-none', 'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50']
     },
-    headercontent: ({ context, instance }) => ({
+    headerContent: ({ context, instance }) => ({
         class: [
             // Shape
             'rounded-t-md',
@@ -18,7 +18,7 @@ export default {
             { 'text-surface-900': context.active },
 
             // States
-            'hover:bg-surface-100 dark:hover:bg-surface-700/80',
+            'hover:bg-surface-100 dark:hover:bg-surface-700',
             'hover:text-surface-900',
 
             // Transition
@@ -26,7 +26,7 @@ export default {
             'transition-shadow duration-200'
         ]
     }),
-    headeraction: {
+    headerLink: {
         class: [
             'relative',
 
@@ -44,16 +44,16 @@ export default {
             'select-none cursor-pointer no-underline'
         ]
     },
-    headerlabel: {
+    headerLabel: {
         class: 'leading-none'
     },
     headerIcon: {
         class: 'mr-2'
     },
-    submenuicon: {
+    submenuIcon: {
         class: 'mr-2'
     },
-    menucontent: {
+    content: {
         class: [
             // Spacing
             'py-2',
@@ -68,10 +68,10 @@ export default {
             'border-surface-200 dark:border-surface-700'
         ]
     },
-    menu: {
+    rootList: {
         class: ['outline-none', 'm-0 p-0 list-none']
     },
-    content: {
+    itemContent: {
         class: [
             // Shape
             'border-none rounded-none',
@@ -83,7 +83,7 @@ export default {
             'transition-shadow duration-200'
         ]
     },
-    action: ({ context }) => ({
+    itemLink: ({ context }) => ({
         class: [
             'relative',
 
@@ -110,7 +110,7 @@ export default {
             'select-none overflow-hidden'
         ]
     }),
-    icon: {
+    itemIcon: {
         class: 'mr-2'
     },
     submenu: {

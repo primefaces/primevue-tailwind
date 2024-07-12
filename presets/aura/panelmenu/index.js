@@ -5,7 +5,7 @@ export default {
     header: {
         class: ['rounded-[4px]', 'outline-none']
     },
-    headercontent: ({ context, instance }) => ({
+    headerContent: ({ context }) => ({
         class: [
             // Shape
             'rounded-[4px]',
@@ -24,7 +24,7 @@ export default {
             'transition-shadow duration-200'
         ]
     }),
-    headeraction: {
+    headerLink: {
         class: [
             'relative',
 
@@ -42,16 +42,16 @@ export default {
             'select-none cursor-pointer no-underline'
         ]
     },
-    headerlabel: {
+    headerLabel: {
         class: 'leading-none'
     },
     headerIcon: {
         class: 'mr-2'
     },
-    submenuicon: {
+    submenuIcon: {
         class: 'mr-2'
     },
-    menucontent: {
+    content: {
         class: [
             // Spacing
             'pl-4',
@@ -61,13 +61,13 @@ export default {
             'bg-surface-0 dark:bg-surface-900'
         ]
     },
-    menu: {
+    rootList: {
         class: ['outline-none', 'm-0 p-0 list-none']
     },
     menuitem: {
         class: 'relative my-[2px]'
     },
-    content: {
+    itemContent: {
         class: [
             // Shape
             'border-none rounded-[4px]',
@@ -79,7 +79,7 @@ export default {
             'transition-shadow duration-200'
         ]
     },
-    action: ({ context }) => ({
+    itemLink: ({ context }) => ({
         class: [
             'relative',
 
@@ -109,7 +109,7 @@ export default {
             'select-none overflow-hidden'
         ]
     }),
-    icon: {
+    itemIcon: {
         class: 'mr-2'
     },
     submenu: {
