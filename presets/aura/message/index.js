@@ -2,9 +2,8 @@ export default {
     root: ({ props }) => ({
         class: [
             // Spacing and Shape
-            'my-4 mx-0',
             'rounded-md',
-            'border',
+            'outline',
 
             // Colors
             {
@@ -16,12 +15,12 @@ export default {
                 'bg-surface-950 dark:bg-surface-0': props.severity == 'contrast'
             },
             {
-                'border-blue-200 dark:border-blue-500/20': props.severity == 'info',
-                'border-green-200 dark:border-green-500/20': props.severity == 'success',
-                'border-surface-200 dark:border-surface-500/20': props.severity == 'secondary',
-                'border-orange-200 dark:border-orange-500/20': props.severity == 'warn',
-                'border-red-200 dark:border-red-500/20': props.severity == 'error',
-                'border-surface-950 dark:border-surface-0': props.severity == 'contrast'
+                'outline-blue-200 dark:outline-blue-500/20': props.severity == 'info',
+                'outline-green-200 dark:outline-green-500/20': props.severity == 'success',
+                'outline-surface-200 dark:outline-surface-500/20': props.severity == 'secondary',
+                'outline-orange-200 dark:outline-orange-500/20': props.severity == 'warn',
+                'outline-red-200 dark:outline-red-500/20': props.severity == 'error',
+                'outline-surface-950 dark:outline-surface-0': props.severity == 'contrast'
             },
             {
                 'text-blue-700 dark:text-blue-300': props.severity == 'info',
@@ -33,20 +32,19 @@ export default {
             }
         ]
     }),
-    wrapper: {
+    content: {
         class: [
             // Flexbox
-            'flex items-center',
+            'flex items-center h-full',
 
             // Spacing
-            'py-2 px-3'
+            'py-2 px-3 gap-2'
         ]
     },
     icon: {
         class: [
             // Sizing and Spacing
-            'w-4 h-4',
-            'leading-[normal] mr-2 shrink-0'
+            'shrink-0 w-[1.125rem] h-[1.125rem]'
         ]
     },
     text: {
@@ -56,7 +54,7 @@ export default {
             'font-medium'
         ]
     },
-    button: ({ props }) => ({
+    closeButton: ({ props }) => ({
         class: [
             // Flexbox
             'flex items-center justify-center',
@@ -65,7 +63,7 @@ export default {
             'w-7 h-7',
 
             // Spacing and Misc
-            'ml-auto  relative',
+            'ml-auto relative',
 
             // Shape
             'rounded-full',

@@ -6,11 +6,12 @@
 import AccessibilityDoc from '@/doc/message/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/message/BasicDoc.vue';
 import ClosabledDoc from '@/doc/message/ClosableDoc.vue';
-import CustomIconDoc from '@/doc/message/CustomIconDoc.vue';
 import DynamicDoc from '@/doc/message/DynamicDoc.vue';
+import FormDoc from '@/doc/message/FormDoc.vue';
+import IconDoc from '@/doc/message/IconDoc.vue';
 import ImportDoc from '@/doc/message/ImportDoc.vue';
+import LifeDoc from '@/doc/message/LifeDoc.vue';
 import SeverityDoc from '@/doc/message/SeverityDoc.vue';
-import StickyDoc from '@/doc/message/StickyDoc.vue';
 
 export default {
     data() {
@@ -32,6 +33,16 @@ export default {
                     component: SeverityDoc
                 },
                 {
+                    id: 'icon',
+                    label: 'Icon',
+                    component: IconDoc
+                },
+                {
+                    id: 'form',
+                    label: 'Form',
+                    component: FormDoc
+                },
+                {
                     id: 'dynamic',
                     label: 'Dynamic',
                     component: DynamicDoc
@@ -42,14 +53,9 @@ export default {
                     component: ClosabledDoc
                 },
                 {
-                    id: 'sticky',
-                    label: 'Sticky',
-                    component: StickyDoc
-                },
-                {
-                    id: 'custom-icon',
-                    label: 'Custom Icon',
-                    component: CustomIconDoc
+                    id: 'life',
+                    label: 'Life',
+                    component: LifeDoc
                 },
                 {
                     id: 'accessibility',

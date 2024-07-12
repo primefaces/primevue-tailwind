@@ -329,10 +329,6 @@
                     "name": "Messages",
                     "children": [
                         {
-                            "name": "InlineMessage",
-                            "to": "/inlinemessage"
-                        },
-                        {
                             "name": "Message",
                             "to": "/message"
                         },

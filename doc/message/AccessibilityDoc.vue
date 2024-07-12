@@ -7,7 +7,7 @@
         </p>
 
         <p>
-            Close element is a <i>button</i> with an <i>aria-label</i> that refers to the <i>aria.close</i> property of the <a href="https://primevue.org/configuration/#locale" target="_blank" rel="noopener noreferrer">locale</a>> API by default, you
+            Close element is a <i>button</i> with an <i>aria-label</i> that refers to the <i>aria.close</i> property of the <a href="https://primevue.org/configuration/#locale" target="_blank" rel="noopener noreferrer">locale</a> API by default, you
             may use <i>closeButtonProps</i> to customize the element and override the default <i>aria-label</i>.
         </p>
 

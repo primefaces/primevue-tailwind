@@ -8,7 +8,7 @@ export default {
             { '-translate-x-2/4': props.position == 'top-center' || props.position == 'bottom-center' }
         ]
     }),
-    container: ({ props }) => ({
+    message: ({ props }) => ({
         class: [
             'mb-4 rounded-md w-full',
             'border border-transparent',
@@ -41,7 +41,7 @@ export default {
             }
         ]
     }),
-    content: ({ props }) => ({
+    messageContent: ({ props }) => ({
         class: [
             'flex p-3',
             {
@@ -50,14 +50,14 @@ export default {
             }
         ]
     }),
-    icon: ({ props }) => ({
+    messageIcon: ({ props }) => ({
         class: [
             // Sizing and Spacing
             props.message.severity === 'contrast' || props.message.severity === 'secondary' ? 'w-0' : 'w-[1.125rem] h-[1.125rem] mr-2',
             'text-lg leading-[normal]'
         ]
     }),
-    text: {
+    messageText: {
         class: [
             // Font and Text
             'text-base leading-[normal]',
@@ -71,7 +71,7 @@ export default {
     detail: ({ props }) => ({
         class: ['block', 'text-sm', props.message.severity === 'contrast' ? 'text-surface-0 dark:text-surface-950' : 'text-surface-700 dark:text-surface-0', { 'mt-2': props.message.summary }]
     }),
-    closebutton: ({ props }) => ({
+    closeButton: ({ props }) => ({
         class: [
             // Flexbox
             'flex items-center justify-center',

@@ -34,7 +34,6 @@ import galleria from './galleria';
 import global from './global';
 import iconfield from './iconfield';
 import image from './image';
-import inlinemessage from './inlinemessage';
 import inplace from './inplace';
 import inputgroup from './inputgroup';
 import inputgroupaddon from './inputgroupaddon';
@@ -190,7 +189,6 @@ export default {
 
     //messages
     message,
-    inlinemessage,
     toast,
 
     //media
