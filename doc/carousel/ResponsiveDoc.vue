@@ -9,14 +9,14 @@
     <div class="card">
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
-                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
-                    <div class="mb-3">
+                <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
+                    <div class="mb-4">
                         <div class="relative mx-auto">
-                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded-md" />
+                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded" />
                             <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left: 5px; top: 5px" />
                         </div>
                     </div>
-                    <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+                    <div class="mb-4 font-medium">{{ slotProps.data.name }}</div>
                     <div class="flex justify-between items-center">
                         <div class="mt-0 font-semibold text-xl">${{ slotProps.data.price }}</div>
                         <span>
@@ -64,14 +64,14 @@ export default {
                 basic: `
 <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
     <template #item="slotProps">
-        <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
-            <div class="mb-3">
+        <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
+            <div class="mb-4">
                 <div class="relative mx-auto">
-                    <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded-md" />
+                    <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded" />
                     <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left:5px; top: 5px"/>
                 </div>
             </div>
-            <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+            <div class="mb-4 font-medium">{{ slotProps.data.name }}</div>
             <div class="flex justify-between items-center">
                 <div class="mt-0 font-semibold text-xl">\${{ slotProps.data.price }}</div>
                 <span>
@@ -88,14 +88,14 @@ export default {
     <div class="card">
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
-                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
-                    <div class="mb-3">
+                <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
+                    <div class="mb-4">
                         <div class="relative mx-auto">
-                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded-md" />
+                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded" />
                             <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left:5px; top: 5px"/>
                         </div>
                     </div>
-                    <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+                    <div class="mb-4 font-medium">{{ slotProps.data.name }}</div>
                     <div class="flex justify-between items-center">
                         <div class="mt-0 font-semibold text-xl">\${{ slotProps.data.price }}</div>
                         <span>
@@ -150,7 +150,7 @@ export default {
                     return 'success';
 
                 case 'LOWSTOCK':
-                    return 'warning';
+                    return 'warn';
 
                 case 'OUTOFSTOCK':
                     return 'danger';
@@ -168,14 +168,14 @@ export default {
     <div class="card">
         <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions">
             <template #item="slotProps">
-                <div class="border border-surface-200 dark:border-surface-700 rounded-md m-2 p-3">
-                    <div class="mb-3">
+                <div class="border border-surface-200 dark:border-surface-700 rounded m-2  p-4">
+                    <div class="mb-4">
                         <div class="relative mx-auto">
-                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded-md" />
+                            <img :src="'https://primefaces.org/cdn/primevue/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-full rounded" />
                             <Tag :value="slotProps.data.inventoryStatus" :severity="getSeverity(slotProps.data.inventoryStatus)" class="absolute" style="left:5px; top: 5px"/>
                         </div>
                     </div>
-                    <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
+                    <div class="mb-4 font-medium">{{ slotProps.data.name }}</div>
                     <div class="flex justify-between items-center">
                         <div class="mt-0 font-semibold text-xl">\${{ slotProps.data.price }}</div>
                         <span>
@@ -227,7 +227,7 @@ const getSeverity = (status) => {
             return 'success';
 
         case 'LOWSTOCK':
-            return 'warning';
+            return 'warn';
 
         case 'OUTOFSTOCK':
             return 'danger';
@@ -239,7 +239,7 @@ const getSeverity = (status) => {
 <\/script>
 `,
                 data: `
-/* ProductService */        
+/* ProductService */
 {
     id: '1000',
     code: 'f230fh0g3',
@@ -266,7 +266,7 @@ const getSeverity = (status) => {
                     return 'success';
 
                 case 'LOWSTOCK':
-                    return 'warning';
+                    return 'warn';
 
                 case 'OUTOFSTOCK':
                     return 'danger';

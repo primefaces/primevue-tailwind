@@ -2,18 +2,18 @@
     <DocSectionText v-bind="$attrs">
         <p>Settings per screen size is defined via the <i>responsiveOptions</i> property.</p>
     </DocSectionText>
-    <div class="card">
-        <Galleria :value="images" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
-            <template #item="slotProps">
-                <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-            </template>
-            <template #thumbnail="slotProps">
-                <div class="justify-center">
+    <DeferredDemo @load="loadDemoData">
+        <div class="card">
+            <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
+                <template #item="slotProps">
+                    <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+                </template>
+                <template #thumbnail="slotProps">
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-                </div>
-            </template>
-        </Galleria>
-    </div>
+                </template>
+            </Galleria>
+        </div>
+    </DeferredDemo>
     <DocSectionCode :code="code" :service="['PhotoService']" />
 </template>
 
@@ -24,30 +24,40 @@ export default {
     data() {
         return {
             images: null,
+            responsiveOptions: [
+                {
+                    breakpoint: '1300px',
+                    numVisible: 4
+                },
+                {
+                    breakpoint: '575px',
+                    numVisible: 1
+                }
+            ],
             code: {
                 basic: `
-<Galleria :value="images" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
+<Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
     <template #item="slotProps">
         <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
     </template>
     <template #thumbnail="slotProps">
-        <div class="justify-center">
+        <template #thumbnail="slotProps">
             <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-        </div>
+        </template>
     </template>
 </Galleria>
 `,
                 options: `
 <template>
     <div class="card">
-        <Galleria :value="images" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
+        <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
             <template #item="slotProps">
                 <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
             </template>
             <template #thumbnail="slotProps">
-                <div class="justify-center">
+                <template #thumbnail="slotProps">
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-                </div>
+                </template>
             </template>
         </Galleria>
     </div>
@@ -60,6 +70,16 @@ export default {
     data() {
         return {
             images: null,
+            responsiveOptions: [
+                {
+                    breakpoint: '1300px',
+                    numVisible: 4
+                },
+                {
+                    breakpoint: '575px',
+                    numVisible: 1
+                }
+            ]
         };
     },
     mounted() {
@@ -71,14 +91,14 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <Galleria :value="images" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
+        <Galleria :value="images" :responsiveOptions="responsiveOptions" :numVisible="5" :circular="true" containerStyle="max-width: 640px">
             <template #item="slotProps">
                 <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
             </template>
             <template #thumbnail="slotProps">
-                <div class="justify-center">
+                <template #thumbnail="slotProps">
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="width: 100%; display: block" />
-                </div>
+                </template>
             </template>
         </Galleria>
     </div>
@@ -93,6 +113,16 @@ onMounted(() => {
 });
 
 const images = ref();
+const responsiveOptions = ref([
+    {
+        breakpoint: '1300px',
+        numVisible: 4
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1
+    }
+]);
 <\/script>
 `,
                 data: `
@@ -108,8 +138,10 @@ const images = ref();
             }
         };
     },
-    mounted() {
-        PhotoService.getImages().then((data) => (this.images = data));
+    methods: {
+        loadDemoData() {
+            PhotoService.getImages().then((data) => (this.images = data));
+        }
     }
 };
 </script>
