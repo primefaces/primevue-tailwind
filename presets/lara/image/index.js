@@ -2,7 +2,7 @@ export default {
     root: {
         class: 'relative inline-block'
     },
-    button: {
+    previewMask: {
         class: [
             // Flexbox & Alignment
             'flex items-center justify-center',
@@ -47,7 +47,7 @@ export default {
             'p-4'
         ]
     },
-    rotaterightbutton: {
+    rotateRightButton: {
         class: [
             'z-20',
 
@@ -74,10 +74,10 @@ export default {
             'transition duration-200 ease-in-out'
         ]
     },
-    rotaterighticon: {
+    rotateRightIcon: {
         class: 'w-6 h-6'
     },
-    rotateleftbutton: {
+    rotateLeftButton: {
         class: [
             'z-20',
 
@@ -104,10 +104,10 @@ export default {
             'transition duration-200 ease-in-out'
         ]
     },
-    rotatelefticon: {
+    rotateLeftIcon: {
         class: 'w-6 h-6'
     },
-    zoomoutbutton: {
+    zoomOutButton: {
         class: [
             'z-20',
 
@@ -134,10 +134,10 @@ export default {
             'transition duration-200 ease-in-out'
         ]
     },
-    zoomouticon: {
+    zoomOutIcon: {
         class: 'w-6 h-6'
     },
-    zoominbutton: {
+    zoomInButton: {
         class: [
             'z-20',
 
@@ -164,10 +164,10 @@ export default {
             'transition duration-200 ease-in-out'
         ]
     },
-    zoominicon: {
+    zoomInIcon: {
         class: 'w-6 h-6'
     },
-    closebutton: {
+    closeButton: {
         class: [
             'z-20',
 
@@ -194,7 +194,7 @@ export default {
             'transition duration-200 ease-in-out'
         ]
     },
-    closeicon: {
+    closeIcon: {
         class: 'w-6 h-6'
     },
     transition: {

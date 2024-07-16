@@ -11,7 +11,7 @@ export default {
             }
         ]
     }),
-    itemwrapper: ({ parent, props }) => ({
+    itemsContainer: ({ parent, props }) => ({
         class: [
             'group',
             'flex relative',
@@ -28,8 +28,7 @@ export default {
             }
         ]
     }),
-
-    itemcontainer: ({ parent }) => ({
+    items: ({ parent }) => ({
         class: [
             'flex h-full relative',
             {
@@ -47,7 +46,7 @@ export default {
             'h-full w-full'
         ]
     },
-    thumbnailwrapper: ({ parent }) => ({
+    thumbnails: ({ parent }) => ({
         class: [
             // Flex
             'flex flex-col shrink-0',
@@ -60,13 +59,13 @@ export default {
             'overflow-auto'
         ]
     }),
-    thumbnailcontainer: ({ parent }) => ({
+    thumbnailContent: ({ parent }) => ({
         class: [
             // Flex
             'flex',
 
             // Spacing
-            'p-4',
+            'py-4 px-1',
 
             // Colors
             'bg-black/90',
@@ -77,7 +76,7 @@ export default {
             }
         ]
     }),
-    previousthumbnailbutton: {
+    previousThumbnailButton: {
         class: [
             // Positioning
             'self-center relative',
@@ -98,10 +97,10 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400'
         ]
     },
-    thumbnailitemscontainer: {
+    thumbnailsViewport: {
         class: 'overflow-hidden w-full'
     },
-    thumbnailitems: ({ parent }) => ({
+    thumbnailItems: ({ parent }) => ({
         class: [
             'flex',
             {
@@ -109,7 +108,7 @@ export default {
             }
         ]
     }),
-    thumbnailitem: ({ parent }) => ({
+    thumbnailItem: ({ parent }) => ({
         class: [
             // Flexbox
             'flex items-center justify-center',
@@ -133,7 +132,7 @@ export default {
             'transition-opacity duration-300'
         ]
     }),
-    nextthumbnailbutton: {
+    nextThumbnailButton: {
         class: [
             // Positioning
             'self-center relative',
@@ -154,7 +153,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400'
         ]
     },
-    indicators: ({ parent }) => ({
+    indicatorList: ({ parent }) => ({
         class: [
             // flex
             'flex items-center justify-center',
@@ -189,7 +188,7 @@ export default {
             }
         ]
     }),
-    indicatorbutton: ({ context }) => ({
+    indicatorButton: ({ context }) => ({
         class: [
             // Size
             'w-4 h-4',
@@ -210,7 +209,7 @@ export default {
     mask: {
         class: ['fixed top-0 left-0 w-full h-full', 'flex items-center justify-center', 'bg-black/90']
     },
-    closebutton: {
+    closeButton: {
         class: [
             // Positioning
             '!absolute top-0 right-0',
@@ -231,10 +230,10 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400'
         ]
     },
-    closeicon: {
+    closeIcon: {
         class: 'w-6 h-6'
     },
-    previousitembutton: ({ parent }) => ({
+    previousItemButton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
@@ -251,8 +250,8 @@ export default {
             // Positioning
             'top-1/2 mt-[-0.5rem] left-0',
             {
-                '!absolute': parent.props.showItemNavigators,
-                '!fixed': !parent.props.showItemNavigators
+                '!absolute': !parent.state.containerVisible && parent.props.showItemNavigators,
+                '!fixed': parent.state.containerVisible
             },
 
             // Hover Effect
@@ -262,7 +261,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400'
         ]
     }),
-    nextitembutton: ({ parent }) => ({
+    nextItemButton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
@@ -279,8 +278,8 @@ export default {
             // Positioning
             'top-1/2 mt-[-0.5rem] right-0',
             {
-                '!absolute': parent.props.showItemNavigators,
-                '!fixed': !parent.props.showItemNavigators
+                '!absolute': !parent.state.containerVisible && parent.props.showItemNavigators,
+                '!fixed': parent.state.containerVisible
             },
 
             // Hover Effect

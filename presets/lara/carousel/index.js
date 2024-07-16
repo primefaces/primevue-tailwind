@@ -5,13 +5,13 @@ export default {
             'flex flex-col'
         ]
     },
-    content: {
+    contentContainer: {
         class: [
             // Flexbox & Overflow
             'flex flex-col overflow-auto'
         ]
     },
-    container: ({ props }) => ({
+    content: ({ props }) => ({
         class: [
             // Flexbox
             'flex',
@@ -20,64 +20,18 @@ export default {
             {
                 'flex-row': props.orientation !== 'vertical',
                 'flex-col': props.orientation == 'vertical'
-            }
+            },
+            ,
+            '[&>[data-pc-extend=button]]:self-center'
         ]
     }),
-    previousbutton: {
-        class: [
-            // Flexbox & Alignment
-            'flex justify-center items-center self-center',
-
-            // Sizing & Overflow
-            'overflow-hidden w-8 h-8',
-
-            // Spacing
-            'mx-2',
-
-            // Shape
-            'rounded-full',
-
-            // Border & Background
-            'border-0 bg-transparent',
-
-            // Color
-            'text-surface-600',
-
-            // Transitions
-            'transition duration-200 ease-in-out'
-        ]
-    },
-    nextbutton: {
-        class: [
-            // Flexbox & Alignment
-            'flex justify-center items-center self-center',
-
-            // Sizing & Overflow
-            'overflow-hidden w-8 h-8',
-
-            // Spacing
-            'mx-2',
-
-            // Shape
-            'rounded-full',
-
-            // Border & Background
-            'border-0 bg-transparent',
-
-            // Color
-            'text-surface-600',
-
-            // Transitions
-            'transition duration-200 ease-in-out'
-        ]
-    },
-    itemscontent: {
+    viewport: {
         class: [
             // Overflow & Width
             'overflow-hidden w-full'
         ]
     },
-    itemscontainer: ({ props }) => ({
+    itemList: ({ props }) => ({
         class: [
             // Flexbox
             'flex',
@@ -102,7 +56,7 @@ export default {
             }
         ]
     }),
-    itemcloned: ({ props }) => ({
+    itemClone: ({ props }) => ({
         class: [
             // Flexbox
             'flex shrink-0 grow',
@@ -116,7 +70,7 @@ export default {
             }
         ]
     }),
-    indicators: {
+    indicatorList: {
         class: [
             // Flexbox & Alignment
             'flex flex-row justify-center flex-wrap'
@@ -128,7 +82,7 @@ export default {
             'mr-2 mb-2'
         ]
     },
-    indicatorbutton: ({ context }) => ({
+    indicatorButton: ({ context }) => ({
         class: [
             // Sizing & Shape
             'w-8 h-2 rounded-0',
