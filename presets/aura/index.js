@@ -79,7 +79,12 @@ import steplist from './steplist';
 import steppanels from './steppanels';
 import stepper from './stepper';
 import steps from './steps';
+import tab from './tab';
+import tablist from './tablist';
 import tabmenu from './tabmenu';
+import tabpanel from './tabpanel';
+import tabpanels from './tabpanels';
+import tabs from './tabs';
 import tabview from './tabview';
 import tag from './tag';
 import terminal from './terminal';
@@ -171,6 +176,11 @@ export default {
     stepitem,
     steppanels,
     deferred,
+    tab,
+    tabs,
+    tablist,
+    tabpanels,
+    tabpanel,
 
     //file
     fileupload,

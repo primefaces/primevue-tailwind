@@ -1,16 +1,17 @@
 <template>
-    <DocComponent title="Vue Tabs Component" header="TabView" description="TabView is a container component to group content with tabs." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/tabview/#api" ptLink="/tabview/#pt" />
+    <DocComponent title="Vue Tabs Component" header="Tabs" description="Tabs is a container component to group content with tabs." :componentDocs="docs" :presetDoc="presetDoc" apiLink="/tabs/#api" ptLink="/tabs/#pt" />
 </template>
 
 <script>
-import AccessibilityDoc from '@/doc/tabview/AccessibilityDoc.vue';
-import BasicDoc from '@/doc/tabview/BasicDoc.vue';
-import ControlledDoc from '@/doc/tabview/ControlledDoc.vue';
-import DisabledDoc from '@/doc/tabview/DisabledDoc.vue';
-import DynamicDoc from '@/doc/tabview/DynamicDoc.vue';
-import ImportDoc from '@/doc/tabview/ImportDoc.vue';
-import ScrollableDoc from '@/doc/tabview/ScrollableDoc.vue';
-import TemplateDoc from '@/doc/tabview/TemplateDoc.vue';
+import AccessibilityDoc from '@/doc/tabs/AccessibilityDoc.vue';
+import BasicDoc from '@/doc/tabs/BasicDoc.vue';
+import ControlledDoc from '@/doc/tabs/ControlledDoc.vue';
+import DisabledDoc from '@/doc/tabs/DisabledDoc.vue';
+import DynamicDoc from '@/doc/tabs/DynamicDoc.vue';
+import ImportDoc from '@/doc/tabs/ImportDoc.vue';
+import ScrollableDoc from '@/doc/tabs/ScrollableDoc.vue';
+import TabMenuDoc from '@/doc/tabs/TabMenuDoc.vue';
+import TemplateDoc from '@/doc/tabs/TemplateDoc.vue';
 
 export default {
     data() {
@@ -52,13 +53,18 @@ export default {
                     component: TemplateDoc
                 },
                 {
+                    id: 'tabmenu',
+                    label: 'Tab Menu',
+                    component: TabMenuDoc
+                },
+                {
                     id: 'accessibility',
                     label: 'Accessibility',
                     component: AccessibilityDoc
                 }
             ],
             presetDoc: {
-                key: 'tabview'
+                key: ['tabs', 'tablist', 'tabpanels', 'tabpanel', 'tab']
             }
         };
     }

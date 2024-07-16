@@ -1,4 +1,5 @@
 export default {
+    // For PrimeVue version 3
     navContainer: ({ props }) => ({
         class: [
             // Position

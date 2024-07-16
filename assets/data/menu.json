@@ -229,8 +229,8 @@
                             "to": "/stepper"
                         },
                         {
-                            "name": "TabView",
-                            "to": "/tabview"
+                            "name": "Tabs",
+                            "to": "/tabs"
                         },
                         {
                             "name": "Toolbar",
