@@ -73,6 +73,10 @@ import speeddial from './speeddial';
 import splitbutton from './splitbutton';
 import splitter from './splitter';
 import splitterpanel from './splitterpanel';
+import step from './step';
+import stepitem from './stepitem';
+import steplist from './steplist';
+import steppanels from './steppanels';
 import stepper from './stepper';
 import steps from './steps';
 import tabmenu from './tabmenu';
@@ -162,6 +166,10 @@ export default {
     splitter,
     splitterpanel,
     stepper,
+    steplist,
+    step,
+    stepitem,
+    steppanels,
     deferred,
 
     //file
