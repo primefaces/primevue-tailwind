@@ -7,14 +7,14 @@
             <DataTable :value="products" tableStyle="min-width: 50rem">
                 <template #header>
                     <div class="flex flex-wrap items-center justify-between gap-2">
-                        <span class="text-xl text-surface-900 dark:text-surface-0 font-bold">Products</span>
+                        <span class="text-xl font-bold">Products</span>
                         <Button icon="pi pi-refresh" rounded raised />
                     </div>
                 </template>
                 <Column field="name" header="Name"></Column>
                 <Column header="Image">
                     <template #body="slotProps">
-                        <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`" :alt="slotProps.data.image" class="w-[6rem] shadow-md rounded" />
+                        <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`" :alt="slotProps.data.image" class="w-24 rounded" />
                     </template>
                 </Column>
                 <Column field="price" header="Price">
@@ -25,7 +25,7 @@
                 <Column field="category" header="Category"></Column>
                 <Column field="rating" header="Reviews">
                     <template #body="slotProps">
-                        <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+                        <Rating :modelValue="slotProps.data.rating" readonly />
                     </template>
                 </Column>
                 <Column header="Status">
@@ -52,14 +52,14 @@ export default {
 <DataTable :value="products" tableStyle="min-width: 50rem">
     <template #header>
         <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="text-xl text-surface-900 dark:text-surface-0 font-bold">Products</span>
+            <span class="text-xl font-bold">Products</span>
             <Button icon="pi pi-refresh" rounded raised />
         </div>
     </template>
     <Column field="name" header="Name"></Column>
     <Column header="Image">
         <template #body="slotProps">
-            <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="w-[6rem] shadow-md rounded" />
+            <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="w-24 rounded" />
         </template>
     </Column>
     <Column field="price" header="Price">
@@ -70,7 +70,7 @@ export default {
     <Column field="category" header="Category"></Column>
     <Column field="rating" header="Reviews">
         <template #body="slotProps">
-            <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+            <Rating :modelValue="slotProps.data.rating" readonly />
         </template>
     </Column>
     <Column header="Status">
@@ -87,14 +87,14 @@ export default {
         <DataTable :value="products" tableStyle="min-width: 50rem">
             <template #header>
                 <div class="flex flex-wrap items-center justify-between gap-2">
-                    <span class="text-xl text-surface-900 dark:text-surface-0 font-bold">Products</span>
+                    <span class="text-xl font-bold">Products</span>
                     <Button icon="pi pi-refresh" rounded raised />
                 </div>
             </template>
             <Column field="name" header="Name"></Column>
             <Column header="Image">
                 <template #body="slotProps">
-                    <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="w-[6rem] shadow-md rounded" />
+                    <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="w-24 rounded" />
                 </template>
             </Column>
             <Column field="price" header="Price">
@@ -105,7 +105,7 @@ export default {
             <Column field="category" header="Category"></Column>
             <Column field="rating" header="Reviews">
                 <template #body="slotProps">
-                    <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+                    <Rating :modelValue="slotProps.data.rating" readonly />
                 </template>
             </Column>
             <Column header="Status">
@@ -140,7 +140,7 @@ export default {
                     return 'success';
 
                 case 'LOWSTOCK':
-                    return 'warning';
+                    return 'warn';
 
                 case 'OUTOFSTOCK':
                     return 'danger';
@@ -159,14 +159,14 @@ export default {
         <DataTable :value="products" tableStyle="min-width: 50rem">
             <template #header>
                 <div class="flex flex-wrap items-center justify-between gap-2">
-                    <span class="text-xl text-surface-900 dark:text-surface-0 font-bold">Products</span>
+                    <span class="text-xl font-bold">Products</span>
                     <Button icon="pi pi-refresh" rounded raised />
                 </div>
             </template>
             <Column field="name" header="Name"></Column>
             <Column header="Image">
                 <template #body="slotProps">
-                    <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="w-[6rem] shadow-md rounded" />
+                    <img :src="\`https://primefaces.org/cdn/primevue/images/product/\${slotProps.data.image}\`" :alt="slotProps.data.image" class="w-24 rounded" />
                 </template>
             </Column>
             <Column field="price" header="Price">
@@ -177,7 +177,7 @@ export default {
             <Column field="category" header="Category"></Column>
             <Column field="rating" header="Reviews">
                 <template #body="slotProps">
-                    <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+                    <Rating :modelValue="slotProps.data.rating" readonly />
                 </template>
             </Column>
             <Column header="Status">
@@ -208,7 +208,7 @@ const getSeverity = (product) => {
             return 'success';
 
         case 'LOWSTOCK':
-            return 'warning';
+            return 'warn';
 
         case 'OUTOFSTOCK':
             return 'danger';
@@ -251,7 +251,7 @@ const getSeverity = (product) => {
                     return 'success';
 
                 case 'LOWSTOCK':
-                    return 'warning';
+                    return 'warn';
 
                 case 'OUTOFSTOCK':
                     return 'danger';

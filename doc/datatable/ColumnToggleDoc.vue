@@ -141,7 +141,6 @@ const onToggle = (val) => {
             }
         };
     },
-
     created() {
         this.columns = [
             { field: 'name', header: 'Name' },

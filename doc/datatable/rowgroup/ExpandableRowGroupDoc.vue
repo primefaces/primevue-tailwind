@@ -21,8 +21,8 @@
                 tableStyle="min-width: 50rem"
             >
                 <template #groupheader="slotProps">
-                    <img :alt="slotProps.data.representative.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${slotProps.data.representative.image}`" width="32" class="align-middle ml-2 inline" />
-                    <span class="align-middle ml-2 font-bold leading-6 text-surface-700 dark:text-surface-0/80">{{ slotProps.data.representative.name }}</span>
+                    <img :alt="slotProps.data.representative.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${slotProps.data.representative.image}`" width="32" style="vertical-align: middle" class="inline ml-2" />
+                    <span class="align-middle ml-2 font-bold leading-normal">{{ slotProps.data.representative.name }}</span>
                 </template>
                 <Column field="representative.name" header="Representative"></Column>
                 <Column field="name" header="Name" style="width: 20%"></Column>
@@ -64,8 +64,8 @@ export default {
         expandableRowGroups rowGroupMode="subheader" groupRowsBy="representative.name" @rowgroup-expand="onRowGroupExpand" @rowgroup-collapse="onRowGroupCollapse"
         sortMode="single" sortField="representative.name" :sortOrder="1">
     <template #groupheader="slotProps">
-        <img :alt="slotProps.data.representative.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.data.representative.image}\`" width="32" class="align-middle ml-2 inline" />
-        <span class="align-middle ml-2 font-bold leading-6 text-surface-700 dark:text-surface-0/80">{{ slotProps.data.representative.name }}</span>
+        <img :alt="slotProps.data.representative.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.data.representative.image}\`" width="32" style="vertical-align: middle" class="inline ml-2" />
+        <span class="align-middle ml-2 font-bold leading-normal">{{ slotProps.data.representative.name }}</span>
     </template>
     <Column field="representative.name" header="Representative"></Column>
     <Column field="name" header="Name" style="width: 20%"></Column>
@@ -96,8 +96,8 @@ export default {
                 expandableRowGroups rowGroupMode="subheader" groupRowsBy="representative.name" @rowgroup-expand="onRowGroupExpand" @rowgroup-collapse="onRowGroupCollapse"
                 sortMode="single" sortField="representative.name" :sortOrder="1">
             <template #groupheader="slotProps">
-                <img :alt="slotProps.data.representative.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.data.representative.image}\`" width="32" class="align-middle ml-2 inline" />
-                <span class="align-middle ml-2 font-bold leading-6 text-surface-700 dark:text-surface-0/80">{{ slotProps.data.representative.name }}</span>
+                <img :alt="slotProps.data.representative.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.data.representative.image}\`" width="32" style="vertical-align: middle" class="inline ml-2" />
+                <span class="align-middle ml-2 font-bold leading-normal">{{ slotProps.data.representative.name }}</span>
             </template>
             <Column field="representative.name" header="Representative"></Column>
             <Column field="name" header="Name" style="width: 20%"></Column>
@@ -169,7 +169,7 @@ export default {
                     return 'info';
 
                 case 'negotiation':
-                    return 'warning';
+                    return 'warn';
 
                 case 'renewal':
                     return null;
@@ -186,8 +186,8 @@ export default {
                 expandableRowGroups rowGroupMode="subheader" groupRowsBy="representative.name" @rowgroup-expand="onRowGroupExpand" @rowgroup-collapse="onRowGroupCollapse"
                 sortMode="single" sortField="representative.name" :sortOrder="1">
             <template #groupheader="slotProps">
-                <img :alt="slotProps.data.representative.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.data.representative.image}\`" width="32" class="align-middle ml-2 inline" />
-                <span class="align-middle ml-2 font-bold leading-6 text-surface-700 dark:text-surface-0/80">{{ slotProps.data.representative.name }}</span>
+                <img :alt="slotProps.data.representative.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.data.representative.image}\`" width="32" style="vertical-align: middle" class="inline ml-2" />
+                <span class="align-middle ml-2 font-bold leading-normal">{{ slotProps.data.representative.name }}</span>
             </template>
             <Column field="representative.name" header="Representative"></Column>
             <Column field="name" header="Name" style="width: 20%"></Column>
@@ -257,7 +257,7 @@ const getSeverity = (status) => {
             return 'info';
 
         case 'negotiation':
-            return 'warning';
+            return 'warn';
 
         case 'renewal':
             return null;
@@ -323,7 +323,7 @@ const getSeverity = (status) => {
                     return 'info';
 
                 case 'negotiation':
-                    return 'warning';
+                    return 'warn';
 
                 case 'renewal':
                     return null;

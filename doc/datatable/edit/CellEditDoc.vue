@@ -3,14 +3,20 @@
         <p>Cell editing is enabled by setting <i>editMode</i> as <i>cell</i>, defining input elements with <i>editor</i> templating of a Column and implementing <i>cell-edit-complete</i> to update the state.</p>
     </DocSectionText>
     <DeferredDemo @load="loadDemoData">
-        <div class="card p-fluid">
+        <div class="card">
             <DataTable
                 :value="products"
                 editMode="cell"
                 @cell-edit-complete="onCellEditComplete"
                 :pt="{
-                    table: { style: 'min-width: 50rem' }
+                    table: { style: 'min-width: 50rem' },
+                    column: {
+                        bodycell: ({ state }) => ({
+                            class: [{ 'pt-0 pb-0': state['d_editing'] }]
+                        })
+                    }
                 }"
+                :ptOptions="{ mergeProps: true }"
             >
                 <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
                     <template #body="{ data, field }">
@@ -18,10 +24,10 @@
                     </template>
                     <template #editor="{ data, field }">
                         <template v-if="field !== 'price'">
-                            <InputText v-model="data[field]" autofocus />
+                            <InputText v-model="data[field]" autofocus fluid />
                         </template>
                         <template v-else>
-                            <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus />
+                            <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus fluid />
                         </template>
                     </template>
                 </Column>
@@ -48,7 +54,12 @@ export default {
                 basic: `
 <DataTable :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete"
     :pt="{
-        table: { style: 'min-width: 50rem' }
+        table: { style: 'min-width: 50rem' },
+        column: {
+            bodycell: ({ state }) => ({
+                class: [{ 'pt-0 pb-0': state['d_editing'] }]
+            })
+        }
     }"
 >
     <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
@@ -57,10 +68,10 @@ export default {
         </template>
         <template #editor="{ data, field }">
             <template v-if="field !== 'price'">
-                <InputText v-model="data[field]" autofocus />
+                <InputText v-model="data[field]" autofocus fluid />
             </template>
             <template v-else>
-                <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus />
+                <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus fluid />
             </template>
         </template>
     </Column>
@@ -68,10 +79,15 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card p-fluid">
+    <div class="card">
         <DataTable :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete"
             :pt="{
-                table: { style: 'min-width: 50rem' }
+                table: { style: 'min-width: 50rem' },
+                column: {
+                    bodycell: ({ state }) => ({
+                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
+                    })
+                }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
@@ -80,10 +96,10 @@ export default {
                 </template>
                 <template #editor="{ data, field }">
                     <template v-if="field !== 'price'">
-                        <InputText v-model="data[field]" autofocus />
+                        <InputText v-model="data[field]" autofocus fluid />
                     </template>
                     <template v-else>
-                        <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus />
+                        <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus fluid />
                     </template>
                 </template>
             </Column>
@@ -149,10 +165,15 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card p-fluid">
+    <div class="card">
         <DataTable :value="products" editMode="cell" @cell-edit-complete="onCellEditComplete"
             :pt="{
-                table: { style: 'min-width: 50rem' }
+                table: { style: 'min-width: 50rem' },
+                column: {
+                    bodycell: ({ state }) => ({
+                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
+                    })
+                }
             }"
         >
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
@@ -161,10 +182,10 @@ export default {
                 </template>
                 <template #editor="{ data, field }">
                     <template v-if="field !== 'price'">
-                        <InputText v-model="data[field]" autofocus />
+                        <InputText v-model="data[field]" autofocus fluid />
                     </template>
                     <template v-else>
-                        <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus />
+                        <InputNumber v-model="data[field]" mode="currency" currency="USD" locale="en-US" autofocus fluid />
                     </template>
                 </template>
             </Column>

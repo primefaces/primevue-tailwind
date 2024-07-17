@@ -33,7 +33,7 @@
                 <Column field="category" header="Category"></Column>
                 <Column field="rating" header="Reviews">
                     <template #body="slotProps">
-                        <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+                        <Rating :modelValue="slotProps.data.rating" readonly />
                     </template>
                 </Column>
                 <Column header="Status">
@@ -42,7 +42,7 @@
                     </template>
                 </Column>
                 <template #expansion="slotProps">
-                    <div class="p-3">
+                    <div class="p-4">
                         <h5>Orders for {{ slotProps.data.name }}</h5>
                         <DataTable :value="slotProps.data.orders">
                             <Column field="id" header="Id" sortable></Column>
@@ -79,7 +79,7 @@ export default {
     data() {
         return {
             products: null,
-            expandedRows: [],
+            expandedRows: {},
             code: {
                 basic: `
 <DataTable v-model:expandedRows="expandedRows" :value="products" dataKey="id"
@@ -105,7 +105,7 @@ export default {
     <Column field="category" header="Category"></Column>
     <Column field="rating" header="Reviews">
         <template #body="slotProps">
-            <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+            <Rating :modelValue="slotProps.data.rating" readonly />
         </template>
     </Column>
     <Column header="Status">
@@ -114,7 +114,7 @@ export default {
         </template>
     </Column>
     <template #expansion="slotProps">
-        <div class="p-3">
+        <div class="p-4">
             <h5>Orders for {{ slotProps.data.name }}</h5>
             <DataTable :value="slotProps.data.orders">
                 <Column field="id" header="Id" sortable></Column>
@@ -166,7 +166,7 @@ export default {
             <Column field="category" header="Category"></Column>
             <Column field="rating" header="Reviews">
                 <template #body="slotProps">
-                    <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+                    <Rating :modelValue="slotProps.data.rating" readonly />
                 </template>
             </Column>
             <Column header="Status">
@@ -175,7 +175,7 @@ export default {
                 </template>
             </Column>
             <template #expansion="slotProps">
-                <div class="p-3">
+                <div class="p-4">
                     <h5>Orders for {{ slotProps.data.name }}</h5>
                     <DataTable :value="slotProps.data.orders" >
                         <Column field="id" header="Id" sortable></Column>
@@ -211,7 +211,7 @@ export default {
     data() {
         return {
             products: null,
-            expandedRows: []
+            expandedRows: {}
         };
     },
     mounted() {
@@ -239,7 +239,7 @@ export default {
                     return 'success';
 
                 case 'LOWSTOCK':
-                    return 'warning';
+                    return 'warn';
 
                 case 'OUTOFSTOCK':
                     return 'danger';
@@ -257,7 +257,7 @@ export default {
                     return 'danger';
 
                 case 'PENDING':
-                    return 'warning';
+                    return 'warn';
 
                 case 'RETURNED':
                     return 'info';
@@ -296,7 +296,7 @@ export default {
             <Column field="category" header="Category"></Column>
             <Column field="rating" header="Reviews">
                 <template #body="slotProps">
-                    <Rating :modelValue="slotProps.data.rating" readonly :cancel="false" />
+                    <Rating :modelValue="slotProps.data.rating" readonly />
                 </template>
             </Column>
             <Column header="Status">
@@ -305,7 +305,7 @@ export default {
                 </template>
             </Column>
             <template #expansion="slotProps">
-                <div class="p-3">
+                <div class="p-4">
                     <h5>Orders for {{ slotProps.data.name }}</h5>
                     <DataTable :value="slotProps.data.orders">
                         <Column field="id" header="Id" sortable></Column>
@@ -340,7 +340,7 @@ import { useToast } from 'primevue/usetoast';
 import { ProductService } from '@/service/ProductService';
 
 const products = ref();
-const expandedRows = ref([]);
+const expandedRows = ref({});
 const toast = useToast();
 
 onMounted(() => {
@@ -368,7 +368,7 @@ const getSeverity = (product) => {
             return 'success';
 
         case 'LOWSTOCK':
-            return 'warning';
+            return 'warn';
 
         case 'OUTOFSTOCK':
             return 'danger';
@@ -386,7 +386,7 @@ const getOrderSeverity = (order) => {
             return 'danger';
 
         case 'PENDING':
-            return 'warning';
+            return 'warn';
 
         case 'RETURNED':
             return 'info';
@@ -453,7 +453,7 @@ const getOrderSeverity = (order) => {
                     return 'success';
 
                 case 'LOWSTOCK':
-                    return 'warning';
+                    return 'warn';
 
                 case 'OUTOFSTOCK':
                     return 'danger';
@@ -471,7 +471,7 @@ const getOrderSeverity = (order) => {
                     return 'danger';
 
                 case 'PENDING':
-                    return 'warning';
+                    return 'warn';
 
                 case 'RETURNED':
                     return 'info';

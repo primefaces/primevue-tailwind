@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>When <i>filterDisplay</i> is set as <i>menu</i>, filtering is done via popups with support for multiple constraints and advanced templating.</p>
+        <p>When <i>filterDisplay</i> is set as <i>menu</i>, filtering UI is placed inside a popover with support for multiple constraints and advanced templating.</p>
     </DocSectionText>
     <DeferredDemo @load="loadDemoData">
         <div class="card">
@@ -8,10 +8,12 @@
                 <template #header>
                     <div class="flex justify-between">
                         <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-                        <span class="relative">
-                            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                            <InputText v-model="filters['global'].value" placeholder="Keyword Search" class="pl-10 font-normal" />
-                        </span>
+                        <IconField>
+                            <InputIcon>
+                                <i class="pi pi-search" />
+                            </InputIcon>
+                            <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                        </IconField>
                     </div>
                 </template>
                 <template #empty> No customers found. </template>
@@ -21,7 +23,7 @@
                         {{ data.name }}
                     </template>
                     <template #filter="{ filterModel }">
-                        <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+                        <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
                     </template>
                 </Column>
                 <Column header="Country" filterField="country.name" style="min-width: 12rem">
@@ -32,7 +34,7 @@
                         </div>
                     </template>
                     <template #filter="{ filterModel }">
-                        <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+                        <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
                     </template>
                     <template #filterclear="{ filterCallback }">
                         <Button type="button" icon="pi pi-times" @click="filterCallback()" severity="secondary"></Button>
@@ -41,7 +43,7 @@
                         <Button type="button" icon="pi pi-check" @click="filterCallback()" severity="success"></Button>
                     </template>
                     <template #filterfooter>
-                        <div class="px-3 pt-0 pb-3 text-center">Customized Buttons</div>
+                        <div class="px-4 pt-0 pb-4 text-center">Customized Buttons</div>
                     </template>
                 </Column>
                 <Column header="Agent" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="min-width: 14rem">
@@ -52,7 +54,7 @@
                         </div>
                     </template>
                     <template #filter="{ filterModel }">
-                        <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+                        <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                             <template #option="slotProps">
                                 <div class="flex items-center gap-2">
                                     <img :alt="slotProps.option.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${slotProps.option.image}`" style="width: 32px" />
@@ -67,7 +69,7 @@
                         {{ formatDate(data.date) }}
                     </template>
                     <template #filter="{ filterModel }">
-                        <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+                        <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" />
                     </template>
                 </Column>
                 <Column header="Balance" filterField="balance" dataType="numeric" style="min-width: 10rem">
@@ -83,7 +85,7 @@
                         <Tag :value="data.status" :severity="getSeverity(data.status)" />
                     </template>
                     <template #filter="{ filterModel }">
-                        <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                        <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                             <template #option="slotProps">
                                 <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                             </template>
@@ -95,7 +97,7 @@
                         <ProgressBar :value="data.activity" :showValue="false" style="height: 6px"></ProgressBar>
                     </template>
                     <template #filter="{ filterModel }">
-                        <Slider v-model="filterModel.value" range class="m-3"></Slider>
+                        <Slider v-model="filterModel.value" range class="m-4"></Slider>
                         <div class="flex items-center justify-between px-2">
                             <span>{{ filterModel.value ? filterModel.value[0] : 0 }}</span>
                             <span>{{ filterModel.value ? filterModel.value[1] : 100 }}</span>
@@ -108,7 +110,7 @@
                     </template>
                     <template #filter="{ filterModel }">
                         <label for="verified-filter" class="font-bold"> Verified </label>
-                        <TriStateCheckbox v-model="filterModel.value" inputId="verified-filter" />
+                        <Checkbox v-model="filterModel.value" :indeterminate="filterModel.value === null" binary inputId="verified-filter" />
                     </template>
                 </Column>
             </DataTable>
@@ -147,10 +149,12 @@ export default {
     <template #header>
         <div class="flex justify-between">
             <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-            <span class="relative">
-                <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
-            </span>
+            <IconField>
+                <InputIcon>
+                    <i class="pi pi-search" />
+                </InputIcon>
+                <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+            </IconField>
         </div>
     </template>
     <template #empty> No customers found. </template>
@@ -160,7 +164,7 @@ export default {
             {{ data.name }}
         </template>
         <template #filter="{ filterModel }">
-            <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+            <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
         </template>
     </Column>
     <Column header="Country" filterField="country.name" style="min-width: 12rem">
@@ -171,7 +175,7 @@ export default {
             </div>
         </template>
         <template #filter="{ filterModel }">
-            <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+            <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
         </template>
         <template #filterclear="{ filterCallback }">
             <Button type="button" icon="pi pi-times" @click="filterCallback()" severity="secondary"></Button>
@@ -180,7 +184,7 @@ export default {
             <Button type="button" icon="pi pi-check" @click="filterCallback()" severity="success"></Button>
         </template>
         <template #filterfooter>
-            <div class="px-3 pt-0 pb-3 text-center">Customized Buttons</div>
+            <div class="px-4 pt-0 pb-4 text-center">Customized Buttons</div>
         </template>
     </Column>
     <Column header="Agent" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="min-width: 14rem">
@@ -191,7 +195,7 @@ export default {
             </div>
         </template>
         <template #filter="{ filterModel }">
-            <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+            <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                 <template #option="slotProps">
                     <div class="flex items-center gap-2">
                         <img :alt="slotProps.option.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.option.image}\`" style="width: 32px" />
@@ -206,7 +210,7 @@ export default {
             {{ formatDate(data.date) }}
         </template>
         <template #filter="{ filterModel }">
-            <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+            <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" />
         </template>
     </Column>
     <Column header="Balance" filterField="balance" dataType="numeric" style="min-width: 10rem">
@@ -222,7 +226,7 @@ export default {
             <Tag :value="data.status" :severity="getSeverity(data.status)" />
         </template>
         <template #filter="{ filterModel }">
-            <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+            <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                 <template #option="slotProps">
                     <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                 </template>
@@ -234,7 +238,7 @@ export default {
             <ProgressBar :value="data.activity" :showValue="false" style="height: 6px"></ProgressBar>
         </template>
         <template #filter="{ filterModel }">
-            <Slider v-model="filterModel.value" range class="m-3"></Slider>
+            <Slider v-model="filterModel.value" range class="m-4"></Slider>
             <div class="flex items-center justify-between px-2">
                 <span>{{ filterModel.value ? filterModel.value[0] : 0 }}</span>
                 <span>{{ filterModel.value ? filterModel.value[1] : 100 }}</span>
@@ -247,7 +251,7 @@ export default {
         </template>
         <template #filter="{ filterModel }">
             <label for="verified-filter" class="font-bold"> Verified </label>
-            <TriStateCheckbox v-model="filterModel.value" inputId="verified-filter" />
+            <Checkbox v-model="filterModel.value" :indeterminate="filterModel.value === null" binary inputId="verified-filter" />
         </template>
     </Column>
 </DataTable>
@@ -260,10 +264,12 @@ export default {
             <template #header>
                 <div class="flex justify-between">
                     <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-                    <span class="relative">
-                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
-                    </span>
+                    <IconField>
+                        <InputIcon>
+                            <i class="pi pi-search" />
+                        </InputIcon>
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    </IconField>
                 </div>
             </template>
             <template #empty> No customers found. </template>
@@ -273,7 +279,7 @@ export default {
                     {{ data.name }}
                 </template>
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
                 </template>
             </Column>
             <Column header="Country" filterField="country.name" style="min-width: 12rem">
@@ -284,7 +290,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
                 </template>
                 <template #filterclear="{ filterCallback }">
                     <Button type="button" icon="pi pi-times" @click="filterCallback()" severity="secondary"></Button>
@@ -293,7 +299,7 @@ export default {
                     <Button type="button" icon="pi pi-check" @click="filterCallback()" severity="success"></Button>
                 </template>
                 <template #filterfooter>
-                    <div class="px-3 pt-0 pb-3 text-center">Customized Buttons</div>
+                    <div class="px-4 pt-0 pb-4 text-center">Customized Buttons</div>
                 </template>
             </Column>
             <Column header="Agent" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="min-width: 14rem">
@@ -304,7 +310,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                         <template #option="slotProps">
                             <div class="flex items-center gap-2">
                                 <img :alt="slotProps.option.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.option.image}\`" style="width: 32px" />
@@ -319,7 +325,7 @@ export default {
                     {{ formatDate(data.date) }}
                 </template>
                 <template #filter="{ filterModel }">
-                    <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+                    <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" />
                 </template>
             </Column>
             <Column header="Balance" filterField="balance" dataType="numeric" style="min-width: 10rem">
@@ -335,7 +341,7 @@ export default {
                     <Tag :value="data.status" :severity="getSeverity(data.status)" />
                 </template>
                 <template #filter="{ filterModel }">
-                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                         <template #option="slotProps">
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
@@ -347,7 +353,7 @@ export default {
                     <ProgressBar :value="data.activity" :showValue="false" style="height: 6px"></ProgressBar>
                 </template>
                 <template #filter="{ filterModel }">
-                    <Slider v-model="filterModel.value" range class="m-3"></Slider>
+                    <Slider v-model="filterModel.value" range class="m-4"></Slider>
                     <div class="flex items-center justify-between px-2">
                         <span>{{ filterModel.value ? filterModel.value[0] : 0 }}</span>
                         <span>{{ filterModel.value ? filterModel.value[1] : 100 }}</span>
@@ -360,7 +366,7 @@ export default {
                 </template>
                 <template #filter="{ filterModel }">
                     <label for="verified-filter" class="font-bold"> Verified </label>
-                    <TriStateCheckbox v-model="filterModel.value" inputId="verified-filter" />
+                    <Checkbox v-model="filterModel.value" :indeterminate="filterModel.value === null" binary inputId="verified-filter" />
                 </template>
             </Column>
         </DataTable>
@@ -447,7 +453,7 @@ export default {
                     return 'info';
 
                 case 'negotiation':
-                    return 'warning';
+                    return 'warn';
 
                 case 'renewal':
                     return null;
@@ -465,10 +471,12 @@ export default {
             <template #header>
                 <div class="flex justify-between">
                     <Button type="button" icon="pi pi-filter-slash" label="Clear" outlined @click="clearFilter()" />
-                    <span class="relative">
-                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                        <InputText v-model="filters['global'].value" placeholder="Keyword Search"  class="pl-10 font-normal"/>
-                    </span>
+                    <IconField>
+                        <InputIcon>
+                            <i class="pi pi-search" />
+                        </InputIcon>
+                        <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+                    </IconField>
                 </div>
             </template>
             <template #empty> No customers found. </template>
@@ -478,7 +486,7 @@ export default {
                     {{ data.name }}
                 </template>
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
                 </template>
             </Column>
             <Column header="Country" filterField="country.name" style="min-width: 12rem">
@@ -489,7 +497,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
                 </template>
                 <template #filterclear="{ filterCallback }">
                     <Button type="button" icon="pi pi-times" @click="filterCallback()" severity="secondary"></Button>
@@ -498,7 +506,7 @@ export default {
                     <Button type="button" icon="pi pi-check" @click="filterCallback()" severity="success"></Button>
                 </template>
                 <template #filterfooter>
-                    <div class="px-3 pt-0 pb-3 text-center">Customized Buttons</div>
+                    <div class="px-4 pt-0 pb-4 text-center">Customized Buttons</div>
                 </template>
             </Column>
             <Column header="Agent" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="min-width: 14rem">
@@ -509,7 +517,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                         <template #option="slotProps">
                             <div class="flex items-center gap-2">
                                 <img :alt="slotProps.option.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.option.image}\`" style="width: 32px" />
@@ -524,7 +532,7 @@ export default {
                     {{ formatDate(data.date) }}
                 </template>
                 <template #filter="{ filterModel }">
-                    <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" mask="99/99/9999" />
+                    <DatePicker v-model="filterModel.value" dateFormat="mm/dd/yy" placeholder="mm/dd/yyyy" />
                 </template>
             </Column>
             <Column header="Balance" filterField="balance" dataType="numeric" style="min-width: 10rem">
@@ -540,7 +548,7 @@ export default {
                     <Tag :value="data.status" :severity="getSeverity(data.status)" />
                 </template>
                 <template #filter="{ filterModel }">
-                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                         <template #option="slotProps">
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
@@ -552,7 +560,7 @@ export default {
                     <ProgressBar :value="data.activity" :showValue="false" style="height: 6px"></ProgressBar>
                 </template>
                 <template #filter="{ filterModel }">
-                    <Slider v-model="filterModel.value" range class="m-3"></Slider>
+                    <Slider v-model="filterModel.value" range class="m-4"></Slider>
                     <div class="flex items-center justify-between px-2">
                         <span>{{ filterModel.value ? filterModel.value[0] : 0 }}</span>
                         <span>{{ filterModel.value ? filterModel.value[1] : 100 }}</span>
@@ -565,7 +573,7 @@ export default {
                 </template>
                 <template #filter="{ filterModel }">
                     <label for="verified-filter" class="font-bold"> Verified </label>
-                    <TriStateCheckbox v-model="filterModel.value" inputId="verified-filter" />
+                    <Checkbox v-model="filterModel.value" :indeterminate="filterModel.value === null" binary inputId="verified-filter" />
                 </template>
             </Column>
         </DataTable>
@@ -650,7 +658,7 @@ const getSeverity = (status) => {
             return 'info';
 
         case 'negotiation':
-            return 'warning';
+            return 'warn';
 
         case 'renewal':
             return null;
@@ -736,7 +744,7 @@ const getSeverity = (status) => {
                     return 'info';
 
                 case 'negotiation':
-                    return 'warning';
+                    return 'warn';
 
                 case 'renewal':
                     return null;

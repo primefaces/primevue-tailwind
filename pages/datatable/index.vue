@@ -23,12 +23,11 @@ import TemplateDoc from '@/doc/datatable/TemplateDoc.vue';
 import ExpandModeDoc from '@/doc/datatable/colresize/ExpandModeDoc.vue';
 import FitModeDoc from '@/doc/datatable/colresize/FitModeDoc.vue';
 import CellEditDoc from '@/doc/datatable/edit/CellEditDoc.vue';
-import FilterSortEditDoc from '@/doc/datatable/edit/FilterSortEditDoc.vue';
 import RowEditDoc from '@/doc/datatable/edit/RowEditDoc.vue';
 import AdvancedFilterDoc from '@/doc/datatable/filter/AdvancedFilterDoc.vue';
 import BasicFilterDoc from '@/doc/datatable/filter/BasicFilterDoc.vue';
-import PaginatorBasicDoc from '@/doc/datatable/paginator/PaginatorBasicDoc.vue';
-import PaginatorTemplateDoc from '@/doc/datatable/paginator/PaginatorTemplateDoc.vue';
+import PaginationBasicDoc from '@/doc/datatable/pagination/PaginationBasicDoc.vue';
+import PaginationTemplateDoc from '@/doc/datatable/pagination/PaginationTemplateDoc.vue';
 import ExpandableRowGroupDoc from '@/doc/datatable/rowgroup/ExpandableRowGroupDoc.vue';
 import RowSpanRowGroupDoc from '@/doc/datatable/rowgroup/RowSpanRowGroupDoc.vue';
 import SubHeaderRowGroupDoc from '@/doc/datatable/rowgroup/SubHeaderRowGroupDoc.vue';
@@ -38,6 +37,7 @@ import RadioButtonRowSelectionDoc from '@/doc/datatable/rowselection/RadioButton
 import RowSelectEventsDoc from '@/doc/datatable/rowselection/RowSelectEventsDoc.vue';
 import SingleRowSelectionDoc from '@/doc/datatable/rowselection/SingleRowSelectionDoc.vue';
 import CustomersDoc from '@/doc/datatable/samples/CustomersDoc.vue';
+import ProductsDoc from '@/doc/datatable/samples/ProductsDoc.vue';
 import FlexibleScrollDoc from '@/doc/datatable/scroll/FlexibleScrollDoc.vue';
 import FrozenColumnsDoc from '@/doc/datatable/scroll/FrozenColumnsDoc.vue';
 import FrozenRowsDoc from '@/doc/datatable/scroll/FrozenRowsDoc.vue';
@@ -49,6 +49,7 @@ import RemovableSortDoc from '@/doc/datatable/sort/RemovableSortDoc.vue';
 import SingleColumnDoc from '@/doc/datatable/sort/SingleColumnDoc.vue';
 import LazyVirtualScrollDoc from '@/doc/datatable/virtualscroll/LazyVirtualScrollDoc.vue';
 import PreloadVirtualScrollDoc from '@/doc/datatable/virtualscroll/PreloadVirtualScrollDoc.vue';
+
 export default {
     data() {
         return {
@@ -89,18 +90,18 @@ export default {
                     component: StripedRowsDoc
                 },
                 {
-                    id: 'paginator',
-                    label: 'Paginator',
+                    id: 'pagination',
+                    label: 'Pagination',
                     children: [
                         {
                             id: 'paginator_basic',
                             label: 'Basic',
-                            component: PaginatorBasicDoc
+                            component: PaginationBasicDoc
                         },
                         {
                             id: 'paginator_template',
                             label: 'Template',
-                            component: PaginatorTemplateDoc
+                            component: PaginationTemplateDoc
                         }
                     ]
                 },
@@ -195,11 +196,6 @@ export default {
                             id: 'row_edit',
                             label: 'Row',
                             component: RowEditDoc
-                        },
-                        {
-                            id: 'cell_edit_filter_sort',
-                            label: 'Filter & Sort Cell Edit',
-                            component: FilterSortEditDoc
                         }
                     ]
                 },
@@ -335,12 +331,12 @@ export default {
                             id: 'customers',
                             label: 'Customers',
                             component: CustomersDoc
+                        },
+                        {
+                            id: 'dtproducts',
+                            label: 'Products',
+                            component: ProductsDoc
                         }
-                        // {
-                        //     id: 'dtproducts',
-                        //     label: 'Products',
-                        //     component: ProductsDoc
-                        // }
                     ]
                 },
                 {

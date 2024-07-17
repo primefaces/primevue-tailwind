@@ -10,7 +10,10 @@
                 scrollable
                 scrollHeight="400px"
                 :pt="{
-                    table: { style: 'min-width: 50rem' }
+                    table: { style: 'min-width: 50rem' },
+                    bodyrow: ({ props }) => ({
+                        class: [{ 'font-bold': props.frozenRow }]
+                    })
                 }"
             >
                 <Column field="name" header="Name"></Column>
@@ -87,7 +90,10 @@ export default {
             scrollable
             scrollHeight="400px"
             :pt="{
-                table: { style: 'min-width: 50rem' }
+                table: { style: 'min-width: 50rem' },
+                bodyrow: ({ props }) => ({
+                    class: [{ 'font-bold': props.frozenRow }]
+                })
             }"
         >
             <Column field="name" header="Name"></Column>
@@ -162,7 +168,10 @@ export default {
             scrollable
             scrollHeight="400px"
             :pt="{
-                table: { style: 'min-width: 50rem' }
+                table: { style: 'min-width: 50rem' },
+                bodyrow: ({ props }) => ({
+                    class: [{ 'font-bold': props.frozenRow }]
+                })
             }"
         >
             <Column field="name" header="Name"></Column>

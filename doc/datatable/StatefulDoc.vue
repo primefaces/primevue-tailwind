@@ -23,14 +23,16 @@
                 tableStyle="min-width: 50rem"
             >
                 <template #header>
-                    <span class="relative">
-                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                        <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal" />
-                    </span>
+                    <IconField>
+                        <InputIcon>
+                            <i class="pi pi-search" />
+                        </InputIcon>
+                        <InputText v-model="filters['global'].value" placeholder="Global Search" />
+                    </IconField>
                 </template>
                 <Column field="name" header="Name" sortable style="width: 25%">
                     <template #filter="{ filterModel }">
-                        <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+                        <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
                     </template>
                 </Column>
                 <Column header="Country" sortable sortField="country.name" filterField="country.name" filterMatchMode="contains" style="width: 25%">
@@ -41,7 +43,7 @@
                         </div>
                     </template>
                     <template #filter="{ filterModel }">
-                        <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+                        <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
                     </template>
                 </Column>
                 <Column header="Representative" sortable sortField="representative.name" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="width: 25%">
@@ -52,7 +54,7 @@
                         </div>
                     </template>
                     <template #filter="{ filterModel }">
-                        <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+                        <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                             <template #option="slotProps">
                                 <div class="flex items-center gap-2">
                                     <img :alt="slotProps.option.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${slotProps.option.image}`" style="width: 32px" />
@@ -67,7 +69,7 @@
                         <Tag :value="data.status" :severity="getSeverity(data.status)" />
                     </template>
                     <template #filter="{ filterModel }">
-                        <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                        <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                             <template #option="slotProps">
                                 <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                             </template>
@@ -110,14 +112,16 @@ export default {
     stateStorage="session" stateKey="dt-state-demo-session" paginator :rows="5" filterDisplay="menu"
     selectionMode="single" dataKey="id" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']" tableStyle="min-width: 50rem">
     <template #header>
-        <span class="relative">
-            <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-            <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
-        </span>
+        <IconField>
+            <InputIcon>
+                <i class="pi pi-search" />
+            </InputIcon>
+            <InputText v-model="filters['global'].value" placeholder="Global Search" />
+        </IconField>
     </template>
     <Column field="name" header="Name" sortable style="width: 25%">
         <template #filter="{ filterModel }">
-            <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+            <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
         </template>
     </Column>
     <Column header="Country" sortable sortField="country.name" filterField="country.name" filterMatchMode="contains" style="width: 25%">
@@ -128,7 +132,7 @@ export default {
             </div>
         </template>
         <template #filter="{ filterModel }">
-            <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+            <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
         </template>
     </Column>
     <Column header="Representative" sortable sortField="representative.name" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="width: 25%">
@@ -139,7 +143,7 @@ export default {
             </div>
         </template>
         <template #filter="{ filterModel }">
-            <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+            <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                 <template #option="slotProps">
                     <div class="flex items-center gap-2">
                         <img :alt="slotProps.option.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.option.image}\`" style="width: 32px" />
@@ -154,7 +158,7 @@ export default {
             <Tag :value="data.status" :severity="getSeverity(data.status)" />
         </template>
         <template #filter="{ filterModel }">
-            <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+            <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                 <template #option="slotProps">
                     <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                 </template>
@@ -171,14 +175,16 @@ export default {
                 stateStorage="session" stateKey="dt-state-demo-session" paginator :rows="5" filterDisplay="menu"
                 selectionMode="single" dataKey="id" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']" tableStyle="min-width: 50rem">
             <template #header>
-                <span class="relative">
-                    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
-                </span>
+                <IconField>
+                    <InputIcon>
+                        <i class="pi pi-search" />
+                    </InputIcon>
+                    <InputText v-model="filters['global'].value" placeholder="Global Search" />
+                </IconField>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
                 </template>
             </Column>
             <Column header="Country" sortable sortField="country.name" filterField="country.name" filterMatchMode="contains" style="width: 25%">
@@ -189,7 +195,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
                 </template>
             </Column>
             <Column header="Representative" sortable sortField="representative.name" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="width: 25%">
@@ -200,7 +206,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                         <template #option="slotProps">
                             <div class="flex items-center gap-2">
                                 <img :alt="slotProps.option.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.option.image}\`" style="width: 32px" />
@@ -215,7 +221,7 @@ export default {
                     <Tag :value="data.status" :severity="getSeverity(data.status)" />
                 </template>
                 <template #filter="{ filterModel }">
-                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                         <template #option="slotProps">
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
@@ -280,7 +286,7 @@ export default {
                     return 'info';
 
                 case 'negotiation':
-                    return 'warning';
+                    return 'warn';
 
                 case 'renewal':
                     return null;
@@ -297,14 +303,16 @@ export default {
                 stateStorage="session" stateKey="dt-state-demo-session" paginator :rows="5" filterDisplay="menu"
                 selectionMode="single" dataKey="id" :globalFilterFields="['name', 'country.name', 'representative.name', 'status']" tableStyle="min-width: 50rem">
             <template #header>
-                <span class="relative">
-                    <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600" />
-                    <InputText v-model="filters['global'].value" placeholder="Global Search" class="pl-10 font-normal"/>
-                </span>
+                <IconField>
+                <InputIcon>
+                    <i class="pi pi-search" />
+                </InputIcon>
+                <InputText v-model="filters['global'].value" placeholder="Global Search" />
+            </IconField>
             </template>
             <Column field="name" header="Name" sortable style="width: 25%">
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by name" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
                 </template>
             </Column>
             <Column header="Country" sortable sortField="country.name" filterField="country.name" filterMatchMode="contains" style="width: 25%">
@@ -315,7 +323,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <InputText v-model="filterModel.value" type="text" class="p-column-filter" placeholder="Search by country" />
+                    <InputText v-model="filterModel.value" type="text" placeholder="Search by country" />
                 </template>
             </Column>
             <Column header="Representative" sortable sortField="representative.name" filterField="representative" :showFilterMatchModes="false" :filterMenuStyle="{ width: '14rem' }" style="width: 25%">
@@ -326,7 +334,7 @@ export default {
                     </div>
                 </template>
                 <template #filter="{ filterModel }">
-                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any" class="p-column-filter">
+                    <MultiSelect v-model="filterModel.value" :options="representatives" optionLabel="name" placeholder="Any">
                         <template #option="slotProps">
                             <div class="flex items-center gap-2">
                                 <img :alt="slotProps.option.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${slotProps.option.image}\`" style="width: 32px" />
@@ -341,7 +349,7 @@ export default {
                     <Tag :value="data.status" :severity="getSeverity(data.status)" />
                 </template>
                 <template #filter="{ filterModel }">
-                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" class="p-column-filter" showClear>
+                    <Select v-model="filterModel.value" :options="statuses" placeholder="Select One" showClear>
                         <template #option="slotProps">
                             <Tag :value="slotProps.option" :severity="getSeverity(slotProps.option)" />
                         </template>
@@ -399,7 +407,7 @@ const getSeverity = (status) => {
             return 'info';
 
         case 'negotiation':
-            return 'warning';
+            return 'warn';
 
         case 'renewal':
             return null;
@@ -460,7 +468,7 @@ const getSeverity = (status) => {
                     return 'info';
 
                 case 'negotiation':
-                    return 'warning';
+                    return 'warn';
 
                 case 'renewal':
                     return null;

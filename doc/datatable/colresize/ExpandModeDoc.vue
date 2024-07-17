@@ -2,8 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Setting <i>columnResizeMode</i> as <i>expand</i> changes the table width as well.</p>
     </DocSectionText>
-    <DeferredDemo @load="loadDemoData"
-        >,
+    <DeferredDemo @load="loadDemoData">
         <div class="card">
             <DataTable :value="products" resizableColumns columnResizeMode="expand" showGridlines tableStyle="min-width: 50rem">
                 <Column field="code" header="Code"></Column>
