@@ -7,7 +7,7 @@ export default {
             }
         ]
     }),
-    loadingoverlay: {
+    mask: {
         class: [
             // Position
             'absolute',
@@ -27,10 +27,10 @@ export default {
             'transition duration-200'
         ]
     },
-    loadingicon: {
+    loadingIcon: {
         class: 'w-8 h-8 animate-spin'
     },
-    wrapper: ({ props }) => ({
+    tableContainer: ({ props }) => ({
         class: [
             // Overflow
             {
@@ -101,7 +101,7 @@ export default {
             }
         ]
     }),
-    headerrow: ({ props }) => ({
+    headerRow: ({ props }) => ({
         class: [
             // Flexbox & Width
             {
@@ -129,7 +129,7 @@ export default {
             { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover }
         ]
     }),
-    headercell: ({ context, props }) => ({
+    headerCell: ({ context, props }) => ({
         class: [
             'font-semibold',
             'leading-[normal]',
@@ -169,7 +169,7 @@ export default {
         ]
     }),
     column: {
-        headercell: ({ context, props }) => ({
+        headerCell: ({ context, props }) => ({
             class: [
                 'font-semibold',
                 'leading-[normal]',
@@ -208,7 +208,7 @@ export default {
                 }
             ]
         }),
-        bodycell: ({ context }) => ({
+        bodyCell: ({ context }) => ({
             class: [
                 // Font
                 'leading-[normal]',
@@ -244,7 +244,8 @@ export default {
                 }
             ]
         }),
-        rowtoggler: {
+        bodyCellContent: 'flex items-center gap-2',
+        rowToggleButton: {
             class: [
                 'relative',
 
@@ -277,28 +278,10 @@ export default {
                 'cursor-pointer select-none'
             ]
         },
-        sorticon: ({ context }) => ({
+        sortIcon: ({ context }) => ({
             class: ['ml-2 inline-block', context.sorted ? 'text-inherit' : 'fill-surface-700 dark:fill-white/70']
         }),
-        sortbadge: {
-            class: [
-                // Flex & Alignment
-                'inline-flex items-center justify-center align-middle',
-
-                // Shape
-                'rounded-full',
-
-                // Size
-                'w-[1.143rem] leading-[1.143rem]',
-
-                // Spacing
-                'ml-2',
-
-                // Color
-                'bg-highlight'
-            ]
-        },
-        columnresizer: {
+        columnResizer: {
             class: [
                 'block',
 
@@ -318,117 +301,6 @@ export default {
                 'cursor-col-resize'
             ]
         },
-        rowCheckbox: ({ props, context, instance }) => ({
-            root: {
-                class: [
-                    'relative',
-
-                    // Alignment
-                    'inline-flex',
-                    'align-middle',
-
-                    // Size
-                    'w-5',
-                    'h-5',
-
-                    // Spacing
-                    'mr-2',
-
-                    // Misc
-                    'cursor-pointer',
-                    'select-none'
-                ]
-            },
-            box: {
-                class: [
-                    // Alignment
-                    'flex',
-                    'items-center',
-                    'justify-center',
-
-                    // Size
-                    'w-5',
-                    'h-5',
-
-                    // Shape
-                    'rounded',
-                    'border',
-
-                    // Colors
-                    {
-                        'border-surface-300 dark:border-surface-700': !context.checked && !props.invalid,
-                        'bg-surface-0  dark:bg-surface-950': !context.checked && !props.invalid && !props.disabled,
-                        'border-primary bg-primary': context.checked
-                    },
-
-                    // Invalid State
-                    'invalid:focus:ring-red-200',
-                    'invalid:hover:border-red-500',
-                    { 'border-red-500 dark:border-red-400': props.invalid },
-
-                    // States
-                    {
-                        'peer-hover:border-surface-400 dark:peer-hover:border-surface-600': !props.disabled && !context.checked && !props.invalid,
-                        'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
-                        'peer-focus-visible:z-10 peer-focus-visible:outline-none peer-focus-visible:outline-offset-0 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-500 dark:peer-focus-visible:ring-primary-400': !props.disabled,
-                        'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
-                    },
-
-                    // Transitions
-                    'transition-colors',
-                    'duration-200'
-                ]
-            },
-            input: {
-                class: [
-                    'peer',
-
-                    // Size
-                    'w-full ',
-                    'h-full',
-
-                    // Position
-                    'absolute',
-                    'top-0 left-0',
-                    'z-10',
-
-                    // Spacing
-                    'p-0',
-                    'm-0',
-
-                    // Shape
-                    'opacity-0',
-                    'rounded-md',
-                    'outline-none',
-                    'border-1 border-surface-200 dark:border-surface-700',
-
-                    // Misc
-                    'appearance-none',
-                    'cursor-pointer'
-                ]
-            },
-            icon: {
-                class: [
-                    // Font
-                    'text-base leading-none',
-
-                    // Size
-                    'w-[0.875rem]',
-                    'h-[0.875rem]',
-
-                    // Colors
-                    {
-                        'text-white dark:text-surface-950': !instance.partialChecked,
-                        'text-gray dark:text-white': instance.partialChecked
-                    },
-
-                    // Transitions
-                    'transition-all',
-                    'duration-200'
-                ]
-            }
-        }),
-
         transition: {
             enterFromClass: 'opacity-0 scale-y-[0.8]',
             enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
@@ -436,7 +308,7 @@ export default {
             leaveToClass: 'opacity-0'
         }
     },
-    resizehelper: {
+    columnResizeIndicator: {
         class: 'absolute hidden w-[2px] z-20 bg-primary'
     }
 };

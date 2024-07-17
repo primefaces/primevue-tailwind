@@ -257,9 +257,6 @@ export default {
         }),
         filterOperator: {
             class: [
-                // Spacing
-                'px-5 py-3',
-
                 // Shape
                 'border-b border-solid',
                 'rounded-t-md',
@@ -271,7 +268,10 @@ export default {
                 '[&>[data-pc-name=pcfilteroperatordropdown]]:w-full'
             ]
         },
-        filter: 'flex items-center w-full gap-2',
+        filter: ({ instance }) => ({
+            class: [{ 'flex items-center w-full gap-2': instance.display === 'row', 'inline-flex ml-auto': instance.display === 'menu' }]
+        }),
+        filterRuleList: 'flex flex-col gap-2',
         filterRule: 'flex flex-col gap-2',
         filterButtonbar: 'flex items-center justify-between p-0',
         filterAddButtonContainer: '[&>[data-pc-name=pcfilteraddrulebutton]]:w-full',
@@ -327,6 +327,7 @@ export default {
             ]
         },
         transition: {
+            class: 'p-4 flex flex-col gap-2',
             enterFromClass: 'opacity-0 scale-y-[0.8]',
             enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
             leaveActiveClass: 'transition-opacity duration-100 ease-linear',

@@ -6,36 +6,38 @@
             support filtering.
         </p>
     </DocSectionText>
-    <div class="card">
-        <div class="flex justify-center mb-4">
-            <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
-        </div>
-        <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
-            <template #header>
-                <div class="text-right">
-                    <div class="relative inline-block">
-                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600"></i>
-                        <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
+    <DeferredDemo @load="loadDemoData">
+        <div class="card">
+            <div class="flex justify-center mb-6">
+                <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
+            </div>
+            <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
+                <template #header>
+                    <div class="flex justify-end">
+                        <IconField>
+                            <InputIcon class="pi pi-search" />
+                            <InputText v-model="filters['global']" placeholder="Global Search" />
+                        </IconField>
                     </div>
-                </div>
-            </template>
-            <Column field="name" header="Name" expander>
-                <template #filter>
-                    <InputText v-model="filters['name']" type="text" class="p-column-filter" placeholder="Filter by name" />
                 </template>
-            </Column>
-            <Column field="size" header="Size">
-                <template #filter>
-                    <InputText v-model="filters['size']" type="text" class="p-column-filter" placeholder="Filter by size" />
-                </template>
-            </Column>
-            <Column field="type" header="Type">
-                <template #filter>
-                    <InputText v-model="filters['type']" type="text" class="p-column-filter" placeholder="Filter by type" />
-                </template>
-            </Column>
-        </TreeTable>
-    </div>
+                <Column field="name" header="Name" expander style="min-width: 12rem">
+                    <template #filter>
+                        <InputText v-model="filters['name']" type="text" placeholder="Filter by name" />
+                    </template>
+                </Column>
+                <Column field="size" header="Size" style="min-width: 12rem">
+                    <template #filter>
+                        <InputText v-model="filters['size']" type="text" placeholder="Filter by size" />
+                    </template>
+                </Column>
+                <Column field="type" header="Type" style="min-width: 12rem">
+                    <template #filter>
+                        <InputText v-model="filters['type']" type="text" placeholder="Filter by type" />
+                    </template>
+                </Column>
+            </TreeTable>
+        </div>
+    </DeferredDemo>
     <DocSectionCode :code="code" :service="['NodeService']" />
 </template>
 
@@ -57,26 +59,26 @@ export default {
 <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
 <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
     <template #header>
-        <div class="text-right">
-            <div class="relative">
-                <i class="pi pi-search"></i>
-                <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
-            </div>
+        <div class="flex justify-end">
+            <IconField>
+                <InputIcon class="pi pi-search" />
+                <InputText v-model="filters['global']" placeholder="Global Search" />
+            </IconField>
         </div>
     </template>
-    <Column field="name" header="Name" expander>
+    <Column field="name" header="Name" expander style="min-width: 12rem">
         <template #filter>
-            <InputText v-model="filters['name']" type="text" class="p-column-filter" placeholder="Filter by name" />
+            <InputText v-model="filters['name']" type="text" placeholder="Filter by name" />
         </template>
     </Column>
-    <Column field="size" header="Size">
+    <Column field="size" header="Size" style="min-width: 12rem">
         <template #filter>
-            <InputText v-model="filters['size']" type="text" class="p-column-filter" placeholder="Filter by size" />
+            <InputText v-model="filters['size']" type="text" placeholder="Filter by size" />
         </template>
     </Column>
-    <Column field="type" header="Type">
+    <Column field="type" header="Type" style="min-width: 12rem">
         <template #filter>
-            <InputText v-model="filters['type']" type="text" class="p-column-filter" placeholder="Filter by type" />
+            <InputText v-model="filters['type']" type="text" placeholder="Filter by type" />
         </template>
     </Column>
 </TreeTable>
@@ -84,31 +86,31 @@ export default {
                 options: `
 <template>
     <div class="card">
-        <div class="flex justify-center mb-4">
+        <div class="flex justify-center mb-6">
             <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
         </div>
         <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
             <template #header>
-                <div class="text-right">
-                    <div class="relative inline-block">
-                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600"></i>
-                        <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
-                    </div>
+                <div class="flex justify-end">
+                    <IconField>
+                        <InputIcon class="pi pi-search" />
+                        <InputText v-model="filters['global']" placeholder="Global Search" />
+                    </IconField>
                 </div>
             </template>
-            <Column field="name" header="Name" expander>
+            <Column field="name" header="Name" expander style="min-width: 12rem">
                 <template #filter>
-                    <InputText v-model="filters['name']" type="text" class="p-column-filter" placeholder="Filter by name" />
+                    <InputText v-model="filters['name']" type="text" placeholder="Filter by name" />
                 </template>
             </Column>
-            <Column field="size" header="Size">
+            <Column field="size" header="Size" style="min-width: 12rem">
                 <template #filter>
-                    <InputText v-model="filters['size']" type="text" class="p-column-filter" placeholder="Filter by size" />
+                    <InputText v-model="filters['size']" type="text" placeholder="Filter by size" />
                 </template>
             </Column>
-            <Column field="type" header="Type">
+            <Column field="type" header="Type" style="min-width: 12rem">
                 <template #filter>
-                    <InputText v-model="filters['type']" type="text" class="p-column-filter" placeholder="Filter by type" />
+                    <InputText v-model="filters['type']" type="text" placeholder="Filter by type" />
                 </template>
             </Column>
         </TreeTable>
@@ -139,31 +141,31 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <div class="flex justify-center mb-4">
+        <div class="flex justify-center mb-6">
             <SelectButton v-model="filterMode" optionLabel="label" dataKey="label" :options="filterOptions" />
         </div>
         <TreeTable :value="nodes" :filters="filters" :filterMode="filterMode.value">
             <template #header>
-                <div class="text-right">
-                    <div class="relative inline-block">
-                        <i class="pi pi-search absolute top-2/4 -mt-2 left-3 text-surface-400 dark:text-surface-600"></i>
-                        <InputText v-model="filters['global']" placeholder="Global Search" class="pl-10" />
-                    </div>
+                <div class="flex justify-end">
+                    <IconField>
+                        <InputIcon class="pi pi-search" />
+                        <InputText v-model="filters['global']" placeholder="Global Search" />
+                    </IconField>
                 </div>
             </template>
-            <Column field="name" header="Name" expander>
+            <Column field="name" header="Name" expander style="min-width: 12rem">
                 <template #filter>
-                    <InputText v-model="filters['name']" type="text" class="p-column-filter" placeholder="Filter by name" />
+                    <InputText v-model="filters['name']" type="text" placeholder="Filter by name" />
                 </template>
             </Column>
-            <Column field="size" header="Size">
+            <Column field="size" header="Size" style="min-width: 12rem">
                 <template #filter>
-                    <InputText v-model="filters['size']" type="text" class="p-column-filter" placeholder="Filter by size" />
+                    <InputText v-model="filters['size']" type="text" placeholder="Filter by size" />
                 </template>
             </Column>
-            <Column field="type" header="Type">
+            <Column field="type" header="Type" style="min-width: 12rem">
                 <template #filter>
-                    <InputText v-model="filters['type']" type="text" class="p-column-filter" placeholder="Filter by type" />
+                    <InputText v-model="filters['type']" type="text" placeholder="Filter by type" />
                 </template>
             </Column>
         </TreeTable>
@@ -218,8 +220,10 @@ const filterOptions = ref([
             }
         };
     },
-    mounted() {
-        NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+    methods: {
+        loadDemoData() {
+            NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+        }
     }
 };
 </script>

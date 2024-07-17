@@ -273,7 +273,9 @@ export default {
                 '[&>[data-pc-name=pcfilteroperatordropdown]]:w-full'
             ]
         },
-        filter: 'flex items-center w-full gap-2',
+        filter: ({ instance }) => ({
+            class: [{ 'flex items-center w-full gap-2': instance.display === 'row', 'inline-flex ml-auto': instance.display === 'menu' }]
+        }),
         filterRule: 'flex flex-col gap-2',
         filterButtonbar: 'flex items-center justify-between p-0',
         filterAddButtonContainer: '[&>[data-pc-name=pcfilteraddrulebutton]]:w-full',

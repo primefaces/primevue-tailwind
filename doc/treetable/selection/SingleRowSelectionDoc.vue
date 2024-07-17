@@ -6,17 +6,19 @@
             setting it to false.
         </p>
     </DocSectionText>
-    <div class="card">
-        <div class="flex justify-center items-center mb-4 gap-2">
-            <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
-            <label for="input-metakey">MetaKey</label>
+    <DeferredDemo @load="loadDemoData">
+        <div class="card">
+            <div class="flex justify-center items-center mb-6 gap-2">
+                <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
+                <label for="input-metakey">MetaKey</label>
+            </div>
+            <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey" tableStyle="min-width: 50rem">
+                <Column field="name" header="Name" expander style="width: 34%"></Column>
+                <Column field="size" header="Size" style="width: 33%"></Column>
+                <Column field="type" header="Type" style="width: 33%"></Column>
+            </TreeTable>
         </div>
-        <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey">
-            <Column field="name" header="Name" expander></Column>
-            <Column field="size" header="Size"></Column>
-            <Column field="type" header="Type"></Column>
-        </TreeTable>
-    </div>
+    </DeferredDemo>
     <DocSectionCode :code="code" :service="['NodeService']" />
 </template>
 
@@ -33,23 +35,23 @@ export default {
                 basic: `
 <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
 
-<TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey">
-    <Column field="name" header="Name" expander></Column>
-    <Column field="size" header="Size"></Column>
-    <Column field="type" header="Type"></Column>
+<TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey" tableStyle="min-width: 50rem">
+    <Column field="name" header="Name" expander style="width: 34%"></Column>
+    <Column field="size" header="Size" style="width: 33%"></Column>
+    <Column field="type" header="Type" style="width: 33%"></Column>
 </TreeTable>
 `,
                 options: `
 <template>
     <div class="card">
-        <div class="flex justify-center items-center mb-4 gap-2">
+        <div class="flex justify-center items-center mb-6 gap-2">
             <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
-        <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey">
-            <Column field="name" header="Name" expander></Column>
-            <Column field="size" header="Size"></Column>
-            <Column field="type" header="Type"></Column>
+        <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey" tableStyle="min-width: 50rem">
+            <Column field="name" header="Name" expander style="width: 34%"></Column>
+            <Column field="size" header="Size" style="width: 33%"></Column>
+            <Column field="type" header="Type" style="width: 33%"></Column>
         </TreeTable>
     </div>
 </template>
@@ -74,14 +76,14 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <div class="flex justify-center items-center mb-4 gap-2">
+        <div class="flex justify-center items-center mb-6 gap-2">
             <ToggleSwitch v-model="metaKey" inputId="input-metakey" />
             <label for="input-metakey">MetaKey</label>
         </div>
-        <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey">
-            <Column field="name" header="Name" expander></Column>
-            <Column field="size" header="Size"></Column>
-            <Column field="type" header="Type"></Column>
+        <TreeTable v-model:selectionKeys="selectedKey" :value="nodes" selectionMode="single" :metaKeySelection="metaKey" tableStyle="min-width: 50rem">
+            <Column field="name" header="Name" expander style="width: 34%"></Column>
+            <Column field="size" header="Size" style="width: 33%"></Column>
+            <Column field="type" header="Type" style="width: 33%"></Column>
         </TreeTable>
     </div>
 </template>
@@ -130,8 +132,10 @@ const metaKey = ref(true);
             }
         };
     },
-    mounted() {
-        NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+    methods: {
+        loadDemoData() {
+            NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+        }
     }
 };
 </script>

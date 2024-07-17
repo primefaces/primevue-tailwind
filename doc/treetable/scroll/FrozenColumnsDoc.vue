@@ -2,16 +2,18 @@
     <DocSectionText v-bind="$attrs">
         <p>A column can be fixed during horizontal scrolling by enabling the <i>frozen</i> property on a Column. The location is defined with the <i>alignFrozen</i> that can be <i>left</i> or <i>right</i>.</p>
     </DocSectionText>
-    <div class="card">
-        <TreeTable :value="nodes" scrollable scrollHeight="300px" scrollDirection="both">
-            <Column field="name" header="Name" expander frozen style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size" style="width: 250px; height: 57px"></Column>
-            <Column field="type" header="Type 2" style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size 2" style="width: 250px; height: 57px"></Column>
-            <Column field="type" header="Type 3" style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size 3" style="width: 250px; height: 57px"></Column>
-        </TreeTable>
-    </div>
+    <DeferredDemo @load="loadDemoData">
+        <div class="card">
+            <TreeTable :value="nodes" scrollable scrollHeight="300px">
+                <Column field="name" header="Name" expander frozen style="min-width: 250px" class="font-bold"></Column>
+                <Column field="size" header="Size" style="min-width: 200px"></Column>
+                <Column field="type" header="Type 2" style="min-width: 200px"></Column>
+                <Column field="size" header="Size 2" style="min-width: 200px"></Column>
+                <Column field="type" header="Type 3" style="min-width: 200px"></Column>
+                <Column field="size" header="Size 3" style="min-width: 200px"></Column>
+            </TreeTable>
+        </div>
+    </DeferredDemo>
     <DocSectionCode :code="code" :service="['NodeService']" />
 </template>
 
@@ -24,25 +26,25 @@ export default {
             nodes: null,
             code: {
                 basic: `
-<TreeTable :value="nodes" scrollable scrollHeight="300px" scrollDirection="both">
-    <Column field="name" header="Name" expander frozen style="width: 250px; height: 57px"></Column>
-    <Column field="size" header="Size" style="width: 250px; height: 57px"></Column>
-    <Column field="type" header="Type 2" style="width: 250px; height: 57px"></Column>
-    <Column field="size" header="Size 2" style="width: 250px; height: 57px"></Column>
-    <Column field="type" header="Type 3" style="width: 250px; height: 57px"></Column>
-    <Column field="size" header="Size 3" style="width: 250px; height: 57px"></Column>
+<TreeTable :value="nodes" scrollable scrollHeight="300px">
+    <Column field="name" header="Name" expander frozen style="min-width: 250px" class="font-bold"></Column>
+    <Column field="size" header="Size" style="min-width: 200px"></Column>
+    <Column field="type" header="Type 2" style="min-width: 200px"></Column>
+    <Column field="size" header="Size 2" style="min-width: 200px"></Column>
+    <Column field="type" header="Type 3" style="min-width: 200px"></Column>
+    <Column field="size" header="Size 3" style="min-width: 200px"></Column>
 </TreeTable>
 `,
                 options: `
 <template>
     <div class="card">
-        <TreeTable :value="nodes" scrollable scrollHeight="300px" scrollDirection="both">
-            <Column field="name" header="Name" expander frozen style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size" style="width: 250px; height: 57px"></Column>
-            <Column field="type" header="Type 2" style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size 2" style="width: 250px; height: 57px"></Column>
-            <Column field="type" header="Type 3" style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size 3" style="width: 250px; height: 57px"></Column>
+        <TreeTable :value="nodes" scrollable scrollHeight="300px">
+            <Column field="name" header="Name" expander frozen style="min-width: 250px" class="font-bold"></Column>
+            <Column field="size" header="Size" style="min-width: 200px"></Column>
+            <Column field="type" header="Type 2" style="min-width: 200px"></Column>
+            <Column field="size" header="Size 2" style="min-width: 200px"></Column>
+            <Column field="type" header="Type 3" style="min-width: 200px"></Column>
+            <Column field="size" header="Size 3" style="min-width: 200px"></Column>
         </TreeTable>
     </div>
 </template>
@@ -65,13 +67,13 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <TreeTable :value="nodes" scrollable scrollHeight="300px" scrollDirection="both">
-            <Column field="name" header="Name" expander frozen style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size" style="width: 250px; height: 57px"></Column>
-            <Column field="type" header="Type 2" style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size 2" style="width: 250px; height: 57px"></Column>
-            <Column field="type" header="Type 3" style="width: 250px; height: 57px"></Column>
-            <Column field="size" header="Size 3" style="width: 250px; height: 57px"></Column>
+        <TreeTable :value="nodes" scrollable scrollHeight="300px">
+            <Column field="name" header="Name" expander frozen style="min-width: 250px" class="font-bold"></Column>
+            <Column field="size" header="Size" style="min-width: 200px"></Column>
+            <Column field="type" header="Type 2" style="min-width: 200px"></Column>
+            <Column field="size" header="Size 2" style="min-width: 200px"></Column>
+            <Column field="type" header="Type 3" style="min-width: 200px"></Column>
+            <Column field="size" header="Size 3" style="min-width: 200px"></Column>
         </TreeTable>
     </div>
 </template>
@@ -118,8 +120,10 @@ const nodes = ref();
             }
         };
     },
-    mounted() {
-        NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+    methods: {
+        loadDemoData() {
+            NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+        }
     }
 };
 </script>

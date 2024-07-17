@@ -7,7 +7,7 @@ export default {
             }
         ]
     }),
-    loadingoverlay: {
+    mask: {
         class: [
             // Position
             'absolute',
@@ -27,10 +27,10 @@ export default {
             'transition duration-200'
         ]
     },
-    loadingicon: {
+    loadingIcon: {
         class: 'w-8 h-8 animate-spin'
     },
-    wrapper: ({ props }) => ({
+    tableContainer: ({ props }) => ({
         class: [
             // Overflow
             {
@@ -96,7 +96,7 @@ export default {
             }
         ]
     }),
-    headerrow: ({ props }) => ({
+    headerRow: ({ props }) => ({
         class: [
             // Flexbox & Width
             {
@@ -124,7 +124,7 @@ export default {
             { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover }
         ]
     }),
-    headercell: ({ context, props }) => ({
+    headerCell: ({ context, props }) => ({
         class: [
             'font-bold',
 
@@ -163,7 +163,7 @@ export default {
         ]
     }),
     column: {
-        headercell: ({ context, props }) => ({
+        headerCell: ({ context, props }) => ({
             class: [
                 'font-bold',
 
@@ -201,7 +201,7 @@ export default {
                 }
             ]
         }),
-        bodycell: ({ context }) => ({
+        bodyCell: ({ context }) => ({
             class: [
                 // Position
                 {
@@ -234,7 +234,8 @@ export default {
                 }
             ]
         }),
-        rowtoggler: {
+        bodyCellContent: 'flex items-center gap-2',
+        rowToggleButton: {
             class: [
                 'relative',
 
@@ -268,28 +269,10 @@ export default {
                 'cursor-pointer select-none'
             ]
         },
-        sorticon: ({ context }) => ({
+        sortIcon: ({ context }) => ({
             class: ['ml-2 inline-block', context.sorted ? 'text-inherit' : 'fill-surface-700 dark:fill-white/70']
         }),
-        sortbadge: {
-            class: [
-                // Flex & Alignment
-                'inline-flex items-center justify-center align-middle',
-
-                // Shape
-                'rounded-full',
-
-                // Size
-                'w-[1.143rem] leading-[1.143rem]',
-
-                // Spacing
-                'ml-2',
-
-                // Color
-                'bg-highlight'
-            ]
-        },
-        columnresizer: {
+        columnResizer: {
             class: [
                 'block',
 
@@ -309,111 +292,6 @@ export default {
                 'cursor-col-resize'
             ]
         },
-        rowCheckbox: ({ props, context, instance }) => ({
-            root: {
-                class: [
-                    'relative',
-
-                    // Alignment
-                    'inline-flex',
-                    'align-middle',
-
-                    // Size
-                    'w-6',
-                    'h-6',
-
-                    // Spacing
-                    'mr-2',
-
-                    // Misc
-                    'cursor-pointer',
-                    'select-none'
-                ]
-            },
-            box: {
-                class: [
-                    // Alignment
-                    'flex',
-                    'items-center',
-                    'justify-center',
-
-                    // Size
-                    'w-6',
-                    'h-6',
-
-                    // Shape
-                    'rounded-md',
-                    'border-2',
-
-                    // Colors
-                    {
-                        'border-surface-200 bg-surface-0 dark:border-surface-700 dark:bg-surface-900': !context.checked,
-                        'border-primary bg-primary': context.checked
-                    },
-
-                    // States
-                    {
-                        'peer-hover:border-primary': !props.disabled && !context.checked,
-                        'peer-hover:bg-primary-emphasis peer-hover:border-primary-emphasis': !props.disabled && context.checked,
-                        'peer-focus-visible:border-primary-500 dark:peer-focus-visible:border-primary-400 peer-focus-visible:ring-2 peer-focus-visible:ring-primary-400/20 dark:peer-focus-visible:ring-primary-300/20': !props.disabled,
-                        'cursor-default opacity-60': props.disabled
-                    },
-
-                    // Transitions
-                    'transition-colors',
-                    'duration-200'
-                ]
-            },
-            input: {
-                class: [
-                    'peer',
-
-                    // Size
-                    'w-full ',
-                    'h-full',
-
-                    // Position
-                    'absolute',
-                    'top-0 left-0',
-                    'z-10',
-
-                    // Spacing
-                    'p-0',
-                    'm-0',
-
-                    // Shape
-                    'opacity-0',
-                    'rounded-md',
-                    'outline-none',
-                    'border-2 border-surface-200 dark:border-surface-700',
-
-                    // Misc
-                    'appearance-none',
-                    'cursor-pointer'
-                ]
-            },
-            icon: {
-                class: [
-                    // Font
-                    'text-base leading-none',
-
-                    // Size
-                    'w-4',
-                    'h-4',
-
-                    // Colors
-                    {
-                        'text-white dark:text-surface-900': !instance.partialChecked,
-                        'text-gray dark:text-white': instance.partialChecked
-                    },
-
-                    // Transitions
-                    'transition-all',
-                    'duration-200'
-                ]
-            }
-        }),
-
         transition: {
             enterFromClass: 'opacity-0 scale-y-[0.8]',
             enterActiveClass: 'transition-[transform,opacity] duration-[120ms] ease-[cubic-bezier(0,0,0.2,1)]',
@@ -421,7 +299,7 @@ export default {
             leaveToClass: 'opacity-0'
         }
     },
-    resizehelper: {
+    columnResizeIndicator: {
         class: 'absolute hidden w-[2px] z-20 bg-primary'
     }
 };

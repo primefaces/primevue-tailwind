@@ -2,11 +2,13 @@
     <DocSectionText v-bind="$attrs">
         <p>Columns can be created programmatically.</p>
     </DocSectionText>
-    <div class="card">
-        <TreeTable :value="nodes">
-            <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" :expander="col.expander"></Column>
-        </TreeTable>
-    </div>
+    <DeferredDemo @load="loadDemoData">
+        <div class="card">
+            <TreeTable :value="nodes" tableStyle="min-width: 50rem">
+                <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" :expander="col.expander"></Column>
+            </TreeTable>
+        </div>
+    </DeferredDemo>
     <DocSectionCode :code="code" :service="['NodeService']" />
 </template>
 
@@ -20,14 +22,14 @@ export default {
             columns: null,
             code: {
                 basic: `
-<TreeTable :value="nodes">
+<TreeTable :value="nodes" tableStyle="min-width: 50rem">
     <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" :expander="col.expander"></Column>
 </TreeTable>
 `,
                 options: `
 <template>
     <div class="card">
-        <TreeTable :value="nodes">
+        <TreeTable :value="nodes" tableStyle="min-width: 50rem">
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" :expander="col.expander"></Column>
         </TreeTable>
     </div>
@@ -59,7 +61,7 @@ export default {
                 composition: `
 <template>
     <div class="card">
-        <TreeTable :value="nodes">
+        <TreeTable :value="nodes" tableStyle="min-width: 50rem">
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" :expander="col.expander"></Column>
         </TreeTable>
     </div>
@@ -119,8 +121,10 @@ const columns = ref([
             { field: 'type', header: 'Type' }
         ];
     },
-    mounted() {
-        NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+    methods: {
+        loadDemoData() {
+            NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+        }
     }
 };
 </script>

@@ -5,20 +5,22 @@
             adjusts itself according to the size changes.
         </p>
     </DocSectionText>
-    <div class="card flex justify-center">
-        <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
+    <DeferredDemo @load="loadDemoData">
+        <div class="card flex justify-center">
+            <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
 
-        <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
-            <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex">
-                <Column field="name" header="Name" :expander="true" style="min-width: 200px"></Column>
-                <Column field="size" header="Size" style="min-width: 200px"></Column>
-                <Column field="type" header="Type" style="min-width: 200px"></Column>
-            </TreeTable>
-            <template #footer>
-                <Button label="Ok" icon="pi pi-check" @click="dialogVisible = false" />
-            </template>
-        </Dialog>
-    </div>
+            <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
+                <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex" tableStyle="min-width: 50rem">
+                    <Column field="name" header="Name" :expander="true" style="min-width: 200px"></Column>
+                    <Column field="size" header="Size" style="min-width: 200px"></Column>
+                    <Column field="type" header="Type" style="min-width: 200px"></Column>
+                </TreeTable>
+                <template #footer>
+                    <Button label="Ok" icon="pi pi-check" @click="dialogVisible = false" />
+                </template>
+            </Dialog>
+        </div>
+    </DeferredDemo>
     <DocSectionCode :code="code" :service="['NodeService']" />
 </template>
 
@@ -34,7 +36,7 @@ export default {
                 basic: `
 <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
 <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
-    <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex">
+    <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex" tableStyle="min-width: 50rem">
         <Column field="name" header="Name" :expander="true" style="min-width: 200px"></Column>
         <Column field="size" header="Size" style="min-width: 200px"></Column>
         <Column field="type" header="Type" style="min-width: 200px"></Column>
@@ -49,7 +51,7 @@ export default {
     <div class="card flex justify-center">
         <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
         <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
-            <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex">
+            <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex" tableStyle="min-width: 50rem">
                 <Column field="name" header="Name" :expander="true" style="min-width: 200px"></Column>
                 <Column field="size" header="Size" style="min-width: 200px"></Column>
                 <Column field="type" header="Type" style="min-width: 200px"></Column>
@@ -82,7 +84,7 @@ export default {
     <div class="card flex justify-center">
         <Button label="Show" icon="pi pi-external-link" @click="dialogVisible = true" />
         <Dialog v-model:visible="dialogVisible" header="Flex Scroll" :style="{ width: '75vw' }" maximizable modal :contentStyle="{ height: '300px' }">
-            <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex">
+            <TreeTable :value="nodes" :scrollable="true" scrollHeight="flex" tableStyle="min-width: 50rem">
                 <Column field="name" header="Name" :expander="true" style="min-width: 200px"></Column>
                 <Column field="size" header="Size" style="min-width: 200px"></Column>
                 <Column field="type" header="Type" style="min-width: 200px"></Column>
@@ -110,8 +112,10 @@ const dialogVisible = ref(false);
             }
         };
     },
-    mounted() {
-        NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+    methods: {
+        loadDemoData() {
+            NodeService.getTreeTableNodes().then((data) => (this.nodes = data));
+        }
     }
 };
 </script>

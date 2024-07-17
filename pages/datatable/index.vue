@@ -13,7 +13,7 @@ import DynamicColumnsDoc from '@/doc/datatable/DynamicColumnsDoc.vue';
 import ExportDoc from '@/doc/datatable/ExportDoc.vue';
 import GridLinesDoc from '@/doc/datatable/GridLinesDoc.vue';
 import ImportDoc from '@/doc/datatable/ImportDoc.vue';
-import LazyLoadDoc from '@/doc/datatable/LazyLoadDoc.vue';
+// import LazyLoadDoc from '@/doc/datatable/LazyLoadDoc.vue';
 import ReorderDoc from '@/doc/datatable/ReorderDoc.vue';
 import RowExpansionDoc from '@/doc/datatable/RowExpansionDoc.vue';
 import SizeDoc from '@/doc/datatable/SizeDoc.vue';
@@ -199,11 +199,11 @@ export default {
                         }
                     ]
                 },
-                {
-                    id: 'lazy_load',
-                    label: 'Lazy Load',
-                    component: LazyLoadDoc
-                },
+                // {
+                //     id: 'lazy_load',
+                //     label: 'Lazy Load',
+                //     component: LazyLoadDoc
+                // },
                 {
                     id: 'scroll',
                     label: 'Scroll',
