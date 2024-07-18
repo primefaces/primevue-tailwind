@@ -7,7 +7,7 @@ export default {
             { 'flex-col': props.orientation == 'horizontal', 'flex-row': props.orientation == 'vertical' }
         ]
     }),
-    metercontainer: ({ props }) => ({
+    meters: ({ props }) => ({
         class: [
             // Flexbox
             'flex',
@@ -44,7 +44,7 @@ export default {
             'bg-primary'
         ]
     }),
-    labellist: ({ props }) => ({
+    labelList: ({ props }) => ({
         class: [
             // Display & Flexbox
             'flex flex-wrap',
@@ -63,7 +63,6 @@ export default {
 
             // Conditional Alignment - Vertical
             {
-                'justify-end': props.labelOrientation === 'vertical' && props.labelPosition === 'end',
                 'justify-start': props.labelOrientation === 'vertical' && props.labelPosition === 'start'
             },
 
@@ -71,7 +70,7 @@ export default {
             'm-0 p-0 list-none'
         ]
     }),
-    labellistitem: {
+    label: {
         class: [
             // Flexbox
             'inline-flex',
@@ -79,7 +78,7 @@ export default {
             'gap-2'
         ]
     },
-    labellisttype: {
+    labelMarker: {
         class: [
             // Display
             'inline-flex',
