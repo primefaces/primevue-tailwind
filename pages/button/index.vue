@@ -8,6 +8,7 @@ import BadgeDoc from '@/doc/button/BadgeDoc.vue';
 import BasicDoc from '@/doc/button/BasicDoc.vue';
 import ButtonGroupDoc from '@/doc/button/ButtonGroupDoc.vue';
 import DisabledDoc from '@/doc/button/DisabledDoc.vue';
+import HeadlessDoc from '@/doc/button/HeadlessDoc.vue';
 import IconOnlyDoc from '@/doc/button/IconOnlyDoc.vue';
 import IconsDoc from '@/doc/button/IconsDoc.vue';
 import ImportDoc from '@/doc/button/ImportDoc.vue';
@@ -37,11 +38,6 @@ export default {
                     component: BasicDoc
                 },
                 {
-                    id: 'link',
-                    label: 'Link',
-                    component: LinkDoc
-                },
-                {
                     id: 'icons',
                     label: 'Icons',
                     component: IconsDoc
@@ -50,6 +46,11 @@ export default {
                     id: 'loading',
                     label: 'Loading',
                     component: LoadingDoc
+                },
+                {
+                    id: 'link',
+                    label: 'Link',
+                    component: LinkDoc
                 },
                 {
                     id: 'severity',
@@ -98,7 +99,7 @@ export default {
                 },
                 {
                     id: 'buttongroup',
-                    label: 'ButtonGroup',
+                    label: 'Button Group',
                     component: ButtonGroupDoc
                 },
                 {
@@ -110,6 +111,11 @@ export default {
                     id: 'template',
                     label: 'Template',
                     component: TemplateDoc
+                },
+                {
+                    id: 'headless',
+                    label: 'Headless',
+                    component: HeadlessDoc
                 },
                 {
                     id: 'accessibility',

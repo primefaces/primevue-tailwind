@@ -1,16 +1,16 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>The <i>severity</i> option specifies the type of the message.</p>
+        <p>The <i>severity</i> property defines the variant of a button.</p>
     </DocSectionText>
-    <div class="card flex justify-center flex-wrap gap-3">
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="secondary"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="success"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="info"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="warning"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="help"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="danger"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="contrast"></SplitButton>
+    <div class="card flex justify-center flex-wrap gap-4">
+        <SplitButton label="Save" :model="items" @click="save"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="secondary"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="success"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="info"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="warn"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="help"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="danger"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="contrast"></SplitButton>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -22,50 +22,47 @@ export default {
             items: [
                 {
                     label: 'Update',
-                    icon: 'pi pi-refresh',
                     command: () => {
                         this.$toast.add({ severity: 'success', summary: 'Updated', detail: 'Data Updated', life: 3000 });
                     }
                 },
                 {
                     label: 'Delete',
-                    icon: 'pi pi-times',
                     command: () => {
                         this.$toast.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                     }
                 },
                 {
                     label: 'Vue Website',
-                    icon: 'pi pi-external-link',
                     command: () => {
                         window.location.href = 'https://vuejs.org/';
                     }
                 },
-                { label: 'Upload', icon: 'pi pi-upload', to: '/fileupload' }
+                { label: 'Upload', to: '/fileupload' }
             ],
             code: {
                 basic: `
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save"></SplitButton>
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="secondary"></SplitButton>
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="success"></SplitButton>
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="info"></SplitButton>
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="warning"></SplitButton>
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="help"></SplitButton>
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="danger"></SplitButton>
-<SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="contrast"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save" severity="secondary"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save" severity="success"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save" severity="info"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save" severity="warn"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save" severity="help"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save" severity="danger"></SplitButton>
+<SplitButton label="Save" :model="items" @click="save" severity="contrast"></SplitButton>
 `,
                 options: `
 <template>
-    <div class="card flex justify-center flex-wrap gap-3">
+    <div class="card flex justify-center flex-wrap gap-4">
         <Toast />
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="secondary"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="success"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="info"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="warning"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="help"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="danger"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="contrast"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="secondary"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="success"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="info"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="warn"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="help"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="danger"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="contrast"></SplitButton>
     </div>
 </template>
 
@@ -76,26 +73,23 @@ export default {
             items: [
                 {
                     label: 'Update',
-                    icon: 'pi pi-refresh',
                     command: () => {
                         this.$toast.add({ severity: 'success', summary: 'Updated', detail: 'Data Updated', life: 3000 });
                     }
                 },
                 {
                     label: 'Delete',
-                    icon: 'pi pi-times',
                     command: () => {
                         this.$toast.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
                     }
                 },
                 {
                     label: 'Vue Website',
-                    icon: 'pi pi-external-link',
                     command: () => {
                         window.location.href = 'https://vuejs.org/';
                     }
                 },
-                { label: 'Upload', icon: 'pi pi-upload', to: '/fileupload' }
+                { label: 'Upload', to: '/fileupload' }
             ]
         };
     },
@@ -109,16 +103,16 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex justify-center flex-wrap gap-3">
+    <div class="card flex justify-center flex-wrap gap-4">
         <Toast />
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="secondary"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="success"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="info"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="warning"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="help"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="danger"></SplitButton>
-        <SplitButton label="Save" :model="items" icon="pi pi-plus" @click="save" severity="contrast"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="secondary"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="success"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="info"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="warn"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="help"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="danger"></SplitButton>
+        <SplitButton label="Save" :model="items" @click="save" severity="contrast"></SplitButton>
     </div>
 </template>
 
@@ -129,26 +123,23 @@ const toast = useToast();
 const items = [
     {
         label: 'Update',
-        icon: 'pi pi-refresh',
         command: () => {
-            toast.add({ severity: 'success', summary: 'Updated', detail: 'Data Updated', life: 3000 });
+            this.$toast.add({ severity: 'success', summary: 'Updated', detail: 'Data Updated', life: 3000 });
         }
     },
     {
         label: 'Delete',
-        icon: 'pi pi-times',
         command: () => {
-            toast.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
+            this.$toast.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted', life: 3000 });
         }
     },
     {
         label: 'Vue Website',
-        icon: 'pi pi-external-link',
         command: () => {
             window.location.href = 'https://vuejs.org/';
         }
     },
-    { label: 'Upload', icon: 'pi pi-upload', to: '/fileupload' }
+    { label: 'Upload', to: '/fileupload' }
 ];
 
 const save = () => {

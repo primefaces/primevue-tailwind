@@ -1,9 +1,11 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>A button can be rendered as a link when the <i>link</i> property is present.</p>
+        <p>The button element can be displayed as a link element visually when the <i>link</i> property is present. If you need to use buttons for actual navigations, use the <i>as</i> property to customize the rendered element.</p>
     </DocSectionText>
-    <div class="card flex justify-center gap-3">
+    <div class="card flex justify-center gap-4">
         <Button label="Link" link />
+        <Button as="a" label="External" href="https://vuejs.org/" target="_blank" rel="noopener" />
+        <Button as="router-link" label="Router" to="/" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,13 +17,15 @@ export default {
             code: {
                 basic: `
 <Button label="Link" link />
-<a href="https://vuejs.org" target="_blank" rel="noopener noreferrer" class="p-button font-bold">Navigate</a>
+<Button as="a" label="External" href="https://vuejs.org/" target="_blank" rel="noopener" />
+<Button as="router-link" label="Router" to="/" />
 `,
                 options: `
 <template>
-    <div class="card flex justify-center gap-3">
+    <div class="card flex justify-center gap-4">
         <Button label="Link" link />
-        <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer" class="p-button font-bold">Navigate</a>
+        <Button as="a" label="External" href="https://vuejs.org/" target="_blank" rel="noopener" />
+        <Button as="router-link" label="Router" to="/" />
     </div>
 </template>
 
@@ -30,9 +34,10 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex justify-center gap-3">
+    <div class="card flex justify-center gap-4">
         <Button label="Link" link />
-        <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer" class="p-button font-bold">Navigate</a>
+        <Button as="a" label="External" href="https://vuejs.org/" target="_blank" rel="noopener" />
+        <Button as="router-link" label="Router" to="/" />
     </div>
 </template>
 

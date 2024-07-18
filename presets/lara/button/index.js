@@ -5,17 +5,18 @@ export default {
 
             // Alignments
             'items-center inline-flex text-center align-bottom justify-center',
+            { 'flex-col': (props.iconPos === 'top' || props.iconPos === 'bottom') && props.label },
 
             // Sizes & Spacing
             'leading-[normal]',
             {
-                'px-4 py-3': props.size === null,
+                'px-4 py-[0.625rem]': props.size === null,
                 'text-sm py-2 px-3': props.size === 'small',
                 'text-xl py-3 px-4': props.size === 'large'
             },
             { 'gap-2': props.label !== null },
             {
-                'w-12 p-0 py-3': props.label == null && props.icon !== null
+                'w-12 px-0 py-3': props.label == null && props.icon !== null
             },
 
             // Shapes
@@ -87,14 +88,14 @@ export default {
 
             // Warning Button
             {
-                'text-white dark:text-surface-900': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
-                'bg-orange-500 dark:bg-orange-400': props.severity === 'warning' && !props.text && !props.outlined && !props.plain,
-                'border border-orange-500 dark:border-orange-400': props.severity === 'warning' && !props.text && !props.outlined && !props.plain
+                'text-white dark:text-surface-900': props.severity === 'warn' && !props.text && !props.outlined && !props.plain,
+                'bg-orange-500 dark:bg-orange-400': props.severity === 'warn' && !props.text && !props.outlined && !props.plain,
+                'border border-orange-500 dark:border-orange-400': props.severity === 'warn' && !props.text && !props.outlined && !props.plain
             },
             // Warning Text Button
-            { 'text-orange-500 dark:text-orange-400': props.text && props.severity === 'warning' && !props.plain },
+            { 'text-orange-500 dark:text-orange-400': props.text && props.severity === 'warn' && !props.plain },
             // Warning Outlined Button
-            { 'text-orange-500 border border-orange-500 hover:bg-orange-300/20': props.outlined && props.severity === 'warning' && !props.plain },
+            { 'text-orange-500 border border-orange-500 hover:bg-orange-300/20': props.outlined && props.severity === 'warn' && !props.plain },
 
             // Help Button
             {
@@ -164,10 +165,10 @@ export default {
             { 'hover:bg-blue-300/20': (props.text || props.outlined) && props.severity === 'info' && !props.plain },
 
             // Warning
-            { 'hover:bg-orange-600 dark:hover:bg-orange-300 hover:border-orange-600 dark:hover:border-orange-300': props.severity === 'warning' && !props.text && !props.outlined && !props.plain },
-            { 'focus:ring-orange-400/50 dark:focus:ring-orange-300/50': props.severity === 'warning' },
+            { 'hover:bg-orange-600 dark:hover:bg-orange-300 hover:border-orange-600 dark:hover:border-orange-300': props.severity === 'warn' && !props.text && !props.outlined && !props.plain },
+            { 'focus:ring-orange-400/50 dark:focus:ring-orange-300/50': props.severity === 'warn' },
             // Text & Outlined Button
-            { 'hover:bg-orange-300/20': (props.text || props.outlined) && props.severity === 'warning' && !props.plain },
+            { 'hover:bg-orange-300/20': (props.text || props.outlined) && props.severity === 'warn' && !props.plain },
 
             // Help
             { 'hover:bg-purple-600 dark:hover:bg-purple-300 hover:border-purple-600 dark:hover:border-purple-300': props.severity === 'help' && !props.text && !props.outlined && !props.plain },
@@ -214,12 +215,11 @@ export default {
             {
                 'mr-2': props.iconPos == 'left' && props.label != null,
                 'ml-2 order-1': props.iconPos == 'right' && props.label != null,
-                'mb-2': props.iconPos == 'top' && props.label != null,
-                'mt-2': props.iconPos == 'bottom' && props.label != null
+                'order-2': props.iconPos == 'bottom' && props.label != null
             }
         ]
     }),
-    loadingicon: ({ props }) => ({
+    loadingIcon: ({ props }) => ({
         class: [
             'h-4 w-4',
             'mx-0',
