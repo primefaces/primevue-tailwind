@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs"></DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
 </template>
 
 <script>
@@ -11,11 +11,7 @@ export default {
                 basic: `
 // import as component
 import Badge from 'primevue/badge';
-
-// import as directive
-import BadgeDirective from 'primevue/badgedirective';
-
-app.directive('badge', BadgeDirective);
+import OverlayBadge from 'primevue/overlaybadge';
 `
             }
         };

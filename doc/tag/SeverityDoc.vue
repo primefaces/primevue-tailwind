@@ -1,13 +1,13 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Severity defines the color of the tag, possible values are <i>success</i>, <i>info</i>, <i>warning</i> and <i>danger</i> in addition to the default theme color.</p>
+        <p>Severity defines the variant of a tag.</p>
     </DocSectionText>
     <div class="card flex flex-wrap justify-center gap-2">
         <Tag value="Primary"></Tag>
-        <Tag severity="success" value="Success"></Tag>
         <Tag severity="secondary" value="Secondary"></Tag>
+        <Tag severity="success" value="Success"></Tag>
         <Tag severity="info" value="Info"></Tag>
-        <Tag severity="warning" value="Warning"></Tag>
+        <Tag severity="warn" value="Warn"></Tag>
         <Tag severity="danger" value="Danger"></Tag>
         <Tag severity="contrast" value="Contrast"></Tag>
     </div>
@@ -21,10 +21,10 @@ export default {
             code: {
                 basic: `
 <Tag value="Primary"></Tag>
-<Tag severity="success" value="Success"></Tag>
 <Tag severity="secondary" value="Secondary"></Tag>
+<Tag severity="success" value="Success"></Tag>
 <Tag severity="info" value="Info"></Tag>
-<Tag severity="warning" value="Warning"></Tag>
+<Tag severity="warn" value="Warn"></Tag>
 <Tag severity="danger" value="Danger"></Tag>
 <Tag severity="contrast" value="Contrast"></Tag>
 `,
@@ -32,10 +32,10 @@ export default {
 <template>
     <div class="flex flex-wrap justify-center gap-2">
         <Tag value="Primary"></Tag>
-        <Tag severity="success" value="Success"></Tag>
         <Tag severity="secondary" value="Secondary"></Tag>
+        <Tag severity="success" value="Success"></Tag>
         <Tag severity="info" value="Info"></Tag>
-        <Tag severity="warning" value="Warning"></Tag>
+        <Tag severity="warn" value="Warn"></Tag>
         <Tag severity="danger" value="Danger"></Tag>
         <Tag severity="contrast" value="Contrast"></Tag>
     </div>
@@ -49,10 +49,10 @@ export default {
 <template>
     <div class="flex flex-wrap justify-center gap-2">
         <Tag value="Primary"></Tag>
-        <Tag severity="success" value="Success"></Tag>
         <Tag severity="secondary" value="Secondary"></Tag>
+        <Tag severity="success" value="Success"></Tag>
         <Tag severity="info" value="Info"></Tag>
-        <Tag severity="warning" value="Warning"></Tag>
+        <Tag severity="warn" value="Warn"></Tag>
         <Tag severity="danger" value="Danger"></Tag>
         <Tag severity="contrast" value="Contrast"></Tag>
     </div>
