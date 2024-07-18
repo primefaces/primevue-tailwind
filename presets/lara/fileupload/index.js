@@ -1,8 +1,15 @@
 export default {
+    root: ({ props }) => ({
+        class: [
+            {
+                'flex flex-wrap items-center justify-center gap-2': props.mode === 'basic'
+            }
+        ]
+    }),
     input: {
         class: 'hidden'
     },
-    buttonbar: {
+    header: {
         class: [
             // Flexbox
             'flex',
@@ -30,52 +37,6 @@ export default {
             'rounded-tl-lg'
         ]
     },
-    chooseButton: {
-        class: [
-            'relative',
-
-            // Alignments
-            'items-center inline-flex text-center align-bottom justify-center',
-
-            // Spacing
-            'px-4 py-3',
-
-            // Shape
-            'rounded-md',
-
-            // Font
-            'leading-[normal]',
-            'font-bold',
-
-            // Colors
-            'text-primary-contrast',
-            'bg-primary',
-            'border-primary',
-
-            // States
-            'hover:bg-primary-emphasis',
-
-            // Misc
-            'overflow-hidden',
-            'cursor-pointer'
-        ]
-    },
-    chooseIcon: {
-        class: ['mr-2', 'inline-block']
-    },
-    chooseButtonLabel: {
-        class: ['flex-1', 'font-bold']
-    },
-    uploadbutton: {
-        icon: {
-            class: 'mr-2'
-        }
-    },
-    cancelbutton: {
-        icon: {
-            class: 'mr-2'
-        }
-    },
     content: {
         class: [
             // Position
@@ -96,7 +57,14 @@ export default {
             'dark:border-surface-700',
 
             // Shape
-            'rounded-b-lg'
+            'rounded-b-lg',
+
+            //ProgressBar
+            '[&>[data-pc-name=pcprogressbar]]:absolute',
+            '[&>[data-pc-name=pcprogressbar]]:w-full',
+            '[&>[data-pc-name=pcprogressbar]]:top-0',
+            '[&>[data-pc-name=pcprogressbar]]:left-0',
+            '[&>[data-pc-name=pcprogressbar]]:h-1'
         ]
     },
     file: {
@@ -121,53 +89,7 @@ export default {
             'rounded'
         ]
     },
-    thumbnail: {
-        class: 'shrink-0'
-    },
-    fileName: {
-        class: 'mb-2 break-all'
-    },
-    fileSize: {
-        class: 'mr-2'
-    },
-    uploadicon: {
-        class: 'mr-2'
-    },
-    progressbar: {
-        root: {
-            class: [
-                // Position and Overflow
-                'overflow-hidden',
-                'absolute top-0 left-0',
-
-                // Shape and Size
-                'border-0',
-                'h-2',
-                'rounded-md',
-                'w-full',
-
-                // Colors
-                'bg-surface-100 dark:bg-surface-700'
-            ]
-        },
-        value: {
-            class: [
-                // Flexbox & Overflow & Position
-                'absolute flex items-center justify-center overflow-hidden',
-
-                // Colors
-                'bg-primary',
-
-                // Spacing & Sizing
-                'm-0',
-                'h-full w-0',
-
-                // Shape
-                'border-0',
-
-                // Transitions
-                'transition-width duration-1000 ease-in-out'
-            ]
-        }
-    }
+    fileThumbnail: 'shrink-0',
+    fileName: 'mb-2 break-all',
+    fileSize: 'mr-2'
 };

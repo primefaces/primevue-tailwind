@@ -17,7 +17,7 @@ export default {
             'py-0 px-3'
         ]
     },
-    node: ({ props, context }) => ({
+    node: ({ context }) => ({
         class: [
             'relative inline-block',
 
@@ -45,7 +45,7 @@ export default {
             { 'cursor-pointer': context?.selectable }
         ]
     }),
-    linecell: {
+    lineCell: {
         class: [
             // Alignment
             'text-center align-top',
@@ -54,7 +54,7 @@ export default {
             'py-0 px-3'
         ]
     },
-    linedown: {
+    connectorDown: {
         class: [
             // Spacing
             'mx-auto my-0',
@@ -66,7 +66,7 @@ export default {
             'bg-surface-200 dark:bg-surface-700'
         ]
     },
-    lineleft: ({ context }) => ({
+    connectorLeft: ({ context }) => ({
         class: [
             // Alignment
             'text-center align-top',
@@ -82,7 +82,7 @@ export default {
             'border-surface-200 dark:border-surface-700'
         ]
     }),
-    lineright: ({ context }) => ({
+    connectorRight: ({ context }) => ({
         class: [
             // Alignment
             'text-center align-top',
@@ -97,10 +97,10 @@ export default {
             { 'border-t border-surface-200 dark:border-surface-700': context.lineTop }
         ]
     }),
-    nodecell: {
+    nodeCell: {
         class: 'text-center align-top py-0 px-3'
     },
-    nodetoggler: {
+    nodeToggleButton: {
         class: [
             // Position
             'absolute bottom-[-0.75rem] left-2/4 -ml-3',
@@ -125,7 +125,7 @@ export default {
             'cursor-pointer no-underline select-none'
         ]
     },
-    nodetogglericon: {
+    nodeToggleButtonIcon: {
         class: [
             // Position
             'relative inline-block',

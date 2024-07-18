@@ -36,7 +36,7 @@ export default {
             { 'hover:bg-surface-100 dark:hover:bg-surface-800': props.toggleable }
         ]
     }),
-    toggler: ({ props }) => ({
+    toggleButton: ({ props }) => ({
         class: [
             // Alignments
             'flex items-center justify-center',
@@ -61,10 +61,10 @@ export default {
             }
         ]
     }),
-    togglerIcon: {
+    toggleIcon: {
         class: 'mr-2 inline-block'
     },
-    legendTitle: ({ props }) => ({
+    legendLabel: ({ props }) => ({
         class: ['flex items-center justify-center leading-none', { 'py-2 px-3': !props.toggleable }]
     }),
     content: {
