@@ -96,43 +96,10 @@ export default {
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-100 dark:bg-surface-800',
-            'border-surface-300 dark:border-surface-600'
+            'border-surface-300 dark:border-surface-600',
+
+            '[&_[data-pc-name=pcfilter]]:w-full'
         ]
-    },
-    pcFilter: {
-        root: {
-            class: [
-                // Font
-                'leading-none',
-
-                // Sizing
-                'pr-7 py-3 px-3',
-                '-mr-7',
-                'w-full',
-
-                //Color
-                'text-surface-700 dark:text-white/80',
-                'bg-surface-0 dark:bg-surface-900',
-                'border-surface-200 dark:border-surface-700',
-
-                // Shape
-                'border',
-                'rounded-lg',
-                'appearance-none',
-
-                // Transitions
-                'transition',
-                'duration-200',
-
-                // States
-                'hover:border-primary',
-                'focus:ring focus:outline-none focus:outline-offset-0',
-                'focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
-
-                // Misc
-                'appearance-none'
-            ]
-        }
     },
     emptyMessage: {
         class: [

@@ -99,41 +99,9 @@ export default {
             // Color
             'text-surface-700 dark:text-white/80',
             'bg-surface-0 dark:bg-surface-900',
-            'border-surface-300 dark:border-surface-700'
+            'border-surface-300 dark:border-surface-700',
+
+            '[&_[data-pc-name=pcfilter]]:w-full'
         ]
-    },
-    pcFilter: {
-        root: {
-            class: [
-                // Font
-                'leading-[normal]',
-
-                // Sizing
-                'py-2 pl-3 pr-7',
-                '-mr-7',
-                'w-full',
-
-                //Color
-                'text-surface-700 dark:text-white/80',
-                'bg-surface-0 dark:bg-surface-950',
-                'border-surface-200 dark:border-surface-700',
-
-                // Shape
-                'border',
-                'rounded-lg',
-                'appearance-none',
-
-                // Transitions
-                'transition',
-                'duration-200',
-
-                // States
-                'hover:border-surface-400 dark:hover:border-surface-600',
-                'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-primary-500 dark:focus:ring-primary-400 focus:z-10',
-
-                // Misc
-                'appearance-none'
-            ]
-        }
     }
 };
