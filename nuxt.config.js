@@ -30,7 +30,6 @@ export default defineNuxtConfig({
     },
     primevue: {
         options: {
-            ripple: true,
             unstyled: true
         },
         autoImport: true,
