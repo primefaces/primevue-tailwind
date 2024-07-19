@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>PassThrough configuration for each component type can be defined globally with the <i>pt</i> option of PrimeVue.</p>
     </DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
 </template>
 
 <script>
@@ -15,7 +15,7 @@ import { createApp } from "vue";
 import PrimeVue from "primevue/config";
 const app = createApp(App);
 
-app.use(PrimeVue, { 
+app.use(PrimeVue, {
     pt: {
         inputtext: {
             root: 'bg-surface-50 text-surface-900 ...'
@@ -28,12 +28,12 @@ app.use(PrimeVue, {
         },
         autocomplete: {
             //...
-            input: { 
+            input: {
                 root: 'w-16rem' // OR { class: 'w-16rem' }
             }
         },
         //...
-    } 
+    }
 });
 `
             }

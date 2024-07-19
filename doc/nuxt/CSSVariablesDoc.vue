@@ -8,7 +8,7 @@
             Now, in addition to the primary-[shade] and surface-[shade] colors, we have introduced new variables for more flexibility and customization. These variables include primary, primary-inverse, primary-highlight, and more. This allows you to
             define primary colors like Noir and customize them according to your needs.
         </p>
-        <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
     </DocSectionText>
 </template>
 

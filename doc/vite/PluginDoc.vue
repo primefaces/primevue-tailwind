@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>PrimeVue needs to be configured as a Vue plugin with <i>unstyled</i> mode enabled.</p>
     </DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
 </template>
 
 <script>

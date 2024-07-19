@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>In your <i>nuxt-config</i> file, add the <i>nuxt-primevue</i> module and configure PrimeVue to be unstyled.</p>
     </DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     ],
     primevue: {
         options: {
-          unstyled: true
+            unstyled: true
         },
     }
 })

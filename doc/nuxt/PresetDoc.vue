@@ -5,9 +5,9 @@
             build your release file with the components you need as the pre-build release package contains all the available components. Once the zip is downloaded, extract the contents to a folder of your choice e.g. <i>./presets</i> and then in
             your <i>nuxt-config</i> file, configure the <i>importPT</i> property of PrimeVue to the main preset file.
         </p>
-        <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
         <h4>For Windows Users</h4>
-        <DocSectionCode :code="code2" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code2" hideToggleCode importCode hideStackBlitz />
     </DocSectionText>
 </template>
 
@@ -25,9 +25,9 @@ export default defineNuxtConfig({
     ],
     primevue: {
         options: {
-          unstyled: true
+            unstyled: true
         },
-        importPT: { from: path.resolve(__dirname, './presets/aura/') }      //import and apply preset   
+        importPT: { from: path.resolve(__dirname, './presets/aura/') }      //import and apply preset
     }
 })
 `
@@ -40,9 +40,9 @@ export default defineNuxtConfig({
     ],
     primevue: {
         options: {
-          unstyled: true
+            unstyled: true
         },
-        importPT: { as: 'Aura', from: '~/presets/aura' }     //import and apply preset   
+        importPT: { as: 'Aura', from: '~/presets/aura' }     //import and apply preset
     }
 })
 `

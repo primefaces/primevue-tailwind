@@ -8,7 +8,7 @@
             <Panel header="Global" class="mb-4">Content</Panel>
             <Panel header="Overriden" :pt="{ title: 'text-xl font-bold font-mono text-primary' }">Content</Panel>
         </div>
-        <DocSectionCode :code="code" hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code" hideStackBlitz />
     </DocSectionText>
 </template>
 

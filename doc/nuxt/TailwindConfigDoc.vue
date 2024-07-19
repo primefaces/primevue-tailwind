@@ -5,7 +5,7 @@
             If you are using the tailwind module, this can be done in a separate config file or using the nuxt config directly. Visit the
             <a href="https://tailwindcss.nuxtjs.org/tailwind/config#overwriting-the-configuration" target="_blank" rel="noopener noreferrer">overwriting the default configuration</a> documentation for details.
         </p>
-        <DocSectionCode :code="code" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
     </DocSectionText>
 </template>
 

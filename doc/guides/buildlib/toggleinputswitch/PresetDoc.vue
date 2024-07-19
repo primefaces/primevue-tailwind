@@ -4,13 +4,13 @@
             So far so good as all the wiring is in place, time to apply our custom material design inspired style implemented with Tailwind utilities. The style is applied with the <i>pt</i> property of the InputSwitch locally, since we are using a
             local preset disable the merging with the global preset with <i>ptOptions</i>.
         </p>
-        <DocSectionCode :code="code1" hideToggleCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code1" hideToggleCode hideStackBlitz />
         <p>
             The preset is a simple pt configuration based on the <a href="https://primevue.org/inputswitch/#pt" target="_blank" rel="noopener noreferrer">InputSwitch PassThrough</a> API with some extensions, notice the use of <i>attrs</i> to add an
             <i>accent</i> mode which does not exist in the API of the PrimeVue InputSwitch. We're able to utilize arbitrary attributes to add functionality to the components we wrap without waiting for component library maintainer to add it for us.
             This is a great example of the PrimeVue philosophy, providing 3rd party UI library that is easy to tune and customize as if it were an in-house library.
         </p>
-        <DocSectionCode :code="code2" importCode hideToggleCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code2" importCode hideToggleCode hideStackBlitz />
     </DocSectionText>
 </template>
 
@@ -23,7 +23,7 @@ export default {
 <template>
     <div class="flex items-center gap-4">
         <label :for="$attrs.inputId">{{ label }}</label>
-        <ToggleSwitch v-bind="$attrs" :pt="preset" :ptOptions="{ mergeSections: false, mergeProps: false }" />
+        <ToggleInputSwitch v-bind="$attrs" :pt="preset" :ptOptions="{ mergeSections: false, mergeProps: false }" />
     </div>
 </template>
 `

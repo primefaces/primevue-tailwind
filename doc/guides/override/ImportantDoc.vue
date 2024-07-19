@@ -10,7 +10,7 @@
         <InputText :pt="{ root: 'bg-blue-500' }" :ptOptions="{ mergeProps: true }" placeholder="Not bg-blue-500" />
         <InputText :pt="{ root: '!bg-blue-500 placeholder:!text-blue-100 !text-white' }" :ptOptions="{ mergeProps: true }" placeholder="!bg-blue-500" />
     </div>
-    <DocSectionCode :code="code" hideToggleCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode hideStackBlitz />
 </template>
 
 <script>
@@ -19,13 +19,13 @@ export default {
         return {
             code: {
                 basic: `
-<InputText :pt="{ root: 'bg-blue-500' }" 
-           :ptOptions="{ mergeProps: true }" 
-           placeholder="Not bg-blue-500" />
+<InputText :pt="{ root: 'bg-blue-500' }"
+    :ptOptions="{ mergeProps: true }"
+    placeholder="Not bg-blue-500" />
 
-<InputText :pt="{ root: '!bg-blue-500 placeholder:!text-blue-100 !text-white' }" 
-           :ptOptions="{ mergeProps: true }" 
-           placeholder="!bg-blue-500" />
+<InputText :pt="{ root: '!bg-blue-500 placeholder:!text-blue-100 !text-white' }"
+    :ptOptions="{ mergeProps: true }"
+    placeholder="!bg-blue-500" />
 `
             }
         };

@@ -5,7 +5,7 @@
             InputSwitch e.g. <i>v-model</i> and <i>v-on</i> events. Component here is responsible for the main functionality and accessibility while we focus on standardizing the design requirements.
         </p>
     </DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode hideStackBlitz />
 </template>
 
 <script>

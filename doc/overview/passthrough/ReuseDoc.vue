@@ -7,7 +7,7 @@
         <div class="card flex justify-center">
             <InputText type="text" :pt="myInputStyle" placeholder="InputText" />
         </div>
-        <DocSectionCode :code="code" hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code" hideStackBlitz />
     </DocSectionText>
 </template>
 
@@ -49,7 +49,7 @@ export default {
 .myTailwindInput {
     @apply bg-gray-100 dark:bg-gray-950 p-4 text-gray-900 dark:text-gray-50 rounded-full placeholder:text-gray-500 border border-transparent;
 }
-</style>  
+</style>
 `,
                 composition: `
 <template>

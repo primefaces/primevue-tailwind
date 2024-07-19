@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>To begin with, Ripple needs to be enabled globally. See the <a href="https://primevue.org/configuration/#ripple" target="_blank" rel="noopener noreferrer">Configuration API</a> for details.</p>
     </DocSectionText>
-    <DocSectionCode :code="code" importCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" importCode hideStackBlitz />
 </template>
 
 <script>

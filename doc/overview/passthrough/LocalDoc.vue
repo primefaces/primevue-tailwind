@@ -4,7 +4,7 @@
         <div class="card flex justify-center">
             <InputText type="text" :pt="myInputStyle" placeholder="InputText" />
         </div>
-        <DocSectionCode :code="code" hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code" hideStackBlitz />
     </DocSectionText>
 </template>
 
@@ -37,7 +37,7 @@ export default {
     }
 }
 <\/script>
-        
+
 `,
                 composition: `
 <template>

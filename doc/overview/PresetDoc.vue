@@ -9,12 +9,12 @@
             they are or use them as reference when creating your own design. A preset can only for a single component or multiple, visit the <NuxtLink to="/gallery">Gallery</NuxtLink> to view the community driven presets. Releases of presets are not
             published to NPM as copy-paste approach is a more suitable strategy for easier customization instead of an imported module from node_modules.
         </p>
-        <DocSectionCode :code="code1" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code1" hideToggleCode importCode hideStackBlitz />
         <p>
             Presets are reactive, as a result changing the configuration reskins the entire UI suite. This allows switching the design system at runtime e.g. from Material Design from Google to Fluent of Microsoft with a single line instead of
             rewriting the application with another UI library.
         </p>
-        <DocSectionCode :code="code2" hideToggleCode importCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code2" hideToggleCode importCode hideStackBlitz />
     </DocSectionText>
 </template>
 

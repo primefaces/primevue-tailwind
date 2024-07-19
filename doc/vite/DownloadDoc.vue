@@ -3,7 +3,7 @@
         <div class="notification mb-4">Presets do not support PrimeVue v4 yet, an update is scheduled for the end of July, 2024.</div>
         <p>PrimeVue is available for download on <a href="https://www.npmjs.com/package/primevue" target="_blank" rel="noopener noreferrer">npm registry</a>.</p>
     </DocSectionText>
-    <DocSectionCode :code="code" hideToggleCode hideCodeSandbox hideStackBlitz />
+    <DocSectionCode :code="code" hideToggleCode hideStackBlitz />
 </template>
 
 <script>

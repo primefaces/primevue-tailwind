@@ -3,12 +3,12 @@
         <p>Here is the full list of PrimeIcons. More icons will be added periodically and you may also <a href="https://github.com/primefaces/primeicons/issues">request new icons</a> at the issue tracker.</p>
     </DocSectionText>
 
-    <InputText v-model="filter" class="w-full p-3 mt-3 mb-4" placeholder="Search an icon" />
+    <InputText v-model="filter" class="w-full p-4 mt-4 mb-6" placeholder="Search an icon" />
 
     <div class="card">
-        <div class="flex flex-wrap justify-center gap-5 text-center">
-            <div v-for="icon of filteredIcons" :key="icon.properties.name" class="w-full sm:w-6/2 md:w-4/12 lg:w-2/12">
-                <i :class="'text-2xl mb-3 text-surface-700 dark:text-surface-0/70 pi pi-' + icon.properties.name"></i>
+        <div class="grid grid-cols-12 gap-4 text-center">
+            <div v-for="icon of filteredIcons" :key="icon.properties.name" class="col-span-12 md:col-span-2 mb-8">
+                <i :class="'text-2xl mb-4 text-surface-500 dark:text-surface-400 pi pi-' + icon.properties.name"></i>
                 <div>pi-{{ icon.properties.name }}</div>
             </div>
         </div>
@@ -43,7 +43,24 @@ export default {
     },
     computed: {
         filteredIcons() {
-            if (this.filter) return this.icons.filter((icon) => icon.properties.name.indexOf(this.filter.toLowerCase()) > -1);
+            let sanitizedInput = this.filter?.replace(/[^\w\s]/gi, '').replace(/\s/g, '');
+
+            if (this.filter)
+                return this.icons.filter((icon) => {
+                    return (
+                        icon.icon.tags.some((tag) =>
+                            tag
+                                .replace(/[^\w\s]/gi, '')
+                                .replace(/\s/g, '')
+                                .includes(sanitizedInput.toLowerCase())
+                        ) ||
+                        icon.properties.name
+                            .replace(/[^\w\s]/gi, '')
+                            .replace(/\s/g, '')
+                            .toLowerCase()
+                            .includes(sanitizedInput.toLowerCase())
+                    );
+                });
             else return this.icons;
         }
     }

@@ -17,10 +17,10 @@
 
 <script>
 import WrappingComponentsDoc from '@/doc/guides/buildlib/WrappingComponentsDoc.vue';
-import FinalResultDoc from '@/doc/guides/buildlib/toggleswitch/FinalResultDoc.vue';
-import PresetDoc from '@/doc/guides/buildlib/toggleswitch/PresetDoc.vue';
-import ScriptDoc from '@/doc/guides/buildlib/toggleswitch/ScriptDoc.vue';
-import TemplateDoc from '@/doc/guides/buildlib/toggleswitch/TemplateDoc.vue';
+import FinalResultDoc from '@/doc/guides/buildlib/toggleinputswitch/FinalResultDoc.vue';
+import PresetDoc from '@/doc/guides/buildlib/toggleinputswitch/PresetDoc.vue';
+import ScriptDoc from '@/doc/guides/buildlib/toggleinputswitch/ScriptDoc.vue';
+import TemplateDoc from '@/doc/guides/buildlib/toggleinputswitch/TemplateDoc.vue';
 
 export default {
     data() {
@@ -34,7 +34,7 @@ export default {
                 {
                     id: 'toggle-switch',
                     label: 'Toggle Switch',
-                    description: `Let's build our own ToggleSwitch component inspired by Material Design. For this, we'll be using the PrimeVue InputSwitch component.`,
+                    description: `Let's build our own ToggleInputSwitch component inspired by Material Design. For this, we'll be using the PrimeVue InputSwitch component.`,
                     children: [
                         {
                             id: 'toggle-switch-template',
