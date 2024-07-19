@@ -91,7 +91,7 @@ export default {
         },
         hideCodeSandbox: {
             type: Boolean,
-            default: false
+            default: true
         },
         hideStackBlitz: {
             type: Boolean,
