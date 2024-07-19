@@ -106,10 +106,6 @@
                 {
                     "name": "TreeSelect",
                     "path": "treeselect"
-                },
-                {
-                    "name": "TriStateCheckbox",
-                    "path": "tristatecheckbox"
                 }
             ]
         },
@@ -190,7 +186,6 @@
                     "name": "Divider",
                     "path": "divider"
                 },
-
                 {
                     "name": "Fieldset",
                     "path": "fieldset"
@@ -212,8 +207,8 @@
                     "path": "stepper"
                 },
                 {
-                    "name": "TabView",
-                    "path": "tabview"
+                    "name": "Tabs",
+                    "path": "tabs"
                 },
                 {
                     "name": "Toolbar",
@@ -227,6 +222,10 @@
                 {
                     "name": "ConfirmPopup",
                     "path": "confirmpopup"
+                },
+                {
+                    "name": "ConfirmDialog",
+                    "path": "confirmdialog"
                 },
                 {
                     "name": "Dialog",
@@ -287,10 +286,6 @@
                     "path": "panelmenu"
                 },
                 {
-                    "name": "Steps",
-                    "path": "steps"
-                },
-                {
                     "name": "TabMenu",
                     "path": "tabmenu"
                 },
@@ -306,10 +301,6 @@
                 {
                     "name": "Message",
                     "path": "message"
-                },
-                {
-                    "name": "InlineMessage",
-                    "path": "inlinemessage"
                 },
                 {
                     "name": "Toast",
@@ -344,11 +335,6 @@
                 {
                     "name": "Badge",
                     "path": "badge"
-                },
-                {
-                    "name": "BadgeDirective",
-                    "path": "badgedirective",
-                    "directive": true
                 },
                 {
                     "name": "BlockUI",
