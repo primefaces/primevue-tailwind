@@ -1,35 +1,6 @@
 <template>
     <div class="config-panel hidden">
         <div class="config-panel-content">
-            <!-- //TODO: -->
-            <div class="config-panel-colors">
-                <span class="config-panel-label">Primary</span>
-                <!-- <SelectButton v-model="$appState.preset" @update:modelValue="setPreset" :options="presets" :allowEmpty="false" /> -->
-            </div>
-            <div class="custom-selectbutton inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] bg-surface-100 dark:bg-surface-900 w-full">
-                <button
-                    type="button"
-                    class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
-                    :class="{
-                        'shadow bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
-                        'bg-surface-100 dark:bg-surface-900': !isLara
-                    }"
-                    @click="setPreset('lara')"
-                >
-                    Lara
-                </button>
-                <button
-                    type="button"
-                    class="px-[0.5rem] w-full tracking-tight py-[0.3rem] leading-none rounded-md text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
-                    :class="{
-                        'shadow bg-surface-0 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isAura,
-                        'bg-surface-100 dark:bg-surface-900': !isAura
-                    }"
-                    @click="setPreset('aura')"
-                >
-                    Aura
-                </button>
-            </div>
             <div class="config-panel-colors">
                 <span class="config-panel-label">Primary Colors</span>
                 <div>
@@ -55,12 +26,14 @@
                         :style="{ backgroundColor: `${surface.palette[5]}` }"
                     ></button>
                 </div>
-                <!-- class="w-4 h-4 rounded-full cursor-pointer"
-                    :class="{ 'ring-2 ring-offset-2 ring-offset-surface-0 dark:ring-offset-surface-800 ring-surface-500': selectedSurfaceColor === surface.name }" -->
+            </div>
+            <div class="config-panel-settings">
+                <span class="config-panel-label">Primary</span>
+                <SelectButton v-model="$appState.preset" @update:modelValue="onPresetChange" :options="presets" :allowEmpty="false" />
             </div>
             <div class="config-panel-settings">
                 <span class="config-panel-label">Ripple Effect</span>
-                <ToggleSwitch :modelValue="$primevue.config.ripple" @update:model-value="setRipple($event)" />
+                <ToggleSwitch :modelValue="rippleActive" @update:modelValue="onRippleChange" />
             </div>
         </div>
     </div>
@@ -70,8 +43,9 @@
 export default {
     data() {
         return {
-            selectedPrimaryColor: 'emerald',
-            selectedSurfaceColor: 'zinc',
+            presets: ['Aura', 'Lara'],
+            selectedPrimaryColor: 'noir',
+            selectedSurfaceColor: 'slate',
             primaryColors: [
                 {
                     name: 'noir',
@@ -140,12 +114,9 @@ export default {
                 this.selectedPrimaryColor = colorName;
 
                 if (colorName === 'noir') {
-                    root.classList.add('p-noir');
-                    //TODO:
-                    // this.selectedSurfaceColor = this.$appState.darkMode ? 'zinc' : 'slate';
-                    // document.startViewTransition(() => this.applyTheme('surface', selectedColor.palette));
+                    root.setAttribute('data-preset', 'noir');
                 } else {
-                    root.classList.remove('p-noir');
+                    root.removeAttribute('data-preset');
                 }
             } else if (type === 'surface') {
                 selectedColor = this.surfaces.find((color) => color.name === colorName);
@@ -153,14 +124,14 @@ export default {
             }
 
             if (!document.startViewTransition) {
-                this.applyTheme(type, selectedColor.palette);
+                this.applyTheme(type, selectedColor.palette, colorName);
 
                 return;
             }
 
-            document.startViewTransition(() => this.applyTheme(type, selectedColor.palette));
+            document.startViewTransition(() => this.applyTheme(type, selectedColor.palette, colorName));
         },
-        applyTheme(type, colors) {
+        applyTheme(type, colors, colorName) {
             let increments;
 
             if (type === 'primary') {
@@ -169,23 +140,26 @@ export default {
                 increments = [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
             }
 
-            colors.forEach((color, index) => {
-                document.documentElement.style.setProperty(`--p-${type}-${increments[index]}`, color);
-            });
+            if (colorName === 'noir') {
+                increments.forEach((inc, index) => {
+                    document.documentElement.style.setProperty(`--p-${type}-${increments[index]}`, `var(--p-surface-${inc})`);
+                });
+            } else {
+                colors.forEach((color, index) => {
+                    document.documentElement.style.setProperty(`--p-${type}-${increments[index]}`, color);
+                });
+            }
         },
-        setPreset(preset) {
+        onPresetChange(preset) {
             this.$appState.preset = preset;
         },
-        setRipple(value) {
+        onRippleChange(value) {
             this.$primevue.config.ripple = value;
         }
     },
     computed: {
-        isLara() {
-            return this.$appState.preset === 'lara';
-        },
-        isAura() {
-            return this.$appState.preset === 'aura';
+        rippleActive() {
+            return this.$primevue.config.ripple;
         }
     }
 };

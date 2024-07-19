@@ -4,4 +4,10 @@
     </NuxtLayout>
 </template>
 
-<script></script>
+<script setup>
+useHead({
+    htmlAttrs: {
+        'data-preset': 'noir'
+    }
+});
+</script>

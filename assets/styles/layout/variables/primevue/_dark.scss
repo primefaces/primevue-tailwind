@@ -16,7 +16,7 @@
     --p-text-hover-muted-color: var(--p-surface-300);
 }
 
-:root.p-dark.p-noir {
+:root.p-dark[data-preset="noir"]  {
     --p-primary-color: var(--p-primary-50);
     --p-primary-contrast-color: var(--p-surface-950);
     --p-primary-hover-color: var(--p-primary-200);
