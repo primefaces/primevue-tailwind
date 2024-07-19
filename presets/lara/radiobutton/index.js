@@ -34,7 +34,7 @@ export default {
             {
                 'text-surface-700 dark:text-white/80': props.value !== props.modelValue && props.value !== undefined,
                 'bg-surface-0 dark:bg-surface-900': props.value !== props.modelValue && props.value !== undefined,
-                'border-surface-300 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined && !props.invalid,
+                'border-surface-100 dark:border-surface-700': props.value !== props.modelValue && props.value !== undefined && !props.invalid,
                 'border-primary': props.value == props.modelValue && props.value !== undefined,
                 'bg-primary': props.value == props.modelValue && props.value !== undefined
             },
