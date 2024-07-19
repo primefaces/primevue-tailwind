@@ -18,7 +18,7 @@ export default {
             }
         ]
     }),
-    opposite: ({ props, context }) => ({
+    eventOpposite: ({ props, context }) => ({
         class: [
             'flex-1',
             {
@@ -31,7 +31,7 @@ export default {
             }
         ]
     }),
-    separator: ({ props }) => ({
+    eventSeparator: ({ props }) => ({
         class: [
             'flex items-center flex-initial',
             {
@@ -40,7 +40,7 @@ export default {
             }
         ]
     }),
-    marker: {
+    eventMarker: {
         class: [
             // Display & Flexbox
             'flex self-baseline',
@@ -52,7 +52,7 @@ export default {
             'rounded-full border-2 border-primary bg-surface-0 dark:bg-surface-900/40'
         ]
     },
-    connector: ({ props }) => ({
+    eventConnector: ({ props }) => ({
         class: [
             'grow bg-surface-300 dark:bg-surface-700',
             {
@@ -61,7 +61,7 @@ export default {
             }
         ]
     }),
-    content: ({ props, context }) => ({
+    eventContent: ({ props, context }) => ({
         class: [
             'flex-1',
             {

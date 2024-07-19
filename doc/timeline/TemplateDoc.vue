@@ -5,12 +5,12 @@
     <div class="card">
         <Timeline :value="events" align="alternate" class="customized-timeline">
             <template #marker="slotProps">
-                <span class="flex w-[2rem] h-[2rem] items-center justify-center text-white rounded-full z-20 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
+                <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
                     <i :class="slotProps.item.icon"></i>
                 </span>
             </template>
             <template #content="slotProps">
-                <Card class="mt-3">
+                <Card class="mt-4">
                     <template #title>
                         {{ slotProps.item.status }}
                     </template>
@@ -46,12 +46,12 @@ export default {
                 basic: `
 <Timeline :value="events" align="alternate" class="customized-timeline">
     <template #marker="slotProps">
-        <span class="flex w-[2rem] h-[2rem] items-center justify-center text-white rounded-full z-20 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
+        <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
             <i :class="slotProps.item.icon"></i>
         </span>
     </template>
     <template #content="slotProps">
-        <Card class="mt-3">
+        <Card class="mt-4">
             <template #title>
                 {{ slotProps.item.status }}
             </template>
@@ -75,12 +75,12 @@ export default {
     <div class="card">
         <Timeline :value="events" align="alternate" class="customized-timeline">
             <template #marker="slotProps">
-                <span class="flex w-[2rem] h-[2rem] items-center justify-center text-white rounded-full z-20 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
+                <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
                     <i :class="slotProps.item.icon"></i>
                 </span>
             </template>
             <template #content="slotProps">
-                <Card class="mt-3">
+                <Card class="mt-4">
                     <template #title>
                         {{ slotProps.item.status }}
                     </template>
@@ -139,12 +139,12 @@ export default {
     <div class="card">
         <Timeline :value="events" align="alternate" class="customized-timeline">
             <template #marker="slotProps">
-                <span class="flex w-[2rem] h-[2rem] items-center justify-center text-white rounded-full z-20 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
+                <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" :style="{ backgroundColor: slotProps.item.color }">
                     <i :class="slotProps.item.icon"></i>
                 </span>
             </template>
             <template #content="slotProps">
-                <Card class="mt-3">
+                <Card class="mt-4">
                     <template #title>
                         {{ slotProps.item.status }}
                     </template>
