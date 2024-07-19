@@ -17,6 +17,7 @@ import cascadeselect from './cascadeselect';
 import checkbox from './checkbox';
 import chip from './chip';
 import colorpicker from './colorpicker';
+import confirmdialog from './confirmdialog';
 import confirmpopup from './confirmpopup';
 import contextmenu from './contextmenu';
 import datatable from './datatable';
@@ -204,6 +205,7 @@ export default {
     drawer,
     overlaypanel: drawer,
     confirmpopup,
+    confirmdialog,
 
     //messages
     message,

@@ -8,7 +8,6 @@ export default {
 
             // Size
             'max-h-[90vh]',
-            'w-[50vw]',
             'm-0',
 
             // Color
@@ -54,94 +53,8 @@ export default {
     title: {
         class: ['font-semibold text-xl leading-[normal]']
     },
-    icons: {
+    headerActions: {
         class: ['flex items-center']
-    },
-    closeButton: {
-        class: [
-            'relative',
-
-            // Flexbox and Alignment
-            'flex items-center justify-center',
-
-            // Size and Spacing
-            'mr-2',
-            'last:mr-0',
-            'w-7 h-7',
-
-            // Shape
-            'border-0',
-            'rounded-full',
-
-            // Colors
-            'text-surface-500',
-            'bg-transparent',
-
-            // Transitions
-            'transition duration-200 ease-in-out',
-
-            // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
-
-            // Misc
-            'overflow-hidden'
-        ]
-    },
-    maximizablebutton: {
-        class: [
-            'relative',
-
-            // Flexbox and Alignment
-            'flex items-center justify-center',
-
-            // Size and Spacing
-            'mr-2',
-            'last:mr-0',
-            'w-7 h-7',
-
-            // Shape
-            'border-0',
-            'rounded-full',
-
-            // Colors
-            'text-surface-500',
-            'bg-transparent',
-
-            // Transitions
-            'transition duration-200 ease-in-out',
-
-            // States
-            'hover:text-surface-700 dark:hover:text-white/80',
-            'hover:bg-surface-100 dark:hover:bg-[rgba(255,255,255,0.03)]',
-            'focus:outline-none focus:outline-offset-0 focus:ring-1',
-            'focus:ring-primary-500 dark:focus:ring-primary-400',
-
-            // Misc
-            'overflow-hidden'
-        ]
-    },
-    closeButtonIcon: {
-        class: [
-            // Display
-            'inline-block',
-
-            // Size
-            'w-4',
-            'h-4'
-        ]
-    },
-    maximizableicon: {
-        class: [
-            // Display
-            'inline-block',
-
-            // Size
-            'w-4',
-            'h-4'
-        ]
     },
     content: ({ state, instance }) => ({
         class: [
