@@ -3,15 +3,15 @@
         <p>ContextMenu offers item customization with the <i>item</i> template that receives the menuitem instance from the model as a parameter.</p>
     </DocSectionText>
     <div class="card flex md:justify-center">
-        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]">
+        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-4 flex flex-col gap-2 w-full md:w-[30rem]">
             <li
                 v-for="product in products"
                 :key="product.id"
-                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
+                :class="['p-2 hover:bg-surface-100 dark:hover:bg-surface-800 rounded border border-transparent transition-all transition-duration-200', { 'border-primary': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
                 <div class="flex flex-wrap p-2 items-center gap-4">
-                    <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
+                    <img class="w-16 shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
                     <div class="flex-1 flex flex-col gap-1">
                         <span class="font-bold">{{ product.name }}</span>
                         <div class="flex items-center gap-2">
@@ -19,7 +19,7 @@
                             <span>{{ product.category }}</span>
                         </div>
                     </div>
-                    <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">${{ product.price }}</span>
+                    <span class="font-bold ml-8">${{ product.price }}</span>
                 </div>
             </li>
         </ul>
@@ -29,8 +29,8 @@
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-                    <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded surface-100 text-xs p-1">{{ item.shortcut }}</span>
-                    <i v-if="item.items" class="pi pi-angle-right ml-auto text-primary"></i>
+                    <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
+                    <i v-if="item.items" class="pi pi-angle-right ml-auto"></i>
                 </a>
             </template>
         </ContextMenu>
@@ -79,15 +79,15 @@ export default {
             ],
             code: {
                 basic: `
-<ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]">
+<ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-4 flex flex-col gap-2 w-full md:w-[30rem]">
     <li
         v-for="product in products"
         :key="product.id"
-        :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
+        :class="['p-2 hover:bg-surface-100 dark:hover:bg-surface-800 rounded border border-transparent transition-all transition-duration-200', { 'border-primary': selectedId === product.id }]"
         @contextmenu="onRightClick($event, product.id)"
     >
         <div class="flex flex-wrap p-2 items-center gap-4">
-            <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'/images/product/' + product.image" :alt="product.name" />
+            <img class="w-16 shrink-0 rounded" :src="'/images/product/' + product.image" :alt="product.name" />
             <div class="flex-1 flex flex-col gap-1">
                 <span class="font-bold">{{ product.name }}</span>
                 <div class="flex items-center gap-2">
@@ -95,7 +95,7 @@ export default {
                     <span>{{ product.category }}</span>
                 </div>
             </div>
-            <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">\${{ product.price }}</span>
+            <span class="font-bold ml-8">\${{ product.price }}</span>
         </div>
     </li>
 </ul>
@@ -105,8 +105,8 @@ export default {
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
             <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-            <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded surface-100 text-xs p-1">{{ item.shortcut }}</span>
-            <i v-if="item.items" class="pi pi-angle-right ml-auto text-primary"></i>
+            <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
+            <i v-if="item.items" class="pi pi-angle-right ml-auto"></i>
         </a>
     </template>
 </ContextMenu>
@@ -114,15 +114,15 @@ export default {
                 options: `
 <template>
     <div class="card flex md:justify-center">
-        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]">
+        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-4 flex flex-col gap-2 w-full md:w-[30rem]">
             <li
                 v-for="product in products"
                 :key="product.id"
-                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
+                :class="['p-2 hover:bg-surface-100 dark:hover:bg-surface-800 rounded border border-transparent transition-all transition-duration-200', { 'border-primary': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
                 <div class="flex flex-wrap p-2 items-center gap-4">
-                    <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
+                    <img class="w-16 shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
                     <div class="flex-1 flex flex-col gap-1">
                         <span class="font-bold">{{ product.name }}</span>
                         <div class="flex items-center gap-2">
@@ -130,7 +130,7 @@ export default {
                             <span>{{ product.category }}</span>
                         </div>
                     </div>
-                    <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">\${{ product.price }}</span>
+                    <span class="font-bold ml-8">\${{ product.price }}</span>
                 </div>
             </li>
         </ul>
@@ -140,8 +140,8 @@ export default {
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-                    <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded surface-100 text-xs p-1">{{ item.shortcut }}</span>
-                    <i v-if="item.items" class="pi pi-angle-right ml-auto text-primary"></i>
+                    <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
+                    <i v-if="item.items" class="pi pi-angle-right ml-auto"></i>
                 </a>
             </template>
         </ContextMenu>
@@ -204,15 +204,15 @@ export default {
                 composition: `
 <template>
     <div class="card flex md:justify-center">
-        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]" @hide="selectedId = null">
+        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-4 flex flex-col gap-2 w-full md:w-[30rem]" @hide="selectedId = null">
             <li
                 v-for="product in products"
                 :key="product.id"
-                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200', { 'border-transparent': selectedId !== product.id }, { 'border-primary': selectedId === product.id }]"
+                :class="['p-2 hover:bg-surface-100 dark:hover:bg-surface-800 rounded border border-transparent transition-all transition-duration-200', { 'border-primary': selectedId === product.id }]"
                 @contextmenu="onRightClick($event, product.id)"
             >
                 <div class="flex flex-wrap p-2 items-center gap-4">
-                    <img class="w-[4rem] shadow-md shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
+                    <img class="w-16 shrink-0 rounded" :src="'https://primefaces.org/cdn/primevue/images/product/' + product.image" :alt="product.name" />
                     <div class="flex-1 flex flex-col gap-1">
                         <span class="font-bold">{{ product.name }}</span>
                         <div class="flex items-center gap-2">
@@ -220,7 +220,7 @@ export default {
                             <span>{{ product.category }}</span>
                         </div>
                     </div>
-                    <span class="font-bold text-surface-900 dark:text-surface-0 ml-5">\${{ product.price }}</span>
+                    <span class="font-bold ml-8">\${{ product.price }}</span>
                 </div>
             </li>
         </ul>
@@ -230,8 +230,8 @@ export default {
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
-                    <span v-if="item.shortcut" class="ml-auto border border-surface-200 dark:border-surface-700 rounded surface-100 text-xs p-1">{{ item.shortcut }}</span>
-                    <i v-if="item.items" class="pi pi-angle-right ml-auto text-primary"></i>
+                    <span v-if="item.shortcut" class="ml-auto border border-surface rounded bg-emphasis text-muted-color text-xs p-1">{{ item.shortcut }}</span>
+                    <i v-if="item.items" class="pi pi-angle-right ml-auto"></i>
                 </a>
             </template>
         </ContextMenu>

@@ -9,10 +9,10 @@
                 pt: {
                     arrow: {
                         style: {
-                            borderBottomColor: 'rgb(var(--primary-500))'
+                            borderBottomColor: 'var(--p-primary-color)'
                         }
                     },
-                    text: ['p-2', 'bg-primary-500 dark:bg-primary-400', 'text-white dark:text-surface-950', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words']
+                    text: '!bg-primary !text-primary-contrast !font-medium'
                 }
             }"
             severity="secondary"
@@ -34,10 +34,10 @@ export default {
         pt: {
             arrow: {
                 style: {
-                    borderBottomColor: 'rgb(var(--primary-500))'
+                    borderBottomColor: 'var(--p-primary-color)'
                 }
             },
-            text: 'bg-primaryfont-medium'
+            text: '!bg-primary !text-primary-contrast !font-medium'
         }
     }"
     label="Button"
@@ -52,10 +52,10 @@ export default {
                 pt: {
                     arrow: {
                         style: {
-                            borderBottomColor: 'rgb(var(--primary-500))'
+                            borderBottomColor: 'var(--p-primary-color)'
                         }
                     },
-                    text: 'bg-primaryfont-medium'
+                    text: '!bg-primary !text-primary-contrast !font-medium'
                 }
             }"
             severity="secondary"
@@ -73,10 +73,10 @@ export default {
                 pt: {
                     arrow: {
                         style: {
-                            borderBottomColor: 'rgb(var(--primary-500))'
+                            borderBottomColor: 'var(--p-primary-color)'
                         }
                     },
-                    text: 'bg-primaryfont-medium'
+                    text: '!bg-primary !text-primary-contrast !font-medium'
                 }
             }"
             severity="secondary"

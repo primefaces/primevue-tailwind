@@ -4,9 +4,9 @@
     </DocSectionText>
     <ConfirmPopup group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="rounded-full p-3">
+            <div class="rounded p-4">
                 <span>{{ message.message }}</span>
-                <div class="flex items-center gap-2 mt-3">
+                <div class="flex items-center gap-2 mt-4">
                     <Button label="Save" @click="acceptCallback" size="small"></Button>
                     <Button label="Cancel" outlined @click="rejectCallback" severity="secondary" size="small" text></Button>
                 </div>
@@ -27,9 +27,9 @@ export default {
                 basic: `
 <ConfirmPopup group="headless">
     <template #container="{ message, acceptCallback, rejectCallback }">
-        <div class="rounded-full p-3">
+        <div class="rounded p-4">
             <span>{{ message.message }}</span>
-            <div class="flex items-center gap-2 mt-3">
+            <div class="flex items-center gap-2 mt-4">
                 <Button label="Save" @click="acceptCallback" size="small"></Button>
                 <Button label="Cancel" outlined @click="rejectCallback" severity="secondary" size="small" text></Button>
             </div>
@@ -43,9 +43,9 @@ export default {
     <Toast />
     <ConfirmPopup group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="rounded-full p-3">
+            <div class="rounded p-4">
                 <span>{{ message.message }}</span>
-                <div class="flex items-center gap-2 mt-3">
+                <div class="flex items-center gap-2 mt-4">
                     <Button label="Save" @click="acceptCallback" size="small"></Button>
                     <Button label="Cancel" outlined @click="rejectCallback" severity="secondary" size="small" text></Button>
                 </div>
@@ -82,9 +82,9 @@ export default {
     <Toast />
     <ConfirmPopup group="headless">
         <template #container="{ message, acceptCallback, rejectCallback }">
-            <div class="rounded-full p-3">
+            <div class="rounded p-4">
                 <span>{{ message.message }}</span>
-                <div class="flex items-center gap-2 mt-3">
+                <div class="flex items-center gap-2 mt-4">
                     <Button label="Save" @click="acceptCallback" size="small"></Button>
                     <Button label="Cancel" outlined @click="rejectCallback" severity="secondary" size="small" text></Button>
                 </div>

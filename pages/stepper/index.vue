@@ -12,11 +12,13 @@
 
 <script>
 import AccessibilityDoc from '@/doc/stepper/AccessibilityDoc.vue';
-import BasicDoc from '@/doc/stepper/BasicDoc.vue';
+import HorizontalDoc from '@/doc/stepper/HorizontalDoc.vue';
 import ImportDoc from '@/doc/stepper/ImportDoc.vue';
 import LinearDoc from '@/doc/stepper/LinearDoc.vue';
+import StepsOnlyDoc from '@/doc/stepper/StepsOnlyDoc.vue';
 import TemplateDoc from '@/doc/stepper/TemplateDoc.vue';
 import VerticalDoc from '@/doc/stepper/VerticalDoc.vue';
+
 export default {
     data() {
         return {
@@ -27,9 +29,9 @@ export default {
                     component: ImportDoc
                 },
                 {
-                    id: 'basic',
-                    label: 'Basic',
-                    component: BasicDoc
+                    id: 'horizontal',
+                    label: 'Horizontal',
+                    component: HorizontalDoc
                 },
                 {
                     id: 'vertical',
@@ -40,6 +42,11 @@ export default {
                     id: 'linear',
                     label: 'Linear',
                     component: LinearDoc
+                },
+                {
+                    id: 'stepsonly',
+                    label: 'Steps Only',
+                    component: StepsOnlyDoc
                 },
                 {
                     id: 'template',
@@ -53,7 +60,7 @@ export default {
                 }
             ],
             presetDoc: {
-                key: 'stepper'
+                key: ['stepper', 'steppanels', 'steplist', 'stepitem', 'step']
             }
         };
     }

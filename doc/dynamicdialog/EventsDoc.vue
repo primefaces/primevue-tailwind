@@ -2,8 +2,8 @@
     <DocSectionText v-bind="$attrs">
         <p>The <i>emits</i> object defines callbacks to handle events emitted by the component within the Dialog.</p>
 
-        <DocSectionCode :code="code1" importCode hideToggleCode hideCodeSandbox hideStackBlitz />
-        <DocSectionCode :code="code2" importCode hideToggleCode hideCodeSandbox hideStackBlitz />
+        <DocSectionCode :code="code1" importCode hideToggleCode hideStackBlitz />
+        <DocSectionCode :code="code2" importCode hideToggleCode hideStackBlitz />
     </DocSectionText>
 </template>
 
@@ -31,10 +31,10 @@ const showProducts = () => {
                 basic: `
 <script setup>
 /* ProductListDemo.vue */
-const emit = defineEmits(['onCancel', 'onSave'])
+const emit = defineEmits(['cancel', 'save'])
 
 function buttonClick() {
-    emit('onCancel', {user: 'primetime'});
+    emit('cancel', {user: 'primetime'});
 }
 <\/script>
 `

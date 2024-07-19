@@ -1,21 +1,17 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>ContextMenu requires a collection of menuitems as its <i>model</i> and the <i>show</i> method needs to be called explicity using an event of the target like <i>contextmenu</i> to display the menu.</p>
+        <p>The <i>command</i> property defines the callback to run when an item is activated by click or a key event.</p>
     </DocSectionText>
-    <div class="card flex md:justify-center">
-        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]">
+    <div class="card flex sm:justify-center">
+        <ul class="m-0 list-none border border-surface rounded p-4 flex flex-col gap-2 w-full sm:w-96">
             <li
                 v-for="user in users"
                 :key="user.id"
-                :class="[
-                    'p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between',
-                    { 'border-transparent': selectedUser?.id !== user.id },
-                    { 'border-primary': selectedUser?.id === user.id }
-                ]"
+                :class="['p-2 hover:bg-emphasis rounded border border-transparent transition-all duration-200 flex items-center justify-content-between', { 'border-primary': selectedUser?.id === user.id }]"
                 @contextmenu="onRightClick($event, user)"
             >
-                <div class="flex items-center gap-2">
-                    <img :alt="user.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${user.image}`" style="width: 32px" />
+                <div class="flex flex-1 items-center gap-2">
+                    <img :alt="user.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${user.image}`" class="w-8 h-8" />
                     <span class="font-bold">{{ user.name }}</span>
                 </div>
                 <Tag :value="user.role" :severity="getBadge(user)" />
@@ -73,15 +69,15 @@ export default {
             ],
             code: {
                 basic: `
-<ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]">
+<ul class="m-0 list-none border border-surface rounded p-4 flex flex-col gap-2 w-full sm:w-96">
     <li
         v-for="user in users"
         :key="user.id"
-        :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between', { 'border-transparent': selectedUser?.id !== user.id }, { 'border-primary': selectedUser?.id === user.id }]"
+        :class="['p-2 hover:bg-emphasis rounded border border-transparent transition-all duration-200 flex items-center justify-content-between', { 'border-primary': selectedUser?.id === user.id }]"
         @contextmenu="onRightClick($event, user)"
     >
-        <div class="flex items-center gap-2">
-            <img :alt="user.name" :src="\`/images/avatar/\${user.image}\`" style="width: 32px" />
+        <div class="flex flex-1 items-center gap-2">
+            <img :alt="user.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${user.image}\`" class="w-8 h-8" />
             <span class="font-bold">{{ user.name }}</span>
         </div>
         <Tag :value="user.role" :severity="getBadge(user)" />
@@ -92,16 +88,16 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex md:justify-center">
-        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]">
+    <div class="card flex sm:justify-center">
+        <ul class="m-0 list-none border border-surface rounded p-4 flex flex-col gap-2 w-full sm:w-96">
             <li
                 v-for="user in users"
                 :key="user.id"
-                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between', { 'border-transparent': selectedUser?.id !== user.id }, { 'border-primary': selectedUser?.id === user.id }]"
+                :class="['p-2 hover:bg-emphasis rounded border border-transparent transition-all duration-200 flex items-center justify-content-between', { 'border-primary': selectedUser?.id === user.id }]"
                 @contextmenu="onRightClick($event, user)"
             >
-                <div class="flex items-center gap-2">
-                    <img :alt="user.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${user.image}\`" style="width: 32px" />
+                <div class="flex flex-1 items-center gap-2">
+                    <img :alt="user.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${user.image}\`" class="w-8 h-8" />
                     <span class="font-bold">{{ user.name }}</span>
                 </div>
                 <Tag :value="user.role" :severity="getBadge(user)" />
@@ -166,7 +162,7 @@ export default {
         },
         getBadge(user) {
             if (user.role === 'Member') return 'info';
-            else if (user.role === 'Guest') return 'warning';
+            else if (user.role === 'Guest') return 'warn';
             else return null;
         }
     }
@@ -175,16 +171,16 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex md:justify-center">
-        <ul class="m-0 p-0 list-none border border-surface-200 dark:border-surface-700 rounded p-3 flex flex-col gap-2 w-full md:w-[30rem]">
+    <div class="card flex sm:justify-center">
+        <ul class="m-0 list-none border border-surface rounded p-4 flex flex-col gap-2 w-full sm:w-96">
             <li
                 v-for="user in users"
                 :key="user.id"
-                :class="['p-2 hover:bg-primary-50 dark:hover:bg-primary-400/30 rounded border transition-all duration-200 flex items-center justify-between', { 'border-transparent': selectedUser?.id !== user.id }, { 'border-primary': selectedUser?.id === user.id }]"
+                :class="['p-2 hover:bg-emphasis rounded border border-transparent transition-all duration-200 flex items-center justify-content-between', { 'border-primary': selectedUser?.id === user.id }]"
                 @contextmenu="onRightClick($event, user)"
             >
-                <div class="flex items-center gap-2">
-                    <img :alt="user.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${user.image}\`" style="width: 32px" />
+                <div class="flex flex-1 items-center gap-2">
+                    <img :alt="user.name" :src="\`https://primefaces.org/cdn/primevue/images/avatar/\${user.image}\`" class="w-8 h-8" />
                     <span class="font-bold">{{ user.name }}</span>
                 </div>
                 <Tag :value="user.role" :severity="getBadge(user)" />
@@ -241,7 +237,7 @@ const items = ref([
             toast.add({ severity: 'success', summary: 'Success', detail: 'Invitation sent!', life: 3000 });
         }
     }
-]);        
+]);
 
 const onRightClick = (event, user) => {
     selectedUser.value = user;
@@ -250,7 +246,7 @@ const onRightClick = (event, user) => {
 
 const getBadge = (user) => {
     if (user.role === 'Member') return 'info';
-    else if (user.role === 'Guest') return 'warning';
+    else if (user.role === 'Guest') return 'warn';
     else return null;
 }
 <\/script>
@@ -265,7 +261,7 @@ const getBadge = (user) => {
         },
         getBadge(user) {
             if (user.role === 'Member') return 'info';
-            else if (user.role === 'Guest') return 'warning';
+            else if (user.role === 'Guest') return 'warn';
             else return null;
         }
     }

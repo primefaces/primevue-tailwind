@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Buttons can be placed at either side of an input element.</p>
     </DocSectionText>
-    <div class="card flex flex-col md:flex-row gap-3">
+    <div class="card flex flex-col md:flex-row gap-4">
         <InputGroup>
             <Button label="Search" />
             <InputText placeholder="Keyword" />
@@ -10,7 +10,7 @@
 
         <InputGroup>
             <InputText placeholder="Keyword" />
-            <Button icon="pi pi-search" severity="warning" />
+            <Button icon="pi pi-search" severity="warn" />
         </InputGroup>
 
         <InputGroup>
@@ -35,7 +35,7 @@ export default {
 
 <InputGroup>
     <InputText placeholder="Keyword" />
-    <Button icon="pi pi-search" severity="warning" />
+    <Button icon="pi pi-search" severity="warn" />
 </InputGroup>
 
 <InputGroup>
@@ -46,7 +46,7 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex flex-col md:flex-row gap-3">
+    <div class="card flex flex-col md:flex-row gap-4">
         <InputGroup>
             <Button label="Search" />
             <InputText placeholder="Keyword" />
@@ -54,7 +54,7 @@ export default {
 
         <InputGroup>
             <InputText placeholder="Keyword" />
-            <Button icon="pi pi-search" severity="warning" />
+            <Button icon="pi pi-search" severity="warn" />
         </InputGroup>
 
         <InputGroup>
@@ -67,7 +67,7 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex flex-col md:flex-row gap-3">
+    <div class="card flex flex-col md:flex-row gap-4">
         <InputGroup>
             <Button label="Search" />
             <InputText placeholder="Keyword" />
@@ -75,7 +75,7 @@ export default {
 
         <InputGroup>
             <InputText placeholder="Keyword" />
-            <Button icon="pi pi-search" severity="warning" />
+            <Button icon="pi pi-search" severity="warn" />
         </InputGroup>
 
         <InputGroup>

@@ -11,18 +11,16 @@
                 </div>
             </template>
             <template #footer>
-                <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex flex-wrap items-center justify-between gap-4">
                     <div class="flex items-center gap-2">
                         <Button icon="pi pi-user" rounded text></Button>
                         <Button icon="pi pi-bookmark" severity="secondary" rounded text></Button>
                     </div>
-                    <span class="text-surface-600 dark:text-surface-200">Updated 2 hours ago</span>
+                    <span class="text-surface-500 dark:text-surface-400">Updated 2 hours ago</span>
                 </div>
             </template>
             <template #icons>
-                <button class="p-panel-header-icon p-link mr-2" @click="toggle">
-                    <span class="pi pi-cog"></span>
-                </button>
+                <Button icon="pi pi-cog" severity="secondary" rounded text @click="toggle" />
                 <Menu ref="menu" id="config_menu" :model="items" popup />
             </template>
             <p class="m-0">
@@ -65,18 +63,16 @@ export default {
         </div>
     </template>
     <template #footer>
-        <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center gap-2">
                 <Button icon="pi pi-user" rounded text></Button>
                 <Button icon="pi pi-bookmark" severity="secondary" rounded text></Button>
             </div>
-            <span class="text-surface-600 dark:text-surface-200">Updated 2 hours ago</span>
+            <span class="text-surface-500 dark:text-surface-400">Updated 2 hours ago</span>
         </div>
     </template>
     <template #icons>
-        <button class="p-panel-header-icon p-link mr-2" @click="toggle">
-            <span class="pi pi-cog"></span>
-        </button>
+        <Button icon="pi pi-cog" severity="secondary" rounded text @click="toggle" />
         <Menu ref="menu" id="config_menu" :model="items" popup />
     </template>
     <p class="m-0">
@@ -97,18 +93,16 @@ export default {
                 </div>
             </template>
             <template #footer>
-                <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex flex-wrap items-center justify-between gap-4">
                     <div class="flex items-center gap-2">
                         <Button icon="pi pi-user" rounded text></Button>
                         <Button icon="pi pi-bookmark" severity="secondary" rounded text></Button>
                     </div>
-                    <span class="text-surface-600 dark:text-surface-200">Updated 2 hours ago</span>
+                    <span class="text-surface-500 dark:text-surface-400">Updated 2 hours ago</span>
                 </div>
             </template>
             <template #icons>
-                <button class="p-panel-header-icon p-link mr-2" @click="toggle">
-                    <span class="pi pi-cog"></span>
-                </button>
+                <Button icon="pi pi-cog" severity="secondary" rounded text @click="toggle" />
                 <Menu ref="menu" id="config_menu" :model="items" popup />
             </template>
             <p class="m-0">
@@ -165,18 +159,16 @@ export default {
                 </div>
             </template>
             <template #footer>
-                <div class="flex flex-wrap items-center justify-between gap-3">
+                <div class="flex flex-wrap items-center justify-between gap-4">
                     <div class="flex items-center gap-2">
                         <Button icon="pi pi-user" rounded text></Button>
                         <Button icon="pi pi-bookmark" severity="secondary" rounded text></Button>
                     </div>
-                    <span class="text-surface-600 dark:text-surface-200">Updated 2 hours ago</span>
+                    <span class="text-surface-500 dark:text-surface-400">Updated 2 hours ago</span>
                 </div>
             </template>
             <template #icons>
-                <button class="p-panel-header-icon p-link mr-2" @click="toggle">
-                    <span class="pi pi-cog"></span>
-                </button>
+                <Button icon="pi pi-cog" severity="secondary" rounded text @click="toggle" />
                 <Menu ref="menu" id="config_menu" :model="items" popup />
             </template>
             <p class="m-0">

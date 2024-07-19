@@ -6,13 +6,13 @@
         <Button label="Show" @click="visible = true" />
 
         <Dialog v-model:visible="visible" header="Edit Profile" :style="{ width: '25rem' }">
-            <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-            <div class="flex items-center gap-3 mb-3">
-                <label for="username" class="font-semibold w-[6rem]">Username</label>
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="username" class="font-semibold w-24">Username</label>
                 <InputText id="username" class="flex-auto" autocomplete="off" />
             </div>
-            <div class="flex items-center gap-3 mb-5">
-                <label for="email" class="font-semibold w-[6rem]">Email</label>
+            <div class="flex items-center gap-4 mb-8">
+                <label for="email" class="font-semibold w-24">Email</label>
                 <InputText id="email" class="flex-auto" autocomplete="off" />
             </div>
             <div class="flex justify-end gap-2">
@@ -34,13 +34,13 @@ export default {
 <Button label="Show" @click="visible = true" />
 
 <Dialog v-model:visible="visible" header="Edit Profile" :style="{ width: '25rem' }">
-    <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-    <div class="flex items-center gap-3 mb-3">
-        <label for="username" class="font-semibold w-[6rem]">Username</label>
+    <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+    <div class="flex items-center gap-4 mb-4">
+        <label for="username" class="font-semibold w-24">Username</label>
         <InputText id="username" class="flex-auto" autocomplete="off" />
     </div>
-    <div class="flex items-center gap-3 mb-5">
-        <label for="email" class="font-semibold w-[6rem]">Email</label>
+    <div class="flex items-center gap-4 mb-8">
+        <label for="email" class="font-semibold w-24">Email</label>
         <InputText id="email" class="flex-auto" autocomplete="off" />
     </div>
     <div class="flex justify-end gap-2">
@@ -54,13 +54,13 @@ export default {
     <div class="card flex justify-center">
         <Button label="Show" @click="visible = true" />
         <Dialog v-model:visible="visible" header="Edit Profile" :style="{ width: '25rem' }">
-            <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-            <div class="flex items-center gap-3 mb-3">
-                <label for="username" class="font-semibold w-[6rem]">Username</label>
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="username" class="font-semibold w-24">Username</label>
                 <InputText id="username" class="flex-auto" autocomplete="off" />
             </div>
-            <div class="flex items-center gap-3 mb-5">
-                <label for="email" class="font-semibold w-[6rem]">Email</label>
+            <div class="flex items-center gap-4 mb-8">
+                <label for="email" class="font-semibold w-24">Email</label>
                 <InputText id="email" class="flex-auto" autocomplete="off" />
             </div>
             <div class="flex justify-end gap-2">
@@ -86,13 +86,13 @@ export default {
     <div class="card flex justify-center">
         <Button label="Show" @click="visible = true" />
         <Dialog v-model:visible="visible" header="Edit Profile" :style="{ width: '25rem' }">
-            <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-            <div class="flex items-center gap-3 mb-3">
-                <label for="username" class="font-semibold w-[6rem]">Username</label>
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="username" class="font-semibold w-24">Username</label>
                 <InputText id="username" class="flex-auto" autocomplete="off" />
             </div>
-            <div class="flex items-center gap-3 mb-5">
-                <label for="email" class="font-semibold w-[6rem]">Email</label>
+            <div class="flex items-center gap-4 mb-8">
+                <label for="email" class="font-semibold w-24">Email</label>
                 <InputText id="email" class="flex-auto" autocomplete="off" />
             </div>
             <div class="flex justify-end gap-2">

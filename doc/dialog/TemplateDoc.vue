@@ -9,16 +9,16 @@
             <template #header>
                 <div class="inline-flex items-center justify-center gap-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                    <span class="font-bold whitespace-nowrap">Amy Elsner</span>
                 </div>
             </template>
-            <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-            <div class="flex items-center gap-3 mb-3">
-                <label for="username" class="font-semibold w-[6rem]">Username</label>
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="username" class="font-semibold w-24">Username</label>
                 <InputText id="username" class="flex-auto" autocomplete="off" />
             </div>
-            <div class="flex items-center gap-3 mb-2">
-                <label for="email" class="font-semibold w-[6rem]">Email</label>
+            <div class="flex items-center gap-4 mb-2">
+                <label for="email" class="font-semibold w-24">Email</label>
                 <InputText id="email" class="flex-auto" autocomplete="off" />
             </div>
             <template #footer>
@@ -43,16 +43,16 @@ export default {
     <template #header>
         <div class="inline-flex items-center justify-center gap-2">
             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-            <span class="font-bold white-space-nowrap">Amy Elsner</span>
+            <span class="font-bold whitespace-nowrap">Amy Elsner</span>
         </div>
     </template>
-    <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-    <div class="flex items-center gap-3 mb-3">
-        <label for="username" class="font-semibold w-[6rem]">Username</label>
+    <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+    <div class="flex items-center gap-4 mb-4">
+        <label for="username" class="font-semibold w-24">Username</label>
         <InputText id="username" class="flex-auto" autocomplete="off" />
     </div>
-    <div class="flex items-center gap-3 mb-2">
-        <label for="email" class="font-semibold w-[6rem]">Email</label>
+    <div class="flex items-center gap-4 mb-2">
+        <label for="email" class="font-semibold w-24">Email</label>
         <InputText id="email" class="flex-auto" autocomplete="off" />
     </div>
     <template #footer>
@@ -69,16 +69,16 @@ export default {
             <template #header>
                 <div class="inline-flex items-center justify-center gap-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                    <span class="font-bold whitespace-nowrap">Amy Elsner</span>
                 </div>
             </template>
-            <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-            <div class="flex items-center gap-3 mb-3">
-                <label for="username" class="font-semibold w-[6rem]">Username</label>
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="username" class="font-semibold w-24">Username</label>
                 <InputText id="username" class="flex-auto" autocomplete="off" />
             </div>
-            <div class="flex items-center gap-3 mb-2">
-                <label for="email" class="font-semibold w-[6rem]">Email</label>
+            <div class="flex items-center gap-4 mb-2">
+                <label for="email" class="font-semibold w-24">Email</label>
                 <InputText id="email" class="flex-auto" autocomplete="off" />
             </div>
             <template #footer>
@@ -107,16 +107,16 @@ export default {
             <template #header>
                 <div class="inline-flex items-center justify-center gap-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold white-space-nowrap">Amy Elsner</span>
+                    <span class="font-bold whitespace-nowrap">Amy Elsner</span>
                 </div>
             </template>
-            <span class="text-surface-600 dark:text-surface-0/70 block mb-5">Update your information.</span>
-            <div class="flex items-center gap-3 mb-3">
-                <label for="username" class="font-semibold w-[6rem]">Username</label>
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">Update your information.</span>
+            <div class="flex items-center gap-4 mb-4">
+                <label for="username" class="font-semibold w-24">Username</label>
                 <InputText id="username" class="flex-auto" autocomplete="off" />
             </div>
-            <div class="flex items-center gap-3 mb-2">
-                <label for="email" class="font-semibold w-[6rem]">Email</label>
+            <div class="flex items-center gap-4 mb-2">
+                <label for="email" class="font-semibold w-24">Email</label>
                 <InputText id="email" class="flex-auto" autocomplete="off" />
             </div>
             <template #footer>
