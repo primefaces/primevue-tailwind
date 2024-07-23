@@ -12,7 +12,16 @@ export default {
             '[&>[data-pc-name=inputicon]:last-child]:right-3',
 
             '[&>[data-pc-name=inputtext]:first-child]:pr-10',
-            '[&>[data-pc-name=inputtext]:last-child]:pl-10'
+            '[&>[data-pc-name=inputtext]:last-child]:pl-10',
+
+            // filter
+            '[&>[data-pc-extend=inputicon]]:absolute',
+            '[&>[data-pc-extend=inputicon]]:top-1/2',
+            '[&>[data-pc-extend=inputicon]]:-mt-2',
+            '[&>[data-pc-extend=inputicon]]:text-surface-900/60 dark:[&>[data-pc-extend=inputicon]]:text-white/60',
+
+            '[&>[data-pc-extend=inputicon]:first-child]:left-3',
+            '[&>[data-pc-extend=inputicon]:last-child]:right-3'
         ]
     }
 };

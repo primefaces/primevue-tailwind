@@ -10,7 +10,8 @@ export default {
 
             // Color
             'bg-surface-0 dark:bg-surface-900',
-            'text-surface-700 dark:text-white/80'
+            'text-surface-700 dark:text-white/80',
+            '[&_[data-pc-name=pcfilter]]:w-full'
         ]
     },
     wrapper: {
@@ -106,10 +107,10 @@ export default {
     },
     loadingIcon: {
         class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin']
-    },
-    pcFilterContainer: {
-        root: {
-            class: '[&>[data-pc-name=inputtext]]:w-full'
-        }
     }
+    // pcFilterContainer: {
+    //     root: {
+    //         class: '[&>[data-pc-name=inputtext]]:w-full'
+    //     }
+    // }
 };

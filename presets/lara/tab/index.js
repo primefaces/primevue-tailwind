@@ -1,7 +1,7 @@
 export default {
     root: ({ props, context }) => ({
         class: [
-            'relative',
+            'relative shrink-0',
             // Transitions
             'transition-all duration-200',
 

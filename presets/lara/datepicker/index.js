@@ -132,38 +132,6 @@ export default {
             'border-surface-200 dark:border-surface-700'
         ]
     },
-    pcPrevButton: {
-        root: {
-            class: [
-                'relative',
-
-                // Flexbox and Alignment
-                'inline-flex items-center justify-center',
-
-                // Size
-                'w-8 h-8',
-                'p-0 m-0',
-
-                // Shape
-                'rounded-full',
-
-                // Colors
-                'text-surface-600 dark:text-white/70',
-                'border-0',
-                'bg-transparent',
-
-                // Transitions
-                'transition-colors duration-200 ease-in-out',
-
-                // States
-                'hover:text-surface-700 dark:hover:text-white/80',
-                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-
-                // Misc
-                'cursor-pointer overflow-hidden'
-            ]
-        }
-    },
     title: {
         class: [
             // Text
@@ -216,38 +184,6 @@ export default {
             // Misc
             'cursor-pointer'
         ]
-    },
-    pcNextButton: {
-        root: {
-            class: [
-                'relative',
-
-                // Flexbox and Alignment
-                'inline-flex items-center justify-center',
-
-                // Size
-                'w-8 h-8',
-                'p-0 m-0',
-
-                // Shape
-                'rounded-full',
-
-                // Colors
-                'text-surface-600 dark:text-white/70',
-                'border-0',
-                'bg-transparent',
-
-                // Transitions
-                'transition-colors duration-200 ease-in-out',
-
-                // States
-                'hover:text-surface-700 dark:hover:text-white/80',
-                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-
-                // Misc
-                'cursor-pointer overflow-hidden'
-            ]
-        }
     },
     table: {
         class: [
@@ -490,70 +426,6 @@ export default {
             'px-2'
         ]
     },
-    pcIncrementButton: {
-        root: {
-            class: [
-                'relative',
-
-                // Flexbox and Alignment
-                'inline-flex items-center justify-center',
-
-                // Size
-                'w-8 h-8',
-                'p-0 m-0',
-
-                // Shape
-                'rounded-full',
-
-                // Colors
-                'text-surface-600 dark:text-white/70',
-                'border-0',
-                'bg-transparent',
-
-                // Transitions
-                'transition-colors duration-200 ease-in-out',
-
-                // States
-                'hover:text-surface-700 dark:hover:text-white/80',
-                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-
-                // Misc
-                'cursor-pointer overflow-hidden'
-            ]
-        }
-    },
-    pcDecrementButton: {
-        root: {
-            class: [
-                'relative',
-
-                // Flexbox and Alignment
-                'inline-flex items-center justify-center',
-
-                // Size
-                'w-8 h-8',
-                'p-0 m-0',
-
-                // Shape
-                'rounded-full',
-
-                // Colors
-                'text-surface-600 dark:text-white/70',
-                'border-0',
-                'bg-transparent',
-
-                // Transitions
-                'transition-colors duration-200 ease-in-out',
-
-                // States
-                'hover:text-surface-700 dark:hover:text-white/80',
-                'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-
-                // Misc
-                'cursor-pointer overflow-hidden'
-            ]
-        }
-    },
     calendarContainer: 'flex',
     calendar: 'flex-auto border-l first:border-l-0 border-surface-200',
     buttonbar: {
@@ -567,62 +439,6 @@ export default {
             // Shape
             'border-t border-surface-200 dark:border-surface-700'
         ]
-    },
-    pcTodayButton: {
-        root: {
-            class: [
-                // Flexbox and Alignment
-                'inline-flex items-center justify-center',
-
-                // Spacing
-                'px-4 py-3 leading-none',
-
-                // Shape
-                'rounded-md',
-
-                // Colors
-                'bg-transparent border-transparent',
-                'text-primary',
-
-                // Transitions
-                'transition-colors duration-200 ease-in-out',
-
-                // States
-                'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-300/20',
-
-                // Misc
-                'cursor-pointer'
-            ]
-        }
-    },
-    pcClearButton: {
-        root: {
-            class: [
-                // Flexbox and Alignment
-                'inline-flex items-center justify-center',
-
-                // Spacing
-                'px-4 py-3 leading-none',
-
-                // Shape
-                'rounded-md',
-
-                // Colors
-                'bg-transparent border-transparent',
-                'text-primary',
-
-                // Transitions
-                'transition-colors duration-200 ease-in-out',
-
-                // States
-                'focus:outline-none focus:outline-offset-0 focus:ring',
-                'hover:bg-primary-300/20',
-
-                // Misc
-                'cursor-pointer'
-            ]
-        }
     },
     transition: {
         enterFromClass: 'opacity-0 scale-y-[0.8]',

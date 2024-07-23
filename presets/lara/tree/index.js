@@ -10,7 +10,8 @@ export default {
             // Color
             'bg-surface-0 dark:bg-surface-800',
             'text-surface-700 dark:text-white/80',
-            'border border-solid border-surface-200 dark:border-surface-700'
+            'border border-solid border-surface-200 dark:border-surface-700',
+            '[&_[data-pc-name=pcfilter]]:w-full'
         ]
     },
     wrapper: {

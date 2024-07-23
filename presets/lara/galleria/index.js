@@ -77,7 +77,7 @@ export default {
             }
         ]
     }),
-    previousThumbnailButton: {
+    thumbnailPrevButton: {
         class: [
             // Positioning
             'self-center relative',
@@ -133,7 +133,7 @@ export default {
             'transition-opacity duration-300'
         ]
     }),
-    nextThumbnailButton: {
+    thumbnailNextButton: {
         class: [
             // Positioning
             'self-center relative',
@@ -234,7 +234,7 @@ export default {
     closeIcon: {
         class: 'w-6 h-6'
     },
-    previousItemButton: ({ parent }) => ({
+    prevButton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
@@ -262,7 +262,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50'
         ]
     }),
-    nextItemButton: ({ parent }) => ({
+    nextButton: ({ parent }) => ({
         class: [
             // Display & Flexbox
             'inline-flex justify-center items-center overflow-hidden',
