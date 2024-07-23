@@ -2869,6 +2869,7 @@
 </template>
 
 <script>
+import EventBus from '@/layouts/AppEventBus';
 import AutoComplete from 'primevue/autocomplete';
 import Avatar from 'primevue/avatar';
 import Button from 'primevue/button';
@@ -2935,10 +2936,7 @@ export default {
             document.startViewTransition(() => this.toggleColorScheme());
         },
         toggleColorScheme() {
-            const root = document.documentElement;
-
-            root.classList.toggle('p-dark');
-            this.$appState.darkMode = !this.$appState.darkMode;
+            EventBus.emit('dark-mode-toggle');
         }
     },
     computed: {

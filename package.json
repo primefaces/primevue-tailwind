@@ -51,6 +51,7 @@
     },
     "dependencies": {
         "@docsearch/js": "^3.3.3",
+        "@primevue/core": "^4.0.1",
         "nuxt": "3.12.1",
         "nuxt-gtag": "^0.6.2",
         "primeicons": "^7.0.0",
