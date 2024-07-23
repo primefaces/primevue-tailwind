@@ -221,7 +221,7 @@ export default {
             'p-0 md:p-2'
         ]
     },
-    weekLabelContainer: ({ context }) => ({
+    weekLabelContainer: {
         class: [
             // Flexbox and Alignment
             'flex items-center justify-center',
@@ -233,23 +233,9 @@ export default {
             'border-transparent border',
 
             // Colors
-            {
-                'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
-            },
-
-            // States
-            'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
-            {
-                'hover:bg-surface-100 dark:hover:bg-surface-800/80': !context.selected && !context.disabled,
-                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
-            },
-            {
-                'opacity-60 cursor-default': context.disabled,
-                'cursor-pointer': !context.disabled
-            }
+            'opacity-60 cursor-default'
         ]
-    }),
+    },
     dayView: 'w-full',
     day: ({ context }) => ({
         class: [
@@ -266,7 +252,7 @@ export default {
             {
                 'text-primary': context.date.today,
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled && !context.date.today,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
+                'bg-highlight': context.selected && !context.disabled
             },
 
             // States
@@ -302,7 +288,7 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
+                'bg-highlight': context.selected && !context.disabled
             },
 
             // States
@@ -337,7 +323,7 @@ export default {
             // Colors
             {
                 'text-surface-600 dark:text-white/70 bg-transparent': !context.selected && !context.disabled,
-                'text-primary-highlight-inverse bg-primary-highlight': context.selected && !context.disabled
+                'bg-highlight': context.selected && !context.disabled
             },
 
             // States
