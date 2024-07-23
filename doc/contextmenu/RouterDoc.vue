@@ -41,7 +41,7 @@ export default {
                 {
                     label: 'Router Link',
                     icon: 'pi pi-palette',
-                    route: '/theming/unstyled'
+                    route: '/overview'
                 },
                 {
                     label: 'Programmatic',
@@ -119,7 +119,7 @@ export default {
                 {
                     label: 'Router Link',
                     icon: 'pi pi-palette',
-                    route: '/theming/unstyled'
+                    route: '/overview'
                 },
                 {
                     label: 'Programmatic',
@@ -187,7 +187,7 @@ const items = ref([
     {
         label: 'Router Link',
         icon: 'pi pi-palette',
-        route: '/theming/unstyled'
+        route: '/overview'
     },
     {
         label: 'Programmatic',

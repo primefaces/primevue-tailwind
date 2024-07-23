@@ -6,7 +6,7 @@
                     <ul class="list-none p-0 m-0">
                         <li class="font-bold mb-8">General</li>
                         <li class="mb-6">
-                            <PrimeVueNuxtLink to="/setup" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Get Started</PrimeVueNuxtLink>
+                            <a href="https://primevue.org/setup" target="_blank" rel="noopener noreferrer" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Get Started</a>
                         </li>
                         <li class="mb-6">
                             <a href="https://github.com/primefaces/primevue-examples" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer"
@@ -25,7 +25,7 @@
                             <a href="https://discord.gg/gzKFYnpmCY" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300" target="_blank" rel="noopener noreferrer">Discord</a>
                         </li>
                         <li class="mb-6">
-                            <PrimeVueNuxtLink to="/support" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">PRO Support</PrimeVueNuxtLink>
+                            <a thref="https://primevue.org/theming/support" target="_blank" rel="noopener noreferrer" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">PRO Support</a>
                         </li>
                     </ul>
                 </div>
@@ -33,10 +33,10 @@
                     <ul class="list-none p-0 m-0">
                         <li class="font-bold mt-8 lg:mt-0 mb-8">Theming</li>
                         <li class="mb-6">
-                            <PrimeVueNuxtLink to="/theming/styled" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Styled Mode</PrimeVueNuxtLink>
+                            <a href="https://primevue.org/theming/styled" target="_blank" rel="noopener noreferrer" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Styled Mode</a>
                         </li>
                         <li class="mb-6">
-                            <PrimeVueNuxtLink to="/theming/unstyled" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Unstyled Mode</PrimeVueNuxtLink>
+                            <a href="https://primevue.org/theming/unstyled" target="_blank" rel="noopener noreferrer" class="text-surface-500 dark:text-surface-400 font-medium hover:text-primary rounded transition-all duration-300">Unstyled Mode</a>
                         </li>
                     </ul>
                 </div>
