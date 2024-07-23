@@ -1,6 +1,5 @@
 <template>
-    <p>Under development</p>
-    <!-- <div class="w-full relative flex flex-col justify-center items-center">
+    <div class="w-full relative flex flex-col justify-center items-center">
         <div class="w-full min-[1419px]:h-screen relative top-0 mx-auto max-w-[1728px] z-20 pb-[6rem]">
             <div class="w-full min-[1419px]:h-screen flex">
                 <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 min-h-[1060px] relative pr-4 sm:pr-8 lg:pr-0 pl-4 sm:pl-8 xl:pl-20 min-[1419px]:pl-28 pr-15 flex-col justify-start items-center inline-flex">
@@ -42,7 +41,7 @@
                                                     'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
                                                     'dark:bg-surface-900': !isLara
                                                 }"
-                                                @click="setPreset('lara')"
+                                                @click="setPreset('Lara')"
                                             >
                                                 Lara
                                             </button>
@@ -53,7 +52,7 @@
                                                     'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isAura,
                                                     'dark:bg-surface-900': !isAura
                                                 }"
-                                                @click="setPreset('aura')"
+                                                @click="setPreset('Aura')"
                                             >
                                                 Aura
                                             </button>
@@ -69,7 +68,7 @@
                                         </svg>
                                     </div>
                                     <div class="flex items-center px-[1.2rem] py-2 dropdown-bg mt-2 bg-white dark:bg-surface-900 rounded-md min-h-[4.3rem]">
-                                        <Select v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" :pt="{ panel: 'w-full' }" :ptOptions="{ mergeProps: true }" />
+                                        <Select v-model="selectedCity" :options="cities" optionLabel="name" placeholder="Select a City" class="!w-full" appendTo="self" :pt="{ overlay: 'w-full' }" :ptOptions="{ mergeProps: true }" />
                                     </div>
                                 </div>
                                 <div class="flex flex-col gap-1.5 items-start px-2 py-3">
@@ -2788,7 +2787,7 @@
                         </svg>
                         <div class="absolute top-[12.4rem] left-[14rem] z-40">
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <Chips v-model="chipsValue" class="!w-full" :pt="{ container: 'flex-nowrap' }" :ptOptions="{ mergeProps: true }" />
+                                <AutoComplete v-model="chipsValue" class="!w-full" multiple :typeahead="false" :pt="{ container: 'flex-nowrap' }" :ptOptions="{ mergeProps: true }" />
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center">
                                 <div class="flex items-center w-[6.5rem]">
@@ -2824,7 +2823,7 @@
                                                 'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
                                                 'dark:bg-surface-900': !isLara
                                             }"
-                                            @click="setPreset('lara')"
+                                            @click="setPreset('Lara')"
                                         >
                                             Lara
                                         </button>
@@ -2835,7 +2834,7 @@
                                                 'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isAura,
                                                 'dark:bg-surface-900': !isAura
                                             }"
-                                            @click="setPreset('aura')"
+                                            @click="setPreset('Aura')"
                                         >
                                             Aura
                                         </button>
@@ -2848,18 +2847,14 @@
                                 </div>
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 justify-center items-center">
-                                <DatePicker v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full" :pt="{ panel: 'z-40' }" :ptOptions="{ mergeProps: true }" />
+                                <DatePicker v-model="date" showIcon appendTo="self" iconDisplay="input" class="w-full" :pt="{ overlay: 'z-40' }" :ptOptions="{ mergeProps: true }" />
                             </div>
                             <div class="flex w-[21rem] h-[4.4rem] p-3 items-center justify-center gap-5">
-                                <Tag value="Lightful"></Tag>
-
+                                <Tag value="Lightful" class="bg-highlight-emphasis"></Tag>
                                 <Avatar icon="pi pi-user" class="bg-white dark:bg-surface-900 text-primary" shape="circle" />
-
                                 <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/onyamalimba.png" shape="circle" />
-
                                 <Avatar label="P" class="bg-white dark:bg-surface-900 text-primary" shape="circle" />
-
-                                <Tag value="Easy"></Tag>
+                                <Tag value="Easy" class="bg-highlight-emphasis"></Tag>
                             </div>
                         </div>
                     </div>
@@ -2870,16 +2865,17 @@
             <div class="w-full lg:w-[65%] min-[1100px]:w-[61%] xl:w-7/12 min-[1419px]:w-1/2 h-screen bg-surface-0 dark:bg-surface-950"></div>
             <div class="hidden lg:block w-[35%] min-[1100px]:w-[39%] xl:w-5/12 min-[1419px]:w-1/2 h-screen bg-primary-50 dark:bg-surface-900"></div>
         </div>
-    </div> -->
+    </div>
 </template>
 
 <script>
+import AutoComplete from 'primevue/autocomplete';
 import Avatar from 'primevue/avatar';
 import Button from 'primevue/button';
-import Calendar from 'primevue/calendar';
 import Checkbox from 'primevue/checkbox';
-import Dropdown from 'primevue/dropdown';
+import DatePicker from 'primevue/datepicker';
 import InputNumber from 'primevue/inputnumber';
+import Select from 'primevue/select';
 import SelectButton from 'primevue/selectbutton';
 import Slider from 'primevue/slider';
 import Tag from 'primevue/tag';
@@ -2906,20 +2902,21 @@ export default {
             selectbutton_value: { icon: 'pi pi-th-large', value: 'Grid' },
             lightdark_value: 'light',
             value1: 20,
-            presetoptions: [{ value: 'TailwindUI' }, { value: 'Lara' }],
+            presetoptions: [{ value: 'TailwindUI' }, { value: 'Aura' }],
             slider_value: [20, 80],
             date: '12/12/2024',
             components: {
+                Avatar,
+                AutoComplete,
                 Button,
-                Dropdown,
                 Checkbox,
-                SelectButton,
+                DatePicker,
                 InputNumber,
-                ToggleSwitch,
+                Select,
+                SelectButton,
                 Slider,
-                Calendar,
                 Tag,
-                Avatar
+                ToggleSwitch
             },
             componentSuiteHovered: false
         };
@@ -2928,21 +2925,19 @@ export default {
         setPreset(preset) {
             this.$appState.preset = preset;
         },
-        switchColorScheme(colorScheme) {
+        switchColorScheme() {
             if (!document.startViewTransition) {
-                toggleColorScheme(colorScheme);
+                toggleColorScheme();
 
                 return;
             }
 
-            document.startViewTransition(() => this.toggleColorScheme(colorScheme));
+            document.startViewTransition(() => this.toggleColorScheme());
         },
-        toggleColorScheme(colorScheme) {
+        toggleColorScheme() {
             const root = document.documentElement;
 
-            if (colorScheme === 'light') root.classList.remove('dark');
-            else if (colorScheme === 'dark') root.classList.add('dark');
-
+            root.classList.toggle('p-dark');
             this.$appState.darkMode = !this.$appState.darkMode;
         }
     },
@@ -2951,14 +2946,15 @@ export default {
             return this.$appState.darkMode;
         },
         isLara() {
-            return this.$appState.preset === 'lara';
+            return this.$appState.preset === 'Lara';
         },
         isAura() {
-            return this.$appState.preset === 'aura';
+            return this.$appState.preset === 'Aura';
         }
     }
 };
 </script>
+
 <style lang="scss" scoped>
 .component-suite {
     transition: all 0.4s ease-in-out;
@@ -3011,10 +3007,6 @@ export default {
             background: linear-gradient(90deg, var(--surface-alpha) 0%, var(--surface-alpha-light) 100%);
         }
     }
-
-    // &:hover .clouds::after {
-    //     transform: translateX(100%);
-    // }
 }
 .palette-card {
     --primary-alpha: color-mix(in srgb, rgb(var(--primary-500)) 5%, transparent);
@@ -3050,8 +3042,6 @@ export default {
     }
 }
 
-.dropdown-bg {
-}
 .dark .palette-card {
     --primary-alpha: color-mix(in srgb, rgb(var(--primary-400)) 8%, transparent);
     --surface-alpha: color-mix(in srgb, rgb(var(--surface-700)) 10%, transparent);
