@@ -28,7 +28,6 @@
                         <ul class="list-none p-4 m-0">
                             <li>
                                 <div
-                                    v-ripple
                                     v-styleclass="{
                                         selector: '@next',
                                         enterFromClass: 'hidden',
@@ -36,27 +35,26 @@
                                         leaveToClass: 'hidden',
                                         leaveActiveClass: 'animate-slideup'
                                     }"
-                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                                 >
                                     <span class="font-medium">FAVORITES</span>
                                     <i class="pi pi-chevron-down"></i>
                                 </div>
                                 <ul class="list-none p-0 m-0 overflow-hidden">
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-home mr-2"></i>
                                             <span class="font-medium">Dashboard</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-bookmark mr-2"></i>
                                             <span class="font-medium">Bookmarks</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            v-ripple
                                             v-styleclass="{
                                                 selector: '@next',
                                                 enterFromClass: 'hidden',
@@ -64,7 +62,7 @@
                                                 leaveToClass: 'hidden',
                                                 leaveActiveClass: 'animate-slideup'
                                             }"
-                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                         >
                                             <i class="pi pi-chart-line mr-2"></i>
                                             <span class="font-medium">Reports</span>
@@ -73,7 +71,6 @@
                                         <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                             <li>
                                                 <a
-                                                    v-ripple
                                                     v-styleclass="{
                                                         selector: '@next',
                                                         enterFromClass: 'hidden',
@@ -81,7 +78,7 @@
                                                         leaveToClass: 'hidden',
                                                         leaveActiveClass: 'animate-slideup'
                                                     }"
-                                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                                 >
                                                     <i class="pi pi-chart-line mr-2"></i>
                                                     <span class="font-medium">Revenue</span>
@@ -89,13 +86,13 @@
                                                 </a>
                                                 <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                                     <li>
-                                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                             <i class="pi pi-table mr-2"></i>
                                                             <span class="font-medium">View</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                             <i class="pi pi-search mr-2"></i>
                                                             <span class="font-medium">Search</span>
                                                         </a>
@@ -103,7 +100,7 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                     <i class="pi pi-chart-line mr-2"></i>
                                                     <span class="font-medium">Expenses</span>
                                                 </a>
@@ -111,26 +108,26 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-users mr-2"></i>
                                             <span class="font-medium">Team</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-comments mr-2"></i>
                                             <span class="font-medium">Messages</span>
                                             <span class="inline-flex items-center justify-center ml-auto bg-primary text-primary-contrast rounded-full" style="min-width: 1.5rem; height: 1.5rem">3</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-calendar mr-2"></i>
                                             <span class="font-medium">Calendar</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-cog mr-2"></i>
                                             <span class="font-medium">Settings</span>
                                         </a>
@@ -141,7 +138,6 @@
                         <ul class="list-none p-4 m-0">
                             <li>
                                 <div
-                                    v-ripple
                                     v-styleclass="{
                                         selector: '@next',
                                         enterFromClass: 'hidden',
@@ -149,26 +145,26 @@
                                         leaveToClass: 'hidden',
                                         leaveActiveClass: 'animate-slideup'
                                     }"
-                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                                 >
                                     <span class="font-medium">APPLICATION</span>
                                     <i class="pi pi-chevron-down"></i>
                                 </div>
                                 <ul class="list-none p-0 m-0 overflow-hidden">
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-folder mr-2"></i>
                                             <span class="font-medium">Projects</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-chart-bar mr-2"></i>
                                             <span class="font-medium">Performance</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-cog mr-2"></i>
                                             <span class="font-medium">Settings</span>
                                         </a>
@@ -179,7 +175,7 @@
                     </div>
                     <div class="mt-auto">
                         <hr class="mb-4 mx-4 border-t border-0 border-surface-200 dark:border-surface-700" />
-                        <a v-ripple class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                        <a class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>
                         </a>
@@ -218,7 +214,6 @@ export default {
                 <ul class="list-none p-4 m-0">
                     <li>
                         <div
-                            v-ripple
                             v-styleclass="{
                                 selector: '@next',
                                 enterFromClass: 'hidden',
@@ -226,27 +221,26 @@ export default {
                                 leaveToClass: 'hidden',
                                 leaveActiveClass: 'animate-slideup'
                             }"
-                            class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                            class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                         >
                             <span class="font-medium">FAVORITES</span>
                             <i class="pi pi-chevron-down"></i>
                         </div>
                         <ul class="list-none p-0 m-0 overflow-hidden">
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-home mr-2"></i>
                                     <span class="font-medium">Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-bookmark mr-2"></i>
                                     <span class="font-medium">Bookmarks</span>
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    v-ripple
                                     v-styleclass="{
                                         selector: '@next',
                                         enterFromClass: 'hidden',
@@ -254,7 +248,7 @@ export default {
                                         leaveToClass: 'hidden',
                                         leaveActiveClass: 'animate-slideup'
                                     }"
-                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                 >
                                     <i class="pi pi-chart-line mr-2"></i>
                                     <span class="font-medium">Reports</span>
@@ -263,7 +257,6 @@ export default {
                                 <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                     <li>
                                         <a
-                                            v-ripple
                                             v-styleclass="{
                                                 selector: '@next',
                                                 enterFromClass: 'hidden',
@@ -271,7 +264,7 @@ export default {
                                                 leaveToClass: 'hidden',
                                                 leaveActiveClass: 'animate-slideup'
                                             }"
-                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                         >
                                             <i class="pi pi-chart-line mr-2"></i>
                                             <span class="font-medium">Revenue</span>
@@ -279,13 +272,13 @@ export default {
                                         </a>
                                         <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                             <li>
-                                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                     <i class="pi pi-table mr-2"></i>
                                                     <span class="font-medium">View</span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                     <i class="pi pi-search mr-2"></i>
                                                     <span class="font-medium">Search</span>
                                                 </a>
@@ -293,7 +286,7 @@ export default {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-chart-line mr-2"></i>
                                             <span class="font-medium">Expenses</span>
                                         </a>
@@ -301,26 +294,26 @@ export default {
                                 </ul>
                             </li>
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-users mr-2"></i>
                                     <span class="font-medium">Team</span>
                                 </a>
                             </li>
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-comments mr-2"></i>
                                     <span class="font-medium">Messages</span>
                                     <span class="inline-flex items-center justify-center ml-auto bg-primary text-primary-contrast rounded-full" style="min-width: 1.5rem; height: 1.5rem">3</span>
                                 </a>
                             </li>
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-calendar mr-2"></i>
                                     <span class="font-medium">Calendar</span>
                                 </a>
                             </li>
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-cog mr-2"></i>
                                     <span class="font-medium">Settings</span>
                                 </a>
@@ -331,7 +324,6 @@ export default {
                 <ul class="list-none p-4 m-0">
                     <li>
                         <div
-                            v-ripple
                             v-styleclass="{
                                 selector: '@next',
                                 enterFromClass: 'hidden',
@@ -339,26 +331,26 @@ export default {
                                 leaveToClass: 'hidden',
                                 leaveActiveClass: 'animate-slideup'
                             }"
-                            class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                            class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                         >
                             <span class="font-medium">APPLICATION</span>
                             <i class="pi pi-chevron-down"></i>
                         </div>
                         <ul class="list-none p-0 m-0 overflow-hidden">
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-folder mr-2"></i>
                                     <span class="font-medium">Projects</span>
                                 </a>
                             </li>
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-chart-bar mr-2"></i>
                                     <span class="font-medium">Performance</span>
                                 </a>
                             </li>
                             <li>
-                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                     <i class="pi pi-cog mr-2"></i>
                                     <span class="font-medium">Settings</span>
                                 </a>
@@ -369,7 +361,7 @@ export default {
             </div>
             <div class="mt-auto">
                 <hr class="mb-4 mx-4 border-t border-0 border-surface-200 dark:border-surface-700" />
-                <a v-ripple class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                <a class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                     <Avatar image="/images/avatar/amyelsner.png" shape="circle" />
                     <span class="font-bold">Amy Elsner</span>
                 </a>
@@ -407,7 +399,6 @@ export default {
                         <ul class="list-none p-4 m-0">
                             <li>
                                 <div
-                                    v-ripple
                                     v-styleclass="{
                                         selector: '@next',
                                         enterFromClass: 'hidden',
@@ -415,27 +406,26 @@ export default {
                                         leaveToClass: 'hidden',
                                         leaveActiveClass: 'animate-slideup'
                                     }"
-                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                                 >
                                     <span class="font-medium">FAVORITES</span>
                                     <i class="pi pi-chevron-down"></i>
                                 </div>
                                 <ul class="list-none p-0 m-0 overflow-hidden">
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-home mr-2"></i>
                                             <span class="font-medium">Dashboard</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-bookmark mr-2"></i>
                                             <span class="font-medium">Bookmarks</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            v-ripple
                                             v-styleclass="{
                                                 selector: '@next',
                                                 enterFromClass: 'hidden',
@@ -443,7 +433,7 @@ export default {
                                                 leaveToClass: 'hidden',
                                                 leaveActiveClass: 'animate-slideup'
                                             }"
-                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                         >
                                             <i class="pi pi-chart-line mr-2"></i>
                                             <span class="font-medium">Reports</span>
@@ -452,7 +442,6 @@ export default {
                                         <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                             <li>
                                                 <a
-                                                    v-ripple
                                                     v-styleclass="{
                                                         selector: '@next',
                                                         enterFromClass: 'hidden',
@@ -460,7 +449,7 @@ export default {
                                                         leaveToClass: 'hidden',
                                                         leaveActiveClass: 'animate-slideup'
                                                     }"
-                                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                                 >
                                                     <i class="pi pi-chart-line mr-2"></i>
                                                     <span class="font-medium">Revenue</span>
@@ -468,13 +457,13 @@ export default {
                                                 </a>
                                                 <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                                     <li>
-                                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                             <i class="pi pi-table mr-2"></i>
                                                             <span class="font-medium">View</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                             <i class="pi pi-search mr-2"></i>
                                                             <span class="font-medium">Search</span>
                                                         </a>
@@ -482,7 +471,7 @@ export default {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                     <i class="pi pi-chart-line mr-2"></i>
                                                     <span class="font-medium">Expenses</span>
                                                 </a>
@@ -490,26 +479,26 @@ export default {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-users mr-2"></i>
                                             <span class="font-medium">Team</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-comments mr-2"></i>
                                             <span class="font-medium">Messages</span>
                                             <span class="inline-flex items-center justify-center ml-auto bg-primary text-primary-contrast rounded-full" style="min-width: 1.5rem; height: 1.5rem">3</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-calendar mr-2"></i>
                                             <span class="font-medium">Calendar</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-cog mr-2"></i>
                                             <span class="font-medium">Settings</span>
                                         </a>
@@ -520,7 +509,6 @@ export default {
                         <ul class="list-none p-4 m-0">
                             <li>
                                 <div
-                                    v-ripple
                                     v-styleclass="{
                                         selector: '@next',
                                         enterFromClass: 'hidden',
@@ -528,26 +516,26 @@ export default {
                                         leaveToClass: 'hidden',
                                         leaveActiveClass: 'animate-slideup'
                                     }"
-                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                                 >
                                     <span class="font-medium">APPLICATION</span>
                                     <i class="pi pi-chevron-down"></i>
                                 </div>
                                 <ul class="list-none p-0 m-0 overflow-hidden">
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-folder mr-2"></i>
                                             <span class="font-medium">Projects</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-chart-bar mr-2"></i>
                                             <span class="font-medium">Performance</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-cog mr-2"></i>
                                             <span class="font-medium">Settings</span>
                                         </a>
@@ -558,7 +546,7 @@ export default {
                     </div>
                     <div class="mt-auto">
                         <hr class="mb-4 mx-4 border-t border-0 border-surface-200 dark:border-surface-700" />
-                        <a v-ripple class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                        <a class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>
                         </a>
@@ -608,7 +596,6 @@ export default {
                         <ul class="list-none p-4 m-0">
                             <li>
                                 <div
-                                    v-ripple
                                     v-styleclass="{
                                         selector: '@next',
                                         enterFromClass: 'hidden',
@@ -616,27 +603,26 @@ export default {
                                         leaveToClass: 'hidden',
                                         leaveActiveClass: 'animate-slideup'
                                     }"
-                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                                 >
                                     <span class="font-medium">FAVORITES</span>
                                     <i class="pi pi-chevron-down"></i>
                                 </div>
                                 <ul class="list-none p-0 m-0 overflow-hidden">
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-home mr-2"></i>
                                             <span class="font-medium">Dashboard</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-bookmark mr-2"></i>
                                             <span class="font-medium">Bookmarks</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a
-                                            v-ripple
                                             v-styleclass="{
                                                 selector: '@next',
                                                 enterFromClass: 'hidden',
@@ -644,7 +630,7 @@ export default {
                                                 leaveToClass: 'hidden',
                                                 leaveActiveClass: 'animate-slideup'
                                             }"
-                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                            class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                         >
                                             <i class="pi pi-chart-line mr-2"></i>
                                             <span class="font-medium">Reports</span>
@@ -653,7 +639,6 @@ export default {
                                         <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                             <li>
                                                 <a
-                                                    v-ripple
                                                     v-styleclass="{
                                                         selector: '@next',
                                                         enterFromClass: 'hidden',
@@ -661,7 +646,7 @@ export default {
                                                         leaveToClass: 'hidden',
                                                         leaveActiveClass: 'animate-slideup'
                                                     }"
-                                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                                                    class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors"
                                                 >
                                                     <i class="pi pi-chart-line mr-2"></i>
                                                     <span class="font-medium">Revenue</span>
@@ -669,13 +654,13 @@ export default {
                                                 </a>
                                                 <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                                                     <li>
-                                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                             <i class="pi pi-table mr-2"></i>
                                                             <span class="font-medium">View</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                             <i class="pi pi-search mr-2"></i>
                                                             <span class="font-medium">Search</span>
                                                         </a>
@@ -683,7 +668,7 @@ export default {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                                <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                                     <i class="pi pi-chart-line mr-2"></i>
                                                     <span class="font-medium">Expenses</span>
                                                 </a>
@@ -691,26 +676,26 @@ export default {
                                         </ul>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-users mr-2"></i>
                                             <span class="font-medium">Team</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-comments mr-2"></i>
                                             <span class="font-medium">Messages</span>
                                             <span class="inline-flex items-center justify-center ml-auto bg-primary text-primary-contrast rounded-full" style="min-width: 1.5rem; height: 1.5rem">3</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-calendar mr-2"></i>
                                             <span class="font-medium">Calendar</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-cog mr-2"></i>
                                             <span class="font-medium">Settings</span>
                                         </a>
@@ -721,7 +706,6 @@ export default {
                         <ul class="list-none p-4 m-0">
                             <li>
                                 <div
-                                    v-ripple
                                     v-styleclass="{
                                         selector: '@next',
                                         enterFromClass: 'hidden',
@@ -729,26 +713,26 @@ export default {
                                         leaveToClass: 'hidden',
                                         leaveActiveClass: 'animate-slideup'
                                     }"
-                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer p-ripple"
+                                    class="p-4 flex items-center justify-between text-surface-500 dark:text-surface-400 cursor-pointer"
                                 >
                                     <span class="font-medium">APPLICATION</span>
                                     <i class="pi pi-chevron-down"></i>
                                 </div>
                                 <ul class="list-none p-0 m-0 overflow-hidden">
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-folder mr-2"></i>
                                             <span class="font-medium">Projects</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-chart-bar mr-2"></i>
                                             <span class="font-medium">Performance</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                                        <a class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                                             <i class="pi pi-cog mr-2"></i>
                                             <span class="font-medium">Settings</span>
                                         </a>
@@ -759,7 +743,7 @@ export default {
                     </div>
                     <div class="mt-auto">
                         <hr class="mb-4 mx-4 border-t border-0 border-surface-200 dark:border-surface-700" />
-                        <a v-ripple class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                        <a class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors">
                             <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                             <span class="font-bold">Amy Elsner</span>
                         </a>

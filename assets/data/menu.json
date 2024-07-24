@@ -383,10 +383,6 @@
                             "to": "/progressspinner"
                         },
                         {
-                            "name": "Ripple",
-                            "to": "/ripple"
-                        },
-                        {
                             "name": "ScrollTop",
                             "to": "/scrolltop"
                         },

@@ -31,10 +31,6 @@
                 <span class="config-panel-label">Primary</span>
                 <SelectButton v-model="$appState.preset" @update:modelValue="onPresetChange" :options="presets" :allowEmpty="false" />
             </div>
-            <div class="config-panel-settings">
-                <span class="config-panel-label">Ripple Effect</span>
-                <ToggleSwitch :modelValue="rippleActive" @update:modelValue="onRippleChange" />
-            </div>
         </div>
     </div>
 </template>

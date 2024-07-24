@@ -19,7 +19,7 @@
                 </svg>
             </template>
             <template #item="{ item }">
-                <a v-if="item.root" v-ripple class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
+                <a v-if="item.root" class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
@@ -108,7 +108,7 @@ export default {
         </svg>
     </template>
     <template #item="{ item }">
-        <a v-if="item.root" v-ripple class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
+        <a v-if="item.root" class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
         </a>
@@ -149,7 +149,7 @@ export default {
                 </svg>
             </template>
             <template #item="{ item }">
-                <a v-if="item.root" v-ripple class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
+                <a v-if="item.root" class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
@@ -249,7 +249,7 @@ export default {
                 </svg>
             </template>
             <template #item="{ item }">
-                <a v-if="item.root" v-ripple class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
+                <a v-if="item.root" class="flex items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase" style="border-radius: 2rem">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>

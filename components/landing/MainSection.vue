@@ -38,7 +38,7 @@
                                                 type="button"
                                                 class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                                 :class="{
-                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
+                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--p-surface-800)]': isLara,
                                                     'dark:bg-surface-900': !isLara
                                                 }"
                                                 @click="setPreset('Lara')"
@@ -49,7 +49,7 @@
                                                 type="button"
                                                 class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                                 :class="{
-                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isAura,
+                                                    'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--p-primary-400)]': isAura,
                                                     'dark:bg-surface-900': !isAura
                                                 }"
                                                 @click="setPreset('Aura')"
@@ -2728,54 +2728,54 @@
                             <rect x="479" y="416" width="2" height="1" transform="rotate(90 479 416)" class="fill-primary-400" />
                             <defs>
                                 <linearGradient id="paint0_linear_612_64534" x1="223" y1="0.523438" x2="223" y2="1049.48" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint1_linear_612_64534" x1="0.640625" y1="279" x2="780.363" y2="279" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint2_linear_612_64534" x1="0.640625" y1="348" x2="780.363" y2="348" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint3_linear_612_64534" x1="0.640625" y1="417" x2="780.363" y2="417" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint4_linear_612_64534" x1="0.640625" y1="486" x2="780.363" y2="486" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint5_linear_612_64534" x1="0.640625" y1="565" x2="780.363" y2="565" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint6_linear_612_64534" x1="0.640625" y1="634" x2="780.363" y2="634" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint7_linear_612_64534" x1="0.640625" y1="703" x2="780.363" y2="703" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint8_linear_612_64534" x1="0.640625" y1="772" x2="780.363" y2="772" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <linearGradient id="paint9_linear_612_64534" x1="557" y1="0.523438" x2="557" y2="1049.48" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="rgb(var(--primary-200))" stop-opacity="0" />
-                                    <stop offset="0.5" stop-color="rgb(var(--primary-200))" />
-                                    <stop offset="1" stop-color="rgb(var(--primary-200))" stop-opacity="0" />
+                                    <stop stop-color="var(--p-primary-200)" stop-opacity="0" />
+                                    <stop offset="0.5" stop-color="var(--p-primary-200)" />
+                                    <stop offset="1" stop-color="var(--p-primary-200)" stop-opacity="0" />
                                 </linearGradient>
                                 <clipPath id="clip0_612_64534">
                                     <rect width="182" height="66" fill="white" transform="translate(41 492)" />
@@ -2820,7 +2820,7 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--surface-800)]': isLara,
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--p-surface-800)]': isLara,
                                                 'dark:bg-surface-900': !isLara
                                             }"
                                             @click="setPreset('Lara')"
@@ -2831,7 +2831,7 @@
                                             type="button"
                                             class="px-[0.85rem] tracking-tight py-[0.42rem] text-lg rounded-md bg-surface-0 text-surface-900 dark:text-surface-0 hover:bg-surface-50 dark:hover:bg-surface-800 focus:outline-none duration-200 transition-[backgroundColor]"
                                             :class="{
-                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--primary-400)]': isAura,
+                                                'shadow shadow-inner bg-surface-50 dark:bg-surface-800 dark:shadow-[inset_0px_1px_0px_0px_var(--p-primary-400)]': isAura,
                                                 'dark:bg-surface-900': !isAura
                                             }"
                                             @click="setPreset('Aura')"
@@ -2985,8 +2985,8 @@ export default {
     }
 }
 .light-dark-card {
-    --surface-alpha: color-mix(in srgb, rgb(var(--surface-800)) 20%, transparent);
-    --surface-alpha-light: color-mix(in srgb, rgb(var(--surface-600)) 10%, transparent);
+    --surface-alpha: color-mix(in srgb, var(--p-surface-800) 20%, transparent);
+    --surface-alpha-light: color-mix(in srgb, var(--p-surface-600) 10%, transparent);
     .clouds {
         position: relative;
         overflow: hidden;
@@ -3002,13 +3002,13 @@ export default {
             height: 100%;
             z-index: 0;
             transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            background: linear-gradient(90deg, var(--surface-alpha) 0%, var(--surface-alpha-light) 100%);
+            background: linear-gradient(90deg, var(--p-surface-alpha) 0%, var(--p-surface-alpha-light) 100%);
         }
     }
 }
 .palette-card {
-    --primary-alpha: color-mix(in srgb, rgb(var(--primary-500)) 5%, transparent);
-    --surface-alpha: color-mix(in srgb, rgb(var(--surface-100)) 10%, transparent);
+    --primary-alpha: color-mix(in srgb, var(--p-primary-500) 5%, transparent);
+    --surface-alpha: color-mix(in srgb, var(--p-surface-100) 10%, transparent);
 
     .palette {
         position: relative;
@@ -3027,7 +3027,7 @@ export default {
 
     &:hover .palette::after {
         animation: pulseGradient 1s infinite linear;
-        background: linear-gradient(90deg, var(--surface-alpha) 0%, var(--primary-alpha) 60%, var(--surface-alpha) 100%);
+        background: linear-gradient(90deg, var(--p-surface-alpha) 0%, var(--p-primary-alpha) 60%, var(--p-surface-alpha) 100%);
     }
 }
 
@@ -3041,11 +3041,11 @@ export default {
 }
 
 .dark .palette-card {
-    --primary-alpha: color-mix(in srgb, rgb(var(--primary-400)) 8%, transparent);
-    --surface-alpha: color-mix(in srgb, rgb(var(--surface-700)) 10%, transparent);
+    --primary-alpha: color-mix(in srgb, var(--p-primary-400) 8%, transparent);
+    --surface-alpha: color-mix(in srgb, var(--p-surface-700) 10%, transparent);
 }
 .dark .light-dark-card {
-    --surface-alpha: color-mix(in srgb, rgb(var(--surface-0)) 30%, transparent);
-    --surface-alpha-light: color-mix(in srgb, rgb(var(--surface-50)) 30%, transparent);
+    --surface-alpha: color-mix(in srgb, var(--p-surface-0) 30%, transparent);
+    --surface-alpha-light: color-mix(in srgb, var(--p-surface-50) 30%, transparent);
 }
 </style>

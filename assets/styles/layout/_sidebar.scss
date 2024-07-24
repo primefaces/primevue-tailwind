@@ -49,6 +49,7 @@
                 text-align: left;  
                 cursor: pointer;
                 user-select: none;
+                --p-focus-ring-offset: -1px;
                 @include focus-visible();
 
                 .menu-icon {
@@ -98,9 +99,6 @@
                         }
                     }
                 }
-
-                @include focus-visible();
-                --p-focus-ring-offset: -1px;
             }
             
             > div {
@@ -123,9 +121,8 @@
                             transition: outline-color 0.2s, border-color .2s;
                             outline-color: transparent;
                             position: relative;
-
-                            @include focus-visible();
                             --p-focus-ring-offset: -1px;
+                            @include focus-visible();
             
                             &:hover {
                                 border-left-color: var(--hover-border-color);
