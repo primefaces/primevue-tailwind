@@ -4,7 +4,6 @@
         header="VirtualScroller"
         description="VirtualScroller is a performant approach to render large amounts of data efficiently."
         :componentDocs="docs"
-        :presetDoc="presetDoc"
         apiLink="/virtualscroller/#api"
         ptLink="/virtualscroller/#pt"
     />
