@@ -13,13 +13,3 @@
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    mounted() {
-        const root = document.documentElement;
-
-        root.setAttribute('data-preset', 'noir');
-    }
-};
-</script>

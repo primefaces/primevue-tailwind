@@ -17,9 +17,6 @@ export default {
         };
     },
     mounted() {
-        const root = document.documentElement;
-
-        root.setAttribute('data-preset', 'noir');
         EventBus.on('dark-mode-toggle', this.darkModeToggleListener);
     },
     beforeUnmount() {

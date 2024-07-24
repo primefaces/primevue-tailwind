@@ -65,7 +65,10 @@ export default defineNuxtConfig({
                     src: baseUrl + 'scripts/prism.js',
                     'data-manual': true
                 }
-            ]
+            ],
+            htmlAttrs: {
+                'data-preset': 'noir'
+            }
         }
     },
     gtag: {
