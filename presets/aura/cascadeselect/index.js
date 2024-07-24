@@ -146,9 +146,6 @@ export default {
             'py-2',
             'px-3',
 
-            // Color
-            'text-surface-700 dark:text-white/80',
-
             // Misc
             'no-underline',
             'overflow-hidden',
