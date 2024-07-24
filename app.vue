@@ -4,14 +4,6 @@
     </NuxtLayout>
 </template>
 
-<script setup>
-useHead({
-    htmlAttrs: {
-        'data-preset': 'noir'
-    }
-});
-</script>
-
 <script>
 import EventBus from '@/layouts/AppEventBus';
 
@@ -25,6 +17,9 @@ export default {
         };
     },
     mounted() {
+        const root = document.documentElement;
+
+        root.setAttribute('data-preset', 'noir');
         EventBus.on('dark-mode-toggle', this.darkModeToggleListener);
     },
     beforeUnmount() {

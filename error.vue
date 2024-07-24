@@ -14,10 +14,12 @@
     </div>
 </template>
 
-<script setup>
-useHead({
-    htmlAttrs: {
-        'data-preset': 'noir'
+<script>
+export default {
+    mounted() {
+        const root = document.documentElement;
+
+        root.setAttribute('data-preset', 'noir');
     }
-});
+};
 </script>
