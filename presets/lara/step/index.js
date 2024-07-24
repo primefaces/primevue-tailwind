@@ -1,10 +1,6 @@
 export default {
-    root: ({ props, instance, context, parent }) => ({
-        class: [
-            'relative flex flex-auto items-center gap-2 p-2 last-of-type:flex-[initial]',
-            { 'cursor-default pointer-events-none select-none opacity-60': !instance.active && (instance.isStepDisabled() || props.disabled) },
-            '[&_[data-pc-section=separator]]:has-[~[data-p-active=true]]:bg-primary'
-        ]
+    root: ({ context }) => ({
+        class: ['relative flex flex-auto items-center gap-2 p-2 last-of-type:flex-[initial]', { 'cursor-default pointer-events-none select-none opacity-60': context.disabled }, '[&_[data-pc-section=separator]]:has-[~[data-p-active=true]]:bg-primary']
     }),
     header: ({ props, context }) => ({
         class: [
