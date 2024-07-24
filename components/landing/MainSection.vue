@@ -16,15 +16,10 @@
                         </div>
                         <div class="justify-start items-start gap-4 inline-flex flex-wrap">
                             <NuxtLink to="/overview">
-                                <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" />
+                                <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" class="!py-3 !px-4" />
                             </NuxtLink>
                             <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
-                                <Button
-                                    label="Give a Star"
-                                    icon="pi pi-star-fill text-yellow-500 dark:text-yellow-400"
-                                    iconPos="right"
-                                    class="!text-surface-700 dark:!text-surface-0 bg-surface-0 dark:bg-surface-900 border-surface-200 dark:border-surface-700 hover:bg-surface-50 dark:hover:bg-surface-800 hover:border-surface-200 dark:hover:border-surface-700 hover:text-surface-700 dark:hover:text-surface-0"
-                                />
+                                <Button label="Give a Star" icon="pi pi-star-fill text-yellow-500 dark:text-yellow-400" iconPos="right" outlined class="!py-3 !px-4" />
                             </a>
                         </div>
                     </div>
@@ -2881,7 +2876,6 @@ import SelectButton from 'primevue/selectbutton';
 import Slider from 'primevue/slider';
 import Tag from 'primevue/tag';
 import ToggleSwitch from 'primevue/toggleswitch';
-
 export default {
     data() {
         return {

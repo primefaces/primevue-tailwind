@@ -164,7 +164,6 @@ export default {
         switchDarkMode() {
             EventBus.emit('dark-mode-toggle');
         },
-
         bindScrollListener() {
             if (!this.scrollListener) {
                 if (this.container) {

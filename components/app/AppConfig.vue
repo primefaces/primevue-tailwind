@@ -105,10 +105,10 @@ export default {
                 this.$appState.primary = colorName;
 
                 if (colorName === 'noir') {
-                    root.setAttribute('data-preset', 'noir');
+                    root.classList.add('p-noir');
                     document.documentElement.style.setProperty('--logo-color', 'var(--text-secondary-color)');
                 } else {
-                    root.removeAttribute('data-preset');
+                    root.classList.remove('p-noir');
                     document.documentElement.style.setProperty('--logo-color', 'var(--primary-color)');
                 }
             } else if (type === 'surface') {
@@ -116,13 +116,7 @@ export default {
                 this.$appState.surface = colorName;
             }
 
-            if (!document.startViewTransition) {
-                this.applyTheme(type, selectedColor.palette, colorName);
-
-                return;
-            }
-
-            document.startViewTransition(() => this.applyTheme(type, selectedColor.palette, colorName));
+            this.applyTheme(type, selectedColor.palette, colorName);
         },
         applyTheme(type, colors, colorName) {
             if (colorName === 'noir') {

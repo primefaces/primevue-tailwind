@@ -413,20 +413,6 @@
             "icon": "pi pi-images"
         },
         {
-            "name": "Guides",
-            "icon": "pi pi-book",
-            "children": [
-                {
-                    "name": "Overriding Presets",
-                    "to": "/guides/overriding-presets"
-                },
-                {
-                    "name": "Building a UI Library",
-                    "to": "/guides/building-ui-library"
-                }
-            ]
-        },
-        {
             "name": "Icons",
             "icon": "pi pi-eye",
             "children": [
@@ -437,6 +423,25 @@
                 {
                     "name": "Custom Icons",
                     "to": "/customicons"
+                }
+            ]
+        },
+        {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "Overriding Presets",
+                    "to": "/guides/overriding-presets"
+                },
+                {
+                    "name": "Building a UI Library",
+                    "to": "/guides/building-ui-library"
+                },
+                {
+                    "name": "PrimeTV",
+                    "icon": "pi pi-youtube",
+                    "href": "https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw"
                 }
             ]
         },
@@ -454,14 +459,9 @@
                 },
                 {
                     "name": "PRO Support",
-                    "to": "/support"
+                    "href": "https://primevue.org/support"
                 }
             ]
-        },
-        {
-            "name": "PrimeTV",
-            "icon": "pi pi-youtube",
-            "href": "https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw"
         },
         {
             "name": "Discover",
@@ -469,7 +469,7 @@
             "children": [
                 {
                     "name": "About Us",
-                    "to": "/team"
+                    "href": "https://primevue.org/team"
                 },
                 {
                     "name": "Newsletter",

@@ -67,7 +67,7 @@ export default defineNuxtConfig({
                 }
             ],
             htmlAttrs: {
-                'data-preset': 'noir'
+                class: 'p-noir'
             }
         }
     },

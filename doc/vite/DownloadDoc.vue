@@ -1,6 +1,5 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <div class="notification mb-4">Presets do not support PrimeVue v4 yet, an update is scheduled for the end of July, 2024.</div>
         <p>PrimeVue is available for download on <a href="https://www.npmjs.com/package/primevue" target="_blank" rel="noopener noreferrer">npm registry</a>.</p>
     </DocSectionText>
     <DocSectionCode :code="code" hideToggleCode hideStackBlitz />
@@ -13,13 +12,13 @@ export default {
             code: {
                 basic: `
 # Using npm
-npm install primevue@^3
+npm install primevue
 
 # Using yarn
-yarn add primevue@^3
+yarn add primevue
 
 # Using pnpm
-pnpm add primevue@^3
+pnpm add primevue
 `
             }
         };

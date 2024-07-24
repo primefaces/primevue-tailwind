@@ -1,10 +1,7 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Final step is defining the default values for the colors in RGB format, this can be done in a global CSS file in your Vite application e.g. <i>src/assets/base.css</i>.</p>
-        <p>
-            Now, in addition to the primary-[shade] and surface-[shade] colors, we have introduced new variables for more flexibility and customization. These variables include primary, primary-inverse, primary-highlight, and more. This allows you to
-            define primary colors like Noir and customize them according to your needs.
-        </p>
+        <p>Final step is defining the default values for the CSS variables utilized by the <i>tailwindcss-primeui</i>, this can be done in a global CSS file in your Vite application e.g. <i>src/assets/base.css</i>.</p>
+        <p>With a future update of the primeui tailwind plugin, this step will be done implicitly.</p>
         <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
     </DocSectionText>
 </template>
@@ -15,73 +12,77 @@ export default {
         return {
             code: {
                 basic: `
+/* Primary and Surface Palettes */
 :root {
-    --primary-50: 236 253 245;
-    --primary-100: 209 250 229;
-    --primary-200: 167 243 208;
-    --primary-300: 110 231 183;
-    --primary-400: 52 211 153;
-    --primary-500: 16 185 129;
-    --primary-600: 5 150 105;
-    --primary-700: 4 120 87;
-    --primary-800: 6 95 70;
-    --primary-900: 4 78 56;
-    --primary-950: 2 44 34;
-    --surface-0: 255 255 255;
-    --surface-50: 250 250 250;
-    --surface-100: 244 244 245;
-    --surface-200: 228 228 231;
-    --surface-300: 212 212 216;
-    --surface-400: 161 161 170;
-    --surface-500: 113 113 122;
-    --surface-600: 82 82 91;
-    --surface-700: 63 63 70;
-    --surface-800: 39 39 42;
-    --surface-900: 24 24 27;
-    --surface-950: 9 9 11;
-
-    --primary: var(--primary-500);
-    --primary-inverse: var(--surface-0);
-    --primary-hover: var(--primary-600);
-    --primary-active-color: var(--primary-600);
-
-    --primary-highlight-opacity: 0.1;
-    --primary-highlight-inverse: var(--primary-700);
-    --primary-highlight-hover-opacity: 0.2;
-}
-.dark{
-    --primary: var(--primary-400);
-    --primary-inverse: var(--surface-900);
-    --primary-hover: var(--primary-300);
-    --primary-active-color: var(--primary-300);
-
-    --primary-highlight-opacity: 0.2;
-    --primary-highlight-inverse: var(--surface-0);
-    --primary-highlight-hover-opacity: 0.3;
+    --p-primary-50: var(--p-surface-50);
+    --p-primary-100: var(--p-surface-100);
+    --p-primary-200: var(--p-surface-200);
+    --p-primary-300: var(--p-surface-300);
+    --p-primary-400: var(--p-surface-400);
+    --p-primary-500: var(--p-surface-500);
+    --p-primary-600: var(--p-surface-600);
+    --p-primary-700: var(--p-surface-700);
+    --p-primary-800: var(--p-surface-800);
+    --p-primary-900: var(--p-surface-900);
+    --p-primary-950: var(--p-surface-950);
+    --p-surface-0: #ffffff;
+    --p-surface-50: #f8fafc;
+    --p-surface-100: #f1f5f9;
+    --p-surface-200: #e2e8f0;
+    --p-surface-300: #cbd5e1;
+    --p-surface-400: #94a3b8;
+    --p-surface-500: #64748b;
+    --p-surface-600: #475569;
+    --p-surface-700: #334155;
+    --p-surface-800: #1e293b;
+    --p-surface-900: #0f172a;
+    --p-surface-950: #020617;
+    --p-content-border-radius: 6px;
 }
 
-.customized-primary {
-    &:not(.dark){
-        --primary: var(--primary-950);
-        --primary-inverse: var(--surface-0);
-        --primary-hover: var(--primary-800);
-        --primary-active-color: var(--primary-900);
+/* Light Mode */
+:root {
+    --p-primary-color: var(--p-primary-500);
+    --p-primary-contrast-color: var(--p-surface-0);
+    --p-primary-hover-color: var(--p-primary-600);
+    --p-primary-active-color: var(--p-primary-700);
+    --p-content-border-color: var(--p-surface-200);
+    --p-content-hover-background: var(--p-surface-100);
+    --p-content-hover-color: var(--p-surface-800);
+    --p-highlight-background: var(--p-primary-50);
+    --p-highlight-color: var(--p-primary-700);
+    --p-highlight-focus-background: var(--p-primary-100);
+    --p-highlight-focus-color: var(--p-primary-800);
+    --p-text-color: var(--p-surface-700);
+    --p-text-hover-color: var(--p-surface-800);
+    --p-text-muted-color: var(--p-surface-500);
+    --p-text-hover-muted-color: var(--p-surface-600);
+}
 
-        --primary-highlight-opacity: 1;
-        --primary-highlight-inverse: var(--surface-0);
-        --primary-highlight-hover-opacity: 0.8;
-    }
-    &.dark{
-        --primary: var(--primary-50);
-        --primary-inverse: var(--surface-950);
-        --primary-hover: var(--primary-100);
-        --primary-active-color: var(--primary-100);
-
-        --primary-highlight-opacity: 0.1;
-        --primary-highlight-inverse: var(--surface-0);
-        --primary-highlight-hover-opacity: 0.2;
-
-    }
+/* 
+ * Dark Mode
+ * Change the .p-dark to match the darkMode in tailwind.config.
+ * For example; 
+ *  darkMode: ['selector', '[class*="app-dark"]'] 
+ *  should match;
+ * :root.app-dark
+*/
+:root.p-dark {
+    --p-primary-color: var(--p-primary-400);
+    --p-primary-contrast-color: var(--p-surface-900);
+    --p-primary-hover-color: var(--p-primary-300);
+    --p-primary-active-color: var(--p-primary-200);
+    --p-content-border-color: var(--p-surface-700);
+    --p-content-hover-background: var(--p-surface-800);
+    --p-content-hover-color: var(--p-surface-0);
+    --p-highlight-background: color-mix(in srgb, var(--p-primary-400), transparent 84%);
+    --p-highlight-color: rgba(255,255,255,.87);
+    --p-highlight-focus-background: color-mix(in srgb, var(--p-primary-400), transparent 76%);
+    --p-highlight-focus-color: rgba(255,255,255,.87);
+    --p-text-color: var(--p-surface-0);
+    --p-text-hover-color: var(--p-surface-0);
+    --p-text-muted-color: var(--p-surface-400);
+    --p-text-hover-muted-color: var(--p-surface-300);
 }
 `
             }

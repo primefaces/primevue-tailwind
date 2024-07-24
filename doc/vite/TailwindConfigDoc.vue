@@ -1,7 +1,10 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>The built-in presets utilize an extended color palette based on CSS variables that needs to be defined as a Tailwind theme config extension</p>
-        <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
+        <p>The tailwindcss-primeui is an official plugin by PrimeTek to provide first class integration between a Prime UI library like PrimeVue and Tailwind CSS. It is designed to work both in styled and unstyled modes.</p>
+        <DocSectionCode :code="code1" hideToggleCode importCode hideStackBlitz />
+
+        <p>Configure Tailwind to use the plugin and add your preset folder to the content path of Tailwind.</p>
+        <DocSectionCode :code="code2" hideToggleCode importCode hideStackBlitz />
     </DocSectionText>
 </template>
 
@@ -9,26 +12,20 @@
 export default {
     data() {
         return {
-            code: {
+            code1: {
                 basic: `
-const primeui = require('tailwindcss-primeui');
-
-export default {
-    darkMode: 'class', // This enables dark mode based on the presence of the "dark" class in the HTML tag
-    ...
-    plugins: [primeui],
-    theme: {
-        extend: {
-            screens: {
-                sm: '576px',
-                md: '768px',
-                lg: '992px',
-                xl: '1200px',
-                '2xl': '1920px'
-            }
-        }
-    }
-    ...
+npm i tailwindcss-primeui
+`
+            },
+            code2: {
+                basic: `
+module.exports = {
+    // ...
+    content: [
+        "presets/**/*.{js,vue,ts}",
+        // other paths
+    ],
+    plugins: [require('tailwindcss-primeui')]
 }
 `
             }

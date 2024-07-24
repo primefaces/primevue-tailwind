@@ -13,12 +13,12 @@ export default {
                 basic: `
 export default defineNuxtConfig({
     modules: [
-        'nuxt-primevue'
+        '@primevue/nuxt-module'
     ],
     primevue: {
         options: {
             unstyled: true
-        },
+        }
     }
 })
 `
