@@ -21,7 +21,7 @@ import path from 'path';
 
 export default defineNuxtConfig({
     modules: [
-        'nuxt-primevue'
+        '@primevue/nuxt-module'
     ],
     primevue: {
         options: {
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
                 basic: `
 export default defineNuxtConfig({
     modules: [
-        'nuxt-primevue'
+        '@primevue/nuxt-module'
     ],
     primevue: {
         options: {

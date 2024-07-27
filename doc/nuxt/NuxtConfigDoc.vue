@@ -1,6 +1,6 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>In your <i>nuxt-config</i> file, add the <i>nuxt-primevue</i> module and configure PrimeVue to be unstyled.</p>
+        <p>In your <i>nuxt-config</i> file, add the <i>@primevue/nuxt-module</i> module and configure PrimeVue to be unstyled.</p>
     </DocSectionText>
     <DocSectionCode :code="code" hideToggleCode importCode hideStackBlitz />
 </template>

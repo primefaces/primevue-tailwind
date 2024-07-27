@@ -22,7 +22,7 @@ npm i tailwindcss-primeui
 module.exports = {
     // ...
     content: [
-        "presets/**/*.{js,vue,ts}",
+        "./presets/**/*.{js,vue,ts}",
         // other paths
     ],
     plugins: [require('tailwindcss-primeui')]
