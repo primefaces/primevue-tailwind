@@ -18,7 +18,7 @@
                             <NuxtLink to="/overview">
                                 <Button label="Get Started" icon="pi pi-arrow-right" iconPos="right" class="!py-3 !px-4" />
                             </NuxtLink>
-                            <a href="https://github.com/primefaces/primevue" target="_blank" class="no-underline">
+                            <a href="https://github.com/primefaces/primevue-tailwind" target="_blank" class="no-underline">
                                 <Button label="Give a Star" icon="pi pi-star-fill text-yellow-500 dark:text-yellow-400" iconPos="right" outlined class="!py-3 !px-4" />
                             </a>
                         </div>
