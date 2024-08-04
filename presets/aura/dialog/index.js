@@ -76,7 +76,10 @@ export default {
             'border-surface-200 dark:border-surface-700',
 
             // Misc
-            'overflow-y-auto'
+            'overflow-y-auto',
+
+            // Flexbox & Alignment
+            'flex items-center'
         ]
     }),
     footer: {
