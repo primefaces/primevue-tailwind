@@ -17,10 +17,12 @@ export default {
             // Focus Label Appearance
             '[&>*:last-child]:has-[:focus]:-top-3',
             '[&>*:last-child]:has-[:focus]:text-sm',
+            '[&>*:last-child]:has-[:focus]:z-10',
 
             // Filled Input Label Appearance
             '[&>*:last-child]:has-[.filled]:-top-3',
-            '[&>*:last-child]:has-[.filled]:text-sm'
+            '[&>*:last-child]:has-[.filled]:text-sm',
+            '[&>*:last-child]:has-[.filled]:z-10',
         ]
     }
 };
