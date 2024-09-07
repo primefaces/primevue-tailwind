@@ -59,7 +59,7 @@ export default {
             'h-[150px] w-[150px]'
         ]
     },
-    color: {
+    colorbackground: {
         class: [
             // Size
             'h-[150px] w-[150px]'
