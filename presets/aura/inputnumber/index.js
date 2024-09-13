@@ -69,6 +69,7 @@ export default {
     buttonGroup: ({ props }) => ({
         class: [
             'absolute',
+            'z-20',
 
             // Flex
             'flex',
