@@ -17,7 +17,7 @@ export default {
                 basic: `
 import { createApp } from 'vue';
 import PrimeVue from 'primevue/config';
-import Aura from '@/presets/lara';      //import preset
+import Aura from '@/presets/aura';      //import preset
 
 const app = createApp(App);
 app.use(PrimeVue, {
