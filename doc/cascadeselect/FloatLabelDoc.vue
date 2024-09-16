@@ -4,8 +4,8 @@
     </DocSectionText>
     <div class="card flex justify-center">
         <FloatLabel>
-            <CascadeSelect v-model="selectedCity" inputId="cs-city" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" style="min-width: 14rem" placeholder="Select a City" />
-            <label for="cs-city">City</label>
+            <CascadeSelect v-model="selectedCity" inputId="cs-city" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" style="min-width: 14rem" />
+            <label for="cs-city">Select a City</label>
         </FloatLabel>
     </div>
     <DocSectionCode :code="code" />

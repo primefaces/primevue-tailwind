@@ -41,7 +41,8 @@ export default {
             'p-2 gap-2',
 
             // Colors
-            'text-surface-600 dark:text-white/70',
+            { 'text-surface-600 dark:text-white/70': !context.selected },
+            { 'text-highlight-contrast': context.selected },
             { 'bg-highlight': context.selected },
 
             // States
@@ -68,7 +69,7 @@ export default {
             'bg-transparent',
             {
                 'text-surface-500 dark:text-white': !context.selected,
-                'text-primary-600 dark:text-white': context.selected,
+                'text-highlight-contrast': context.selected,
                 invisible: context.leaf
             },
 
@@ -83,15 +84,18 @@ export default {
             'cursor-pointer select-none'
         ]
     }),
-    nodeIcon: {
+    nodeIcon: ({ context }) => ({
         class: [
             // Space
             'mr-2',
 
             // Color
-            'text-surface-600 dark:text-white/70'
+            {
+                'text-surface-600 dark:text-white/70': !context.selected,
+                'text-highlight-contrast': context.selected
+            }
         ]
-    },
+    }),
     nodeChildren: {
         class: ['m-0 list-none p-0 pl-2 mt-1']
     },

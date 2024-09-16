@@ -36,26 +36,31 @@ export default {
             { 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled }
         ]
     }),
-    label: ({ props }) => ({
+    label: ({ props, parent }) => ({
         class: [
-            // Font
-            'leading-none',
+            //Font
+            'leading-[normal]',
 
-            // Flex & Alignment
-            'flex flex-auto',
-
-            // Sizing and Spacing
-            'w-[1%]',
-            'py-2 px-3',
-
-            //Shape
-            'rounded-none',
+            // Display
+            'block',
+            'flex-auto',
 
             // Color and Background
             'bg-transparent',
             'border-0',
-            { 'text-surface-800 dark:text-white/80': props.modelValue, 'text-surface-400 dark:text-surface-500': !props.modelValue },
-            'placeholder:text-surface-400 dark:placeholder:text-surface-500',
+            { 'text-surface-800 dark:text-white/80': props.modelValue != undefined, 'text-surface-400 dark:text-surface-500': props.modelValue == undefined },
+            {
+                'placeholder:text-transparent dark:placeholder:text-transparent': parent.instance?.$name == 'FloatLabel',
+                '!text-transparent dark:!text-transparent': (parent.instance?.$name == 'FloatLabel' && props.modelValue == null) || props.modelValue?.length == 0
+            },
+
+            // Sizing and Spacing
+            'w-[1%]',
+            'py-2 px-3',
+            { 'pr-7': props.showClear },
+
+            //Shape
+            'rounded-none',
 
             // Transitions
             'transition',
@@ -63,6 +68,9 @@ export default {
 
             // States
             'focus:outline-none focus:shadow-none',
+
+            // Filled State *for FloatLabel
+            { filled: parent.instance?.$name == 'FloatLabel' && props.modelValue !== null },
 
             // Misc
             'relative',

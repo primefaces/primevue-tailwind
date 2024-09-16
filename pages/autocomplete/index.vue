@@ -15,13 +15,13 @@ import AccessibilityDoc from '@/doc/autocomplete/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/autocomplete/BasicDoc.vue';
 import DisabledDoc from '@/doc/autocomplete/DisabledDoc.vue';
 import DropdownDoc from '@/doc/autocomplete/DropdownDoc.vue';
+import FloatLabelDoc from '@/doc/autocomplete/FloatLabelDoc.vue';
 import ForceSelectionDoc from '@/doc/autocomplete/ForceSelectionDoc.vue';
 import GroupDoc from '@/doc/autocomplete/GroupDoc.vue';
 import ImportDoc from '@/doc/autocomplete/ImportDoc.vue';
 import InvalidDoc from '@/doc/autocomplete/InvalidDoc.vue';
 import MultipleDoc from '@/doc/autocomplete/MultipleDoc.vue';
 import ObjectsDoc from '@/doc/autocomplete/ObjectsDoc.vue';
-// import FloatLabelDoc from '@/doc/autocomplete/FloatLabelDoc.vue';
 // import FilledDoc from '@/doc/autocomplete/FilledDoc.vue';
 import TemplateDoc from '@/doc/autocomplete/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/autocomplete/VirtualScrollDoc.vue';
@@ -75,11 +75,11 @@ export default {
                     label: 'Multiple',
                     component: MultipleDoc
                 },
-                // {
-                //     id: 'floatlabel',
-                //     label: 'Float Label',
-                //     component: FloatLabelDoc
-                // },
+                {
+                    id: 'floatlabel',
+                    label: 'Float Label',
+                    component: FloatLabelDoc
+                },
                 // {
                 //     id: 'filled',
                 //     label: 'Filled',

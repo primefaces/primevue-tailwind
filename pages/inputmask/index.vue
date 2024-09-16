@@ -14,6 +14,7 @@
 import AccessibilityDoc from '@/doc/inputmask/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/inputmask/BasicDoc.vue';
 import DisabledDoc from '@/doc/inputmask/DisabledDoc.vue';
+import FloatLabelDoc from '@/doc/inputmask/FloatLabelDoc.vue';
 import ImportDoc from '@/doc/inputmask/ImportDoc.vue';
 import InvalidDoc from '@/doc/inputmask/InvalidDoc.vue';
 import MaskDoc from '@/doc/inputmask/MaskDoc.vue';
@@ -49,11 +50,11 @@ export default {
                     label: 'SlotChar',
                     component: SlotCharDoc
                 },
-                // {
-                //     id: 'floatlabel',
-                //     label: 'Float Label',
-                //     component: FloatLabelDoc
-                // },
+                {
+                    id: 'floatlabel',
+                    label: 'Float Label',
+                    component: FloatLabelDoc
+                },
                 // {
                 //     id: 'filled',
                 //     label: 'Filled',

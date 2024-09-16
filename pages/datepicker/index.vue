@@ -10,6 +10,7 @@ import DateTemplateDoc from '@/doc/datepicker/DateTemplateDoc.vue';
 import DisabledDoc from '@/doc/datepicker/DisabledDoc.vue';
 // import FilledDoc from '@/doc/datepicker/FilledDoc.vue';
 // import FloatLabelDoc from '@/doc/datepicker/FloatLabelDoc.vue';
+import FloatLabelDoc from '@/doc/datepicker/FloatLabelDoc.vue';
 import FormatDoc from '@/doc/datepicker/FormatDoc.vue';
 import IconDoc from '@/doc/datepicker/IconDoc.vue';
 import ImportDoc from '@/doc/datepicker/ImportDoc.vue';
@@ -103,11 +104,11 @@ export default {
                     label: 'Inline',
                     component: InlineDoc
                 },
-                // {
-                //     id: 'floatlabel',
-                //     label: 'Float Label',
-                //     component: FloatLabelDoc
-                // },
+                {
+                    id: 'floatlabel',
+                    label: 'Float Label',
+                    component: FloatLabelDoc
+                },
                 // {
                 //     id: 'filled',
                 //     label: 'Filled',

@@ -41,7 +41,7 @@ export default {
             'py-1 px-2 gap-2',
 
             // Colors
-            context.selected ? 'bg-highlight text-primary-600 dark:text-white' : 'bg-transparent text-surface-600 dark:text-white/70',
+            context.selected ? 'bg-highlight text-highlight-contrast ' : 'bg-transparent text-surface-600 dark:text-white/70',
 
             // States
             { 'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]': (props.selectionMode == 'single' || props.selectionMode == 'multiple') && !context.selected },
@@ -67,7 +67,7 @@ export default {
             'bg-transparent',
             {
                 'text-surface-600 dark:text-white/70': !context.selected,
-                'text-primary-600 dark:text-white': context.selected,
+                'text-highlight-contrast': context.selected,
                 invisible: context.leaf
             },
 
@@ -90,7 +90,7 @@ export default {
             // Color
             {
                 'text-surface-600 dark:text-white/70': !context.selected,
-                'text-primary-600 dark:text-white': context.selected
+                'text-highlight-contrast': context.selected
             }
         ]
     }),
@@ -98,7 +98,7 @@ export default {
         class: [
             {
                 'text-surface-600 dark:text-white/70': !context.selected,
-                'text-primary-600 dark:text-white': context.selected
+                'text-highlight-contrast': context.selected
             }
         ]
     }),
@@ -108,9 +108,4 @@ export default {
     loadingIcon: {
         class: ['text-surface-500 dark:text-surface-0/70', 'absolute top-[50%] right-[50%] -mt-2 -mr-2 animate-spin']
     }
-    // pcFilterContainer: {
-    //     root: {
-    //         class: '[&>[data-pc-name=inputtext]]:w-full'
-    //     }
-    // }
 };
