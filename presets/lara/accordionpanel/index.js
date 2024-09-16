@@ -4,7 +4,7 @@ export default {
             'flex flex-col border-none',
             {
                 '[&>[data-pc-name=accordionheader]]:select-none [&>[data-pc-name=accordionheader]]:pointer-events-none [&>[data-pc-name=accordionheader]]:cursor-default [&>[data-pc-name=accordionheader]]:opacity-60': props?.disabled,
-                '[&>[data-pc-name=accordionheader]]:text-surface-600 dark:[&>[data-pc-name=accordionheader]]:text-surface-0 hover:[&>[data-pc-name=accordionheader]]:text-surface-100 dark:hover:[&>[data-pc-name=accordionheader]]:text-surface-0':
+                '[&>[data-pc-name=accordionheader]]:text-surface-600 dark:[&>[data-pc-name=accordionheader]]:text-surface-0 hover:[&>[data-pc-name=accordionheader]]:text-surface-700 dark:hover:[&>[data-pc-name=accordionheader]]:text-surface-0':
                     !props.disabled && context.active,
                 '[&>[data-pc-section=toggleicon]]:text-surface-600 dark:[&>[data-pc-section=toggleicon]]:text-surface-0 hover:[&>[data-pc-section=toggleicon]]:text-surface-100 dark:hover:[&>[data-pc-section=toggleicon]]:text-surface-0':
                     !props.disabled && context.active,
