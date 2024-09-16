@@ -1,5 +1,5 @@
 export default {
-    root: ({ props, context, parent }) => ({
+    root: ({ props, context, parent, instance }) => ({
         class: [
             'relative',
 
@@ -17,6 +17,10 @@ export default {
             { 'gap-2': props.label !== null },
             {
                 'w-12 px-0 py-3': props.label == null && props.icon !== null
+            },
+            {
+                'w-12 px-0 gap-0': instance.hasIcon && !props.label && !props.badge,
+                'rounded-[50%] h-12 [&>[data-pc-section=label]]:w-0 [&>[data-pc-section=label]]:invisible': instance.hasIcon && !props.label && !props.badge && props.rounded
             },
 
             // Shapes
