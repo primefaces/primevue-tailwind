@@ -1,6 +1,6 @@
 {
     "name": "primevue-tailwind",
-    "version": "4.0.0-rc.1",
+    "version": "4.0.0-Final-PREVIEW",
     "homepage": "https://tailwind.primevue.org/",
     "repository": {
         "type": "git",
@@ -56,6 +56,7 @@
         "nuxt-gtag": "^0.6.2",
         "primeicons": "^7.0.0",
         "primevue": "^4.0.1",
+        "primevue-tailwind": "file:",
         "tailwindcss": "^3.4.1",
         "tailwindcss-primeui": "^0.3.4"
     }
