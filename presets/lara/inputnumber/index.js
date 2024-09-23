@@ -28,7 +28,7 @@ export default {
                 { 'text-center': parent.props.showButtons && parent.props.buttonLayout == 'vertical' },
 
                 // Spacing
-                'py-2 px-3',
+                'p-3',
                 'm-0',
 
                 // Shape
