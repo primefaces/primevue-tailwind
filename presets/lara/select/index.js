@@ -13,13 +13,14 @@ export default {
 
             // Color and Background
             'bg-surface-0 dark:bg-surface-900',
-
-            'border border-surface-300',
+            'border',
             { 'dark:border-surface-700': parent.instance.$name != 'InputGroup' },
             { 'dark:border-surface-600': parent.instance.$name == 'InputGroup' },
             { 'border-surface-300 dark:border-surface-600': !props.invalid },
 
             // Invalid State
+            'invalid:focus:ring-red-200',
+            'invalid:hover:border-red-500',
             { 'border-red-500 dark:border-red-400': props.invalid },
 
             // Transitions
