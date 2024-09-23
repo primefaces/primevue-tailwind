@@ -92,7 +92,7 @@ export default {
 
             // Colors
             {
-                'text-white dark:text-surface-950': context.checked,
+                'text-primary-contrast': context.checked,
                 'text-primary': state.d_indeterminate
             },
 
