@@ -48,6 +48,8 @@ export default {
                 'cursor-default opacity-60': props.disabled
             },
 
+            { '[&>svg]:text-primary-contrast [&>svg]:w-[0.875rem] [&>svg]:h-[0.875rem]': context.checked },
+
             // Transitions
             'transition-colors',
             'duration-200'

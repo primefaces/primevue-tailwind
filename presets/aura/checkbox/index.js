@@ -51,6 +51,8 @@ export default {
                 'bg-surface-200 dark:bg-surface-700 select-none pointer-events-none cursor-default': props.disabled
             },
 
+            { '[&>svg]:text-primary-contrast [&>svg]:w-[0.875rem] [&>svg]:h-[0.875rem]': context.checked },
+
             // Transitions
             'transition-colors',
             'duration-200'
