@@ -63,7 +63,7 @@ export default {
             'text-surface-700 dark:text-white/80',
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
-                'text-surface-500 dark:text-white/70 bg-surface-200': context.focused && !context.active,
+                'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
                 'bg-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active)
             },
 
