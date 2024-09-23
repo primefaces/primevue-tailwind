@@ -31,11 +31,10 @@ export default {
             'rounded-[4px]',
 
             // Colors
-            'text-surface-700 dark:text-white/80',
             {
                 'text-surface-500 dark:text-white/70': !context.focused && !context.active,
                 'text-surface-500 dark:text-white/70 bg-surface-200 dark:bg-surface-600/90': context.focused && !context.active,
-                'bg-highlight': (context.focused && context.active) || context.active || (!context.focused && context.active)
+                'bg-highlight text-highlight-contrast': (context.focused && context.active) || context.active || (!context.focused && context.active)
             },
 
             // Transitions
@@ -64,9 +63,6 @@ export default {
             'py-2',
             'px-3',
 
-            // Color
-            'text-surface-700 dark:text-white/80',
-
             // Misc
             'no-underline',
             'overflow-hidden',
@@ -77,10 +73,7 @@ export default {
     itemIcon: {
         class: [
             // Spacing
-            'mr-2',
-
-            // Color
-            'text-surface-600 dark:text-white/70'
+            'mr-2'
         ]
     },
     itemLabel: {
