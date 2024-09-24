@@ -159,7 +159,7 @@ export default {
         ]
     },
     separator: {
-        class: 'border-t border-surface-200 dark:border-surface-600 my-1'
+        class: 'border-t border-surface-200 dark:border-surface-600'
     },
     button: {
         class: [

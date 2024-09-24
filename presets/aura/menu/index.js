@@ -26,6 +26,9 @@ export default {
     item: {
         class: 'relative my-[2px] [&:first-child]:mt-0'
     },
+    separator: {
+        class: 'border-t border-surface-200 dark:border-surface-600'
+    },
     itemContent: ({ context }) => ({
         class: [
             //Shape

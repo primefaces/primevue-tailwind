@@ -21,6 +21,9 @@ export default {
             'outline-none'
         ]
     },
+    separator: {
+        class: 'border-t border-surface-200 dark:border-surface-600'
+    },
     itemContent: ({ context }) => ({
         class: [
             //Shape
