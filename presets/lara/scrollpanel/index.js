@@ -1,4 +1,7 @@
 export default {
+    root: {
+        class: ['group']
+    },
     contentContainer: {
         class: [
             // Size & Position
@@ -38,7 +41,8 @@ export default {
             'h-[9px] bottom-0',
 
             // Appearance
-            'bg-surface-50 dark:bg-surface-700 rounded',
+            'bg-surface-100 dark:bg-surface-800 rounded',
+            'opacity-0',
 
             // Interactivity
             'cursor-pointer',
@@ -50,7 +54,9 @@ export default {
             'transition duration-[250ms] ease-linear',
 
             // Misc
-            'relative'
+            'relative',
+
+            'group-hover:opacity-100'
         ]
     },
     barY: {
@@ -59,10 +65,12 @@ export default {
             'w-[9px] top-0',
 
             // Appearance
-            'bg-surface-50 dark:bg-surface-700 rounded',
+            'bg-surface-100 dark:bg-surface-800 rounded',
+            'opacity-0',
 
             // Interactivity
             'cursor-pointer',
+            'focus:outline-none',
 
             // Visibility & Layering
             'z-20',
@@ -71,7 +79,9 @@ export default {
             'transition duration-[250ms] ease-linear',
 
             // Misc
-            'relative'
+            'relative',
+
+            'group-hover:opacity-100'
         ]
     }
 };
