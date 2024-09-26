@@ -334,7 +334,7 @@ export default {
             leaveToClass: 'opacity-0'
         }
     },
-    bodyRow: ({ context, props }) => ({
+    bodyRow: ({ context, props, parent }) => ({
         class: [
             // Color
             'dark:text-white/80',
@@ -345,13 +345,13 @@ export default {
 
             // State
             { 'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 ring-inset dark:focus:ring-primary-300/50': context.selectable },
-            { 'hover:bg-surface-300/20 hover:text-surface-600': props.selectionMode && !context.selected },
+            { 'hover:bg-surface-300/20': (props.selectionMode && !context.selected) || parent.instance.rowHover },
 
             // Transition
             { 'transition duration-200': (props.selectionMode && !context.selected) || props.rowHover },
 
             // Misc
-            { 'cursor-pointer': props.selectionMode }
+            { 'cursor-pointer': props.selectionMode || parent.instance.rowHover }
         ]
     }),
     rowExpansion: {
