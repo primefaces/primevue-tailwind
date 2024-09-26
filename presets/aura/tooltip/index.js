@@ -3,7 +3,6 @@ export default {
         class: [
             // Position and Shadows
             'absolute',
-            'shadow-md',
             'p-fadein',
             // Spacing
             {
@@ -44,6 +43,6 @@ export default {
         ]
     }),
     text: {
-        class: ['p-3', 'bg-surface-700', 'text-white', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words']
+        class: ['p-3', 'bg-surface-700', 'text-white', 'leading-none', 'rounded-md', 'whitespace-pre-line', 'break-words', 'shadow-md']
     }
 };
