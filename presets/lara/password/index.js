@@ -1,7 +1,7 @@
 export default {
     root: ({ props }) => ({
         class: [
-            'relative',
+            'relative [&>input]:w-full',
             { 'flex [&>input]:w-full': props.fluid, 'inline-flex': !props.fluid },
             {
                 'opacity-60 select-none pointer-events-none cursor-default': props.disabled

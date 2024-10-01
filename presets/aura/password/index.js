@@ -1,6 +1,6 @@
 export default {
     root: ({ props }) => ({
-        class: ['relative', { '[&>input]:pr-10': props.toggleMask }, { 'flex [&>input]:w-full': props.fluid, 'inline-flex': !props.fluid }]
+        class: ['relative [&>input]:w-full', { '[&>input]:pr-10': props.toggleMask }, { 'flex [&>input]:w-full': props.fluid, 'inline-flex': !props.fluid }]
     }),
     overlay: {
         class: [
