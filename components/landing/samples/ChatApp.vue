@@ -26,8 +26,8 @@
                     }"
                 >
                     <div class="relative">
-                        <div v-if="chat.active !== undefined" class="absolute top-0 right-0 p-[1px] bg-surface-0 dark:bg-surface-950 rounded-full flex items-center justify-center">
-                            <Badge :severity="chat.active ? 'success' : 'danger'" class="p-1.5"></Badge>
+                        <div v-if="chat.active !== undefined" class="absolute -top- right-0 bg-surface-0 dark:bg-surface-950 rounded-full flex items-center justify-center z-10">
+                            <Badge :severity="chat.active ? 'success' : 'danger'" class=""></Badge>
                         </div>
                         <Avatar
                             v-bind="chat.image ? { image: chat.image } : { label: chat.capName }"

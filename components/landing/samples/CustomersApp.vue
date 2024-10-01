@@ -586,14 +586,27 @@ export default {
 
                 if (!tooltipEl) {
                     tooltipEl = document.createElement('div');
-                    tooltipEl.classList.add('chartjs-tooltip');
+                    tooltipEl.classList.add(
+                        'chartjs-tooltip',
+                        'dark:bg-surface-950',
+                        'bg-surface-0',
+                        'p-2',
+                        'rounded-[8px]',
+                        'overflow-hidden',
+                        'opacity-100',
+                        'absolute',
+                        'transition-all',
+                        'duration-[0.1s]',
+                        'pointer-events-none',
+                        'shadow-[0px_25px_20px_-5px_rgba(0,0,0,0.10),0px_10px_8px_-6px_rgba(0,0,0,0.10)]'
+                    );
                     tooltipEl.style.backgroundColor = backgroundColor;
                     tooltipEl.style.boxShadow =
                         ' 0px 33.12px 9.399px 0px rgba(0, 0, 0, 0.00), 0px 21.036px 8.504px 0px rgba(0, 0, 0, 0.01), 0px 12.084px 7.161px 0px rgba(0, 0, 0, 0.05), 0px 5.371px 5.371px 0px rgba(0, 0, 0, 0.09), 0px 1.343px 2.685px 0px rgba(0, 0, 0, 0.10)';
                     tooltipEl.style.borderRadius = '7px';
                     tooltipEl.style.color = textColor;
                     tooltipEl.style.opacity = 1;
-                    tooltipEl.style.padding = '14.5px';
+                    tooltipEl.style.padding = '12.5px';
                     tooltipEl.style.pointerEvents = 'none';
                     tooltipEl.style.position = 'absolute';
                     tooltipEl.style.transform = 'translate(-50%, 0)';

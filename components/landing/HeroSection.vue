@@ -159,25 +159,13 @@ export default {
             ],
             selectedSampleOption: { icon: 'pi pi-home', title: 'Overview', src: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/sampleshots/overview' }
         };
-    } /*,
-    beforeUnmount() {
-        window.removeEventListener('resize', this.handleResize);
     },
-    mounted() {
-        window.addEventListener('resize', this.handleResize);
-        this.handleResize();
-    },*/,
     methods: {
         setSelectedSampleAppsSidebarNav(title) {
             this.selectedSampleAppsSidebarNav = title;
         },
         isDark() {
             return this.$appState.darkTheme;
-        },
-        handleResize() {
-            if (!this.isSlimMenuSelected || window.innerWidth <= 1400) {
-                this.isSlimMenu = window.innerWidth <= 1400;
-            }
         },
         toggleSlimMenu() {
             this.isSlimMenu = !this.isSlimMenu;

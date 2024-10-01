@@ -94,7 +94,7 @@
                                         :class="[
                                             {
                                                 'pi pi-bitcoin text-yellow-500 !text-3xl': slotProps.data.coin !== 'btc',
-                                                'pi pi-ethereum bg-surface-950 text-surface-0 dark:bg-surface-0 dark:text-surface-950 w-7 h-7 rounded-full flex items-center justify-center': slotProps.data.coin !== 'eth'
+                                                'pi pi-ethereum bg-surface-950 text-surface-0 dark:bg-surface-0 dark:text-surface-950 w-7 h-7 rounded-full !flex items-center justify-center': slotProps.data.coin !== 'eth'
                                             }
                                         ]"
                                     ></i>
