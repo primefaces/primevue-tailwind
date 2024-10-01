@@ -6,14 +6,16 @@
     </div>
 </template>
 
+<script setup>
+definePageMeta({
+    layout: 'custom'
+});
+</script>
+
 <script>
 import HeroSection from '/components/landing/HeroSection.vue';
 export default {
-    setup() {
-        definePageMeta({
-            layout: 'custom'
-        });
-    },
+    layout: 'custom',
     props: {
         theme: {
             type: String,

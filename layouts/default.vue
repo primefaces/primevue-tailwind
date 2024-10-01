@@ -29,7 +29,7 @@ export default {
     watch: {
         $route: {
             immediate: true,
-            handler(to) {
+            handler() {
                 if (!process.client || typeof window === 'undefined') {
                     return;
                 }

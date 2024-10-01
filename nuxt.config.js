@@ -89,5 +89,8 @@ export default defineNuxtConfig({
             }
         ]
     },
-    devtools: { enabled: false }
+    devtools: { enabled: false },
+    layouts: {
+        default: '~/layouts/default.vue'
+    }
 });
