@@ -72,6 +72,9 @@ export default {
                 'hover:bg-highlight-emphasis': context.active
             },
 
+            // Disabled State
+            { 'opacity-60 pointer-events-none cursor-default': context.disabled },
+
             // Transitions
             'transition-all',
             'duration-200'
