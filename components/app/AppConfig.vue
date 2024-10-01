@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import EventBus from '@/layouts/AppEventBus';
+
 export default {
     data() {
         return {
@@ -117,6 +119,8 @@ export default {
             }
 
             this.applyTheme(type, selectedColor.palette, colorName);
+
+            EventBus.emit('config-colors-changed');
         },
         applyTheme(type, colors, colorName) {
             if (colorName === 'noir') {
