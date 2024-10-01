@@ -19,39 +19,37 @@ export default {
     title: {
         class: 'leading-none font-bold'
     },
-    toggler: {
-        class: [
-            // Alignments
-            'inline-flex items-center justify-center',
-            'relative',
-
-            // Sized
-            'w-8 h-8',
-            'm-0 p-0',
-
-            //Shape
-            'border-0 rounded-full',
-
-            //Color
-            'bg-transparent',
-            'text-surface-600 dark:text-surface-0/80',
-
-            // States
-            'hover:text-surface-800 dark:hover:text-surface-0/80',
-            'hover:bg-surface-100 dark:hover:bg-surface-800/80',
-            'focus:outline-none focus:outline-offset-0 focus-visible:ring focus-visible:ring-primary-400/50 focus-visible:ring-inset dark:focus-visible:ring-primary-300/50',
-
-            // Transitions
-            'transition-all duration-200 ease-in-out',
-
-            // Misc
-            'overflow-hidden no-underline',
-            'cursor-pointer'
-        ]
+    pctogglebutton: {
+        root: {
+            class: [
+                // Positioning
+                'relative',
+                // Flexbox alignment
+                'inline-flex items-center justify-center text-center',
+                // Line height
+                'leading-[normal]',
+                // Size
+                'w-12 h-12 px-0 py-[0.625rem]',
+                // Shape
+                'rounded-[50%] rounded-full',
+                // Background and border
+                'bg-transparent border-transparent',
+                // Text color
+                'text-surface-500 dark:text-surface-300',
+                // Focus states
+                'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-surface-400/50 dark:focus:ring-surface-300/50',
+                // Hover effect
+                'hover:bg-surface-300/20',
+                // Transition effects
+                'transition duration-200 ease-in-out',
+                // Cursor and overflow
+                'cursor-pointer overflow-hidden select-none',
+                // Label visibility
+                '[&>[data-pc-section=label]]:w-0 [&>[data-pc-section=label]]:invisible'
+            ]
+        }
     },
-    togglerIcon: {
-        class: 'inline-block'
-    },
+
     content: {
         class: [
             // Spacing

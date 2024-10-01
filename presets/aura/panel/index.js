@@ -29,39 +29,35 @@ export default {
     title: {
         class: 'leading-none font-semibold'
     },
-    toggler: {
-        class: [
-            // Alignments
-            'inline-flex items-center justify-center',
-            'relative',
-
-            // Sized
-            'w-7 h-7',
-            'm-0 p-0',
-
-            //Shape
-            'border-0 rounded-full',
-
-            //Color
-            'bg-transparent',
-            'text-surface-600 dark:text-surface-0/80',
-
-            // States
-            'hover:text-surface-800 dark:hover:text-surface-0',
-            'hover:bg-surface-50 dark:hover:bg-[rgba(255,255,255,0.03)]',
-            'focus:outline-none focus:outline-offset-0 focus-visible:ring-1 focus-visible:ring-primary-400 dark:focus-visible:ring-primary-300',
-
-            // Transitions
-            'transition-all duration-200 ease-in-out',
-
-            // Misc
-            'overflow-hidden no-underline',
-            'cursor-pointer'
-        ]
+    pctogglebutton: {
+        root: {
+            class: [
+                // Positioning
+                'relative',
+                // Flexbox alignment
+                'inline-flex items-center justify-center text-center',
+                // Line height
+                'leading-[normal]',
+                // Size
+                'w-10 h-10 px-0 py-2',
+                // Shape
+                'rounded-[50%] rounded-full',
+                // Background and border
+                'bg-transparent border-transparent',
+                // Text color
+                'text-surface-500 dark:text-surface-300',
+                // Focus states
+                'focus:outline-none focus:outline-offset-0 focus:ring-1 focus:ring-surface-500 dark:focus:ring-surface-400',
+                // Hover effect
+                'hover:bg-surface-300/10',
+                // Transition effects
+                'transition duration-200 ease-in-out',
+                // Cursor and overflow
+                'cursor-pointer overflow-hidden select-none'
+            ]
+        }
     },
-    togglerIcon: {
-        class: 'inline-block w-4 h-4'
-    },
+
     content: {
         class: [
             // Spacing
