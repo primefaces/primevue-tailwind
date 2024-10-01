@@ -8,7 +8,7 @@
                     <span>Get Started </span>
                     <i class="pi pi-arrow-right ml-4"></i>
                 </NuxtLink>
-                <a href="https://github.com/primefaces/primevue" target="_blank" rel="noopener noreferrer" class="linkbox">
+                <a href="https://github.com/primefaces/primevue-tailwind" target="_blank" rel="noopener noreferrer" class="linkbox">
                     <span>Give a Star</span>
                     <i class="pi pi-star-fill ml-4 text-yellow-500"></i>
                 </a>
