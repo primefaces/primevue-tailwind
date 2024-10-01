@@ -323,7 +323,7 @@ export default {
             };
         },
         setChartOptions() {
-            const darkMode = this.isDarkMode;
+            const darkMode = this.$appState.darkMode;
             const documentStyle = getComputedStyle(document.documentElement);
             const surface100 = documentStyle.getPropertyValue('--p-surface-100');
             const surface900 = documentStyle.getPropertyValue('--p-surface-900');
@@ -459,6 +459,14 @@ export default {
                             display: false
                         }
                     }
+                },
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                hover: {
+                    mode: 'index',
+                    intersect: false
                 }
             };
         },
@@ -473,6 +481,92 @@ export default {
                 surface700: documentStyle.getPropertyValue('--p-surface-700'),
                 surface900: documentStyle.getPropertyValue('--p-surface-900')
             };
+        },
+        externalTooltipHandler(context) {
+            const { chart, tooltip } = context;
+            let tooltipEl = chart.canvas.parentNode.querySelector('div.chartjs-tooltip');
+
+            if (!tooltipEl) {
+                tooltipEl = document.createElement('div');
+                tooltipEl.classList.add(
+                    'chartjs-tooltip',
+                    'dark:bg-surface-950',
+                    'bg-surface-0',
+                    'p-3',
+                    'rounded-[8px]',
+                    'overflow-hidden',
+                    'opacity-100',
+                    'absolute',
+                    'transition-all',
+                    'duration-[0.1s]',
+                    'pointer-events-none',
+                    'shadow-[0px_25px_20px_-5px_rgba(0,0,0,0.10),0px_10px_8px_-6px_rgba(0,0,0,0.10)]'
+                );
+                chart.canvas.parentNode.appendChild(tooltipEl);
+            }
+
+            if (tooltip.opacity === 0) {
+                tooltipEl.style.opacity = 0;
+
+                return;
+            }
+
+            tooltipEl.innerHTML = '';
+            const tooltipBody = document.createElement('div');
+
+            tooltipBody.classList.add('flex', 'flex-col', 'gap-4', 'px-3', 'py-3', 'min-w-[18rem]');
+
+            const datasets = chart.data.datasets;
+            const dataIndex = tooltip.dataPoints[0].dataIndex;
+
+            datasets.forEach((dataset, i) => {
+                const row = document.createElement('div');
+
+                row.classList.add('flex', 'items-center', 'gap-2', 'w-full');
+
+                const point = document.createElement('div');
+
+                point.classList.add('w-2.5', 'h-2.5', 'rounded-full');
+                point.style.backgroundColor = dataset.backgroundColor;
+                row.appendChild(point);
+
+                const label = document.createElement('span');
+
+                label.appendChild(document.createTextNode(dataset.label || ''));
+                label.classList.add('text-base', 'font-medium', 'text-color', 'flex-1', 'text-left', 'capitalize');
+                row.appendChild(label);
+
+                const value = document.createElement('span');
+                const dataValue = dataset.data[dataIndex];
+
+                value.appendChild(document.createTextNode(dataValue !== undefined ? dataValue.toLocaleString() : ''));
+                value.classList.add('text-base', 'font-medium', 'text-color', 'text-right');
+                row.appendChild(value);
+
+                tooltipBody.appendChild(row);
+            });
+
+            tooltipEl.appendChild(tooltipBody);
+
+            const { offsetLeft: positionX, offsetTop: positionY } = chart.canvas;
+            const tooltipWidth = tooltipEl.offsetWidth;
+            const tooltipHeight = tooltipEl.offsetHeight;
+
+            let tooltipX = positionX + tooltip.caretX;
+            let tooltipY = positionY + tooltip.caretY;
+
+            // Ensure tooltip is within chart boundaries
+            if (tooltipX + tooltipWidth > chart.width) {
+                tooltipX = chart.width - tooltipWidth;
+            }
+
+            if (tooltipY + tooltipHeight > chart.height) {
+                tooltipY = chart.height - tooltipHeight;
+            }
+
+            tooltipEl.style.opacity = 1;
+            tooltipEl.style.left = tooltipX + 'px';
+            tooltipEl.style.top = tooltipY + 'px';
         }
     },
     components: {}
