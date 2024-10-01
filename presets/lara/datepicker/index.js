@@ -259,7 +259,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.selected && !context.disabled,
-                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
+                'hover:bg-highlight-emphasis': context.selected && !context.disabled
             },
             {
                 'opacity-60 cursor-default': context.disabled,
@@ -295,7 +295,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.selected && !context.disabled,
-                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
+                'hover:bg-highlight-emphasis': context.selected && !context.disabled
             },
 
             // Misc
@@ -330,7 +330,7 @@ export default {
             'focus:outline-none focus:outline-offset-0 focus:ring focus:ring-primary-400/50 dark:focus:ring-primary-300/50',
             {
                 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.selected && !context.disabled,
-                'hover:bg-primary-highlight-hover': context.selected && !context.disabled
+                'hover:bg-highlight-emphasis': context.selected && !context.disabled
             },
 
             // Misc
