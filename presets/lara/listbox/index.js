@@ -19,7 +19,7 @@ export default {
     list: {
         class: 'py-3 list-none m-0 outline-none'
     },
-    option: ({ context }) => ({
+    option: ({ context, props }) => ({
         class: [
             'relative',
 
@@ -46,12 +46,13 @@ export default {
                 'text-surface-700 dark:text-white/80': !context.focused && !context.selected,
                 'bg-surface-200 dark:bg-surface-600/60': context.focused && !context.selected,
                 'text-surface-700 dark:text-white/80': context.focused && !context.selected,
-                'bg-highlight': context.selected
+                'bg-highlight': context.selected && !props.checkmark,
+                'bg-surface-0 dark:bg-surface-900': props.checkmark && context.selected
             },
 
             //States
-            { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': !context.focused && !context.selected },
-            { 'hover:bg-highlight-emphasis': context.selected },
+            { 'hover:bg-surface-100 dark:hover:bg-surface-600/80': (!context.focused && !context.selected) || (props.checkmark && context.selected) },
+            { 'hover:bg-highlight-emphasis': context.selected && !props.checkmark },
             'focus-visible:outline-none focus-visible:outline-offset-0 focus-visible:ring focus-visible:ring-inset focus-visible:ring-primary-400/50 dark:focus-visible:ring-primary-300/50',
 
             // Transitions
