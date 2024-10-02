@@ -706,7 +706,7 @@ export default {
             };
         },
         setLineChartData() {
-            const darkMode = this.$appState.darkTheme;
+            const darkMode = this.$appState.darkMode;
 
             return {
                 labels: ['31', '1', '2', '3', '4', '5', '6', '7', '8'],
@@ -779,7 +779,7 @@ export default {
             };
         },
         setLineChartOptions() {
-            const darkMode = this.$appState.darkTheme;
+            const darkMode = this.$appState.darkMode;
             const documentStyle = getComputedStyle(document.documentElement);
 
             const backgroundColor = documentStyle.getPropertyValue('--p-content-background');

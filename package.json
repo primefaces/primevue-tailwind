@@ -55,7 +55,7 @@
         "nuxt": "3.12.1",
         "nuxt-gtag": "^0.6.2",
         "primeicons": "^7.0.0",
-        "primevue": "^4.0.1",
+        "primevue": "^4.0.7",
         "primevue-tailwind": "file:",
         "tailwindcss": "^3.4.1",
         "tailwindcss-primeui": "^0.3.4"

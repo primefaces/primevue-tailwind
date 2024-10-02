@@ -16,7 +16,7 @@
                 <span class="uppercase tracking-wider font-medium text-surface text-xs !leading-none lg:text-sm">Powered by Tailwind CSS</span>
             </div>
             <h1 class="text-5xl font-bold text-center leading-tight max-w-3xl my-3">
-                Next-Level Customizable Component Library by
+                A New Era of Customizable Component Libraries by
                 <a href="https://primevue.org/" target="_blank" rel="noopener noreferrer" class="font-bold text-primary hover:text-primary-emphasis">
                     <span>PrimeVue</span>
                 </a>
@@ -186,7 +186,7 @@ export default {
             this.selectedSampleAppsSidebarNav = title;
         },
         isDark() {
-            return this.$appState.darkTheme;
+            return this.$appState.darkMode;
         },
         toggleSlimMenu() {
             this.isSlimMenu = !this.isSlimMenu;

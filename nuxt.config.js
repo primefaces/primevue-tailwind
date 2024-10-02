@@ -66,9 +66,7 @@ export default defineNuxtConfig({
                     'data-manual': true
                 }
             ],
-            htmlAttrs: {
-                class: 'p-noir'
-            }
+            htmlAttrs: {}
         }
     },
     gtag: {

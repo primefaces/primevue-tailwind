@@ -7,7 +7,7 @@ const $appStatePlugin = {
     install: (app) => {
         const _appState = reactive({
             preset: 'Aura',
-            primary: 'noir',
+            primary: 'emerald',
             surface: null,
             darkMode: false,
             codeSandbox: false,

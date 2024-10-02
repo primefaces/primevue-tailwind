@@ -81,7 +81,7 @@
                 </li>
                 <li>
                     <button type="button" class="topbar-item" @click="toggleDarkMode">
-                        <i :class="['pi', { 'pi-moon': $appState.darkTheme, 'pi-sun': !$appState.darkTheme }]"></i>
+                        <i :class="['pi', { 'pi-moon': $appState.darkMode, 'pi-sun': !$appState.darkMode }]"></i>
                     </button>
                 </li>
                 <li class="relative">
