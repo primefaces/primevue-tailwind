@@ -11,6 +11,7 @@ export default {
 
             // Size
             { 'w-full': props.multiple },
+            { '[&>input]:!rounded-r-none': props.dropdown },
 
             // Color
             'text-surface-900 dark:text-surface-0',
