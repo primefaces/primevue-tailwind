@@ -13,18 +13,24 @@
                 <InputText v-model="search" placeholder="Search" />
             </IconField>
             <div class="flex items-center gap-3">
-                <Button icon="pi pi-filter" outlined severity="secondary" />
+                <Button icon="pi pi-filter" outlined severity="secondary" class="!border-surface" />
                 <Divider layout="vertical" class="m-0" />
-                <Button icon="pi pi-refresh" outlined severity="secondary" />
-                <Button label="1 of 15" outlined severity="secondary" />
-                <Button icon="pi pi-chevron-left" outlined severity="secondary" />
-                <Button icon="pi pi-chevron-right" outlined severity="secondary" />
+                <Button icon="pi pi-refresh" outlined severity="secondary" class="!border-surface" />
+                <Button label="1 of 15" outlined severity="secondary" class="!border-surface" />
+                <Button icon="pi pi-chevron-left" outlined severity="secondary" class="!border-surface" />
+                <Button icon="pi pi-chevron-right" outlined severity="secondary" class="!border-surface" />
             </div>
         </div>
         <div class="flex-1 last:[&>td]:border-0 rounded-lg border border-surface w-full overflow-auto">
-            <DataTable v-model:selection="selectedRows" selectionMode="multiple" :value="tableData" :rows="10">
+            <DataTable
+                v-model:selection="selectedRows"
+                :value="tableData"
+                :rows="10"
+                dataKey="id"
+                class="w-full [&>[data-pc-section=tablecontainer]>table>thead>tr>th]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody>tr:not([data-p-selected=true])]:!bg-transparent"
+            >
                 <template #empty>There is no customer.</template>
-                <Column selectionMode="multiple" headerStyle="width: 1rem" style="width: 1rem"></Column>
+                <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
                 <Column field="name" header="Name">
                     <template #body="{ data }">
                         <div class="flex items-center">
@@ -37,7 +43,7 @@
                                     class="rounded-md overflow-hidden flex"
                                 />
                             </OverlayBadge>
-                            <div class="ml-4 leading-6 text-color font-medium">{{ data.name }}</div>
+                            <div class="ml-4 leading-6 font-medium">{{ data.name }}</div>
                         </div>
                     </template>
                 </Column>
@@ -56,12 +62,12 @@
                 </Column>
                 <Column field="email" header="Email Address">
                     <template #body="{ data }">
-                        <div class="leading-6 text-muted-color truncate">{{ data.email }}</div>
+                        <div class="leading-6 truncate">{{ data.email }}</div>
                     </template>
                 </Column>
                 <Column field="lead" header="Lead Source">
                     <template #body="{ data }">
-                        <div class="leading-6 text-muted-color">{{ data.lead }}</div>
+                        <div class="leading-6">{{ data.lead }}</div>
                     </template>
                 </Column>
                 <Column field="status" header="Status">
@@ -101,7 +107,7 @@
                         <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="large" class="rounded-xl overflow-hidden" />
                         <div class="flex-1">
                             <div class="leading-6 text-color font-medium">Brook Simmons</div>
-                            <div class="mt-1 leading-5 text-muted-color text-sm">Sales Executive</div>
+                            <div class="mt-1 leading-5 text-sm">Sales Executive</div>
                         </div>
                         <Button icon="pi pi-sign-out" text rounded severity="secondary" />
                     </div>
@@ -693,17 +699,8 @@ export default {
                         }
                     },
                     y: {
-                        border: {
-                            display: false
-                        },
-                        stacked: true,
-                        ticks: {
-                            color: textMutedColor
-                        },
-                        grid: {
-                            color: borderColor,
-                            borderColor: 'transparent'
-                        }
+                        display: false,
+                        grace: 14
                     }
                 }
             };

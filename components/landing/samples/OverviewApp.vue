@@ -10,7 +10,7 @@
                     <InputIcon class="pi pi-search"> </InputIcon>
                     <InputText placeholder="Search" />
                 </IconField>
-                <Button severity="secondary" outlined>
+                <Button severity="secondary" outlined class="!border-surface">
                     <OverlayBadge
                         severity="danger"
                         :pt="{
@@ -62,17 +62,7 @@
                         paginatorTemplate="PrevPageLink PageLinks NextPageLink  CurrentPageReport RowsPerPageDropdown"
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
                         pt:pcpaginator:root="!bg-transparent"
-                        :dt="{
-                            header: {
-                                background: 'transparent'
-                            },
-                            headerCell: {
-                                background: 'transparent'
-                            },
-                            row: {
-                                background: 'transparent'
-                            }
-                        }"
+                        class="[&>[data-pc-section=tablecontainer]>table>thead>tr>th]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody>tr]:!bg-transparent"
                     >
                         <Column header="Id" class="w-1/12">
                             <template #body="slotProps">

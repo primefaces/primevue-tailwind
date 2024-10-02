@@ -154,9 +154,10 @@ export default {
             'leading-none',
 
             // Color
-            'text-surface-500 dark:text-white/80',
+            '',
             {
-                'bg-highlight': context.active
+                'bg-highlight text-highlight-contrast ': context.active,
+                'text-surface-500 dark:text-white/80': !context.active
             },
 
             // State

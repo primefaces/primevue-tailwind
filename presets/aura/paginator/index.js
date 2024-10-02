@@ -154,9 +154,9 @@ export default {
             'leading-none',
 
             // Color
-            'text-surface-500 dark:text-white/60',
             {
-                'bg-highlight border-highlight text-highlight-contrast hover:bg-highlight-emphasis ': context.active
+                'bg-highlight text-highlight-contrast border-highlight text-highlight-contrast hover:bg-highlight-emphasis ': context.active,
+                'text-surface-500 dark:text-white/60': !context.active
             },
 
             // State

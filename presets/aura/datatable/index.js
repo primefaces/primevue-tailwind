@@ -341,9 +341,8 @@ export default {
     bodyRow: ({ context, props, parent }) => ({
         class: [
             // Color
-            'dark:text-white/80',
             { 'bg-highlight': context.selected },
-            { 'bg-surface-0 text-surface-600 dark:bg-surface-900': !context.selected },
+            { 'bg-surface-0 text-surface-600 dark:text-white/80 dark:bg-surface-900': !context.selected },
             { 'font-bold bg-surface-0 dark:bg-surface-900 z-20': props.frozenRow },
             { 'odd:bg-surface-0 odd:text-surface-600 dark:odd:bg-surface-900 even:bg-surface-50 even:text-surface-600 dark:even:bg-surface-800/50': context.stripedRows },
             // State

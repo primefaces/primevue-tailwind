@@ -33,33 +33,39 @@
             </div>
         </div>
         <div class="flex-1 h-full overflow-hidden flex border border-t-0 border-surface rounded-2xl">
-            <DataTable v-model:selection="selectedRows" scrollable selectionMode="multiple" :value="tableData" :rows="10" class="w-full">
+            <DataTable
+                v-model:selection="selectedRows"
+                :value="tableData"
+                dataKey="id"
+                :rows="10"
+                class="w-full [&>[data-pc-section=tablecontainer]>table>thead>tr>th]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody>tr:not([data-p-selected=true])]:!bg-transparent"
+            >
                 <template #header>
                     <div class="flex xl:items-center justify-between gap-2 flex-col xl:flex-row">
                         <div class="flex items-center gap-2">
-                            <Checkbox :binary="true" class="mr-1" />
-                            <Button icon="pi pi-envelope" outlined severity="secondary" />
-                            <Button icon="pi pi-exclamation-circle" outlined severity="secondary" />
-                            <Button icon="pi pi-tag" outlined severity="secondary" />
-                            <Button icon="pi pi-inbox" label="Archive" outlined severity="secondary" />
-                            <Button icon="pi pi-trash" label="Trash" outlined severity="secondary" />
+                            <Checkbox v-model="selectAll" :binary="true" @change="onSelectAllChange" class="mr-1" />
+                            <Button icon="pi pi-envelope" outlined severity="secondary" class="!border-surface" />
+                            <Button icon="pi pi-exclamation-circle" outlined severity="secondary" class="!border-surface" />
+                            <Button icon="pi pi-tag" outlined severity="secondary" class="!border-surface" />
+                            <Button icon="pi pi-inbox" label="Archive" outlined severity="secondary" class="!border-surface" />
+                            <Button icon="pi pi-trash" label="Trash" outlined severity="secondary" class="!border-surface" />
                         </div>
                         <div class="flex items-center gap-2">
                             <IconField iconPosition="left" class="w-6/12 xl:max-w-36">
                                 <InputIcon class="pi pi-search"> </InputIcon>
                                 <InputText v-model="search" placeholder="Search" class="w-full" />
                             </IconField>
-                            <Button icon="pi pi-filter" outlined severity="secondary" />
+                            <Button icon="pi pi-filter" outlined severity="secondary" class="!border-surface" />
                             <Divider layout="vertical" class="m-0" />
-                            <Button icon="pi pi-refresh" outlined severity="secondary" />
-                            <Button label="1 of 15" class="!whitespace-nowrap" outlined severity="secondary" />
-                            <Button icon="pi pi-chevron-left" outlined severity="secondary" />
-                            <Button icon="pi pi-chevron-right" outlined severity="secondary" />
+                            <Button icon="pi pi-refresh" outlined severity="secondary" class="!border-surface" />
+                            <Button label="1 of 15" class="!whitespace-nowrap !border-surface" outlined severity="secondary" />
+                            <Button icon="pi pi-chevron-left" outlined severity="secondary" class="!border-surface" />
+                            <Button icon="pi pi-chevron-right" outlined severity="secondary" class="!border-surface" />
                         </div>
                     </div>
                 </template>
+                <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
                 <template #empty>Inbox is empty.</template>
-                <Column selectionMode="multiple" headerStyle="width: 1rem" style="width: 1rem"></Column>
                 <Column field="bookmarked" header="" headerStyle="width: 1rem" style="width: 1rem; padding: 0.5rem">
                     <template #body="{ data }">
                         <div @click="data.bookmarked = !data.bookmarked" @click.stop>
@@ -93,7 +99,7 @@
                 </Column>
                 <Column field="type" header="" style="width: 4rem">
                     <template #body="{ data }">
-                        <Tag v-if="data.type" severity="secondary" :value="data.type" class="font-medium"></Tag>
+                        <Tag v-if="data.type" severity="contrast" :value="data.type" class="font-medium"></Tag>
                     </template>
                 </Column>
                 <Column field="time" header="" style="width: 4rem">
@@ -109,7 +115,6 @@
 <script>
 export default {
     name: 'Inbox',
-    redrawListener: null,
     data() {
         return {
             search: '',
@@ -311,10 +316,23 @@ export default {
                     message: "Dear user, we've updated our Terms of Service. Please review the changes to ensure compliance. Your continued use of our services implies acceptance. Thank you."
                 }
             ],
-            selectedRows: []
+            selectedRows: [],
+            selectAll: false
         };
     },
-    methods: {},
+    watch: {
+        selectedRows: {
+            handler(newValue) {
+                this.selectAll = newValue.length === this.tableData.length;
+            },
+            deep: true
+        }
+    },
+    methods: {
+        onSelectAllChange(event) {
+            this.selectedRows = event.checked ? [...this.tableData] : [];
+        }
+    },
     components: {}
 };
 </script>

@@ -1,8 +1,29 @@
 <template>
     <section class="landing-hero py-20 px-8 lg:px-20">
         <div class="flex flex-col items-center">
-            <h1 class="text-5xl font-bold text-center leading-tight max-w-2xl">Tailwind CSS Based UI Component Library for <span class="font-bold text-primary">Vue.js</span></h1>
-            <p class="text-center mt-0 mb-8 text-surface-500 dark:text-surface-400 font-medium text-xl leading-relaxed lg:px-56">Build your own UI library with the flexibility of Tailwind CSS and the convenience of PrimeVue components.</p>
+            <div
+                class="select-none flex items-center gap-2.5 px-2.5 lg:px-3 py-2 rounded-full border border-surface-200 dark:border-surface-700/50 mt-4 mb-2 lg:mb-4 bg-gradient-to-b from-surface-0 to-surface-100/75 dark:from-surface-900/50 dark:to-surface-800/50"
+            >
+                <svg class="h-3 lg:h-4 w-auto" viewBox="0 0 36 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M17.606 0.740875C12.9108 0.740875 9.977 3.07436 8.80267 7.74134C10.5635 5.40785 12.6175 4.53296 14.9648 5.11599C16.304 5.44856 17.2617 6.41452 18.3208 7.48398C20.0471 9.22547 22.0453 11.2409 26.4087 11.2409C31.1033 11.2409 34.0377 8.90739 35.2114 4.24111C33.4512 6.57459 31.3972 7.44948 29.0499 6.86576C27.71 6.53319 26.7523 5.56723 25.6932 4.49847C23.9669 2.75559 21.9694 0.740875 17.606 0.740875ZM8.80267 11.2409C4.1081 11.2409 1.17364 13.5744 0 18.2413C1.76081 15.9078 3.81486 15.033 6.16145 15.616C7.50138 15.9486 8.45906 16.9145 9.51817 17.984C11.2445 19.7255 13.242 21.7409 17.606 21.7409C22.3006 21.7409 25.2351 19.4081 26.4087 14.7411C24.6479 17.0746 22.5938 17.9495 20.2465 17.3665C18.9073 17.0332 17.9496 16.0672 16.8905 14.9985C15.1642 13.257 13.1661 11.2409 8.80267 11.2409Z"
+                        fill="#38BDF8"
+                    />
+                    <path fill="#38BDF8" />
+                </svg>
+                <span class="uppercase tracking-wider font-medium text-surface text-xs !leading-none lg:text-sm">Powered by Tailwind CSS</span>
+            </div>
+            <h1 class="text-5xl font-bold text-center leading-tight max-w-3xl my-3">
+                Next-Level Customizable Component Library by
+                <a href="https://primevue.org/" target="_blank" rel="noopener noreferrer" class="font-bold text-primary hover:text-primary-emphasis">
+                    <span>PrimeVue</span>
+                </a>
+            </h1>
+            <p class="text-center mt-0 mb-8 text-surface-500 dark:text-surface-400 font-medium text-xl leading-relaxed lg:px-56 max-w-[1200px]">
+                Create your own design system with the efficiency of Tailwind CSS and the flexibility of PrimeVue Unstyled components.
+            </p>
             <div class="flex items-center gap-4">
                 <NuxtLink to="/overview" class="linkbox linkbox-primary">
                     <span>Get Started </span>
