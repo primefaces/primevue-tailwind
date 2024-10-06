@@ -1,5 +1,3 @@
-import path from 'path';
-
 const baseUrl = '/';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -30,11 +28,8 @@ export default defineNuxtConfig({
     },
     primevue: {
         options: {
-            unstyled: true
-        },
-        autoImport: true,
-        importPT: { from: path.resolve(__dirname, './presets/aura/') }
-        // importPT: { as: 'Aura', from: '~/presets/aura' } for Windows Users
+            theme: 'none'
+        }
     },
     app: {
         baseURL: baseUrl,
@@ -75,6 +70,7 @@ export default defineNuxtConfig({
     css: ['~/assets/styles/style.css', '/node_modules/primeicons/primeicons.css', '@/assets/styles/flags.css', '@docsearch/css/dist/style.css', '@/assets/styles/layout/layout.scss'],
     postcss: {
         plugins: {
+            'postcss-import': {},
             tailwindcss: {},
             autoprefixer: {}
         }
