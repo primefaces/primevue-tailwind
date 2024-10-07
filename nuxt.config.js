@@ -21,6 +21,13 @@ export default defineNuxtConfig({
         esbuild: {
             minifyIdentifiers: false,
             minifyWhitespace: false
+        },
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    silenceDeprecations: ['legacy-js-api'] //@todo
+                }
+            }
         }
     },
     runtimeConfig: {
