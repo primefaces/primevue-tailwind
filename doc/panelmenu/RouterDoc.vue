@@ -34,12 +34,12 @@ export default {
                         {
                             label: 'Styled',
                             icon: 'pi pi-eraser',
-                            route: '/theming/styled'
+                            route: '/overview'
                         },
                         {
                             label: 'Unstyled',
                             icon: 'pi pi-heart',
-                            route: '/theming/unstyled'
+                            route: '/overview'
                         }
                     ]
                 },
@@ -118,12 +118,12 @@ export default {
                         {
                             label: 'Styled',
                             icon: 'pi pi-eraser',
-                            route: '/theming/styled'
+                            route: '/overview'
                         },
                         {
                             label: 'Unstyled',
                             icon: 'pi pi-heart',
-                            route: '/theming/unstyled'
+                            route: '/overview'
                         }
                     ]
                 },
@@ -191,12 +191,12 @@ const items = ref([
             {
                 label: 'Styled',
                 icon: 'pi pi-eraser',
-                route: '/theming/styled'
+                route: '/overview'
             },
             {
                 label: 'Unstyled',
                 icon: 'pi pi-heart',
-                route: '/theming/unstyled'
+                route: '/overview'
             }
         ]
     },

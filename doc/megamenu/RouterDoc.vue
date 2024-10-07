@@ -59,8 +59,8 @@ export default {
                             {
                                 label: 'Router',
                                 items: [
-                                    { label: 'Theming', route: '/theming/styled' },
-                                    { label: 'Unstyled', route: '/theming/unstyled' }
+                                    { label: 'Theming', route: '/overview' },
+                                    { label: 'Unstyled', route: '/overview' }
                                 ]
                             }
                         ],
@@ -135,8 +135,8 @@ const items = ref([
                 {
                     label: 'Router',
                     items: [
-                        { label: 'Theming', route: '/theming/styled' },
-                        { label: 'Unstyled', route: '/theming/unstyled' }
+                        { label: 'Theming', route: '/overview' },
+                        { label: 'Unstyled', route: '/overview' }
                     ]
                 }
             ],

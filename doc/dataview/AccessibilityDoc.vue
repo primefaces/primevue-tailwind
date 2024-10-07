@@ -3,7 +3,7 @@
         <h3>Screen Reader</h3>
         <p>
             The container element that wraps the layout options buttons has a <i>group</i> role whereas each button element uses <i>button</i> role and <i>aria-pressed</i> is updated depending on selection state. Values to describe the buttons are
-            derived from the <i>aria.listView</i> and <i>aria.gridView</i> properties of the <NuxtLink to="/configuration/#locale">locale</NuxtLink> API respectively.
+            derived from the <i>aria.listView</i> and <i>aria.gridView</i> properties of the <a href="https://primevue.org/configuration/#locale" target="_blank" rel="noopener noreferrer">locale</a> API respectively.
         </p>
 
         <p>Refer to <PrimeVueNuxtLink to="/paginator">paginator</PrimeVueNuxtLink> accessibility documentation for the paginator of the component.</p>

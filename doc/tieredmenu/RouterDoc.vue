@@ -33,11 +33,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/theming/styled'
+                            route: '/overview'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/theming/unstyled'
+                            route: '/overview'
                         }
                     ]
                 },
@@ -113,11 +113,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/theming/styled'
+                            route: '/overview'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/theming/unstyled'
+                            route: '/overview'
                         }
                     ]
                 },
@@ -182,11 +182,11 @@ const items = ref([
         items: [
             {
                 label: 'Styled',
-                route: '/theming/styled'
+                route: '/overview'
             },
             {
                 label: 'Unstyled',
-                route: '/theming/unstyled'
+                route: '/overview'
             }
         ]
     },
