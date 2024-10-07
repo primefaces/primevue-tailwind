@@ -6,7 +6,7 @@
 import AccessibilityDoc from '@/doc/listbox/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/listbox/BasicDoc.vue';
 import CheckmarkDoc from '@/doc/listbox/CheckmarkDoc.vue';
-// import DisabledDoc from '@/doc/listbox/DisabledDoc.vue';
+import DisabledDoc from '@/doc/listbox/DisabledDoc.vue';
 import FilterDoc from '@/doc/listbox/FilterDoc.vue';
 import GroupDoc from '@/doc/listbox/GroupDoc.vue';
 import ImportDoc from '@/doc/listbox/ImportDoc.vue';
@@ -64,11 +64,11 @@ export default {
                     label: 'Invalid',
                     component: InvalidDoc
                 },
-                // {
-                //     id: 'disabled',
-                //     label: 'Disabled',
-                //     component: DisabledDoc
-                // },
+                {
+                    id: 'disabled',
+                    label: 'Disabled',
+                    component: DisabledDoc
+                },
                 {
                     id: 'accessibility',
                     label: 'Accessibility',

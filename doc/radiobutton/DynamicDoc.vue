@@ -3,7 +3,7 @@
         <p>RadioButtons can be generated using a list of values.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-4">
             <div v-for="category in categories" :key="category.key" class="flex items-center">
                 <RadioButton v-model="selectedCategory" :inputId="category.key" name="dynamic" :value="category.name" />
                 <label :for="category.key" class="ml-2">{{ category.name }}</label>
@@ -30,12 +30,11 @@ export default {
     <RadioButton v-model="selectedCategory" :inputId="category.key" name="dynamic" :value="category.name" />
     <label :for="category.key" class="ml-2">{{ category.name }}</label>
 </div>
-
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-4">
             <div v-for="category in categories" :key="category.key" class="flex items-center">
                 <RadioButton v-model="selectedCategory" :inputId="category.key" name="dynamic" :value="category.name" />
                 <label :for="category.key" class="ml-2">{{ category.name }}</label>
@@ -63,7 +62,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-4">
             <div v-for="category in categories" :key="category.key" class="flex items-center">
                 <RadioButton v-model="selectedCategory" :inputId="category.key" name="dynamic" :value="category.name" />
                 <label :for="category.key" class="ml-2">{{ category.name }}</label>

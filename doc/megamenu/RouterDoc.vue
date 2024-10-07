@@ -14,12 +14,12 @@ export default {
 <MegaMenu :model="items">
     <template #item="{ item }">
         <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-            <a :href="href" @click="navigate">
+            <a v-ripple :href="href" @click="navigate">
                 <span :class="item.icon" />
                 <span class="ml-2">{{ item.label }}</span>
             </a>
         </router-link>
-        <a v-else :href="item.url" :target="item.target">
+        <a v-else v-ripple :href="item.url" :target="item.target">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
         </a>
@@ -32,12 +32,12 @@ export default {
         <MegaMenu :model="items">
             <template #item="{ item }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" @click="navigate">
+                    <a v-ripple :href="href" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target">
+                <a v-else v-ripple :href="item.url" :target="item.target">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
@@ -59,8 +59,8 @@ export default {
                             {
                                 label: 'Router',
                                 items: [
-                                    { label: 'Theming', route: '/overview' },
-                                    { label: 'Unstyled', route: '/overview' }
+                                    { label: 'Theming', route: '/theming/styled' },
+                                    { label: 'Unstyled', route: '/theming/unstyled' }
                                 ]
                             }
                         ],
@@ -106,12 +106,12 @@ export default {
         <MegaMenu :model="items">
             <template #item="{ item }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" @click="navigate">
+                    <a v-ripple :href="href" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target">
+                <a v-else v-ripple :href="item.url" :target="item.target">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
@@ -135,8 +135,8 @@ const items = ref([
                 {
                     label: 'Router',
                     items: [
-                        { label: 'Theming', route: '/overview' },
-                        { label: 'Unstyled', route: '/overview' }
+                        { label: 'Theming', route: '/theming/styled' },
+                        { label: 'Unstyled', route: '/theming/unstyled' }
                     ]
                 }
             ],

@@ -3,7 +3,7 @@
         <p>Two-way value binding is defined using <i>v-model</i>.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-4">
             <div class="flex items-center">
                 <RadioButton v-model="ingredient" inputId="ingredient1" name="pizza" value="Cheese" />
                 <label for="ingredient1" class="ml-2">Cheese</label>
@@ -32,7 +32,7 @@ export default {
             ingredient: '',
             code: {
                 basic: `
-<div class="flex flex-wrap gap-3">
+<div class="flex flex-wrap gap-4">
     <div class="flex items-center">
         <RadioButton v-model="ingredient" inputId="ingredient1" name="pizza" value="Cheese" />
         <label for="ingredient1" class="ml-2">Cheese</label>
@@ -54,7 +54,7 @@ export default {
                 options: `
 <template>
     <div class="card flex justify-center">
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-4">
             <div class="flex items-center">
                 <RadioButton v-model="ingredient" inputId="ingredient1" name="pizza" value="Cheese" />
                 <label for="ingredient1" class="ml-2">Cheese</label>
@@ -88,7 +88,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <div class="flex flex-wrap gap-3">
+        <div class="flex flex-wrap gap-4">
             <div class="flex items-center">
                 <RadioButton v-model="ingredient" inputId="ingredient1" name="pizza" value="Cheese" />
                 <label for="ingredient1" class="ml-2">Cheese</label>

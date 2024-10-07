@@ -15,6 +15,8 @@ import AccessibilityDoc from '@/doc/popover/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/popover/BasicDoc.vue';
 import DataTableDoc from '@/doc/popover/DataTableDoc.vue';
 import ImportDoc from '@/doc/popover/ImportDoc.vue';
+import SelectDataDoc from '@/doc/popover/SelectDataDoc.vue';
+
 export default {
     data() {
         return {
@@ -28,6 +30,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'selectdata',
+                    label: 'Select Data',
+                    component: SelectDataDoc
                 },
                 {
                     id: 'datatable',

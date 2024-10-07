@@ -14,6 +14,7 @@
 import AccessibilityDoc from '@/doc/radiobutton/AccessibilityDoc.vue';
 import DisabledDoc from '@/doc/radiobutton/DisabledDoc.vue';
 import DynamicDoc from '@/doc/radiobutton/DynamicDoc.vue';
+import FilledDoc from '@/doc/radiobutton/FilledDoc.vue';
 import GroupDoc from '@/doc/radiobutton/GroupDoc.vue';
 import ImportDoc from '@/doc/radiobutton/ImportDoc.vue';
 import InvalidDoc from '@/doc/radiobutton/InvalidDoc.vue';
@@ -37,11 +38,11 @@ export default {
                     label: 'Dynamic',
                     component: DynamicDoc
                 },
-                // {
-                //     id: 'filled',
-                //     label: 'Filled',
-                //     component: FilledDoc
-                // },
+                {
+                    id: 'filled',
+                    label: 'Filled',
+                    component: FilledDoc
+                },
                 {
                     id: 'invalid',
                     label: 'Invalid',
@@ -52,7 +53,6 @@ export default {
                     label: 'Disabled',
                     component: DisabledDoc
                 },
-
                 {
                     id: 'accessibility',
                     label: 'Accessibility',

@@ -19,7 +19,7 @@
                 </svg>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
@@ -107,7 +107,7 @@ export default {
         </svg>
     </template>
     <template #item="{ item, props, hasSubmenu, root }">
-        <a class="flex items-center" v-bind="props.action">
+        <a v-ripple class="flex items-center" v-bind="props.action">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
             <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
@@ -140,7 +140,7 @@ export default {
                 </svg>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
@@ -239,7 +239,7 @@ export default {
                 </svg>
             </template>
             <template #item="{ item, props, hasSubmenu, root }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />

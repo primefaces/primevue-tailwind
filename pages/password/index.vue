@@ -6,7 +6,9 @@
 import AccessibilityDoc from '@/doc/password/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/password/BasicDoc.vue';
 import DisabledDoc from '@/doc/password/DisabledDoc.vue';
-// import FilledDoc from '@/doc/password/FilledDoc.vue';
+import FilledDoc from '@/doc/password/FilledDoc.vue';
+import FloatLabelDoc from '@/doc/password/FloatLabelDoc.vue';
+import IftaLabelDoc from '@/doc/password/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/password/ImportDoc.vue';
 import InvalidDoc from '@/doc/password/InvalidDoc.vue';
 import LocaleDoc from '@/doc/password/LocaleDoc.vue';
@@ -48,16 +50,21 @@ export default {
                     label: 'Template',
                     component: TemplateDoc
                 },
-                // {
-                //     id: 'floatlabel',
-                //     label: 'FloatLabel',
-                //     component: FloatLabelDoc
-                // },
-                // {
-                //     id: 'filled',
-                //     label: 'Filled',
-                //     component: FilledDoc
-                // },
+                {
+                    id: 'filled',
+                    label: 'Filled',
+                    component: FilledDoc
+                },
+                {
+                    id: 'floatlabel',
+                    label: 'Float Label',
+                    component: FloatLabelDoc
+                },
+                {
+                    id: 'iftalabel',
+                    label: 'Ifta Label',
+                    component: IftaLabelDoc
+                },
                 {
                     id: 'invalid',
                     label: 'Invalid',
@@ -68,7 +75,6 @@ export default {
                     label: 'Disabled',
                     component: DisabledDoc
                 },
-
                 {
                     id: 'accessibility',
                     label: 'Accessibility',
