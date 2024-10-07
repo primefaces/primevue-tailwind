@@ -8,11 +8,11 @@ import BasicDoc from '@/doc/datepicker/BasicDoc.vue';
 import ButtonBarDoc from '@/doc/datepicker/ButtonBarDoc.vue';
 import DateTemplateDoc from '@/doc/datepicker/DateTemplateDoc.vue';
 import DisabledDoc from '@/doc/datepicker/DisabledDoc.vue';
-// import FilledDoc from '@/doc/datepicker/FilledDoc.vue';
-// import FloatLabelDoc from '@/doc/datepicker/FloatLabelDoc.vue';
+import FilledDoc from '@/doc/datepicker/FilledDoc.vue';
 import FloatLabelDoc from '@/doc/datepicker/FloatLabelDoc.vue';
 import FormatDoc from '@/doc/datepicker/FormatDoc.vue';
 import IconDoc from '@/doc/datepicker/IconDoc.vue';
+import IftaLabelDoc from '@/doc/datepicker/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/datepicker/ImportDoc.vue';
 import InlineDoc from '@/doc/datepicker/InlineDoc.vue';
 import InvalidDoc from '@/doc/datepicker/InvalidDoc.vue';
@@ -105,15 +105,20 @@ export default {
                     component: InlineDoc
                 },
                 {
+                    id: 'filled',
+                    label: 'Filled',
+                    component: FilledDoc
+                },
+                {
                     id: 'floatlabel',
                     label: 'Float Label',
                     component: FloatLabelDoc
                 },
-                // {
-                //     id: 'filled',
-                //     label: 'Filled',
-                //     component: FilledDoc
-                // },
+                {
+                    id: 'iftalabel',
+                    label: 'Ifta Label',
+                    component: IftaLabelDoc
+                },
                 {
                     id: 'invalid',
                     label: 'Invalid',

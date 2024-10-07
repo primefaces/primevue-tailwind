@@ -5,9 +5,9 @@
     <div class="card">
         <Fieldset>
             <template #legend>
-                <div class="flex items-center gap-2">
+                <div class="flex items-center pl-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold">Amy Elsner</span>
+                    <span class="font-bold p-2">Amy Elsner</span>
                 </div>
             </template>
             <p class="m-0">
@@ -27,9 +27,9 @@ export default {
                 basic: `
 <Fieldset>
     <template #legend>
-        <div class="flex items-center gap-2 px-2">
+        <div class="flex items-center pl-2">
             <Avatar image="/images/avatar/amyelsner.png" shape="circle" />
-            <span class="font-bold">Amy Elsner</span>
+            <span class="font-bold p-2">Amy Elsner</span>
         </div>
     </template>
     <p class="m-0">
@@ -43,9 +43,9 @@ export default {
     <div class="card">
         <Fieldset>
             <template #legend>
-                <div class="flex items-center gap-2 px-2">
+                <div class="flex items-center pl-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold">Amy Elsner</span>
+                    <span class="font-bold p-2">Amy Elsner</span>
                 </div>
             </template>
             <p class="m-0">
@@ -64,9 +64,9 @@ export default {
     <div class="card">
         <Fieldset>
             <template #legend>
-                <div class="flex items-center gap-2 px-2">
+                <div class="flex items-center pl-2">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
-                    <span class="font-bold">Amy Elsner</span>
+                    <span class="font-bold p-2">Amy Elsner</span>
                 </div>
             </template>
             <p class="m-0">

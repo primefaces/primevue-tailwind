@@ -12,11 +12,10 @@
                     table: { style: 'min-width: 50rem' },
                     column: {
                         bodycell: ({ state }) => ({
-                            class: [{ 'pt-0 pb-0': state['d_editing'] }]
+                            class: [{ '!py-0': state['d_editing'] }]
                         })
                     }
                 }"
-                :ptOptions="{ mergeProps: true }"
             >
                 <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header" style="width: 25%">
                     <template #body="{ data, field }">
@@ -57,7 +56,7 @@ export default {
         table: { style: 'min-width: 50rem' },
         column: {
             bodycell: ({ state }) => ({
-                class: [{ 'pt-0 pb-0': state['d_editing'] }]
+                class: [{ '!py-0': state['d_editing'] }]
             })
         }
     }"
@@ -85,7 +84,7 @@ export default {
                 table: { style: 'min-width: 50rem' },
                 column: {
                     bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
+                        class: [{ '!py-0': state['d_editing'] }]
                     })
                 }
             }"
@@ -171,7 +170,7 @@ export default {
                 table: { style: 'min-width: 50rem' },
                 column: {
                     bodycell: ({ state }) => ({
-                        class: [{ 'pt-0 pb-0': state['d_editing'] }]
+                        class: [{ '!py-0': state['d_editing'] }]
                     })
                 }
             }"

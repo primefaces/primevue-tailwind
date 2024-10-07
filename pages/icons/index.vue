@@ -1,11 +1,8 @@
 <template>
     <div>
         <Head>
-            <Title>Tailwind CSS | Vue Icon Library</Title>
-            <Meta
-                name="description"
-                content="Tailwind CSS | PrimeIcons is the default icon library of PrimeVue with over 250 open source icons developed by PrimeTek. PrimeIcons library is optional as PrimeVue components can use any icon with templating."
-            />
+            <Title>Vue Icon Library - PrimeVue</Title>
+            <Meta name="description" content="PrimeIcons is the default icon library of PrimeVue with over 250 open source icons developed by PrimeTek. PrimeIcons library is optional as PrimeVue components can use any icon with templating." />
         </Head>
 
         <div class="doc">
@@ -13,7 +10,7 @@
                 <div class="doc-intro">
                     <h1>Icons</h1>
                     <p>
-                        <a href="https://github.com/primefaces/primeicons" class="text-primary hover:underline font-medium"> PrimeIcons </a>
+                        <a href="https://github.com/primefaces/primeicons"> PrimeIcons </a>
                         is the default icon library of PrimeVue with over 250 open source icons developed by PrimeTek. PrimeIcons library is optional as PrimeVue components can use any icon with templating.
                     </p>
                 </div>

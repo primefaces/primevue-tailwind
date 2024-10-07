@@ -25,7 +25,7 @@
         </ul>
         <ContextMenu ref="menu" :model="items" @hide="selectedId = null">
             <template #item="{ item, props }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
@@ -101,7 +101,7 @@ export default {
 </ul>
 <ContextMenu ref="menu" :model="items" @hide="selectedId = null">
     <template #item="{ item, props }">
-        <a class="flex items-center" v-bind="props.action">
+        <a v-ripple class="flex items-center" v-bind="props.action">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
             <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
@@ -136,7 +136,7 @@ export default {
         </ul>
         <ContextMenu ref="menu" :model="items" @hide="selectedId = null">
             <template #item="{ item, props }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
@@ -226,7 +226,7 @@ export default {
         </ul>
         <ContextMenu ref="menu" :model="items">
             <template #item="{ item, props }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />

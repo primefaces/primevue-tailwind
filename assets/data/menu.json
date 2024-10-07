@@ -54,6 +54,10 @@
                             "to": "/iconfield"
                         },
                         {
+                            "name": "IftaLabel",
+                            "to": "/iftalabel"
+                        },
+                        {
                             "name": "InputGroup",
                             "to": "/inputgroup"
                         },
@@ -344,6 +348,10 @@
                         {
                             "name": "Image",
                             "to": "/image"
+                        },
+                        {
+                            "name": "ImageCompare",
+                            "to": "/imagecompare"
                         }
                     ]
                 },
@@ -381,6 +389,10 @@
                         {
                             "name": "ProgressSpinner",
                             "to": "/progressspinner"
+                        },
+                        {
+                            "name": "Ripple",
+                            "to": "/ripple"
                         },
                         {
                             "name": "ScrollTop",

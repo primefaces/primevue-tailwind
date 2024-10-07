@@ -5,16 +5,16 @@
     <div class="card flex justify-center">
         <div class="flex flex-col items-center">
             <div class="font-bold text-xl mb-2">Authenticate Your Account</div>
-            <p class="text-surface-700 dark:text-surface-0/70 block mb-5">Please enter the code sent to your phone.</p>
+            <p class="text-surface-500 dark:text-surface-400 block mb-8">Please enter the code sent to your phone.</p>
             <InputOtp v-model="value" :length="6" style="gap: 0">
                 <template #default="{ attrs, events, index }">
                     <input type="text" v-bind="attrs" v-on="events" class="custom-otp-input" />
-                    <div v-if="index === 3" class="px-3">
+                    <div v-if="index === 3" class="px-4">
                         <i class="pi pi-minus" />
                     </div>
                 </template>
             </InputOtp>
-            <div class="flex justify-between mt-5 self-stretch">
+            <div class="flex justify-between mt-8 self-stretch">
                 <Button label="Resend Code" link class="p-0"></Button>
                 <Button label="Submit Code"></Button>
             </div>
@@ -32,16 +32,16 @@ export default {
                 basic: `
 <div class="flex flex-col items-center">
     <div class="font-bold text-xl mb-2">Authenticate Your Account</div>
-    <p class="text-surface-700 dark:text-surface-0/70 block mb-5">Please enter the code sent to your phone.</p>
+    <p class="text-surface-500 dark:text-surface-400 block mb-8">Please enter the code sent to your phone.</p>
     <InputOtp v-model="value" :length="6" style="gap: 0">
         <template #default="{ attrs, events, index }">
             <input type="text" v-bind="attrs" v-on="events" class="custom-otp-input" />
-            <div v-if="index === 3" class="px-3">
+            <div v-if="index === 3" class="px-4">
                 <i class="pi pi-minus" />
             </div>
         </template>
     </InputOtp>
-    <div class="flex justify-between mt-5 self-stretch">
+    <div class="flex justify-between mt-8 self-stretch">
         <Button label="Resend Code" link class="p-0"></Button>
         <Button label="Submit Code"></Button>
     </div>
@@ -52,16 +52,16 @@ export default {
     <div class="card flex justify-center">
         <div class="flex flex-col items-center">
             <div class="font-bold text-xl mb-2">Authenticate Your Account</div>
-            <p class="text-surface-700 dark:text-surface-0/70 block mb-5">Please enter the code sent to your phone.</p>
+            <p class="text-surface-500 dark:text-surface-400 block mb-8">Please enter the code sent to your phone.</p>
             <InputOtp v-model="value" :length="6" style="gap: 0">
                 <template #default="{ attrs, events, index }">
                     <input type="text" v-bind="attrs" v-on="events" class="custom-otp-input" />
-                    <div v-if="index === 3" class="px-3">
+                    <div v-if="index === 3" class="px-4">
                         <i class="pi pi-minus" />
                     </div>
                 </template>
             </InputOtp>
-            <div class="flex justify-between mt-5 self-stretch">
+            <div class="flex justify-between mt-8 self-stretch">
                 <Button label="Resend Code" link class="p-0"></Button>
                 <Button label="Submit Code"></Button>
             </div>
@@ -88,17 +88,17 @@ export default {
     text-align: center;
     transition: all 0.2s;
     border-radius: 0;
-    border: 1px solid var(--p-surface-400);
+    border: 1px solid var(--p-inputtext-border-color);
     background: transparent;
     outline-offset: -2px;
     outline-color: transparent;
     border-right: 0 none;
     transition: outline-color 0.3s;
-    color: var(--text-color);
+    color: var(--p-inputtext-color);
 }
 
 .custom-otp-input:focus {
-    outline: 2px solid var(--p-primary-500);
+    outline: 2px solid var(--p-focus-ring-color);
 }
 
 .custom-otp-input:first-child,
@@ -113,7 +113,7 @@ export default {
     border-bottom-right-radius: 12px;
     border-right-width: 1px;
     border-right-style: solid;
-    border-color: var(--p-surface-400);
+    border-color: var(--p-inputtext-border-color);
 }
 <\/style>
 `,
@@ -122,16 +122,16 @@ export default {
     <div class="card flex justify-center">
         <div class="flex flex-col items-center">
             <div class="font-bold text-xl mb-2">Authenticate Your Account</div>
-            <p class="text-surface-700 dark:text-surface-0/70 block mb-5">Please enter the code sent to your phone.</p>
+            <p class="text-surface-500 dark:text-surface-400 block mb-8">Please enter the code sent to your phone.</p>
             <InputOtp v-model="value" :length="6" style="gap: 0">
                 <template #default="{ attrs, events, index }">
                     <input type="text" v-bind="attrs" v-on="events" class="custom-otp-input" />
-                    <div v-if="index === 3" class="px-3">
+                    <div v-if="index === 3" class="px-4">
                         <i class="pi pi-minus" />
                     </div>
                 </template>
             </InputOtp>
-            <div class="flex justify-between mt-5 self-stretch">
+            <div class="flex justify-between mt-8 self-stretch">
                 <Button label="Resend Code" link class="p-0"></Button>
                 <Button label="Submit Code"></Button>
             </div>
@@ -154,17 +154,17 @@ const value = ref(null);
     text-align: center;
     transition: all 0.2s;
     border-radius: 0;
-    border: 1px solid var(--p-surface-400);
+    border: 1px solid var(--p-inputtext-border-color);
     background: transparent;
     outline-offset: -2px;
     outline-color: transparent;
     border-right: 0 none;
     transition: outline-color 0.3s;
-    color: var(--text-color);
+    color: var(--p-inputtext-color);
 }
 
 .custom-otp-input:focus {
-    outline: 2px solid var(--p-primary-500);
+    outline: 2px solid var(--p-focus-ring-color);
 }
 
 .custom-otp-input:first-child,
@@ -179,7 +179,7 @@ const value = ref(null);
     border-bottom-right-radius: 12px;
     border-right-width: 1px;
     border-right-style: solid;
-    border-color: var(--p-surface-400);
+    border-color: var(--p-inputtext-border-color);
 }
 <\/style>
 `
@@ -198,17 +198,17 @@ const value = ref(null);
     text-align: center;
     transition: all 0.2s;
     border-radius: 0;
-    border: 1px solid var(--p-surface-400);
+    border: 1px solid var(--p-inputtext-border-color);
     background: transparent;
     outline-offset: -2px;
     outline-color: transparent;
     border-right: 0 none;
     transition: outline-color 0.3s;
-    color: var(--text-color);
+    color: var(--p-inputtext-color);
 }
 
 .custom-otp-input:focus {
-    outline: 2px solid var(--p-primary-500);
+    outline: 2px solid var(--p-focus-ring-color);
 }
 
 .custom-otp-input:first-child,
@@ -223,6 +223,6 @@ const value = ref(null);
     border-bottom-right-radius: 12px;
     border-right-width: 1px;
     border-right-style: solid;
-    border-color: var(--p-surface-400);
+    border-color: var(--p-inputtext-border-color);
 }
 </style>

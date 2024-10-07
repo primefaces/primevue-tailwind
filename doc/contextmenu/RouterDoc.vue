@@ -18,12 +18,12 @@
         <ContextMenu ref="routemenu" :model="items">
             <template #item="{ item, props }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" v-bind="props.action" @click="navigate">
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+                <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
@@ -41,7 +41,7 @@ export default {
                 {
                     label: 'Router Link',
                     icon: 'pi pi-palette',
-                    route: '/overview'
+                    route: '/theming/unstyled'
                 },
                 {
                     label: 'Programmatic',
@@ -67,12 +67,12 @@ export default {
 <ContextMenu ref="routemenu" :model="items">
     <template #item="{ item, props }">
         <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-            <a :href="href" v-bind="props.action" @click="navigate">
+            <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                 <span :class="item.icon" />
                 <span class="ml-2">{{ item.label }}</span>
             </a>
         </router-link>
-        <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+        <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
         </a>
@@ -97,12 +97,12 @@ export default {
         <ContextMenu ref="routemenu" :model="items">
             <template #item="{ item, props }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" v-bind="props.action" @click="navigate">
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+                <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
@@ -119,7 +119,7 @@ export default {
                 {
                     label: 'Router Link',
                     icon: 'pi pi-palette',
-                    route: '/overview'
+                    route: '/theming/unstyled'
                 },
                 {
                     label: 'Programmatic',
@@ -162,12 +162,12 @@ export default {
         <ContextMenu ref="routemenu" :model="items">
             <template #item="{ item, props }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" v-bind="props.action" @click="navigate">
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+                <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                 </a>
@@ -187,7 +187,7 @@ const items = ref([
     {
         label: 'Router Link',
         icon: 'pi pi-palette',
-        route: '/overview'
+        route: '/theming/unstyled'
     },
     {
         label: 'Programmatic',

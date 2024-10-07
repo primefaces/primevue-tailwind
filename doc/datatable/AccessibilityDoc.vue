@@ -9,13 +9,12 @@
 
         <p>
             Built-in checkbox and radiobutton components for row selection use <i>checkbox</i> and <i>radiobutton</i>. The label to describe them is retrieved from the <i>aria.selectRow</i> and <i>aria.unselectRow</i> properties of the
-            <a href="https://primevue.org/configuration/#locale" target="_blank" rel="noopener noreferrer">locale</a> API. Similarly header checkbox uses <i>selectAll</i> and <i>unselectAll</i> keys. When a row is selected, <i>aria-selected</i> is
-            set to true on a row.
+            <NuxtLink to="/configuration/#locale">locale</NuxtLink> API. Similarly header checkbox uses <i>selectAll</i> and <i>unselectAll</i> keys. When a row is selected, <i>aria-selected</i> is set to true on a row.
         </p>
 
         <p>
             The element to expand or collapse a row is a <i>button</i> with <i>aria-expanded</i> and <i>aria-controls</i> properties. Value to describe the buttons is derived from <i>aria.expandRow</i> and <i>aria.collapseRow</i> properties of the
-            <a href="https://primevue.org/configuration/#locale" target="_blank" rel="noopener noreferrer">locale</a> API.
+            <NuxtLink to="/configuration/#locale">locale</NuxtLink> API.
         </p>
 
         <p>

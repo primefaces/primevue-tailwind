@@ -7,13 +7,15 @@ import AccessibilityDoc from '@/doc/inputnumber/AccessibilityDoc.vue';
 import ButtonsDoc from '@/doc/inputnumber/ButtonsDoc.vue';
 import CurrencyDoc from '@/doc/inputnumber/CurrencyDoc.vue';
 import DisabledDoc from '@/doc/inputnumber/DisabledDoc.vue';
+import FilledDoc from '@/doc/inputnumber/FilledDoc.vue';
+import FloatLabelDoc from '@/doc/inputnumber/FloatLabelDoc.vue';
+import IftaLabelDoc from '@/doc/inputnumber/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/inputnumber/ImportDoc.vue';
+import InvalidDoc from '@/doc/inputnumber/InvalidDoc.vue';
 import LocaleDoc from '@/doc/inputnumber/LocaleDoc.vue';
 import NumeralsDoc from '@/doc/inputnumber/NumeralsDoc.vue';
 import PrefixSuffixDoc from '@/doc/inputnumber/PrefixSuffixDoc.vue';
 import VerticalDoc from '@/doc/inputnumber/VerticalDoc.vue';
-import FloatLabelDoc from '../../doc/inputnumber/FloatLabelDoc.vue';
-import InvalidDoc from '../../doc/inputnumber/InvalidDoc.vue';
 
 export default {
     data() {
@@ -55,15 +57,20 @@ export default {
                     component: VerticalDoc
                 },
                 {
+                    id: 'filled',
+                    label: 'Filled',
+                    component: FilledDoc
+                },
+                {
                     id: 'floatlabel',
                     label: 'Float Label',
                     component: FloatLabelDoc
                 },
-                // {
-                //     id: 'filled',
-                //     label: 'Filled',
-                //     component: FilledDoc
-                // },
+                {
+                    id: 'iftalabel',
+                    label: 'Ifta Label',
+                    component: IftaLabelDoc
+                },
                 {
                     id: 'invalid',
                     label: 'Invalid',

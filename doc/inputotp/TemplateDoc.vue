@@ -55,7 +55,7 @@ export default {
     text-align: center;
     transition: all 0.2s;
     background: transparent;
-    border-bottom: 2px solid var(--p-surface-500);
+    border-bottom: 2px solid var(--p-inputtext-border-color);
 }
 
 .custom-otp-input:focus {
@@ -90,7 +90,7 @@ const value = ref(null);
     text-align: center;
     transition: all 0.2s;
     background: transparent;
-    border-bottom: 2px solid var(--p-surface-500);
+    border-bottom: 2px solid var(--p-inputtext-border-color);
 }
 
 .custom-otp-input:focus {
@@ -114,7 +114,7 @@ const value = ref(null);
     text-align: center;
     transition: all 0.2s;
     background: transparent;
-    border-bottom: 2px solid var(--p-surface-500);
+    border-bottom: 2px solid var(--p-inputtext-border-color);
 }
 
 .custom-otp-input:focus {

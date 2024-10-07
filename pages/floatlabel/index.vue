@@ -6,6 +6,9 @@
 import AccessibilityDoc from '@/doc/floatlabel/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/floatlabel/BasicDoc.vue';
 import ImportDoc from '@/doc/floatlabel/ImportDoc.vue';
+import InvalidDoc from '@/doc/floatlabel/InvalidDoc.vue';
+import VariantsDoc from '@/doc/floatlabel/VariantsDoc.vue';
+
 export default {
     data() {
         return {
@@ -19,6 +22,16 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'variants',
+                    label: 'Variants',
+                    component: VariantsDoc
+                },
+                {
+                    id: 'invalid',
+                    label: 'Invalid',
+                    component: InvalidDoc
                 },
                 {
                     id: 'accessibility',

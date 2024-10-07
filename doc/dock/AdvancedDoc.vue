@@ -21,14 +21,14 @@
         <div class="dock-window dock-advanced">
             <Dock :model="items">
                 <template #item="{ item }">
-                    <a v-tooltip.top="item.label" href="#" class="flex flex-col items-center justify-center relative overflow-hidden cursor-default w-16 h-16" @click="onDockItemClick($event, item)">
+                    <a v-tooltip.top="item.label" href="#" class="p-dock-item-link" @click="onDockItemClick($event, item)">
                         <img :alt="item.label" :src="item.icon" style="width: 100%" />
                     </a>
                 </template>
             </Dock>
 
             <Dialog v-model:visible="displayTerminal" header="Terminal" :breakpoints="{ '960px': '50vw' }" :style="{ width: '40vw' }" :maximizable="true">
-                <Terminal welcomeMessage="Welcome to PrimeVue(cmd: 'date', 'greet {0}', 'random' and 'clear')" prompt="primevue $" />
+                <Terminal welcomeMessage="Welcome to PrimeVue(cmd: 'date', 'greet {0}' and 'random')" prompt="primevue $" />
             </Dialog>
 
             <Dialog v-model:visible="displayFinder" header="Finder" :breakpoints="{ '960px': '50vw' }" :style="{ width: '40vw' }" :maximizable="true">
@@ -246,7 +246,7 @@ export default {
                 basic: `
 <Dock :model="items">
     <template #item="{ item }">
-        <a v-tooltip.top="item.label" href="#" class="flex flex-col items-center justify-center relative overflow-hidden cursor-default w-16 h-16" @click="onDockItemClick($event, item)">
+        <a v-tooltip.top="item.label" href="#" class="p-dock-item-link" @click="onDockItemClick($event, item)">
             <img :alt="item.label" :src="item.icon" style="width: 100%" />
         </a>
     </template>
@@ -273,14 +273,14 @@ export default {
         <div class="dock-window dock-advanced">
             <Dock :model="items">
                 <template #item="{ item }">
-                    <a v-tooltip.top="item.label" href="#" class="flex flex-col items-center justify-center relative overflow-hidden cursor-default w-16 h-16" @click="onDockItemClick($event, item)">
+                    <a v-tooltip.top="item.label" href="#" class="p-dock-item-link" @click="onDockItemClick($event, item)">
                         <img :alt="item.label" :src="item.icon" style="width: 100%" />
                     </a>
                 </template>
             </Dock>
 
             <Dialog v-model:visible="displayTerminal" header="Terminal" :breakpoints="{ '960px': '50vw' }" :style="{ width: '40vw' }" :maximizable="true">
-                <Terminal welcomeMessage="Welcome to PrimeVue(cmd: 'date', 'greet {0}', 'random' and 'clear')" prompt="primevue $" />
+                <Terminal welcomeMessage="Welcome to PrimeVue(cmd: 'date', 'greet {0}' and 'random')" prompt="primevue $" />
             </Dialog>
 
             <Dialog v-model:visible="displayFinder" header="Finder" :breakpoints="{ '960px': '50vw' }" :style="{ width: '40vw' }" :maximizable="true">
@@ -578,14 +578,14 @@ export default {
             <div class="dock-window dock-advanced">
                 <Dock :model="items">
                     <template #item="{ item }">
-                        <a v-tooltip.top="item.label" href="#" class="flex flex-col items-center justify-center relative overflow-hidden cursor-default w-16 h-16" @click="onDockItemClick($event, item)">
+                        <a v-tooltip.top="item.label" href="#" class="p-dock-item-link" @click="onDockItemClick($event, item)">
                             <img :alt="item.label" :src="item.icon" style="width: 100%" />
                         </a>
                     </template>
                 </Dock>
 
                 <Dialog v-model:visible="displayTerminal" header="Terminal" :breakpoints="{ '960px': '50vw' }" :style="{ width: '40vw' }" :maximizable="true">
-                    <Terminal welcomeMessage="Welcome to PrimeVue(cmd: 'date', 'greet {0}', 'random' and 'clear')" prompt="primevue $" />
+                    <Terminal welcomeMessage="Welcome to PrimeVue(cmd: 'date', 'greet {0}' and 'random')" prompt="primevue $" />
                 </Dialog>
 
                 <Dialog v-model:visible="displayFinder" header="Finder" :breakpoints="{ '960px': '50vw' }" :style="{ width: '40vw' }" :maximizable="true">

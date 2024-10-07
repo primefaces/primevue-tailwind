@@ -2,7 +2,7 @@
     <DocSectionText v-bind="$attrs">
         <p>Card provides <i>header</i>, <i>title</i>, <i>subtitle</i>, <i>content</i> and <i>footer</i> as the named templates to place content.</p>
     </DocSectionText>
-    <div class="mb-3 p-5 flex items-center justify-center">
+    <div class="mb-4 p-8 flex items-center justify-center">
         <Card style="width: 25rem; overflow: hidden">
             <template #header>
                 <img alt="user header" class="w-full" src="https://primefaces.org/cdn/primevue/images/card-vue.jpg" />

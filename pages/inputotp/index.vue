@@ -5,6 +5,7 @@
 <script>
 import AccessibilityDoc from '@/doc/inputotp/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/inputotp/BasicDoc.vue';
+import FilledDoc from '@/doc/inputotp/FilledDoc.vue';
 import ImportDoc from '@/doc/inputotp/ImportDoc.vue';
 import IntegerOnlyDoc from '@/doc/inputotp/IntegerOnlyDoc.vue';
 import MaskDoc from '@/doc/inputotp/MaskDoc.vue';
@@ -34,6 +35,11 @@ export default {
                     id: 'integeronly',
                     label: 'Integer Only',
                     component: IntegerOnlyDoc
+                },
+                {
+                    id: 'filled',
+                    label: 'Filled',
+                    component: FilledDoc
                 },
                 {
                     id: 'template',
