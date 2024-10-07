@@ -5,7 +5,7 @@
 <script>
 import AccessibilityDoc from '@/doc/tooltip/AccessibilityDoc.vue';
 import AutoHideDoc from '@/doc/tooltip/AutoHideDoc.vue';
-// import CustomDoc from '@/doc/tooltip/CustomDoc.vue';
+import CustomDoc from '@/doc/tooltip/CustomDoc.vue';
 import DelayDoc from '@/doc/tooltip/DelayDoc.vue';
 import EventDoc from '@/doc/tooltip/EventDoc.vue';
 import ImportDoc from '@/doc/tooltip/ImportDoc.vue';
@@ -40,11 +40,11 @@ export default {
                     label: 'Delay',
                     component: DelayDoc
                 },
-                // {
-                //     id: 'custom',
-                //     label: 'Custom',
-                //     component: CustomDoc
-                // },
+                {
+                    id: 'custom',
+                    label: 'Custom',
+                    component: CustomDoc
+                },
                 {
                     id: 'accessibility',
                     label: 'Accessibility',

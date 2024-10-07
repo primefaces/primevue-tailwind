@@ -10,6 +10,7 @@ import ImportDoc from '@/doc/tag/ImportDoc.vue';
 import PillDoc from '@/doc/tag/PillDoc.vue';
 import SeverityDoc from '@/doc/tag/SeverityDoc.vue';
 import TemplateDoc from '@/doc/tag/TemplateDoc.vue';
+
 export default {
     data() {
         return {

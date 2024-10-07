@@ -9,10 +9,11 @@ import CheckmarkDoc from '@/doc/select/CheckmarkDoc.vue';
 import ClearIconDoc from '@/doc/select/ClearIconDoc.vue';
 import DisabledDoc from '@/doc/select/DisabledDoc.vue';
 import EditableDoc from '@/doc/select/EditableDoc.vue';
-// import FilledDoc from '@/doc/select/FilledDoc.vue';
+import FilledDoc from '@/doc/select/FilledDoc.vue';
 import FilterDoc from '@/doc/select/FilterDoc.vue';
 import FloatLabelDoc from '@/doc/select/FloatLabelDoc.vue';
 import GroupDoc from '@/doc/select/GroupDoc.vue';
+import IftaLabelDoc from '@/doc/select/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/select/ImportDoc.vue';
 import InvalidDoc from '@/doc/select/InvalidDoc.vue';
 import LazyVirtualScrollDoc from '@/doc/select/LazyVirtualScrollDoc.vue';
@@ -80,15 +81,20 @@ export default {
                     component: LazyVirtualScrollDoc
                 },
                 {
+                    id: 'filled',
+                    label: 'Filled',
+                    component: FilledDoc
+                },
+                {
                     id: 'floatlabel',
                     label: 'Float Label',
                     component: FloatLabelDoc
                 },
-                // {
-                //     id: 'filled',
-                //     label: 'Filled',
-                //     component: FilledDoc
-                // },
+                {
+                    id: 'iftalabel',
+                    label: 'Ifta Label',
+                    component: IftaLabelDoc
+                },
                 {
                     id: 'invalid',
                     label: 'Invalid',

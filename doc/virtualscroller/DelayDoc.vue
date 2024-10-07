@@ -2,10 +2,10 @@
     <DocSectionText v-bind="$attrs">
         <p>The <i>delay</i> property adds a threshold to wait in milliseconds during scrolling for render optimization.</p>
     </DocSectionText>
-    <div class="card flex flex-wrap justify-center gap-5">
+    <div class="card flex flex-wrap justify-center gap-8">
         <div>
             <span class="font-bold block mb-2">No Delay</span>
-            <VirtualScroller :items="items" :itemSize="50" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -13,7 +13,7 @@
         </div>
         <div>
             <span class="font-bold block mb-2">150ms</span>
-            <VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -21,7 +21,7 @@
         </div>
         <div>
             <span class="font-bold block mb-2">500ms</span>
-            <VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -38,19 +38,19 @@ export default {
             items: null,
             code: {
                 basic: `
-<VirtualScroller :items="items" :itemSize="50" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+<VirtualScroller :items="items" :itemSize="50" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
     <template v-slot:item="{ item, options }">
         <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
     </template>
 </VirtualScroller>
 
-<VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+<VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
     <template v-slot:item="{ item, options }">
         <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
     </template>
 </VirtualScroller>
 
-<VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+<VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
     <template v-slot:item="{ item, options }">
         <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
     </template>
@@ -58,10 +58,10 @@ export default {
 `,
                 options: `
 <template>
-    <div class="card flex flex-wrap justify-center gap-5">
+    <div class="card flex flex-wrap justify-center gap-8">
         <div>
             <span class="font-bold block mb-2">No Delay</span>
-            <VirtualScroller :items="items" :itemSize="50" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -69,7 +69,7 @@ export default {
         </div>
         <div>
             <span class="font-bold block mb-2">150ms</span>
-            <VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -77,7 +77,7 @@ export default {
         </div>
         <div>
             <span class="font-bold block mb-2">500ms</span>
-            <VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -101,10 +101,10 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card flex flex-wrap justify-center gap-5">
+    <div class="card flex flex-wrap justify-center gap-8">
         <div>
             <span class="font-bold block mb-2">No Delay</span>
-            <VirtualScroller :items="items" :itemSize="50" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -112,7 +112,7 @@ export default {
         </div>
         <div>
             <span class="font-bold block mb-2">150ms</span>
-            <VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" :delay="150" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>
@@ -120,7 +120,7 @@ export default {
         </div>
         <div>
             <span class="font-bold block mb-2">500ms</span>
-            <VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-300 dark:border-surface-700 rounded-md" style="width: 200px; height: 200px">
+            <VirtualScroller :items="items" :itemSize="50" :delay="500" class="border border-surface-200 dark:border-surface-700 rounded" style="width: 200px; height: 200px">
                 <template v-slot:item="{ item, options }">
                     <div :class="['flex items-center p-2', { 'bg-surface-100 dark:bg-surface-700': options.odd }]" style="height: 50px">{{ item }}</div>
                 </template>

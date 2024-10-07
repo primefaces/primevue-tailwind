@@ -5,7 +5,7 @@
     <div class="card flex justify-center">
         <TieredMenu :model="items">
             <template #item="{ item, props, hasSubmenu }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
@@ -105,7 +105,7 @@ export default {
                 basic: `
 <TieredMenu :model="items">
     <template #item="{ item, props, hasSubmenu }">
-        <a class="flex items-center" v-bind="props.action">
+        <a v-ripple class="flex items-center" v-bind="props.action">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
             <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
@@ -120,7 +120,7 @@ export default {
     <div class="card flex justify-center">
         <TieredMenu :model="items">
             <template #item="{ item, props, hasSubmenu }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
@@ -225,7 +225,7 @@ export default {
     <div class="card flex justify-center">
         <TieredMenu :model="items">
             <template #item="{ item, props, hasSubmenu }">
-                <a class="flex items-center" v-bind="props.action">
+                <a v-ripple class="flex items-center" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />

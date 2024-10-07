@@ -15,13 +15,13 @@ export default {
             checked: false,
             code: {
                 basic: `
-<ToggleButton v-model="checked" onLabel="Locked" offLabel="Unlocked" onIcon="pi pi-lock"
+<ToggleButton v-model="checked" onLabel="Locked" offLabel="Unlocked" onIcon="pi pi-lock" 
     offIcon="pi pi-lock-open" class="w-36" aria-label="Do you confirm" />
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <ToggleButton v-model="checked" onLabel="Locked" offLabel="Unlocked" onIcon="pi pi-lock"
+        <ToggleButton v-model="checked" onLabel="Locked" offLabel="Unlocked" onIcon="pi pi-lock" 
             offIcon="pi pi-lock-open" class="w-36" aria-label="Do you confirm" />
     </div>
 </template>
@@ -39,7 +39,7 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <ToggleButton v-model="checked" onLabel="Locked" offLabel="Unlocked" onIcon="pi pi-lock"
+        <ToggleButton v-model="checked" onLabel="Locked" offLabel="Unlocked" onIcon="pi pi-lock" 
             offIcon="pi pi-lock-open" class="w-36" aria-label="Do you confirm" />
     </div>
 </template>

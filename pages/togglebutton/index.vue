@@ -38,14 +38,14 @@ export default {
                     component: CustomizedDoc
                 },
                 {
-                    id: 'disabled',
-                    label: 'Disabled',
-                    component: DisabledDoc
-                },
-                {
                     id: 'invalid',
                     label: 'Invalid',
                     component: InvalidDoc
+                },
+                {
+                    id: 'disabled',
+                    label: 'Disabled',
+                    component: DisabledDoc
                 },
                 {
                     id: 'accessibility',

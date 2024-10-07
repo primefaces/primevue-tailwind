@@ -14,7 +14,9 @@
 import AccessibilityDoc from '@/doc/splitbutton/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/splitbutton/BasicDoc.vue';
 import DisabledDoc from '@/doc/splitbutton/DisabledDoc.vue';
+import IconsDoc from '@/doc/splitbutton/IconsDoc.vue';
 import ImportDoc from '@/doc/splitbutton/ImportDoc.vue';
+import NestedDoc from '@/doc/splitbutton/NestedDoc.vue';
 import OutlinedDoc from '@/doc/splitbutton/OutlinedDoc.vue';
 import RaisedDoc from '@/doc/splitbutton/RaisedDoc.vue';
 import RaisedTextDoc from '@/doc/splitbutton/RaisedTextDoc.vue';
@@ -23,6 +25,7 @@ import SeverityDoc from '@/doc/splitbutton/SeverityDoc.vue';
 import SizesDoc from '@/doc/splitbutton/SizesDoc.vue';
 import TemplateDoc from '@/doc/splitbutton/TemplateDoc.vue';
 import TextDoc from '@/doc/splitbutton/TextDoc.vue';
+
 export default {
     data() {
         return {
@@ -36,6 +39,16 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'icons',
+                    label: 'Icons',
+                    component: IconsDoc
+                },
+                {
+                    id: 'nested',
+                    label: 'Nested',
+                    component: NestedDoc
                 },
                 {
                     id: 'severity',

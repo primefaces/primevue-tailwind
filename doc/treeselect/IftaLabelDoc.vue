@@ -1,39 +1,50 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>Tree component requires an array of TreeNode objects as its <i>value</i>.</p>
+        <p>IftaLabel is used to create infield top aligned labels. Visit <PrimeVueNuxtLink to="/iftalabel">IftaLabel</PrimeVueNuxtLink> documentation for more information.</p>
     </DocSectionText>
-    <div class="card">
-        <Tree :value="nodes" class="w-full md:w-[30rem]"></Tree>
+    <div class="card flex justify-center">
+        <IftaLabel class="w-full md:w-80">
+            <TreeSelect v-model="selectedValue" inputId="t_file" :options="nodes" class="w-full" variant="filled" />
+            <label for="t_file">File</label>
+        </IftaLabel>
     </div>
-    <DocSectionCode :code="code" v-bind="$attrs" :service="['NodeService']" />
+    <DocSectionCode :code="code" />
 </template>
 
 <script>
-import { NodeService } from '@/service/NodeService';
+import { NodeService } from '/service/NodeService';
 
 export default {
     data() {
         return {
             nodes: null,
+            selectedValue: null,
             code: {
                 basic: `
-<Tree :value="nodes" class="w-full md:w-[30rem]"></Tree>
+<IftaLabel class="w-full md:w-80">
+    <TreeSelect v-model="selectedValue" inputId="t_file" :options="nodes" class="w-full" variant="filled" />
+    <label for="t_file">File</label>
+</IftaLabel>
 `,
                 options: `
 <template>
-    <div class="card">
-        <Tree :value="nodes" class="w-full md:w-[30rem]"></Tree>
+    <div class="card flex justify-center">
+        <IftaLabel class="w-full md:w-80">
+            <TreeSelect v-model="selectedValue" inputId="t_file" :options="nodes" class="w-full" variant="filled" />
+            <label for="t_file">File</label>
+        </IftaLabel>
     </div>
 </template>
 
 <script>
-import { NodeService } from '@/service/NodeService';
+import { NodeService } from './service/NodeService';
 
 export default {
     data() {
         return {
-            nodes: null
-        };
+            nodes: null,
+            selectedValue: null,
+        }
     },
     mounted() {
         NodeService.getTreeNodes().then((data) => (this.nodes = data));
@@ -43,16 +54,20 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card">
-        <Tree :value="nodes" class="w-full md:w-[30rem]"></Tree>
+    <div class="card flex justify-center">
+        <IftaLabel class="w-full md:w-80">
+            <TreeSelect v-model="selectedValue" inputId="t_file" :options="nodes" class="w-full" variant="filled" />
+            <label for="t_file">File</label>
+        </IftaLabel>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { NodeService } from '@/service/NodeService';
+import { NodeService } from './service/NodeService';
 
 const nodes = ref(null);
+const selectedValue = ref(null);
 
 onMounted(() => {
     NodeService.getTreeNodes().then((data) => (nodes.value = data));

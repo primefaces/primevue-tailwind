@@ -6,12 +6,12 @@
         <TieredMenu :model="items">
             <template #item="{ item, props, hasSubmenu }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" v-bind="props.action" @click="navigate">
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+                <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <span v-if="hasSubmenu" class="pi pi-angle-right ml-auto" />
@@ -33,11 +33,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/overview'
+                            route: '/theming/styled'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/overview'
+                            route: '/theming/unstyled'
                         }
                     ]
                 },
@@ -68,12 +68,12 @@ export default {
 <TieredMenu :model="items">
     <template #item="{ item, props, hasSubmenu }">
         <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-            <a :href="href" v-bind="props.action" @click="navigate">
+            <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                 <span :class="item.icon" />
                 <span class="ml-2">{{ item.label }}</span>
             </a>
         </router-link>
-        <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+        <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label }}</span>
             <span v-if="hasSubmenu" class="pi pi-angle-right ml-auto" />
@@ -87,12 +87,12 @@ export default {
         <TieredMenu :model="items">
             <template #item="{ item, props, hasSubmenu }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" v-bind="props.action" @click="navigate">
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+                <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <span v-if="hasSubmenu" class="pi pi-angle-right ml-auto" />
@@ -113,11 +113,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/overview'
+                            route: '/theming/styled'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/overview'
+                            route: '/theming/unstyled'
                         }
                     ]
                 },
@@ -154,12 +154,12 @@ export default {
         <TieredMenu :model="items">
             <template #item="{ item, props, hasSubmenu }">
                 <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
-                    <a :href="href" v-bind="props.action" @click="navigate">
+                    <a v-ripple :href="href" v-bind="props.action" @click="navigate">
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                     </a>
                 </router-link>
-                <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+                <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
                     <span :class="item.icon" />
                     <span class="ml-2">{{ item.label }}</span>
                     <span v-if="hasSubmenu" class="pi pi-angle-right ml-auto" />
@@ -182,11 +182,11 @@ const items = ref([
         items: [
             {
                 label: 'Styled',
-                route: '/overview'
+                route: '/theming/styled'
             },
             {
                 label: 'Unstyled',
-                route: '/overview'
+                route: '/theming/unstyled'
             }
         ]
     },

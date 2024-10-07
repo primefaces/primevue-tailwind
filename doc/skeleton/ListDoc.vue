@@ -3,44 +3,46 @@
         <p>Sample List implementation using different Skeleton components and PrimeFlex CSS utilities.</p>
     </DocSectionText>
     <div class="card">
-        <ul>
-            <li class="mb-4">
-                <div class="flex">
-                    <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
-                        <Skeleton width="100%" class="mb-2"></Skeleton>
-                        <Skeleton width="75%"></Skeleton>
+        <div class="rounded border border-surface-200 dark:border-surface-700 p-6 bg-surface-0 dark:bg-surface-900">
+            <ul class="m-0 p-0 list-none">
+                <li class="mb-4">
+                    <div class="flex">
+                        <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                        <div class="self-center" style="flex: 1">
+                            <Skeleton width="100%" class="mb-2"></Skeleton>
+                            <Skeleton width="75%"></Skeleton>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="mb-4">
-                <div class="flex">
-                    <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
-                        <Skeleton width="100%" class="mb-2"></Skeleton>
-                        <Skeleton width="75%"></Skeleton>
+                </li>
+                <li class="mb-4">
+                    <div class="flex">
+                        <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                        <div class="self-center" style="flex: 1">
+                            <Skeleton width="100%" class="mb-2"></Skeleton>
+                            <Skeleton width="75%"></Skeleton>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="mb-4">
-                <div class="flex">
-                    <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
-                        <Skeleton width="100%" class="mb-2"></Skeleton>
-                        <Skeleton width="75%"></Skeleton>
+                </li>
+                <li class="mb-4">
+                    <div class="flex">
+                        <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                        <div class="self-center" style="flex: 1">
+                            <Skeleton width="100%" class="mb-2"></Skeleton>
+                            <Skeleton width="75%"></Skeleton>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <div class="flex">
-                    <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
-                        <Skeleton width="100%" class="mb-2"></Skeleton>
-                        <Skeleton width="75%"></Skeleton>
+                </li>
+                <li>
+                    <div class="flex">
+                        <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                        <div class="self-center" style="flex: 1">
+                            <Skeleton width="100%" class="mb-2"></Skeleton>
+                            <Skeleton width="75%"></Skeleton>
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -51,53 +53,55 @@ export default {
         return {
             code: {
                 basic: `
-<ul>
-    <li class="mb-4">
-        <div class="flex">
-            <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-            <div class="self-center flex-1">
-                <Skeleton width="100%" class="mb-2"></Skeleton>
-                <Skeleton width="75%"></Skeleton>
+<div class="rounded border border-surface-200 dark:border-surface-700 p-6 bg-surface-0 dark:bg-surface-900">
+    <ul class="m-0 p-0 list-none">
+        <li class="mb-4">
+            <div class="flex">
+                <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                <div class="self-center" style="flex: 1">
+                    <Skeleton width="100%" class="mb-2"></Skeleton>
+                    <Skeleton width="75%"></Skeleton>
+                </div>
             </div>
-        </div>
-    </li>
-    <li class="mb-4">
-        <div class="flex">
-            <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-            <div class="self-center flex-1">
-                <Skeleton width="100%" class="mb-2"></Skeleton>
-                <Skeleton width="75%"></Skeleton>
+        </li>
+        <li class="mb-4">
+            <div class="flex">
+                <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                <div class="self-center" style="flex: 1">
+                    <Skeleton width="100%" class="mb-2"></Skeleton>
+                    <Skeleton width="75%"></Skeleton>
+                </div>
             </div>
-        </div>
-    </li>
-    <li class="mb-4">
-        <div class="flex">
-            <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-            <div class="self-center flex-1">
-                <Skeleton width="100%" class="mb-2"></Skeleton>
-                <Skeleton width="75%"></Skeleton>
+        </li>
+        <li class="mb-4">
+            <div class="flex">
+                <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                <div class="self-center" style="flex: 1">
+                    <Skeleton width="100%" class="mb-2"></Skeleton>
+                    <Skeleton width="75%"></Skeleton>
+                </div>
             </div>
-        </div>
-    </li>
-    <li>
-        <div class="flex">
-            <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-            <div class="self-center flex-1">
-                <Skeleton width="100%" class="mb-2"></Skeleton>
-                <Skeleton width="75%"></Skeleton>
+        </li>
+        <li>
+            <div class="flex">
+                <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
+                <div class="self-center" style="flex: 1">
+                    <Skeleton width="100%" class="mb-2"></Skeleton>
+                    <Skeleton width="75%"></Skeleton>
+                </div>
             </div>
-        </div>
-    </li>
-</ul>
+        </li>
+    </ul>
+</div>
 `,
                 options: `
 <template>
-    <div class="card">
-        <ul>
+    <div class="rounded border border-surface-200 dark:border-surface-700 p-6 bg-surface-0 dark:bg-surface-900">
+        <ul class="m-0 p-0 list-none">
             <li class="mb-4">
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>
@@ -106,7 +110,7 @@ export default {
             <li class="mb-4">
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>
@@ -115,7 +119,7 @@ export default {
             <li class="mb-4">
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>
@@ -124,7 +128,7 @@ export default {
             <li>
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>
@@ -139,12 +143,12 @@ export default {
 `,
                 composition: `
 <template>
-    <div class="card">
-        <ul>
+    <div class="rounded border border-surface-200 dark:border-surface-700 p-6 bg-surface-0 dark:bg-surface-900">
+        <ul class="m-0 p-0 list-none">
             <li class="mb-4">
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>
@@ -153,7 +157,7 @@ export default {
             <li class="mb-4">
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>
@@ -162,7 +166,7 @@ export default {
             <li class="mb-4">
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>
@@ -171,7 +175,7 @@ export default {
             <li>
                 <div class="flex">
                     <Skeleton shape="circle" size="4rem" class="mr-2"></Skeleton>
-                    <div class="self-center flex-1">
+                    <div class="self-center" style="flex: 1">
                         <Skeleton width="100%" class="mb-2"></Skeleton>
                         <Skeleton width="75%"></Skeleton>
                     </div>

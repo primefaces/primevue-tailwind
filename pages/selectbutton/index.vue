@@ -53,7 +53,6 @@ export default {
                     label: 'Disabled',
                     component: DisabledDoc
                 },
-
                 {
                     id: 'accessibility',
                     label: 'Accessibility',

@@ -32,7 +32,8 @@ export default {
         }
     }
 };
-<\/script>`,
+<\/script>
+`,
                 composition: `
 <template>
     <div class="card flex justify-center">
@@ -44,7 +45,8 @@ export default {
 import { ref } from 'vue';
 
 const checked = ref(true);
-<\/script>`
+<\/script>
+`
             }
         };
     }
