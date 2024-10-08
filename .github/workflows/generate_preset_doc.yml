@@ -1,4 +1,4 @@
-name: Generate API DOC
+name: Generate Preset DOC
 
 on:
     push:
