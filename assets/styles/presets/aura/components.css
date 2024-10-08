@@ -3,4 +3,5 @@
 @import './fieldset';
 @import './panel';
 @import './scrollpanel';
+@import './splitter';
 @import './toolbar';
