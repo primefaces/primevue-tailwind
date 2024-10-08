@@ -33,11 +33,6 @@ export default {
         return {
             docs: [
                 {
-                    id: 'presets.lara',
-                    label: 'Lara',
-                    ...common
-                },
-                {
                     id: 'presets.aura',
                     label: 'Aura',
                     ...common

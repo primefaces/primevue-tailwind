@@ -18,7 +18,8 @@
         "format": "prettier --write \"**/*.{js,vue,d.ts}\" --cache",
         "format:check": "prettier --check \"**/*.{js,vue,d.ts}\"",
         "lint": "eslint --ext \".js,.vue\" --ignore-path .gitignore . --cache",
-        "lint:fix": "eslint --fix --ext \".js,.vue\" --ignore-path .gitignore ."
+        "lint:fix": "eslint --fix --ext \".js,.vue\" --ignore-path .gitignore .",
+        "build:presetdoc": "node ./scripts/build-presetdoc.js"
     },
     "keywords": [
         "primevue",
