@@ -1,14 +1,13 @@
 .p-inputtext {
-    @apply text-base appearance-none rounded-md
+    @apply appearance-none rounded-md
         border border-surface-300 dark:border-surface-700 
         enabled:hover:border-surface-400 dark:enabled:hover:border-surface-600
         enabled:focus:border-primary
         bg-surface-0 dark:bg-surface-950
-        disabled:bg-surface-200 disabled:text-surface-500
-        dark:disabled:bg-surface-700 dark:disabled:text-surface-400
         text-surface-700 dark:text-surface-0
+        disabled:bg-surface-200 disabled:text-surface-500 dark:disabled:bg-surface-700 dark:disabled:text-surface-400
         placeholder:text-surface-500 dark:placeholder:text-surface-400
-        px-2 py-2
+        px-3 py-2
         transition-colors duration-200
         shadow-[0_1px_2px_0_rgba(18,18,23,0.05)]
         outline-none
@@ -20,8 +19,6 @@
 
 .p-inputtext.p-variant-filled {
     @apply bg-surface-50 dark:bg-surface-800
-        enabled:hover:bg-surface-50 dark:enabled:hover:bg-surface-800
-        enabled:focus:bg-surface-50 dark:enabled:focus:bg-surface-800
 }
 
 .p-inputtext-sm {

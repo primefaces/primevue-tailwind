@@ -1,0 +1,51 @@
+.p-divider-horizontal {
+    @apply flex w-full relative items-center my-4 mx-0 py-0 px-4
+}
+
+.p-divider-horizontal:before {
+    @apply absolute block top-1/2 left-0 w-full content-[''] border-t border-surface-200 dark:border-surface-700
+}
+
+.p-divider-horizontal .p-divider-content {
+    @apply py-0 px-2
+}
+
+.p-divider-vertical {
+    @apply min-h-full flex relative justify-center my-0 mx-4 py-2 px-0
+}
+
+.p-divider-vertical:before {
+    @apply absolute block top-0 left-1/2 h-full content-[''] border-l border-surface-200 dark:border-surface-700
+}
+
+.p-divider.p-divider-vertical .p-divider-content {
+    @apply py-2 px-0
+}
+
+.p-divider-content {
+    @apply z-[1] bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-surface-0
+}
+
+.p-divider-solid.p-divider-horizontal:before {
+    @apply border-solid
+}
+
+.p-divider-solid.p-divider-vertical:before {
+    @apply border-solid
+}
+
+.p-divider-dashed.p-divider-horizontal:before {
+    @apply border-dashed
+}
+
+.p-divider-dashed.p-divider-vertical:before {
+    @apply border-dashed
+}
+
+.p-divider-dotted.p-divider-horizontal:before {
+    @apply border-dotted
+}
+
+.p-divider-dotted.p-divider-vertical:before {
+    @apply border-dotted
+}

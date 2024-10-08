@@ -6,10 +6,7 @@
 }
 
 .p-fieldset-legend {
-    @apply border border-transparent rounded-md
-        bg-surface-0 dark:bg-surface-900
-        text-surface-700 dark:text-surface-0
-        px-3 py-2
+    @apply border border-transparent rounded-md px-3 py-2
         transition-colors duration-200
 }
 

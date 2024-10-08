@@ -1,3 +1,4 @@
+@import './divider';
 @import './inputtext';
-@import './panel';
 @import './fieldset';
+@import './panel';
