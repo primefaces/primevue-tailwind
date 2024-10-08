@@ -1,9 +1,12 @@
+@import './global';
+
 /* Form */
 @import './checkbox';
 @import './inputotp';
 @import './inputtext';
 @import './knob';
 @import './radiobutton';
+@import './rating';
 
 /* Panel */
 @import './card';
