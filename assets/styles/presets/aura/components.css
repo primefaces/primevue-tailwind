@@ -1,6 +1,13 @@
+/* Form */
+@import './checkbox';
+@import './inputotp';
+@import './inputtext';
+@import './knob';
+@import './radiobutton';
+
+/* Panel */
 @import './card';
 @import './divider';
-@import './inputtext';
 @import './fieldset';
 @import './panel';
 @import './scrollpanel';
