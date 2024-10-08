@@ -23,7 +23,7 @@
 }
 
 .p-divider-content {
-    @apply z-[1] bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-surface-0
+    @apply z-10 bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-surface-0
 }
 
 .p-divider-solid.p-divider-horizontal:before {
