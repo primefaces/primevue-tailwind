@@ -5,7 +5,6 @@
 <script>
 import AccessibilityDoc from '@/doc/ripple/AccessibilityDoc.vue';
 import ConfigurationDoc from '@/doc/ripple/ConfigurationDoc.vue';
-import CustomDoc from '@/doc/ripple/CustomDoc.vue';
 import DefaultDoc from '@/doc/ripple/DefaultDoc.vue';
 import ImportDoc from '@/doc/ripple/ImportDoc.vue';
 
@@ -28,11 +27,11 @@ export default {
                     label: 'Default',
                     component: DefaultDoc
                 },
-                {
+                /*-{
                     id: 'custom',
                     label: 'Custom',
                     component: CustomDoc
-                },
+                },*/
                 {
                     id: 'accessibility',
                     label: 'Accessibility',
