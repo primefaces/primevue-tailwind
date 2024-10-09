@@ -18,6 +18,10 @@
 @import './togglebutton';
 @import './toggleswitch';
 
+/* Button */
+@import './button';
+@import './buttongroup';
+
 /* Panel */
 @import './card';
 @import './divider';
