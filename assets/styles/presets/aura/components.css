@@ -24,6 +24,8 @@
 /* Misc */
 @import './avatar';
 @import './badge';
+@import './blockui';
 @import './chip';
 @import './tag';
 @import './overlaybadge';
+@import './terminal';

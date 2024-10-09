@@ -1,3 +1,34 @@
 .p-disabled {
     @apply opacity-60
 }
+
+.p-overlay-mask {
+    @apply bg-black/50 text-surface-200 transition-colors duration-150
+        fixed top-0 left-0 w-full h-full
+}
+
+.p-overlay-mask-enter {
+    animation: p-overlay-mask-enter-animation 150ms forwards;
+}
+
+.p-overlay-mask-leave {
+    animation: p-overlay-mask-leave-animation 150ms forwards;
+}
+
+@keyframes p-overlay-mask-enter-animation {
+    from {
+        background: transparent;
+    }
+    to {
+        background: rgba(0,0,0,0.5);
+    }
+}
+
+@keyframes p-overlay-mask-leave-animation {
+    from {
+        background: rgba(0,0,0,0.5);
+    }
+    to {
+        background: transparent;
+    }
+}
