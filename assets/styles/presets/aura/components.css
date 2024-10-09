@@ -7,7 +7,9 @@
 @import './knob';
 @import './radiobutton';
 @import './rating';
+@import './selectbutton';
 @import './slider';
+@import './togglebutton';
 @import './toggleswitch';
 
 /* Panel */
