@@ -21,6 +21,7 @@
 /* Button */
 @import './button';
 @import './buttongroup';
+@import './splitbutton';
 
 /* Panel */
 @import './card';
