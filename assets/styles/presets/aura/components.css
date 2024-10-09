@@ -23,4 +23,7 @@
 
 /* Misc */
 @import './avatar';
+@import './badge';
 @import './chip';
+@import './tag';
+@import './overlaybadge';
