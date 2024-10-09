@@ -2,6 +2,7 @@
 
 /* Form */
 @import './checkbox';
+@import './colorpicker';
 @import './iconfield';
 @import './inputotp';
 @import './inputtext';
