@@ -6,6 +6,7 @@
 @import './inputotp';
 @import './inputtext';
 @import './knob';
+@import './password';
 @import './radiobutton';
 @import './rating';
 @import './selectbutton';
