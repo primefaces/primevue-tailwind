@@ -4,8 +4,10 @@
 @import './checkbox';
 @import './colorpicker';
 @import './iconfield';
+@import './iftalabel';
 @import './inputotp';
 @import './inputtext';
+@import './floatlabel';
 @import './knob';
 @import './password';
 @import './radiobutton';
