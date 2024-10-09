@@ -28,6 +28,10 @@
 @import './badge';
 @import './blockui';
 @import './chip';
-@import './tag';
+@import './inplace';
+@import './metergroup';
 @import './overlaybadge';
+@import './progressbar';
+@import './progressspinner';
+@import './tag';
 @import './terminal';
