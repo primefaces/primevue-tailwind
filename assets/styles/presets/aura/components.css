@@ -20,3 +20,7 @@
 @import './scrollpanel';
 @import './splitter';
 @import './toolbar';
+
+/* Misc */
+@import './avatar';
+@import './chip';
