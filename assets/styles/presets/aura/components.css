@@ -35,12 +35,14 @@
 @import './tree';
 
 /* Panel */
+@import './accordion';
 @import './card';
 @import './divider';
 @import './fieldset';
 @import './panel';
 @import './scrollpanel';
 @import './splitter';
+@import './stepper';
 @import './tabs';
 @import './toolbar';
 
