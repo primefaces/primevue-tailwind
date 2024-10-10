@@ -5,6 +5,7 @@
 @import './colorpicker';
 @import './iconfield';
 @import './iftalabel';
+@import './inputnumber';
 @import './inputotp';
 @import './inputtext';
 @import './floatlabel';
