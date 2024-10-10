@@ -12,6 +12,7 @@
 @import './inputtext';
 @import './floatlabel';
 @import './knob';
+@import './listbox';
 @import './multiselect';
 @import './password';
 @import './radiobutton';
