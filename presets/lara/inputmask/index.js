@@ -1,5 +1,5 @@
 export default {
-    pcinputtext: {
+    pcInpuText: {
         root: ({ context, props, parent }) => ({
             class: [
                 // Font

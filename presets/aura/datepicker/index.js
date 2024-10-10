@@ -10,7 +10,7 @@ export default {
             'relative'
         ]
     }),
-    pcInput: ({ props, parent }) => ({
+    pcInputText: ({ props, parent }) => ({
         root: {
             class: [
                 // Display
