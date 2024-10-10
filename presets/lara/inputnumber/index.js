@@ -17,7 +17,7 @@ export default {
             { '!w-16': props.showButtons && props.buttonLayout == 'vertical' }
         ]
     }),
-    pcInput: {
+    pcInputText: {
         root: ({ parent, context }) => ({
             class: [
                 // Display
