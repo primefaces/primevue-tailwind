@@ -41,6 +41,7 @@
 @import './panel';
 @import './scrollpanel';
 @import './splitter';
+@import './tabs';
 @import './toolbar';
 
 /* Misc */
