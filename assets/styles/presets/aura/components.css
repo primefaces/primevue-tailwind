@@ -21,6 +21,7 @@
 /* Button */
 @import './button';
 @import './buttongroup';
+@import './speeddial';
 @import './splitbutton';
 
 /* Panel */

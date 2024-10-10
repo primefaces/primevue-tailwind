@@ -11,7 +11,7 @@
 }
 
 .p-scrolltop-enter-active {
-    @apply transition-[opacity] duration-150
+    @apply transition-opacity duration-150
 }
 
 .p-scrolltop.p-scrolltop-leave-to {
@@ -19,5 +19,5 @@
 }
 
 .p-scrolltop-leave-active {
-    @apply transition-[opacity] duration-150
+    @apply transition-opacity duration-150
 }
