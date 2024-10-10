@@ -68,10 +68,18 @@ export default {
     },
     methods: {
         async generate() {
+            const components = this.selectedComponents.flatMap((component) => {
+                const subComponents = Object.values(this.builderData)
+                    .find((category) => category.components.some((c) => c.path === component))
+                    ?.components.find((c) => c.path === component)?.subComponents || [];
+
+                return [component, ...subComponents.map((sub) => sub.path)];
+            });
+
             const blob = await $fetch(`/api/builder`, {
                 method: 'POST',
                 body: {
-                    components: this.selectedComponents,
+                    components: components,
                     preset: this.preset,
                     filename: this.filename
                 }
