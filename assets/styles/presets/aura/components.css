@@ -1,6 +1,8 @@
 @import './global';
 
 /* Form */
+@import './autocomplete';
+@import './cascadeselect';
 @import './checkbox';
 @import './colorpicker';
 @import './iconfield';
@@ -10,20 +12,26 @@
 @import './inputtext';
 @import './floatlabel';
 @import './knob';
+@import './multiselect';
 @import './password';
 @import './radiobutton';
 @import './rating';
+@import './select';
 @import './selectbutton';
 @import './slider';
 @import './textarea';
 @import './togglebutton';
 @import './toggleswitch';
+@import './treeselect';
 
 /* Button */
 @import './button';
 @import './buttongroup';
 @import './speeddial';
 @import './splitbutton';
+
+/* Data */
+@import './tree';
 
 /* Panel */
 @import './card';
