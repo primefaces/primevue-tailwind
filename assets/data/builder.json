@@ -114,7 +114,13 @@
             "components": [
                 {
                     "name": "Button",
-                    "path": "button"
+                    "path": "button",
+                    "subComponents": [
+                        {
+                            "name": "ButtonGroup",
+                            "path": "buttongroup"
+                        }
+                    ]
                 },
                 {
                     "name": "Speed Dial",
@@ -172,7 +178,21 @@
             "components": [
                 {
                     "name": "Accordion",
-                    "path": "accordion"
+                    "path": "accordion",
+                    "subComponents": [
+                        {
+                            "name": "AccordionPanel",
+                            "path": "accordionpanel"
+                        },
+                        {
+                            "name": "AccordionHeader",
+                            "path": "accordionheader"
+                        },
+                        {
+                            "name": "AccordionContent",
+                            "path": "accordioncontent"
+                        }
+                    ]
                 },
                 {
                     "name": "Card",
@@ -200,15 +220,57 @@
                 },
                 {
                     "name": "Splitter",
-                    "path": "splitter"
+                    "path": "splitter",
+                    "subComponents": [
+                        {
+                            "name": "SplitterPanel",
+                            "path": "splitterpanel"
+                        }
+                    ]
                 },
                 {
                     "name": "Stepper",
-                    "path": "stepper"
+                    "path": "stepper",
+                    "subComponents": [
+                        {
+                            "name": "Step",
+                            "path": "step"
+                        },
+                        {
+                            "name": "StepList",
+                            "path": "steplist"
+                        },
+                        {
+                            "name": "StepPanels",
+                            "path": "steppanels"
+                        },
+                        {
+                            "name": "StepItem",
+                            "path": "stepitem"
+                        }
+                    ]
                 },
                 {
                     "name": "Tabs",
-                    "path": "tabs"
+                    "path": "tabs",
+                    "subComponents": [
+                        {
+                            "name": "Tab",
+                            "path": "tab"
+                        },
+                        {
+                            "name": "TabList",
+                            "path": "tablist"
+                        },
+                        {
+                            "name": "TabPanels",
+                            "path": "tabpanels"
+                        },
+                        {
+                            "name": "TabPanel",
+                            "path": "tabpanel"
+                        }
+                    ]
                 },
                 {
                     "name": "Toolbar",
@@ -330,11 +392,23 @@
             "components": [
                 {
                     "name": "Avatar",
-                    "path": "avatar"
+                    "path": "avatar",
+                    "subComponents": [
+                        {
+                            "name": "AvatarGroup",
+                            "path": "avatargroup"
+                        }
+                    ]
                 },
                 {
                     "name": "Badge",
-                    "path": "badge"
+                    "path": "badge",
+                    "subComponents": [
+                        {
+                            "name": "OverlayBadge",
+                            "path": "overlaybadge"
+                        }
+                    ]
                 },
                 {
                     "name": "BlockUI",
