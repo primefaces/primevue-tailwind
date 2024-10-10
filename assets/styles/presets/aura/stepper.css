@@ -12,6 +12,11 @@
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
 }
 
+.p-step.p-disabled .p-step-header {
+    @apply cursor-default
+}
+
+
 .p-stepper.p-stepper-readonly .p-step {
     @apply cursor-auto
 }
