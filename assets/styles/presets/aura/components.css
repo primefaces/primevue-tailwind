@@ -42,6 +42,16 @@
 @import './popover';
 @import './tooltip';
 
+/* Menu */
+@import './breadcrumb';
+@import './contextmenu';
+@import './dock';
+@import './menu';
+@import './menubar';
+@import './megamenu';
+@import './panelmenu';
+@import './tieredmenu';
+
 /* Panel */
 @import './accordion';
 @import './card';

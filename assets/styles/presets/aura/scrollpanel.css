@@ -1,11 +1,11 @@
 .p-scrollpanel-content-container {
-    @apply overflow-auto w-full h-full relative z-10 float-left
+    @apply overflow-hidden w-full h-full relative z-10 float-left
 }
 
 .p-scrollpanel-content {
     @apply relative overflow-auto 
         h-[calc(100%+18px)] w-[calc(100%+18px)]
-        pt-0 pl-0 pr-[18px] pb-[18px]
+        pt-0 pl-0 pr-[18px] pb-[18px] [scrollbar-width:none]
 }
 
 .p-scrollpanel-content::-webkit-scrollbar {
