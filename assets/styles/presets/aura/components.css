@@ -34,6 +34,14 @@
 /* Data */
 @import './tree';
 
+/* Overlay */
+@import './confirmdialog';
+@import './confirmpopup';
+@import './dialog';
+@import './drawer';
+@import './popover';
+@import './tooltip';
+
 /* Panel */
 @import './accordion';
 @import './card';
