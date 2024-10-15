@@ -68,6 +68,12 @@
 @import './message';
 @import './toast';
 
+/* Media */
+@import './carousel';
+@import './galleria';
+@import './image';
+@import './imagecompare';
+
 /* Misc */
 @import './avatar';
 @import './badge';
