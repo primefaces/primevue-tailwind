@@ -33,6 +33,10 @@
 @import './splitbutton';
 
 /* Data */
+@import './dataview';
+@import './picklist';
+@import './orderlist';
+@import './organizationchart';
 @import './timeline';
 @import './tree';
 
