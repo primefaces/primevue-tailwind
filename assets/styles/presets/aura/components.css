@@ -64,6 +64,9 @@
 @import './tabs';
 @import './toolbar';
 
+/* File */
+@import './fileupload';
+
 /* Message */
 @import './message';
 @import './toast';
