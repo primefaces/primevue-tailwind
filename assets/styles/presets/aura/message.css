@@ -67,7 +67,7 @@
 .p-message-secondary {
     @apply bg-surface-100 outline-surface-200 text-surface-600 
         dark:bg-surface-800 dark:outline-surface-700 dark:text-surface-300 
-        shadow-[0px_4px_8px_0px_theme(colors.surface.500/0.04)]
+        shadow-[0px_4px_8px_0px_rgba(0,0,0,0.04)]
 }
 
 .p-message-secondary .p-message-close-button {
@@ -78,7 +78,7 @@
 .p-message-contrast {
     @apply bg-surface-900 outline-surface-950 text-surface-50 
         dark:bg-surface-0 dark:outline-surface-100 dark:text-surface-950 
-        shadow-[0px_4px_8px_0px_theme(colors.surface.950/0.04)]
+        shadow-[0px_4px_8px_0px_rgba(0,0,0,0.04)]
 }
 
 .p-message-contrast .p-message-close-button {

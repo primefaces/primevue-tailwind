@@ -108,7 +108,7 @@
 .p-toast-message-secondary {
     @apply bg-surface-100 border-surface-200 text-surface-600
         dark:bg-surface-800 dark:border-surface-700 dark:text-surface-300
-        shadow-[0px_4px_8px_0px_theme(colors.surface.500/0.04)]
+        shadow-[0px_4px_8px_0px_rgba(0,0,0,0.04)]
 }
 
 .p-toast-message-secondary .p-toast-detail {
@@ -123,7 +123,7 @@
 .p-toast-message-contrast {
     @apply bg-surface-900 border-surface-950 text-surface-50
         dark:bg-surface-0 dark:border-surface-100 dark:text-surface-950
-        shadow-[0px_4px_8px_0px_theme(colors.surface.950/0.04)]
+        shadow-[0px_4px_8px_0px_rgba(0,0,0,0.04)]
 }
 
 .p-toast-message-contrast .p-toast-detail {
