@@ -33,12 +33,15 @@
 @import './splitbutton';
 
 /* Data */
+@import './datatable';
 @import './dataview';
+@import './paginator';
 @import './picklist';
 @import './orderlist';
 @import './organizationchart';
 @import './timeline';
 @import './tree';
+@import './treetable';
 
 /* Overlay */
 @import './confirmdialog';
