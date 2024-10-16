@@ -1,3 +1,5 @@
+@import './badge';
+
 .p-button {
     @apply inline-flex cursor-pointer select-none items-center justify-center overflow-hidden relative 
         bg-primary enabled:hover:bg-primary-emphasis enabled:active:bg-primary-emphasis-alt text-primary-contrast

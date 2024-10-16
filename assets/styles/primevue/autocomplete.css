@@ -1,3 +1,6 @@
+@import './inputtext';
+@import './chip';
+
 .p-autocomplete {
     @apply inline-flex
 }

@@ -1,3 +1,7 @@
+@import './button';
+@import './inputtext';
+@import './iconfield';
+
 .p-select {
     @apply inline-flex cursor-pointer relative select-none rounded-md
         bg-surface-0 dark:bg-surface-950

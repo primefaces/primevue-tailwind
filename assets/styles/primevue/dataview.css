@@ -1,3 +1,5 @@
+@import './paginator';
+
 .p-dataview {
     @apply border-none
 }

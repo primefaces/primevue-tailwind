@@ -1,4 +1,4 @@
-@import './global';
+@import './base';
 
 /* Form */
 @import './autocomplete';

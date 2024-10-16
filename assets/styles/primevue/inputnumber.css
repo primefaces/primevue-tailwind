@@ -1,3 +1,5 @@
+@import './inputtext';
+
 .p-inputnumber {
     @apply inline-flex relative
 }

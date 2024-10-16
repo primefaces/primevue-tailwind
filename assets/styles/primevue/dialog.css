@@ -1,3 +1,5 @@
+@import './button';
+
 .p-dialog {
     @apply max-h-[90%] scale-100 rounded-xl 
         border border-surface-200 dark:border-surface-700 

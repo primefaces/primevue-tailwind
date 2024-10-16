@@ -1,3 +1,6 @@
+@import './button';
+@import './listbox';
+
 .p-picklist {
     @apply flex gap-[1.125rem]
 }

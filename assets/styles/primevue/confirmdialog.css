@@ -1,3 +1,6 @@
+@import './dialog';
+@import './button';
+
 .p-confirmdialog .p-dialog-content {
     @apply flex items-center gap-4
 }
