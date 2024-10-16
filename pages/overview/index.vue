@@ -73,10 +73,10 @@ export default {
     },
     computed: {
         introDesktopImg() {
-            return `https://primefaces.org/cdn/primevue/images/overview${this.$appState.darkMode ? '-dark' : ''}.png`;
+            return `https://primefaces.org/cdn/primevue/images/overview${this.$appState.darkTheme ? '-dark' : ''}.png`;
         },
         introMobileImg() {
-            return `https://primefaces.org/cdn/primevue/images/overview${this.$appState.darkMode ? '-dark' : ''}-mobile.png`;
+            return `https://primefaces.org/cdn/primevue/images/overview${this.$appState.darkTheme ? '-dark' : ''}-mobile.png`;
         }
     }
 };

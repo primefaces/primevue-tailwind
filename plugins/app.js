@@ -1,31 +1,18 @@
 import DeferredDemo from '@/components/demo/DeferredDemo.vue';
 import CodeHighlight from '@/directives/CodeHighlight';
-import Aura from '@/presets/aura';
-import Lara from '@/presets/lara';
 
 const $appStatePlugin = {
     install: (app) => {
-        const _appState = reactive({
-            preset: 'Aura',
+        app.config.globalProperties.$appState = reactive({
             primary: 'emerald',
             surface: null,
-            darkMode: false,
+            darkTheme: false,
             codeSandbox: false,
             sourceType: 'options-api',
             newsActive: false,
             announcement: null,
-            storageKey: 'primevue-tailwind '
+            storageKey: 'primevue-tailwind'
         });
-
-        watch(
-            () => _appState.preset,
-            (newValue) => {
-                if (newValue === 'Lara') app.config.globalProperties.$primevue.config.pt = Lara;
-                else if (newValue === 'Aura') app.config.globalProperties.$primevue.config.pt = Aura;
-            }
-        );
-
-        app.config.globalProperties.$appState = _appState;
     }
 };
 

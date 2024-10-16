@@ -22,7 +22,7 @@
                         :key="surface.name"
                         type="button"
                         @click="updateColors('surface', surface.name)"
-                        :class="{ 'active-color': selectedSurfaceColor ? selectedSurfaceColor === surface.name : $appState.darkMode ? surface.name === 'zinc' : surface.name === 'slate' }"
+                        :class="{ 'active-color': selectedSurfaceColor ? selectedSurfaceColor === surface.name : $appState.darkTheme ? surface.name === 'zinc' : surface.name === 'slate' }"
                         :style="{ backgroundColor: `${surface.palette[500]}` }"
                     ></button>
                 </div>

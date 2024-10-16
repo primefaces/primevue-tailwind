@@ -26,9 +26,9 @@ export default {
         },
         toggleDarkMode() {
             document.documentElement.classList.toggle('p-dark');
-            this.$appState.darkMode = !this.$appState.darkMode;
+            this.$appState.darkTheme = !this.$appState.darkTheme;
 
-            EventBus.emit('dark-mode-changed', this.$appState.darkMode);
+            EventBus.emit('dark-mode-toggle-complete');
         }
     }
 };

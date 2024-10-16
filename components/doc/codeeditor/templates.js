@@ -551,7 +551,7 @@ export default {
 
             root.classList.toggle('p-dark');
             this.iconClass = this.iconClass === 'pi-moon' ? 'pi-sun' : 'pi-moon';
-            this.$appState.darkMode = !this.$appState.darkMode;
+            this.$appState.darkTheme = !this.$appState.darkTheme;
         }
     },
 };
@@ -591,7 +591,7 @@ export default {
                 type="button"
                 @click="updateColors('surface', surface.name)"
                 class="w-4 h-4 rounded-full cursor-pointer config-button"
-                :class="{ 'active-color': selectedSurfaceColor ? selectedSurfaceColor === surface.name : $appState.darkMode ? surface.name === 'zinc' : surface.name === 'slate' }"
+                :class="{ 'active-color': selectedSurfaceColor ? selectedSurfaceColor === surface.name : $appState.darkTheme ? surface.name === 'zinc' : surface.name === 'slate' }"
                 :style="{ backgroundColor: \`\${surface.palette[6]}\` }"
             ></button>
         </div>

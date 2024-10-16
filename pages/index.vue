@@ -14,6 +14,7 @@ definePageMeta({
 
 <script>
 import HeroSection from '/components/landing/HeroSection.vue';
+
 export default {
     layout: 'custom',
     props: {

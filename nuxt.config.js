@@ -82,14 +82,6 @@ export default defineNuxtConfig({
             autoprefixer: {}
         }
     },
-    nitro: {
-        serverAssets: [
-            {
-                baseName: 'presets',
-                dir: '../presets'
-            }
-        ]
-    },
     devtools: { enabled: false },
     layouts: {
         default: '~/layouts/default.vue'

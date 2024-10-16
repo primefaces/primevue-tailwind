@@ -1,10 +1,8 @@
 <template>
     <section class="landing-hero py-20 px-8 lg:px-20">
         <div class="flex flex-col items-center">
-            <h1 class="text-5xl font-bold text-center xl:text-left leading-tight">The Next-Gen UI Suite for <span class="font-bold text-primary">Vue.js</span></h1>
-            <p class="text-center mt-0 mb-8 text-surface-500 dark:text-surface-400 font-medium text-xl leading-relaxed lg:px-56">
-                Enhance your web applications with PrimeVue's comprehensive suite of customizable, feature-rich UI components. With PrimeVue, turning your development vision into reality has never been easier.
-            </p>
+            <h1 class="text-5xl font-bold text-center xl:text-left leading-tight">UI Library for Vue.js with <span class="font-bold text-primary">Tailwind CSS</span></h1>
+            <p class="text-center mt-0 mb-8 text-surface-500 dark:text-surface-400 font-medium text-xl leading-relaxed lg:px-56">Create your own design with the flexibility of Tailwind CSS and the convenience of PrimeVue Unstyled components.</p>
             <div class="flex items-center gap-4">
                 <NuxtLink to="/overview" class="linkbox linkbox-primary">
                     <span>Get Started </span>
