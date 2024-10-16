@@ -420,11 +420,6 @@
             "icon": "pi pi-box"
         },
         {
-            "name": "Gallery",
-            "to": "/gallery",
-            "icon": "pi pi-images"
-        },
-        {
             "name": "Icons",
             "icon": "pi pi-eye",
             "children": [
