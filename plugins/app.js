@@ -5,7 +5,7 @@ const $appStatePlugin = {
     install: (app) => {
         app.config.globalProperties.$appState = reactive({
             primary: 'emerald',
-            surface: null,
+            surface: 'zinc',
             darkTheme: false,
             codeSandbox: false,
             sourceType: 'options-api',

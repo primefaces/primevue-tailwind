@@ -92,7 +92,7 @@
                     >
                         <i class="pi pi-palette"></i>
                     </button>
-                    <AppConfig />
+                    <AppConfigurator />
                 </li>
                 <li v-if="showMenuButton" class="menu-button">
                     <button type="button" class="topbar-item menu-button" @click="onMenuButtonClick" aria-haspopup aria-label="Menu">
@@ -130,19 +130,7 @@ export default {
             this.$emit('menubutton-click', event);
         },
         toggleDarkMode() {
-            if (!document.startViewTransition) {
-                this.switchDarkMode();
-
-                return;
-            }
-
-            document.startViewTransition(() => this.switchDarkMode());
-        },
-        switchDarkMode() {
-            EventBus.emit('dark-mode-toggle');
-            setTimeout(() => {
-                EventBus.emit('dark-mode-toggle-complete');
-            }, 0);
+            EventBus.emit('dark-mode-toggle', { dark: !this.$appState.darkTheme });
         },
         bindScrollListener() {
             if (!this.scrollListener) {

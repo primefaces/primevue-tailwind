@@ -1,5 +1,5 @@
 <template>
-    <div class="layout-wrapper" :class="containerClass" :data-p-theme="$appState.theme">
+    <div class="layout-wrapper" :class="containerClass">
         <AppNews />
         <AppTopBar @menubutton-click="onMenuButtonClick" />
         <div :class="['layout-mask', { 'layout-mask-active': sidebarActive }]" @click="onMaskClick"></div>
@@ -58,9 +58,9 @@ export default {
     computed: {
         containerClass() {
             return [
+                'layout-wrapper',
                 {
-                    'layout-news-active': this.$appState.newsActive,
-                    'layout-ripple-disabled': this.$primevue.config.ripple === false
+                    'layout-news-active': this.$appState.newsActive
                 }
             ];
         }

@@ -2,34 +2,34 @@
     <div class="config-panel hidden">
         <div class="config-panel-content">
             <div class="config-panel-colors">
-                <span class="config-panel-label">Primary Colors</span>
+                <span class="config-panel-label">Primary</span>
                 <div>
                     <button
                         v-for="primaryColor of primaryColors"
                         :key="primaryColor.name"
                         type="button"
-                        @click="updateColors('primary', primaryColor.name)"
+                        @click="updateColors('primary', primaryColor)"
                         :class="{ 'active-color': selectedPrimaryColor === primaryColor.name }"
                         :style="{ backgroundColor: `${primaryColor.name === 'noir' ? 'var(--text-color)' : primaryColor.palette[500]}` }"
                     ></button>
                 </div>
             </div>
             <div class="config-panel-colors">
-                <span class="config-panel-label">Surface Colors</span>
+                <span class="config-panel-label">Surface</span>
                 <div>
                     <button
                         v-for="surface of surfaces"
                         :key="surface.name"
                         type="button"
-                        @click="updateColors('surface', surface.name)"
+                        @click="updateColors('surface', surface)"
                         :class="{ 'active-color': selectedSurfaceColor ? selectedSurfaceColor === surface.name : $appState.darkTheme ? surface.name === 'zinc' : surface.name === 'slate' }"
                         :style="{ backgroundColor: `${surface.palette[500]}` }"
                     ></button>
                 </div>
             </div>
             <div class="config-panel-settings">
-                <span class="config-panel-label">Primary</span>
-                <SelectButton v-model="$appState.preset" @update:modelValue="onPresetChange" :options="presets" :allowEmpty="false" />
+                <span class="config-panel-label">Ripple</span>
+                <ToggleSwitch :modelValue="rippleActive" @update:modelValue="onRippleChange" />
             </div>
         </div>
     </div>
@@ -41,7 +41,6 @@ import EventBus from '@/layouts/AppEventBus';
 export default {
     data() {
         return {
-            presets: ['Aura', 'Lara'],
             primaryColors: [
                 { name: 'noir', palette: {} },
                 { name: 'emerald', palette: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b', 950: '#022c22' } },
@@ -98,45 +97,32 @@ export default {
         };
     },
     methods: {
-        updateColors(type, colorName) {
-            let selectedColor;
-            const root = document.documentElement;
-
+        updateColors(type, color) {
             if (type === 'primary') {
-                selectedColor = this.primaryColors.find((color) => color.name === colorName);
-                this.$appState.primary = colorName;
+                this.$appState.primary = color.name;
 
-                if (colorName === 'noir') {
-                    root.classList.add('p-noir');
+                if (color.name === 'noir') {
+                    document.documentElement.classList.add('p-noir');
                     document.documentElement.style.setProperty('--logo-color', 'var(--text-secondary-color)');
+                    const surface = this.surfaces.find((s) => s.name === this.$appState.surface);
+
+                    this.applyTheme(type, surface);
                 } else {
-                    root.classList.remove('p-noir');
+                    document.documentElement.classList.remove('p-noir');
                     document.documentElement.style.setProperty('--logo-color', 'var(--primary-color)');
+                    this.applyTheme(type, color);
                 }
             } else if (type === 'surface') {
-                selectedColor = this.surfaces.find((color) => color.name === colorName);
                 this.$appState.surface = colorName;
+                this.applyTheme(type, color);
             }
 
-            this.applyTheme(type, selectedColor.palette, colorName);
-
-            EventBus.emit('config-colors-changed');
+            EventBus.emit('theme-palette-change');
         },
-        applyTheme(type, colors, colorName) {
-            if (colorName === 'noir') {
-                let increments = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950];
-
-                increments.forEach((inc) => {
-                    document.documentElement.style.setProperty(`--p-${type}-${inc}`, `var(--p-surface-${inc})`);
-                });
-            } else {
-                Object.keys(colors).forEach((inc) => {
-                    document.documentElement.style.setProperty(`--p-${type}-${inc}`, colors[inc]);
-                });
-            }
-        },
-        onPresetChange(preset) {
-            this.$appState.preset = preset;
+        applyTheme(type, color) {
+            Object.keys(color.palette).forEach((key) => {
+                document.documentElement.style.setProperty(`--p-${type}-${key}`, color.palette[key]);
+            });
         },
         onRippleChange(value) {
             this.$primevue.config.ripple = value;
