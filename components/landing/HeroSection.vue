@@ -22,7 +22,7 @@
                 </a>
             </h1>
             <p class="text-center mt-0 mb-8 text-surface-500 dark:text-surface-400 font-medium text-xl leading-relaxed lg:px-56 max-w-[1200px]">
-                Create your own design system with the efficiency of Tailwind CSS and the flexibility of PrimeVue Unstyled components.
+                Create your own design with the convenience of Tailwind CSS and the flexibility of PrimeVue Unstyled components.
             </p>
             <div class="flex items-center gap-4">
                 <NuxtLink to="/overview" class="linkbox linkbox-primary">

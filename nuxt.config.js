@@ -74,7 +74,7 @@ export default defineNuxtConfig({
     gtag: {
         id: 'G-48TTQ6G6KV'
     },
-    css: ['~/assets/styles/style.css', '/node_modules/primeicons/primeicons.css', '@/assets/styles/flags.css', '@docsearch/css/dist/style.css', '@/assets/styles/layout/layout.scss'],
+    css: ['@/assets/styles/tailwind.css', '@/assets/styles/app/app.scss', '@/assets/styles/flags.css', 'primeicons/primeicons.css'],
     postcss: {
         plugins: {
             'postcss-import': {},

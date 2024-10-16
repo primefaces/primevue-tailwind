@@ -1,4 +1,4 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "./presets/aura/components.css";
+@import "./primevue/components.css";
 @import "tailwindcss/utilities";
