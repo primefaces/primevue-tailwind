@@ -58,9 +58,9 @@
 }
 
 .p-toggleswitch.p-disabled .p-toggleswitch-slider {
-    @apply bg-surface-200 dark:bg-surface-800
+    @apply bg-surface-200 dark:bg-surface-600
 }
 
 .p-toggleswitch.p-disabled .p-toggleswitch-handle {
-    @apply bg-surface-700 dark:bg-surface-500
+    @apply bg-surface-700 dark:bg-surface-900
 }

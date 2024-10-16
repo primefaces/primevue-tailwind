@@ -74,6 +74,10 @@
     @apply text-primary
 }
 
+.p-tree-filter {
+    @apply mb-2
+}
+
 .p-tree-filter-input {
     @apply w-full
 }

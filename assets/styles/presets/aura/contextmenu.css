@@ -88,8 +88,8 @@
     @apply transition-opacity duration-[250ms]
 }
 
-.p-contextmenu-mobile .p-contextmenu-item {
-    @apply static
+.p-contextmenu-mobile .p-contextmenu-submenu {
+    @apply static shadow-none border-none ps-4 pe-0
 }
 
 .p-contextmenu-mobile .p-contextmenu-submenu-icon {
@@ -98,8 +98,4 @@
 
 .p-contextmenu-mobile .p-contextmenu-item-active > .p-contextmenu-item-content .p-contextmenu-submenu-icon {
     @apply -rotate-90
-}
-
-.p-contextmenu-mobile .p-contextmenu-submenu {
-    @apply static shadow-none border-none pl-4
 }
