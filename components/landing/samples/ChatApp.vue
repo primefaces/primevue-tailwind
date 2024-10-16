@@ -14,7 +14,21 @@
                 </IconField>
             </div>
             <div class="w-full px-5">
-                <SelectButton v-model="value" :options="options" aria-labelledby="basic" />
+                <SelectButton
+                    v-model="value"
+                    :options="options"
+                    aria-labelledby="basic"
+                    :pt="{
+                        root: {
+                            class: 'w-full'
+                        },
+                        pcbutton: {
+                            root: {
+                                class: 'flex-1'
+                            }
+                        }
+                    }"
+                />
             </div>
             <div class="flex-1 flex flex-col">
                 <div
@@ -26,8 +40,8 @@
                     }"
                 >
                     <div class="relative">
-                        <div v-if="chat.active !== undefined" class="absolute -top- right-0 bg-surface-0 dark:bg-surface-950 rounded-full flex items-center justify-center z-10">
-                            <Badge :severity="chat.active ? 'success' : 'danger'" class=""></Badge>
+                        <div v-if="chat.active !== undefined" class="absolute top-0 right-0 p-[1px] bg-surface-0 dark:bg-surface-950 rounded-full flex items-center justify-center">
+                            <Badge :severity="chat.active ? 'success' : 'danger'" class="p-1.5"></Badge>
                         </div>
                         <Avatar
                             v-bind="chat.image ? { image: chat.image } : { label: chat.capName }"
@@ -163,7 +177,20 @@
                 </div>
             </div>
             <div class="mt-5">
-                <SelectButton v-model="media" :options="mediaOptions" />
+                <SelectButton
+                    v-model="media"
+                    :options="mediaOptions"
+                    :pt="{
+                        root: {
+                            class: 'w-full'
+                        },
+                        pcbutton: {
+                            root: {
+                                class: 'flex-1'
+                            }
+                        }
+                    }"
+                />
                 <div class="mt-3 mb-5 grid grid-cols-3 gap-2">
                     <div v-for="(media, index) in chatMedia" :key="index" class="bg-emphasis hover:opacity-70 transition-all flex-1 aspect-square rounded-lg border border-surface cursor-pointer">
                         <img class="w-full h-full object-cover block" :src="media" alt="Media Image" />
@@ -172,7 +199,18 @@
                         <span class="text-muted-color font-medium">99+</span>
                     </div>
                 </div>
-                <Button label="Show more" icon="pi pi-arrow-right" iconPos="right" outlined class="w-full text-left" />
+                <Button
+                    label="Show more"
+                    icon="pi pi-arrow-right"
+                    iconPos="right"
+                    outlined
+                    class="w-full text-left"
+                    :pt="{
+                        root: {
+                            class: 'justify-between'
+                        }
+                    }"
+                />
             </div>
         </div>
     </div>

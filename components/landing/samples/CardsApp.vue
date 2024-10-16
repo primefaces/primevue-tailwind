@@ -22,14 +22,28 @@
                     <div class="flex items-center justify-between gap-2">
                         <div class="text-sm leading-5 text-color font-medium">Mutual Friends</div>
                         <AvatarGroup>
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar1.png" size="small" class="rounded-lg overflow-hidden w-9 h-9" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar9.jpg" size="small" class="rounded-lg overflow-hidden w-9 h-9" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="small" class="rounded-lg overflow-hidden w-9 h-9" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg" size="small" class="rounded-lg overflow-hidden w-9 h-9" />
-                            <Avatar label="+99" size="small" class="rounded-lg overflow-hidden text-xs w-9 h-9" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar1.png" size="small" class="rounded-lg overflow-hidden" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar9.jpg" size="small" class="rounded-lg overflow-hidden" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="small" class="rounded-lg overflow-hidden" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg" size="small" class="rounded-lg overflow-hidden" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar5.png" size="small" class="rounded-lg overflow-hidden" />
+                            <Avatar label="+99" size="small" class="rounded-lg overflow-hidden text-xs" />
                         </AvatarGroup>
                     </div>
-                    <SelectButton v-model="selectedUserSelectButtonOption" :options="userSelectButtonOptions" />
+                    <SelectButton
+                        v-model="selectedUserSelectButtonOption"
+                        :options="userSelectButtonOptions"
+                        :pt="{
+                            root: {
+                                class: 'w-full'
+                            },
+                            pcbutton: {
+                                root: {
+                                    class: 'flex-1'
+                                }
+                            }
+                        }"
+                    />
                     <div class="flex flex-col gap-4">
                         <div class="p-2 rounded-2xl flex items-center gap-3 bg-emphasis">
                             <OverlayBadge severity="danger" class="w-fit">
@@ -118,19 +132,19 @@
                         </div>
                         <p class="leading-6 text-muted-color mb-0">Expert in data analysis? Join Data Insights Ltd. as a senior data analyst. Lead in the world of data with us!</p>
                         <div class="flex flex-wrap gap-2 items-center">
-                            <Tag value="Data Analysis" severity="secondary" rounded class="font-normal"></Tag>
-                            <Tag value="Analytics" severity="secondary" rounded class="font-normal"></Tag>
-                            <Tag value="Big Data" severity="secondary" rounded class="font-normal"></Tag>
+                            <Tag value="Data Analysis" rounded class="font-normal"></Tag>
+                            <Tag value="Analytics" rounded class="font-normal"></Tag>
+                            <Tag value="Big Data" rounded class="font-normal"></Tag>
                         </div>
                     </div>
                     <div class="p-1 mt-4">
                         <button class="p-4 rounded-3xl w-full bg-emphasis transition-all text-color hover:text-color-emphasis flex items-center gap-2 justify-between cursor-pointer">
                             <div class="flex items-center [&>*]:-mr-2">
-                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="small" shape="circle" class="w-9 h-9" />
-                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar10.jpg" size="small" shape="circle" class="w-9 h-9" />
-                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar12.jpg" size="small" shape="circle" class="w-9 h-9" />
-                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar9.jpg" size="small" shape="circle" class="w-9 h-9" />
-                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar5.png" size="small" shape="circle" class="w-9 h-9" />
+                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="small" shape="circle" />
+                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar10.jpg" size="small" shape="circle" />
+                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar12.jpg" size="small" shape="circle" />
+                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar9.jpg" size="small" shape="circle" />
+                                <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar5.png" size="small" shape="circle" />
                             </div>
                             <div class="flex items-center gap-2">
                                 <div class="font-medium leading-6">12 Applicants</div>
@@ -162,7 +176,7 @@
                                     class: 'bg-transparent border-dashed mt-2'
                                 },
                                 content: {
-                                    class: '!p-0 relative bg-surface-0 dark:bg-surface-900 text-surface-700 dark:text-white/80 p-[1.125rem] border border-t-0 border-surface-200 dark:border-surface-700 rounded-b-lg [&>[data-pc-name=pcprogressbar]]:absolute [&>[data-pc-name=pcprogressbar]]:w-full [&>[data-pc-name=pcprogressbar]]:top-0 [&>[data-pc-name=pcprogressbar]]:left-0 [&>[data-pc-name=pcprogressbar]]:h-1'
+                                    class: 'p-0'
                                 }
                             }"
                             accept="image/*"
@@ -239,16 +253,17 @@
                 <div class="border border-surface rounded-3xl p-6">
                     <div class="flex items-start justify-between gap-1">
                         <div class="flex items-center gap-x-2 gap-y-1 flex-wrap flex-1">
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar1.png" size="small" shape="circle" class="w-10 h-10" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar2.png" size="small" shape="circle" class="w-10 h-10" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar9.jpg" size="small" shape="circle" class="w-10 h-10" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="small" shape="circle" class="w-10 h-10" />
-                            <div class="flex w-full"></div>
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar5.png" size="small" shape="circle" class="w-10 h-10" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg" size="small" shape="circle" class="w-10 h-10" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar7.png" size="small" shape="circle" class="w-10 h-10" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar8.png" size="small" shape="circle" class="w-10 h-10" />
-                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar10.jpg" size="small" shape="circle" class="w-10 h-10" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar1.png" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar2.png" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar9.jpg" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar11.jpg" size="small" shape="circle" />
+                            <div class="w-full"></div>
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar5.png" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar7.png" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar8.png" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar10.jpg" size="small" shape="circle" />
+                            <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar12.jpg" size="small" shape="circle" />
                         </div>
                         <Button icon="pi pi-arrow-up-right" rounded text />
                     </div>
@@ -276,7 +291,20 @@
                                     <div class="text-sm font-medium text-color leading-5">Brook Simmons</div>
                                     <div class="text-sm text-muted-color leading-5 line-clamp-4">brook.sim42@primevue.org</div>
                                 </div>
-                                <Select v-model="memberSelectedTypes[0]" :options="memberTypes" optionLabel="name" placeholder="Select" class="!w-20" />
+                                <Select
+                                    v-model="memberSelectedTypes[0]"
+                                    :options="memberTypes"
+                                    optionLabel="name"
+                                    placeholder="Select"
+                                    class="!w-16"
+                                    :pt="{
+                                        root: { class: '!border-0 !shadow-none' },
+                                        label: { class: '!p-0 !text-muted-color !text-sm' },
+                                        dropdown: { class: '!p-0 !w-auto' },
+                                        dropdownicon: { class: '!w-3 !h-3' },
+                                        option: { class: '!text-sm !px-2 !py-1' }
+                                    }"
+                                />
                             </div>
                             <div class="flex items-center gap-2 justify-between">
                                 <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar13.jpg" class="w-9 h-9" shape="circle" />
@@ -284,7 +312,20 @@
                                     <div class="text-sm font-medium text-color leading-5">Dianne Russell</div>
                                     <div class="text-sm text-muted-color leading-5 line-clamp-4">di.russ23@primevue.org</div>
                                 </div>
-                                <Select v-model="memberSelectedTypes[1]" :options="memberTypes" optionLabel="name" placeholder="Select" class="!w-20" />
+                                <Select
+                                    v-model="memberSelectedTypes[1]"
+                                    :options="memberTypes"
+                                    optionLabel="name"
+                                    placeholder="Select"
+                                    class="!w-16"
+                                    :pt="{
+                                        root: { class: '!border-0 !shadow-none' },
+                                        label: { class: '!p-0 !text-muted-color !text-sm' },
+                                        dropdown: { class: '!p-0 !w-auto' },
+                                        dropdownicon: { class: '!w-3 !h-3' },
+                                        option: { class: '!text-sm !px-2 !py-1' }
+                                    }"
+                                />
                             </div>
                             <div class="flex items-center gap-2 justify-between">
                                 <Avatar image="https://www.primefaces.org/cdn/primevue/images/landing/apps/avatar12.jpg" class="w-9 h-9" shape="circle" />
@@ -292,7 +333,20 @@
                                     <div class="text-sm font-medium text-color leading-5">Jacob Jones</div>
                                     <div class="text-sm text-muted-color leading-5 line-clamp-4">jac.jon87@primevue.org</div>
                                 </div>
-                                <Select v-model="memberSelectedTypes[2]" :options="memberTypes" optionLabel="name" placeholder="Select" class="!w-20" />
+                                <Select
+                                    v-model="memberSelectedTypes[2]"
+                                    :options="memberTypes"
+                                    optionLabel="name"
+                                    placeholder="Select"
+                                    class="!w-16"
+                                    :pt="{
+                                        root: { class: '!border-0 !shadow-none' },
+                                        label: { class: '!p-0 !text-muted-color !text-sm' },
+                                        dropdown: { class: '!p-0 !w-auto' },
+                                        dropdownicon: { class: '!w-3 !h-3' },
+                                        option: { class: '!text-sm !px-2 !py-1' }
+                                    }"
+                                />
                             </div>
                         </div>
                     </div>
@@ -305,10 +359,23 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-1 flex flex-wrap max-w-md gap-6">
+            <div class="flex-1 flex flex-wrap gap-6">
                 <div class="flex-1 border border-surface rounded-3xl p-6">
                     <div class="text-color font-medium leading-6 mb-4">User Profiles</div>
-                    <SelectButton v-model="userProfiles" :options="userProfilesOptions" />
+                    <SelectButton
+                        v-model="userProfiles"
+                        :options="userProfilesOptions"
+                        :pt="{
+                            root: {
+                                class: 'w-full'
+                            },
+                            pcbutton: {
+                                root: {
+                                    class: 'flex-1'
+                                }
+                            }
+                        }"
+                    />
                     <div class="flex flex-col gap-4 mt-6">
                         <div class="flex items-center gap-3">
                             <i class="pi pi-volume-down text-color text-xl"></i>
@@ -355,23 +422,55 @@
                         <Button label="Resend" text />
                     </div>
                     <div class="flex items-center justify-center">
-                        <InputOtp v-model="forgotPasswordOTP" :length="6" integerOnly />
+                        <InputOtp
+                            v-model="forgotPasswordOTP"
+                            :length="6"
+                            integerOnly
+                            :pt="{
+                                root: {
+                                    class: 'w-full [&>*]:flex-1 [&>*]:min-h-14 [&>*]:text-2xl '
+                                }
+                            }"
+                        />
                     </div>
                     <Button label="Change password" />
                 </div>
-                <div class="border border-surface rounded-3xl p-6 over flex flex-col">
+                <div class="border border-surface rounded-3xl p-6">
                     <div class="text-color font-medium leading-6 mb-6">Price Range</div>
                     <div>
                         <Slider v-model="priceRange" :min="0" range :max="15000" />
                     </div>
-                    <div class="mt-4 flex flex-wrap gap-2 w-full">
-                        <div class="flex-1 flex items-center justify-between gap-2">
+                    <div class="mt-4 flex gap-2">
+                        <div class="flex-1">
                             <label for="price-min-val" class="leading-6 text-color">Min Value</label>
-                            <InputNumber v-model="priceRange[0]" :min="0" inputId="price-min-val" mode="currency" currency="USD" locale="en-US" />
+                            <InputNumber
+                                v-model="priceRange[0]"
+                                :min="0"
+                                inputId="price-min-val"
+                                mode="currency"
+                                currency="USD"
+                                locale="en-US"
+                                :pt="{
+                                    root: {
+                                        class: '[&>*]:w-full mt-2'
+                                    }
+                                }"
+                            />
                         </div>
-                        <div class="flex-1 flex items-center justify-between gap-2">
+                        <div class="flex-1">
                             <label for="price-max-val" class="leading-6 text-color">Max Value</label>
-                            <InputNumber v-model="priceRange[1]" inputId="price-max-val" mode="currency" currency="USD" locale="en-US" />
+                            <InputNumber
+                                v-model="priceRange[1]"
+                                inputId="price-max-val"
+                                mode="currency"
+                                currency="USD"
+                                locale="en-US"
+                                :pt="{
+                                    root: {
+                                        class: '[&>*]:w-full mt-2'
+                                    }
+                                }"
+                            />
                         </div>
                     </div>
                     <div class="mt-4">

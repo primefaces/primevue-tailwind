@@ -24,7 +24,14 @@
                 <div>
                     <div class="border border-surface rounded-border px-4 pb-4 pt-3 mb-4">
                         <div class="font-medium text-color mb-4">Free Version</div>
-                        <ProgressBar :value="75">
+                        <ProgressBar
+                            :value="75"
+                            :pt="{
+                                value: {
+                                    class: 'bg-red-600'
+                                }
+                            }"
+                        >
                             <span class="w-full text-center text-sm font-normal text-surface-0 leading-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">4 days left</span>
                         </ProgressBar>
                     </div>
@@ -32,48 +39,71 @@
                 </div>
             </div>
         </div>
-        <div class="flex-1 h-full overflow-hidden flex border border-t-0 border-surface rounded-2xl">
+        <div class="flex-1 h-full overflow-hidden flex border border-surface rounded-2xl">
             <DataTable
                 v-model:selection="selectedRows"
+                scrollable
                 :value="tableData"
-                dataKey="id"
                 :rows="10"
-                class="w-full [&>[data-pc-section=tablecontainer]>table>thead>tr>th]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody>tr:not([data-p-selected=true])]:!bg-transparent"
+                :pt="{
+                    root: {
+                        class: 'w-full flex-1 overflow-x-auto'
+                    },
+                    thead: {
+                        class: 'hidden'
+                    },
+                    header: {
+                        class: 'sticky top-0 z-10'
+                    },
+                    column: {
+                        bodyCell: {
+                            class: '!border-transparent'
+                        }
+                    }
+                }"
+                :dt="{
+                    headerCell: {
+                        background: 'transparent'
+                    },
+                    row: {
+                        background: 'transparent'
+                    }
+                }"
             >
                 <template #header>
                     <div class="flex xl:items-center justify-between gap-2 flex-col xl:flex-row">
                         <div class="flex items-center gap-2">
-                            <Checkbox v-model="selectAll" :binary="true" @change="onSelectAllChange" class="mr-1" />
-                            <Button icon="pi pi-envelope" outlined severity="secondary" class="!border-surface" />
-                            <Button icon="pi pi-exclamation-circle" outlined severity="secondary" class="!border-surface" />
-                            <Button icon="pi pi-tag" outlined severity="secondary" class="!border-surface" />
-                            <Button icon="pi pi-inbox" label="Archive" outlined severity="secondary" class="!border-surface" />
-                            <Button icon="pi pi-trash" label="Trash" outlined severity="secondary" class="!border-surface" />
+                            <Checkbox v-model="checked" :binary="true" class="mr-1" @update:modelValue="onSelectionChange" />
+                            <Button icon="pi pi-envelope" outlined severity="secondary" />
+                            <Button icon="pi pi-exclamation-circle" outlined severity="secondary" />
+                            <Button icon="pi pi-tag" outlined severity="secondary" />
+                            <Button icon="pi pi-inbox" label="Archive" outlined severity="secondary" />
+                            <Button icon="pi pi-trash" label="Trash" outlined severity="secondary" />
                         </div>
                         <div class="flex items-center gap-2">
                             <IconField iconPosition="left" class="w-6/12 xl:max-w-36">
                                 <InputIcon class="pi pi-search"> </InputIcon>
                                 <InputText v-model="search" placeholder="Search" class="w-full" />
                             </IconField>
-                            <Button icon="pi pi-filter" outlined severity="secondary" class="!border-surface" />
+                            <Button icon="pi pi-filter" outlined severity="secondary" />
                             <Divider layout="vertical" class="m-0" />
-                            <Button icon="pi pi-refresh" outlined severity="secondary" class="!border-surface" />
-                            <Button label="1 of 15" class="!whitespace-nowrap !border-surface" outlined severity="secondary" />
-                            <Button icon="pi pi-chevron-left" outlined severity="secondary" class="!border-surface" />
-                            <Button icon="pi pi-chevron-right" outlined severity="secondary" class="!border-surface" />
+                            <Button icon="pi pi-refresh" outlined severity="secondary" />
+                            <Button label="1 of 15" class="!whitespace-nowrap" outlined severity="secondary" />
+                            <Button icon="pi pi-chevron-left" outlined severity="secondary" />
+                            <Button icon="pi pi-chevron-right" outlined severity="secondary" />
                         </div>
                     </div>
                 </template>
-                <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
                 <template #empty>Inbox is empty.</template>
-                <Column field="bookmarked" header="" headerStyle="width: 1rem" style="width: 1rem; padding: 0.5rem">
+                <Column selectionMode="multiple" headerStyle="width: 1rem" style="width: 1rem"></Column>
+                <Column field="bookmarked" headerStyle="width: 1rem" style="width: 1rem; padding: 0.5rem">
                     <template #body="{ data }">
                         <div @click="data.bookmarked = !data.bookmarked" @click.stop>
                             <i :class="data.bookmarked ? 'pi pi-bookmark-fill' : 'pi pi-bookmark'"></i>
                         </div>
                     </template>
                 </Column>
-                <Column field="name" header="">
+                <Column field="name">
                     <template #body="{ data }">
                         <div class="flex items-center">
                             <OverlayBadge severity="danger" class="w-fit">
@@ -85,24 +115,24 @@
                                     class="rounded-md overflow-hidden flex"
                                 />
                             </OverlayBadge>
-                            <div class="ml-4 leading-6 font-medium">{{ data.name }}</div>
+                            <div class="ml-4 leading-6 text-color font-medium">{{ data.name }}</div>
                         </div>
                     </template>
                 </Column>
-                <Column field="title" header="" style="min-width: 14rem; max-width: 20rem">
+                <Column field="title" style="min-width: 14rem; max-width: 20rem">
                     <template #body="{ data }">
                         <div class="truncate">
-                            <span class="leading-6 mr-2">{{ data.title }}</span>
-                            <span class="leading-5 text-sm">{{ data.message }}</span>
+                            <span class="text-color leading-6 mr-2">{{ data.title }}</span>
+                            <span class="text-muted-color leading-5 text-sm">{{ data.message }}</span>
                         </div>
                     </template>
                 </Column>
-                <Column field="type" header="" style="width: 4rem">
+                <Column field="type" style="width: 4rem">
                     <template #body="{ data }">
-                        <Tag v-if="data.type" severity="contrast" :value="data.type" class="font-medium"></Tag>
+                        <Tag v-if="data.type" severity="secondary" :value="data.type" class="font-medium"></Tag>
                     </template>
                 </Column>
-                <Column field="time" header="" style="width: 4rem">
+                <Column field="time" style="width: 4rem">
                     <template #body="{ data }">
                         <div class="text-right text-sm leading-5 text-muted-color">{{ data.time }}</div>
                     </template>
@@ -115,8 +145,10 @@
 <script>
 export default {
     name: 'Inbox',
+    redrawListener: null,
     data() {
         return {
+            checked: false,
             search: '',
             activeInboxNav: 'Inbox',
             inboxNavs: [
@@ -316,23 +348,17 @@ export default {
                     message: "Dear user, we've updated our Terms of Service. Please review the changes to ensure compliance. Your continued use of our services implies acceptance. Thank you."
                 }
             ],
-            selectedRows: [],
-            selectAll: false
+            selectedRows: []
         };
     },
-    watch: {
-        selectedRows: {
-            handler(newValue) {
-                this.selectAll = newValue.length === this.tableData.length;
-            },
-            deep: true
-        }
-    },
     methods: {
-        onSelectAllChange(event) {
-            this.selectedRows = event.checked ? [...this.tableData] : [];
+        onSelectionChange(checked) {
+            if (checked) {
+                this.selectedRows = this.tableData;
+            } else {
+                this.selectedRows = [];
+            }
         }
-    },
-    components: {}
+    }
 };
 </script>

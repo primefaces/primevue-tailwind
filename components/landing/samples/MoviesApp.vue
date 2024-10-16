@@ -7,14 +7,14 @@
                     <InputIcon class="pi pi-search"> </InputIcon>
                     <InputText v-model="search" placeholder="Search" />
                 </IconField>
-                <Button severity="secondary" outlined class="!border-surface">
+                <Button severity="secondary" outlined>
                     <OverlayBadge
                         severity="danger"
                         size="small"
                         :pt="{
                             pcbadge: {
                                 root: {
-                                    class: 'font-bold text-center inline-block p-0 px-1  min-w-[1.25rem] h-[1.25rem] rounded-[0.71rem] text-primary-contrast bg-red-500 dark:bg-red-400 !min-w-0 !w-2.5 !h-2.5'
+                                    class: '!min-w-0 !w-2.5 !h-2.5'
                                 }
                             }
                         }"
@@ -29,15 +29,15 @@
             <div class="flex items-center justify-between gap-2 mb-6">
                 <div class="text-color text-xl font-medium leading-7">Keep watching</div>
                 <div class="xl:flex hidden items-center gap-2">
-                    <Button :disabled="page === 0" @click="page -= 1" icon="pi pi-chevron-left" severity="secondary" outlined class="!border-surface" />
-                    <Button :disabled="page === carouselData.length - page" @click="page += 1" icon="pi pi-chevron-right" severity="secondary" outlined class="!border-surface" />
+                    <Button :disabled="page === 0" @click="page -= 1" icon="pi pi-chevron-left" severity="secondary" outlined />
+                    <Button :disabled="page === carouselData.length - page" @click="page += 1" icon="pi pi-chevron-right" severity="secondary" outlined />
                 </div>
                 <div class="xl:hidden flex items-center gap-2">
                     <Button :disabled="page === 0" @click="page -= 1" icon="pi pi-chevron-left" severity="secondary" outlined />
                     <Button :disabled="page === carouselData.length - 3" @click="page += 1" icon="pi pi-chevron-right" severity="secondary" outlined />
                 </div>
             </div>
-            <Carousel :value="carouselData" :page="page" :showIndicators="false" :showNavigators="false">
+            <Carousel :value="carouselData" :page="page" :numVisible="5" :numScroll="1" :responsiveOptions="responsiveOptions" :showIndicators="false" :showNavigators="false">
                 <template #item="slotProps">
                     <div class="p-2 rounded-xl hover:bg-emphasis transition-colors cursor-pointer">
                         <div class="relative w-full aspect-[195/118.5] rounded-lg overflow-hidden">
@@ -51,10 +51,10 @@
                                     :showValue="false"
                                     :pt="{
                                         root: {
-                                            class: 'overflow-hidden relative border-0 rounded-md !h-1.5 !bg-surface-950 dark:!bg-surface-50 !rounded-full'
+                                            class: '!h-1.5 !bg-surface-950 dark:!bg-surface-50 !rounded-full'
                                         },
                                         value: {
-                                            class: 'absolute flex items-center justify-center overflow-hidden m-0 h-full w-0 border-0 transition-width duration-1000 ease-in-out !bg-surface-0 dark:!bg-surface-950 !rounded-full'
+                                            class: '!bg-surface-0 dark:!bg-surface-950 !rounded-full'
                                         }
                                     }"
                                 ></ProgressBar>
@@ -79,7 +79,7 @@
                     <Button label="Recently Added" text severity="secondary" />
                     <Button label="For you" text severity="secondary" />
                 </div>
-                <Button label="Show All" severity="secondary" outlined class="!border-surface" />
+                <Button label="Show All" severity="secondary" outlined />
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-6">
                 <div v-for="(movie, index) of popularMovies" :key="index" class="cursor-pointer">
@@ -112,7 +112,24 @@ export default {
             page: 0,
             value: 'Home',
             options: ['Home', 'Movies', 'TV Shows', 'Recently Added', 'My List'],
+            responsiveOptions: [
+                {
+                    breakpoint: '1199px',
+                    numVisible: 3,
+                    numScroll: 1
+                },
 
+                {
+                    breakpoint: '767px',
+                    numVisible: 2,
+                    numScroll: 1
+                },
+                {
+                    breakpoint: '575px',
+                    numVisible: 1,
+                    numScroll: 1
+                }
+            ],
             carouselData: [
                 { image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/movie-cover1.png', name: 'Heat', bookmarked: true, point: '4.7', watchedPercent: 80, categories: ['Action', 'Crime', 'Drama'] },
                 { image: 'https://www.primefaces.org/cdn/primevue/images/landing/apps/movie-cover2.png', name: 'Batman Begins', bookmarked: false, point: '4.8', watchedPercent: 45, categories: ['Action', 'Crime', 'Drama'] },

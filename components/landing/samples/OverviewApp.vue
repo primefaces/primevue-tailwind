@@ -10,13 +10,13 @@
                     <InputIcon class="pi pi-search"> </InputIcon>
                     <InputText placeholder="Search" />
                 </IconField>
-                <Button severity="secondary" outlined class="!border-surface">
+                <Button severity="secondary" outlined>
                     <OverlayBadge
                         severity="danger"
                         :pt="{
                             pcbadge: {
                                 root: {
-                                    class: 'font-bold text-center inline-block p-0 px-1  min-w-[1.25rem] h-[1.25rem] rounded-[0.71rem] text-primary-contrast bg-red-500 dark:bg-red-400 !min-w-0 !w-2.5 !h-2.5'
+                                    class: '!min-w-0 !w-2.5 !h-2.5'
                                 }
                             }
                         }"
@@ -62,7 +62,17 @@
                         paginatorTemplate="PrevPageLink PageLinks NextPageLink  CurrentPageReport RowsPerPageDropdown"
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
                         pt:pcpaginator:root="!bg-transparent"
-                        class="[&>[data-pc-section=tablecontainer]>table>thead>tr>th]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody]:!bg-transparent [&>[data-pc-section=tablecontainer]>table>tbody>tr]:!bg-transparent"
+                        :dt="{
+                            header: {
+                                background: 'transparent'
+                            },
+                            headerCell: {
+                                background: 'transparent'
+                            },
+                            row: {
+                                background: 'transparent'
+                            }
+                        }"
                     >
                         <Column header="Id" class="w-1/12">
                             <template #body="slotProps">
@@ -84,7 +94,7 @@
                                         :class="[
                                             {
                                                 'pi pi-bitcoin text-yellow-500 !text-3xl': slotProps.data.coin !== 'btc',
-                                                'pi pi-ethereum bg-surface-950 text-surface-0 dark:bg-surface-0 dark:text-surface-950 w-7 h-7 rounded-full !flex items-center justify-center': slotProps.data.coin !== 'eth'
+                                                'pi pi-ethereum bg-surface-950 text-surface-0 dark:bg-surface-0 dark:text-surface-950 w-7 h-7 rounded-full flex items-center justify-center': slotProps.data.coin !== 'eth'
                                             }
                                         ]"
                                     ></i>
@@ -144,14 +154,10 @@ import EventBus from '@/layouts/AppEventBus';
 export default {
     name: 'Overview',
     redrawListener: null,
-    configColorsChangeListener: null,
-    darkModeToggleListener: null,
-    darkModeChangeListener: null,
     data() {
         return {
             chartData: {},
             chartOptions: {},
-            chartColors: {},
             dates: [],
             selectedTime: 'Monthly',
             timeOptions: ['Weekly', 'Monthly', 'Yearly'],
@@ -184,51 +190,24 @@ export default {
                 { label: 'EUR', color: '#84CC16', value: 11, text: '€ 137.457,25' },
                 { label: 'USD', color: '#14B8A6', value: 29, text: '$ 133.364,12' },
                 { label: 'XAU', color: '#EAB308', value: 29, text: '200 g' }
-            ],
-            isDarkMode: false
+            ]
         };
     },
     beforeUnmount() {
         EventBus.off('dark-mode-toggle-complete', this.redrawListener);
         EventBus.off('theme-palette-change', this.redrawListener);
-        EventBus.off('config-colors-changed', this.configColorsChangeListener);
-        EventBus.off('dark-mode-toggle', this.darkModeToggleListener);
-        EventBus.off('dark-mode-changed', this.darkModeChangeListener);
     },
     mounted() {
-        this.isDarkMode = this.$appState.darkMode;
-        this.setChartColors();
         this.chartData = this.setChartData(this.selectedTime);
         this.chartOptions = this.setChartOptions();
 
         this.redrawListener = () => {
-            this.setChartColors();
             this.chartData = this.setChartData(this.selectedTime);
             this.chartOptions = this.setChartOptions();
         };
 
-        this.configColorsChangeListener = () => {
-            this.redrawListener();
-        };
-
-        this.darkModeToggleListener = () => {
-            this.isDarkMode = this.$appState.darkMode;
-            this.setChartColors();
-            this.chartOptions = this.setChartOptions();
-        };
-
-        this.darkModeChangeListener = (newDarkMode) => {
-            this.isDarkMode = newDarkMode;
-            this.$appState.darkMode = newDarkMode;
-            this.setChartColors();
-            this.chartOptions = this.setChartOptions();
-        };
-
-        EventBus.on('dark-mode-toggle', this.darkModeToggleListener);
         EventBus.on('dark-mode-toggle-complete', this.redrawListener);
         EventBus.on('theme-palette-change', this.redrawListener);
-        EventBus.on('config-colors-changed', this.configColorsChangeListener);
-        EventBus.on('dark-mode-changed', this.darkModeChangeListener);
     },
     methods: {
         changeSelect(e) {
@@ -313,7 +292,7 @@ export default {
             };
         },
         setChartOptions() {
-            const darkMode = this.$appState.darkMode;
+            const darkMode = this.$appState.darkTheme;
             const documentStyle = getComputedStyle(document.documentElement);
             const surface100 = documentStyle.getPropertyValue('--p-surface-100');
             const surface900 = documentStyle.getPropertyValue('--p-surface-900');
@@ -449,114 +428,8 @@ export default {
                             display: false
                         }
                     }
-                },
-                interaction: {
-                    mode: 'index',
-                    intersect: false
-                },
-                hover: {
-                    mode: 'index',
-                    intersect: false
                 }
             };
-        },
-        setChartColors() {
-            const documentStyle = getComputedStyle(document.documentElement);
-
-            this.chartColors = {
-                surface100: documentStyle.getPropertyValue('--p-surface-100'),
-                surface200: documentStyle.getPropertyValue('--p-surface-200'),
-                surface400: documentStyle.getPropertyValue('--p-surface-400'),
-                surface500: documentStyle.getPropertyValue('--p-surface-500'),
-                surface700: documentStyle.getPropertyValue('--p-surface-700'),
-                surface900: documentStyle.getPropertyValue('--p-surface-900')
-            };
-        },
-        externalTooltipHandler(context) {
-            const { chart, tooltip } = context;
-            let tooltipEl = chart.canvas.parentNode.querySelector('div.chartjs-tooltip');
-
-            if (!tooltipEl) {
-                tooltipEl = document.createElement('div');
-                tooltipEl.classList.add(
-                    'chartjs-tooltip',
-                    'dark:bg-surface-950',
-                    'bg-surface-0',
-                    'p-3',
-                    'rounded-[8px]',
-                    'overflow-hidden',
-                    'opacity-100',
-                    'absolute',
-                    'transition-all',
-                    'duration-[0.1s]',
-                    'pointer-events-none',
-                    'shadow-[0px_25px_20px_-5px_rgba(0,0,0,0.10),0px_10px_8px_-6px_rgba(0,0,0,0.10)]'
-                );
-                chart.canvas.parentNode.appendChild(tooltipEl);
-            }
-
-            if (tooltip.opacity === 0) {
-                tooltipEl.style.opacity = 0;
-
-                return;
-            }
-
-            tooltipEl.innerHTML = '';
-            const tooltipBody = document.createElement('div');
-
-            tooltipBody.classList.add('flex', 'flex-col', 'gap-4', 'px-3', 'py-3', 'min-w-[18rem]');
-
-            const datasets = chart.data.datasets;
-            const dataIndex = tooltip.dataPoints[0].dataIndex;
-
-            datasets.forEach((dataset, i) => {
-                const row = document.createElement('div');
-
-                row.classList.add('flex', 'items-center', 'gap-2', 'w-full');
-
-                const point = document.createElement('div');
-
-                point.classList.add('w-2.5', 'h-2.5', 'rounded-full');
-                point.style.backgroundColor = dataset.backgroundColor;
-                row.appendChild(point);
-
-                const label = document.createElement('span');
-
-                label.appendChild(document.createTextNode(dataset.label || ''));
-                label.classList.add('text-base', 'font-medium', 'text-color', 'flex-1', 'text-left', 'capitalize');
-                row.appendChild(label);
-
-                const value = document.createElement('span');
-                const dataValue = dataset.data[dataIndex];
-
-                value.appendChild(document.createTextNode(dataValue !== undefined ? dataValue.toLocaleString() : ''));
-                value.classList.add('text-base', 'font-medium', 'text-color', 'text-right');
-                row.appendChild(value);
-
-                tooltipBody.appendChild(row);
-            });
-
-            tooltipEl.appendChild(tooltipBody);
-
-            const { offsetLeft: positionX, offsetTop: positionY } = chart.canvas;
-            const tooltipWidth = tooltipEl.offsetWidth;
-            const tooltipHeight = tooltipEl.offsetHeight;
-
-            let tooltipX = positionX + tooltip.caretX;
-            let tooltipY = positionY + tooltip.caretY;
-
-            // Ensure tooltip is within chart boundaries
-            if (tooltipX + tooltipWidth > chart.width) {
-                tooltipX = chart.width - tooltipWidth;
-            }
-
-            if (tooltipY + tooltipHeight > chart.height) {
-                tooltipY = chart.height - tooltipHeight;
-            }
-
-            tooltipEl.style.opacity = 1;
-            tooltipEl.style.left = tooltipX + 'px';
-            tooltipEl.style.top = tooltipY + 'px';
         }
     },
     components: {}
