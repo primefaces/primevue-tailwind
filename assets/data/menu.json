@@ -429,25 +429,6 @@
             ]
         },
         {
-            "name": "Guides",
-            "icon": "pi pi-book",
-            "children": [
-                {
-                    "name": "Overriding Presets",
-                    "to": "/guides/overriding-presets"
-                },
-                {
-                    "name": "Building a UI Library",
-                    "to": "/guides/building-ui-library"
-                },
-                {
-                    "name": "PrimeTV",
-                    "icon": "pi pi-youtube",
-                    "href": "https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw"
-                }
-            ]
-        },
-        {
             "name": "Support",
             "icon": "pi pi-question",
             "children": [
@@ -492,6 +473,11 @@
                 {
                     "name": "Twitter",
                     "href": "https://twitter.com/primevue"
+                },
+                {
+                    "name": "PrimeTV",
+                    "icon": "pi pi-youtube",
+                    "href": "https://www.youtube.com/channel/UCTgmp69aBOlLnPEqlUyetWw"
                 }
             ]
         }
