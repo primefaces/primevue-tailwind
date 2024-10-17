@@ -5,10 +5,6 @@
             "icon": "pi pi-home",
             "children": [
                 {
-                    "name": "Overview",
-                    "to": "/overview"
-                },
-                {
                     "name": "Vite",
                     "to": "/vite"
                 },
