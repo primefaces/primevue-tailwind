@@ -1,13 +1,13 @@
 <template>
     <Head>
-        <Title>Getting Started - PrimeVue, Nuxt and Tailwind CSS</Title>
-        <Meta name="description" content="Setting up PrimeVue Unstyled and Tailwind CSS presets in a Nuxt project." />
+        <Title>Theming PrimeVue with Tailwind CSS in a Nuxt project.</Title>
+        <Meta name="description" content="Theming PrimeVue with Tailwind CSS in a Nuxt project." />
     </Head>
     <div class="doc">
         <div class="doc-main">
             <div class="doc-intro">
                 <h1>Installation with Nuxt</h1>
-                <p>Setting up PrimeVue Unstyled and Tailwind CSS presets in a Nuxt project.</p>
+                <p>Theming PrimeVue with Tailwind CSS in a Nuxt project.</p>
             </div>
             <DocSections :docs="docs" />
         </div>
@@ -20,9 +20,11 @@ import CSSVariablesDoc from '@/doc/nuxt/CSSVariablesDoc.vue';
 import DownloadDoc from '@/doc/nuxt/DownloadDoc.vue';
 import ExampleDoc from '@/doc/nuxt/ExampleDoc.vue';
 import NuxtConfigDoc from '@/doc/nuxt/NuxtConfigDoc.vue';
-import PresetDoc from '@/doc/nuxt/PresetDoc.vue';
-import TailwindConfigDoc from '@/doc/nuxt/TailwindConfigDoc.vue';
+import StylesDoc from '@/doc/nuxt/StylesDoc.vue';
 import TailwindDoc from '@/doc/nuxt/TailwindDoc.vue';
+import ImportStylesDoc from '@/doc/nuxt/tailwind/ImportStylesDoc.vue';
+import PostCSSImportDoc from '@/doc/nuxt/tailwind/PostCSSImportDoc.vue';
+import PrimeUIPluginDoc from '@/doc/nuxt/tailwind/PrimeUIPluginDoc.vue';
 
 export default {
     data() {
@@ -44,14 +46,30 @@ export default {
                     component: NuxtConfigDoc
                 },
                 {
-                    id: 'preset',
-                    label: 'Preset',
-                    component: PresetDoc
+                    id: 'styles',
+                    label: 'Styles',
+                    component: StylesDoc
                 },
                 {
                     id: 'tailwind-config',
                     label: 'Tailwind Config',
-                    component: TailwindConfigDoc
+                    children: [
+                        {
+                            id: 'primeuiplugin',
+                            label: 'PrimeUI Plugin',
+                            component: PrimeUIPluginDoc
+                        },
+                        {
+                            id: 'postcssimport',
+                            label: 'PostCSS Import',
+                            component: PostCSSImportDoc
+                        },
+                        {
+                            id: 'importstyles',
+                            label: 'Import Styles',
+                            component: ImportStylesDoc
+                        }
+                    ]
                 },
                 {
                     id: 'css-variables',

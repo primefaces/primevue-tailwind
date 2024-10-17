@@ -1,7 +1,7 @@
 <template>
     <Head>
         <Title>Theming PrimeVue with Tailwind CSS in a Vite project.</Title>
-        <Meta name="description" content="Setting up PrimeVue Unstyled and Tailwind CSS presets in a Vite project." />
+        <Meta name="description" content="Theming PrimeVue with Tailwind CSS in a Vite project." />
     </Head>
     <div class="doc">
         <div class="doc-main">
