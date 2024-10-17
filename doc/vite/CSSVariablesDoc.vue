@@ -14,33 +14,33 @@ export default {
                 basic: `
 /* Primary and Surface Palettes */
 :root {
-    --p-primary-50: var(--p-surface-50);
-    --p-primary-100: var(--p-surface-100);
-    --p-primary-200: var(--p-surface-200);
-    --p-primary-300: var(--p-surface-300);
-    --p-primary-400: var(--p-surface-400);
-    --p-primary-500: var(--p-surface-500);
-    --p-primary-600: var(--p-surface-600);
-    --p-primary-700: var(--p-surface-700);
-    --p-primary-800: var(--p-surface-800);
-    --p-primary-900: var(--p-surface-900);
-    --p-primary-950: var(--p-surface-950);
+    --p-primary-50: #ecfdf5;
+    --p-primary-100: #d1fae5;
+    --p-primary-200: #a7f3d0;
+    --p-primary-300: #6ee7b7;
+    --p-primary-400: #34d399;
+    --p-primary-500: #10b981;
+    --p-primary-600: #059669;
+    --p-primary-700: #047857;
+    --p-primary-800: #065f46;
+    --p-primary-900: #064e3b;
+    --p-primary-950: #022c22;
     --p-surface-0: #ffffff;
-    --p-surface-50: #f8fafc;
-    --p-surface-100: #f1f5f9;
-    --p-surface-200: #e2e8f0;
-    --p-surface-300: #cbd5e1;
-    --p-surface-400: #94a3b8;
-    --p-surface-500: #64748b;
-    --p-surface-600: #475569;
-    --p-surface-700: #334155;
-    --p-surface-800: #1e293b;
-    --p-surface-900: #0f172a;
-    --p-surface-950: #020617;
+    --p-surface-50: #fafafa;
+    --p-surface-100: #f4f4f5;
+    --p-surface-200: #e4e4e7;
+    --p-surface-300: #d4d4d8;
+    --p-surface-400: #a1a1aa;
+    --p-surface-500: #71717a;
+    --p-surface-600: #52525b;
+    --p-surface-700: #3f3f46;
+    --p-surface-800: #27272a;
+    --p-surface-900: #18181b;
+    --p-surface-950: #09090b;
     --p-content-border-radius: 6px;
 }
 
-/* Light Mode */
+/* Light */
 :root {
     --p-primary-color: var(--p-primary-500);
     --p-primary-contrast-color: var(--p-surface-0);
@@ -61,28 +61,30 @@ export default {
 
 /* 
  * Dark Mode
- * Change the .p-dark to match the darkMode in tailwind.config.
+ * Defaults to system, change the selector to match the darkMode in tailwind.config.
  * For example; 
- *  darkMode: ['selector', '[class*="app-dark"]'] 
- *  should match;
- * :root.app-dark
+ * darkMode: ['selector', '[class*="app-dark"]'] 
+ * should be;
+ * :root[class="app-dark"] {
 */
-:root.p-dark {
-    --p-primary-color: var(--p-primary-400);
-    --p-primary-contrast-color: var(--p-surface-900);
-    --p-primary-hover-color: var(--p-primary-300);
-    --p-primary-active-color: var(--p-primary-200);
-    --p-content-border-color: var(--p-surface-700);
-    --p-content-hover-background: var(--p-surface-800);
-    --p-content-hover-color: var(--p-surface-0);
-    --p-highlight-background: color-mix(in srgb, var(--p-primary-400), transparent 84%);
-    --p-highlight-color: rgba(255,255,255,.87);
-    --p-highlight-focus-background: color-mix(in srgb, var(--p-primary-400), transparent 76%);
-    --p-highlight-focus-color: rgba(255,255,255,.87);
-    --p-text-color: var(--p-surface-0);
-    --p-text-hover-color: var(--p-surface-0);
-    --p-text-muted-color: var(--p-surface-400);
-    --p-text-hover-muted-color: var(--p-surface-300);
+@media (prefers-color-scheme: dark) {
+    :root {
+        --p-primary-color: var(--p-primary-400);
+        --p-primary-contrast-color: var(--p-surface-900);
+        --p-primary-hover-color: var(--p-primary-300);
+        --p-primary-active-color: var(--p-primary-200);
+        --p-content-border-color: var(--p-surface-700);
+        --p-content-hover-background: var(--p-surface-800);
+        --p-content-hover-color: var(--p-surface-0);
+        --p-highlight-background: color-mix(in srgb, var(--p-primary-400), transparent 84%);
+        --p-highlight-color: rgba(255, 255, 255, 0.87);
+        --p-highlight-focus-background: color-mix(in srgb, var(--p-primary-400), transparent 76%);
+        --p-highlight-focus-color: rgba(255, 255, 255, 0.87);
+        --p-text-color: var(--p-surface-0);
+        --p-text-hover-color: var(--p-surface-0);
+        --p-text-muted-color: var(--p-surface-400);
+        --p-text-hover-muted-color: var(--p-surface-300);
+    }
 }
 `
             }
