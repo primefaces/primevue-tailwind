@@ -8,10 +8,9 @@
 }
 
 .p-checkbox-box {
-    @apply flex justify-center items-center rounded-sm
+    @apply flex justify-center items-center rounded-sm w-5 h-5
         border border-surface-300 dark:border-surface-700
         bg-surface-0 dark:bg-surface-950
-        w-5 h-5
         transition-colors duration-200
         shadow-[0_1px_2px_0_rgba(18,18,23,0.05)]
 }
@@ -59,8 +58,7 @@
 }
 
 .p-checkbox.p-disabled .p-checkbox-box {
-    @apply bg-surface-200 dark:bg-surface-400
-        border-surface-300 dark:border-surface-700
+    @apply bg-surface-200 dark:bg-surface-400 border-surface-300 dark:border-surface-700
 }
 
 .p-checkbox.p-disabled .p-checkbox-box .p-checkbox-icon {

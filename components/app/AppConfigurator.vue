@@ -104,12 +104,15 @@ export default {
                 if (color.name === 'noir') {
                     document.documentElement.classList.add('p-noir');
                     document.documentElement.style.setProperty('--logo-color', 'var(--text-secondary-color)');
-                    const surface = this.surfaces.find((s) => s.name === this.$appState.surface);
 
-                    this.applyTheme(type, surface);
+                    this.applyTheme(
+                        type,
+                        this.surfaces.find((s) => s.name === this.$appState.surface)
+                    );
                 } else {
                     document.documentElement.classList.remove('p-noir');
                     document.documentElement.style.setProperty('--logo-color', 'var(--primary-color)');
+
                     this.applyTheme(type, color);
                 }
             } else if (type === 'surface') {

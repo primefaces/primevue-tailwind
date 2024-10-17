@@ -49,8 +49,7 @@
 .p-dialog-topright .p-dialog,
 .p-dialog-bottomleft .p-dialog,
 .p-dialog-bottomright .p-dialog {
-    margin: 0.75rem;
-    transform: translate3d(0px, 0px, 0px);
+    @apply m-3 [transform:translate3d(0,0,0)]
 }
 
 .p-dialog-top .p-dialog-enter-active,
@@ -74,12 +73,12 @@
 
 .p-dialog-top .p-dialog-enter-from,
 .p-dialog-top .p-dialog-leave-to {
-    transform: translate3d(0px, -100%, 0px);
+    @apply [transform:translate3d(0,-100%,0)]
 }
 
 .p-dialog-bottom .p-dialog-enter-from,
 .p-dialog-bottom .p-dialog-leave-to {
-    transform: translate3d(0px, 100%, 0px);
+    @apply [transform:translate3d(0,100%,0)]
 }
 
 .p-dialog-left .p-dialog-enter-from,
@@ -88,7 +87,7 @@
 .p-dialog-topleft .p-dialog-leave-to,
 .p-dialog-bottomleft .p-dialog-enter-from,
 .p-dialog-bottomleft .p-dialog-leave-to {
-    transform: translate3d(-100%, 0px, 0px);
+    @apply [transform:translate3d(-100%,0,0)]
 }
 
 .p-dialog-right .p-dialog-enter-from,
@@ -97,7 +96,7 @@
 .p-dialog-topright .p-dialog-leave-to,
 .p-dialog-bottomright .p-dialog-enter-from,
 .p-dialog-bottomright .p-dialog-leave-to {
-    transform: translate3d(100%, 0px, 0px);
+    @apply [transform:translate3d(100%,0,0)]
 }
 
 .p-dialog-maximized {

@@ -75,6 +75,5 @@
 }
 
 .p-tablist-viewport {
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+    @apply [scrollbar-behavior:smooth] [scrollbar-width:none]
 }

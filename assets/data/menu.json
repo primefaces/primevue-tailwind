@@ -415,11 +415,6 @@
             ]
         },
         {
-            "name": "Builder",
-            "to": "/builder",
-            "icon": "pi pi-box"
-        },
-        {
             "name": "Icons",
             "icon": "pi pi-eye",
             "children": [

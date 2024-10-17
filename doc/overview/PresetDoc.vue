@@ -6,8 +6,8 @@
         </p>
         <p>
             The release bundle contains two built-in presets; <b>lara</b> and <b>aura</b>. In the future, more presets are planned e.g. for Material Design. The presets are implemented for you to use as a base to build your own, you may use them as
-            they are or use them as reference when creating your own design. A preset can only for a single component or multiple, visit the <NuxtLink to="/gallery">Gallery</NuxtLink> to view the community driven presets. Releases of presets are not
-            published to NPM as copy-paste approach is a more suitable strategy for easier customization instead of an imported module from node_modules.
+            they are or use them as reference when creating your own design. A preset can only for a single component or multiple, visit the Gallery to view the community driven presets. Releases of presets are not published to NPM as copy-paste
+            approach is a more suitable strategy for easier customization instead of an imported module from node_modules.
         </p>
         <DocSectionCode :code="code1" hideToggleCode importCode hideStackBlitz />
         <p>

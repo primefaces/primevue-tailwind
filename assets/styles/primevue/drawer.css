@@ -9,7 +9,7 @@
 }
 
 .p-drawer {
-    transform: translate3d(0px, 0px, 0px);
+    @apply [transform:translate3d(0,0,0)]
 }
 
 .p-drawer-content {
