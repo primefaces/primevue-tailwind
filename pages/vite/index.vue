@@ -1,13 +1,13 @@
 <template>
     <Head>
-        <Title>Getting Started - PrimeVue, Vite and Tailwind CSS</Title>
+        <Title>Theming PrimeVue with Tailwind CSS in a Vite project.</Title>
         <Meta name="description" content="Setting up PrimeVue Unstyled and Tailwind CSS presets in a Vite project." />
     </Head>
     <div class="doc">
         <div class="doc-main">
             <div class="doc-intro">
                 <h1>Installation with Vite</h1>
-                <p>Setting up PrimeVue Unstyled and Tailwind CSS presets in a Vite project.</p>
+                <p>Theming PrimeVue with Tailwind CSS in a Vite project.</p>
             </div>
             <DocSections :docs="docs" />
         </div>
@@ -20,9 +20,11 @@ import CSSVariablesDoc from '@/doc/vite/CSSVariablesDoc.vue';
 import DownloadDoc from '@/doc/vite/DownloadDoc.vue';
 import ExampleDoc from '@/doc/vite/ExampleDoc.vue';
 import PluginDoc from '@/doc/vite/PluginDoc.vue';
-import PresetDoc from '@/doc/vite/PresetDoc.vue';
-import TailwindConfigDoc from '@/doc/vite/TailwindConfigDoc.vue';
+import StylesDoc from '@/doc/vite/StylesDoc.vue';
 import TailwindDoc from '@/doc/vite/TailwindDoc.vue';
+import ImportStylesDoc from '@/doc/vite/tailwind/ImportStylesDoc.vue';
+import PostCSSImportDoc from '@/doc/vite/tailwind/PostCSSImportDoc.vue';
+import PrimeUIPluginDoc from '@/doc/vite/tailwind/PrimeUIPluginDoc.vue';
 
 export default {
     data() {
@@ -44,14 +46,30 @@ export default {
                     component: PluginDoc
                 },
                 {
-                    id: 'preset',
-                    label: 'Preset',
-                    component: PresetDoc
+                    id: 'styles',
+                    label: 'Styles',
+                    component: StylesDoc
                 },
                 {
                     id: 'tailwind-config',
                     label: 'Tailwind Config',
-                    component: TailwindConfigDoc
+                    children: [
+                        {
+                            id: 'primeuiplugin',
+                            label: 'PrimeUI Plugin',
+                            component: PrimeUIPluginDoc
+                        },
+                        {
+                            id: 'postcssimport',
+                            label: 'PostCSS Import',
+                            component: PostCSSImportDoc
+                        },
+                        {
+                            id: 'importstyles',
+                            label: 'Import Styles',
+                            component: ImportStylesDoc
+                        }
+                    ]
                 },
                 {
                     id: 'css-variables',
