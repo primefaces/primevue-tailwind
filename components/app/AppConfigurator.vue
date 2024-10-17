@@ -113,7 +113,7 @@ export default {
                     this.applyTheme(type, color);
                 }
             } else if (type === 'surface') {
-                this.$appState.surface = colorName;
+                this.$appState.surface = color.name;
                 this.applyTheme(type, color);
             }
 
