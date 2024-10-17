@@ -1,5 +1,5 @@
 .p-connected-overlay-enter-from {
-    @apply opacity-0 scale-75
+    @apply opacity-0 scale-y-75
 }
 
 .p-connected-overlay-leave-to {
