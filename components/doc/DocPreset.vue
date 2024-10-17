@@ -3,9 +3,10 @@
         <div class="doc-intro">
             <h1>{{ introText }}</h1>
         </div>
-        <DocSections :docs="docs" />
+        <div style="padding-right: 18rem; margin-top: -1rem">
+            <DocSections :docs="docs" />
+        </div>
     </div>
-    <DocSectionNav :docs="docs" />
 </template>
 
 <script>
