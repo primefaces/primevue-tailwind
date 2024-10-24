@@ -5,6 +5,7 @@
 <script>
 import AccessibilityDoc from '@/doc/menubar/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/menubar/BasicDoc.vue';
+import AdvancedDoc from '@/doc/menubar/AdvancedDoc.vue';
 import CommandDoc from '@/doc/menubar/CommandDoc.vue';
 import ImportDoc from '@/doc/menubar/ImportDoc.vue';
 import RouterDoc from '@/doc/menubar/RouterDoc.vue';
@@ -22,6 +23,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'advanced',
+                    label: 'Advanced',
+                    component: AdvancedDoc
                 },
                 {
                     id: 'template',

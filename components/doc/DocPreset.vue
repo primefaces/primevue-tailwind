@@ -3,7 +3,7 @@
         <div class="doc-intro">
             <h1>{{ introText }}</h1>
         </div>
-        <div style="padding-right: 18rem; margin-top: -1rem">
+        <div class="xl:pe-72 -mt-4">
             <DocSections :docs="docs" />
         </div>
     </div>
