@@ -1,5 +1,5 @@
 .p-checkbox {
-    @apply relative inline-flex select-none w-5 h-5
+    @apply relative inline-flex select-none w-5 h-5 align-bottom
 }
 
 .p-checkbox-input {
