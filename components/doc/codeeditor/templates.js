@@ -1,6 +1,6 @@
 import pkg from '@/package.json';
-import Aura from '@/presets/aura';
-import Lara from '@/presets/lara';
+//import Aura from '@/presets/aura';
+//import Lara from '@/presets/lara';
 import { isArray, isDate, isFunction, isObject } from '@primeuix/utils/object';
 import { services } from './services';
 
