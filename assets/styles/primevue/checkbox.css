@@ -3,7 +3,7 @@
 }
 
 .p-checkbox-input {
-    @apply cursor-pointer disabled:cursor-default appearance-none absolute left-0 top-0 w-full h-full m-0 p-0 opacity-0 z-10
+    @apply cursor-pointer disabled:cursor-default appearance-none absolute start-0 top-0 w-full h-full m-0 p-0 opacity-0 z-10
         border border-transparent rounded-sm
 }
 
