@@ -9,7 +9,7 @@
 .p-organizationchart-node {
     @apply inline-block relative py-3 px-4 rounded-md
         border border-surface-200 dark:border-surface-700
-        bg-surface-0 dark:bg-surface-900 
+        bg-surface-0 dark:bg-surface-900
         text-surface-700 dark:text-surface-0
         transition-colors duration-200
 }
@@ -27,11 +27,11 @@
 }
 
 .p-organizationchart-node-toggle-button {
-    @apply absolute -bottom-3 -ml-3 z-20 left-1/2 select-none cursor-pointer w-6 h-6 no-underline rounded-full
-        inline-flex items-center justify-center transition-colors duration-200 
+    @apply absolute -bottom-3 -ms-3 z-20 start-1/2 select-none cursor-pointer w-6 h-6 no-underline rounded-full
+        inline-flex items-center justify-center transition-colors duration-200
         border border-surface-200 dark:border-surface-700
-        bg-surface-0 text-surface-500 hover:bg-surface-100 hover:text-surface-700 
-        dark:bg-surface-900 dark:text-surface-400 dark:hover:bg-surface-800 dark:hover:text-surface-0 
+        bg-surface-0 text-surface-500 hover:bg-surface-100 hover:text-surface-700
+        dark:bg-surface-900 dark:text-surface-400 dark:hover:bg-surface-800 dark:hover:text-surface-0
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
 }
 .p-organizationchart-node-toggle-button-icon {
@@ -47,7 +47,7 @@
 }
 
 .p-organizationchart-connector-left {
-    @apply rounded-none border-r border-surface-200 dark:border-surface-700
+    @apply rounded-none border-e border-surface-200 dark:border-surface-700
 }
 
 .p-organizationchart-connector-top {
@@ -59,13 +59,13 @@
 }
 
 .p-organizationchart-connectors :nth-child(1 of .p-organizationchart-connector-left) {
-    @apply border-r-0
+    @apply border-e-0
 }
 
 .p-organizationchart-connectors :nth-last-child(1 of .p-organizationchart-connector-left) {
-    @apply rounded-tr-md
+    @apply rounded-se-md
 }
 
 .p-organizationchart-connectors :nth-child(1 of .p-organizationchart-connector-right) {
-    @apply border-l border-surface-200 dark:border-surface-700 rounded-tl-md
+    @apply border-s border-surface-200 dark:border-surface-700 rounded-ss-md
 }
