@@ -12,7 +12,7 @@
 }
 
 .p-tree-node-children {
-    @apply pt-[2px] pr-0 pb-0 pl-4
+    @apply pt-[2px] pe-0 pb-0 ps-4
 }
 
 .p-tree-node {
@@ -45,7 +45,7 @@
 
 .p-tree-node-toggle-button {
     @apply cursor-pointer select-none inline-flex justify-center rounded-full items-center overflow-hidden relative flex-shrink-0
-        w-7 h-7 p-0 transition-colors duration-200 border-none 
+        w-7 h-7 p-0 transition-colors duration-200 border-none
         bg-transparent enabled:hover:bg-surface-100 dark:enabled:hover:bg-surface-800
         text-surface-500 dark:text-surface-400 enabled:hover:text-surface-600 dark:enabled:hover:text-surface-300
 }
