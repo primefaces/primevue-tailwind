@@ -10,15 +10,15 @@
 }
 
 .p-accordionpanel:first-child > .p-accordionheader {
-    @apply rounded-t-md
+    @apply rounded-ss-md rounded-se-md
 }
 
 .p-accordionpanel:last-child > .p-accordionheader {
-    @apply rounded-b-md
+    @apply rounded-ee-md rounded-es-md
 }
 
 .p-accordionpanel:last-child.p-accordionpanel-active > .p-accordionheader {
-    @apply rounded-b-md
+    @apply rounded-ee-md rounded-es-md
 }
 
 .p-accordionheader-toggle-icon {
