@@ -1,13 +1,13 @@
 .p-timeline {
-    @apply flex flex-col flex-grow 
+    @apply flex flex-col flex-grow
 }
 
 .p-timeline-left .p-timeline-event-opposite {
-    @apply text-right
+    @apply text-end
 }
 
 .p-timeline-left .p-timeline-event-content {
-    @apply text-left
+    @apply text-start
 }
 
 .p-timeline-right .p-timeline-event {
@@ -15,11 +15,11 @@
 }
 
 .p-timeline-right .p-timeline-event-opposite {
-    @apply text-left
+    @apply text-start
 }
 
 .p-timeline-right .p-timeline-event-content {
-    @apply text-right
+    @apply text-end
 }
 
 .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(even) {
@@ -27,19 +27,19 @@
 }
 
 .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(odd) .p-timeline-event-opposite {
-    @apply text-right
+    @apply text-end
 }
 
 .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(odd) .p-timeline-event-content {
-    @apply text-left
+    @apply text-start
 }
 
 .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(even) .p-timeline-event-opposite {
-    @apply text-left
+    @apply text-start
 }
 
 .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(even) .p-timeline-event-content {
-    @apply text-right
+    @apply text-end
 }
 
 .p-timeline-vertical .p-timeline-event-opposite,
@@ -64,7 +64,7 @@
 }
 
 .p-timeline-event-separator {
-    @apply flex-none flex flex-col items-center 
+    @apply flex-none flex flex-col items-center
 }
 
 .p-timeline-event-marker {
