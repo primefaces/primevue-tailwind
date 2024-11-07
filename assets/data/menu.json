@@ -430,6 +430,16 @@
             ]
         },
         {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "RTL",
+                    "href": "https://primevue.org/support"
+                }
+            ]
+        },
+        {
             "name": "Support",
             "icon": "pi pi-question",
             "children": [
