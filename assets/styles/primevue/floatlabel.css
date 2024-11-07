@@ -4,7 +4,7 @@
 
 .p-floatlabel label {
     @apply absolute pointer-events-none top-1/2 -translate-y-1/2 transition-all duration-200 ease-out leading-none font-medium
-        left-3 text-surface-500 dark:text-surface-400
+        start-3 text-surface-500 dark:text-surface-400
 }
 
 .p-floatlabel:has(.p-textarea) label {
@@ -12,7 +12,7 @@
 }
 
 .p-floatlabel:has(.p-inputicon:first-child) label {
-    @apply left-10
+    @apply start-10
 }
 
 .p-floatlabel:has(.p-invalid) label {
