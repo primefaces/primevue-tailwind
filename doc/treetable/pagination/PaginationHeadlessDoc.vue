@@ -8,6 +8,16 @@
                 <Column field="name" header="Name" expander style="width: 34%"></Column>
                 <Column field="size" header="Size" style="width: 33%"></Column>
                 <Column field="type" header="Type" style="width: 33%"></Column>
+                <template #paginatorcontainer="{ first, last, page, pageCount, prevPageCallback, nextPageCallback, totalRecords }">
+                    <div class="flex items-center gap-4 border border-primary bg-transparent rounded-full w-full py-1 px-2 justify-between">
+                        <Button icon="pi pi-chevron-left" rounded text @click="prevPageCallback" :disabled="page === 0" />
+                        <div class="text-color font-medium">
+                            <span class="hidden sm:block">Showing {{ first }} to {{ last }} of {{ totalRecords }}</span>
+                            <span class="block sm:hidden">Page {{ page + 1 }} of {{ pageCount }}</span>
+                        </div>
+                        <Button icon="pi pi-chevron-right" rounded text @click="nextPageCallback" :disabled="page === pageCount - 1" />
+                    </div>
+                </template>
             </TreeTable>
         </div>
     </DeferredDemo>
@@ -25,6 +35,16 @@ export default {
     <Column field="name" header="Name" expander style="width: 34%"></Column>
     <Column field="size" header="Size" style="width: 33%"></Column>
     <Column field="type" header="Type" style="width: 33%"></Column>
+    <template #paginatorcontainer="{ first, last, page, pageCount, prevPageCallback, nextPageCallback, totalRecords }">
+        <div class="flex items-center gap-4 border border-primary bg-transparent rounded-full w-full py-1 px-2 justify-between">
+            <Button icon="pi pi-chevron-left" rounded text @click="prevPageCallback" :disabled="page === 0" />
+            <div class="text-color font-medium">
+                <span class="hidden sm:block">Showing {{ first }} to {{ last }} of {{ totalRecords }}</span>
+                <span class="block sm:hidden">Page {{ page + 1 }} of {{ pageCount }}</span>
+            </div>
+            <Button icon="pi pi-chevron-right" rounded text @click="nextPageCallback" :disabled="page === pageCount - 1" />
+        </div>
+    </template>
 </TreeTable>
 `,
                 options: `
@@ -34,6 +54,16 @@ export default {
             <Column field="name" header="Name" expander style="width: 34%"></Column>
             <Column field="size" header="Size" style="width: 33%"></Column>
             <Column field="type" header="Type" style="width: 33%"></Column>
+            <template #paginatorcontainer="{ first, last, page, pageCount, prevPageCallback, nextPageCallback, totalRecords }">
+                <div class="flex items-center gap-4 border border-primary bg-transparent rounded-full w-full py-1 px-2 justify-between">
+                    <Button icon="pi pi-chevron-left" rounded text @click="prevPageCallback" :disabled="page === 0" />
+                    <div class="text-color font-medium">
+                        <span class="hidden sm:block">Showing {{ first }} to {{ last }} of {{ totalRecords }}</span>
+                        <span class="block sm:hidden">Page {{ page + 1 }} of {{ pageCount }}</span>
+                    </div>
+                    <Button icon="pi pi-chevron-right" rounded text @click="nextPageCallback" :disabled="page === pageCount - 1" />
+                </div>
+            </template>
         </TreeTable>
     </div>
 </template>
@@ -83,6 +113,16 @@ export default {
             <Column field="name" header="Name" expander style="width: 34%"></Column>
             <Column field="size" header="Size" style="width: 33%"></Column>
             <Column field="type" header="Type" style="width: 33%"></Column>
+            <template #paginatorcontainer="{ first, last, page, pageCount, prevPageCallback, nextPageCallback, totalRecords }">
+                <div class="flex items-center gap-4 border border-primary bg-transparent rounded-full w-full py-1 px-2 justify-between">
+                    <Button icon="pi pi-chevron-left" rounded text @click="prevPageCallback" :disabled="page === 0" />
+                    <div class="text-color font-medium">
+                        <span class="hidden sm:block">Showing {{ first }} to {{ last }} of {{ totalRecords }}</span>
+                        <span class="block sm:hidden">Page {{ page + 1 }} of {{ pageCount }}</span>
+                    </div>
+                    <Button icon="pi pi-chevron-right" rounded text @click="nextPageCallback" :disabled="page === pageCount - 1" />
+                </div>
+            </template>
         </TreeTable>
     </div>
 </template>

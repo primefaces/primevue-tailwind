@@ -15,6 +15,7 @@ import LazyLoadDoc from '@/doc/treetable/LazyLoadDoc.vue';
 import SizeDoc from '@/doc/treetable/SizeDoc.vue';
 import TemplateDoc from '@/doc/treetable/TemplateDoc.vue';
 import PaginationBasicDoc from '@/doc/treetable/pagination/PaginationBasicDoc.vue';
+import PaginationHeadlessDoc from '@/doc/treetable/pagination/PaginationHeadlessDoc.vue';
 import PaginationTemplateDoc from '@/doc/treetable/pagination/PaginationTemplateDoc.vue';
 import ExpandModeDoc from '@/doc/treetable/resize/ExpandModeDoc.vue';
 import FitModeDoc from '@/doc/treetable/resize/FitModeDoc.vue';
@@ -77,6 +78,11 @@ export default {
                             id: 'paginator_template',
                             label: 'Template',
                             component: PaginationTemplateDoc
+                        },
+                        {
+                            id: 'paginator_headless',
+                            label: 'Headless',
+                            component: PaginationHeadlessDoc
                         }
                     ]
                 },
