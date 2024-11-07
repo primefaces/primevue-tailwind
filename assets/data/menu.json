@@ -411,6 +411,11 @@
             ]
         },
         {
+            "name": "Forms",
+            "icon": "pi pi-check-circle",
+            "to": "/forms"
+        },
+        {
             "name": "Icons",
             "icon": "pi pi-eye",
             "children": [
