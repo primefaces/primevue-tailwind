@@ -3,13 +3,13 @@
 }
 
 .p-radiobutton-input {
-    @apply cursor-pointer disabled:cursor-default appearance-none absolute left-0 top-0 w-full h-full m-0 p-0 opacity-0 z-10
+    @apply cursor-pointer disabled:cursor-default appearance-none absolute start-0 top-0 w-full h-full m-0 p-0 opacity-0 z-10
         border border-transparent rounded-full
 }
 
 .p-radiobutton-box {
     @apply flex justify-center items-center rounded-full
-        border border-surface-300 dark:border-surface-700 
+        border border-surface-300 dark:border-surface-700
         bg-surface-0 dark:bg-surface-950
         w-5 h-5
         transition-colors duration-200
