@@ -3,7 +3,7 @@
 }
 
 .p-toggleswitch-input {
-    @apply cursor-pointer disabled:cursor-default appearance-none absolute top-0 left-0 w-full h-full m-0 p-0 opacity-0 z-10 rounded-[30px]
+    @apply cursor-pointer disabled:cursor-default appearance-none absolute top-0 start-0 w-full h-full m-0 p-0 opacity-0 z-10 rounded-[30px]
 }
 
 .p-toggleswitch-slider {
@@ -17,7 +17,7 @@
     @apply absolute top-1/2 flex justify-center items-center
         bg-surface-0 dark:bg-surface-400
         text-surface-500 dark:text-surface-900
-        w-4 h-4 left-1 -mt-2 rounded-full
+        w-4 h-4 start-1 -mt-2 rounded-full
         transition-[background,color,left] duration-200
 }
 
@@ -26,7 +26,7 @@
 }
 
 .p-toggleswitch.p-toggleswitch-checked .p-toggleswitch-handle {
-    @apply bg-surface-0 dark:bg-surface-900 text-primary left-5
+    @apply bg-surface-0 dark:bg-surface-900 text-primary start-5
 }
 
 .p-toggleswitch:not(.p-disabled):has(.p-toggleswitch-input:hover) .p-toggleswitch-slider {
