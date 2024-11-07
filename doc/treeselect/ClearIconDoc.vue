@@ -1,13 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>
-            TreeSelect is used with the <i>v-model</i> property for two-way value binding along with the <i>options</i> collection. Internally <PrimeVueNuxtLink to="/tree">Tree</PrimeVueNuxtLink> component is used so the options model is based on
-            TreeNode API.
-        </p>
-        <p>In single selection mode, value binding should be the <i>key</i> value of a node.</p>
+        <p>When <i>showClear</i> is enabled, a clear icon is added to reset the TreeSelect.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <TreeSelect v-model="selectedValue" :options="nodes" placeholder="Select Item" class="md:w-80 w-full" />
+        <TreeSelect v-model="selectedValue" showClear :options="nodes" placeholder="Select Item" class="md:w-80 w-full" />
     </div>
     <DocSectionCode :code="code" :service="['NodeService']" v-bind="$attrs" />
 </template>
