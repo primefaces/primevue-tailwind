@@ -6,11 +6,11 @@
 }
 
 .p-splitbutton-button {
-    @apply rounded-r-none border-r-0 enabled:hover:border-r-0 enabled:active:border-r-0 focus-visible:z-10
+    @apply rounded-e-none border-r-0 enabled:hover:border-r-0 enabled:active:border-r-0 focus-visible:z-10
 }
 
 .p-splitbutton-dropdown {
-    @apply rounded-l-none focus-visible:z-10
+    @apply rounded-s-none focus-visible:z-10
 }
 
 .p-splitbutton .p-menu {
@@ -22,11 +22,11 @@
 }
 
 .p-splitbutton-rounded .p-splitbutton-dropdown {
-    @apply rounded-r-[2rem]
+    @apply rounded-e-[2rem]
 }
 
 .p-splitbutton-rounded .p-splitbutton-button {
-    @apply rounded-l-[2rem]
+    @apply rounded-s-[2rem]
 }
 
 .p-splitbutton-raised {
