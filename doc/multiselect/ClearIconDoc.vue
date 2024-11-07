@@ -1,12 +1,9 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>
-            MultiSelect is used with the <i>v-model</i> property for two-way value binding along with the <i>options</i> collection. Label and value of an option are defined with the <i>optionLabel</i> and <i>optionValue</i> properties respectively.
-            Note that, when options are simple primitive values such as a string array, no <i>optionLabel</i> and <i>optionValue</i> would be necessary.
-        </p>
+        <p>When <i>showClear</i> is enabled, a clear icon is added to reset the MultiSelect.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <MultiSelect v-model="selectedCities" :options="cities" optionLabel="name" filter placeholder="Select Cities" :maxSelectedLabels="3" class="w-full md:w-80" />
+        <MultiSelect v-model="selectedCities" showClear :options="cities" optionLabel="name" filter placeholder="Select Cities" :maxSelectedLabels="3" class="w-full md:w-80" />
     </div>
     <DocSectionCode :code="code" />
 </template>
