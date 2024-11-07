@@ -10,11 +10,11 @@
 }
 
 .p-autocomplete-loader {
-    @apply absolute top-1/2 -mt-2 right-3
+    @apply absolute top-1/2 -mt-2 end-3
 }
 
 .p-autocomplete:has(.p-autocomplete-dropdown) .p-autocomplete-loader {
-    @apply right-[3.25rem]
+    @apply end-[3.25rem]
 }
 
 .p-autocomplete:has(.p-autocomplete-dropdown) .p-autocomplete-input {
@@ -23,11 +23,11 @@
 
 .p-autocomplete:has(.p-autocomplete-dropdown) .p-autocomplete-input,
 .p-autocomplete:has(.p-autocomplete-dropdown) .p-autocomplete-input-multiple {
-    @apply rounded-r-none
+    @apply rounded-e-none
 }
 
 .p-autocomplete-dropdown {
-    @apply cursor-pointer inline-flex items-center justify-center select-none overflow-hidden relative w-10 rounded-r-md
+    @apply cursor-pointer inline-flex items-center justify-center select-none overflow-hidden relative w-10 rounded-e-md
         bg-surface-100 enabled:hover:bg-surface-200 enabled:active:bg-surface-300
         text-surface-600 enabled:hover:text-surface-700 enabled:hover:active:text-surface-800
         dark:bg-surface-800 dark:enabled:hover:bg-surface-700 dark:enabled:active:bg-surface-600
