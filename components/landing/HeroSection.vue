@@ -136,7 +136,7 @@
                 closeIcon="pi pi-sign-out"
                 :pt="{
                     root: {
-                        class: '!max-w-2xl !w-full !h-screen rounded-l-2xl'
+                        class: '!max-w-2xl !w-full !h-screen rounded-s-2xl'
                     },
                     footer: {
                         class: 'hidden'
