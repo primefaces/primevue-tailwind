@@ -31,7 +31,7 @@
 
 .p-treeselect-dropdown {
     @apply flex items-center justify-center shrink-0 bg-transparent
-        text-surface-500 dark:text-surface-400 w-10 rounded-r-md
+        text-surface-500 dark:text-surface-400 w-10 rounded-e-md
 }
 
 .p-treeselect-label-container {
