@@ -1,12 +1,11 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>
-            CascadeSelect is used with the <i>v-model</i> property for two-way value binding along with the <i>options</i> collection. To define the label of a group <i>optionGroupLabel</i> property is needed and also <i>optionGroupChildren</i> is
-            required to define the property that refers to the children of a group. Note that order of the <i>optionGroupChildren</i> matters as it should correspond to the data hierarchy.
-        </p>
+        <p>CascadeSelect provides <i>small</i> and <i>large</i> sizes as alternatives to the base.</p>
     </DocSectionText>
-    <div class="card flex justify-center">
-        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+    <div class="card flex flex-col items-center gap-4">
+        <CascadeSelect v-model="value1" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" size="small" placeholder="Small" />
+        <CascadeSelect v-model="value2" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Normal" />
+        <CascadeSelect v-model="value3" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" size="large" placeholder="Large" />
     </div>
     <DocSectionCode :code="code" />
 </template>
@@ -15,7 +14,9 @@
 export default {
     data() {
         return {
-            selectedCity: null,
+            value1: null,
+            value2: null,
+            value3: null,
             countries: [
                 {
                     name: 'Australia',
@@ -92,14 +93,22 @@ export default {
             ],
             code: {
                 basic: `
-<CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name"
-    :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+<CascadeSelect v-model="value1" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+    class="w-56" size="small" placeholder="Small" />
+<CascadeSelect v-model="value2" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+    class="w-56" placeholder="Normal" />
+<CascadeSelect v-model="value3" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+    class="w-56" size="large" placeholder="Large" />
 `,
                 options: `
 <template>
-    <div class="card flex justify-center">
-        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name"
-            :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+    <div class="card flex flex-col items-center gap-4">
+        <CascadeSelect v-model="value1" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+            class="w-56" size="small" placeholder="Small" />
+        <CascadeSelect v-model="value2" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+            class="w-56" placeholder="Normal" />
+        <CascadeSelect v-model="value3" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+            class="w-56" size="large" placeholder="Large" />
     </div>
 </template>
 
@@ -107,7 +116,9 @@ export default {
 export default {
     data() {
         return {
-            selectedCity: null,
+            value1: null,
+            value2: null,
+            value3: null,
             countries: [
                 {
                     name: 'Australia',
@@ -182,23 +193,29 @@ export default {
                     ]
                 }
             ]
-        };
+        }
     }
-};
+}
 <\/script>
 `,
                 composition: `
 <template>
-    <div class="card flex justify-center">
-        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name"
-            :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+    <div class="card flex flex-col items-center gap-4">
+        <CascadeSelect v-model="value1" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+            class="w-56" size="small" placeholder="Small" />
+        <CascadeSelect v-model="value2" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+            class="w-56" placeholder="Normal" />
+        <CascadeSelect v-model="value3" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" 
+            class="w-56" size="large" placeholder="Large" />
     </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const selectedCity = ref();
+const value1 = ref(null);
+const value2 = ref(null);
+const value3 = ref(null);
 const countries = ref([
     {
         name: 'Australia',

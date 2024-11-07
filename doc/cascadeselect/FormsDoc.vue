@@ -1,21 +1,39 @@
 <template>
     <DocSectionText v-bind="$attrs">
-        <p>
-            CascadeSelect is used with the <i>v-model</i> property for two-way value binding along with the <i>options</i> collection. To define the label of a group <i>optionGroupLabel</i> property is needed and also <i>optionGroupChildren</i> is
-            required to define the property that refers to the children of a group. Note that order of the <i>optionGroupChildren</i> matters as it should correspond to the data hierarchy.
-        </p>
+        <p>CascadeSelect integrates seamlessly with the <NuxtLink to="/forms">PrimeVue Forms</NuxtLink> library.</p>
     </DocSectionText>
     <div class="card flex justify-center">
-        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+        <Form v-slot="$form" :resolver="resolver" :initialValues="initialValues" @submit="onFormSubmit" class="flex justify-center flex-col gap-4">
+            <div class="flex flex-col gap-1">
+                <CascadeSelect name="city" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+                <Message v-if="$form.city?.invalid" severity="error" size="small" variant="simple">{{ $form.city.error?.message }}</Message>
+            </div>
+            <Button type="submit" severity="secondary" label="Submit" />
+        </Form>
     </div>
-    <DocSectionCode :code="code" />
+    <DocSectionCode :code="code" :dependencies="{ zod: '3.23.8' }" />
 </template>
 
 <script>
+import { zodResolver } from '@primevue/forms/resolvers/zod';
+import { z } from 'zod';
+
 export default {
     data() {
         return {
-            selectedCity: null,
+            initialValues: {
+                city: null
+            },
+            resolver: zodResolver(
+                z.object({
+                    city: z.union([
+                        z.object({
+                            cname: z.string().min(1, 'City is required.')
+                        }),
+                        z.any().refine((val) => false, { message: 'City is required.' })
+                    ])
+                })
+            ),
             countries: [
                 {
                     name: 'Australia',
@@ -92,14 +110,25 @@ export default {
             ],
             code: {
                 basic: `
-<CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name"
-    :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+<Form v-slot="$form" :resolver="resolver" :initialValues="initialValues" @submit="onFormSubmit" class="flex justify-center flex-col gap-4">
+    <div class="flex flex-col gap-1">
+        <CascadeSelect name="city" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+        <Message v-if="$form.city?.invalid" severity="error" size="small" variant="simple">{{ $form.city.error?.message }}</Message>
+    </div>
+    <Button type="submit" severity="secondary" label="Submit" />
+</Form>
 `,
                 options: `
 <template>
     <div class="card flex justify-center">
-        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name"
-            :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+        <Form v-slot="$form" :resolver="resolver" :initialValues="initialValues" @submit="onFormSubmit" class="flex justify-center flex-col gap-4">
+            <div class="flex flex-col gap-1">
+                <CascadeSelect name="city" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+                <Message v-if="$form.city?.invalid" severity="error" size="small" variant="simple">{{ $form.city.error?.message }}</Message>
+            </div>
+            <Button type="submit" severity="secondary" label="Submit" />
+        </Form>
+        <Toast />
     </div>
 </template>
 
@@ -107,7 +136,19 @@ export default {
 export default {
     data() {
         return {
-            selectedCity: null,
+            initialValues: {
+                city: null
+            },
+            resolver: zodResolver(
+                z.object({
+                    city: z.union([
+                        z.object({
+                            cname: z.string().min(1, 'City is required.')
+                        }),
+                        z.any().refine((val) => false, { message: 'City is required.' })
+                    ])
+                })
+            ),
             countries: [
                 {
                     name: 'Australia',
@@ -183,6 +224,13 @@ export default {
                 }
             ]
         };
+    },
+    methods: {
+        onFormSubmit({ valid }) {
+            if (valid) {
+                this.$toast.add({ severity: 'success', summary: 'Form is submitted.', life: 3000 });
+            }
+        }
     }
 };
 <\/script>
@@ -190,15 +238,39 @@ export default {
                 composition: `
 <template>
     <div class="card flex justify-center">
-        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name"
-            :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+        <Form v-slot="$form" :resolver="resolver" :initialValues="initialValues" @submit="onFormSubmit" class="flex justify-center flex-col gap-4">
+            <div class="flex flex-col gap-1">
+                <CascadeSelect name="city" :options="countries" optionLabel="cname" optionGroupLabel="name" :optionGroupChildren="['states', 'cities']" class="w-56" placeholder="Select a City" />
+                <Message v-if="$form.city?.invalid" severity="error" size="small" variant="simple">{{ $form.city.error?.message }}</Message>
+            </div>
+            <Button type="submit" severity="secondary" label="Submit" />
+        </Form>
+        <Toast />
     </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import { zodResolver } from '@primevue/forms/resolvers/zod';
+import { useToast } from "primevue/usetoast";
+import { z } from 'zod';
 
-const selectedCity = ref();
+const toast = useToast();
+const initialValues = ref({
+    city: null
+});
+
+const resolver = ref(zodResolver(
+    z.object({
+        city: z.union([
+            z.object({
+                cname: z.string().min(1, 'City is required.')
+            }),
+            z.any().refine((val) => false, { message: 'City is required.' })
+        ])
+    })
+));
+
 const countries = ref([
     {
         name: 'Australia',
@@ -273,10 +345,23 @@ const countries = ref([
         ]
     }
 ]);
+
+const onFormSubmit = ({ valid }) => {
+    if (valid) {
+        toast.add({ severity: 'success', summary: 'Form is submitted.', life: 3000 });
+    }
+};
 <\/script>
 `
             }
         };
+    },
+    methods: {
+        onFormSubmit({ valid }) {
+            if (valid) {
+                this.$toast.add({ severity: 'success', summary: 'Form is submitted.', life: 3000 });
+            }
+        }
     }
 };
 </script>
