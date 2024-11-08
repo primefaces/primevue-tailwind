@@ -22,17 +22,17 @@
 }
 
 .p-tooltip-right .p-tooltip-arrow {
-    @apply -mt-1 border-[.25rem] border-l-0 border-r-surface-700
+    @apply -mt-1 border-[.25rem] border-s-0 border-e-surface-700 rtl:rotate-180
 }
 
 .p-tooltip-left .p-tooltip-arrow {
-    @apply -mt-1 border-[.25rem] border-r-0 border-l-surface-700
+    @apply -mt-1 border-[.25rem] border-e-0 border-s-surface-700 rtl:rotate-180
 }
 
 .p-tooltip-top .p-tooltip-arrow {
-    @apply -ml-1 border-[.25rem] border-b-0 border-t-surface-700
+    @apply -ms-1 border-[.25rem] border-b-0 border-t-surface-700
 }
 
 .p-tooltip-bottom .p-tooltip-arrow {
-    @apply -ml-1 border-[.25rem] border-t-0 border-b-surface-700
+    @apply -ms-1 border-[.25rem] border-t-0 border-b-surface-700
 }
