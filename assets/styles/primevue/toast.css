@@ -28,8 +28,12 @@
 
 .p-toast-close-button {
     @apply flex items-center justify-center overflow-hidden relative cursor-pointer bg-transparent select-none
-        transition-colors duration-200 text-inherit w-7 h-7 rounded-full -mt-[25%] -right-1/4 p-0 border-none 
+        transition-colors duration-200 text-inherit w-7 h-7 rounded-full -mt-[25%] -end-1/4 p-0 border-none
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
+}
+
+.p-toast-close-button:dir(rtl) {
+    @apply ms-auto end-auto
 }
 
 .p-toast-message-info,
