@@ -1,9 +1,9 @@
 @import './button';
 
 .p-dialog {
-    @apply max-h-[90%] scale-100 rounded-xl 
-        border border-surface-200 dark:border-surface-700 
-        bg-surface-0 dark:bg-surface-900 
+    @apply max-h-[90%] scale-100 rounded-xl
+        border border-surface-200 dark:border-surface-700
+        bg-surface-0 dark:bg-surface-900
         text-surface-700 dark:text-surface-0
         shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.1)]
 }
@@ -99,8 +99,25 @@
     @apply [transform:translate3d(100%,0,0)]
 }
 
+.p-dialog-left:dir(rtl) .p-dialog-enter-from,
+.p-dialog-left:dir(rtl) .p-dialog-leave-to,
+.p-dialog-topleft:dir(rtl) .p-dialog-enter-from,
+.p-dialog-topleft:dir(rtl) .p-dialog-leave-to,
+.p-dialog-bottomleft:dir(rtl) .p-dialog-enter-from,
+.p-dialog-bottomleft:dir(rtl) .p-dialog-leave-to {
+    @apply [transform:translate3d(100%,0,0)]
+}
+.p-dialog-right:dir(rtl) .p-dialog-enter-from,
+.p-dialog-right:dir(rtl) .p-dialog-leave-to,
+.p-dialog-topright:dir(rtl) .p-dialog-enter-from,
+.p-dialog-topright:dir(rtl) .p-dialog-leave-to,
+.p-dialog-bottomright:dir(rtl) .p-dialog-enter-from,
+.p-dialog-bottomright:dir(rtl) .p-dialog-leave-to {
+    @apply [transform:translate3d(-100%,0,0)]
+}
+
 .p-dialog-maximized {
-    @apply !w-screen !h-screen top-0 left-0 max-h-full rounded-none 
+    @apply !w-screen !h-screen top-0 start-0 max-h-full rounded-none
 }
 
 .p-dialog-maximized .p-dialog-content {
