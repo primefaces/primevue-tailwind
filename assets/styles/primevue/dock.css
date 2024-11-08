@@ -20,7 +20,7 @@
 }
 
 .p-dock-top {
-    @apply left-0 top-0 w-full
+    @apply start-0 top-0 w-full
 }
 
 .p-dock-top .p-dock-item {
@@ -28,7 +28,7 @@
 }
 
 .p-dock-bottom {
-    @apply left-0 bottom-0 w-full
+    @apply start-0 bottom-0 w-full
 }
 
 .p-dock-bottom .p-dock-item {
@@ -36,7 +36,7 @@
 }
 
 .p-dock-right {
-    @apply right-0 top-0 h-full
+    @apply end-0 top-0 h-full
 }
 
 .p-dock-right .p-dock-item {
@@ -48,7 +48,7 @@
 }
 
 .p-dock-left {
-    @apply left-0 top-0 h-full
+    @apply start-0 top-0 h-full
 }
 
 .p-dock-left .p-dock-item {
