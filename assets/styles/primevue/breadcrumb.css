@@ -10,6 +10,10 @@
     @apply flex items-center text-surface-400 dark:text-surface-500
 }
 
+.p-breadcrumb-separator-icon:dir(rtl) {
+    @apply rotate-180
+}
+
 .p-breadcrumb::-webkit-scrollbar {
     @apply hidden
 }

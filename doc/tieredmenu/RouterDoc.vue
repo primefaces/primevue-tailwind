@@ -33,11 +33,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/overview'
+                            route: '/slider'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/overview'
+                            route: '/slider'
                         }
                     ]
                 },
@@ -113,11 +113,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/overview'
+                            route: '/slider'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/overview'
+                            route: '/slider'
                         }
                     ]
                 },
@@ -182,11 +182,11 @@ const items = ref([
         items: [
             {
                 label: 'Styled',
-                route: '/overview'
+                route: '/slider'
             },
             {
                 label: 'Unstyled',
-                route: '/overview'
+                route: '/slider'
             }
         ]
     },
