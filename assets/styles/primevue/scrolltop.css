@@ -1,11 +1,11 @@
 @import './button';
 
 .p-scrolltop.p-button {
-    @apply fixed bottom-5 right-5
+    @apply fixed bottom-5 end-5
 }
 
 .p-scrolltop-sticky.p-button {
-    @apply sticky flex ml-auto
+    @apply sticky flex ms-auto
 }
 
 .p-scrolltop-enter-from {
