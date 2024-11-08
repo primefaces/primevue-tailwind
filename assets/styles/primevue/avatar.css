@@ -1,7 +1,7 @@
 .p-avatar {
     @apply inline-flex items-center justify-center
         w-8 h-8 text-base rounded-md
-        bg-surface-200 dark:bg-surface-700 
+        bg-surface-200 dark:bg-surface-700
 }
 
 .p-avatar-image {
@@ -42,7 +42,7 @@
 }
 
 .p-avatar-group .p-avatar + .p-avatar {
-    @apply -ml-4
+    @apply -ms-4
 }
 
 .p-avatar-group .p-avatar {
