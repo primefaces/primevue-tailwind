@@ -53,3 +53,11 @@
 .p-togglebutton:disabled .p-togglebutton-icon {
     @apply text-surface-500 dark:text-surface-400
 }
+
+.p-togglebutton-sm {
+    @apply text-sm px-[0.75rem] py-[0.375rem]
+}
+
+.p-togglebutton-lg {
+    @apply text-lg px-[1.25rem] py-[0.625rem]
+}
