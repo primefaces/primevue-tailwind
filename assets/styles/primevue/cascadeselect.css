@@ -151,3 +151,19 @@
 .p-cascadeselect-mobile-active .p-cascadeselect-option-list {
     @apply static shadow-none border-none ps-4
 }
+
+.p-cascadeselect-sm .p-cascadeselect-label {
+    @apply text-sm px-[0.625rem] py-[0.375rem]
+}
+
+.p-cascadeselect-sm .p-cascadeselect-dropdown .p-icon {
+    @apply text-sm w-[0.875rem] h-[0.875rem]
+}
+
+.p-cascadeselect-lg .p-cascadeselect-label {
+    @apply text-lg px-[0.875rem] py-[0.625rem]
+}
+
+.p-cascadeselect-lg .p-cascadeselect-dropdown .p-icon {
+    @apply text-lg w-[1.125rem] h-[1.125rem]
+}
