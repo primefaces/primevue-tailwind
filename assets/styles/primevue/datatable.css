@@ -159,14 +159,14 @@
 }
 
 .p-datatable-filter-rule {
-    @apply border-b border-surface-200 dark:border-surface-700 last:border-b-0
+    @apply border-b border-surface-200 dark:border-surface-700 last:border-b-0 pb-2 last:pb-0
 }
 
 .p-datatable-filter-add-rule-button {
     @apply w-full
 }
 
-.p-datatable-filter-remove-button {
+.p-datatable-filter-remove-rule-button {
     @apply w-full
 }
 
