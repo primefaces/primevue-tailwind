@@ -409,7 +409,7 @@
         {
             "name": "Forms",
             "icon": "pi pi-check-circle",
-            "to": "/forms"
+            "href": "https://primevue.org/guides/rtl"
         },
         {
             "name": "Icons",
