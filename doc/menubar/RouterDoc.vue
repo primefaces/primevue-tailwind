@@ -33,11 +33,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/overview'
+                            route: '/slider'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/overview'
+                            route: '/slider'
                         }
                     ]
                 },
@@ -45,7 +45,7 @@ export default {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/introduction');
+                        this.$router.push('/slider');
                     }
                 },
                 {
@@ -113,11 +113,11 @@ export default {
                     items: [
                         {
                             label: 'Styled',
-                            route: '/overview'
+                            route: '/slider'
                         },
                         {
                             label: 'Unstyled',
-                            route: '/overview'
+                            route: '/slider'
                         }
                     ]
                 },
@@ -125,7 +125,7 @@ export default {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/introduction');
+                        this.$router.push('/slider');
                     }
                 },
                 {
@@ -182,11 +182,11 @@ const items = ref([
         items: [
             {
                 label: 'Styled',
-                route: '/overview'
+                route: '/slider'
             },
             {
                 label: 'Unstyled',
-                route: '/overview'
+                route: '/slider'
             }
         ]
     },
@@ -194,7 +194,7 @@ const items = ref([
         label: 'Programmatic',
         icon: 'pi pi-link',
         command: () => {
-            router.push('/introduction');
+            router.push('/slider');
         }
     },
     {

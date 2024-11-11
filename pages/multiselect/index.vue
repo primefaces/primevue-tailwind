@@ -14,15 +14,18 @@
 import AccessibilityDoc from '@/doc/multiselect/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/multiselect/BasicDoc.vue';
 import ChipsDoc from '@/doc/multiselect/ChipsDoc.vue';
+import ClearIconDoc from '@/doc/multiselect/ClearIconDoc.vue';
 import DisabledDoc from '@/doc/multiselect/DisabledDoc.vue';
 import FilledDoc from '@/doc/multiselect/FilledDoc.vue';
 import FilterDoc from '@/doc/multiselect/FilterDoc.vue';
 import FloatLabelDoc from '@/doc/multiselect/FloatLabelDoc.vue';
+import FormsDoc from '@/doc/multiselect/FormsDoc.vue';
 import GroupDoc from '@/doc/multiselect/GroupDoc.vue';
 import IftaLabelDoc from '@/doc/multiselect/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/multiselect/ImportDoc.vue';
 import InvalidDoc from '@/doc/multiselect/InvalidDoc.vue';
 import LoadingStateDoc from '@/doc/multiselect/LoadingStateDoc.vue';
+import SizesDoc from '@/doc/multiselect/SizesDoc.vue';
 import TemplateDoc from '@/doc/multiselect/TemplateDoc.vue';
 import VirtualScrollDoc from '@/doc/multiselect/VirtualScrollDoc.vue';
 
@@ -39,6 +42,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'forms',
+                    label: 'Forms',
+                    component: FormsDoc
                 },
                 {
                     id: 'chips',
@@ -59,6 +67,11 @@ export default {
                     id: 'filter',
                     label: 'Filter',
                     component: FilterDoc
+                },
+                {
+                    id: 'clearicon',
+                    label: 'Clear Icon',
+                    component: ClearIconDoc
                 },
                 {
                     id: 'loadingstate',
@@ -84,6 +97,11 @@ export default {
                     id: 'iftalabel',
                     label: 'Ifta Label',
                     component: IftaLabelDoc
+                },
+                {
+                    id: 'sizes',
+                    label: 'Sizes',
+                    component: SizesDoc
                 },
                 {
                     id: 'invalid',

@@ -13,13 +13,16 @@
 <script>
 import AccessibilityDoc from '@/doc/cascadeselect/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/cascadeselect/BasicDoc.vue';
+import ClearIconDoc from '@/doc/cascadeselect/ClearIconDoc.vue';
 import DisabledDoc from '@/doc/cascadeselect/DisabledDoc.vue';
 import FilledDoc from '@/doc/cascadeselect/FilledDoc.vue';
 import FloatLabelDoc from '@/doc/cascadeselect/FloatLabelDoc.vue';
+import FormsDoc from '@/doc/cascadeselect/FormsDoc.vue';
 import IftaLabelDoc from '@/doc/cascadeselect/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/cascadeselect/ImportDoc.vue';
 import InvalidDoc from '@/doc/cascadeselect/InvalidDoc.vue';
 import LoadingStateDoc from '@/doc/cascadeselect/LoadingStateDoc.vue';
+import SizesDoc from '@/doc/cascadeselect/SizesDoc.vue';
 import TemplateDoc from '@/doc/cascadeselect/TemplateDoc.vue';
 
 export default {
@@ -37,6 +40,11 @@ export default {
                     component: BasicDoc
                 },
                 {
+                    id: 'forms',
+                    label: 'Forms',
+                    component: FormsDoc
+                },
+                {
                     id: 'template',
                     label: 'Template',
                     component: TemplateDoc
@@ -45,6 +53,11 @@ export default {
                     id: 'loadingstate',
                     label: 'Loading State',
                     component: LoadingStateDoc
+                },
+                {
+                    id: 'clearicon',
+                    label: 'Clear Icon',
+                    component: ClearIconDoc
                 },
                 {
                     id: 'filled',
@@ -60,6 +73,11 @@ export default {
                     id: 'iftalabel',
                     label: 'Ifta Label',
                     component: IftaLabelDoc
+                },
+                {
+                    id: 'sizes',
+                    label: 'Sizes',
+                    component: SizesDoc
                 },
                 {
                     id: 'invalid',

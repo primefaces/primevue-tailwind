@@ -5,7 +5,7 @@
 }
 
 .p-selectbutton .p-togglebutton {
-    @apply rounded-none border-y border-r border-l-0
+    @apply rounded-none border-y border-r border-s-0
 }
 
 .p-selectbutton .p-togglebutton:focus-visible {
@@ -13,11 +13,11 @@
 }
 
 .p-selectbutton .p-togglebutton:first-child {
-    @apply border-l rounded-l-md
+    @apply border-s rounded-s-md
 }
 
 .p-selectbutton .p-togglebutton:last-child {
-    @apply rounded-r-md
+    @apply rounded-e-md
 }
 
 .p-selectbutton.p-invalid {

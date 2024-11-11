@@ -27,19 +27,24 @@
 }
 
 .p-tablist-nav-button {
-    @apply absolute flex-shrink-0 top-0 z-20 h-full flex items-center justify-center cursor-pointer
+    @apply !absolute flex-shrink-0 top-0 z-20 h-full flex items-center justify-center cursor-pointer
         bg-surface-0 dark:bg-surface-900 text-surface-500 dark:text-surface-400 hover:text-surface-700 dark:hover:text-surface-0 w-10
         shadow-[0px_0px_10px_50px_rgba(255,255,255,0.6)] dark:shadow-[0px_0px_10px_50px] dark:shadow-surface-900/50
         focus-visible:z-10 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-[-1px] focus-visible:outline-primary
-        transition-colors duration-200 
+        transition-colors duration-200
 }
 
 .p-tablist-prev-button {
-    @apply left-0
+    @apply start-0
 }
 
 .p-tablist-next-button {
-    @apply right-0
+    @apply end-0
+}
+
+.p-tablist-prev-button:dir(rtl),
+.p-tablist-next-button:dir(rtl) {
+    @apply rotate-180
 }
 
 .p-tab {

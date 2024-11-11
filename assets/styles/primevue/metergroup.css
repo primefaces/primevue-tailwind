@@ -35,11 +35,11 @@
 }
 
 .p-metergroup-horizontal .p-metergroup-meter:first-of-type {
-    @apply rounded-l-md
+    @apply rounded-s-md
 }
 
 .p-metergroup-horizontal .p-metergroup-meter:last-of-type {
-    @apply rounded-r-md
+    @apply rounded-e-md
 }
 
 .p-metergroup-vertical {
@@ -59,9 +59,9 @@
 }
 
 .p-metergroup-vertical .p-metergroup-meter:first-of-type {
-    @apply rounded-t-md
+    @apply rounded-ss-md rounded-se-md
 }
 
 .p-metergroup-vertical .p-metergroup-meter:last-of-type {
-    @apply rounded-b-md
+    @apply rounded-ee-md rounded-es-md
 }

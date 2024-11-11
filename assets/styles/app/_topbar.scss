@@ -23,7 +23,7 @@
 
     .layout-topbar-logo-container {
         width: 250px;
-        margin-right: 4rem;
+        margin-inline-end: 4rem;
     }
 
     .layout-topbar-logo,
@@ -107,7 +107,7 @@
         .config-panel {
             position: absolute;
             top: calc(100% + 2px);
-            right: 0;
+            inset-inline-end: 0;
             width: 18rem;
             padding: .75rem;
             background-color: var(--overlay-background);
@@ -173,7 +173,7 @@
             }
 
             .version-icon {
-                margin-left: .25rem;
+                margin-inline-start: .25rem;
                 color: var(--text-secondary-color);
             }
         }

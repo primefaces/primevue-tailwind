@@ -8,11 +8,13 @@ import BasicDoc from '@/doc/password/BasicDoc.vue';
 import DisabledDoc from '@/doc/password/DisabledDoc.vue';
 import FilledDoc from '@/doc/password/FilledDoc.vue';
 import FloatLabelDoc from '@/doc/password/FloatLabelDoc.vue';
+import FormsDoc from '@/doc/password/FormsDoc.vue';
 import IftaLabelDoc from '@/doc/password/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/password/ImportDoc.vue';
 import InvalidDoc from '@/doc/password/InvalidDoc.vue';
 import LocaleDoc from '@/doc/password/LocaleDoc.vue';
 import MeterDoc from '@/doc/password/MeterDoc.vue';
+import SizesDoc from '@/doc/password/SizesDoc.vue';
 import TemplateDoc from '@/doc/password/TemplateDoc.vue';
 import ToggleMaskDoc from '@/doc/password/ToggleMaskDoc.vue';
 
@@ -29,6 +31,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'forms',
+                    label: 'Forms',
+                    component: FormsDoc
                 },
                 {
                     id: 'meter',
@@ -64,6 +71,11 @@ export default {
                     id: 'iftalabel',
                     label: 'Ifta Label',
                     component: IftaLabelDoc
+                },
+                {
+                    id: 'sizes',
+                    label: 'Sizes',
+                    component: SizesDoc
                 },
                 {
                     id: 'invalid',

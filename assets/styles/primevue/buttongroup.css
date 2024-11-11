@@ -11,9 +11,9 @@
 }
 
 .p-buttongroup .p-button:first-of-type:not(:only-of-type) {
-    @apply rounded-r-none
+    @apply rounded-e-none
 }
 
 .p-buttongroup .p-button:last-of-type:not(:only-of-type) {
-    @apply rounded-l-none
+    @apply rounded-s-none
 }

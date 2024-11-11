@@ -20,7 +20,7 @@
 }
 
 .p-inputnumber-stacked .p-inputnumber-button-group {
-    @apply flex flex-col absolute top-px right-px h-[calc(100%-2px)] z-10
+    @apply flex flex-col absolute top-px end-px h-[calc(100%-2px)] z-10
 }
 
 .p-inputnumber-stacked .p-inputnumber-increment-button {
@@ -32,7 +32,7 @@
 }
 
 .p-inputnumber-horizontal .p-inputnumber-increment-button {
-    @apply order-3 rounded-r-md border-l-0
+    @apply order-3 rounded-e-md border-s-0
 }
 
 .p-inputnumber-horizontal .p-inputnumber-input {
@@ -40,7 +40,7 @@
 }
 
 .p-inputnumber-horizontal .p-inputnumber-decrement-button {
-    @apply order-1 rounded-l-md border-r-0
+    @apply order-1 rounded-s-md border-r-0
 }
 
 .p-floatlabel:has(.p-inputnumber-horizontal) label {
@@ -56,7 +56,7 @@
 }
 
 .p-inputnumber-vertical .p-inputnumber-increment-button {
-    @apply order-1 rounded-t-md w-full border-b-0
+    @apply order-1 rounded-ss-md rounded-se-md w-full border-b-0
 }
 
 .p-inputnumber-vertical .p-inputnumber-input {
@@ -64,7 +64,7 @@
 }
 
 .p-inputnumber-vertical .p-inputnumber-decrement-button {
-    @apply order-3 rounded-b-md w-full border-t-0
+    @apply order-3 rounded-ee-md rounded-es-md w-full border-t-0
 }
 
 .p-inputnumber-input {

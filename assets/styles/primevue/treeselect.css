@@ -31,7 +31,7 @@
 
 .p-treeselect-dropdown {
     @apply flex items-center justify-center shrink-0 bg-transparent
-        text-surface-500 dark:text-surface-400 w-10 rounded-r-md
+        text-surface-500 dark:text-surface-400 w-10 rounded-e-md
 }
 
 .p-treeselect-label-container {
@@ -93,4 +93,20 @@
 
 .p-treeselect-label:has(.p-chip) {
     @apply py-1 px-1
+}
+
+.p-treeselect-sm .p-treeselect-label {
+    @apply text-sm px-[0.625rem] py-[0.375rem]
+}
+
+.p-treeselect-sm .p-treeselect-dropdown .p-icon {
+    @apply text-sm w-[0.875rem] h-[0.875rem]
+}
+
+.p-treeselect-lg .p-treeselect-label {
+    @apply text-lg px-[0.875rem] py-[0.625rem]
+}
+
+.p-treeselect-lg .p-treeselect-dropdown .p-icon {
+    @apply text-lg w-[1.125rem] h-[1.125rem]
 }

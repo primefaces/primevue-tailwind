@@ -22,11 +22,11 @@
 }
 
 .p-slider-horizontal .p-slider-range {
-    @apply top-0 left-0 h-full
+    @apply top-0 start-0 h-full
 }
 
 .p-slider-horizontal .p-slider-handle {
-    @apply top-1/2 -mt-[10px] -ml-[10px]
+    @apply top-1/2 -mt-[10px] -ms-[10px]
 }
 
 .p-slider-vertical {
@@ -34,9 +34,9 @@
 }
 
 .p-slider-vertical .p-slider-handle {
-    @apply left-1/2 -mb-[10px] -ml-[10px]
+    @apply start-1/2 -mb-[10px] -ms-[10px]
 }
 
 .p-slider-vertical .p-slider-range {
-    @apply bottom-0 left-0 w-full
+    @apply bottom-0 start-0 w-full
 }

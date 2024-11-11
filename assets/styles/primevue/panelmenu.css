@@ -41,6 +41,10 @@
     @apply text-surface-500 dark:text-surface-400
 }
 
+.p-panelmenu-header:not(.p-panelmenu-header-active) .p-panelmenu-submenu-icon:dir(rtl) {
+    @apply rotate-180;
+}
+
 .p-panelmenu-header:not(.p-disabled) .p-panelmenu-header-content:hover {
     @apply bg-surface-100 dark:bg-surface-800 text-surface-800 dark:text-surface-0
 }

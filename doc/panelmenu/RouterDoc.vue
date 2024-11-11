@@ -34,12 +34,12 @@ export default {
                         {
                             label: 'Styled',
                             icon: 'pi pi-eraser',
-                            route: '/overview'
+                            route: '/slider'
                         },
                         {
                             label: 'Unstyled',
                             icon: 'pi pi-heart',
-                            route: '/overview'
+                            route: '/slider'
                         }
                     ]
                 },
@@ -47,7 +47,7 @@ export default {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/introduction');
+                        this.$router.push('/slider');
                     }
                 },
                 {
@@ -118,12 +118,12 @@ export default {
                         {
                             label: 'Styled',
                             icon: 'pi pi-eraser',
-                            route: '/overview'
+                            route: '/slider'
                         },
                         {
                             label: 'Unstyled',
                             icon: 'pi pi-heart',
-                            route: '/overview'
+                            route: '/slider'
                         }
                     ]
                 },
@@ -131,7 +131,7 @@ export default {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/introduction');
+                        this.$router.push('/slider');
                     }
                 },
                 {
@@ -191,12 +191,12 @@ const items = ref([
             {
                 label: 'Styled',
                 icon: 'pi pi-eraser',
-                route: '/overview'
+                route: '/slider'
             },
             {
                 label: 'Unstyled',
                 icon: 'pi pi-heart',
-                route: '/overview'
+                route: '/slider'
             }
         ]
     },
@@ -204,7 +204,7 @@ const items = ref([
         label: 'Programmatic',
         icon: 'pi pi-link',
         command: () => {
-            router.push('/introduction');
+            router.push('/slider');
         }
     },
     {

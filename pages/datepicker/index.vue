@@ -11,6 +11,7 @@ import DisabledDoc from '@/doc/datepicker/DisabledDoc.vue';
 import FilledDoc from '@/doc/datepicker/FilledDoc.vue';
 import FloatLabelDoc from '@/doc/datepicker/FloatLabelDoc.vue';
 import FormatDoc from '@/doc/datepicker/FormatDoc.vue';
+import FormsDoc from '@/doc/datepicker/FormsDoc.vue';
 import IconDoc from '@/doc/datepicker/IconDoc.vue';
 import IftaLabelDoc from '@/doc/datepicker/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/datepicker/ImportDoc.vue';
@@ -22,6 +23,7 @@ import MonthPickerDoc from '@/doc/datepicker/MonthPickerDoc.vue';
 import MultipleDoc from '@/doc/datepicker/MultipleDoc.vue';
 import MultipleMonthsDoc from '@/doc/datepicker/MultipleMonthsDoc.vue';
 import RangeDoc from '@/doc/datepicker/RangeDoc.vue';
+import SizesDoc from '@/doc/datepicker/SizesDoc.vue';
 import TimeDoc from '@/doc/datepicker/TimeDoc.vue';
 import YearPickerDoc from '@/doc/datepicker/YearPickerDoc.vue';
 
@@ -38,6 +40,11 @@ export default {
                     id: 'basic',
                     label: 'Basic',
                     component: BasicDoc
+                },
+                {
+                    id: 'forms',
+                    label: 'Forms',
+                    component: FormsDoc
                 },
                 {
                     id: 'format',
@@ -118,6 +125,11 @@ export default {
                     id: 'iftalabel',
                     label: 'Ifta Label',
                     component: IftaLabelDoc
+                },
+                {
+                    id: 'sizes',
+                    label: 'Sizes',
+                    component: SizesDoc
                 },
                 {
                     id: 'invalid',

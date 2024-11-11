@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const folderPath = path.join(__dirname, '../assets/styles/presets/aura');
+const folderPath = path.join(__dirname, '../assets/styles/primevue');
 const jsonFilePath = path.join(__dirname, '../doc/common/presetdoc/index.json');
 
 fs.readdir(folderPath, (err, files) => {

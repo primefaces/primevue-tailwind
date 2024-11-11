@@ -17,7 +17,7 @@
 .p-galleria-nav-button {
     @apply absolute top-1/2 inline-flex justify-center items-center overflow-hidden select-none border-none cursor-pointer
         w-12 h-12 transition-colors duration-200 p-0 -mt-12 mx-2 mb-0 rounded-full
-        bg-white/10 text-surface-100 enabled:hover:bg-white/20 enabled:hover:text-surface-0 
+        bg-white/10 text-surface-100 enabled:hover:bg-white/20 enabled:hover:text-surface-0
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
 }
 
@@ -27,11 +27,18 @@
 }
 
 .p-galleria-prev-button {
-    @apply left-0
+    @apply start-0
 }
 
 .p-galleria-next-button {
-    @apply right-0
+    @apply end-0
+}
+
+.p-galleria-prev-button:dir(rtl) {
+    @apply start-auto end-0
+}
+.p-galleria-next-button:dir(rtl) {
+    @apply end-auto start-0
 }
 
 .p-galleria-item {
@@ -60,7 +67,7 @@
 
 .p-galleria-thumbnail-nav-button {
     @apply self-center flex-grow-0 flex-shrink-0 basis-auto justify-center items-center overflow-hidden relative
-        my-0 mx-2 p-0 border-none select-none cursor-pointer w-8 h-8 rounded-md transition-colors duration-200 bg-transparent 
+        my-0 mx-2 p-0 border-none select-none cursor-pointer w-8 h-8 rounded-md transition-colors duration-200 bg-transparent
         text-surface-600 hover:bg-surface-100 hover:text-surface-700
         dark:text-surface-400 dark:hover:bg-surface-800 dark:hover:text-surface-0
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
@@ -77,6 +84,11 @@
 
 .p-galleria-thumbnails-viewport {
     @apply overflow-hidden w-full
+}
+
+.p-galleria:not(.p-galleria-thumbnails-right):not(.p-galleria-thumbnails-left) .p-galleria-thumbnail-prev-button:dir(rtl),
+.p-galleria:not(.p-galleria-thumbnails-right):not(.p-galleria-thumbnails-left) .p-galleria-thumbnail-next-button:dir(rtl) {
+    @apply rotate-180
 }
 
 .p-galleria-thumbnail-items {
@@ -192,10 +204,10 @@
 }
 
 .p-galleria-close-button {
-    @apply absolute top-0 right-0 flex items-center justify-center overflow-hidden m-2 rounded-full 
+    @apply absolute top-0 right-0 flex items-center justify-center overflow-hidden m-2 rounded-full
         transition-colors duration-200 select-none cursor-pointer w-12 h-12 p-0 border-none
-        bg-white/10 text-surface-50 hover:bg-white/20 hover:text-surface-0 
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary 
+        bg-white/10 text-surface-50 hover:bg-white/20 hover:text-surface-0
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
 }
 
 .p-galleria-close-icon {

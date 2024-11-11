@@ -1,6 +1,6 @@
 .p-textarea {
     @apply appearance-none rounded-md
-        border border-surface-300 dark:border-surface-700 
+        border border-surface-300 dark:border-surface-700
         enabled:hover:border-surface-400 dark:enabled:hover:border-surface-600
         enabled:focus:border-primary
         bg-surface-0 dark:bg-surface-950
@@ -27,4 +27,12 @@
 
 .p-textarea-resizable {
     @apply overflow-hidden resize-none
+}
+
+.p-textarea-sm {
+    @apply text-sm px-[0.625rem] py-[0.375rem]
+}
+
+.p-textarea-lg {
+    @apply text-lg px-[0.875rem] py-[0.625rem]
 }

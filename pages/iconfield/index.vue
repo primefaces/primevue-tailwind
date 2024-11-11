@@ -8,6 +8,7 @@ import BasicDoc from '@/doc/iconfield/BasicDoc.vue';
 import FloatLabelDoc from '@/doc/iconfield/FloatLabelDoc.vue';
 import IftaLabelDoc from '@/doc/iconfield/IftaLabelDoc.vue';
 import ImportDoc from '@/doc/iconfield/ImportDoc.vue';
+import SizesDoc from '@/doc/iconfield/SizesDoc.vue';
 import TemplateDoc from '@/doc/iconfield/TemplateDoc.vue';
 
 export default {
@@ -38,6 +39,11 @@ export default {
                     id: 'iftalabel',
                     label: 'Ifta Label',
                     component: IftaLabelDoc
+                },
+                {
+                    id: 'sizes',
+                    label: 'Sizes',
+                    component: SizesDoc
                 },
                 {
                     id: 'accessibility',

@@ -32,13 +32,13 @@ export default {
                         {
                             label: 'Router Link',
                             icon: 'pi pi-palette',
-                            route: '/overview'
+                            route: '/slider'
                         },
                         {
                             label: 'Programmatic',
                             icon: 'pi pi-link',
                             command: () => {
-                                this.$router.push('/introduction');
+                                this.$router.push('/slider');
                             }
                         },
                         {
@@ -94,13 +94,13 @@ export default {
                 {
                     label: 'Router Link',
                     icon: 'pi pi-palette',
-                    route: '/overview'
+                    route: '/slider'
                 },
                 {
                     label: 'Programmatic',
                     icon: 'pi pi-link',
                     command: () => {
-                        this.$router.push('/introduction');
+                        this.$router.push('/slider');
                     }
                 },
                 {
@@ -144,13 +144,13 @@ const items = ref([
     {
         label: 'Router Link',
         icon: 'pi pi-palette',
-        route: '/overview'
+        route: '/slider'
     },
     {
         label: 'Programmatic',
         icon: 'pi pi-link',
         command: () => {
-            router.push('/introduction');
+            router.push('/slider');
         }
     },
     {

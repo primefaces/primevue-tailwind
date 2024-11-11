@@ -1,7 +1,7 @@
 @import './badge';
 
 .p-button {
-    @apply inline-flex cursor-pointer select-none items-center justify-center overflow-hidden relative 
+    @apply inline-flex cursor-pointer select-none items-center justify-center overflow-hidden relative
         bg-primary enabled:hover:bg-primary-emphasis enabled:active:bg-primary-emphasis-alt text-primary-contrast
         border border-primary enabled:hover:border-primary-emphasis enabled:active:border-primary-emphasis-alt
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
@@ -10,6 +10,14 @@
 }
 
 .p-button-icon-right {
+    @apply order-1
+}
+
+.p-button-icon-right:dir(rtl) {
+    @apply order-[-1]
+}
+
+.p-button:not(.p-button-vertical) .p-button-icon:not(.p-button-icon-right):dir(rtl) {
     @apply order-1
 }
 
@@ -57,7 +65,7 @@
     @apply w-full
 }
 
-.p-button-fluid.p-button-icon-only {    
+.p-button-fluid.p-button-icon-only {
     @apply w-10
 }
 
@@ -80,7 +88,7 @@
         dark:bg-surface-800 dark:enabled:hover:bg-surface-700 dark:enabled:active:bg-surface-600
         dark:border-surface-800 dark:enabled:hover:border-surface-700 dark:enabled:active:border-surface-600
         dark:text-surface-300 dark:enabled:hover:text-surface-200 dark:enabled:active:text-surface-100
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-surface-600 dark:focus-visible:outline-surface-300
 }
 
@@ -91,7 +99,7 @@
         dark:bg-green-400 dark:enabled:hover:bg-green-300 dark:enabled:active:bg-green-200
         dark:border-green-400 dark:enabled:hover:border-green-300 dark:enabled:active:border-green-200
         dark:text-green-950 dark:enabled:hover:text-green-950 dark:enabled:active:text-green-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-green-500 dark:focus-visible:outline-green-400
 }
 
@@ -102,7 +110,7 @@
         dark:bg-sky-400 dark:enabled:hover:bg-sky-300 dark:enabled:active:bg-sky-200
         dark:border-sky-400 dark:enabled:hover:border-sky-300 dark:enabled:active:border-sky-200
         dark:text-sky-950 dark:enabled:hover:text-sky-950 dark:enabled:active:text-sky-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-sky-500 dark:focus-visible:outline-sky-400
 }
 
@@ -113,7 +121,7 @@
         dark:bg-orange-400 dark:enabled:hover:bg-orange-300 dark:enabled:active:bg-orange-200
         dark:border-orange-400 dark:enabled:hover:border-orange-300 dark:enabled:active:border-orange-200
         dark:text-orange-950 dark:enabled:hover:text-orange-950 dark:enabled:active:text-orange-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-orange-500 dark:focus-visible:outline-orange-400
 }
 
@@ -124,7 +132,7 @@
         dark:bg-purple-400 dark:enabled:hover:bg-purple-300 dark:enabled:active:bg-purple-200
         dark:border-purple-400 dark:enabled:hover:border-purple-300 dark:enabled:active:border-purple-200
         dark:text-purple-950 dark:enabled:hover:text-purple-950 dark:enabled:active:text-purple-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-purple-500 dark:focus-visible:outline-purple-400
 }
 
@@ -135,7 +143,7 @@
         dark:bg-purple-400 dark:enabled:hover:bg-purple-300 dark:enabled:active:bg-purple-200
         dark:border-purple-400 dark:enabled:hover:border-purple-300 dark:enabled:active:border-purple-200
         dark:text-purple-950 dark:enabled:hover:text-purple-950 dark:enabled:active:text-purple-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-purple-500 dark:focus-visible:outline-purple-400
 }
 
@@ -146,7 +154,7 @@
         dark:bg-red-400 dark:enabled:hover:bg-red-300 dark:enabled:active:bg-red-200
         dark:border-red-400 dark:enabled:hover:border-red-300 dark:enabled:active:border-red-200
         dark:text-red-950 dark:enabled:hover:text-red-950 dark:enabled:active:text-red-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-red-500 dark:focus-visible:outline-red-400
 }
 
@@ -157,7 +165,7 @@
         dark:bg-surface-0 dark:enabled:hover:bg-surface-100 dark:enabled:active:bg-surface-200
         dark:border-surface-100 dark:enabled:hover:border-surface-200 dark:enabled:active:border-surface-300
         dark:text-surface-950 dark:enabled:hover:text-surface-950 dark:enabled:active:text-surface-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 
+        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
         focus-visible:outline-surface-950 dark:focus-visible:outline-surface-0
 }
 

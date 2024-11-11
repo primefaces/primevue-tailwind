@@ -387,10 +387,6 @@
                             "to": "/progressspinner"
                         },
                         {
-                            "name": "Ripple",
-                            "to": "/ripple"
-                        },
-                        {
                             "name": "ScrollTop",
                             "to": "/scrolltop"
                         },
@@ -411,6 +407,11 @@
             ]
         },
         {
+            "name": "Forms",
+            "icon": "pi pi-check-circle",
+            "to": "/forms"
+        },
+        {
             "name": "Icons",
             "icon": "pi pi-eye",
             "children": [
@@ -421,6 +422,16 @@
                 {
                     "name": "Custom Icons",
                     "to": "/customicons"
+                }
+            ]
+        },
+        {
+            "name": "Guides",
+            "icon": "pi pi-book",
+            "children": [
+                {
+                    "name": "RTL",
+                    "href": "https://primevue.org/guides/rtl"
                 }
             ]
         },

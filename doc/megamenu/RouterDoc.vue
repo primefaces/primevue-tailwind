@@ -59,8 +59,8 @@ export default {
                             {
                                 label: 'Router',
                                 items: [
-                                    { label: 'Theming', route: '/overview' },
-                                    { label: 'Unstyled', route: '/overview' }
+                                    { label: 'Theming', route: '/slider' },
+                                    { label: 'Unstyled', route: '/slider' }
                                 ]
                             }
                         ],
@@ -71,7 +71,7 @@ export default {
                                     {
                                         label: 'Installation',
                                         command: () => {
-                                            this.$router.push('/introduction');
+                                            this.$router.push('/slider');
                                         }
                                     }
                                 ]
@@ -135,8 +135,8 @@ const items = ref([
                 {
                     label: 'Router',
                     items: [
-                        { label: 'Theming', route: '/overview' },
-                        { label: 'Unstyled', route: '/overview' }
+                        { label: 'Theming', route: '/slider' },
+                        { label: 'Unstyled', route: '/slider' }
                     ]
                 }
             ],
@@ -147,7 +147,7 @@ const items = ref([
                         {
                             label: 'Installation',
                             command: () => {
-                                router.push('/introduction');
+                                router.push('/slider');
                             }
                         }
                     ]

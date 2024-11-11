@@ -20,7 +20,7 @@
 .p-paginator-last,
 .p-paginator-first,
 .p-paginator-prev {
-    @apply cursor-pointer inline-flex items-center justify-center leading-none overflow-hidden relative 
+    @apply cursor-pointer inline-flex items-center justify-center leading-none overflow-hidden relative
         bg-transparent border-none min-w-10 h-10 transition-colors duration-200 rounded-full p-0 m-0
         text-surface-500 dark:text-surface-400
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
@@ -48,4 +48,11 @@
 
 .p-paginator-jtp-input .p-inputtext {
     @apply max-w-10
+}
+
+.p-paginator-first:dir(rtl),
+.p-paginator-prev:dir(rtl),
+.p-paginator-next:dir(rtl),
+.p-paginator-last:dir(rtl) {
+    @apply rotate-180
 }

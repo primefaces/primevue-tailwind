@@ -67,7 +67,7 @@
 }
 
 .p-treetable-column-resizer {
-    @apply block absolute top-0 right-0 m-0 w-2 h-full p-0 cursor-col-resize border border-transparent
+    @apply block absolute top-0 end-0 m-0 w-2 h-full p-0 cursor-col-resize border border-transparent
 }
 
 .p-treetable-column-header-content {
@@ -103,7 +103,7 @@
 }
 
 .p-treetable-header-cell {
-    @apply py-3 px-4 font-normal text-left transition-colors duration-200
+    @apply py-3 px-4 font-normal text-start transition-colors duration-200
         border-b border-surface-200 dark:border-surface-700
         bg-surface-0 dark:bg-surface-900
         text-surface-700 dark:text-surface-0
@@ -118,7 +118,7 @@
 }
 
 .p-treetable-tbody > tr > td {
-    @apply text-left py-3 px-4 border-b border-surface-200 dark:border-surface-800
+    @apply text-start py-3 px-4 border-b border-surface-200 dark:border-surface-800
 }
 
 .p-treetable-hoverable .p-treetable-tbody > tr:not(.p-treetable-row-selected):hover {
@@ -143,7 +143,7 @@
 }
 
 .p-treetable-tfoot > tr > td {
-    @apply text-left py-3 px-4 border-b border-surface-200 dark:border-surface-800 
+    @apply text-start py-3 px-4 border-b border-surface-200 dark:border-surface-800
         bg-surface-0 dark:bg-surface-900
         text-surface-700 dark:text-surface-0
 }
@@ -211,23 +211,23 @@
 }
 
 .p-treetable-gridlines .p-treetable-tbody > tr > td {
-    @apply border-t border-l last:border-r
+    @apply border-t border-s last:border-r
 }
 
 .p-treetable-gridlines .p-treetable-tbody > tr:last-child > td {
-    @apply border-y border-l last:border
+    @apply border-y border-s last:border
 }
 
 .p-treetable-gridlines .p-treetable-tfoot > tr > td {
-    @apply border-y border-l last:border
+    @apply border-y border-s last:border
 }
 
 .p-treetable.p-treetable-gridlines .p-treetable-thead + .p-treetable-tfoot > tr > td {
-    @apply border-b border-l last:border-r
+    @apply border-b border-s last:border-r
 }
 
 .p-treetable.p-treetable-gridlines:has(.p-treetable-thead):has(.p-treetable-tbody) .p-treetable-tbody > tr > td {
-    @apply border-b border-l last:border-r
+    @apply border-b border-s last:border-r
 }
 
 .p-treetable.p-treetable-gridlines:has(.p-treetable-tbody):has(.p-treetable-tfoot) .p-treetable-tbody > tr:last-child > td {
@@ -284,7 +284,7 @@
 
 .p-treetable-node-toggle-button {
     @apply inline-flex items-center justify-center overflow-hidden relative select-none
-        transition-colors duration-200 w-7 h-7 rounded-full border-none bg-transparent cursor-pointer 
+        transition-colors duration-200 w-7 h-7 rounded-full border-none bg-transparent cursor-pointer
         enabled:hover:bg-surface-100 dark:enabled:hover:bg-surface-900
         text-surface-500 dark:text-surface-400 enabled:hover:text-surface-700 dark:enabled:hover:text-surface-0
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
@@ -293,4 +293,8 @@
 
 .p-treetable-tbody > tr.p-treetable-row-selected .p-treetable-node-toggle-button:hover {
     @apply bg-surface-0 dark:bg-surface-900 text-primary
+}
+
+.p-treetable-node-toggle-icon:dir(rtl) {
+    @apply rotate-180
 }

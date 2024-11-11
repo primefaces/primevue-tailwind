@@ -12,7 +12,7 @@
 }
 
 .p-multiselect:not(.p-disabled):hover {
-    @apply border-surface-400 dark:border-surface-600 
+    @apply border-surface-400 dark:border-surface-600
 }
 
 .p-multiselect:not(.p-disabled).p-focus {
@@ -33,7 +33,7 @@
 
 .p-multiselect-dropdown {
     @apply flex items-center justify-center shrink-0 bg-transparent
-        text-surface-500 dark:text-surface-400 w-10 rounded-r-md
+        text-surface-500 dark:text-surface-400 w-10 rounded-e-md
 }
 
 .p-multiselect-label-container {
@@ -53,7 +53,7 @@
 }
 
 .p-multiselect-label-empty {
-    @apply overflow-hidden opacity-0  
+    @apply overflow-hidden opacity-0
 }
 
 .p-multiselect .p-multiselect-overlay {
@@ -73,7 +73,7 @@
 }
 
 .p-multiselect-header .p-checkbox {
-    @apply mr-2
+    @apply me-2
 }
 
 .p-multiselect-filter-container {
@@ -120,4 +120,20 @@
 
 .p-multiselect-fluid {
     @apply flex
+}
+
+.p-multiselect-sm .p-multiselect-label {
+    @apply text-sm px-[0.625rem] py-[0.375rem]
+}
+
+.p-multiselect-sm .p-multiselect-dropdown .p-icon {
+    @apply text-sm w-[0.875rem] h-[0.875rem]
+}
+
+.p-multiselect-lg .p-multiselect-label {
+    @apply text-lg px-[0.875rem] py-[0.625rem]
+}
+
+.p-multiselect-lg .p-multiselect-dropdown .p-icon {
+    @apply text-lg w-[1.125rem] h-[1.125rem]
 }

@@ -3,7 +3,7 @@
 }
 
 .p-connected-overlay-leave-to {
-    @apply opacity-0    
+    @apply opacity-0
 }
 
 .p-connected-overlay-enter-active {
@@ -51,7 +51,7 @@
 }
 
 .p-overlay-mask {
-    @apply bg-black/50 text-surface-200 transition-colors duration-150 fixed top-0 left-0 w-full h-full
+    @apply bg-black/50 text-surface-200 transition-colors duration-150 fixed top-0 start-0 w-full h-full
 }
 
 .p-overlay-mask-enter {

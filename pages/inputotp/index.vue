@@ -6,10 +6,12 @@
 import AccessibilityDoc from '@/doc/inputotp/AccessibilityDoc.vue';
 import BasicDoc from '@/doc/inputotp/BasicDoc.vue';
 import FilledDoc from '@/doc/inputotp/FilledDoc.vue';
+import FormsDoc from '@/doc/inputotp/FormsDoc.vue';
 import ImportDoc from '@/doc/inputotp/ImportDoc.vue';
 import IntegerOnlyDoc from '@/doc/inputotp/IntegerOnlyDoc.vue';
 import MaskDoc from '@/doc/inputotp/MaskDoc.vue';
 import SampleDoc from '@/doc/inputotp/SampleDoc.vue';
+import SizesDoc from '@/doc/inputotp/SizesDoc.vue';
 import TemplateDoc from '@/doc/inputotp/TemplateDoc.vue';
 
 export default {
@@ -27,6 +29,11 @@ export default {
                     component: BasicDoc
                 },
                 {
+                    id: 'forms',
+                    label: 'Forms',
+                    component: FormsDoc
+                },
+                {
                     id: 'mask',
                     label: 'Mask',
                     component: MaskDoc
@@ -40,6 +47,11 @@ export default {
                     id: 'filled',
                     label: 'Filled',
                     component: FilledDoc
+                },
+                {
+                    id: 'sizes',
+                    label: 'Sizes',
+                    component: SizesDoc
                 },
                 {
                     id: 'template',
