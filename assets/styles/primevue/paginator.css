@@ -50,15 +50,9 @@
     @apply max-w-10
 }
 
-.p-paginator-first:dir(rtl) {
-    @apply order-2
-}
-.p-paginator-prev:dir(rtl) {
-    @apply order-1
-}
-.p-paginator-next:dir(rtl) {
-    @apply order-[-1]
-}
+.p-paginator-first:dir(rtl),
+.p-paginator-prev:dir(rtl),
+.p-paginator-next:dir(rtl),
 .p-paginator-last:dir(rtl) {
-    @apply order-[-2]
+    @apply rotate-180
 }
