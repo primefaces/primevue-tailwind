@@ -31,6 +31,10 @@
         text-surface-500 dark:text-surface-400 w-10 rounded-e-md
 }
 
+.p-cascadeselect-clear-icon {
+    @apply absolute top-1/2 -mt-2 text-surface-500 dark:text-surface-400 end-10
+}
+
 .p-cascadeselect-label {
     @apply block whitespace-nowrap overflow-hidden flex-auto w-[1%]
         py-2 px-3 overflow-ellipsis
@@ -39,10 +43,6 @@
 
 .p-cascadeselect-label.p-placeholder {
     @apply text-surface-500 dark:text-surface-400
-}
-
-.p-cascadeselect-clearable .p-cascadeselect-label {
-    @apply pe-7
 }
 
 .p-cascadeselect.p-disabled .p-cascadeselect-label {

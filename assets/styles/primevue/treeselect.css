@@ -34,6 +34,10 @@
         text-surface-500 dark:text-surface-400 w-10 rounded-e-md
 }
 
+.p-treeselect-clear-icon {
+    @apply absolute top-1/2 -mt-2 text-surface-500 dark:text-surface-400 end-10
+}
+
 .p-treeselect-label-container {
     @apply overflow-hidden flex-auto
 }
