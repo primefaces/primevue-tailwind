@@ -1,6 +1,6 @@
 {
     "name": "primevue-tailwind",
-    "version": "4.2.4",
+    "version": "4.2.5",
     "homepage": "https://tailwind.primevue.org/",
     "repository": {
         "type": "git",
@@ -34,8 +34,8 @@
     ],
     "devDependencies": {
         "@babel/eslint-parser": "^7.18.9",
-        "@primevue/nuxt-module": "^4.2.4",
-        "@primevue/forms": "^4.2.4",
+        "@primevue/nuxt-module": "^4.2.5",
+        "@primevue/forms": "^4.2.5",
         "@stackblitz/sdk": "^1.8.2",
         "autoprefixer": "^10.4.16",
         "chart.js": "3.7.0",
@@ -58,7 +58,7 @@
         "@docsearch/js": "^3.3.3",
         "nuxt": "3.12.1",
         "primeicons": "^7.0.0",
-        "primevue": "^4.2.4",
+        "primevue": "^4.2.5",
         "tailwindcss": "^3.4.1",
         "tailwindcss-primeui": "^0.3.4"
     }
