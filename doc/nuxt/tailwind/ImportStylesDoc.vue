@@ -23,10 +23,11 @@ export default {
             code2: {
                 basic: `
 /* Use @import */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "./primevue/tailwind.css";
-@import "tailwindcss/utilities";
+@layer tailwind-base, tailwind-components, primevue, tailwind-utilities;
+@import "tailwindcss/base" layer(tailwind-base);
+@import "tailwindcss/components" layer(tailwind-components);
+@import "./primevue/tailwind.css" layer(primevue);
+@import "tailwindcss/utilities" layer(tailwind-utilities);
 `
             }
         };
