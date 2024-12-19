@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.2.4](https://github.com/primefaces/primevue-tailwind/tree/4.2.4) (2024-11-27)
+
+[Full Changelog](https://github.com/primefaces/primevue/compare/4.2.3...4.2.4)
+
+-   No changes, provides semantic versioning compatibility for PrimeVue-Tailwind 4.2.4
+
+## [4.2.3](https://github.com/primefaces/primevue-tailwind/tree/4.2.3) (2024-11-22)
+
+[Full Changelog](https://github.com/primefaces/primevue/compare/4.2.2...4.2.3)
+
+-   No changes, provides semantic versioning compatibility for PrimeVue-Tailwind 4.2.3
+
 ## [4.2.2](https://github.com/primefaces/primevue-tailwind/tree/4.2.2) (2024-11-14)
 
 [Full Changelog](https://github.com/primefaces/primevue/compare/4.2.1...4.2.2)

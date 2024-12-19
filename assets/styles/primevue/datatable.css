@@ -179,7 +179,7 @@
 }
 
 .p-datatable .p-virtualscroller .p-virtualscroller-loading {
-    @apply transform-none min-h-0 sticky top-0 start-0
+    @apply !transform-none min-h-0 sticky top-0 start-0
 }
 
 .p-datatable-paginator-top {

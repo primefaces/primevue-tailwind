@@ -3,7 +3,7 @@ const baseUrl = '/';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     typescript: false,
-    modules: ['nuxt-gtag', '@primevue/nuxt-module'],
+    modules: ['@primevue/nuxt-module'],
     components: [
         {
             path: '~/components',
@@ -70,9 +70,6 @@ export default defineNuxtConfig({
             ],
             htmlAttrs: {}
         }
-    },
-    gtag: {
-        id: 'G-48TTQ6G6KV'
     },
     css: ['@/assets/styles/tailwind.css', '@/assets/styles/app/app.scss', '@/assets/styles/demo/flags.css', 'primeicons/primeicons.css'],
     postcss: {
