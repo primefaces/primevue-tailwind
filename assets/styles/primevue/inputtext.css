@@ -2,7 +2,7 @@
     @apply appearance-none rounded-md
         border border-surface-300 dark:border-surface-700 
         enabled:hover:border-surface-400 dark:enabled:hover:border-surface-600
-        enabled:focus:border-primary
+        enabled:focus:border-primary dark:enabled:focus:border-primary
         bg-surface-0 dark:bg-surface-950
         text-surface-700 dark:text-surface-0
         disabled:bg-surface-200 disabled:text-surface-500 dark:disabled:bg-surface-700 dark:disabled:text-surface-400 disabled:opacity-100
