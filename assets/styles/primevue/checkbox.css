@@ -62,7 +62,7 @@
 }
 
 .p-checkbox.p-disabled .p-checkbox-box .p-checkbox-icon {
-    @apply text-surface-700 dark:text-surface-400
+    @apply text-surface-700 dark:text-surface-900
 }
 
 .p-checkbox-sm,
