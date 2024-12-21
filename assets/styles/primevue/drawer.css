@@ -21,7 +21,7 @@
 }
 
 .p-drawer-footer {
-    @apply px-5
+    @apply p-5
 }
 
 .p-drawer-title {
