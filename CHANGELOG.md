@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.2.5](https://github.com/primefaces/primevue-tailwind/tree/4.2.5) (2024-12-24)
+
+[Full Changelog](https://github.com/primefaces/primevue/compare/4.2.4...4.2.5)
+
+**Fixed bugs:**
+
+-   Drawer .p-drawer-footer fix [\#372](https://github.com/primefaces/primevue/issues/372)
+-   fix visibility of checkbox icon in dark mode when disabled [\#371](https://github.com/primefaces/primevue/issues/371)
+-   p-inputtext losing border-primary in dark mode [\#370](https://github.com/primefaces/primevue/issues/370)
+-   Clear Button defects [\#369](https://github.com/primefaces/primevue/issues/369)
+-   DataTable: Lazy Virtual Scroll loaders not working  [\#361](https://github.com/primefaces/primevue/issues/361)
+
 ## [4.2.4](https://github.com/primefaces/primevue-tailwind/tree/4.2.4) (2024-11-27)
 
 [Full Changelog](https://github.com/primefaces/primevue/compare/4.2.3...4.2.4)
