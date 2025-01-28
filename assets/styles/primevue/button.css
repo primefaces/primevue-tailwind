@@ -302,6 +302,15 @@
         dark:text-red-400 dark:enabled:hover:text-red-400 dark:enabled:active:text-red-400
 }
 
+.p-button-text.p-button-contrast {
+    @apply bg-transparent enabled:hover:bg-surface-50 enabled:active:bg-surface-100
+        border-transparent enabled:hover:border-transparent enabled:active:border-transparent
+        text-surface-500 enabled:hover:text-surface-500 enabled:active:text-surface-500
+        dark:bg-transparent dark:enabled:hover:bg-surface-400/5 dark:enabled:active:bg-surface-400/15
+        dark:border-transparent dark:enabled:hover:border-transparent dark:enabled:active:border-transparent
+        dark:text-surface-400 dark:enabled:hover:text-surface-400 dark:enabled:active:text-surface-400
+}
+
 .p-button-text.p-button-plain {
     @apply bg-transparent enabled:hover:bg-surface-50 enabled:active:bg-surface-100
         border-transparent enabled:hover:border-transparent enabled:active:border-transparent
