@@ -136,17 +136,6 @@
         focus-visible:outline-purple-500 dark:focus-visible:outline-purple-400
 }
 
-.p-button-help {
-    @apply bg-purple-500 enabled:hover:bg-purple-600 enabled:active:bg-purple-700
-        border-purple-500 enabled:hover:border-purple-600 enabled:active:border-purple-700
-        text-white enabled:hover:text-white enabled:active:text-white
-        dark:bg-purple-400 dark:enabled:hover:bg-purple-300 dark:enabled:active:bg-purple-200
-        dark:border-purple-400 dark:enabled:hover:border-purple-300 dark:enabled:active:border-purple-200
-        dark:text-purple-950 dark:enabled:hover:text-purple-950 dark:enabled:active:text-purple-950
-        focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2
-        focus-visible:outline-purple-500 dark:focus-visible:outline-purple-400
-}
-
 .p-button-danger {
     @apply bg-red-500 enabled:hover:bg-red-600 enabled:active:bg-red-700
         border-red-500 enabled:hover:border-red-600 enabled:active:border-red-700
