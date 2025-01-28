@@ -21,7 +21,7 @@
                 tableStyle="min-width: 50rem"
             >
                 <template #groupheader="slotProps">
-                    <img :alt="slotProps.data.representative.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${slotProps.data.representative.image}`" width="32" style="vertical-align: middle" class="ml-2" />
+                    <img :alt="slotProps.data.representative.name" :src="`https://primefaces.org/cdn/primevue/images/avatar/${slotProps.data.representative.image}`" width="32" style="vertical-align: middle" class="ml-2 inline-block" />
                     <span class="align-middle ml-2 font-bold leading-normal">{{ slotProps.data.representative.name }}</span>
                 </template>
                 <Column field="representative.name" header="Representative"></Column>
