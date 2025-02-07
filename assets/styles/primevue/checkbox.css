@@ -49,7 +49,7 @@
     @apply border-red-400 dark:border-red-300
 }
 
-.p-checkbox.p-variant-filled .p-checkbox-box {
+.p-checkbox.p-variant-filled:not(.p-checkbox-checked) .p-checkbox-box {
     @apply bg-surface-50 dark:bg-surface-800
 }
 
