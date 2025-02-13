@@ -24,6 +24,14 @@
     @apply border-e
 }
 
+.p-inputgroupaddon:has(.p-button) {
+    @apply overflow-hidden p-0
+}
+
+.p-inputgroupaddon .p-button {
+    @apply rounded-none
+}
+
 .p-inputgroup > .p-component,
 .p-inputgroup > .p-inputwrapper > .p-component,
 .p-inputgroup > .p-floatlabel > .p-component,
