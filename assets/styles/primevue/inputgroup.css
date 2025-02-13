@@ -1,6 +1,7 @@
 .p-inputgroup,
 .p-inputgroup .p-floatlabel,
-.p-inputgroup .p-iftalabel {
+.p-inputgroup .p-iftalabel,
+.p-inputgroup .p-iconfield {
     @apply flex items-stretch w-full
 }
 
@@ -29,7 +30,9 @@
 .p-inputgroup > .p-floatlabel > .p-component,
 .p-inputgroup > .p-floatlabel > .p-inputwrapper > .p-component,
 .p-inputgroup > .p-iftalabel > .p-component,
-.p-inputgroup > .p-iftalabel > .p-inputwrapper > .p-component {
+.p-inputgroup > .p-iftalabel > .p-inputwrapper > .p-component,
+.p-inputgroup > .p-iconfield > .p-component,
+.p-inputgroup > .p-iconfield > .p-inputwrapper > .p-component {
     @apply rounded-none m-0
 }
 
@@ -39,7 +42,9 @@
 .p-inputgroup > .p-floatlabel:first-child > .p-component,
 .p-inputgroup > .p-floatlabel:first-child > .p-inputwrapper > .p-component,
 .p-inputgroup > .p-iftalabel:first-child > .p-component,
-.p-inputgroup > .p-iftalabel:first-child > .p-inputwrapper > .p-component {
+.p-inputgroup > .p-iftalabel:first-child > .p-inputwrapper > .p-component,
+.p-inputgroup > .p-iconfield:first-child > .p-component,
+.p-inputgroup > .p-iconfield:first-child > .p-inputwrapper > .p-component {
     @apply rounded-s-md
 }
 
@@ -49,7 +54,9 @@
 .p-inputgroup > .p-floatlabel:last-child > .p-component,
 .p-inputgroup > .p-floatlabel:last-child > .p-inputwrapper > .p-component,
 .p-inputgroup > .p-iftalabel:last-child > .p-component,
-.p-inputgroup > .p-iftalabel:last-child > .p-inputwrapper > .p-component {
+.p-inputgroup > .p-iftalabel:last-child > .p-inputwrapper > .p-component,
+.p-inputgroup > .p-iconfield:last-child > .p-component,
+.p-inputgroup > .p-iconfield:last-child > .p-inputwrapper > .p-component {
     @apply rounded-e-md
 }
 
@@ -60,6 +67,12 @@
 .p-inputgroup .p-component.p-focus ~ label,
 .p-inputgroup .p-inputwrapper-focus ~ label {
     @apply z-10
+}
+
+.p-inputgroup > .p-iconfield:has(.p-component:focus) .p-inputicon,
+.p-inputgroup > .p-iconfield:has(.p-component.p-focus) .p-inputicon,
+.p-inputgroup > .p-iconfield:has(.p-inputwrapper-focus) .p-inputicon {
+    @apply z-20;
 }
 
 .p-inputgroup > .p-button:not(.p-button-icon-only) {
