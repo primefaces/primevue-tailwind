@@ -67,7 +67,7 @@
 }
 
 .p-inputgroup > .p-iconfield:has(.p-component:focus, .p-component.p-focus, .p-inputwrapper-focus) .p-inputicon {
-    @apply z-20;
+    @apply z-20
 }
 
 .p-inputgroup > .p-button:not(.p-button-icon-only) {
