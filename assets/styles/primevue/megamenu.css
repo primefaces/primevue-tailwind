@@ -136,7 +136,7 @@
 .p-megamenu-col-4,
 .p-megamenu-col-6,
 .p-megamenu-col-12 {
-    @apply flex-grow-0 flex-shrink-0 basis-auto p-2
+    @apply flex-grow-0 shrink-0 basis-auto p-2
 }
 
 .p-megamenu-col-2 {

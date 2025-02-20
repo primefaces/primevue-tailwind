@@ -37,7 +37,7 @@
 }
 
 .p-fileupload-file-thumbnail {
-    @apply flex-shrink-0
+    @apply shrink-0
 }
 
 .p-fileupload-file-actions {

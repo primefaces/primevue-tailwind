@@ -10,11 +10,11 @@
 }
 
 .p-splitter-gutter {
-    @apply flex-grow-0 flex-shrink-0 flex items-center justify-center z-10 bg-surface-200 dark:bg-surface-700
+    @apply flex-grow-0 shrink-0 flex items-center justify-center z-10 bg-surface-200 dark:bg-surface-700
 }
 
 .p-splitter-gutter-handle {
-    @apply rounded-md bg-transparent 
+    @apply rounded-md bg-transparent
         focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-primary
         transition-colors duration-200
 }

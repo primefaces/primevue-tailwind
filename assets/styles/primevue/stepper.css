@@ -90,7 +90,7 @@
 }
 
 .p-stepitem .p-stepper-separator {
-    @apply flex-grow-0 flex-shrink-0 basis-auto w-[2px] h-auto ms-[1.625rem] relative start-[-2.5px]
+    @apply flex-grow-0 shrink-0 basis-auto w-[2px] h-auto ms-[1.625rem] relative start-[-2.5px]
 }
 
 .p-stepitem:has(~ .p-stepitem-active) .p-stepper-separator {

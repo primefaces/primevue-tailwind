@@ -44,7 +44,7 @@
 }
 
 .p-tree-node-toggle-button {
-    @apply cursor-pointer select-none inline-flex justify-center rounded-full items-center overflow-hidden relative flex-shrink-0
+    @apply cursor-pointer select-none inline-flex justify-center rounded-full items-center overflow-hidden relative shrink-0
         w-7 h-7 p-0 transition-colors duration-200 border-none
         bg-transparent enabled:hover:bg-surface-100 dark:enabled:hover:bg-surface-800
         text-surface-500 dark:text-surface-400 enabled:hover:text-surface-600 dark:enabled:hover:text-surface-300

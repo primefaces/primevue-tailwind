@@ -5,7 +5,7 @@
 }
 
 .p-inputnumber-button {
-    @apply flex items-center justify-center flex-grow-0 flex-shrink-0 basis-auto cursor-pointer w-10
+    @apply flex items-center justify-center flex-grow-0 shrink-0 basis-auto cursor-pointer w-10
         bg-transparent enabled:hover:bg-surface-100 enabled:active:bg-surface-200
         border border-surface-300 enabled:hover:border-surface-300 enabled:active:border-surface-300
         text-surface-400 enabled:hover:text-surface-500 enabled:active:text-surface-600

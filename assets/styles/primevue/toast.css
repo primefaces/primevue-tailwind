@@ -7,7 +7,7 @@
 }
 
 .p-toast-message-icon {
-    @apply flex-shrink-0 text-lg w-[1.125rem] h-[1.125rem]
+    @apply shrink-0 text-lg w-[1.125rem] h-[1.125rem]
 }
 
 .p-toast-message-content {
