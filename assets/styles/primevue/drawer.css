@@ -17,7 +17,7 @@
 }
 
 .p-drawer-header {
-    @apply flex items-center justify-between flex-shrink-0 p-5
+    @apply flex items-center justify-between shrink-0 p-5
 }
 
 .p-drawer-footer {

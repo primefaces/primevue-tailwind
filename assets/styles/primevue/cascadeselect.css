@@ -37,7 +37,7 @@
 
 .p-cascadeselect-label {
     @apply block whitespace-nowrap overflow-hidden flex-auto w-[1%]
-        py-2 px-3 overflow-ellipsis
+        py-2 px-3 text-ellipsis
         text-surface-700 dark:text-surface-0 bg-transparent border-none outline-none
 }
 
