@@ -10,7 +10,7 @@
 }
 
 .p-splitter-gutter {
-    @apply flex-grow-0 shrink-0 flex items-center justify-center z-10 bg-surface-200 dark:bg-surface-700
+    @apply grow-0 shrink-0 flex items-center justify-center z-10 bg-surface-200 dark:bg-surface-700
 }
 
 .p-splitter-gutter-handle {
