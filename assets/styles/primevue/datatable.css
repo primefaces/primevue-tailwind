@@ -5,7 +5,7 @@
 }
 
 .p-datatable-table {
-    @apply border-spacing-0 w-full
+    @apply border-separate border-spacing-0 w-full
 }
 
 .p-datatable-scrollable > .p-datatable-table-container {
@@ -243,9 +243,13 @@
 }
 
 .p-datatable-tfoot > tr > td {
-    @apply text-start py-3 px-4 border-b border-surface-200 dark:border-surface-800
+    @apply text-start py-3 px-4 border-y border-surface-200 dark:border-surface-800
         bg-surface-0 dark:bg-surface-900
         text-surface-700 dark:text-surface-0
+}
+
+.p-datatable:has(.p-datatable-tfoot) .p-datatable-tbody > tr:last-child > td {
+    @apply border-b-0
 }
 
 .p-datatable-column-footer {
@@ -299,11 +303,11 @@
 }
 
 .p-datatable-gridlines .p-datatable-header {
-    @apply border-t border-x
+    @apply border-b-0 border-t border-x
 }
 
 .p-datatable-gridlines .p-datatable-footer {
-    @apply border-b border-x
+    @apply border-b border-t-0 border-x
 }
 
 .p-datatable-gridlines .p-datatable-paginator-top {
@@ -315,31 +319,19 @@
 }
 
 .p-datatable-gridlines .p-datatable-thead > tr > th {
-    @apply border-t border-x last:border
+    @apply border-t border-s last:border-x
 }
 
 .p-datatable-gridlines .p-datatable-tbody > tr > td {
-    @apply border-t border-s last:border-r
-}
-
-.p-datatable-gridlines .p-datatable-tbody > tr:last-child > td {
-    @apply border-y border-s last:border
+    @apply border-s last:border-x
 }
 
 .p-datatable-gridlines .p-datatable-tfoot > tr > td {
-    @apply border-y border-s last:border
+    @apply border-y border-s last:border-x
 }
 
 .p-datatable.p-datatable-gridlines .p-datatable-thead + .p-datatable-tfoot > tr > td {
-    @apply border-b border-s last:border-r
-}
-
-.p-datatable.p-datatable-gridlines:has(.p-datatable-thead):has(.p-datatable-tbody) .p-datatable-tbody > tr > td {
-    @apply border-b border-s last:border-r
-}
-
-.p-datatable.p-datatable-gridlines:has(.p-datatable-tbody):has(.p-datatable-tfoot) .p-datatable-tbody > tr:last-child > td {
-    @apply border-s last:border-r
+    @apply border-b border-s last:border-x
 }
 
 .p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd {
