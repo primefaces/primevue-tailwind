@@ -6,9 +6,6 @@
                 <span class="layout-news-text">{{ $appState.announcement.content }}</span>
                 <a v-if="$appState.announcement.linkHref" class="layout-news-link" :href="$appState.announcement.linkHref">{{ $appState.announcement.linkText }}</a>
             </div>
-            <a class="layout-news-close" @click="onClose">
-                <span class="pi pi-times"></span>
-            </a>
         </div>
     </div>
 </template>

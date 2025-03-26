@@ -1,4 +1,6 @@
 {
-    "id": 4,
-    "content": "Tailwind Presets Now Support with PrimeVue v4.2 🎉"
+    "id": 10,
+    "content": "Tailwind PrimeVue is sunsetting in favor of Volt",
+    "linkHref": "https://volt.primevue.org",
+    "linkText": "Learn More"
 }

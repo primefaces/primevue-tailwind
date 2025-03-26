@@ -6,7 +6,7 @@
     width: 100%;
     height: 2rem;
     padding: 0 2rem;
-    background-color: var(--primary-color);
+    background-color: #ffbf00;
 
     .layout-news-container {
         display: flex;
@@ -32,7 +32,7 @@
         overflow: hidden;
         min-width: 0%;
         font-weight: 500;
-        color: var(--primary-contrast-color);
+        color: #000000;
     }
 
     .layout-news-link {
@@ -44,7 +44,7 @@
     .layout-news-link,
     .layout-news-link:visited,
     .layout-news-link:active {
-        color:var(--primary-contrast-color);
+        color: #000000;
         font-weight:700;
     }
     .layout-news-link:hover {
